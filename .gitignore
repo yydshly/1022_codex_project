@@ -1,0 +1,29 @@
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependency and build outputs (each project keeps its own manifests/lockfiles)
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.output/
+.vercel/
+_site/
+
+# Local research checkouts; do not accidentally vendor entire upstream repos
+_upstream/
+*.log

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">__ID__ · __NAME__</title>
+  <desc id="desc">项目封面占位图，请替换为实际项目截图。</desc>
+  <rect width="960" height="540" rx="20" fill="#142338"/>
+  <rect x="40" y="40" width="880" height="460" rx="14" fill="none" stroke="#38506a" stroke-dasharray="8 8"/>
+  <g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif">
+    <text x="78" y="132" fill="#82ddc7" font-size="22" letter-spacing="4">PROJECT __ID__</text>
+    <text x="78" y="245" fill="#f4f7fc" font-size="42" font-weight="600">__NAME__</text>
+    <text x="78" y="320" fill="#acbed4" font-size="20">Replace this cover with a project screenshot.</text>
+    <text x="78" y="444" fill="#7891ae" font-size="16">Research notes / Reproduction / Demo</text>
+  </g>
+</svg>
