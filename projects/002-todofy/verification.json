@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-21",
+  "scope": "research documents and original diagrams",
+  "checks": {
+    "relative_links_and_local_fragments": {
+      "passed": true,
+      "links_checked": 89
+    },
+    "pinned_upstream_file_hashes": {
+      "passed": true,
+      "files_checked": 34
+    },
+    "svg_xml_and_accessible_descriptions": {
+      "passed": true,
+      "count": 5
+    },
+    "svg_browser_render": {
+      "passed": true,
+      "browser": "headless Microsoft Edge via Playwright",
+      "text_outside_viewbox": 0,
+      "visual_review": "passed"
+    },
+    "catalog_check": "passed",
+    "git_diff_check": "passed",
+    "all_project_text_files_whitespace": "passed",
+    "web_asset_copies_identical": "passed",
+    "official_screenshots_equal_git_content": {
+      "passed": true,
+      "count": 8
+    },
+    "understanding_summary_image": "passed: source embedding, hashes, text bounds, local visual review and packaging"
+  },
+  "native_application_and_upstream_tests": "not run; see REPRODUCTION.md",
+  "web_verification": "See web-verification.json for the current official screenshot presentation. Previous custom-task simulation has been removed."
+}

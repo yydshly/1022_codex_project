@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-21",
+  "type": "original research summary with an attributed upstream screenshot",
+  "dimensions": [
+    1800,
+    1460
+  ],
+  "source_commit": "2ae76fc80b0b96ad8191e3d1ae4949ee340190a7",
+  "embedded_screenshot": {
+    "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/board.png",
+    "sha256": "fad9f7b5115b0bc36dc46589812b4d929ea77a55107c2418548767bf399c2931",
+    "treatment": "aspect-preserving reduced preview; original screenshot file unchanged",
+    "author": "Salar Zeidanlou / unifybrowse"
+  },
+  "summary_topics": [
+    "我们的理解",
+    "能力",
+    "本质",
+    "效果",
+    "对我们的参考意义"
+  ],
+  "reference_focus": [
+    "看板布局与样式",
+    "卡片信息层级",
+    "状态与日期组织",
+    "界面交互与业务规则分工"
+  ],
+  "renderer": {
+    "library": "Pillow",
+    "version": "11.3.0",
+    "regular_font": "msyh.ttc",
+    "bold_font": "msyhbd.ttc"
+  },
+  "files_sha256": {
+    "assets/understanding-summary.svg": "61a3f39f7cc8259f684fc305cf8679968dab9588ca738d44b2903a54cab18a69",
+    "assets/understanding-summary.png": "db3373d46943a6baf7de5668864a107fb479d3b27f0b35ce365f65575c6fab60",
+    "web/assets/understanding-summary.svg": "61a3f39f7cc8259f684fc305cf8679968dab9588ca738d44b2903a54cab18a69",
+    "web/assets/understanding-summary.png": "db3373d46943a6baf7de5668864a107fb479d3b27f0b35ce365f65575c6fab60"
+  }
+}

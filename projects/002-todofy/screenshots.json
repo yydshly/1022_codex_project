@@ -1,0 +1,102 @@
+{
+  "repository": "https://github.com/salarzeidanlou/todofy",
+  "source_commit": "2ae76fc80b0b96ad8191e3d1ae4949ee340190a7",
+  "retrieved_date": "2026-10-21",
+  "author": "Salar Zeidanlou / unifybrowse",
+  "purpose": "Official product screenshots quoted for repository research and annotated capability presentation.",
+  "license_name": "Todofy Source-Available License",
+  "license_source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/LICENSE",
+  "license_sha256": "61d17f3058c11eb6f5830705bd37e826b35852158bd171390d1e941b75230c14",
+  "screenshots": [
+    {
+      "file": "assets/upstream/today.png",
+      "web_file": "web/assets/upstream/today.png",
+      "upstream_path": "docs/today.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/today.png",
+      "sha256": "424f6fe7e3c8b51819018866a328a9ae3adea5305e48ddeb6504b9adf935d496",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 314528,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/board.png",
+      "web_file": "web/assets/upstream/board.png",
+      "upstream_path": "docs/board.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/board.png",
+      "sha256": "fad9f7b5115b0bc36dc46589812b4d929ea77a55107c2418548767bf399c2931",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 329407,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/calendar.png",
+      "web_file": "web/assets/upstream/calendar.png",
+      "upstream_path": "docs/calendar.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/calendar.png",
+      "sha256": "587283ccbc605683b2edfcd126ed0c122c50783500ffdfda1e1980fb05ddd745",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 236793,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/focus.png",
+      "web_file": "web/assets/upstream/focus.png",
+      "upstream_path": "docs/focus.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/focus.png",
+      "sha256": "d808e745b82f2d8beb3cf0c8d7d3dedbaf259ba6b8aeb756fa6d15a2091c2e1f",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 251109,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/quickadd.png",
+      "web_file": "web/assets/upstream/quickadd.png",
+      "upstream_path": "docs/quickadd.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/quickadd.png",
+      "sha256": "c7371ec90e9fd8096db1b5f53e8e289c1e1b8eb7016d83ce617beb42929bae9c",
+      "width": 1880,
+      "height": 480,
+      "bytes": 54253,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/journal.png",
+      "web_file": "web/assets/upstream/journal.png",
+      "upstream_path": "docs/journal.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/journal.png",
+      "sha256": "cd4f4fcfb9cc1623cbb3626fe48b6a8f19332c42e05a495b9fcaf4ac4b7bf984",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 243549,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/voice.png",
+      "web_file": "web/assets/upstream/voice.png",
+      "upstream_path": "docs/voice.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/voice.png",
+      "sha256": "a042ab65948170f5b3aae0eb04fe4a762491cbc869a5fe2b7ea86765f3d42fe2",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 304526,
+      "transformation": "none; original committed PNG bytes"
+    },
+    {
+      "file": "assets/upstream/settings.png",
+      "web_file": "web/assets/upstream/settings.png",
+      "upstream_path": "docs/settings.png",
+      "source_url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/settings.png",
+      "sha256": "02e0031733f9f7ed00fb9bf464fdfc8d7e5d5c71dd6dcdbe1bf17cf2907590d1",
+      "width": 2880,
+      "height": 1800,
+      "bytes": 305980,
+      "transformation": "none; original committed PNG bytes"
+    }
+  ],
+  "native_app_run": false,
+  "custom_task_simulation_in_page": false
+}

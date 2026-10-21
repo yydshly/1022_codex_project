@@ -17,6 +17,24 @@
       "cover": "assets/overview.png",
       "cover_caption": "能力全景图：SwiftUI 视图与参数输入 → GPU 逐像素采样与变换 → 实时视图输出，并说明效果、适用场景和扩展方向。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/"
+    },
+    {
+      "id": "002",
+      "slug": "todofy",
+      "name": "Todofy",
+      "repo": "https://github.com/salarzeidanlou/todofy",
+      "summary": "任务展示板与管理应用：列表、看板、日历呈现任务，编辑、状态流转、提醒、计时与本地存储驱动管理；对我们主要是看板样式、卡片信息层级和交互组织的参考",
+      "status": "researching",
+      "tags": [
+        "任务管理",
+        "本地优先",
+        "Tauri 2",
+        "Rust",
+        "SQLite"
+      ],
+      "cover": "assets/understanding-summary.png",
+      "cover_caption": "我们生成的总结图：引用官方看板画面，说明任务数据、管理界面、驱动逻辑三层本质，归纳能力与效果；重点参考看板布局、卡片信息层级和交互组织。",
+      "demo_url": ""
     }
   ]
 }

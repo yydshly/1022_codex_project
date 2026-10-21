@@ -15,11 +15,12 @@
 按收录顺序编号，从 **001** 开始递增。编号长期保留，不因进度、热度或归档重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **1** 个项目。
+当前收录 **2** 个项目。
 
 | 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- | --- |
 | 001 | [SwiftUIShaders](projects/001-swiftui-shaders/README.md) | [SwiftUIShaders](https://github.com/krispuckett/SwiftUIShaders) | 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/) |
+| 002 | [Todofy](projects/002-todofy/README.md) | [todofy](https://github.com/salarzeidanlou/todofy) | 任务展示板与管理应用：列表、看板、日历呈现任务，编辑、状态流转、提醒、计时与本地存储驱动管理；对我们主要是看板样式、卡片信息层级和交互组织的参考 | 研究中 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览
@@ -38,6 +39,18 @@
 [研究详情](projects/001-swiftui-shaders/README.md) · [原始仓库](https://github.com/krispuckett/SwiftUIShaders) · [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)
 
 标签：SwiftUI / Metal / WebGL 2 / 交互特效
+
+### 002 · Todofy
+
+任务展示板与管理应用：列表、看板、日历呈现任务，编辑、状态流转、提醒、计时与本地存储驱动管理；对我们主要是看板样式、卡片信息层级和交互组织的参考
+
+![002 · Todofy 项目封面](projects/002-todofy/assets/understanding-summary.png)
+
+> 我们生成的总结图：引用官方看板画面，说明任务数据、管理界面、驱动逻辑三层本质，归纳能力与效果；重点参考看板布局、卡片信息层级和交互组织。
+
+[研究详情](projects/002-todofy/README.md) · [原始仓库](https://github.com/salarzeidanlou/todofy)
+
+标签：任务管理 / 本地优先 / Tauri 2 / Rust / SQLite
 <!-- PROJECT_CARDS:END -->
 
 ## 目录结构
@@ -87,6 +100,8 @@ python scripts/project_catalog.py check
 按需为子项目增加 `web/` 目录，各自选择技术栈和构建方式。GitHub Pages 部署时，统一汇总到根目录下的 `_site/`，每个演示使用自己的编号路径，例如 `/1022_codex_project/001-project-slug/`。
 
 已发布 [演示总导航](https://yydshly.github.io/1022_codex_project/) 和 [001 · SwiftUIShaders 图解与 41 种特效](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)。项目页先用两张引导图说明能力、原理、效果、场景与扩展方向，再提供完整交互实验。构建与自动部署方式见 [Web 部署指南](docs/deployment.md)。
+
+新增 [002 · Todofy 任务展示板与管理驱动](projects/002-todofy/README.md)：列表、看板和日历展示任务，编辑、状态流转、提醒、计时与存储支撑管理。对我们主要是看板样式、卡片信息层级和交互组织的参考；用我们生成的总结图引导，再看八张源库官方原图、原理与六个场景。页面已纳入编号站点构建，线上入口待发布验证。
 
 ## 来源与许可
 

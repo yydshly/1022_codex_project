@@ -54,6 +54,16 @@ _site/
 
 新增静态项目时，在自己的 `web/` 中准备可发布产物即可汇总；需要构建的项目先在工作流中加入依赖安装与构建步骤，再输出到对应 `web/` 或调整汇总器。编号、上游版本、许可和复现环境仍记录于子项目。
 
+## 002 · Todofy 网页
+
+Todofy 的 [源库官方界面展示网页](../projects/002-todofy/web/index.html) 采用无依赖 HTML / CSS / JavaScript，直接引用八张未改动的上游 PNG，已移除自制任务模拟。现有 Actions 汇总步骤即可复制，无需额外安装或打包。`build_site.py` 在未找到专项引导图时，会使用项目登记表指定且已经放入 `web/` 的封面，保留原有 SwiftUIShaders 展示方式。
+
+本地构建到新的空目录后，入口为 `<预览根目录>/002-todofy/`；编号路径为 `/1022_codex_project/002-todofy/`。官方截图与保留的许可位于 `web/assets/upstream/`，分析图位于 `web/assets/`，资源不依赖 `web/` 以外的文件；原始来源和哈希保存在项目 `screenshots.json`。
+
+引导图采用我们生成的 `understanding-summary.png`，与首页封面、项目研究首页保持一致。页面明确概括“任务展示板＋管理驱动”，并说明对我们参考看板样式、卡片信息层级和交互组织的意义。
+
+本地原图哈希、资源路径与静态检查已完成，当前页面尚未发布线上地址；登记表 `demo_url` 保持为空。发布后核对线上资源与交互，再更新登记表。当前浏览器与静态验证范围见 [web-verification.json](../projects/002-todofy/web-verification.json)。
+
 ## 路径与验证范围
 
 资源与内部链接使用相对路径，可在 `/1022_codex_project/<编号-slug>/` 下运行。效果深链接使用 `#effect=Holographic` 等片段，无需服务端路由回退。修改链接后应模拟仓库前缀，检查导航、模块跳转、图解、素材、手机宽度与下载。

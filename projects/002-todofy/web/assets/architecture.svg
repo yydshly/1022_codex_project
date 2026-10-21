@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Todofy 实现原理：界面、桌面命令、本地数据和可选连接</title>
+  <desc id="desc">原创架构研究图。Preact 与 Zustand 界面通过 Tauri 命令调用 Rust，在本机 SQLite 存储任务、日程和日志。Rust 处理任务、日期重复、计时和后台提醒。本地 whisper.cpp 负责语音转写。可选 Supabase 同步同一账号内容，或单向推送任务到专用 Google 日历。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#8ba7b8"/></marker>
+    <style>text{font-family:'Microsoft YaHei','PingFang SC',sans-serif;fill:#edf3f6}.muted{fill:#a9bbc6}.label{fill:#80d9c6;font-size:19px;letter-spacing:2px}.small{font-size:21px}.body{font-size:25px}.panel{fill:#172a36;stroke:#35505f;stroke-width:1.5}.line{fill:none;stroke:#8ba7b8;stroke-width:2.5}.optional{fill:none;stroke:#8ba7b8;stroke-width:2.5;stroke-dasharray:8 7}</style>
+  </defs>
+  <rect width="1600" height="1080" fill="#0c1b25"/>
+  <text x="64" y="62" class="label">002 / TODOfy / 原理分析</text>
+  <text x="64" y="127" font-size="48" font-weight="700">先在本机完成任务管理，再按需连接服务</text>
+  <text x="64" y="171" class="body muted">界面负责展示与编辑，Rust 负责桌面业务，SQLite 负责持久化。</text>
+  <rect x="64" y="217" width="1000" height="721" rx="20" fill="#10232d" stroke="#34515f" stroke-width="1.5"/>
+  <text x="90" y="258" class="label">用户设备 / LOCAL FIRST</text>
+  <rect x="100" y="288" width="928" height="123" rx="14" class="panel"/>
+  <text x="128" y="330" font-size="28" font-weight="700">Preact + TypeScript + Zustand</text>
+  <text x="128" y="375" class="small muted">编辑 / 列表 / 看板 / 日历 / 专注 / 日志 · 规则与 chrono-node 解析输入</text>
+  <path d="M564 413V459" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="596" y="445" class="small muted">Tauri invoke / 状态事件</text>
+  <rect x="100" y="475" width="928" height="181" rx="14" fill="#1b393d" stroke="#70c8b4" stroke-width="1.5"/>
+  <text x="128" y="518" font-size="28" font-weight="700">Rust / Tauri 2 本地业务</text>
+  <text x="128" y="563" class="small">任务写入与完成 · 重复日期推进 · 排序 · 窗口 / 托盘 / 快捷键</text>
+  <text x="128" y="607" class="small muted">后台约 20 秒检查提醒 · 计时按“累计时间 + 起点差值”恢复</text>
+  <text x="128" y="638" font-size="18" class="muted">这些是模块职责，不代表每个模块各自运行一个系统服务进程。</text>
+  <path d="M340 657V709" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="369" y="692" class="small muted">读写记录与状态</text>
+  <rect x="100" y="725" width="515" height="176" rx="14" class="panel"/>
+  <text x="128" y="767" font-size="28" font-weight="700">SQLite / 本地数据库</text>
+  <text x="128" y="811" class="small muted">任务 / 标签 / 日志 / 独立日程</text>
+  <text x="128" y="847" class="small muted">时间会话 / 番茄钟状态 / 设置</text>
+  <text x="128" y="880" font-size="19" fill="#80d9c6">核心路径可离线使用，账号可选</text>
+  <path d="M831 657V709" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="655" y="725" width="373" height="176" rx="14" class="panel"/>
+  <text x="681" y="767" font-size="27" font-weight="700">本地语音 / 可选</text>
+  <text x="681" y="811" class="small muted">录音 → 16kHz WAV</text>
+  <text x="681" y="847" class="small muted">whisper.cpp → 可编辑文本</text>
+  <text x="681" y="880" font-size="19" fill="#80d9c6">引擎与模型由用户主动下载</text>
+  <rect x="1152" y="288" width="384" height="251" rx="16" fill="#172c3a" stroke="#456776" stroke-width="1.5"/>
+  <text x="1180" y="332" class="label">可选 / 账号同步</text>
+  <text x="1180" y="379" font-size="29" font-weight="700">Supabase</text>
+  <text x="1180" y="423" class="small muted">登录认证 + Postgres / RLS</text>
+  <text x="1180" y="461" class="small muted">增量同步 · 时间戳覆盖合并</text>
+  <text x="1180" y="499" font-size="20" class="muted">官方 Pro 或自行配置后端</text>
+  <path d="M1066 414H1134" class="optional" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="1152" y="583" width="384" height="251" rx="16" fill="#172c3a" stroke="#456776" stroke-width="1.5"/>
+  <text x="1180" y="627" class="label">可选 / 日历集成</text>
+  <text x="1180" y="674" font-size="28" font-weight="700">Google Calendar</text>
+  <text x="1180" y="718" class="small muted">带日期任务 → 专用日历</text>
+  <text x="1180" y="756" class="small muted">单独 OAuth 授权</text>
+  <text x="1180" y="794" font-size="20" class="muted">不导入原有会议 · 单向推送</text>
+  <path d="M1066 707H1134" class="optional" marker-end="url(#arrow)"/>
+  <text x="1152" y="885" class="small muted">实线：本地主要流程</text>
+  <text x="1152" y="922" class="small muted">虚线：按需启用外部连接</text>
+  <rect x="64" y="971" width="1472" height="54" rx="12" fill="#1f333f"/>
+  <text x="90" y="1006" font-size="22">任务的日期与状态由使用者决定；视图按字段组织，提醒与计时辅助执行。</text>
+  <text x="64" y="1058" font-size="17" class="muted">原创源码研究图，非运行截图 · 固定提交 2ae76fc · 原生通知、语音与跨设备同步仍待实测</text>
+</svg>

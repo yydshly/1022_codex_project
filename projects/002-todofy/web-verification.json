@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-21",
+  "presentation": "Unmodified official upstream screenshots with Chinese research annotations",
+  "source_commit": "2ae76fc80b0b96ad8191e3d1ae4949ee340190a7",
+  "custom_task_simulation": false,
+  "native_todofy_run": false,
+  "checks": {
+    "original_pngs_equal_git_content": 8,
+    "project_and_web_png_copies_identical": true,
+    "original_dimensions_recorded": true,
+    "upstream_license_preserved_and_hashed": true,
+    "all_eight_gallery_tabs_have_source_images": true,
+    "static_html_resources_and_fragment_targets": "passed",
+    "duplicate_html_ids": 0,
+    "task_forms_or_edit_controls": 0,
+    "custom_task_model_drag_handlers_or_timer_loop": "removed",
+    "relative_markdown_links_and_fragments": 88,
+    "numbered_site_packaging_and_png_byte_comparison": "passed",
+    "javascript_syntax": "passed",
+    "catalog_check": "passed",
+    "git_diff_check": "passed",
+    "summary_image": {
+      "passed": true,
+      "dimensions": [
+        1800,
+        1460
+      ],
+      "original_board_screenshot_embedded_and_hashed": true,
+      "png_visual_review": "passed using local image viewer",
+      "text_width_and_canvas_bounds": "passed by generation script",
+      "source_and_web_copies": "identical",
+      "numbered_site_packaging": "passed",
+      "png_svg_metadata_hashes": "passed",
+      "custom_task_simulation": false
+    },
+    "understanding_and_reference_content": "Three layers plus board layout, card hierarchy, interaction and business-rule separation",
+    "lead_image": "Generated understanding-summary.png used in catalog, README and web hero; original bytes unchanged",
+    "summary_copy": "Task display board plus management logic; board style, card hierarchy and interaction reference value",
+    "catalog_unit_tests": 10
+  },
+  "browser_ui_validation": {
+    "status": "not_run_for_current_revision",
+    "reason": "The in-app browser does not allow the current file:// protocol; no alternate browser surface was used to inspect it. Previous simulated-task UI test results do not apply to this replacement."
+  },
+  "files_sha256": {
+    "app.js": "7a8aebb497a6e05d5640ae760119d26efe0e9639aebfdaad56f4f5356b911c84",
+    "assets/architecture.svg": "fc7fb839b417e9840ef440253f4445539ba093b4a8de50c7e48d52b2fe604366",
+    "assets/understanding-summary.png": "db3373d46943a6baf7de5668864a107fb479d3b27f0b35ce365f65575c6fab60",
+    "assets/understanding-summary.svg": "61a3f39f7cc8259f684fc305cf8679968dab9588ca738d44b2903a54cab18a69",
+    "assets/upstream/board.png": "fad9f7b5115b0bc36dc46589812b4d929ea77a55107c2418548767bf399c2931",
+    "assets/upstream/calendar.png": "587283ccbc605683b2edfcd126ed0c122c50783500ffdfda1e1980fb05ddd745",
+    "assets/upstream/focus.png": "d808e745b82f2d8beb3cf0c8d7d3dedbaf259ba6b8aeb756fa6d15a2091c2e1f",
+    "assets/upstream/journal.png": "cd4f4fcfb9cc1623cbb3626fe48b6a8f19332c42e05a495b9fcaf4ac4b7bf984",
+    "assets/upstream/LICENSE.todofy.txt": "61d17f3058c11eb6f5830705bd37e826b35852158bd171390d1e941b75230c14",
+    "assets/upstream/quickadd.png": "c7371ec90e9fd8096db1b5f53e8e289c1e1b8eb7016d83ce617beb42929bae9c",
+    "assets/upstream/settings.png": "02e0031733f9f7ed00fb9bf464fdfc8d7e5d5c71dd6dcdbe1bf17cf2907590d1",
+    "assets/upstream/today.png": "424f6fe7e3c8b51819018866a328a9ae3adea5305e48ddeb6504b9adf935d496",
+    "assets/upstream/voice.png": "a042ab65948170f5b3aae0eb04fe4a762491cbc869a5fe2b7ea86765f3d42fe2",
+    "index.html": "496da250a12be07d9b1d16d0c6519fa8daa4ac7a51f28099dc2f45352e59c528",
+    "README.md": "9da019a76bdc0e9ad551d0e8e596e0cdf67ed5af6b817c8069ae4c3f9f91bc10",
+    "style.css": "d8a5bffa5cb35f25294109f3175879a674752bcfcf3cd6b924538f4135c4902c"
+  }
+}

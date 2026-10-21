@@ -1,0 +1,229 @@
+{
+  "repository": "https://github.com/salarzeidanlou/todofy",
+  "author": "Salar Zeidanlou",
+  "brand": "unifybrowse",
+  "review_date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "source_commit": "2ae76fc80b0b96ad8191e3d1ae4949ee340190a7",
+  "source_commit_datetime": "2026-10-14T15:16:54+03:30",
+  "source_package_version": "1.14.0",
+  "release_tag": "v1.14.0",
+  "release_commit": "19a8907fc85e608027014e49f9d1e704754f2656",
+  "release_and_source_are_same_commit": false,
+  "license": {
+    "name": "Todofy Source-Available License",
+    "classification": "source-available; not an OSI open-source license",
+    "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/LICENSE"
+  },
+  "review_environment": {
+    "platform": "Windows",
+    "shell": "PowerShell",
+    "python": "3.10.11",
+    "node": "22.15.0",
+    "rustc": "1.95.0",
+    "bun": "not installed"
+  },
+  "verification_scope": {
+    "source_review": true,
+    "official_screenshots_inspected": [
+      "docs/today.png",
+      "docs/board.png",
+      "docs/calendar.png",
+      "docs/focus.png",
+      "docs/quickadd.png",
+      "docs/journal.png",
+      "docs/voice.png",
+      "docs/settings.png"
+    ],
+    "native_app_run": false,
+    "upstream_tests_run": false,
+    "voice_run": false,
+    "cloud_sync_run": false,
+    "google_calendar_run": false
+  },
+  "third_party_materials_vendored": true,
+  "hash_note": "SHA-256 of committed file content from git show, without checkout newline conversion. Source code is referenced, not copied; original screenshots and the license are included and recorded in screenshots.json.",
+  "referenced_files": [
+    {
+      "path": "LICENSE",
+      "sha256_git_blob_content": "61d17f3058c11eb6f5830705bd37e826b35852158bd171390d1e941b75230c14",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "sha256_git_blob_content": "68a86f73c40eb64f2e66b09febe5787ab7d9630f26393a9db45b6660d3a7a49a",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/README.md"
+    },
+    {
+      "path": "docs/board.png",
+      "sha256_git_blob_content": "fad9f7b5115b0bc36dc46589812b4d929ea77a55107c2418548767bf399c2931",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/board.png"
+    },
+    {
+      "path": "docs/calendar.png",
+      "sha256_git_blob_content": "587283ccbc605683b2edfcd126ed0c122c50783500ffdfda1e1980fb05ddd745",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/calendar.png"
+    },
+    {
+      "path": "docs/focus.png",
+      "sha256_git_blob_content": "d808e745b82f2d8beb3cf0c8d7d3dedbaf259ba6b8aeb756fa6d15a2091c2e1f",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/focus.png"
+    },
+    {
+      "path": "docs/journal.png",
+      "sha256_git_blob_content": "cd4f4fcfb9cc1623cbb3626fe48b6a8f19332c42e05a495b9fcaf4ac4b7bf984",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/journal.png"
+    },
+    {
+      "path": "docs/quickadd.png",
+      "sha256_git_blob_content": "c7371ec90e9fd8096db1b5f53e8e289c1e1b8eb7016d83ce617beb42929bae9c",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/quickadd.png"
+    },
+    {
+      "path": "docs/settings.png",
+      "sha256_git_blob_content": "02e0031733f9f7ed00fb9bf464fdfc8d7e5d5c71dd6dcdbe1bf17cf2907590d1",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/settings.png"
+    },
+    {
+      "path": "docs/today.png",
+      "sha256_git_blob_content": "424f6fe7e3c8b51819018866a328a9ae3adea5305e48ddeb6504b9adf935d496",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/today.png"
+    },
+    {
+      "path": "docs/voice.png",
+      "sha256_git_blob_content": "a042ab65948170f5b3aae0eb04fe4a762491cbc869a5fe2b7ea86765f3d42fe2",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/docs/voice.png"
+    },
+    {
+      "path": "package.json",
+      "sha256_git_blob_content": "eb4730a89d77dea80960d5863390352f2f17703c5fd047f9c7535686aa985b38",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/package.json"
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "sha256_git_blob_content": "1cd4ee986f59450a075492f0cb5b90384b929627a7302830a187f2c4aa88470b",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/Cargo.toml"
+    },
+    {
+      "path": "src-tauri/src/calendar.rs",
+      "sha256_git_blob_content": "4a27b4506c68a1e89b7392f002fba01c1cb317ee24ca0fbe8be6214c05d998bd",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/calendar.rs"
+    },
+    {
+      "path": "src-tauri/src/commands.rs",
+      "sha256_git_blob_content": "3150169b90e5a73a57209ed6dca2f88a70f103b126c5f9bc51026fad56613b0d",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/commands.rs"
+    },
+    {
+      "path": "src-tauri/src/db.rs",
+      "sha256_git_blob_content": "c1a0d098defec76f68accac5da7647e33365502e5e98ba926e7cab16070969d6",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/db.rs"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "sha256_git_blob_content": "5ea663cb72ef0d6918f6d45490caecfa6b6bb891457669d1c54a0b591d4f52e9",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/lib.rs"
+    },
+    {
+      "path": "src-tauri/src/recur.rs",
+      "sha256_git_blob_content": "0fb2e6b28eec23658ac791bbc6bea7b55c9aa76e93a0a5af1eff0dde0a7d9b0e",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/recur.rs"
+    },
+    {
+      "path": "src-tauri/src/scheduler.rs",
+      "sha256_git_blob_content": "0a071d2173d2b454c9cb9116fdabab52d7dd6bd63061719b91dd6069c396c095",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/scheduler.rs"
+    },
+    {
+      "path": "src-tauri/src/secret.rs",
+      "sha256_git_blob_content": "21baf8f1c87252004d3fcf3623bf102be6fe6702b396fafacb7b082272d38bb0",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/secret.rs"
+    },
+    {
+      "path": "src-tauri/src/sync.rs",
+      "sha256_git_blob_content": "cee7c0b7c208887d1b875a4d0166e0f9c90b56ac86383132c184b00e098887db",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/sync.rs"
+    },
+    {
+      "path": "src-tauri/src/timer.rs",
+      "sha256_git_blob_content": "aa1dde70a0b1ec8a79a5b3750a26155dc1cba41761918144b0e5a82ad7e7badf",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/timer.rs"
+    },
+    {
+      "path": "src-tauri/src/voice.rs",
+      "sha256_git_blob_content": "8e081008a236c6bc31f6e8d25cbe658407482d4eb06c856e42ecf07dcfba3c1d",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/voice.rs"
+    },
+    {
+      "path": "src-tauri/src/voice/assets.rs",
+      "sha256_git_blob_content": "ac6c09aa2373fc1bf72495263ceabf250d1a3dfd9161426e8633279573624e79",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/voice/assets.rs"
+    },
+    {
+      "path": "src-tauri/src/voice/audio.rs",
+      "sha256_git_blob_content": "41f9c8bcf22d096d1587eb172cf12864e9f064decfb27871b5ea1d3fdf8f2b28",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src-tauri/src/voice/audio.rs"
+    },
+    {
+      "path": "src/components/BoardView.tsx",
+      "sha256_git_blob_content": "533e16266601fd221d19b8ca58552bdfbf38849d673d8fb6dbbff4515d953e4f",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/components/BoardView.tsx"
+    },
+    {
+      "path": "src/lib/api.ts",
+      "sha256_git_blob_content": "9f1319ca2b6ad3d1fa7afd788925143693ab9a48f344d208323948b4c4c87d0d",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/api.ts"
+    },
+    {
+      "path": "src/lib/board.ts",
+      "sha256_git_blob_content": "6f13307bdb0664af57e7b5fce3c2a4d0ff70005a701da25ceddf8374f9b14f05",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/board.ts"
+    },
+    {
+      "path": "src/lib/googleCalendar.ts",
+      "sha256_git_blob_content": "ff89007516ec447a657e45829211b5c8a0908d883bd6a515aab32fb17aac306b",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/googleCalendar.ts"
+    },
+    {
+      "path": "src/lib/grouping.ts",
+      "sha256_git_blob_content": "0e2d5595c64b7bba15cd7c0fde5f5ef8c52b42f908c34631a1b13a64a22a5330",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/grouping.ts"
+    },
+    {
+      "path": "src/lib/journal.ts",
+      "sha256_git_blob_content": "2003cd3a44d6b5303f9a57e31ff977cd7d7863a9dc89c2dce68905e4db752e57",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/journal.ts"
+    },
+    {
+      "path": "src/lib/nlp.ts",
+      "sha256_git_blob_content": "7eaf5bbfc673bbc3eade8e09d8fbf58577613b83304066ed3de003a20a9de8d3",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/nlp.ts"
+    },
+    {
+      "path": "src/lib/ordering.ts",
+      "sha256_git_blob_content": "b9d484ca1e9611230011cc36acb8aa3f804491386f06c24a40cf3dedc9396924",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/ordering.ts"
+    },
+    {
+      "path": "src/lib/sync.ts",
+      "sha256_git_blob_content": "e2809148b257add4b8b55ef92985192e7df54e9afa386a79fbe82746b75b36b3",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/lib/sync.ts"
+    },
+    {
+      "path": "src/store.ts",
+      "sha256_git_blob_content": "4908a0fb9816f9334366d16143bca00e2f8c577a297a9ac24bd69b5a4ba9131e",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/store.ts"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256_git_blob_content": "2fe93032fa64bc410c9e7f088246859b4c5cc2a185a2e0aa8aae107799339220",
+      "url": "https://github.com/salarzeidanlou/todofy/blob/2ae76fc80b0b96ad8191e3d1ae4949ee340190a7/src/types.ts"
+    }
+  ],
+  "third_party_material_types": [
+    "unmodified official PNG screenshots",
+    "preserved upstream license text"
+  ],
+  "screenshot_manifest": "screenshots.json",
+  "application_code_vendored": false
+}

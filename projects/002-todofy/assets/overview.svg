@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Todofy 能力全景：任务是核心，列表、看板和日历是视图</title>
+  <desc id="desc">原创研究图。记录、规划、执行、提醒和回顾组成流程。一条完成周报任务包含日期、状态、标签和耗时，在列表中逐条展示，在看板中按阶段展示，在日历中按日期展示。本地 SQLite 保存数据，可选启用账号同步和本地语音。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#7c9dac"/></marker>
+    <style>
+      text{font-family:'Microsoft YaHei','PingFang SC',sans-serif;fill:#edf3f6} .muted{fill:#a9bbc6} .small{font-size:20px} .body{font-size:25px} .label{font-size:19px;letter-spacing:2px;fill:#80d9c6} .line{fill:none;stroke:#7c9dac;stroke-width:2.5} .panel{fill:#172a36;stroke:#35505f;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#0c1b25"/>
+  <circle cx="1530" cy="70" r="250" fill="#153540" opacity=".4"/>
+  <text x="64" y="61" class="label">002 / GITHUB 项目研究 / 2026-10-21</text>
+  <text x="64" y="126" font-size="48" font-weight="700">Todofy · 把任务组织成可执行的计划</text>
+  <text x="64" y="170" class="body muted">以任务为核心：按日期规划，按状态推进，用提醒与计时辅助执行。</text>
+  <g font-size="25" text-anchor="middle">
+    <rect x="64" y="212" width="260" height="58" rx="12" fill="#20463f"/><text x="194" y="250">01 记录事项</text>
+    <rect x="367" y="212" width="260" height="58" rx="12" fill="#173542"/><text x="497" y="250">02 安排日期</text>
+    <rect x="670" y="212" width="260" height="58" rx="12" fill="#173542"/><text x="800" y="250">03 推进任务</text>
+    <rect x="973" y="212" width="260" height="58" rx="12" fill="#173542"/><text x="1103" y="250">04 提醒与计时</text>
+    <rect x="1276" y="212" width="260" height="58" rx="12" fill="#173542"/><text x="1406" y="250">05 完成与回顾</text>
+  </g>
+  <g class="line" marker-end="url(#arrow)"><path d="M331 241H355"/><path d="M634 241H658"/><path d="M937 241H961"/><path d="M1240 241H1264"/></g>
+  <text x="64" y="362" class="label">核心关系</text>
+  <text x="64" y="413" font-size="31" font-weight="700">同一条任务</text>
+  <text x="64" y="454" font-size="31" font-weight="700">多种观察方式</text>
+  <text x="64" y="500" class="small muted">日期决定何时展示</text>
+  <text x="64" y="534" class="small muted">状态描述推进阶段</text>
+  <rect x="500" y="310" width="600" height="244" rx="18" fill="#1c393d" stroke="#70c8b4" stroke-width="2"/>
+  <text x="532" y="352" class="label">TASK / 一份任务数据</text>
+  <text x="532" y="406" font-size="36" font-weight="700">完成周报</text>
+  <rect x="944" y="373" width="112" height="41" rx="8" fill="#674b36"/><text x="1000" y="402" text-anchor="middle" font-size="22" fill="#ffe3bd">P1</text>
+  <text x="532" y="450" class="body">10 月 23 日 · 进行中 · 工作</text>
+  <text x="532" y="492" class="small muted">子任务：整理数据 / 写正文 / 检查发送</text>
+  <text x="532" y="527" class="small muted">预估 60 分钟 · 实际时间由计时记录累计</text>
+  <rect x="1172" y="326" width="364" height="206" rx="16" fill="#102e34" stroke="#28505a"/>
+  <text x="1196" y="371" class="label">数据与输入</text>
+  <text x="1196" y="416" class="body">SQLite 本地保存</text>
+  <text x="1196" y="458" class="small muted">可选：多设备账号同步</text>
+  <text x="1196" y="495" class="small muted">可选：本地语音转写</text>
+  <path d="M800 554V588M288 588H1312" class="line"/>
+  <g class="line" marker-end="url(#arrow)"><path d="M288 588V625"/><path d="M800 588V625"/><path d="M1312 588V625"/></g>
+  <rect x="64" y="636" width="448" height="222" rx="16" class="panel"/>
+  <text x="92" y="678" class="label">列表 / 逐条查看与筛选</text>
+  <circle cx="108" cy="729" r="11" fill="none" stroke="#80d9c6" stroke-width="2"/>
+  <text x="134" y="738" class="body">完成周报</text>
+  <text x="92" y="783" class="small muted">日期、优先级、标签、子任务进度</text>
+  <text x="92" y="826" font-size="23" fill="#80d9c6">回答：现在需要做什么？</text>
+  <rect x="576" y="636" width="448" height="222" rx="16" class="panel"/>
+  <text x="604" y="678" class="label">看板 / 按工作阶段分组</text>
+  <rect x="604" y="705" width="127" height="39" rx="7" fill="#295266"/><text x="667" y="733" text-anchor="middle" font-size="21">进行中</text>
+  <text x="750" y="733" class="body">完成周报</text>
+  <text x="604" y="783" class="small muted">待办 → 进行中 / 受阻 → 已完成</text>
+  <text x="604" y="826" font-size="23" fill="#80d9c6">回答：这件事推进到哪里？</text>
+  <rect x="1088" y="636" width="448" height="222" rx="16" class="panel"/>
+  <text x="1116" y="678" class="label">日历 / 按日期定位</text>
+  <rect x="1116" y="703" width="83" height="51" rx="8" fill="#314450"/><text x="1158" y="739" text-anchor="middle" font-size="31">23</text>
+  <text x="1218" y="738" class="body">完成周报</text>
+  <text x="1116" y="783" class="small muted">月 / 周 / 日视图 · 任务与独立日程</text>
+  <text x="1116" y="826" font-size="23" fill="#80d9c6">回答：什么时候到期？</text>
+  <rect x="64" y="894" width="1472" height="58" rx="12" fill="#1f333f"/>
+  <text x="90" y="931" font-size="23">执行辅助：提醒 · 番茄钟 · 任务秒表</text>
+  <text x="824" y="931" font-size="23">回顾：已完成 · 专注历史 · Markdown 日志</text>
+  <text x="64" y="984" font-size="17" class="muted">原创研究图解，非应用截图 · 依据 Todofy 2ae76fc · 任务由用户安排，软件负责组织与辅助执行</text>
+</svg>
