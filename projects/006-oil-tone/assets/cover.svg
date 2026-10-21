@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+  <title id="title">oil-tone：把文风偏好变成具体的编辑决定</title>
+  <desc id="desc">原创研究图解。事实材料与任务进入宿主 AI，23 条规范指导改写与自查；Python 脚本可选扫描，最后由人或 AI 结合语境复核。脚本提醒从 9 条变为 0 条不代表质量评分。</desc>
+  <rect width="1440" height="810" fill="#f5f3ed"/>
+  <g font-family="Microsoft YaHei,PingFang SC,sans-serif" fill="#262a24">
+    <text x="80" y="78" fill="#687063" font-family="Consolas,monospace" font-size="15" letter-spacing="3">006 / OPEN SOURCE STUDY</text>
+    <text x="80" y="166" font-size="62" font-weight="600">oil-tone</text>
+    <text x="80" y="237" font-size="43" fill="#ca492b">把「写自然一点」拆成具体的编辑决定。</text>
+    <text x="80" y="291" font-size="21" fill="#687063">23 条规则 · 一篇完整改稿 · 可追溯的事实与编辑依据</text>
+    <path d="M80 334h1280" stroke="#d9dcd1"/>
+    <g transform="translate(80 380)">
+      <rect width="270" height="236" rx="5" fill="#fffefa" stroke="#d9dcd1"/>
+      <text x="25" y="39" font-family="Consolas,monospace" font-size="13" fill="#687063">01 / INPUT</text>
+      <text x="25" y="87" font-size="29">任务与事实材料</text>
+      <text x="25" y="133" font-size="19" fill="#687063">写什么，已有何种依据</text>
+      <text x="25" y="170" font-size="19" fill="#687063">原稿、数字与使用限制</text>
+      <text x="297" y="119" font-size="35" fill="#9ca68e">→</text>
+      <rect x="350" width="435" height="236" rx="5" fill="#e9ece2" stroke="#c9d2ba"/>
+      <text x="375" y="39" font-family="Consolas,monospace" font-size="13" fill="#596a42">02 / AI FOLLOWS INSTRUCTIONS</text>
+      <text x="375" y="87" font-size="29">按规则改写，再依清单复核</text>
+      <text x="375" y="133" font-size="19" fill="#687063">保留事实 · 补清关系 · 自然表达</text>
+      <text x="375" y="170" font-size="19" fill="#687063">执行仍依赖模型理解和遵循</text>
+      <text x="812" y="119" font-size="35" fill="#9ca68e">→</text>
+      <rect x="865" width="415" height="236" rx="5" fill="#272e27"/>
+      <text x="890" y="39" font-family="Consolas,monospace" font-size="13" fill="#b3c3a2">03 / REVIEW &amp; DELIVER</text>
+      <text x="890" y="87" font-size="29" fill="#fffefa">脚本提示，结合语境判断</text>
+      <text x="890" y="133" font-size="19" fill="#bbc9ac">16 组正则 · 不自动改稿</text>
+      <text x="890" y="170" font-size="19" fill="#bbc9ac">没有自动评分和强制重试</text>
+    </g>
+    <text x="80" y="690" font-size="18" fill="#687063">教学案例：脚本提醒 9 → 0。这是匹配结果，不是文案质量分数。</text>
+    <path d="M80 731h1280" stroke="#d9dcd1"/>
+    <text x="80" y="773" font-size="14" fill="#687063">来源：oil-oil/oil-tone · commit 39cbf92 · MIT</text>
+    <text x="1360" y="773" font-size="14" text-anchor="end" fill="#687063">研究整理 / 2026.10.21</text>
+  </g>
+</svg>

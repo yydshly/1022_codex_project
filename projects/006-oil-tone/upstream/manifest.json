@@ -1,0 +1,36 @@
+{
+  "repo": "https://github.com/oil-oil/oil-tone",
+  "commit": "39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6",
+  "retrieved": "2026-10-21",
+  "modifications": "None; upstream bytes preserved.",
+  "files": [
+    {
+      "local": "SKILL.md",
+      "upstream_path": "skills/oil-tone/SKILL.md",
+      "url": "https://raw.githubusercontent.com/oil-oil/oil-tone/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6/skills/oil-tone/SKILL.md",
+      "sha256": "4c41226e5abe9e50035ca2e4edb0615f41d1d9bcac1de2d166bb3265837ca059",
+      "bytes": 5732
+    },
+    {
+      "local": "tone_lint.py",
+      "upstream_path": "skills/oil-tone/scripts/tone_lint.py",
+      "url": "https://raw.githubusercontent.com/oil-oil/oil-tone/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6/skills/oil-tone/scripts/tone_lint.py",
+      "sha256": "6dd67656a1475e5c5ebe3caf8ce4f135d22309a222ec19a91bb438f0ff483bda",
+      "bytes": 6849
+    },
+    {
+      "local": "openai.yaml",
+      "upstream_path": "skills/oil-tone/agents/openai.yaml",
+      "url": "https://raw.githubusercontent.com/oil-oil/oil-tone/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6/skills/oil-tone/agents/openai.yaml",
+      "sha256": "bfa517852281b0de7d999938a99137fbd07d4517f558395919cdb8dc5d9e372b",
+      "bytes": 359
+    },
+    {
+      "local": "LICENSE",
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/oil-oil/oil-tone/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6/LICENSE",
+      "sha256": "d44a3ca218007a85d3be41a0b76553d746e42336c7a63c6c6687d2619199c3c4",
+      "bytes": 1064
+    }
+  ]
+}

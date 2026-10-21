@@ -88,3 +88,14 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 源素材维护在子项目 `assets/`，打包副本、媒体数据和提示词副本在 `web/` 中按项目规则忽略，构建器再将完整 `web/` 复制到编号路径 `/1022_codex_project/004-xxd-panel-106/`。资源均使用相对路径，不依赖CDN或在线生图接口。网页支持官方图集筛选、完整图片放大、键盘切图、演示切换、四端壁纸下载、失败记录与场景说明。
 
 2026-10-21 已发布到 [004 · XXD Panel 106](https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/)，内容提交 `329ec7b`，[Actions构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39597904164)。42个项目发布文件均返回HTTP 200且字节一致；线上图集、11条提示词及指定引导图已检查，详见项目 [部署验证](../projects/004-xxd-panel-106/deployment-verification.json)。真实生成的模式与文字结果、尺寸偏差和失败过程保存在项目文档，验证范围见 [verification.md](../projects/004-xxd-panel-106/verification.md)。
+
+
+## 006 · oil-tone
+
+[写作约束研究网页](../projects/006-oil-tone/web/index.html) 说明能力、原理、使用场景与对我们的意义：将 23 条文字规则交给 AI，引导起草、润色和结构调整，保留事实、减少空话；可复用为文章、产品文案和口播的编辑标准与完整提示词。引导图采用我们已生成的理解总结图。
+
+页面包含六步执行链路、23 条规则检索、完整提示词复制与下载、21 处改稿批注、脚本结果和源码阅读。网页只展示已保存的研究材料，没有在线模型接口。教学产品与数据为虚构设定，Python 检查真实执行；9 → 0 是提醒数变化，不是质量评分。
+
+已生成的 web/data.js 与发布资源随项目提交；根汇总器直接复制到 `/006-oil-tone/`，现有 Actions 无需新增依赖。内容或上游快照变更后执行 `python projects/006-oil-tone/scripts/package_web.py`；加 `--check` 核对生成结果、快照哈希和脚本输出。源码与 MIT 许可经 web/assets/source/ 发布，不复制整个研究目录。
+
+线上地址与部署记录在完成真实验证后登记，检查范围见项目 [verification.md](../projects/006-oil-tone/verification.md)。

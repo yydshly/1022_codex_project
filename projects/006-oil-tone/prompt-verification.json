@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-21",
+  "rules": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "D1",
+    "D2",
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+  ],
+  "characters": 4100,
+  "bytes": 9206,
+  "sha256": "b88955db635d5fd82a3576cc7a8a5b2652a93b6e42f9b3b1f61007b0bce4184c",
+  "canonical_matches_published_and_browser_download": true,
+  "browser_copy_characters": 4100,
+  "browser_copy_matches_display": true,
+  "mobile": {
+    "width": 375,
+    "clientWidth": 360,
+    "scrollWidth": 360
+  },
+  "browser_errors_and_warnings": []
+}

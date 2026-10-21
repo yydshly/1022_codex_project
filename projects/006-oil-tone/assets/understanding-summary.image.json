@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-21",
+  "method": "Built-in ImageGen; one targeted arrow correction with the same tool.",
+  "file": "assets/understanding-summary.png",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 1787805,
+  "sha256": "6c83d315d4a49f5c0b9652bb8bc15c9d2a5530c0ef50e2f79bf25c4a50e7f8e1",
+  "upstream_repo": "https://github.com/oil-oil/oil-tone",
+  "upstream_commit": "39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6",
+  "scope": "Original generated research infographic, not an upstream product screenshot or performance benchmark.",
+  "verified_content": [
+    "23 textual rules, groups 4/6/7/2/4",
+    "16 regex groups, optional checks before delivery",
+    "AI performs editing and contextual review",
+    "No automatic scoring, forced retry or factual verification",
+    "9 to 0 warnings are a fictional teaching-case text scan, not a quality score."
+  ]
+}

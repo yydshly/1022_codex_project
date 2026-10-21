@@ -1,0 +1,84 @@
+{
+  "scope": "Local numbered-path static build with generated summary infographic; not an online deployment",
+  "date": "2026-10-21",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 17488,
+      "sha256": "6521aa8b3138bd154d70a6080af7c5f06ffddf948e697e447528aa9ab2d457a6"
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 35102,
+      "sha256": "7978b550f5336bd8d716f09122859742b67a3215a95c00ed5986f7829e50c2be"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 17514,
+      "sha256": "75e6a60de91fd38a5ceae55360952c52cd21eee087fe3326456d875e3f2509cd"
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "bytes": 61493,
+      "sha256": "33bda87b3ba845d30c3e46506dd2a4e971df90e671e34a0f5f8183a3a46ffc57"
+    },
+    {
+      "path": "assets/cover.svg",
+      "status": 200,
+      "bytes": 3148,
+      "sha256": "fe5c3e797db3c870daf89f63162e0ae9ca01ad3a15d13def8f836f17757b74c2"
+    },
+    {
+      "path": "assets/understanding-summary.png",
+      "status": 200,
+      "bytes": 1787805,
+      "sha256": "6c83d315d4a49f5c0b9652bb8bc15c9d2a5530c0ef50e2f79bf25c4a50e7f8e1"
+    },
+    {
+      "path": "assets/lint-results.json",
+      "status": 200,
+      "bytes": 3656,
+      "sha256": "4ea31ba1c24ec857922ef7a21f2a4fcf08af6f290ca8f1252156a8b481f17abd"
+    },
+    {
+      "path": "assets/oil-tone-writing-prompt.txt",
+      "status": 200,
+      "bytes": 9206,
+      "sha256": "b88955db635d5fd82a3576cc7a8a5b2652a93b6e42f9b3b1f61007b0bce4184c"
+    },
+    {
+      "path": "assets/source/SKILL.md",
+      "status": 200,
+      "bytes": 5732,
+      "sha256": "4c41226e5abe9e50035ca2e4edb0615f41d1d9bcac1de2d166bb3265837ca059"
+    },
+    {
+      "path": "assets/source/tone_lint.py",
+      "status": 200,
+      "bytes": 6849,
+      "sha256": "6dd67656a1475e5c5ebe3caf8ce4f135d22309a222ec19a91bb438f0ff483bda"
+    },
+    {
+      "path": "assets/source/openai.yaml",
+      "status": 200,
+      "bytes": 359,
+      "sha256": "bfa517852281b0de7d999938a99137fbd07d4517f558395919cdb8dc5d9e372b"
+    },
+    {
+      "path": "assets/source/LICENSE",
+      "status": 200,
+      "bytes": 1064,
+      "sha256": "d44a3ca218007a85d3be41a0b76553d746e42336c7a63c6c6687d2619199c3c4"
+    },
+    {
+      "path": "assets/source/manifest.json",
+      "status": 200,
+      "bytes": 1571,
+      "sha256": "a8af8bd84a415b99ac74303a8fcf57979fc0daf31fd865a49a189f1f9f8e019c"
+    }
+  ]
+}

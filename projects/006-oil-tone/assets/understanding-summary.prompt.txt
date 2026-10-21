@@ -1,0 +1,84 @@
+Use case: infographic-diagram.
+Asset type: a single Chinese research summary infographic for the existing oil-tone study webpage. Create a polished finished image, not a webpage screenshot or a photo mockup.
+Canvas: landscape 3:2, high resolution, target 2400×1600 or larger equivalent. All Chinese must be crisp and legible. Use generous spacing and hierarchy; no tiny dense paragraphs.
+
+Visual direction: match the existing study's warm paper background (#f5f3ed), charcoal text (#262a24), muted sage (#e9ece2 / #596a42), and restrained terracotta (#ca492b). Editorial information design, clean Chinese sans-serif typography, thin ruled dividers, a few simple document/editing icons, clear arrows. Flat front-facing layout. No people, robots, decorative stock imagery, 3D objects or fake UI. The content itself is the visual.
+
+Layout: top title and capability statement; a large left-to-right implementation flow across the middle; five equally legible constraint-angle columns A–E under the flow; bottom three sections for scenarios, meaning, and limits. A distinct bottom footnote states the validation boundary. Keep each text block short, no overlapping arrows. Make the mechanism and rule structure visually more prominent than the footnotes.
+
+Render the following Chinese text faithfully. You may wrap lines naturally, but do not invent facts or change numerical counts.
+
+TITLE:
+“oil-tone｜AI 写作约束，一图看懂”
+SUBTITLE:
+“把‘写自然一点’拆成具体的编辑决定”
+
+CAPABILITY heading:
+“能做什么”
+“起草、润色、调整结构，让文字更自然、具体、连贯。”
+“保留有依据的事实、观点与限制。”
+
+MECHANISM heading:
+“原理：规则进入上下文，由 AI 做编辑”
+Small entry label:
+“入口：宿主加载 Skill，或直接粘贴完整提示词”
+Four main nodes, linked by clear directional arrows:
+“任务＋事实材料＋原稿”
+“加载 23 条文字规则”
+“AI 改写并自查”
+“复核后交付成稿”
+A dashed OPTIONAL side branch from the editing/review area:
+“可选 Python：16 组正则 → WARN 提醒 → 结合语境处理”
+Small label beside this branch:
+“脚本不自动改稿”
+Do not depict this optional branch as mandatory or as a programmatically enforced retry loop.
+
+CONSTRAINT heading:
+“从哪些角度约束”
+Five columns:
+“A｜基本目标 ×4”
+“自然语法、读者顺序”
+“关系完整、事实有据”
+
+“B｜写作组织 ×6”
+“先说明对象与概念”
+“标题、引用、段落、修改范围”
+
+“C｜语气句子 ×7”
+“身份一致、动作具体”
+“删空话，保留必要虚词”
+
+“D｜表达形式 ×2”
+“按文档或口播调整语气”
+“保留代码、术语、引用与格式”
+
+“E｜完稿检查 ×4”
+“结构 → 依据 → 连读”
+“脚本仅在可用时运行”
+
+BOTTOM SECTION 1:
+“适用场景”
+“博客与体验文章”
+“产品／官网文案”
+“技术说明、演讲、PPT、社交帖子”
+
+BOTTOM SECTION 2:
+“对我们的意义”
+“把偏好写成可复用标准”
+“减少反复解释编辑要求”
+“按规则定位问题，形成自己的文风模板”
+
+BOTTOM SECTION 3:
+“能力边界”
+“规则靠模型遵循，不能保证达标”
+“脚本不核实事实，不自动改写”
+“没有自动评分或强制重试”
+
+BOTTOM EVIDENCE STRIP:
+“本次教学案例：9 → 0 条提醒 ≠ 文案质量合格”
+“产品、经历与测试数据为虚构；Python 检查真实运行。”
+
+SOURCE FOOTER:
+“来源：oil-oil/oil-tone · 39cbf92 · MIT｜研究整理：2026-10-21”
+
+Accuracy constraints: 23 is the count of textual rules, NOT executable functions or different model capabilities. The five group counts must be 4, 6, 7, 2, 4. Python has 16 regex groups, not 23. This repository does not train or fine-tune a model, does not perform factual verification, and does not enforce a quality pass gate. Do not invent a model accuracy score, performance improvement, testimonials or deployment status. The infographic is our interpretation of the repository, not official promotional material.

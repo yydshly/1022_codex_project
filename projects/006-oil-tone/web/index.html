@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="oil-tone 用 23 条文字规则进入 AI 上下文，引导起草、润色与结构调整，保留事实、减少空话；适用于文章、产品文案与口播，可复用为我们的编辑标准和完整提示词。">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>oil-tone · 一份稿子，怎样变得清楚</title>
+  <link rel="icon" href="./assets/cover.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="oil-tone 研究首页"><span class="brand-icon" aria-hidden="true">o<span>.</span></span><span>oil-tone<span class="brand-sub">研究手记 / 006</span></span></a>
+  <nav aria-label="页面章节"><a href="#understanding">能力</a><a href="#mechanism">实现</a><a href="#rules">规则</a><a href="#prompt">提示词</a><a href="#workshop">改稿实验</a><a href="#evidence">证据</a></nav>
+  <a class="source-link" href="https://github.com/oil-oil/oil-tone" target="_blank" rel="noopener noreferrer">上游仓库 <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+  <section class="hero section-width" id="top" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> OPEN SOURCE STUDY <span class="eyebrow-divider">/</span> 写作 Skill</p>
+      <h1 id="hero-title">把「写自然一点」<br>拆成<span class="accent-text">具体的编辑决定。</span></h1>
+      <p class="hero-intro">oil-tone 用 23 条文字规则引导 AI 起草、润色和调整结构，保留事实、补清关系、减少空话。规则与材料一起进入上下文，由模型执行；我们可以将它复用为文章、产品文案和口播的编辑标准。</p>
+      <div class="hero-actions"><a class="button primary" href="#workshop">看一次完整改稿 <span aria-hidden="true">↗</span></a><a class="text-link" href="#mechanism">先理解实现方式 <span aria-hidden="true">↓</span></a></div>
+      <p class="hero-meta">研究于 2026.10.21 <span>·</span> 上游 <a href="https://github.com/oil-oil/oil-tone/tree/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6" target="_blank" rel="noopener noreferrer">39cbf92</a> <span>·</span> MIT</p>
+    </div>
+    <div class="edit-preview" aria-label="编辑前后示意，非实际产品评价">
+      <div class="preview-toolbar"><span class="tiny-label">一处编辑 / 01</span><span class="paper-dots" aria-hidden="true">•••</span></div>
+      <div class="preview-before"><span class="margin-label">原稿</span><p>这款<span class="strike">革命性</span>工具<br><span class="strike">赋能团队工作</span>，<br>支持批量导出。</p></div>
+      <div class="preview-note"><span class="annotation-sign" aria-hidden="true">↳</span><span>删除没有依据的评价，<br>把材料中的限制写清楚。</span><span class="mini-rule">A4 + C6</span></div>
+      <div class="preview-after"><span class="margin-label">成稿</span><p>这款工具支持批量导出，<br><span class="green-mark">每次最多处理 20 个文件。</span></p></div>
+      <div class="preview-footer"><span>基于给定材料的改写示意</span><span class="small-arrow" aria-hidden="true">↗</span></div>
+      <span class="paper-index" aria-hidden="true">23 条规则<br>一个编辑过程</span>
+    </div>
+  </section>
+  <div class="stats-band section-width" aria-label="研究范围"><div><strong>23</strong><span>正文规则<br>逐条对照原文</span></div><div><strong>21</strong><span>可点击批注<br>追溯修改依据</span></div><div><strong>9 <span class="stat-arrow">→</span> 0</strong><span>脚本提醒变化<br>不等于质量评分</span></div><div class="stats-note"><span class="tiny-label">本次关注</span><p>约束如何被写下，<br>又如何落实到一份稿子。</p></div></div>
+
+  <section id="understanding" class="section-width content-section" aria-labelledby="understanding-title">
+    <div class="section-heading"><p class="eyebrow">01 / 我们的理解</p><h2 id="understanding-title">它把编辑经验，<br>变成可重复使用的要求。</h2></div>
+    <figure class="understanding-overview">
+      <a href="./assets/understanding-summary.png" target="_blank" rel="noopener noreferrer" aria-label="打开 oil-tone 理解总结原图">
+        <img src="./assets/understanding-summary.png" width="1536" height="1024" loading="lazy" alt="oil-tone 理解总结：任务、事实与原稿和 23 条规则一起进入 AI 上下文，由模型改写、自查并交付；可选 Python 以 16 组正则提醒。五组规则约束基本目标、组织、句子、形式和复核；适合文章、产品文案、技术说明与口播，可复用为自己的编辑标准，但不保证质量达标。">
+      </a>
+      <figcaption><span>我们的理解，一张图汇总。使用 ImageGen 生成，依据上游固定版本 39cbf92 整理；图中 9 → 0 是教学文本的脚本提醒变化。</span><a href="./assets/understanding-summary.png" target="_blank" rel="noopener noreferrer">打开原图 ↗</a></figcaption>
+    </figure>
+    <div class="understanding-layout"><p class="lead">你提供任务、事实材料和草稿；AI 依据这份规范完成写作，再用检查清单复核。附带的 Python 脚本只负责提示少数可疑表达。</p><div class="scope-notes"><div><span class="scope-number">01</span><h3>具体到每一次取舍</h3><p>哪些信息必须保留，何时解释术语，怎样补清关系，哪些评价没有依据。</p></div><div><span class="scope-number">02</span><h3>多数约束靠模型遵循</h3><p>它没有训练新模型，也没有独立的改写服务。实际编辑由读取规范的 AI 完成。</p></div><div><span class="scope-number">03</span><h3>检查范围有边界</h3><p>正则匹配不核实事实，不保证自然，也不会因为提醒而阻止交付。</p></div></div></div>
+    <div class="use-cases"><span class="tiny-label">适合用在</span><p><strong>文章与个人体验</strong><span>保留真实观察，减少无依据的升华。</span></p><p><strong>产品与网站介绍</strong><span>说清功能、操作和使用限制。</span></p><p><strong>演讲、口播与 PPT</strong><span>调整阅读顺序与拗口表达。</span></p></div>
+    <div class="study-value"><span class="tiny-label">对我们的意义</span><h3>把一句文风要求，沉淀成自己的编辑标准。</h3><p>固定判断条件、修改动作和复核清单，让每次改稿都有依据。先复制下面的完整提示词，再根据自己的读者、场景和真实案例调整；需要解释改动时，可要求 AI 逐处标出规则与理由。</p><a class="text-link" href="#prompt">复制完整提示词 ↓</a></div>
+  </section>
+
+  <section id="mechanism" class="mechanism-section content-section" aria-labelledby="mechanism-title"><div class="section-width">
+    <div class="section-heading heading-inline"><div><p class="eyebrow">02 / 实际实现</p><h2 id="mechanism-title">从入口，到最终成稿。</h2></div><p>点击每一步，分清谁在执行。<br>这是规范要求的流程，程序只覆盖其中一部分。</p></div>
+    <div id="stage-tabs" class="stage-tabs" role="tablist" aria-label="实现链路"></div>
+    <div id="stage-panel" class="stage-panel" role="tabpanel" tabindex="0"></div>
+    <details class="implementation-details"><summary>展开：仓库里实际有哪些文件？</summary><div class="implementation-grid"><p><code>SKILL.md</code><strong>写作规则与复核清单</strong><span>名称和描述用于识别；正文交给模型理解和遵循。</span></p><p><code>agents/openai.yaml</code><strong>调用入口的界面配置</strong><span>显示名称、颜色和默认调用语句，不执行改写。</span></p><p><code>scripts/tone_lint.py</code><strong>16 组正则检查</strong><span>输出可疑行和建议，不替换原句，不调用模型。</span></p></div></details>
+  </div></section>
+
+  <section id="rules" class="section-width content-section" aria-labelledby="rules-title">
+    <div class="section-heading heading-inline"><div><p class="eyebrow">03 / 阅读规则</p><h2 id="rules-title">目标 → 判断 → 动作 → 边界</h2></div><p>每条都能展开查看原文、修改示例和适用条件。<br>A—E 是我们的对照编号，上游文件没有这些编号。</p></div>
+    <div class="rules-toolbar"><div id="rule-filters" class="rule-filters" role="group" aria-label="规则分组"></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="rule-search" type="search" placeholder="搜索：事实、标题、虚词…" aria-label="搜索规则"><kbd>/</kbd></label></div>
+    <p id="rule-count" class="result-count" aria-live="polite"></p>
+    <div id="rule-grid" class="rule-grid"></div><p id="rule-empty" class="empty-state" hidden>没有匹配的规则。试试“因果”“引用”或“自然”。</p>
+    <p class="section-footnote">这里的改写示例由我们构造，补充细节需已有材料支持；它们用于解释规则，不是上游评测结果。</p>
+    <a class="text-link rules-prompt-link" href="#prompt">直接使用：复制下面的完整提示词 ↓</a>
+  </section>
+
+  <section id="prompt" class="prompt-section content-section" aria-labelledby="prompt-title"><div class="section-width">
+    <div class="section-heading heading-inline"><div><p class="eyebrow">直接使用 / 完整提示词</p><h2 id="prompt-title">把这 23 条规则，<br>直接交给你的 AI。</h2></div><p>无需安装 Skill。复制后填写任务信息，<br>附上事实材料与原稿，再发送给 AI。</p></div>
+    <div class="prompt-layout"><aside class="prompt-guide"><span class="tiny-label">HOW TO USE</span><ol><li><strong>复制完整提示词</strong><span>已包含任务模板、23 条规则和交付要求。</span></li><li><strong>填写方括号</strong><span>选择起草、润色或调整结构，说明读者、场景和输出方式。</span></li><li><strong>补充材料与原稿</strong><span>把事实和未确认事项区分清楚；起草任务可不提供原稿。</span></li></ol><p>想看修改依据，可将输出方式设为“成稿 + 逐处修改、规则编号及理由”。</p><p class="prompt-guide-note">E4 已适配普通对话：只有环境中确实有检查脚本时才运行，不能把自查写成程序检查通过。</p></aside><div class="prompt-editor"><div class="prompt-toolbar"><div><span class="tiny-label">COPY-READY PROMPT</span><p id="prompt-meta">完整 23 条规则</p></div><div class="prompt-actions"><button type="button" class="button primary" id="copy-writing-prompt">复制完整提示词 ↗</button><a id="download-writing-prompt" href="./assets/oil-tone-writing-prompt.txt" download="oil-tone-完整写作提示词.txt">下载 .txt ↓</a></div></div><label class="sr-only" for="writing-prompt">完整写作提示词，可选择并复制全文</label><textarea id="writing-prompt" readonly spellcheck="false" aria-describedby="prompt-attribution"></textarea><p id="prompt-attribution">本研究基于固定版本 SKILL.md 整理，补充了任务输入和交付要求；A—E 对应上方规则。末尾保留来源与 MIT 许可，不属于最终成稿内容。</p></div></div>
+  </div>
+  </section>
+
+  <section id="workshop" class="workshop-section content-section" aria-labelledby="workshop-title"><div class="section-width">
+    <div class="section-heading heading-inline"><div><p class="eyebrow">04 / 改稿实验</p><h2 id="workshop-title">一篇完整稿子，<br>逐处看它为什么变了。</h2></div><p>点击橙色标记，查看前后变化、规则与事实依据。<br>也可以直接阅读原稿或无批注成稿。</p></div>
+    <div class="example-disclosure"><span class="disclosure-icon" aria-hidden="true">i</span><p><strong>虚构材料，真实执行检查。</strong>资料盒、经历与数据均为教学设定。改写由本次助手按规则完成；这里只展示已保存的案例，没有在线 AI 接口。</p></div>
+    <details class="facts-panel"><summary><span>先固定事实底稿</span><span class="facts-summary">8 条已确认材料 <span aria-hidden="true">＋</span></span></summary><div id="fact-grid" class="fact-grid"></div></details>
+    <div class="workbench"><div class="document-column"><div class="document-toolbar"><div class="doc-tabs" role="tablist" aria-label="示例稿件视图"><button type="button" role="tab" id="doc-tab-original" aria-controls="document" aria-selected="false" data-view="original">完整原稿</button><button type="button" role="tab" id="doc-tab-annotated" aria-controls="document" aria-selected="true" data-view="annotated">逐处批注 <span>21</span></button><button type="button" role="tab" id="doc-tab-final" aria-controls="document" aria-selected="false" data-view="final">最终成稿</button></div><button class="icon-button" id="copy-document" type="button" title="复制当前稿件" aria-label="复制当前稿件">复制 ↗</button></div><div id="document" class="document" role="tabpanel" aria-labelledby="doc-tab-annotated" tabindex="0"></div><div class="document-footer"><span id="document-caption"></span><button type="button" id="download-final">下载成稿 .md ↓</button></div></div>
+    <aside id="annotation-column" class="annotation-column" aria-label="修改批注"><div class="annotation-heading"><span class="tiny-label">编辑批注</span><span id="revision-position"></span></div><div id="annotation-detail"></div><div class="revision-navigation"><button type="button" id="previous-revision" aria-label="上一处修改">← 上一处</button><button type="button" id="next-revision" aria-label="下一处修改">下一处 →</button></div></aside></div>
+    <div id="revision-index" class="revision-index" role="group" aria-label="跳转到具体修改"></div>
+  </div></section>
+
+  <section id="evidence" class="section-width content-section" aria-labelledby="evidence-title">
+    <div class="section-heading heading-inline"><div><p class="eyebrow">05 / 验证与源码</p><h2 id="evidence-title">哪些真的检查了，<br>哪些仍要判断。</h2></div><p>下面是固定版本脚本对本例文本的真实输出。<br>9 → 0 表示提醒数量变化，不是质量提高的分数。</p></div>
+    <div class="evidence-layout"><div class="lint-report"><div class="report-heading"><span class="tiny-label">PYTHON / 实际检查</span><span class="pass-badge">自检 PASS</span></div><div class="lint-comparison"><div><span>原稿</span><strong id="original-warning-count">9</strong><span>条提醒</span></div><span class="lint-arrow" aria-hidden="true">→</span><div><span>成稿</span><strong id="final-warning-count">0</strong><span>条提醒</span></div></div><code class="terminal-line">PASS&nbsp; no wording hints</code><p>同一份固定脚本扫描原稿和成稿，未增加规则或更改检查器。</p><a class="text-link" href="./assets/lint-results.json" download>下载完整检查记录 ↓</a></div><div class="verification-notes"><h3>0 条提醒之后，还需看这些。</h3><p><strong>试用两天，不能写“长期使用”。</strong>检查器不核对材料中的经历。</p><p><strong>耗时降低 65%，不等于效率提升 65%。</strong>检查器不理解计算指标。</p><p><strong>文字导出，不能写“完整备份”。</strong>检查器不判断功能范围。</p><p class="verification-bottom">这些问题由我们对照底稿修正。整体文案质量没有进行独立模型评审或读者盲测。</p></div></div>
+    <details class="warning-details"><summary>查看原稿触发的 9 条提醒</summary><div id="warning-list"></div></details>
+    <div class="source-reader"><div class="source-reader-header"><div><span class="tiny-label">SOURCE READER</span><h3>原文就在这里。</h3></div><div class="source-actions"><button id="copy-source" type="button">复制源码</button><a id="download-source" href="./assets/source/SKILL.md" download>下载 ↓</a></div></div><div class="source-tabs" role="tablist" aria-label="上游源文件"><button role="tab" type="button" id="source-tab-skill" aria-controls="source-code" aria-selected="true" data-source="SKILL.md">SKILL.md</button><button role="tab" type="button" id="source-tab-lint" aria-controls="source-code" aria-selected="false" data-source="tone_lint.py">tone_lint.py</button><button role="tab" type="button" id="source-tab-config" aria-controls="source-code" aria-selected="false" data-source="openai.yaml">openai.yaml</button></div><pre id="source-code" tabindex="0" role="tabpanel" aria-labelledby="source-tab-skill"></pre><div class="source-reader-footer"><span>固定快照 / 39cbf92 / MIT</span><a id="upstream-file-link" href="https://github.com/oil-oil/oil-tone/blob/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6/skills/oil-tone/SKILL.md" target="_blank" rel="noopener noreferrer">在上游查看 ↗</a></div></div>
+  </section>
+</main>
+<footer class="site-footer section-width"><div><a class="footer-brand" href="#top">oil-tone<span> / 研究手记 006</span></a><p>从源码理解能力，从改稿理解约束。</p></div><div><a href="https://github.com/oil-oil/oil-tone" target="_blank" rel="noopener noreferrer">上游项目 ↗</a><a href="./assets/source/LICENSE">上游 MIT 许可</a><a href="../">项目总导航 ↗</a><span>研究日期 2026.10.21 · 固定版本 39cbf92</span></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><div class="noscript-note">此页的交互需要 JavaScript。可直接阅读 <a href="./assets/source/SKILL.md">SKILL 原文</a> 和 <a href="./assets/lint-results.json">检查记录</a>。</div></noscript>
+</body>
+</html>

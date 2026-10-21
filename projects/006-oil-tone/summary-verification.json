@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-21",
+  "generation": "Built-in image_gen, then a single targeted arrow correction",
+  "content_review": "Visually checked the Chinese labels, 4/6/7/2/4 rule groups, 16 regex checks, optional return-to-review arrows, scenarios, reuse value and non-guarantee statements.",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "source_published_http_identical": true,
+  "root_index_uses_new_cover": true,
+  "browser_image_loaded": true,
+  "desktop": {
+    "width": 1280,
+    "clientWidth": 1265,
+    "scrollWidth": 1265
+  },
+  "mobile": {
+    "width": 375,
+    "clientWidth": 360,
+    "scrollWidth": 360
+  },
+  "browser_errors_and_warnings": [],
+  "limitations": "This is a generated research interpretation. No new product performance or model-quality experiment."
+}
