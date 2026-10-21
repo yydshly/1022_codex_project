@@ -1,0 +1,24 @@
+{
+  "id": "Datamosh",
+  "values": {
+    "blockCorruption": 0.4,
+    "smearAmount": 30,
+    "colorBleed": 0.5,
+    "glitchRate": 2
+  },
+  "time": 1.7,
+  "touch": [
+    0.5,
+    0.5
+  ],
+  "logicalSize": [
+    450,
+    600
+  ],
+  "outputSize": [
+    600,
+    800
+  ],
+  "renderer": "WebGL 2 browser capture",
+  "sourceCommit": "6b644a8bd4f3131401bd6765990e476352d3cdef"
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用图解理解 SwiftUIShaders 的输入、GPU 原理、输出、价值、使用场景与扩展方向；对照真实效果模块，并完整体验 41 种特效。">
+  <meta name="color-scheme" content="dark">
+  <title>SwiftUIShaders · 能力图解与 41 种实时特效</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">跳到特效实验区</a>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">✳</span><span>SwiftUI <strong>Shader Lab</strong></span><span class="project-id">研究项目 001</span></a>
+    <nav aria-label="主导航"><a href="#visual-overview">图解总览</a><a href="#workspace">实时实验</a><a href="#gallery">全部特效 <span>41</span></a><a href="#usecases">用途与价值</a><a href="#about">实现与来源</a><a class="upstream-link" href="https://github.com/krispuckett/SwiftUIShaders" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">AN EXPLORATION OF LIGHT, TEXTURE &amp; MOTION</p><h1 id="page-title">让静态画面，<em>流动起来。</em></h1><p class="intro-copy">SwiftUIShaders 为图片、文字和卡片提供 41 种 GPU 实时特效。输入已有视图与控制参数，输出会流动、变形或响应触摸的视图，适合封面、卡片和展示页主视觉。</p></div>
+      <div class="stats" aria-label="能力统计"><div><strong>41<span>种</span></strong><small>完整特效</small></div><div><strong>36<span>种</span></strong><small>随时间变化</small></div><div><strong>02<span>种</span></strong><small>触摸交互</small></div></div>
+    </section>
+    <section class="briefing" aria-label="能力、原理、效果、场景与扩展摘要">
+      <dl><div><dt>能力是什么</dt><dd>41 个 SwiftUI 视图修饰器，给图片、文字与组合视图添加可调节的实时特效。</dd></div><div><dt>原理是什么</dt><dd>SwiftUI 图层经 layerEffect 交给 Metal；GPU 逐像素改变采样位置、颜色或混合多个采样。</dd></div><div><dt>能实现什么</dt><dd>镭射、液态金属、波纹、折射、万花筒、水墨、故障与消散等；支持时间和触摸驱动。</dd></div><div><dt>适合用在哪里</dt><dd>封面海报、会员或收藏卡、产品与活动展示主视觉，以及点击、拖动的局部反馈。</dd></div><div><dt>可以怎样扩展</dt><dd>接入滚动或设备运动，组合效果、保存预设、编写新算法；批量图片、GIF 或视频需额外开发。</dd></div></dl>
+      <p class="output-note"><strong>最终输出是实时视图。</strong>当前画面可以截成图片；动效持续重绘，视频需要录制与编码。本网页另行实现了 WebGL 预览、素材上传、原图对比与 PNG 导出。</p>
+      <div class="brief-actions"><a href="#workspace">进入 41 种特效实验 ↓</a><a href="#visual-overview">先看两张引导图 ↓</a></div>
+    </section>
+    <section class="visual-section" id="visual-overview" aria-labelledby="visual-title">
+      <div class="section-heading"><div><p class="eyebrow">THE BIG PICTURE / 能力图解</p><h2 id="visual-title">先看两张图，<em>理解能力与效果。</em></h2><p>第一张解释输入、GPU 处理原理、输出与应用方向；第二张对照原图和 8 种真实效果。点击图片可放大查看。</p></div><div class="visual-downloads"><a href="./assets/understanding-overview.png" download data-download-visual="Overview">下载总览 PNG ↓</a><a href="./assets/understanding-overview.svg" download data-download-visual="OverviewSVG">可编辑 SVG ↓</a></div></div>
+      <div class="guide-pair"><figure class="overview-figure"><a href="./assets/understanding-overview.svg" target="_blank" rel="noreferrer" data-open-visual="OverviewSVG" aria-label="放大能力全景图"><img id="overview-image" src="./assets/understanding-overview.svg" width="2000" height="2460" loading="eager" alt="SwiftUIShaders 能力图解：输入是已有 SwiftUI 视图及效果参数、尺寸、时间和触点；Metal 在 GPU 上逐像素采样、变换与混合；输出为实时渲染的视图。图中另含六类特效、真实效果对比、使用场景，以及交互、算法和素材导出等扩展方向。"></a><figcaption>01 / 能力全景。图解中的效果来自同一张原创封面的真实 WebGL 渲染；原生 Metal 的精度、色彩和采样边界仍需 Apple 设备对照。</figcaption></figure><figure class="overview-figure"><a href="./assets/effect-atlas.png" target="_blank" rel="noreferrer" data-open-visual="Atlas" aria-label="放大原图与八种效果对照图"><img id="atlas-image" src="./assets/effect-atlas.png" width="1800" height="2750" loading="lazy" alt="原图与 8 种真实效果对照：全息镭射、霓虹描边、万花筒、水墨晕染、数据损坏、粒子消散、触摸涟漪和交互透镜。"></a><figcaption>02 / 效果图集。同一张原创封面、固定参数和时间；下方模块可进入实时实验。<a href="./assets/effect-atlas.png" download data-download-visual="Atlas">下载 PNG ↓</a></figcaption></figure></div>
+      <details class="visual-transcript"><summary>查看图解文字版与能力边界 <span>＋</span></summary><dl><div><dt>输入</dt><dd>可渲染的 SwiftUI View：图片、文字、封面或卡片组合，配合尺寸、时间、触点和效果参数。</dd></div><div><dt>原理</dt><dd>SwiftUI 生成栅格图层，layerEffect 调用 Metal 着色器；GPU 逐像素改变采样位置、颜色，或混合多个采样。时间与交互数据驱动变化。</dd></div><div><dt>输出</dt><dd>实时显示的 SwiftUI 视图效果。源库提供 41 种特效；36 种随时间变化、3 种静态或参数驱动、2 种触摸交互。</dd></div><div><dt>价值与场景</dt><dd>复用现成修饰器来减少开发工作，增强材质、氛围与反馈；适合封面、卡片、展示页主视觉，以及点击和拖动的局部响应。</dd></div><div><dt>扩展方向</dt><dd>滚动或设备运动数据接入、预设主题、效果组合、新增 Metal 算法，以及应用层的批量图片导出、GIF 或视频录制；这些方向需要额外开发与验证。</dd></div><div><dt>本展示补充</dt><dd>浏览器 WebGL 移植、参数实验、素材切换、原图对比与 PNG 导出。源库直接输出视图，网页和文件导出功能由展示页另行实现。</dd></div></dl></details>
+    </section>
+    <section class="workspace" id="workspace" aria-label="特效实验区" aria-busy="true">
+      <aside class="catalog-panel">
+        <div class="panel-heading"><h2>效果目录</h2><span id="list-count">41</span></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索名称、效果或参数…" aria-label="搜索特效"></label>
+        <label class="sr-only" for="category">按类型筛选</label><select id="category"><option value="all">全部类型</option><option>光影材质</option><option>流体波纹</option><option>几何空间</option><option>色彩轮廓</option><option>故障解构</option><option>触摸交互</option></select>
+        <div id="effect-list" class="effect-list" role="group" aria-label="选择特效"></div>
+        <div class="catalog-footer"><i class="status-dot"></i><span>全部算法来自上游 Metal 源码</span></div>
+      </aside>
+      <div class="preview-panel">
+        <div class="preview-top"><div><span class="eyebrow">LIVE PREVIEW</span><h2 id="effect-name">全息镭射 <span>Holographic</span></h2></div><span class="kind-badge" id="effect-kind">自动动画</span></div>
+        <div class="preview-stage" id="preview-stage">
+          <span class="stage-caption" id="stage-caption">THE SHAPE OF SILENCE / 原创测试封面</span>
+          <div class="canvas-wrap" id="canvas-wrap"><canvas id="preview" width="450" height="600" role="img" aria-label="全息镭射实时预览，可用指针交互" tabindex="0"></canvas><span class="compare-divider" id="compare-divider" hidden></span><span class="split-label original-label" hidden>原图</span><span class="split-label effect-label" hidden>效果</span></div>
+          <p class="stage-hint" id="stage-hint">光泽随时间流动，试试调节右侧参数</p>
+          <div class="preview-error" id="preview-error" role="alert" hidden></div>
+        </div>
+        <div class="playback"><button id="play" class="icon-button" aria-label="暂停动画" title="暂停动画">Ⅱ</button><span id="time-label">00:00.0</span><label class="timeline"><span class="sr-only">动画时间</span><input id="timeline" type="range" min="0" max="30" step="0.01" value="1.7"></label><button id="compare" class="subtle-button" aria-pressed="false">◧ 原图对比</button><button id="download" class="icon-button" aria-label="下载当前效果 PNG" title="下载 PNG">↓</button></div>
+        <div class="material-row"><span>测试素材</span><div class="material-buttons" role="group" aria-label="选择预览素材"><button data-material="cover" class="active" aria-pressed="true">山野封面</button><button data-material="flower" aria-pressed="false">植物插画</button><button data-material="type" aria-pressed="false">文字海报</button><label class="upload-button" for="upload">＋ 自选图片<input id="upload" type="file" accept="image/*"></label></div></div>
+      </div>
+      <aside class="inspector">
+        <div class="panel-heading"><h2>参数实验</h2><button id="reset" class="text-button">恢复默认</button></div>
+        <p id="effect-description" class="effect-description">加载完整特效参数…</p>
+        <div class="preset-row"><button id="showcase" class="preset-button">↗ 展示预设</button><span id="preset-label">上游默认值</span></div>
+        <div id="controls" class="controls"></div>
+        <div class="principle"><span class="eyebrow">HOW IT WORKS</span><p id="principle"></p></div>
+        <div class="code-heading"><span>SWIFTUI</span><button id="copy" class="text-button">复制代码 ↗</button></div><pre class="swift-code"><code id="swift-code"></code></pre>
+        <p class="interaction-note" id="interaction-note" hidden></p>
+        <details class="source-details"><summary>查看此效果 Metal 源码 <span>＋</span></summary><pre><code id="metal-code"></code></pre><a id="source-link" target="_blank" rel="noreferrer">在上游查看固定版本 ↗</a></details>
+      </aside>
+    </section>
+    <p class="render-note"><span id="render-status"><i class="status-dot"></i>WebGL 2 实时移植预览</span><span>基于原始算法 · 跨渲染器可能存在精度与色彩差异 · 原生表现以 Metal 为准</span></p>
+    <section class="visual-section" id="visual-modules" aria-label="真实效果模块">
+      <div class="visual-module-heading"><div><h3>把效果，拆成可体验的模块。</h3><p>8 种代表效果使用同一张封面、固定时间与参数。点击模块，在实验区继续调节。</p></div><a href="./assets/effect-atlas.png" download data-download-visual="Atlas">下载原图＋8种效果图集 ↓</a></div>
+      <div class="example-modules" id="example-modules" aria-label="代表效果模块"></div>
+    </section>
+    <section class="understanding" id="usecases" aria-labelledby="understanding-title">
+      <div class="section-heading"><div><p class="eyebrow">PURPOSE &amp; VALUE / 我们的理解</p><h2 id="understanding-title">更适合封面、卡片与<em>展示页的视觉重点。</em></h2><p>用较低的接入成本，让已有内容更有质感、动感和可玩性。</p></div></div>
+      <div class="understanding-overview">
+        <div class="core-understanding"><h3>核心能力：给界面内容加实时特效</h3><p>图片是最直观的使用对象，也能作用于文字、卡片和可渲染的 SwiftUI 组合视图。效果随时间流动，或跟随手指位置变化，让内容获得动态的视觉表现。</p><div class="scope-tags" aria-label="适用内容"><span>图片与封面</span><span>文字</span><span>卡片</span><span>组合视图</span></div></div>
+        <dl class="value-list"><div><dt>降低开发成本</dt><dd>复用现成修饰器与参数，减少从头编写 Metal 着色器的工作。</dd></div><div><dt>增强视觉表达</dt><dd>用材质、反光与动态突出内容，建立鲜明的视觉主题。</dd></div><div><dt>补充交互反馈</dt><dd>让点击、拖动和状态变化产生可感知的响应。</dd></div></dl>
+      </div>
+      <div class="usecase-grid">
+        <article class="usecase"><span class="usecase-number">01 / COVER</span><h3>封面与海报</h3><p class="usecase-audience">书籍 · 音乐专辑 · 电影海报</p><p>给选中的封面加轻微流光或呼吸起伏，突出当前内容，并营造与作品相符的氛围。</p><div class="usecase-actions"><button data-explore-effect="Holographic">体验全息镭射 ↗</button><button data-explore-effect="MorphBreathe">有机呼吸 ↗</button></div></article>
+        <article class="usecase"><span class="usecase-number">02 / CARD</span><h3>卡片与徽章</h3><p class="usecase-audience">会员卡 · 收藏卡 · 成就徽章</p><p>用镭射反光、液态金属和触摸折射表现材质，增强珍藏感与不同等级的视觉区分。</p><div class="usecase-actions"><button data-explore-effect="LiquidChrome">体验液态金属 ↗</button><button data-explore-effect="RefractLens">交互透镜 ↗</button></div></article>
+        <article class="usecase"><span class="usecase-number">03 / SHOWCASE</span><h3>展示页主视觉</h3><p class="usecase-audience">产品介绍 · 活动页面 · 游戏界面</p><p>在主视觉或产品图片上使用水墨、故障等风格化效果，建立主题，让展示内容更有辨识度。</p><div class="usecase-actions"><button data-explore-effect="InkBleed">体验水墨晕染 ↗</button><button data-explore-effect="Glitch">数字故障 ↗</button></div></article>
+      </div>
+      <div class="feedback-example"><div><strong>也适合局部操作反馈</strong><p>点击产生涟漪、完成时脉冲、移除时消散，让操作和视觉响应联系起来。创意编辑工具也可以直接开放效果选择与参数调节。</p></div><button data-explore-effect="TouchRipple">点击试试涟漪 ↗</button></div>
+      <div class="understanding-boundaries"><div><h3>使用判断</h3><p>优先放在需要表现材质、突出内容或响应操作的位置。表单、表格和长文本阅读以清晰和效率为主，特效宜少量使用；大面积持续动画会增加 GPU 开销。留存或转化收益仍需产品实验验证。</p></div><div><h3>原库与当前展示的范围</h3><p>原库面向 Apple 应用中的 <strong>SwiftUI 原生视图</strong>。本页是方便研究的 <strong>WebGL 移植展示</strong>，图片用于统一比较效果；图片上传和 PNG 导出是本展示页补充的功能。</p></div></div>
+    </section>
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading"><div><p class="eyebrow">THE COMPLETE COLLECTION</p><h2 id="gallery-title">一种素材，<em>41 种可能。</em></h2><p>同一张图，观察每一种变换。选择卡片，在上方实验区继续探索。</p></div><div class="gallery-meta"><span id="gallery-count">41 / 41</span><small>展示预设 · 同步当前素材</small></div></div>
+      <div id="gallery-grid" class="gallery-grid"></div><p id="empty" class="empty-state" hidden>没有匹配的特效。试试“涟漪”“intensity”或清空筛选。</p>
+    </section>
+    <section class="about" id="about" aria-labelledby="about-title"><div><p class="eyebrow">UNDER THE SURFACE</p><h2 id="about-title">效果之下，是采样与数学。</h2><p>SwiftUI 把视图交给 Metal，GPU 为每个输出像素重新计算颜色。改变取色位置，形成波浪与旋涡；组合颜色与噪声，形成镭射与流光。时间和触点，让它们产生变化。</p><p>上游有 37 个动画封装，其中「碎片散开」实际由 explode 参数控制，其余 36 个使用时间产生变化。</p><a href="https://developer.apple.com/documentation/swiftui/view/layereffect(_:maxsampleoffset:isenabled:)" target="_blank" rel="noreferrer">了解 Apple layerEffect ↗</a></div><div class="about-facts"><p><span>上游作者</span><strong>Kris Puckett</strong></p><p><span>研究版本</span><a href="https://github.com/krispuckett/SwiftUIShaders/tree/6b644a8bd4f3131401bd6765990e476352d3cdef" target="_blank" rel="noreferrer">6b644a8 ↗</a></p><p><span>原生要求</span><strong>iOS 17+ / macOS 14+</strong></p><p><span>开放许可</span><a href="./LICENSE.upstream.txt">MIT License ↗</a></p><p><span>展示实现</span><strong>41 个算法 · WebGL 2 移植</strong></p><p><span>效果构成</span><strong>36 时间变化 / 3 静态或参数 / 2 交互</strong></p></div></section>
+  </main>
+  <footer><span>001 / GITHUB PROJECT RESEARCH</span><span>SwiftUIShaders by Kris Puckett · 展示素材为本研究原创</span><a href="#">回到顶部 ↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p>请启用 JavaScript 以加载 41 种实时特效与参数面板。</p></noscript>
+</body>
+</html>

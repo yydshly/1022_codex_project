@@ -1,0 +1,258 @@
+{
+  "engine": "Chromium / ANGLE SwiftShader (software WebGL 2)",
+  "nativeMetal": "not run: Windows host",
+  "pixels": [
+    {
+      "id": "Aurora",
+      "delta": 4.543836805555555,
+      "animationDelta": 3.3404134114583335,
+      "errors": []
+    },
+    {
+      "id": "BlackHole",
+      "delta": 65.91688368055556,
+      "animationDelta": 52.28228081597222,
+      "errors": []
+    },
+    {
+      "id": "ChromaticSplit",
+      "delta": 9.13330078125,
+      "animationDelta": 0.4296875,
+      "errors": []
+    },
+    {
+      "id": "Datamosh",
+      "delta": 9.768391927083334,
+      "animationDelta": 14.765625,
+      "errors": []
+    },
+    {
+      "id": "Disintegrate",
+      "delta": 38.549533420138886,
+      "animationDelta": 22.18264431423611,
+      "errors": []
+    },
+    {
+      "id": "Duochrome",
+      "delta": 46.342854817708336,
+      "animationDelta": 1.05615234375,
+      "errors": []
+    },
+    {
+      "id": "Echo",
+      "delta": 16.449869791666668,
+      "animationDelta": 4.369059244791667,
+      "errors": []
+    },
+    {
+      "id": "Emboss",
+      "delta": 11.983751085069445,
+      "animationDelta": 0,
+      "errors": []
+    },
+    {
+      "id": "EtherealAura",
+      "delta": 22.780517578125,
+      "animationDelta": 14.667399088541666,
+      "errors": []
+    },
+    {
+      "id": "Frosted",
+      "delta": 14.256646050347221,
+      "animationDelta": 0,
+      "errors": []
+    },
+    {
+      "id": "GeometricWarp",
+      "delta": 97.09499782986111,
+      "animationDelta": 79.03130425347223,
+      "errors": []
+    },
+    {
+      "id": "Glitch",
+      "delta": 4.76171875,
+      "animationDelta": 15.17624240451389,
+      "errors": []
+    },
+    {
+      "id": "GravityWells",
+      "delta": 10.463677300347221,
+      "animationDelta": 9.309190538194445,
+      "errors": []
+    },
+    {
+      "id": "HeatShimmer",
+      "delta": 12.241400824652779,
+      "animationDelta": 14.517442491319445,
+      "errors": []
+    },
+    {
+      "id": "Holographic",
+      "delta": 19.904432508680557,
+      "animationDelta": 13.878499348958334,
+      "errors": []
+    },
+    {
+      "id": "InkBleed",
+      "delta": 18.242268880208332,
+      "animationDelta": 4.047471788194445,
+      "errors": []
+    },
+    {
+      "id": "Kaleidoscope",
+      "delta": 76.40597873263889,
+      "animationDelta": 16.15679253472222,
+      "errors": []
+    },
+    {
+      "id": "LiquidChrome",
+      "delta": 27.237955729166668,
+      "animationDelta": 18.407579210069443,
+      "errors": []
+    },
+    {
+      "id": "LiquidMirror",
+      "delta": 30.554361979166668,
+      "animationDelta": 5.834581163194445,
+      "errors": []
+    },
+    {
+      "id": "LiveRipple",
+      "delta": 8.180040147569445,
+      "animationDelta": 7.995469835069445,
+      "errors": []
+    },
+    {
+      "id": "MagneticField",
+      "delta": 45.038330078125,
+      "animationDelta": 34.68299696180556,
+      "errors": []
+    },
+    {
+      "id": "Melt",
+      "delta": 8.13137478298611,
+      "animationDelta": 4.952745225694445,
+      "errors": []
+    },
+    {
+      "id": "MorphBreathe",
+      "delta": 10.034125434027779,
+      "animationDelta": 16.675862630208332,
+      "errors": []
+    },
+    {
+      "id": "NeonEdge",
+      "delta": 116.57769097222223,
+      "animationDelta": 66.01383463541667,
+      "errors": []
+    },
+    {
+      "id": "PixelateMosaic",
+      "delta": 50.39002821180556,
+      "animationDelta": 22.942708333333332,
+      "errors": []
+    },
+    {
+      "id": "PixelateStorm",
+      "delta": 48.564534505208336,
+      "animationDelta": 26.672444661458332,
+      "errors": []
+    },
+    {
+      "id": "Plasma",
+      "delta": 12.34768337673611,
+      "animationDelta": 11.651231553819445,
+      "errors": []
+    },
+    {
+      "id": "Pulse",
+      "delta": 24.612874348958332,
+      "animationDelta": 5.306857638888889,
+      "errors": []
+    },
+    {
+      "id": "RefractLens",
+      "delta": 15.823052300347221,
+      "animationDelta": 0,
+      "errors": []
+    },
+    {
+      "id": "Shatter",
+      "delta": 38.784450954861114,
+      "animationDelta": 0,
+      "errors": []
+    },
+    {
+      "id": "ShatterGlass",
+      "delta": 17.10080295138889,
+      "animationDelta": 4.286268446180555,
+      "errors": []
+    },
+    {
+      "id": "Shockwave",
+      "delta": 1.5916341145833333,
+      "animationDelta": 6.790337456597222,
+      "errors": []
+    },
+    {
+      "id": "SmokeReveal",
+      "delta": 17.677408854166668,
+      "animationDelta": 7.373725043402778,
+      "errors": []
+    },
+    {
+      "id": "Solarize",
+      "delta": 103.16346571180556,
+      "animationDelta": 15.472276475694445,
+      "errors": []
+    },
+    {
+      "id": "Thermal",
+      "delta": 60.033230251736114,
+      "animationDelta": 7.832112630208333,
+      "errors": []
+    },
+    {
+      "id": "Topographic",
+      "delta": 109.13330078125,
+      "animationDelta": 37.23223198784722,
+      "errors": []
+    },
+    {
+      "id": "TouchRipple",
+      "delta": 10.967827690972221,
+      "animationDelta": 0,
+      "errors": []
+    },
+    {
+      "id": "UnderwaterCaustics",
+      "delta": 19.03640407986111,
+      "animationDelta": 22.21245659722222,
+      "errors": []
+    },
+    {
+      "id": "Vortex",
+      "delta": 81.907470703125,
+      "animationDelta": 46.120198567708336,
+      "errors": []
+    },
+    {
+      "id": "WavePool",
+      "delta": 11.047770182291666,
+      "animationDelta": 13.62890625,
+      "errors": []
+    },
+    {
+      "id": "Wormhole",
+      "delta": 89.007080078125,
+      "animationDelta": 67.1455078125,
+      "errors": []
+    }
+  ],
+  "animatedChanged": 36,
+  "scalarControlsExercised": 166,
+  "offline": "41/41; local file entry and embedded material switching passed",
+  "withoutWebGL": "Explicit error retained; all 41 parameter/source entries remain accessible",
+  "browserErrors": [],
+  "result": "passed"
+}

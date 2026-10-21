@@ -1,0 +1,16 @@
+{
+  "repo": "https://github.com/krispuckett/SwiftUIShaders",
+  "commit": "6b644a8bd4f3131401bd6765990e476352d3cdef",
+  "research_date": "2026-10-21",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Kris Puckett",
+  "modifications": "None. These files are byte-preserved downloads of the pinned revision. Derived WebGL and gallery code lives outside upstream/.",
+  "sha256": {
+    "Package.swift": "cdc36c78991b88f388aa21c1cb2a08532603fc4842feb014fa8536dee64d8c70",
+    "LICENSE": "ea8b7a6310130fd49049f62ab157850551b544d0cb11f1b6db18c2373bd86537",
+    "README.md": "4491e3e1d13ea02947f388d778b59374642351e3417e7b8852b138ff6ee8fd34",
+    "Sources/SwiftUIShaders/ShaderEffects.swift": "cfa064857819c5b41c446965fb951d9d1879c8542b08b7fd4c67e3f462e9ee43",
+    "Sources/SwiftUIShaders/Shaders/SwiftUIShaders.metal": "1a644f83c90e4cbfa3c7c9205767cfb0eb1014d761b76a5d2dea819eeb0d748d",
+    "Docs/parameters.json": "c4404fdcc7dfbc6a393dfc3e3a78fdad2a26b8de563f55761e32d009daa97460"
+  }
+}

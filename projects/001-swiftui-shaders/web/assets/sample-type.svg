@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+<path fill="#d8f36a" d="M0 0h600v800H0z"/>
+<path d="M32 32H568V768H32Z" fill="none" stroke="#182923"/>
+<text x="50" y="78" font-family="sans-serif" font-size="14" letter-spacing="3" fill="#182923">TYPE SPECIMEN / SWIFTUI SHADERS</text>
+<g font-family="Arial Black,sans-serif" font-weight="900" font-size="145" letter-spacing="-10" fill="#182923"><text x="40" y="257">MAKE</text><text x="40" y="397">SOME</text><text x="40" y="537">WAVES</text></g>
+<g transform="translate(300 634)" stroke="#182923" fill="none"><circle r="61"/><circle r="44"/><circle r="27"/><path d="M-90 0H90M0-90V90M-65-65L65 65M-65 65L65-65"/></g>
+<text x="50" y="742" font-family="sans-serif" font-size="13" fill="#182923">Aa Bb Cc 0123456789</text><text x="550" y="742" text-anchor="end" font-family="sans-serif" font-size="13" fill="#182923">动 / 静 / 光 / 影</text>
+</svg>

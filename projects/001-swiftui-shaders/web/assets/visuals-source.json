@@ -1,0 +1,59 @@
+{
+  "method": "Editable SVG layout, embedded genuine WebGL captures, browser PNG rasterization; no synthetic effect images",
+  "sourceCommit": "6b644a8bd4f3131401bd6765990e476352d3cdef",
+  "date": "2026-10-21",
+  "modules": [
+    {
+      "id": "Original",
+      "name": "原始输入",
+      "description": "一张原创封面，作为统一比较的基准。"
+    },
+    {
+      "id": "Holographic",
+      "name": "全息镭射",
+      "description": "按亮度叠加彩虹光泽，适合卡片质感。"
+    },
+    {
+      "id": "NeonEdge",
+      "name": "霓虹轮廓",
+      "description": "检测图像边缘，生成彩色发光轮廓。"
+    },
+    {
+      "id": "Kaleidoscope",
+      "name": "万花筒",
+      "description": "折叠与镜像采样坐标，形成对称图案。"
+    },
+    {
+      "id": "InkBleed",
+      "name": "水墨晕染",
+      "description": "用噪声扰动取色位置，形成有机流动。"
+    },
+    {
+      "id": "Datamosh",
+      "name": "数据损坏",
+      "description": "块状位移与颜色分离，表现数字故障。"
+    },
+    {
+      "id": "Disintegrate",
+      "name": "粒化消散",
+      "description": "噪声阈值控制消散边界与发亮的边缘。"
+    },
+    {
+      "id": "TouchRipple",
+      "name": "触摸涟漪",
+      "description": "以触点与经过时间控制扩散的波纹。"
+    },
+    {
+      "id": "RefractLens",
+      "name": "交互透镜",
+      "description": "围绕触点折射取色，形成玻璃球观感。"
+    }
+  ],
+  "outputs": [
+    "understanding-overview.svg",
+    "understanding-overview.png",
+    "effect-atlas.svg",
+    "effect-atlas.png"
+  ],
+  "note": "PNG generation is performed by capture_visuals.py after these SVGs are available."
+}

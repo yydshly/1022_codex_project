@@ -1,0 +1,36 @@
+{
+  "result": "passed",
+  "overviewSize": [
+    2000,
+    2460
+  ],
+  "atlasSize": [
+    1800,
+    2750
+  ],
+  "effectModules": 8,
+  "originalComparisonImages": 9,
+  "moduleSize": [
+    600,
+    800
+  ],
+  "sourcePage": {
+    "moduleShortcuts": 8,
+    "allShortcutsMatched": true,
+    "allModuleImagesLoaded": true,
+    "fullGalleryRendered": 41,
+    "frameAfterShortcut": 1.7,
+    "previewErrorVisible": false
+  },
+  "mobile": {
+    "viewportWidth": 390,
+    "horizontalOverflow": false,
+    "posterLoaded": true
+  },
+  "standalone": {
+    "embeddedModuleImages": 8,
+    "embeddedDownloadResources": 3,
+    "allEmbeddedBytesMatchFiles": true
+  },
+  "nativeMetalComparison": "not performed"
+}

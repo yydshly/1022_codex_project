@@ -1,0 +1,55 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {};
+ objectVersion = 56;
+ objects = {
+  A00000000000000000000001 = {isa = PBXBuildFile; fileRef = A00000000000000000000011; };
+  A00000000000000000000002 = {isa = PBXBuildFile; productRef = A00000000000000000000041; };
+  A00000000000000000000003 = {isa = PBXBuildFile; fileRef = A00000000000000000000013; };
+  A00000000000000000000011 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderGalleryApp.swift; sourceTree = "<group>"; };
+  A00000000000000000000012 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShaderGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+  A00000000000000000000013 = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sample-cover.png"; path = "../assets/sample-cover.png"; sourceTree = "<group>"; };
+  A00000000000000000000020 = {isa = PBXGroup; children = (A00000000000000000000011, A00000000000000000000013, A00000000000000000000021); sourceTree = "<group>"; };
+  A00000000000000000000021 = {isa = PBXGroup; children = (A00000000000000000000012); name = Products; sourceTree = "<group>"; };
+  A00000000000000000000030 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001); runOnlyForDeploymentPostprocessing = 0; };
+  A00000000000000000000031 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000002); runOnlyForDeploymentPostprocessing = 0; };
+  A00000000000000000000032 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000003); runOnlyForDeploymentPostprocessing = 0; };
+  A00000000000000000000040 = {isa = XCLocalSwiftPackageReference; relativePath = ../upstream; };
+  A00000000000000000000041 = {isa = XCSwiftPackageProductDependency; package = A00000000000000000000040; productName = SwiftUIShaders; };
+  A00000000000000000000050 = {
+   isa = PBXNativeTarget;
+   buildConfigurationList = A00000000000000000000061;
+   buildPhases = (A00000000000000000000030, A00000000000000000000031, A00000000000000000000032);
+   buildRules = ();
+   dependencies = ();
+   name = ShaderGallery;
+   packageProductDependencies = (A00000000000000000000041);
+   productName = ShaderGallery;
+   productReference = A00000000000000000000012;
+   productType = "com.apple.product-type.application";
+  };
+  A00000000000000000000060 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000070, A00000000000000000000071); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+  A00000000000000000000061 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000072, A00000000000000000000073); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+  A00000000000000000000070 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = macosx; MACOSX_DEPLOYMENT_TARGET = 14.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; };
+  A00000000000000000000071 = {isa = XCBuildConfiguration; name = Release; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = macosx; MACOSX_DEPLOYMENT_TARGET = 14.0; SWIFT_VERSION = 5.0; SWIFT_COMPILATION_MODE = wholemodule; }; };
+  A00000000000000000000072 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = org.research.swiftuishaders.gallery; PRODUCT_NAME = "$(TARGET_NAME)"; COMBINE_HIDPI_IMAGES = YES; }; };
+  A00000000000000000000073 = {isa = XCBuildConfiguration; name = Release; buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = org.research.swiftuishaders.gallery; PRODUCT_NAME = "$(TARGET_NAME)"; COMBINE_HIDPI_IMAGES = YES; }; };
+  A00000000000000000000080 = {
+   isa = PBXProject;
+   attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1500; };
+   buildConfigurationList = A00000000000000000000060;
+   compatibilityVersion = "Xcode 14.0";
+   developmentRegion = en;
+   hasScannedForEncodings = 0;
+   knownRegions = (en, Base, "zh-Hans");
+   mainGroup = A00000000000000000000020;
+   packageReferences = (A00000000000000000000040);
+   productRefGroup = A00000000000000000000021;
+   projectDirPath = "";
+   projectRoot = "";
+   targets = (A00000000000000000000050);
+  };
+ };
+ rootObject = A00000000000000000000080;
+}

@@ -1,51 +1,66 @@
 # 多项目 Web 部署
 
-## 目录与地址
+本仓库使用 **GitHub Actions → GitHub Pages**。一个站点承载多个编号项目，静态资源使用相对路径，不要求各项目采用相同前端框架。
 
-GitHub Pages 为一个仓库提供一个静态站点。多个研究项目的 Web 演示可以作为同一站点下的不同路径发布，而不是各自覆盖站点根目录。
+## 线上入口
 
-```text
-源码与独立构建                       汇总后的部署产物（不提交）
-projects/001-alpha/web/             _site/
-projects/002-beta/web/              ├── index.html          # 总演示导航
-                                   ├── .nojekyll
-                                   ├── 001-alpha/         # alpha 的构建结果
-                                   │   └── index.html
-                                   └── 002-beta/          # beta 的构建结果
-                                       └── index.html
+| 入口 | 地址 |
+| --- | --- |
+| 总导航 | https://yydshly.github.io/1022_codex_project/ |
+| 001 · SwiftUIShaders | https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/ |
+
+首次发布正在执行；验证线上入口后再登记项目的 `demo_url`。
+
+总导航展示项目能力摘要、研究入口及两张生成的引导图。项目页包含能力、原理、效果、适用场景与扩展方向，以及完整的 41 种实时特效实验。
+
+## 构建与预览
+
+构建仅需 Python 3.10+ 标准库，无需 npm、外部 CDN 或前端构建依赖。仓库根目录执行：
+
+```bash
+python scripts/project_catalog.py check
+python projects/001-swiftui-shaders/scripts/build_gallery.py --check
+python projects/001-swiftui-shaders/scripts/build_native.py --check
+python projects/001-swiftui-shaders/scripts/package_web.py
+python scripts/build_site.py
+python -m http.server 8000 --bind 127.0.0.1 --directory _site
 ```
 
-默认地址规划：
+预览 [总导航](http://127.0.0.1:8000/) 和 [SwiftUIShaders](http://127.0.0.1:8000/001-swiftui-shaders/)。`build_site.py` 汇总登记表中具有 `web/index.html` 的项目，只复制其专门用于发布的 `web/`；研究文档、原生工程、凭据与依赖目录不进入部署产物。
 
-| 入口 | 预计地址（启用 Pages 后生效） |
-| --- | --- |
-| 演示导航 | `https://yydshly.github.io/1022_codex_project/` |
-| 项目 001 | `https://yydshly.github.io/1022_codex_project/001-alpha/` |
-| 项目 002 | `https://yydshly.github.io/1022_codex_project/002-beta/` |
+输出目录必须为空，脚本不会删除已有文件。再次构建时使用新的空目录，例如 `python scripts/build_site.py --output _site/preview-next`，并相应调整 HTTP 服务目录。`_site/` 为忽略的产物目录，不提交 Git。
 
-这些都是路径示例；当前没有演示项目，也没有启用部署工作流。
+```text
+_site/
+├── index.html                   # 总导航、能力摘要、两张引导图
+├── .nojekyll
+└── 001-swiftui-shaders/
+    ├── index.html               # 在线入口，按需加载相对路径资源
+    ├── app.js / renderer.js / style.css / shaders.json
+    ├── LICENSE.upstream.txt
+    ├── assets/                  # 原创素材、图解与真实效果模块
+    └── standalone.html          # 可另存本地的完整离线版本
+```
 
-## 添加第一个演示
+## 自动发布
 
-1. 在实际子项目中新增 `web/`，记录依赖、构建命令、输出目录和必要的环境变量示例。
-2. 为应用设置包含仓库名和项目编号的资源路径，例如 `/1022_codex_project/001-alpha/`。Vite 可使用 `base`；其他框架按其静态导出配置设置。
-3. 构建每个待发布项目，将**构建结果**分别复制到 `_site/<编号-slug>/`。避免把源码、凭据、`node_modules/` 或整个研究目录当作部署产物。
-4. 创建 `_site/index.html` 作为总导航，并创建 `_site/.nojekyll`。本初始化不预设导航页面样式或前端技术栈。
-5. 用 `python -m http.server 8000 --directory _site` 做基础预览；涉及绝对资源路径时，还应模拟 `/1022_codex_project/` 前缀，确认样式、图片、懒加载模块和跳转正常。
-6. 将 [工作流模板](../templates/workflows/deploy-pages.yml.example) 复制到 `.github/workflows/deploy-pages.yml`，在指定位置填入实际构建与汇总步骤。
-7. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**，再手动运行 **Deploy research demos**。
-8. 验证线上地址后，将完整链接写入 `projects/catalog.json` 的 `demo_url` 字段，再同步首页。
+实际工作流：[deploy-pages.yml](../.github/workflows/deploy-pages.yml)。
 
-工作流模板使用手动触发。项目稳定后，可以按需增加 `push` 触发和路径过滤。
+- 推送 `main` 时，项目、登记表、构建脚本或部署工作流发生变更即自动发布；也可手动触发 **Deploy research demos**。
+- 构建任务检查登记表、首页和生成代码，再打包离线页、汇总总导航及项目资源。
+- 上传 Pages artifact，由单独部署任务发布，权限为 `pages: write` 与 `id-token: write`，环境为 `github-pages`。
+- 仓库 Pages 的发布源需设为 **GitHub Actions**（API 对应 `build_type: workflow`）。
+- 每次在 Actions 中确认构建和部署成功，再检查真实网址、样式、图片与交互。新项目的 `demo_url` 在验证通过后填写，然后执行 `python scripts/project_catalog.py sync`。
 
-## 路由与后端
+新增静态项目时，在自己的 `web/` 中准备可发布产物即可汇总；需要构建的项目先在工作流中加入依赖安装与构建步骤，再输出到对应 `web/` 或调整汇总器。编号、上游版本、许可和复现环境仍记录于子项目。
 
-- 页面资源优先使用正确的构建前缀或相对路径，避免直接请求域名根路径 `/assets/`。
-- 单页应用可优先采用 hash 路由；如果使用 history 路由，需要自行实现并验证刷新后的回退行为。
-- GitHub Pages 托管静态 HTML、CSS、JavaScript；需要常驻服务、数据库或私密服务端凭据的项目，应另行部署后端，在研究页说明地址与运行方式。
-- 本地浏览器会获得前端构建中包含的配置，私密凭据应保留在后端。
+## 路径与验证范围
+
+资源与内部链接使用相对路径，可在 `/1022_codex_project/<编号-slug>/` 下运行。效果深链接使用 `#effect=Holographic` 等片段，无需服务端路由回退。修改链接后应模拟仓库前缀，检查导航、模块跳转、图解、素材、手机宽度与下载。
+
+Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 WebGL；原库的 SwiftUI/Metal 实现需在 Apple 平台运行。PNG 导出是展示页功能，GIF/视频录制与编码属于待扩展方向。原生 Metal 画面与真机性能仍待验证。
 
 ## 官方参考
 
-- [GitHub Pages 的站点类型、默认地址和静态托管能力](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
-- [使用自定义工作流部署 GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [GitHub Pages 与静态托管](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
+- [使用自定义工作流部署 Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)

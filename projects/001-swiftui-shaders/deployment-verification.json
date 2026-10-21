@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-21",
+  "local_prefix": "/1022_codex_project/",
+  "static_local_links_checked": 17,
+  "catalog": "passed",
+  "catalog_unit_tests": 9,
+  "shader_source_mappings": 41,
+  "native_modifier_mappings": 41,
+  "browser": {
+    "entry_order": [
+      "intro",
+      "briefing",
+      "visual-overview",
+      "workspace",
+      "visual-modules",
+      "usecases",
+      "gallery",
+      "about"
+    ],
+    "summary_topics": 5,
+    "guide_images": [
+      {
+        "name": "understanding-overview",
+        "natural_size": [
+          2000,
+          2460
+        ]
+      },
+      {
+        "name": "effect-atlas",
+        "natural_size": [
+          1800,
+          2750
+        ]
+      }
+    ],
+    "effects": 41,
+    "representative_modules": 8,
+    "module_navigation": "RefractLens passed",
+    "desktop_horizontal_overflow": false,
+    "mobile_width": 390,
+    "mobile_horizontal_overflow": false,
+    "mobile_guide_width": 321,
+    "offline": {
+      "both_guides_embedded": true,
+      "open_and_download_links_embedded": true,
+      "effect_cards": 41,
+      "fragment_preserved": true,
+      "preview_error": ""
+    }
+  },
+  "scope": "Browser WebGL preview verified; native Xcode build, Metal output and physical-device performance remain unverified."
+}
