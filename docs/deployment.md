@@ -8,10 +8,11 @@
 | --- | --- |
 | 总导航 | https://yydshly.github.io/1022_codex_project/ |
 | 001 · SwiftUIShaders | https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/ |
+| 002 · Todofy | https://yydshly.github.io/1022_codex_project/002-todofy/ |
 
 2026-10-21 已完成首次发布。构建与部署任务成功，两个入口及运行资源返回 HTTP 200；两张引导图的线上内容与本地 SHA-256 一致。已在浏览器检查 41 项效果入口、完整图集、8 个真实效果模块与摘要内容。详见 [部署检查记录](../projects/001-swiftui-shaders/deployment-verification.json)。
 
-总导航展示项目能力摘要、研究入口及两张生成的引导图。项目页包含能力、原理、效果、适用场景与扩展方向，以及完整的 41 种实时特效实验。
+总导航展示项目能力摘要、研究入口及已发布项目的引导图。项目页包含能力、原理、效果、适用场景与扩展方向，以及完整的 41 种实时特效实验。
 
 ## 构建与预览
 
@@ -62,7 +63,9 @@ Todofy 的 [源库官方界面展示网页](../projects/002-todofy/web/index.htm
 
 引导图采用我们生成的 `understanding-summary.png`，与首页封面、项目研究首页保持一致。页面明确概括“任务展示板＋管理驱动”，并说明对我们参考看板样式、卡片信息层级和交互组织的意义。
 
-本地原图哈希、资源路径与静态检查已完成，当前页面尚未发布线上地址；登记表 `demo_url` 保持为空。发布后核对线上资源与交互，再更新登记表。当前浏览器与静态验证范围见 [web-verification.json](../projects/002-todofy/web-verification.json)。
+2026-10-21 已发布到 [002 · Todofy](https://yydshly.github.io/1022_codex_project/002-todofy/)，内容提交 `09ee048`，Actions 构建与部署均成功。16 个线上文件返回 HTTP 200 且内容与 Git 提交一致；已在浏览器验证八图切换、放大、键盘导航、四个原理页签、六个场景和截图跳转。375 / 768 / 1280 宽度没有页面横向溢出或损坏图片，控制台无警告或错误。
+
+发布、HTTP 与文件哈希记录见 [deployment-verification.json](../projects/002-todofy/deployment-verification.json)，展示网页的检查范围见 [web-verification.json](../projects/002-todofy/web-verification.json)。原生应用、通知、语音与外部同步未运行。
 
 ## 路径与验证范围
 

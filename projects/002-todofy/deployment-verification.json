@@ -1,0 +1,173 @@
+{
+  "verified_at_utc": "2026-10-21T10:21:26.204028+00:00",
+  "deployment_commit": "09ee0486989f7632081ef26d91f4de7346e3894d",
+  "workflow_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39583664558",
+  "site_url": "https://yydshly.github.io/1022_codex_project/002-todofy/",
+  "root_url": "https://yydshly.github.io/1022_codex_project/",
+  "root_http_status": 200,
+  "root_summary_and_generated_guide": "passed",
+  "resource_checks": [
+    {
+      "file": "README.md",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/README.md",
+      "http_status": 200,
+      "bytes": 3501,
+      "sha256": "9da019a76bdc0e9ad551d0e8e596e0cdf67ed5af6b817c8069ae4c3f9f91bc10",
+      "matches_committed_source": true
+    },
+    {
+      "file": "app.js",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/app.js",
+      "http_status": 200,
+      "bytes": 14989,
+      "sha256": "7a8aebb497a6e05d5640ae760119d26efe0e9639aebfdaad56f4f5356b911c84",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/architecture.svg",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/architecture.svg",
+      "http_status": 200,
+      "bytes": 5690,
+      "sha256": "fc7fb839b417e9840ef440253f4445539ba093b4a8de50c7e48d52b2fe604366",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/understanding-summary.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/understanding-summary.png",
+      "http_status": 200,
+      "bytes": 419905,
+      "sha256": "db3373d46943a6baf7de5668864a107fb479d3b27f0b35ce365f65575c6fab60",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/understanding-summary.svg",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/understanding-summary.svg",
+      "http_status": 200,
+      "bytes": 448332,
+      "sha256": "61a3f39f7cc8259f684fc305cf8679968dab9588ca738d44b2903a54cab18a69",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/LICENSE.todofy.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/LICENSE.todofy.txt",
+      "http_status": 200,
+      "bytes": 3440,
+      "sha256": "61d17f3058c11eb6f5830705bd37e826b35852158bd171390d1e941b75230c14",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/board.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/board.png",
+      "http_status": 200,
+      "bytes": 329407,
+      "sha256": "fad9f7b5115b0bc36dc46589812b4d929ea77a55107c2418548767bf399c2931",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/calendar.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/calendar.png",
+      "http_status": 200,
+      "bytes": 236793,
+      "sha256": "587283ccbc605683b2edfcd126ed0c122c50783500ffdfda1e1980fb05ddd745",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/focus.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/focus.png",
+      "http_status": 200,
+      "bytes": 251109,
+      "sha256": "d808e745b82f2d8beb3cf0c8d7d3dedbaf259ba6b8aeb756fa6d15a2091c2e1f",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/journal.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/journal.png",
+      "http_status": 200,
+      "bytes": 243549,
+      "sha256": "cd4f4fcfb9cc1623cbb3626fe48b6a8f19332c42e05a495b9fcaf4ac4b7bf984",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/quickadd.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/quickadd.png",
+      "http_status": 200,
+      "bytes": 54253,
+      "sha256": "c7371ec90e9fd8096db1b5f53e8e289c1e1b8eb7016d83ce617beb42929bae9c",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/settings.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/settings.png",
+      "http_status": 200,
+      "bytes": 305980,
+      "sha256": "02e0031733f9f7ed00fb9bf464fdfc8d7e5d5c71dd6dcdbe1bf17cf2907590d1",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/today.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/today.png",
+      "http_status": 200,
+      "bytes": 314528,
+      "sha256": "424f6fe7e3c8b51819018866a328a9ae3adea5305e48ddeb6504b9adf935d496",
+      "matches_committed_source": true
+    },
+    {
+      "file": "assets/upstream/voice.png",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/assets/upstream/voice.png",
+      "http_status": 200,
+      "bytes": 304526,
+      "sha256": "a042ab65948170f5b3aae0eb04fe4a762491cbc869a5fe2b7ea86765f3d42fe2",
+      "matches_committed_source": true
+    },
+    {
+      "file": "index.html",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/",
+      "http_status": 200,
+      "bytes": 18020,
+      "sha256": "496da250a12be07d9b1d16d0c6519fa8daa4ac7a51f28099dc2f45352e59c528",
+      "matches_committed_source": true
+    },
+    {
+      "file": "style.css",
+      "url": "https://yydshly.github.io/1022_codex_project/002-todofy/style.css",
+      "http_status": 200,
+      "bytes": 24544,
+      "sha256": "d8a5bffa5cb35f25294109f3175879a674752bcfcf3cd6b924538f4135c4902c",
+      "matches_committed_source": true
+    }
+  ],
+  "native_app_executed": false,
+  "workflow_conclusion": "success",
+  "browser_ui_validation": {
+    "status": "passed_on_published_https",
+    "url": "https://yydshly.github.io/1022_codex_project/002-todofy/",
+    "browser": "ChatGPT in-app browser via cua_repl",
+    "gallery_tabs_checked": 8,
+    "zoom_dialog_open_close": "passed",
+    "keyboard_arrow_navigation": "passed: calendar to focus",
+    "principle_tabs_checked": 4,
+    "scenario_tabs_checked": 6,
+    "scenario_to_original_screenshot": "passed: calendar",
+    "responsive_viewports": [
+      {
+        "requested_width": 375,
+        "document_width": 360,
+        "horizontal_overflow": false
+      },
+      {
+        "requested_width": 768,
+        "document_width": 753,
+        "horizontal_overflow": false
+      },
+      {
+        "requested_width": 1280,
+        "document_width": 1265,
+        "horizontal_overflow": false
+      }
+    ],
+    "broken_visible_images": 0,
+    "console_warnings_or_errors": 0,
+    "visual_review": "passed: desktop lead copy and generated guide, mobile gallery",
+    "native_app_functions": "not run; web controls only switch explanatory content and original screenshots"
+  }
+}

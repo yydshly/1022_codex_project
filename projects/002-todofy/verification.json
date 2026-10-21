@@ -4,7 +4,8 @@
   "checks": {
     "relative_links_and_local_fragments": {
       "passed": true,
-      "links_checked": 89
+      "links_checked": 88,
+      "scope": "relative file destinations; existing fragment checks retained from source review"
     },
     "pinned_upstream_file_hashes": {
       "passed": true,

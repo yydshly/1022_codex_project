@@ -14,7 +14,6 @@
     "duplicate_html_ids": 0,
     "task_forms_or_edit_controls": 0,
     "custom_task_model_drag_handlers_or_timer_loop": "removed",
-    "relative_markdown_links_and_fragments": 88,
     "numbered_site_packaging_and_png_byte_comparison": "passed",
     "javascript_syntax": "passed",
     "catalog_check": "passed",
@@ -36,11 +35,40 @@
     "understanding_and_reference_content": "Three layers plus board layout, card hierarchy, interaction and business-rule separation",
     "lead_image": "Generated understanding-summary.png used in catalog, README and web hero; original bytes unchanged",
     "summary_copy": "Task display board plus management logic; board style, card hierarchy and interaction reference value",
-    "catalog_unit_tests": 10
+    "catalog_unit_tests": 10,
+    "relative_markdown_file_links": 88
   },
   "browser_ui_validation": {
-    "status": "not_run_for_current_revision",
-    "reason": "The in-app browser does not allow the current file:// protocol; no alternate browser surface was used to inspect it. Previous simulated-task UI test results do not apply to this replacement."
+    "status": "passed_on_published_https",
+    "url": "https://yydshly.github.io/1022_codex_project/002-todofy/",
+    "browser": "ChatGPT in-app browser via cua_repl",
+    "gallery_tabs_checked": 8,
+    "zoom_dialog_open_close": "passed",
+    "keyboard_arrow_navigation": "passed: calendar to focus",
+    "principle_tabs_checked": 4,
+    "scenario_tabs_checked": 6,
+    "scenario_to_original_screenshot": "passed: calendar",
+    "responsive_viewports": [
+      {
+        "requested_width": 375,
+        "document_width": 360,
+        "horizontal_overflow": false
+      },
+      {
+        "requested_width": 768,
+        "document_width": 753,
+        "horizontal_overflow": false
+      },
+      {
+        "requested_width": 1280,
+        "document_width": 1265,
+        "horizontal_overflow": false
+      }
+    ],
+    "broken_visible_images": 0,
+    "console_warnings_or_errors": 0,
+    "visual_review": "passed: desktop lead copy and generated guide, mobile gallery",
+    "native_app_functions": "not run; web controls only switch explanatory content and original screenshots"
   },
   "files_sha256": {
     "app.js": "7a8aebb497a6e05d5640ae760119d26efe0e9639aebfdaad56f4f5356b911c84",

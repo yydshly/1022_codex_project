@@ -34,7 +34,7 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "我们生成的总结图：引用官方看板画面，说明任务数据、管理界面、驱动逻辑三层本质，归纳能力与效果；重点参考看板布局、卡片信息层级和交互组织。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/002-todofy/"
     }
   ]
 }

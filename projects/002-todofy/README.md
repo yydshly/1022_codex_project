@@ -2,7 +2,7 @@
 
 > 我们的理解：**任务展示板＋管理驱动**。列表、看板和日历呈现同一批任务，编辑、状态流转、重复任务、提醒、计时与本地存储支撑管理。**对我们主要是看板样式、卡片信息层级和交互组织的参考。**
 
-[打开源库展示网页](web/index.html) · [能力展示](CAPABILITIES.md) · [原理分析](ARCHITECTURE.md) · [使用场景](SCENARIOS.md) · [复现与验证](REPRODUCTION.md) · [研究笔记](notes.md)
+[在线展示](https://yydshly.github.io/1022_codex_project/002-todofy/) · [本地网页](web/index.html) · [能力展示](CAPABILITIES.md) · [原理分析](ARCHITECTURE.md) · [使用场景](SCENARIOS.md) · [复现与验证](REPRODUCTION.md) · [研究笔记](notes.md)
 
 ![Todofy 总结引导图：官方看板画面、任务数据与管理界面和驱动逻辑三层本质、能力与效果，以及对我们的看板样式参考价值](assets/understanding-summary.png)
 
@@ -22,7 +22,7 @@
 | 本次验证层级 | 源码静态核查、八张官方原图与展示网页验证、文档与分析图检查；原生运行、通知、语音、云同步未实测 |
 | 研究进度 | 研究中；以 [登记表](../catalog.json) 为准 |
 | 复现环境 | Windows / PowerShell，Python 3.10.11、Node.js 22.15.0、Rust 1.95.0；Bun 未安装 |
-| Web 演示 | [源库官方界面展示网页](web/index.html)；八张上游原图、中文注解、原理分析和场景说明，尚未发布线上地址 |
+| Web 展示 | [已发布的 Todofy 展示与分析](https://yydshly.github.io/1022_codex_project/002-todofy/)；总结引导图、八张官方原图、原理分析和场景说明 |
 
 源码位置与版本校验信息见 [SOURCE.json](SOURCE.json)，文档与图解检查结果见 [verification.json](verification.json)。本文把“代码中存在的实现”“官方展示”和“本地运行验证”分开记录，功能存在不等于已经验证全部平台的实际表现。
 
@@ -35,7 +35,7 @@
 3. **使用场景**：六个场景分别说明问题、操作路径、结果与边界，并跳转到相应官方界面。
 4. **我们的理解与参考意义**：用任务数据、管理界面、驱动逻辑三层解释其本质，以一张图总结能力与效果，并明确我们优先参考的看板样式、卡片信息层级和交互组织。
 
-网页的产品画面全部来自上游原始截图，已移除自制任务工作台、拖动和计时模拟。图中日期、任务与安装状态保留作者展示环境的内容。中文注解、原理与场景是我们的研究整理；实际操作需使用官方原生应用。可直接打开 HTML，也可按 [网页说明](web/README.md) 启动静态服务。原图哈希、静态检查及浏览器验证范围见 [web-verification.json](web-verification.json)。
+网页的产品画面全部来自上游原始截图，已移除自制任务工作台、拖动和计时模拟。图中日期、任务与安装状态保留作者展示环境的内容。中文注解、原理与场景是我们的研究整理；实际操作需使用官方原生应用。可直接打开 HTML，也可按 [网页说明](web/README.md) 启动静态服务。原图哈希、静态检查及浏览器验证范围见 [web-verification.json](web-verification.json)，线上 HTTP、文件一致性与发布记录见 [deployment-verification.json](deployment-verification.json)。
 
 ## 我们的理解与参考价值
 
