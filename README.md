@@ -15,13 +15,14 @@
 按收录顺序编号，从 **001** 开始递增。编号长期保留，不因进度、热度或归档重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **4** 个项目。
+当前收录 **5** 个项目。
 
 | 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- | --- |
 | 001 | [SwiftUIShaders](projects/001-swiftui-shaders/README.md) | [SwiftUIShaders](https://github.com/krispuckett/SwiftUIShaders) | 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/) |
 | 002 | [Todofy](projects/002-todofy/README.md) | [todofy](https://github.com/salarzeidanlou/todofy) | 任务展示板与管理应用：列表、看板、日历呈现任务，编辑、状态流转、提醒、计时与本地存储驱动管理；对我们主要是看板样式、卡片信息层级和交互组织的参考 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/002-todofy/) |
 | 004 | [XXD Panel 106 · 柔彩像素记](projects/004-xxd-panel-106/README.md) | [xxd-panel-106](https://github.com/nevertoday/xxd-panel-106) | 对已有图片二次处理，通过提示词与图像模型重绘为柔彩几何像素海报；支持对照图、纯设计和多端壁纸，可作为我们探索风格库的一个样本 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/) |
+| 005 | [Scene Card Studio](projects/005-scene-card-studio/README.md) | [scene-card-studio](https://github.com/swping999/scene-card-studio) | 照片二次创作工作流：原图与表达目标输入，整理场景卡和提示词，交外部模型改图、对照返修，输出成片与记录；适合相册、内容创作和多图统一，可扩展风格模板、模型接入与团队流程，让要求可复用、结果可检查 | 研究中 | — |
 | 006 | [oil-tone · 写作约束拆解](projects/006-oil-tone/README.md) | [oil-tone](https://github.com/oil-oil/oil-tone) | 将 23 条写作规则交给 AI，引导起草、润色与结构调整，保留事实、减少空话；适用于文章、产品文案与口播，可复用为我们的编辑标准和完整提示词 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/006-oil-tone/) |
 <!-- PROJECT_INDEX:END -->
 
@@ -65,6 +66,18 @@
 [研究详情](projects/004-xxd-panel-106/README.md) · [原始仓库](https://github.com/nevertoday/xxd-panel-106) · [在线演示](https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/)
 
 标签：AI 海报 / 像素艺术 / 真实生图 / Agent Skill
+
+### 005 · Scene Card Studio
+
+照片二次创作工作流：原图与表达目标输入，整理场景卡和提示词，交外部模型改图、对照返修，输出成片与记录；适合相册、内容创作和多图统一，可扩展风格模板、模型接入与团队流程，让要求可复用、结果可检查
+
+![005 · Scene Card Studio 项目封面](projects/005-scene-card-studio/assets/understanding-summary.png)
+
+> 使用 ImageGen 生成的理解总结图：说明基于原图二次创作的原理、可复用与可检查的规则流程、四种效果参考及扩展场景与意义。效果区参考上游样张，非本次改图实测。
+
+[研究详情](projects/005-scene-card-studio/README.md) · [原始仓库](https://github.com/swping999/scene-card-studio)
+
+标签：提示词提取 / 照片创作 / 视觉叙事 / Python
 
 ### 006 · oil-tone · 写作约束拆解
 

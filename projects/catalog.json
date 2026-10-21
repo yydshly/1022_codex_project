@@ -54,6 +54,23 @@
       "demo_url": "https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/"
     },
     {
+      "id": "005",
+      "slug": "scene-card-studio",
+      "name": "Scene Card Studio",
+      "repo": "https://github.com/swping999/scene-card-studio",
+      "summary": "照片二次创作工作流：原图与表达目标输入，整理场景卡和提示词，交外部模型改图、对照返修，输出成片与记录；适合相册、内容创作和多图统一，可扩展风格模板、模型接入与团队流程，让要求可复用、结果可检查",
+      "status": "researching",
+      "tags": [
+        "提示词提取",
+        "照片创作",
+        "视觉叙事",
+        "Python"
+      ],
+      "cover": "assets/understanding-summary.png",
+      "cover_caption": "使用 ImageGen 生成的理解总结图：说明基于原图二次创作的原理、可复用与可检查的规则流程、四种效果参考及扩展场景与意义。效果区参考上游样张，非本次改图实测。",
+      "demo_url": ""
+    },
+    {
       "id": "006",
       "slug": "oil-tone",
       "name": "oil-tone · 写作约束拆解",

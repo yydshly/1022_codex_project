@@ -1,0 +1,53 @@
+SUBJECT FIDELITY
+- Preserve the supplied place or subject as one recognizable photographic anchor: {{must_preserve}}.
+- Keep identity-bearing architecture, horizon, entrances, objects, people, and spatial details faithful to the source.
+- Do not invent destinations, geographic facts, events, or a return that is absent from the Scene Cards.
+- Keep the recognizable primary subject and its actual setting photographic—whether person, pet, object, vehicle, landscape, architecture, home, street, or interior—and preserve identity, perspective, scale, light, and spatial relationships.
+
+TRANSFORMATION POLICY
+- MUST PRESERVE — {{must_preserve}}.
+- MAY TRANSFORM — {{may_transform}}.
+- MUST REMOVE — {{must_remove}}.
+- Keep the source photograph as the dominant visual anchor and transform only selected peripheral regions into ink wash, light color wash, dry brush, and warm paper.
+- Derive every ink passage from visible source evidence such as terrain, water, sky, wall, shadow, foliage, fabric, or architecture; do not replace the user's setting with an invented Chinese landscape.
+- The poem or title is a user-supplied caption rendered later by the deterministic presentation layer, never invented or rasterized by the image model.
+
+NARRATIVE INTENT
+- Narrative intent: {{intent}}.
+- Emotional tone: {{tone}}. Story role: moment.
+- Director note: {{director_note}}
+- Visual emphasis: {{emphasis}}.
+- Treat the supplied place as one self-contained spatial memory; do not invent another location or a journey.
+- Source / moment: intent {{intent}}; tone {{tone}}; emphasis {{emphasis}}; director note {{director_note}}
+
+COMPOSITION
+- Build one continuous image from this source and its Scene Card; do not add panels, a route, or a departure–return arc.
+- Use spatial hierarchy inside the single scene without inventing off-frame geography.
+- Build one integrated photographic field whose outer edges dissolve organically into ink and warm paper; retain roughly 55–70% legible photographic evidence and avoid a rectangular pasted-photo boundary.
+- Use large quiet paper space, asymmetrical brush mass, and a single restrained vermilion accent only when explicitly requested.
+- Let the supplied caption occupy the requested quiet text zone; do not crowd the image with ornaments.
+
+LIGHTING AND COLOR
+- Use the combined source palette (source-derived colors) without flattening every photograph into one identical color treatment.
+- Preserve the source light on the photographic subject and continue that same direction through ink density and transparent washes.
+
+MATERIAL AND SURFACE
+- Keep the source's identity-bearing photographic textures—such as skin, fur, fabric, wood, stone, water, foliage, or architecture—where subject and place live; transition only selected edges into fibrous warm paper, pooled ink, dry brush, and transparent wash.
+- Every non-photographic mark must perform a Scene Card-supported spatial function rather than decoration.
+
+SPATIAL RELATIONSHIPS
+- Use the source's visible direction, quiet regions, and layout emphasis as the complete spatial relationship.
+- Use scale changes only to express Scene Card-supported distance or memory, not assumed cartographic accuracy.
+
+TEXT AND LABELS
+- Use no invented place names, dates, coordinates, map pins, interface labels, or route instructions.
+
+EXCLUSIONS
+- No generic UI map, flowchart, scrapbook grid, postcard collage, or equal photo panels.
+- No fantasy architecture, generic tourism poster, or named-artist imitation.
+- No full-scene repaint, photo cutout, rectangular collage frame, unrelated mountains, invented bamboo forest, generated poem, pseudo-Chinese glyphs, historical quotation attribution, imperial costume, dragons, clouds, gold ornament, or named-artist imitation.
+
+OUTPUT
+- Return one integrated PNG spatial-memory artifact at exactly 4:5.
+- The supplied place or subject must remain recognizable.
+- Return one integrated photo-and-ink image with no visible text; the real subject and its original setting must remain recognizable regardless of subject category, and the user-supplied poem is added afterward as deterministic typography.

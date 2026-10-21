@@ -1,0 +1,134 @@
+{
+  "repository": "https://github.com/swping999/scene-card-studio",
+  "commit": "8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea",
+  "compiler_version": "0.7.0",
+  "license": "Apache-2.0",
+  "recorded_date": "2026-10-21",
+  "snapshots": [
+    {
+      "source": "skills/scene-card-studio/SKILL.md",
+      "local": "upstream/skills/scene-card-studio/SKILL.md",
+      "sha256": "f5ecf8976da7ccc90580ab0e8f79eb8d7bd702aa34fe9cf654cdbd24ac1b1499",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/skills/scene-card-studio/SKILL.md"
+    },
+    {
+      "source": "skills/scene-card-studio/references/scene-card.md",
+      "local": "upstream/skills/scene-card-studio/references/scene-card.md",
+      "sha256": "ea70b7214a730450de4d32d4f4489f54ac8a677d5c332626a1464b2917c02461",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/skills/scene-card-studio/references/scene-card.md"
+    },
+    {
+      "source": "skills/scene-card-studio/references/systems-and-profiles.md",
+      "local": "upstream/skills/scene-card-studio/references/systems-and-profiles.md",
+      "sha256": "67784c24d5039dc10ce7eded378c48e4dc82e72f7dff018c020b7a9a6864d115",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/skills/scene-card-studio/references/systems-and-profiles.md"
+    },
+    {
+      "source": "skills/scene-card-studio/references/prompt-compiler.md",
+      "local": "upstream/skills/scene-card-studio/references/prompt-compiler.md",
+      "sha256": "4a197e0d95307eb09f82782641c3e6b151683cf1b3adde7393a88fa617f9e0ac",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/skills/scene-card-studio/references/prompt-compiler.md"
+    },
+    {
+      "source": "skills/scene-card-studio/references/synthesis.md",
+      "local": "upstream/skills/scene-card-studio/references/synthesis.md",
+      "sha256": "f790dbb72c2fa21e4fc1125a7b95d59fee1bbc9a020171b71634a5ed65f2fa0e",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/skills/scene-card-studio/references/synthesis.md"
+    },
+    {
+      "source": "skills/scene-card-studio/references/privacy.md",
+      "local": "upstream/skills/scene-card-studio/references/privacy.md",
+      "sha256": "270ff31747267ff64772e6647583abe83964b66d8a7a42c3de00683099220bfc",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/skills/scene-card-studio/references/privacy.md"
+    },
+    {
+      "source": "DESIGN_PRINCIPLES.md",
+      "local": "upstream/DESIGN_PRINCIPLES.md",
+      "sha256": "e8dac1e027e34a5b3cf86794542e56a72a58b57f69db8fc03623b2deed4ce627",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/DESIGN_PRINCIPLES.md"
+    },
+    {
+      "source": "LICENSE",
+      "local": "LICENSE.scene-card-studio.txt",
+      "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/LICENSE"
+    }
+  ],
+  "code_git_blobs": [
+    {
+      "path": "src/moments_to_pages/__init__.py",
+      "git_blob_sha256": "c1701310c66ce2641d057f742a6b680affba6b73c4dd7cc244262bf721e51610"
+    },
+    {
+      "path": "src/moments_to_pages/analyze.py",
+      "git_blob_sha256": "e79f98ca78d2e89447f940cfde0d3a0cfaa9eac64920fd3e03b7829b1990da1e"
+    },
+    {
+      "path": "src/moments_to_pages/cli.py",
+      "git_blob_sha256": "c494069526607f197cf66a60279ba165de49fda332141c4e8a79c6f5562b6080"
+    },
+    {
+      "path": "src/moments_to_pages/director.py",
+      "git_blob_sha256": "52228cc2b14923fb442941c1856df6bc88cba8cd1b9a5e11df2a691b255f2a65"
+    },
+    {
+      "path": "src/moments_to_pages/expression_profiles.py",
+      "git_blob_sha256": "616cabca52fcef981e11bea1952df056011c3d2d5fadcb6f0c68649699566934"
+    },
+    {
+      "path": "src/moments_to_pages/image_safety.py",
+      "git_blob_sha256": "f0f3a330e3fbf745821fa18c35d6112d4b8fc333c7dfd9acb3f45db1e6a95541"
+    },
+    {
+      "path": "src/moments_to_pages/model.py",
+      "git_blob_sha256": "1cf39782269e99cb7686b3eb9a4c02e30605322e07a9a12f12c74bdf1bca6df3"
+    },
+    {
+      "path": "src/moments_to_pages/narrative_systems.py",
+      "git_blob_sha256": "418f22594e768a5086293057359688f6575de45630bb390c94af0463e72a482e"
+    },
+    {
+      "path": "src/moments_to_pages/presentation.py",
+      "git_blob_sha256": "757b42d5cc97491e92abea4891ba59e2816fcee9b1a7219b6faa88da53b4108e"
+    },
+    {
+      "path": "src/moments_to_pages/privacy.py",
+      "git_blob_sha256": "19a258074a56b1fa6c982c03f8111580f5bcd9713b0c8dbf920d56a38f884d93"
+    },
+    {
+      "path": "src/moments_to_pages/prompt_compiler.py",
+      "git_blob_sha256": "f7f3fd5c484950f9075326836037dabf5b04c7ad8048281432bcdd4011f7f3bc"
+    },
+    {
+      "path": "src/moments_to_pages/readiness.py",
+      "git_blob_sha256": "8fe0592bd8ef2ec888ba19e82fa2650395bfb6ad1aba0a61d02ab27fea8773b4"
+    },
+    {
+      "path": "src/moments_to_pages/render.py",
+      "git_blob_sha256": "17ae29edbdb09a874b62ccca4e39854d673ebdb33ca283fe2fbcfcb5f75b6581"
+    },
+    {
+      "path": "src/moments_to_pages/review.py",
+      "git_blob_sha256": "227a5f1f34263b94b20b926c5577f470d568151311608a3bf8d798e2cb49dd80"
+    },
+    {
+      "path": "src/moments_to_pages/skill_bundle.py",
+      "git_blob_sha256": "8b55989550587ac48b6f2c3811b80aa2ed9dc56fe6e9cd3d8416805351246e3c"
+    },
+    {
+      "path": "src/moments_to_pages/workflow.py",
+      "git_blob_sha256": "511e368583ffdb4e19c275b5f7f0f411946403d0190f121687fc8425d24d7c5a"
+    }
+  ],
+  "code_check": "working tree equals commit except CRLF/LF normalization",
+  "extraction": {
+    "system_count": 11,
+    "canonical_profile_count": 24,
+    "compatible_pair_count": 80,
+    "source_mode_template_count": 160,
+    "compiled_prompt_count": 181,
+    "block_count": 10
+  },
+  "compiled_templates_are_placeholders": true,
+  "new_image_generation_performed": false
+}

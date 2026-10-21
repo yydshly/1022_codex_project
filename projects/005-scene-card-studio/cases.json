@@ -1,0 +1,124 @@
+{
+  "repository": "https://github.com/swping999/scene-card-studio",
+  "commit": "8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea",
+  "case_briefs_are_research_translations": true,
+  "new_image_generation_performed": false,
+  "cases": [
+    {
+      "id": "threaded-landscape",
+      "tab": "湖泊 → 纤维刺绣",
+      "title": "把湖边停留，织进同一幅画面。",
+      "combination": "记忆地图 + 纤维地景",
+      "upstream_dir": "examples/cases/v0.6-gallery/evidence/threaded-landscape",
+      "before": {
+        "path": "assets/upstream/lake-before.png",
+        "width": 1122,
+        "height": 1402,
+        "alt": "输入：湖边蓝船、芦苇、山脊、阴天，右侧有救生圈与栏杆"
+      },
+      "after": {
+        "path": "assets/upstream/lake-threaded.png",
+        "width": 1122,
+        "height": 1402,
+        "alt": "输出：同一湖边蓝船、芦苇和山脊转换成统一刺绣与编织，救生圈和栏杆移除"
+      },
+      "input_summary": "一艘褪色蓝船停在芦苇旁，前方是湖面、山脊和阴天；右侧栏杆与救生圈进入画面。",
+      "brief": "保留蓝船的形状与磨损、湖面宽度、芦苇、山脊和阴天。把整幅可见表面转为连续的织物与刺绣，用针脚方向和密度表现水、植物与远山；移除救生圈和被截断的栏杆，不做分屏、边框或毛线道具。",
+      "preserve": [
+        "船的形状与磨损，芦苇和混凝土岸边",
+        "湖面宽度、山脊轮廓、阴天条件"
+      ],
+      "transform": [
+        "全部表面转为编织、刺绣、针毡和少量起绒",
+        "允许调整裁切、针脚密度和浅浮雕层次"
+      ],
+      "remove": [
+        "画面中的救生圈与被截断的栏杆",
+        "避免摄影残片、流苏边框、毛线道具、手写口号和分屏"
+      ],
+      "observations": [
+        "蓝船、芦苇、湖面与山脊仍可辨认，画面表面呈现连续纤维纹理。",
+        "右侧救生圈与栏杆在成片中被移除，视觉注意力回到蓝船。",
+        "船身、湖面和天空的针脚方向与密度不同，形成材质和空间层次。"
+      ],
+      "evidence": {
+        "story.json": {
+          "path": "assets/upstream/records/threaded-landscape/story.json",
+          "upstream_path": "examples/cases/v0.6-gallery/evidence/threaded-landscape/story.json",
+          "sha256": "65751da205a9634ecd13559ec96be23fb12a8048babcf894add9bf2e8ccddc75",
+          "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.6-gallery/evidence/threaded-landscape/story.json"
+        },
+        "prompt-manifest.json": {
+          "path": "assets/upstream/records/threaded-landscape/prompt-manifest.json",
+          "upstream_path": "examples/cases/v0.6-gallery/evidence/threaded-landscape/prompt-manifest.json",
+          "sha256": "e62891c50c05898fcc6cec36391fc9c4f51dffb78e1cd4d3a5dd0abe275a01b5",
+          "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.6-gallery/evidence/threaded-landscape/prompt-manifest.json"
+        }
+      },
+      "system": "memory-atlas",
+      "expression_profile": "threaded-landscape",
+      "direction_method": "manually-directed example",
+      "brief_provenance": "根据上游场景卡的中文整理，非原始用户发言。",
+      "prompt_provenance": "上游证据记录中的编译提示词，非本次生图请求或像素复现保证。",
+      "prompt_path": "case-prompts/threaded-landscape.txt"
+    },
+    {
+      "id": "watercolor-chronicle",
+      "tab": "人物 → 全画面水彩",
+      "title": "让人物和环境，一起成为水彩。",
+      "combination": "记忆地图 + 水彩纪事",
+      "upstream_dir": "examples/cases/v0.4-gallery/evidence/watercolor-chronicle",
+      "before": {
+        "path": "assets/upstream/watercolor-before.jpg",
+        "width": 960,
+        "height": 1200,
+        "alt": "输入：撑黄色雨伞的人站在蓝色海堤旁，左侧是自行车，背后是阴天海面"
+      },
+      "after": {
+        "path": "assets/upstream/watercolor.jpg",
+        "width": 960,
+        "height": 1200,
+        "alt": "输出：撑伞人物、衣服、海堤、自行车、天空和地面统一呈现水彩笔触与纸纹"
+      },
+      "input_summary": "撑黄色雨伞的人站在海堤旁；自行车位于左侧，背后是蓝灰色的海面与阴天。",
+      "brief": "把这次海边停留统一画成水彩。保留人物身份特征、姿态、解剖、衣服轮廓、雨伞、自行车结构与空间关系；人物、皮肤、衣物、海面、天空和地面一起转成水彩，不留下摄影人物剪贴或装饰拼贴。",
+      "preserve": [
+        "人物身份特征、姿态、解剖与衣服轮廓",
+        "雨伞、自行车几何和主体之间的空间关系"
+      ],
+      "transform": [
+        "全部摄影表面统一转为水彩与石墨语言",
+        "用透明罩染、纸纹与干湿边缘建立层次"
+      ],
+      "remove": [
+        "这里没有要求删除具体实物",
+        "清除摄影像素残留、人物抠图边缘与剪贴簿装饰"
+      ],
+      "observations": [
+        "黄色雨伞、人物、左侧自行车和蓝色海堤仍能对照辨认。",
+        "人物和环境一起出现水彩笔触与纸纹，天空的灰白也转成罩染层次。",
+        "原场景仍然可读，但画面经过重新绘制，不能把细节看作像素级保留。"
+      ],
+      "evidence": {
+        "story.json": {
+          "path": "assets/upstream/records/watercolor-chronicle/story.json",
+          "upstream_path": "examples/cases/v0.4-gallery/evidence/watercolor-chronicle/story.json",
+          "sha256": "0d57ebe53c1f04a0e0a4f626cc2eb3fa0699831658dde1086184f80946d137cd",
+          "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.4-gallery/evidence/watercolor-chronicle/story.json"
+        },
+        "prompt-manifest.json": {
+          "path": "assets/upstream/records/watercolor-chronicle/prompt-manifest.json",
+          "upstream_path": "examples/cases/v0.4-gallery/evidence/watercolor-chronicle/prompt-manifest.json",
+          "sha256": "b3161a0f0f66f26453d2ad336759dd537ba4fbe9ea9c4d49fddf7bc82d5ed0f3",
+          "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.4-gallery/evidence/watercolor-chronicle/prompt-manifest.json"
+        }
+      },
+      "system": "memory-atlas",
+      "expression_profile": "watercolor-chronicle",
+      "direction_method": "manually-directed example",
+      "brief_provenance": "根据上游场景卡的中文整理，非原始用户发言。",
+      "prompt_provenance": "上游证据记录中的编译提示词，非本次生图请求或像素复现保证。",
+      "prompt_path": "case-prompts/watercolor-chronicle.txt"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+<title id="title">Scene Card Studio：照片创作规则提取</title><desc id="desc">照片和意图经场景卡、叙事与材质、十模块提示词，再交给外部模型生成、看图审核和独立排字。</desc>
+<rect width="1440" height="720" rx="24" fill="#f4f0e7"/>
+<g font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#233b3a">
+<text x="64" y="70" font-size="18" letter-spacing="4">005 / SCENE CARD STUDIO</text><text x="64" y="132" font-size="43" font-weight="700">把创作经验，变成可直接使用的指令</text>
+<text x="66" y="177" font-size="22" fill="#526763">照片＋表达目标 → 明确的保留、变化、删除规则 → 生成与对照返修</text>
+<rect x="48" y="220" width="1344" height="264" rx="20" fill="#e3ebe3"/>
+<g fill="#fffdf7"><rect x="70" y="242" width="390" height="220" rx="15"/><rect x="525" y="242" width="390" height="220" rx="15"/><rect x="980" y="242" width="390" height="220" rx="15"/></g>
+<g font-size="28" font-weight="700"><text x="98" y="290">1 场景卡</text><text x="553" y="290">2 创作规则</text><text x="1008" y="290">3 十模块提示词</text></g>
+<g font-size="22" fill="#526763"><text x="98" y="337">可见事实／表达目标</text><text x="98" y="378">主体、动作与空间关系</text><text x="98" y="419">保留／允许变化／删除</text><text x="553" y="337">11 种叙事系统</text><text x="553" y="378">24 种表达与兼容关系</text><text x="553" y="419">构图、光色与材质边界</text><text x="1008" y="337">保真、构图、光色、材质</text><text x="1008" y="378">空间、文字、排除与规格</text><text x="1008" y="419">交给图像生成／编辑工具</text></g>
+<g fill="none" stroke="#537b6b" stroke-width="3"><path d="M472 352H513m-11-10 11 10-11 10"/><path d="M927 352H968m-11-10 11 10-11 10"/></g>
+<g fill="#233b3a"><rect x="70" y="516" width="390" height="110" rx="15"/><rect x="525" y="516" width="390" height="110" rx="15"/><rect x="980" y="516" width="390" height="110" rx="15"/></g>
+<g fill="#fffdf7" font-size="24"><text x="98" y="558">外部模型实际生图</text><text x="553" y="558">原图与成片对照审核</text><text x="1008" y="558">定向返修／独立排字</text></g>
+<g fill="#cbd9d0" font-size="18"><text x="98" y="594">需要真实视觉与图像编辑能力</text><text x="553" y="594">5 项检查，多图另检连续性</text><text x="1008" y="594">文字准确与像素规格另行验证</text></g>
+<text x="66" y="674" font-size="18" fill="#627873">上游 v0.7.0 · 核心规则提取与中文改写 · 本图为流程说明，未展示本次生图结果</text>
+</g></svg>

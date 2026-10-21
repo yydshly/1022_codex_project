@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Scene Card Studio 本质是基于原图做二次创作；核心价值是把改图要求整理成可复用、可检查的规则和流程。包含上游效果、完整案例与可复制提示词。">
+  <meta name="theme-color" content="#f5f2ea">
+  <title>Scene Card Studio · 让照片表达你的想法</title>
+  <link rel="icon" href="./assets/overview.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="masthead wrap">
+  <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">s<span>c</span></span><span>Scene Card Studio<small>照片创作研究 / 005</small></span></a>
+  <nav aria-label="页面章节"><a href="#overview">理解总览</a><a href="#core">核心方法</a><a href="#effects">实际效果</a><a href="#use">直接使用</a></nav>
+  <a class="back-link" href="../">项目总导航 <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+  <section id="top" class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> 照片 × 视觉表达</p>
+      <h1 id="hero-title">让照片，<br>更准确地表达<br><em>你的想法。</em></h1>
+      <p class="intro">本质是基于原图做二次创作，<br>可以理解为“图生图／AI 改图”。</p>
+      <p class="hero-description">核心价值：把改图要求整理成可复用、可检查的规则和流程，再交给图像模型执行。</p>
+      <div class="hero-actions"><a class="button primary" href="#use">获取精简指令 <span aria-hidden="true">↗</span></a><a class="text-link" href="#effects">看完整输入与输出 <span aria-hidden="true">↓</span></a></div>
+      <p class="micro">Python 工作流 + 创作规则 <span>·</span> 生图由外部模型完成</p>
+    </div>
+    <figure class="hero-art hero-case-art">
+      <p class="hero-case-heading"><span>一个完整案例</span><span>INPUT → OUTPUT</span></p>
+      <div class="hero-pair"><div><button class="image-button" data-image="./assets/upstream/lake-before.png" data-caption="湖泊刺绣 · 上游AI输入示例" aria-label="放大首页案例原图"><img src="./assets/upstream/lake-before.png" width="1122" height="1402" alt="输入原图：阴天湖边的蓝船、芦苇、山脊及右侧栏杆" fetchpriority="high"></button><p>输入原图</p></div><div><button class="image-button" data-image="./assets/upstream/lake-threaded.png" data-caption="湖泊刺绣 · 上游生成成片" aria-label="放大首页案例成片"><img src="./assets/upstream/lake-threaded.png" width="1122" height="1402" alt="最终效果：蓝船与山湖统一转成纤维刺绣，右侧栏杆被移除" fetchpriority="high"></button><p>最终效果</p></div></div>
+      <p class="hero-case-brief"><span>创作要求 · 根据场景卡整理</span>保留蓝船与山脊，整幅转为连续刺绣，移除指定栏杆与救生圈。</p>
+      <figcaption><div><span class="figure-index">记忆地图 + 纤维地景</span><strong>从原图，到明确的视觉决定。</strong></div><span class="figure-origin">上游配对示例<br>输入也为AI生成</span></figcaption>
+    </figure>
+  </section>
+
+  <div class="summary-band wrap" aria-label="一句话理解项目">
+    <div><span>本质</span><p>基于原图做二次创作。</p></div><div><span>核心价值</span><p>可复用、可检查的改图流程。</p></div><div><span>适合</span><p>多图统一、反复修改与交接。</p></div>
+  </div>
+
+  <section id="overview" class="wrap overview-section" aria-labelledby="overview-title">
+    <div class="section-heading"><div><p class="eyebrow">项目理解总览</p><h2 id="overview-title">一张图，读懂这个库。</h2></div><p>能力、原理、效果与扩展场景。<br>点击图片可放大，或下载完整图片。</p></div>
+    <figure class="overview-figure"><button class="image-button" data-image="./assets/understanding-summary.png" data-caption="Scene Card Studio · 能力、原理、效果、可扩展场景与意义" aria-label="放大项目理解总结图"><img src="./assets/understanding-summary.png" width="1536" height="1024" alt="Scene Card Studio 理解总结：基于原图做二次创作，先明确保留、改变和删除规则，再由外部图像模型改图并对照检查返修；配有刺绣、水彩、浮雕、国风效果，以及旅行相册、品牌内容、多图协作等扩展方向，强调规则可复用、可检查、可交接。" loading="lazy"></button><figcaption><p>本研究用 AI 生成的总结图，效果区参考上游样张；下方保留原图与完整案例。扩展场景为应用方向。</p><a class="text-link" href="./assets/understanding-summary.png" download="Scene-Card-Studio-理解总结.png">下载完整图片 ↓</a></figcaption></figure>
+    <dl class="study-summary" aria-label="项目能力与使用摘要">
+      <div><dt>能力</dt><dd>组织照片二次创作，明确保留、改变和删除的范围，再组织叙事、构图、光色与材质要求。</dd></div>
+      <div><dt>输入</dt><dd>一张或多张原图，加上表达目标、修改范围、画幅和文字需求；场景语义由人或视觉大模型补齐。</dd></div>
+      <div><dt>如何处理</dt><dd>整理场景卡 → 选择叙事与表达 → 编译提示词 → 外部模型改图 → 对照检查、定向返修；需要文字时独立排版。</dd></div>
+      <div><dt>输出</dt><dd>外部模型输出成片；库组织场景卡、完整提示词、文件清单和审核记录，执行相应工具后还可产生排版文件。</dd></div>
+      <div><dt>使用场景</dt><dd>旅行纪念、家庭相册、社交内容与品牌视觉，以及多张作品统一、反复修改和团队交接。</dd></div>
+      <div><dt>可扩展方向</dt><dd>自定义风格模板、接入更多图像模型、批量处理与协作流程、嵌入相册或内容工具。以上为扩展方向。</dd></div>
+      <div><dt>意义</dt><dd>把“改得好看一点”变成具体且可追溯的决定，让要求可复用、结果可检查、过程可交接。</dd></div>
+    </dl>
+  </section>
+
+  <section id="core" class="wrap section" aria-labelledby="core-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / 核心方法</p><h2 id="core-title">先写清楚，<br>再交给模型。</h2></div><p>“优化”不等于删光背景。<br>先确定哪些信息对这张照片重要。</p></div>
+    <div class="three-lists">
+      <article><span class="list-number">01</span><p class="tiny-label">MUST PRESERVE</p><h3>必须保留</h3><p>身份、轮廓、动作、数量，<br>以及让人认出原场景的关系。</p><div class="example"><span>比如</span> 蓝船的形状、山脊的轮廓</div></article>
+      <article><span class="list-number">02</span><p class="tiny-label">MAY TRANSFORM</p><h3>允许变化</h3><p>构图、光色、材质与指定环境，<br>逐项说明改变的范围。</p><div class="example"><span>比如</span> 把表面统一转成刺绣</div></article>
+      <article><span class="list-number">03</span><p class="tiny-label">MUST REMOVE</p><h3>明确删除</h3><p>只移除明确指定的干扰，<br>不凭空删改有意义的环境。</p><div class="example"><span>比如</span> 用户指定的右侧栏杆</div></article>
+    </div>
+    <div class="workflow" aria-label="创作流程"><p><b>01</b><strong>看图与定目标</strong><span>分清可见事实和表达建议</span></p><span class="flow-arrow" aria-hidden="true">→</span><p><b>02</b><strong>写清创作规则</strong><span>确定保留、变化和删除</span></p><span class="flow-arrow" aria-hidden="true">→</span><p><b>03</b><strong>交给图像模型</strong><span>以原图为参考实际改图</span></p><span class="flow-arrow" aria-hidden="true">→</span><p><b>04</b><strong>对照原图返修</strong><span>只修失败项，保持已通过内容</span></p></div>
+    <details class="compact-details"><summary>展开十模块：一份完整改图指令应包含什么？</summary><div class="module-list"><span>主体保真</span><span>变换范围</span><span>表达目标</span><span>构图</span><span>光线与颜色</span><span>材质与表面</span><span>空间关系</span><span>文字策略</span><span>排除项</span><span>输出规格</span></div></details>
+  </section>
+
+  <section id="effects" class="effect-section section" aria-labelledby="effects-title"><div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow">02 / 实际效果</p><h2 id="effects-title">四种表达，<br>直接看效果。</h2></div><p>点击图片可放大查看。<br>下方保留两组完整的原图、要求与规则。</p></div>
+    <div class="effect-gallery" aria-label="四种效果总览">
+      <figure data-effect="threaded-landscape"><button class="image-button" data-image="./assets/upstream/lake-threaded.png" data-caption="纤维刺绣 · 上游生成成片，配对输入已公开" aria-label="放大纤维刺绣效果"><img src="./assets/upstream/lake-threaded.png" width="1122" height="1402" alt="蓝船、山脊、湖面与植物统一转成连续纤维刺绣" loading="lazy"></button><figcaption><p class="tiny-label">01 / 纤维刺绣</p><h3>把风景织进画面。</h3><p>整幅表面转为纤维，用针脚区分物体与层次。</p><a class="text-link" href="#case-details" data-view-case="threaded-landscape">看原图与创作规则 <span aria-hidden="true">↓</span></a></figcaption></figure>
+      <figure data-effect="watercolor-chronicle"><button class="image-button" data-image="./assets/upstream/watercolor.jpg" data-caption="全画面水彩 · 上游生成成片，配对输入已公开" aria-label="放大全画面水彩效果"><img src="./assets/upstream/watercolor.jpg" width="960" height="1200" alt="海边人物与远景统一转成水彩，保留人物姿态和场景关系" loading="lazy"></button><figcaption><p class="tiny-label">02 / 全画面水彩</p><h3>让回忆融进水色。</h3><p>人物与环境一起水彩化，保留姿态和空间关系。</p><a class="text-link" href="#case-details" data-view-case="watercolor-chronicle">看原图与创作规则 <span aria-hidden="true">↓</span></a></figcaption></figure>
+      <figure data-effect="selective-material-relief"><button class="image-button" data-image="./assets/upstream/selective-relief.png" data-caption="选择性浮雕 · 仅成片，原图未公开" aria-label="放大选择性浮雕成片"><img src="./assets/upstream/selective-relief.png" width="1122" height="1402" alt="摄影蓝船与浮雕山体，上游仅公开这张成片" loading="lazy"></button><figcaption><p class="tiny-label">03 / 选择性浮雕</p><h3>摄影主体，浮雕环境。</h3><p>蓝船保留摄影质感，山水转为分层浮雕。</p><span class="effect-source-status">仅成片 · 原图与场景卡未公开</span></figcaption></figure>
+      <figure data-effect="chinese-ink-poetry"><button class="image-button" data-image="./assets/upstream/ink-poetry.png" data-caption="国风诗意 · 仅成片，原图未公开，文字独立排版" aria-label="放大国风诗意成片"><img src="./assets/upstream/ink-poetry.png" width="1200" height="1500" alt="猫与窗台保留摄影质感，边缘水墨化，诗句独立排版；上游仅公开成片" loading="lazy"></button><figcaption><p class="tiny-label">04 / 国风诗意</p><h3>摄影主体，水墨边缘。</h3><p>猫与窗台保持摄影质感，水墨晕开，诗句独立排版。</p><span class="effect-source-status">仅成片 · 原图与场景卡未公开</span></figcaption></figure>
+    </div>
+    <p class="gallery-source-note">以上四张成片均为上游原件。两组配对案例的输入也是上游制作的 AI 示例，并有人工创作指导。<a href="./media.json">查看素材来源 ↗</a></p>
+    <div id="case-details" class="case-details-heading"><h3>从原图到成片：两组完整案例</h3><p>选择案例，对照输入、创作要求、变换规则与结果。</p></div>
+    <div class="case-tabs" role="tablist" aria-label="选择完整案例"><button id="case-tab-threaded-landscape" type="button" role="tab" aria-selected="true" aria-controls="case-panel" data-case="threaded-landscape">湖泊 → 纤维刺绣</button><button id="case-tab-watercolor-chronicle" type="button" role="tab" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="watercolor-chronicle">人物 → 全画面水彩</button></div>
+    <div id="case-panel" class="complete-case" role="tabpanel" aria-labelledby="case-tab-threaded-landscape">
+      <div class="case-chain" aria-label="案例输入输出链路"><span>01 输入原图</span><b aria-hidden="true">→</b><span>02 创作要求</span><b aria-hidden="true">→</b><span>03 变换规则</span><b aria-hidden="true">→</b><span>04 最终成片</span></div>
+      <div class="comparison-layout">
+        <div class="comparison-pair">
+          <figure><button id="case-before-button" class="image-button" data-image="./assets/upstream/lake-before.png" data-caption="纤维地景 · 上游AI输入示例" aria-label="放大当前案例输入原图"><img id="case-before-image" src="./assets/upstream/lake-before.png" width="1122" height="1402" alt="输入：湖边蓝船、芦苇、山脊、阴天，右侧有救生圈与栏杆" loading="lazy"></button><figcaption><span>01 / INPUT</span> 输入原图</figcaption></figure>
+          <figure><button id="case-after-button" class="image-button" data-image="./assets/upstream/lake-threaded.png" data-caption="纤维地景 · 上游生成成片" aria-label="放大当前案例最终成片"><img id="case-after-image" src="./assets/upstream/lake-threaded.png" width="1122" height="1402" alt="输出：同一湖边蓝船、芦苇和山脊转为连续纤维，栏杆被移除" loading="lazy"></button><figcaption><span>04 / OUTPUT</span> 最终成片</figcaption></figure>
+        </div>
+        <div class="case-note"><p class="tiny-label" id="case-combination">记忆地图 + 纤维地景</p><h3 id="case-title">把湖边停留，织进同一幅画面。</h3><div class="case-input-block"><h4>01 / 原图里有什么</h4><p id="case-input-summary">蓝船停在芦苇旁，前方是湖面、山脊和阴天，右侧栏杆与救生圈进入画面。</p></div><div class="case-brief-block"><h4>02 / 希望怎样改</h4><blockquote id="case-brief">保留蓝船、湖面和山脊，把整幅可见表面转成连续刺绣；移除指定救生圈与栏杆，不做分屏或毛线道具。</blockquote><p id="case-brief-provenance" class="case-provenance">根据上游场景卡的中文整理，非原始用户发言。</p></div></div>
+      </div>
+      <div class="case-rule-heading"><h3>03 / 把要求拆成具体规则</h3><span>区分实物删除与不希望出现的生成瑕疵</span></div>
+      <div class="case-rule-grid"><article><h4>必须保留</h4><ul id="case-preserve"><li>船形、磨损、芦苇和岸边</li><li>湖面宽度、山脊与阴天</li></ul></article><article><h4>允许变化</h4><ul id="case-transform"><li>全部表面转为纤维工艺</li><li>裁切、针脚密度与浮雕层次</li></ul></article><article><h4>删除／排除</h4><ul id="case-remove"><li>救生圈与被截断的栏杆</li><li>无摄影残片、流苏、毛线道具、口号或分屏</li></ul></article></div>
+      <div class="case-observations"><h3>04 / 成片中能看到的变化</h3><ul id="case-observations"><li>蓝船与山脊仍可辨认，表面统一成为纤维。</li><li>右侧栏杆和救生圈被移除。</li><li>针脚方向和密度区分天空、水面、船身与植物。</li></ul><p>这是本研究的看图观察，不是上游正式审核或像素保真保证。</p></div>
+      <details class="case-prompt-details"><summary>查看这一案例的完整编译提示词</summary><p id="case-prompt-provenance">上游证据记录中的编译提示词，非本次生图请求或像素复现保证。</p><label class="sr-only" for="case-prompt-text">当前案例完整编译提示词</label><textarea id="case-prompt-text" readonly spellcheck="false"></textarea><div class="case-prompt-actions"><p id="case-copy-status" role="status" aria-live="polite">原文可复制或下载。</p><a id="case-prompt-download" href="./case-prompts/threaded-landscape.txt" download>下载本例提示词 ↓</a><button id="copy-case-prompt" class="button secondary" type="button">复制本例完整提示词</button></div></details>
+      <div class="case-source-links"><span>依据</span><a id="case-story-link" href="./assets/upstream/records/threaded-landscape/story.json">原始场景卡 ↗</a><a id="case-manifest-link" href="./assets/upstream/records/threaded-landscape/prompt-manifest.json">原始编译记录 ↗</a><span>配对源图与成片均来自上游，本次未重新生成。</span></div>
+    </div>
+  </div></section>
+
+  <section class="wrap section value-section" aria-labelledby="value-title"><div class="section-heading"><div><p class="eyebrow">03 / 和直接让模型改图的区别</p><h2 id="value-title">把改图要求，整理成规则与流程。</h2></div></div>
+    <div class="value-grid"><div class="value-lead"><p>单张照片、目标清楚时，直接改图通常更省事。</p><p>多张作品需要统一、反复修改或交给别人继续做时，一套明确规则更有价值。</p></div><div class="value-points"><p><span>说完整</span>将“好看一点”拆成保真、构图、光色和材质要求。</p><p><span>可复用</span>多张图共用规则，减少每轮重新解释。</p><p><span>可检查</span>对照原图逐项检查，记录失败项并定向返修。</p></div></div>
+    <p class="quiet-note">相同模型收到同样清楚的指令，也可能得到同样好的结果。规则本身不保证画质提升。</p>
+  </section>
+
+  <section id="use" class="use-section section" aria-labelledby="use-title"><div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow">04 / 直接带走使用</p><h2 id="use-title">复制规则，<br>再说出你的要求。</h2></div><p>把指令交给能看图的模型，附上原图。<br>真正改图还需要图像生成或编辑工具。</p></div>
+    <div class="prompt-workspace">
+      <div class="prompt-main"><div class="prompt-toolbar"><div class="prompt-tabs" role="tablist" aria-label="选择提示词"><button type="button" role="tab" id="tab-quick" aria-selected="true" aria-controls="prompt-panel" data-prompt="quick">精简版</button><button type="button" role="tab" id="tab-full" aria-selected="false" aria-controls="prompt-panel" tabindex="-1" data-prompt="full">完整创作</button><button type="button" role="tab" id="tab-review" aria-selected="false" aria-controls="prompt-panel" tabindex="-1" data-prompt="review">审核返修</button></div><span id="prompt-count" class="tiny-label"></span></div>
+        <div id="prompt-panel" role="tabpanel" aria-labelledby="tab-quick"><label class="sr-only" for="prompt-text">当前完整提示词，可选择并复制</label><textarea id="prompt-text" readonly spellcheck="false"></textarea></div>
+        <div class="prompt-actions"><p id="copy-status" role="status" aria-live="polite">先复制精简版即可。</p><a id="download-prompt" href="./prompts/00-quick-use.zh-CN.txt" download>下载 .txt ↓</a><button class="button primary" id="copy-prompt" type="button">复制当前指令</button></div>
+      </div>
+      <aside class="use-note"><span class="tiny-label">然后补上这几项</span><ol><li><strong>我想表达什么？</strong><span>如一次安静的湖边停留。</span></li><li><strong>必须保留什么？</strong><span>如船形、磨损和山脊轮廓。</span></li><li><strong>允许怎么改？</strong><span>如全幅刺绣，只删指定杂物。</span></li><li><strong>最终怎么交付？</strong><span>如单张 4:5 竖图，无字。</span></li></ol><a class="text-link" href="./prompts/02-request-template.zh-CN.txt" download>下载需求模板 ↗</a></aside>
+    </div>
+
+    <details class="rule-explorer" id="rule-explorer"><summary><span>需要更具体的表达？</span>选择 11 种叙事 × 24 种表达方案 <span aria-hidden="true">＋</span></summary>
+      <div class="explorer-body"><div class="rule-selects"><label>如何组织故事<select id="system-select" aria-label="如何组织故事"></select></label><span aria-hidden="true">＋</span><label>用什么视觉材料<select id="profile-select" aria-label="用什么视觉材料"></select></label></div><p class="compatibility-note" id="compatibility-note"></p><div class="rule-result"><div><span class="tiny-label">叙事规则</span><p id="system-rule"></p></div><div><span class="tiny-label">表达与检查</span><p id="profile-rule"></p></div></div><div class="rule-actions"><p id="rule-status" role="status" aria-live="polite">复制后追加到你的需求即可。</p><button class="button secondary" id="copy-rule" type="button">复制所选规则</button></div><label class="sr-only" for="rule-copy-text">所选规则，可手动复制</label><textarea id="rule-copy-text" readonly hidden></textarea></div>
+    </details>
+  </div></section>
+
+  <section class="wrap research-section"><details><summary>来源、完整规则与验证范围</summary><div class="research-body"><p>研究固定在上游 v0.7.0 / <a href="https://github.com/swping999/scene-card-studio/tree/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea" target="_blank" rel="noopener noreferrer">8ced16f</a>，采用 Apache-2.0。中文指令为本研究整理改写，完整规则保留原文与来源。</p><p>已核对 11 个系统、24 个规范表达、80 个兼容组合，导出 160 组单图／双图模板。本页没有在线模型接口；文字排版、精确尺寸和文件校验需实际工具。</p><div class="research-links"><a href="./prompts/03-creative-rules.zh-CN.md" download>中文规则指南 ↓</a><a href="./rules/upstream-rules.json" download>完整原始规则 ↓</a><a href="./rules/compiled-templates.json" download>全部编译模板 ↓</a><a href="./docs/NOTICE.md">来源与改写</a><a href="./docs/LICENSE.scene-card-studio.txt">许可证</a><a href="https://github.com/yydshly/1022_codex_project/tree/main/projects/005-scene-card-studio" target="_blank" rel="noopener noreferrer">研究文档 ↗</a></div></div></details></section>
+</main>
+<footer class="wrap footer"><p><strong>Scene Card Studio</strong><span>把表达目标，落到每一个视觉决定。</span></p><a href="https://github.com/swping999/scene-card-studio" target="_blank" rel="noopener noreferrer">关注上游仓库 ↗</a></footer>
+<dialog id="image-dialog" aria-labelledby="image-title"><div class="dialog-heading"><p id="image-title"></p><button id="close-image" type="button" aria-label="关闭图片">×</button></div><img id="lightbox-image" alt=""></dialog>
+<noscript><p class="wrap">效果与核心说明可直接阅读。复制和规则选择需要 JavaScript，也可<a href="./prompts/00-quick-use.zh-CN.txt">直接打开精简提示词</a>。</p></noscript>
+</body>
+</html>

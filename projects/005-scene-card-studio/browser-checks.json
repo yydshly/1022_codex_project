@@ -1,0 +1,339 @@
+{
+  "checked_date": "2026-10-21",
+  "browser": "ChatGPT in-app browser",
+  "route": "/1022_codex_project/005-scene-card-studio/",
+  "prompts": [
+    {
+      "id": "quick",
+      "exactSourceText": true,
+      "copyUiStatus": "已复制，可以粘贴到你的模型对话。"
+    },
+    {
+      "id": "full",
+      "exactSourceText": true,
+      "copyUiStatus": "已复制，可以粘贴到你的模型对话。"
+    },
+    {
+      "id": "review",
+      "exactSourceText": true,
+      "copyUiStatus": "已复制，可以粘贴到你的模型对话。"
+    }
+  ],
+  "keyboard": {
+    "arrowRight": "tab-full",
+    "home": "tab-quick"
+  },
+  "compatibilitySelections": [
+    {
+      "system": "cinematic-storyboard",
+      "compatibleProfiles": 2
+    },
+    {
+      "system": "memory-atlas",
+      "compatibleProfiles": 18
+    },
+    {
+      "system": "family-archive",
+      "compatibleProfiles": 11
+    },
+    {
+      "system": "minimal-editorial",
+      "compatibleProfiles": 5
+    },
+    {
+      "system": "editorial-sequence",
+      "compatibleProfiles": 1
+    },
+    {
+      "system": "field-log",
+      "compatibleProfiles": 2
+    },
+    {
+      "system": "museum-catalogue",
+      "compatibleProfiles": 6
+    },
+    {
+      "system": "travel-journal",
+      "compatibleProfiles": 15
+    },
+    {
+      "system": "journey-taxonomy",
+      "compatibleProfiles": 15
+    },
+    {
+      "system": "street-reportage",
+      "compatibleProfiles": 3
+    },
+    {
+      "system": "fashion-editorial",
+      "compatibleProfiles": 2
+    }
+  ],
+  "responsive": [
+    {
+      "brokenImages": [],
+      "documentWidth": 360,
+      "noHorizontalOverflow": true,
+      "viewport": 375
+    },
+    {
+      "brokenImages": [],
+      "documentWidth": 753,
+      "noHorizontalOverflow": true,
+      "viewport": 768
+    },
+    {
+      "brokenImages": [],
+      "documentWidth": 1265,
+      "noHorizontalOverflow": true,
+      "viewport": 1280
+    }
+  ],
+  "imageDialog": {
+    "openVerified": true,
+    "escapeCloses": true,
+    "focusRestores": true
+  },
+  "consoleWarningsAndErrors": [],
+  "download": {
+    "httpSourceBytesVerified": true,
+    "nativeDownloadEvent": "not verified: in-app browser download event timed out",
+    "clipboardReadback": "not verified; copy confirmation UI observed"
+  },
+  "screenshots": [
+    "assets/web-preview.png",
+    "assets/web-preview-mobile.png"
+  ],
+  "newImageGenerationPerformed": true,
+  "publicDeploymentPerformed": false,
+  "caseEnhancement": {
+    "checked_date": "2026-10-21",
+    "cases": [
+      {
+        "id": "threaded-landscape",
+        "beforeAfterMatches": true,
+        "briefProvenance": "根据上游场景卡的中文整理，非原始用户发言。",
+        "rulesMatch": true,
+        "compiledPromptMatches": true,
+        "evidenceLinksMatch": true
+      },
+      {
+        "id": "watercolor-chronicle",
+        "beforeAfterMatches": true,
+        "briefProvenance": "根据上游场景卡的中文整理，非原始用户发言。",
+        "rulesMatch": true,
+        "compiledPromptMatches": true,
+        "evidenceLinksMatch": true
+      }
+    ],
+    "promptCopyUi": [
+      {
+        "case": "threaded-landscape",
+        "copyStatus": "已复制，可以粘贴到你的模型对话。",
+        "download": "./case-prompts/threaded-landscape.txt"
+      },
+      {
+        "case": "watercolor-chronicle",
+        "copyStatus": "已复制，可以粘贴到你的模型对话。",
+        "download": "./case-prompts/watercolor-chronicle.txt"
+      }
+    ],
+    "keyboardArrowRight": "case-tab-watercolor-chronicle",
+    "imageDialog": {
+      "inputImage": "./assets/upstream/watercolor-before.jpg",
+      "opens": true,
+      "escapeCloses": true,
+      "focusRestored": "case-before-button"
+    },
+    "responsive": [
+      {
+        "brokenImages": [],
+        "documentWidth": 360,
+        "noHorizontalOverflow": true,
+        "width": 375
+      },
+      {
+        "brokenImages": [],
+        "documentWidth": 753,
+        "noHorizontalOverflow": true,
+        "width": 768
+      },
+      {
+        "brokenImages": [],
+        "documentWidth": 1265,
+        "noHorizontalOverflow": true,
+        "width": 1280
+      }
+    ],
+    "afterOnlyExplicitlyLabeled": true,
+    "consoleWarningsAndErrors": [],
+    "screenshots": [
+      "assets/web-preview-inputs.png",
+      "assets/web-preview-inputs-mobile.png"
+    ],
+    "newImageGenerationPerformed": false,
+    "publicDeploymentPerformed": false
+  },
+  "effectVisibilityRestoration": {
+    "checked_date": "2026-10-21",
+    "gallery": [
+      {
+        "id": "threaded-landscape",
+        "image": "./assets/upstream/lake-threaded.png",
+        "loaded": true,
+        "requiresDisclosure": false,
+        "visible": true
+      },
+      {
+        "id": "watercolor-chronicle",
+        "image": "./assets/upstream/watercolor.jpg",
+        "loaded": true,
+        "requiresDisclosure": false,
+        "visible": true
+      },
+      {
+        "id": "selective-material-relief",
+        "image": "./assets/upstream/selective-relief.png",
+        "loaded": true,
+        "requiresDisclosure": false,
+        "visible": true
+      },
+      {
+        "id": "chinese-ink-poetry",
+        "image": "./assets/upstream/ink-poetry.png",
+        "loaded": true,
+        "requiresDisclosure": false,
+        "visible": true
+      }
+    ],
+    "caseJumps": [
+      {
+        "after": "./assets/upstream/watercolor.jpg",
+        "before": "./assets/upstream/watercolor-before.jpg",
+        "galleryStillVisible": true,
+        "selected": "watercolor-chronicle"
+      },
+      {
+        "after": "./assets/upstream/lake-threaded.png",
+        "before": "./assets/upstream/lake-before.png",
+        "galleryStillVisible": true,
+        "selected": "threaded-landscape"
+      }
+    ],
+    "lightboxes": [
+      {
+        "loaded": true,
+        "open": true,
+        "source": "./assets/upstream/selective-relief.png",
+        "escapeCloses": true
+      },
+      {
+        "loaded": true,
+        "open": true,
+        "source": "./assets/upstream/ink-poetry.png",
+        "closeButtonWorks": true
+      }
+    ],
+    "responsive": [
+      {
+        "brokenImages": [],
+        "documentWidth": 1265,
+        "galleryColumns": 4,
+        "noHorizontalOverflow": true,
+        "viewport": 1280
+      },
+      {
+        "brokenImages": [],
+        "documentWidth": 360,
+        "galleryColumns": 2,
+        "noHorizontalOverflow": true,
+        "viewport": 375
+      },
+      {
+        "brokenImages": [],
+        "documentWidth": 753,
+        "galleryColumns": 4,
+        "noHorizontalOverflow": true,
+        "viewport": 768
+      }
+    ],
+    "consoleWarningsAndErrors": [],
+    "screenshots": [
+      "assets/web-preview-effects-restored.png",
+      "assets/web-preview-effects-restored-mobile.png"
+    ],
+    "newImageGenerationPerformed": false,
+    "publicDeploymentPerformed": false
+  },
+  "essenceCopyUpdate": {
+    "checked_date": "2026-10-21",
+    "intro": "本质是基于原图做二次创作，\n可以理解为“图生图／AI 改图”。",
+    "value": "核心价值：把改图要求整理成可复用、可检查的规则和流程，再交给图像模型执行。",
+    "desktopNoOverflow": true,
+    "screenshots": [
+      "assets/web-preview-essence.png"
+    ],
+    "mobile": {
+      "galleryAllVisible": true,
+      "galleryCount": 4,
+      "introVisible": true,
+      "noHorizontalOverflow": true,
+      "valueVisible": true,
+      "viewport": 375
+    }
+  },
+  "studyGuideEnhancement": {
+    "checked_date": "2026-10-21",
+    "responsive": [
+      {
+        "galleryAllVisible": true,
+        "galleryCount": 4,
+        "guideLoaded": true,
+        "noHorizontalOverflow": true,
+        "viewport": 1280
+      },
+      {
+        "galleryAllVisible": true,
+        "galleryCount": 4,
+        "guideLoaded": true,
+        "noHorizontalOverflow": true,
+        "viewport": 375
+      }
+    ],
+    "imageDialog": {
+      "loaded": true,
+      "opens": true,
+      "source": "./assets/understanding-summary.png",
+      "escapeCloses": true,
+      "focusRestored": true
+    },
+    "download": {
+      "httpSourceBytesVerified": true,
+      "nativeSaveFlow": "not retested"
+    },
+    "screenshots": [
+      "assets/web-preview-understanding.png",
+      "assets/web-preview-understanding-mobile.png"
+    ],
+    "aiGeneratedResearchSummaryImages": 1,
+    "newSourcePhotoEditingExperiment": false,
+    "publicDeploymentPerformed": false,
+    "consoleWarningsAndErrors": []
+  },
+  "newSourcePhotoEditingExperiment": false,
+  "imageGenerationScope": "One AI-generated research overview; upstream case images unchanged.",
+  "releaseSummaryLocal": {
+    "noHorizontalOverflow": true,
+    "summaryImage": "./assets/understanding-summary.png",
+    "summaryLabels": [
+      "能力",
+      "输入",
+      "如何处理",
+      "输出",
+      "使用场景",
+      "可扩展方向",
+      "意义"
+    ],
+    "viewport": 1280
+  }
+}

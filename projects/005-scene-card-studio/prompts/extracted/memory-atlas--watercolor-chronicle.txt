@@ -1,0 +1,51 @@
+SUBJECT FIDELITY
+- Preserve the supplied place or subject as one recognizable painted anchor: {{must_preserve}}.
+- Keep identity-bearing architecture, horizon, entrances, objects, people, and spatial details faithful to the source.
+- Do not invent destinations, geographic facts, events, or a return that is absent from the Scene Cards.
+- Preserve face geometry, expression, pose, body proportions, clothing silhouette, architecture, horizon, and identity-bearing details while changing only their visible medium.
+
+TRANSFORMATION POLICY
+- MUST PRESERVE — {{must_preserve}}.
+- MAY TRANSFORM — {{may_transform}}.
+- MUST REMOVE — {{must_remove}}.
+- Authorize a medium-only transformation of the entire visible image into watercolor; do not change identity, anatomy, object count, location, action, chronology, or spatial evidence.
+
+NARRATIVE INTENT
+- Narrative intent: {{intent}}.
+- Emotional tone: {{tone}}. Story role: moment.
+- Director note: {{director_note}}
+- Visual emphasis: {{emphasis}}.
+- Treat the supplied place as one self-contained spatial memory; do not invent another location or a journey.
+- Source / moment: intent {{intent}}; tone {{tone}}; emphasis {{emphasis}}; director note {{director_note}}
+
+COMPOSITION
+- Build one continuous image from this source and its Scene Card; do not add panels, a route, or a departure–return arc.
+- Use spatial hierarchy inside the single scene without inventing off-frame geography.
+- Recompose supplied people, objects, and places as one continuous painting whose transitions are carried by washes, reserved paper, and spatial evidence rather than pasted photographs.
+
+LIGHTING AND COLOR
+- Use the combined source palette (source-derived colors) without flattening every painted passage into one identical color treatment.
+- Translate source light into transparent value washes while preserving light direction, facial modeling, depth, and source-derived color relationships.
+
+MATERIAL AND SURFACE
+- Render faces, skin, hair, clothing, objects, architecture, sky, water, and terrain in one coherent watercolor medium using transparent washes, wet-on-wet diffusion, restrained dry-brush accents, pigment blooms, and visible paper tooth.
+- Keep the sharpest brush information around identity-bearing facial features, hands, and structural landmarks; let secondary edges dissolve naturally.
+- Every added mark must perform a Scene Card-supported spatial function rather than decoration.
+
+SPATIAL RELATIONSHIPS
+- Use the source's visible direction, quiet regions, and layout emphasis as the complete spatial relationship.
+- Use scale changes only to express Scene Card-supported distance or memory, not assumed cartographic accuracy.
+
+TEXT AND LABELS
+- Use no invented place names, dates, coordinates, map pins, interface labels, or route instructions.
+
+EXCLUSIONS
+- No generic UI map, flowchart, scrapbook grid, postcard collage, or equal photo panels.
+- No fantasy architecture, generic tourism poster, or named-artist imitation.
+- Leave no photographic pixels, pasted portrait cutouts, hard extraction halos, synthetic skin, or photo-plus-watercolor-border effect.
+- Do not imitate a named artist or use an unlicensed artwork as a style reference.
+
+OUTPUT
+- Return one integrated PNG spatial-memory artifact at exactly 4:5.
+- The supplied place or subject must remain recognizable.
+- The finished artifact must read as one continuous hand-painted watercolor work, including every visible person, not as a decorated photograph.

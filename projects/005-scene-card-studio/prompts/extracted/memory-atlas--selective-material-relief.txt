@@ -1,0 +1,49 @@
+SUBJECT FIDELITY
+- Preserve the supplied place or subject as one recognizable photographic anchor: {{must_preserve}}.
+- Keep identity-bearing architecture, horizon, entrances, objects, people, and spatial details faithful to the source.
+- Do not invent destinations, geographic facts, events, or a return that is absent from the Scene Cards.
+- Keep the main person, animal, vehicle, vessel, or object photographic and unmistakably real, including silhouette, texture, scale, and contact shadow.
+
+TRANSFORMATION POLICY
+- MUST PRESERVE — {{must_preserve}}.
+- MAY TRANSFORM — {{may_transform}}.
+- MUST REMOVE — {{must_remove}}.
+- Transform only the authorized environment into a continuous low-relief material; blend at real boundaries with no halo, cutout, or sticker edge.
+
+NARRATIVE INTENT
+- Narrative intent: {{intent}}.
+- Emotional tone: {{tone}}. Story role: moment.
+- Director note: {{director_note}}
+- Visual emphasis: {{emphasis}}.
+- Treat the supplied place as one self-contained spatial memory; do not invent another location or a journey.
+- Source / moment: intent {{intent}}; tone {{tone}}; emphasis {{emphasis}}; director note {{director_note}}
+
+COMPOSITION
+- Build one continuous image from this source and its Scene Card; do not add panels, a route, or a departure–return arc.
+- Use spatial hierarchy inside the single scene without inventing off-frame geography.
+- Make the real subject the focal anchor and let relief depth explain the surrounding place; preserve camera position, horizon, and perspective.
+
+LIGHTING AND COLOR
+- Use the combined source palette (source-derived colors) without flattening every photograph into one identical color treatment.
+- Preserve source light direction, color, and shadow footprint across the photographic subject and relief environment.
+
+MATERIAL AND SURFACE
+- Use believable shallow relief with layered paper, clay, plaster, or carved terrain; surface grain must follow geography and recede with depth.
+- Every non-photographic mark must perform a Scene Card-supported spatial function rather than decoration.
+
+SPATIAL RELATIONSHIPS
+- Use the source's visible direction, quiet regions, and layout emphasis as the complete spatial relationship.
+- Use scale changes only to express Scene Card-supported distance or memory, not assumed cartographic accuracy.
+
+TEXT AND LABELS
+- Use no invented place names, dates, coordinates, map pins, interface labels, or route instructions.
+
+EXCLUSIONS
+- No generic UI map, flowchart, scrapbook grid, postcard collage, or equal photo panels.
+- No fantasy architecture, generic tourism poster, or named-artist imitation.
+- No full-scene cartoonization, floating cutout, sticker outline, plastic CGI, unrelated diorama props, duplicated subject, or invented geography.
+
+OUTPUT
+- Return one integrated PNG spatial-memory artifact at exactly 4:5.
+- The supplied place or subject must remain recognizable.
+- At first glance the subject must be a real photograph; the surrounding material transformation should be visible only as a coherent spatial intervention.

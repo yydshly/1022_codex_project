@@ -1,0 +1,49 @@
+SUBJECT FIDELITY
+- Preserve the supplied place or subject as one recognizable painted anchor: {{must_preserve}}.
+- Keep identity-bearing architecture, horizon, entrances, objects, people, and spatial details faithful to the source.
+- Do not invent destinations, geographic facts, events, or a return that is absent from the Scene Cards.
+- Preserve recognizable faces when present, body proportions, clothing silhouette, landmark geometry, terrain topology, horizon, object count, movement direction, and source depth order.
+
+TRANSFORMATION POLICY
+- MUST PRESERVE — {{must_preserve}}.
+- MAY TRANSFORM — {{may_transform}}.
+- MUST REMOVE — {{must_remove}}.
+- Rebuild the complete visible scene as one continuous fiber artwork; simplify surface detail by thread scale without changing identity, pose, geography, weather evidence, chronology, or relationships.
+
+NARRATIVE INTENT
+- Narrative intent: {{intent}}.
+- Emotional tone: {{tone}}. Story role: moment.
+- Director note: {{director_note}}
+- Visual emphasis: {{emphasis}}.
+- Treat the supplied place as one self-contained spatial memory; do not invent another location or a journey.
+- Source / moment: intent {{intent}}; tone {{tone}}; emphasis {{emphasis}}; director note {{director_note}}
+
+COMPOSITION
+- Build one continuous image from this source and its Scene Card; do not add panels, a route, or a departure–return arc.
+- Use spatial hierarchy inside the single scene without inventing off-frame geography.
+- Use one uninterrupted textile field whose stitch direction follows perspective and form: flatter weave for distance, denser embroidery for focal structure, and restrained raised fiber only where real depth or emphasis requires it.
+
+LIGHTING AND COLOR
+- Use the combined source palette (source-derived colors) without flattening every painted passage into one identical color treatment.
+- Translate source light through thread color, fiber sheen, stitch density, and shallow cast shadow while preserving the original light direction and atmosphere.
+
+MATERIAL AND SURFACE
+- Use coherent woven ground, embroidery thread, wool roving, needle-felted transitions, looped highlights, and selective tufted relief at one believable physical scale.
+- Every added mark must perform a Scene Card-supported spatial function rather than decoration.
+
+SPATIAL RELATIONSHIPS
+- Use the source's visible direction, quiet regions, and layout emphasis as the complete spatial relationship.
+- Use scale changes only to express Scene Card-supported distance or memory, not assumed cartographic accuracy.
+
+TEXT AND LABELS
+- Use no invented place names, dates, coordinates, map pins, interface labels, or route instructions.
+
+EXCLUSIONS
+- No generic UI map, flowchart, scrapbook grid, postcard collage, or equal photo panels.
+- No fantasy architecture, generic tourism poster, or named-artist imitation.
+- No photographic pixels, split Before/After layout, framed wall mockup, fringe border, loose yarn props, handwritten slogan, doll-like character redesign, chunky craft-kit look, random patchwork, branded pattern, or named-maker imitation.
+
+OUTPUT
+- Return one integrated PNG spatial-memory artifact at exactly 4:5.
+- The supplied place or subject must remain recognizable.
+- The result must read as one refined contemporary textile relief whose depth and stitch language explain the supplied place or memory, not as a decorated photograph.

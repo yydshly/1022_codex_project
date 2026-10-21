@@ -90,6 +90,16 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 2026-10-21 已发布到 [004 · XXD Panel 106](https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/)，内容提交 `329ec7b`，[Actions构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39597904164)。42个项目发布文件均返回HTTP 200且字节一致；线上图集、11条提示词及指定引导图已检查，详见项目 [部署验证](../projects/004-xxd-panel-106/deployment-verification.json)。真实生成的模式与文字结果、尺寸偏差和失败过程保存在项目文档，验证范围见 [verification.md](../projects/004-xxd-panel-106/verification.md)。
 
 
+## 005 · Scene Card Studio
+
+[照片创作规则网页](../projects/005-scene-card-studio/web/index.html) 包含三张清单、四步流程、六张上游图片和可复制的精简／完整／返修提示词。首页直接展示原图与成片；湖泊刺绣与人物水彩两组完整案例同步展示原图、据场景卡整理的要求、变换规则、结果观察和原始编译提示词，并提供记录下载。四种效果默认并列展示，可点击放大；浮雕与国风未公开源图，明确标注仅成片。展开后可选择 11 种叙事、24 种表达；页面没有在线生图服务。
+
+新增一张使用内置 ImageGen 生成的理解总结图，覆盖能力、图生图原理、四种效果参考、可扩展场景与意义。网页理解总览支持放大及下载，导航封面同步使用；生成请求、参考图来源及文件哈希记入 `study-guide.json`。它是研究信息图，效果区为模型参考呈现；六张原始样张仍保留，未新增原图改图实测。打包脚本将总结图、请求和记录纳入副本校验。
+
+构建前执行 `python projects/005-scene-card-studio/scripts/package_web.py`，已接入 Pages 工作流。该脚本将素材、提示词、规则 JSON 和许可原样打包，生成用于选择与复制的 `data.js`，`--check` 可核对副本；随后根汇总器复制至 `/1022_codex_project/005-scene-card-studio/`，并自动加入总导航。
+
+本地发布检查：`python projects/005-scene-card-studio/scripts/verify_web.py --base-url http://127.0.0.1:8037/1022_codex_project/005-scene-card-studio/ --report`。本次完成本地构建与浏览器验证，尚未发布新的线上版本，`demo_url` 留空；范围见 [web-verification.json](../projects/005-scene-card-studio/web-verification.json)。
+
 ## 006 · oil-tone
 
 [写作约束研究网页](../projects/006-oil-tone/web/index.html) 说明能力、原理、使用场景与对我们的意义：将 23 条文字规则交给 AI，引导起草、润色和结构调整，保留事实、减少空话；可复用为文章、产品文案和口播的编辑标准与完整提示词。引导图采用我们已生成的理解总结图。

@@ -1,0 +1,456 @@
+{
+  "checked_date": "2026-10-21",
+  "status": "passed",
+  "local_resource_count": 29,
+  "http_byte_checks": true,
+  "fragment_links": 7,
+  "prompt_tabs": 3,
+  "canonical_profiles": 24,
+  "compatibility_pairs": 80,
+  "upstream_images": 6,
+  "complete_cases": 2,
+  "study_guide_images": 1,
+  "resources": [
+    {
+      "path": "app.js",
+      "sha256": "b77cf949b4cd4ebeb65303b1c86a88a8570ea71f05b154d702fc429d111c1c52"
+    },
+    {
+      "path": "assets/overview.svg",
+      "sha256": "2691f979cc5be55f38d5286be0f0f8a0093eb9ea66804e1607748c9adb9f6568"
+    },
+    {
+      "path": "assets/understanding-summary-prompt.txt",
+      "sha256": "8f354b958cd00ac91b00cd0b5fec135d0daceba2c2bd870c5019ba16b4d2e1b3"
+    },
+    {
+      "path": "assets/understanding-summary.png",
+      "sha256": "b4acc9cda4a0c08f87ec51ac56fb2118f0330bb28dfb5f32d112c6c45f891d58"
+    },
+    {
+      "path": "assets/upstream/ink-poetry.png",
+      "sha256": "3afaa75cf4687aad2bdf367ea9f55f64cded5e51a507cf1dce8bfcaf7829ad94"
+    },
+    {
+      "path": "assets/upstream/lake-before.png",
+      "sha256": "d08e37eb81d29a9e03ba9f29b3178c6b71ece104072475b0a2fa9e46c0e479e7"
+    },
+    {
+      "path": "assets/upstream/lake-threaded.png",
+      "sha256": "04b9aecf586c7c2d58f9efadaf9367f8d672d547896737d975caf49f36b7a12b"
+    },
+    {
+      "path": "assets/upstream/records/threaded-landscape/prompt-manifest.json",
+      "sha256": "e62891c50c05898fcc6cec36391fc9c4f51dffb78e1cd4d3a5dd0abe275a01b5"
+    },
+    {
+      "path": "assets/upstream/records/threaded-landscape/story.json",
+      "sha256": "65751da205a9634ecd13559ec96be23fb12a8048babcf894add9bf2e8ccddc75"
+    },
+    {
+      "path": "assets/upstream/records/watercolor-chronicle/prompt-manifest.json",
+      "sha256": "b3161a0f0f66f26453d2ad336759dd537ba4fbe9ea9c4d49fddf7bc82d5ed0f3"
+    },
+    {
+      "path": "assets/upstream/records/watercolor-chronicle/story.json",
+      "sha256": "0d57ebe53c1f04a0e0a4f626cc2eb3fa0699831658dde1086184f80946d137cd"
+    },
+    {
+      "path": "assets/upstream/selective-relief.png",
+      "sha256": "8ce79ff05fd4c7204f30ce65aff232c4e489fe39ba47434657df8323e9e8b55d"
+    },
+    {
+      "path": "assets/upstream/watercolor-before.jpg",
+      "sha256": "ba5cda120a8727c638ed4f20b3373dedcce36cb79e37c9e1382b3605b3613d27"
+    },
+    {
+      "path": "assets/upstream/watercolor.jpg",
+      "sha256": "dec6e0d37d28779c9f63ca560e95ee6b91ab9892f8e09c6cb80d7eaafa3472a3"
+    },
+    {
+      "path": "case-prompts/threaded-landscape.txt",
+      "sha256": "a1e184e5533fdbb7c2604402f06dd1d7677b7d941bac810c8c32c6ffcc1fb1da"
+    },
+    {
+      "path": "case-prompts/watercolor-chronicle.txt",
+      "sha256": "7a5b6f715c6243790df5fc1110d22081ee16d6d878d0ca88b7e006953c835a5d"
+    },
+    {
+      "path": "data.js",
+      "sha256": "7992e49ecb8176e7878d5a253514c56fddb0861f88f3ed6d80713541741fb724"
+    },
+    {
+      "path": "docs/LICENSE.scene-card-studio.txt",
+      "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68"
+    },
+    {
+      "path": "docs/NOTICE.md",
+      "sha256": "82e3bb9fe9e2970797d102de740f8ec9ee6f890f3886a3092fb9cfcde8805ddc"
+    },
+    {
+      "path": "media.json",
+      "sha256": "e87ca97fdba33970c0cc96b66f156ea69f2b4ce6741822e6def0c9a01b3e605c"
+    },
+    {
+      "path": "prompts/00-quick-use.zh-CN.txt",
+      "sha256": "f9a63ecf08d4571aad7878e659c5d04c4db2a3d0925788d095449d0fe6e03f86"
+    },
+    {
+      "path": "prompts/01-direct-use.zh-CN.txt",
+      "sha256": "89b435809186b9860f8e2f694f5562223874e1ae105e077ba9ad8cbc5b14bd04"
+    },
+    {
+      "path": "prompts/02-request-template.zh-CN.txt",
+      "sha256": "393e4ed01a4427774c371542e049182a0d05a11d519e2a6b7854541ab72c490d"
+    },
+    {
+      "path": "prompts/03-creative-rules.zh-CN.md",
+      "sha256": "d7fd1b5e40cecf98de995af07bcb16a60320b13528fd228d73ea586837b75029"
+    },
+    {
+      "path": "prompts/04-review-and-retry.zh-CN.txt",
+      "sha256": "37e7906e7af754c86cbf14fe45dd27c13d969a2ea3aa7e60245c74b91f82471a"
+    },
+    {
+      "path": "rules/compiled-templates.json",
+      "sha256": "e8d41b7fb64fd2223785d12c3af1343446c160483952413de290403125f66a62"
+    },
+    {
+      "path": "rules/upstream-rules.json",
+      "sha256": "169d8c4e6188087b04dfbcd65e85502778b7a6f5652adc135a5f7211e71c3ede"
+    },
+    {
+      "path": "study-guide.json",
+      "sha256": "483c1a5ae030cec24c6d9baa20e2e0ac6726af61e4acd71b8a7cbc3daa50978d"
+    },
+    {
+      "path": "style.css",
+      "sha256": "52f32ee672b6eba56e19fcb121d3a572a76bdda340774d35be8ef2e132afb89b"
+    }
+  ],
+  "browser": {
+    "checked_date": "2026-10-21",
+    "browser": "ChatGPT in-app browser",
+    "route": "/1022_codex_project/005-scene-card-studio/",
+    "prompts": [
+      {
+        "id": "quick",
+        "exactSourceText": true,
+        "copyUiStatus": "已复制，可以粘贴到你的模型对话。"
+      },
+      {
+        "id": "full",
+        "exactSourceText": true,
+        "copyUiStatus": "已复制，可以粘贴到你的模型对话。"
+      },
+      {
+        "id": "review",
+        "exactSourceText": true,
+        "copyUiStatus": "已复制，可以粘贴到你的模型对话。"
+      }
+    ],
+    "keyboard": {
+      "arrowRight": "tab-full",
+      "home": "tab-quick"
+    },
+    "compatibilitySelections": [
+      {
+        "system": "cinematic-storyboard",
+        "compatibleProfiles": 2
+      },
+      {
+        "system": "memory-atlas",
+        "compatibleProfiles": 18
+      },
+      {
+        "system": "family-archive",
+        "compatibleProfiles": 11
+      },
+      {
+        "system": "minimal-editorial",
+        "compatibleProfiles": 5
+      },
+      {
+        "system": "editorial-sequence",
+        "compatibleProfiles": 1
+      },
+      {
+        "system": "field-log",
+        "compatibleProfiles": 2
+      },
+      {
+        "system": "museum-catalogue",
+        "compatibleProfiles": 6
+      },
+      {
+        "system": "travel-journal",
+        "compatibleProfiles": 15
+      },
+      {
+        "system": "journey-taxonomy",
+        "compatibleProfiles": 15
+      },
+      {
+        "system": "street-reportage",
+        "compatibleProfiles": 3
+      },
+      {
+        "system": "fashion-editorial",
+        "compatibleProfiles": 2
+      }
+    ],
+    "responsive": [
+      {
+        "brokenImages": [],
+        "documentWidth": 360,
+        "noHorizontalOverflow": true,
+        "viewport": 375
+      },
+      {
+        "brokenImages": [],
+        "documentWidth": 753,
+        "noHorizontalOverflow": true,
+        "viewport": 768
+      },
+      {
+        "brokenImages": [],
+        "documentWidth": 1265,
+        "noHorizontalOverflow": true,
+        "viewport": 1280
+      }
+    ],
+    "imageDialog": {
+      "openVerified": true,
+      "escapeCloses": true,
+      "focusRestores": true
+    },
+    "consoleWarningsAndErrors": [],
+    "download": {
+      "httpSourceBytesVerified": true,
+      "nativeDownloadEvent": "not verified: in-app browser download event timed out",
+      "clipboardReadback": "not verified; copy confirmation UI observed"
+    },
+    "screenshots": [
+      "assets/web-preview.png",
+      "assets/web-preview-mobile.png"
+    ],
+    "newImageGenerationPerformed": true,
+    "publicDeploymentPerformed": false,
+    "caseEnhancement": {
+      "checked_date": "2026-10-21",
+      "cases": [
+        {
+          "id": "threaded-landscape",
+          "beforeAfterMatches": true,
+          "briefProvenance": "根据上游场景卡的中文整理，非原始用户发言。",
+          "rulesMatch": true,
+          "compiledPromptMatches": true,
+          "evidenceLinksMatch": true
+        },
+        {
+          "id": "watercolor-chronicle",
+          "beforeAfterMatches": true,
+          "briefProvenance": "根据上游场景卡的中文整理，非原始用户发言。",
+          "rulesMatch": true,
+          "compiledPromptMatches": true,
+          "evidenceLinksMatch": true
+        }
+      ],
+      "promptCopyUi": [
+        {
+          "case": "threaded-landscape",
+          "copyStatus": "已复制，可以粘贴到你的模型对话。",
+          "download": "./case-prompts/threaded-landscape.txt"
+        },
+        {
+          "case": "watercolor-chronicle",
+          "copyStatus": "已复制，可以粘贴到你的模型对话。",
+          "download": "./case-prompts/watercolor-chronicle.txt"
+        }
+      ],
+      "keyboardArrowRight": "case-tab-watercolor-chronicle",
+      "imageDialog": {
+        "inputImage": "./assets/upstream/watercolor-before.jpg",
+        "opens": true,
+        "escapeCloses": true,
+        "focusRestored": "case-before-button"
+      },
+      "responsive": [
+        {
+          "brokenImages": [],
+          "documentWidth": 360,
+          "noHorizontalOverflow": true,
+          "width": 375
+        },
+        {
+          "brokenImages": [],
+          "documentWidth": 753,
+          "noHorizontalOverflow": true,
+          "width": 768
+        },
+        {
+          "brokenImages": [],
+          "documentWidth": 1265,
+          "noHorizontalOverflow": true,
+          "width": 1280
+        }
+      ],
+      "afterOnlyExplicitlyLabeled": true,
+      "consoleWarningsAndErrors": [],
+      "screenshots": [
+        "assets/web-preview-inputs.png",
+        "assets/web-preview-inputs-mobile.png"
+      ],
+      "newImageGenerationPerformed": false,
+      "publicDeploymentPerformed": false
+    },
+    "effectVisibilityRestoration": {
+      "checked_date": "2026-10-21",
+      "gallery": [
+        {
+          "id": "threaded-landscape",
+          "image": "./assets/upstream/lake-threaded.png",
+          "loaded": true,
+          "requiresDisclosure": false,
+          "visible": true
+        },
+        {
+          "id": "watercolor-chronicle",
+          "image": "./assets/upstream/watercolor.jpg",
+          "loaded": true,
+          "requiresDisclosure": false,
+          "visible": true
+        },
+        {
+          "id": "selective-material-relief",
+          "image": "./assets/upstream/selective-relief.png",
+          "loaded": true,
+          "requiresDisclosure": false,
+          "visible": true
+        },
+        {
+          "id": "chinese-ink-poetry",
+          "image": "./assets/upstream/ink-poetry.png",
+          "loaded": true,
+          "requiresDisclosure": false,
+          "visible": true
+        }
+      ],
+      "caseJumps": [
+        {
+          "after": "./assets/upstream/watercolor.jpg",
+          "before": "./assets/upstream/watercolor-before.jpg",
+          "galleryStillVisible": true,
+          "selected": "watercolor-chronicle"
+        },
+        {
+          "after": "./assets/upstream/lake-threaded.png",
+          "before": "./assets/upstream/lake-before.png",
+          "galleryStillVisible": true,
+          "selected": "threaded-landscape"
+        }
+      ],
+      "lightboxes": [
+        {
+          "loaded": true,
+          "open": true,
+          "source": "./assets/upstream/selective-relief.png",
+          "escapeCloses": true
+        },
+        {
+          "loaded": true,
+          "open": true,
+          "source": "./assets/upstream/ink-poetry.png",
+          "closeButtonWorks": true
+        }
+      ],
+      "responsive": [
+        {
+          "brokenImages": [],
+          "documentWidth": 1265,
+          "galleryColumns": 4,
+          "noHorizontalOverflow": true,
+          "viewport": 1280
+        },
+        {
+          "brokenImages": [],
+          "documentWidth": 360,
+          "galleryColumns": 2,
+          "noHorizontalOverflow": true,
+          "viewport": 375
+        },
+        {
+          "brokenImages": [],
+          "documentWidth": 753,
+          "galleryColumns": 4,
+          "noHorizontalOverflow": true,
+          "viewport": 768
+        }
+      ],
+      "consoleWarningsAndErrors": [],
+      "screenshots": [
+        "assets/web-preview-effects-restored.png",
+        "assets/web-preview-effects-restored-mobile.png"
+      ],
+      "newImageGenerationPerformed": false,
+      "publicDeploymentPerformed": false
+    },
+    "essenceCopyUpdate": {
+      "checked_date": "2026-10-21",
+      "intro": "本质是基于原图做二次创作，\n可以理解为“图生图／AI 改图”。",
+      "value": "核心价值：把改图要求整理成可复用、可检查的规则和流程，再交给图像模型执行。",
+      "desktopNoOverflow": true,
+      "screenshots": [
+        "assets/web-preview-essence.png"
+      ],
+      "mobile": {
+        "galleryAllVisible": true,
+        "galleryCount": 4,
+        "introVisible": true,
+        "noHorizontalOverflow": true,
+        "valueVisible": true,
+        "viewport": 375
+      }
+    },
+    "studyGuideEnhancement": {
+      "checked_date": "2026-10-21",
+      "responsive": [
+        {
+          "galleryAllVisible": true,
+          "galleryCount": 4,
+          "guideLoaded": true,
+          "noHorizontalOverflow": true,
+          "viewport": 1280
+        },
+        {
+          "galleryAllVisible": true,
+          "galleryCount": 4,
+          "guideLoaded": true,
+          "noHorizontalOverflow": true,
+          "viewport": 375
+        }
+      ],
+      "imageDialog": {
+        "loaded": true,
+        "opens": true,
+        "source": "./assets/understanding-summary.png",
+        "escapeCloses": true,
+        "focusRestored": true
+      },
+      "download": {
+        "httpSourceBytesVerified": true,
+        "nativeSaveFlow": "not retested"
+      },
+      "screenshots": [
+        "assets/web-preview-understanding.png",
+        "assets/web-preview-understanding-mobile.png"
+      ],
+      "aiGeneratedResearchSummaryImages": 1,
+      "newSourcePhotoEditingExperiment": false,
+      "publicDeploymentPerformed": false,
+      "consoleWarningsAndErrors": []
+    },
+    "newSourcePhotoEditingExperiment": false,
+    "imageGenerationScope": "One AI-generated research overview; upstream case images unchanged."
+  }
+}

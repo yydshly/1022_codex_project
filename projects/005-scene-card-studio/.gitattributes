@@ -1,0 +1,6 @@
+# Preserve attributed snapshots and exact prompt files across platforms.
+assets/upstream/** -text whitespace=cr-at-eol
+upstream/** -text whitespace=cr-at-eol
+prompts/** -text whitespace=cr-at-eol,-blank-at-eof
+case-prompts/** -text whitespace=cr-at-eol,-blank-at-eof
+assets/understanding-summary-prompt.txt -text whitespace=cr-at-eol

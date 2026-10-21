@@ -1,0 +1,43 @@
+SUBJECT FIDELITY
+- Preserve the recognizable identity, count, proportions, position, and defining details of: {{must_preserve}}.
+- Preserve the observed action or structural gesture: {{gesture}}.
+- Treat the source photograph as visual evidence: do not replace the location, reconstruct hidden content, or invent people, objects, or events.
+
+TRANSFORMATION POLICY
+- MUST PRESERVE — {{must_preserve}}.
+- MAY TRANSFORM — {{may_transform}}.
+- MUST REMOVE — {{must_remove}}.
+
+NARRATIVE INTENT
+- Narrative intent: {{intent}}.
+- Emotional tone: {{tone}}. Story role: moment.
+- Director note: {{director_note}}
+- Visual emphasis: {{emphasis}}.
+
+COMPOSITION
+- Create one continuous editorial art photograph devoted to the source subject; no designed page or collage.
+- Use {{quiet_regions}} as breathing room and remove only elements listed under MUST REMOVE.
+- Derive dominant geometry and negative space from the source object and its existing surroundings.
+
+LIGHTING AND COLOR
+- Keep color source-led (source-derived colors) and separate the subject through tonal structure rather than saturation effects.
+- Preserve the source light logic while simplifying competing highlights and shadows.
+
+MATERIAL AND SURFACE
+- Let actual wear, fibers, glaze, scratches, and dents determine the material language.
+- Avoid sterile CGI perfection and preserve identity-bearing imperfections.
+
+SPATIAL RELATIONSHIPS
+- Give the object enough negative space to feel intentional while retaining believable physical support and gravity.
+- Use source-supported shadow, edge, fold, or repetition as geometry; do not paste abstract shapes over the photograph.
+
+TEXT AND LABELS
+- Generate no masthead, caption, label, logo, watermark, border, or visible typography.
+
+EXCLUSIONS
+- No magazine mockup, product advertisement, catalog cutout, multi-object collage, panel, or split screen.
+- No generic luxury styling, ornamental props, excessive smoothing, floating objects, or unauthorized abstract overlays.
+
+OUTPUT
+- Return one standalone photorealistic PNG editorial still life at exactly 4:5.
+- Make the result specific to the supplied object and Scene Card.

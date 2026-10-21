@@ -1,0 +1,73 @@
+{
+  "kind": "ai-generated-research-summary",
+  "generated_date": "2026-10-21",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "upstream_repository": "https://github.com/swping999/scene-card-studio",
+  "upstream_commit": "8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea",
+  "upstream_license": "Apache-2.0; see assets/upstream/ASSET_LICENSE.md and LICENSE.scene-card-studio.txt",
+  "image": {
+    "path": "assets/understanding-summary.png",
+    "sha256": "b4acc9cda4a0c08f87ec51ac56fb2118f0330bb28dfb5f32d112c6c45f891d58",
+    "width": 1536,
+    "height": 1024
+  },
+  "prompt": {
+    "path": "assets/understanding-summary-prompt.txt",
+    "sha256": "8f354b958cd00ac91b00cd0b5fec135d0daceba2c2bd870c5019ba16b4d2e1b3"
+  },
+  "reference_images": [
+    {
+      "path": "assets/upstream/lake-before.png",
+      "upstream_path": "examples/cases/v0.6-gallery/before/mountain-lake.png",
+      "description": "纤维地景的上游AI输入示例",
+      "sha256": "d08e37eb81d29a9e03ba9f29b3178c6b71ece104072475b0a2fa9e46c0e479e7",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.6-gallery/before/mountain-lake.png",
+      "role": "input-example"
+    },
+    {
+      "path": "assets/upstream/lake-threaded.png",
+      "upstream_path": "examples/cases/v0.6-gallery/after/threaded-landscape.png",
+      "description": "纤维地景的上游生成成片",
+      "sha256": "04b9aecf586c7c2d58f9efadaf9367f8d672d547896737d975caf49f36b7a12b",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.6-gallery/after/threaded-landscape.png",
+      "role": "effect-example"
+    },
+    {
+      "path": "assets/upstream/watercolor.jpg",
+      "upstream_path": "examples/cases/v0.4-gallery/after/watercolor-chronicle.jpg",
+      "description": "水彩纪事上游虚构人物成片",
+      "sha256": "dec6e0d37d28779c9f63ca560e95ee6b91ab9892f8e09c6cb80d7eaafa3472a3",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.4-gallery/after/watercolor-chronicle.jpg",
+      "role": "effect-example"
+    },
+    {
+      "path": "assets/upstream/selective-relief.png",
+      "upstream_path": "examples/cases/v0.7-director-gallery/after/selective-material-relief.png",
+      "description": "选择性浮雕，v0.7上游成片，源图未公开",
+      "sha256": "8ce79ff05fd4c7204f30ce65aff232c4e489fe39ba47434657df8323e9e8b55d",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.7-director-gallery/after/selective-material-relief.png",
+      "role": "effect-example"
+    },
+    {
+      "path": "assets/upstream/ink-poetry.png",
+      "upstream_path": "examples/cases/v0.7-director-gallery/after/chinese-ink-poetry-final.png",
+      "description": "国风诗意上游成片，包含确定性排字",
+      "sha256": "3afaa75cf4687aad2bdf367ea9f55f64cded5e51a507cf1dce8bfcaf7829ad94",
+      "url": "https://github.com/swping999/scene-card-studio/blob/8ced16f3ebd84be0ce8e29658ffd9d080f5e72ea/examples/cases/v0.7-director-gallery/after/chinese-ink-poetry-final.png",
+      "role": "effect-example"
+    }
+  ],
+  "effect_images_are_generated_reference_representations": true,
+  "pixel_exact_source_montage": false,
+  "new_source_photo_editing_experiment": false,
+  "extension_scenarios_are_proposed_applications": true,
+  "review": {
+    "chinese_text_visually_checked": true,
+    "core_capability_and_value_present": true,
+    "external_model_step_present": true,
+    "four_effect_labels_match": true,
+    "unpublished_originals_labeled": true,
+    "extensions_and_meaning_present": true
+  }
+}
