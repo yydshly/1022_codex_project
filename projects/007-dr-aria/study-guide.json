@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-21",
+  "tool": "built-in image_gen.imagegen",
+  "output": "assets/understanding-summary.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "sha256": "040975c7a799a996642c5d166d18822586448a2a34f5d8cecf8e6ccb4c68a21a",
+  "prompt": "assets/understanding-summary-prompt.txt",
+  "references": [
+    {
+      "path": "assets/effects/01-listening.png",
+      "sha256": "ee7eae7dc4f3e1beee7f62650a5af3800b7f39bf866353caef8f8351bfd586b5"
+    },
+    {
+      "path": "assets/effects/02-thinking.png",
+      "sha256": "2bd622f74a671953b7744b232e6d29f8217759553e589eace5e7e1d234e200ab"
+    },
+    {
+      "path": "assets/effects/03-working.png",
+      "sha256": "cf710271db1bc71a3c9fd0ca67bc5e2180549a57ceb77b653d4e89b00c23af31"
+    },
+    {
+      "path": "assets/effects/04-speaking.png",
+      "sha256": "90f16647dd107ccbef315112997166753ad3bd2bfa0a8840763951b544e5de13"
+    }
+  ],
+  "scope": "定位、原理、效果、价值、可扩展场景与边界。原库为Claude聊天应用，本次聚焦抽出的角色展示层。",
+  "effect_fidelity": "效果区由ImageGen参考真实本地截图绘制，不是原始截图的逐像素拼贴。四张原始截图均保留。",
+  "limits": [
+    "只呈现回复和部分运行状态",
+    "不增强Agent能力",
+    "四类状态、一种warm基础表情",
+    "字符音效不是TTS",
+    "接其他Agent需要适配",
+    "预设文字和模拟状态事件，未实测模型"
+  ]
+}

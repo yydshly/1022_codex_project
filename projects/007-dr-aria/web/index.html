@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="将 Agent 回复和部分运行状态转成可见角色反馈：代码绘制 ASCII 形象，事件驱动动作、文字驱动气泡与嘴型；展示四类状态和温和表情，为聊天与任务等待提供可复用的表达层。">
+<title>dr-aria · 角色效果与表达图鉴</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="demo.css">
+</head>
+<body><main>
+<nav class="topbar" aria-label="页面导航"><a class="brand" href="#top"><span class="brand-mark">A</span> ARIA <small>角色表达图鉴 / 007</small></a><div><a href="#overview">总览</a><a href="#states">状态</a><a href="#expression">情绪表达</a><a href="#use">怎么用</a></div></nav>
+<header id="top" class="hero-copy"><p class="eyebrow">CODE → CHARACTER → EXPRESSION</p><h1>代码，画出一个<span>会回应的角色。</span></h1><p class="intro">眨眼、点头、低头写字，再把一句回复逐字呈现出来。<br>这里汇总 dr-aria 的角色效果、状态动作和情绪表达能力。</p><div class="facts"><span><b>字符画</b> 代码绘制</span><span><b>4 类</b> 运行状态</span><span><b>1 种</b> 基础表情</span></div></header>
+<section class="overview-section" id="overview" aria-label="项目理解总结图">
+<div class="section-heading"><div><p class="eyebrow">OVERVIEW / 一张图看懂</p><h2>给 Agent 的回复与状态，加一层角色表达。</h2></div><p>能力、原理、效果、价值和边界，放在同一张图里。</p></div>
+<button id="open-overview" class="overview-image" aria-label="放大理解总结图"><img src="assets/understanding-summary.png" alt="dr-aria 理解总结图：Agent 回复和部分运行状态，经事件适配驱动代码绘制的角色、动作、气泡、嘴型与字符短音；并汇总四状态效果、价值、场景与边界" width="1536" height="1024" decoding="async"></button>
+<div class="overview-caption"><p>ImageGen 理解汇总图。效果区参考本地四状态截图绘制，使用预设文字和模拟事件；角色实时表现见下方。</p><a href="assets/understanding-summary.png" download="dr-aria-understanding-summary.png">下载原图 ↗</a></div>
+</section>
+<section class="understanding-summary" aria-label="能力原理效果价值摘要">
+<dl><div><dt>能力</dt><dd>把 Agent 的回复和部分运行状态转成可见的角色反馈。</dd></div>
+<div><dt>原理</dt><dd>预制字符画配合 JavaScript 动画；状态控制动作，文字驱动气泡和嘴型。</dd></div>
+<div><dt>效果</dt><dd>等待、思考、工作、回复四类状态，温和基础表情，支持点头与字符音效。</dd></div>
+<div><dt>价值</dt><dd>让等待有反馈、对话有稳定形象，为聊天助手和任务展示提供可复用表达层。</dd></div></dl>
+</section>
+<section class="layout" id="states" aria-label="角色效果和状态体验">
+<div class="portrait"><div class="portrait-label"><span class="live-dot"></span> 实时角色 / 点击状态卡片切换动作</div><div id="avatar"></div><div class="portrait-footer"><span id="current-state" role="status">等待输入</span><button id="voice" aria-pressed="false">开启字符音效</button></div><p class="scope">当前角色由浏览器代码绘制和驱动。演示使用预设文字与模拟事件，无需模型账号。</p></div>
+<div class="panel"><p class="eyebrow">01 / 状态怎么表现</p><h2>让“正在做什么”看得见。</h2>
+<div class="state-grid" aria-label="动作控制">
+<button class="state-card" data-action="listening" data-state="listening" aria-label="等待输入" aria-pressed="true"><span class="card-index">01 <i class="state-dot mint"></i></span><strong>等待输入</strong><span>目光停留，眨眼、呼吸，偶尔轻轻点头。</span><em>看起来在听</em></button>
+<button class="state-card" data-action="thinking" data-state="thinking" aria-label="思考" aria-pressed="false"><span class="card-index">02 <i class="state-dot gold"></i></span><strong>思考</strong><span>视线游移，眉形变化，用小动作衔接等待。</span><em>看起来在斟酌</em></button>
+<button class="state-card" data-action="working" data-state="writing" aria-label="工作中" aria-pressed="false"><span class="card-index">03 <i class="state-dot purple"></i></span><strong>工作中</strong><span>目光朝下，笔在移动，表现整理与工作。</span><em>看起来在忙</em></button>
+<button class="state-card" data-action="speaking" data-state="speaking" aria-label="正在回复" aria-pressed="false"><span class="card-index">04 <i class="state-dot orange"></i></span><strong>正在回复</strong><span>文字逐字出现，嘴型跟随，可加短促音效。</span><em>看起来在说</em></button>
+</div><p class="state-description" id="state-description">等待输入：温和的基础表情，加上眨眼和轻微动作。</p><div class="actions"><button id="tour" class="primary">一键看完整表现</button><button data-action="nod">点头</button><button data-action="stop">停止</button></div><p class="hint" id="tour-progress" role="status">依次体验：等待 → 思考 → 工作 → 回复。</p></div>
+</section>
+<section class="expression-section" id="expression"><div class="section-heading"><div><p class="eyebrow">02 / 情绪能表达多少</p><h2>温和是底色，动作带来神态。</h2></div><p>当前的表达主要来自眼睛、眉形、嘴型和姿态。<br>每种能力的范围，都放在这里。</p></div>
+<div class="expression-grid">
+<article class="expression-card"><span class="capability-tag">现有表情</span><div class="face-symbol" aria-hidden="true">◕ ◡ ◕</div><h3>温和、友好的基础面孔</h3><p>一套 warm 基础表情贯穿对话。轻微笑意、自然眨眼和点头，形成陪伴感。</p><button id="warm-preview">看看基础表情 ↗</button></article>
+<article class="expression-card"><span class="capability-tag">现有动作表达</span><div class="face-symbol thoughtful" aria-hidden="true">◔ · ◔</div><h3>专注、斟酌、正在回应</h3><p>看向别处像在思考，低头像在工作，嘴型变化像在说话。状态事件驱动姿态，回复文字驱动气泡和嘴型。</p><button id="expression-tour">看看动作变化 ↗</button></article>
+<article class="expression-card future"><span class="capability-tag limited">尚未内置</span><div class="face-symbol future-face" aria-hidden="true">喜 · 怒 · 哀 · 乐</div><h3>丰富情绪，需要继续扩展</h3><p>当前没有完整的开心、悲伤、生气、惊讶表情组，也不会根据回复含义自动判断情绪。</p><span class="future-note">可扩展：更多表情图案 + 情绪事件映射</span></article>
+</div><p class="expression-note">画面表达的是预先定义的动作与表情。角色没有真实情绪；文本嘴型是近似动画，字符音效也不等于语音朗读。</p></section>
+<section class="play-section" id="play"><div class="section-heading"><div><p class="eyebrow">03 / 换一句话，看它回应</p><h2>把你的文字，交给角色来表现。</h2></div><p>完整播放或模拟流式输出，体验气泡、嘴型和节奏。</p></div><div class="play-box"><label for="reply">展示文字</label><textarea id="reply" rows="2">你好！结果已经整理好了，我们一起看看吧。🙂</textarea><div class="actions"><button id="say" class="primary">播放完整回复</button><button id="stream">模拟流式回复</button><span class="hint">播放时可切换上方状态，或点击“停止”。</span></div></div></section>
+<section class="use-section" id="use"><div><p class="eyebrow">04 / 给 Agent 增加一层表达</p><h2>回复和状态进来，角色动作出来。</h2><p>自己的 Agent 负责处理任务。把必要的状态和回复传过来，就能复用这个角色。</p></div><div class="flow" aria-label="角色接入流程"><span>Claude / Codex<br><small>或自己的 Agent</small></span><b aria-hidden="true">→</b><span>状态 · 文字<br><small>事件适配</small></span><b aria-hidden="true">→</b><span>角色表现<br><small>动作 · 嘴型 · 音效</small></span></div></section>
+<details class="developer-details"><summary>接入样例与事件记录 <span>按需展开</span></summary><div class="developer-content"><div><label for="provider">选择 Agent 事件样例</label><div class="actions"><select id="provider"><option value="claude">Claude Code · stream-json</option><option value="codex">Codex CLI · exec --json</option></select><button id="provider-demo">运行样例</button></div><p class="hint" id="provider-note">Claude 样例用文字增量驱动嘴型；所有事件均为模拟。</p><div class="event-head"><h3>事件记录</h3><button id="clear-log">清空</button></div><pre id="events" aria-label="事件记录"></pre></div><pre class="code-example"><code>avatar.handle({ type: 'thinking' });
+avatar.handle({ type: 'working' });
+avatar.handle({ type: 'delta', text: '你好' });
+await avatar.handle({ type: 'done' });
+avatar.stop();</code></pre></div></details>
+<footer><span>007 · dr-aria / 角色效果与表达图鉴</span><div><a href="https://github.com/MPMyburgh/dr-aria">上游仓库</a><a href="LICENSE.dr-aria.txt">Michael Myburgh · MIT</a></div><p>角色美术与绘制源于上游项目；本页单独展示动画层。示例均为预设或模拟，未调用真实模型。</p></footer>
+</main><dialog id="overview-dialog" aria-label="理解总结图大图"><div class="overview-dialog-toolbar"><span>dr-aria · 理解总结图</span><button id="close-overview" aria-label="关闭理解总结图">关闭 ×</button></div><img src="assets/understanding-summary.png" alt="dr-aria 能力、原理、效果、价值与边界总结图"><a href="assets/understanding-summary.png" target="_blank" rel="noopener">在新标签页查看原图 ↗</a></dialog><script type="module" src="demo.js"></script></body></html>

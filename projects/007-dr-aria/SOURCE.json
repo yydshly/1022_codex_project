@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/MPMyburgh/dr-aria",
+  "commit": "ff26c94cf1d6879ad98838df9c50104d06419eb6",
+  "license": "MIT",
+  "retrieved": "2026-10-21",
+  "files": {
+    "build/page.html": "edb770db2a6492f02a33390f512c1f4955519cb538c2b493d66867d9cc46569c",
+    "build/art.json": "3c350e6c7bd142a0b26a229eb734da458f16b6be79667f2734ed8a35536a58d7",
+    "LICENSE": "297cbd204daea971f6745253924b4ba5242b7f499ddbf802da930c3794f0cc35",
+    "docs/aria.png": "a4f9e4df102c7a54df449e7fad2de5c95e7f94d2e27376c85c03a306c78c36bd"
+  }
+}

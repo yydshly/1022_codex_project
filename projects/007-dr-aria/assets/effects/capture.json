@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-21",
+  "source": "本地独立动画组件；预设文字与状态事件",
+  "browser": "151.0.7922.34",
+  "files": [
+    "01-listening.png",
+    "02-thinking.png",
+    "03-working.png",
+    "04-speaking.png"
+  ]
+}

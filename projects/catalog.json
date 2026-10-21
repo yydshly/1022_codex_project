@@ -86,6 +86,23 @@
       "cover": "assets/understanding-summary.png",
       "cover_caption": "使用 ImageGen 生成的理解总结图：能力、规则进入 AI 上下文的原理、五组共 23 条约束、可选的 16 组正则检查、使用场景、对我们的意义与能力边界。教学提醒数不代表质量评分。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/"
+    },
+    {
+      "id": "007",
+      "slug": "dr-aria",
+      "name": "dr-aria · 角色效果与表达图鉴",
+      "repo": "https://github.com/MPMyburgh/dr-aria",
+      "summary": "将 Agent 回复和部分运行状态转成可见角色反馈：预制字符画配合事件驱动动作、文字驱动气泡与嘴型，呈现等待、思考、工作和回复，让等待有反馈、对话有角色，并可作为自有 Agent 的表达层",
+      "status": "completed",
+      "tags": [
+        "ASCII 动画",
+        "角色展示",
+        "状态表达",
+        "情绪表达"
+      ],
+      "cover": "assets/understanding-summary.png",
+      "cover_caption": "ImageGen 理解总结图：定位、原理、四状态效果、价值、场景与边界。效果区参考本地实际截图绘制；角色层仅呈现回复和部分状态，未调用真实模型。",
+      "demo_url": ""
     }
   ]
 }
