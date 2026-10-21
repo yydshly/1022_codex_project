@@ -17,9 +17,9 @@
 <!-- PROJECT_INDEX:START -->
 当前收录 **1** 个项目。
 
-| 编号 | 项目 | 一句话摘要 | 研究进度 | Web 演示 |
-| --- | --- | --- | --- | --- |
-| 001 | [SwiftUIShaders](projects/001-swiftui-shaders/README.md) | 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/) |
+| 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
+| --- | --- | --- | --- | --- | --- |
+| 001 | [SwiftUIShaders](projects/001-swiftui-shaders/README.md) | [SwiftUIShaders](https://github.com/krispuckett/SwiftUIShaders) | 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览

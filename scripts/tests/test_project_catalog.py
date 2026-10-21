@@ -54,6 +54,20 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue((project / "notes.md").is_file())
         ET.parse(project / "assets/cover.svg")
 
+    def test_index_links_source_with_original_repository_name(self):
+        catalog.add(self.root, slug="shader-study", name="着色器能力研究",
+                    repo="https://github.com/krispuckett/SwiftUIShaders/",
+                    summary="测试源库原名与研究名称的区分")
+        text = (self.root / "README.md").read_text(encoding="utf-8")
+        index = text.split("<!-- PROJECT_INDEX:START -->", 1)[1].split(
+            "<!-- PROJECT_INDEX:END -->", 1)[0]
+        self.assertIn("| 项目 | 关注源库 |", index)
+        self.assertIn("[着色器能力研究](projects/001-shader-study/README.md)", index)
+        self.assertIn("[SwiftUIShaders](https://github.com/krispuckett/SwiftUIShaders/)", index)
+        rows = [line for line in index.splitlines() if line.startswith("|")]
+        self.assertTrue(all(len(row.split("|")) == 8 for row in rows))
+        self.assertEqual(catalog.check(self.root), 1)
+
     def test_maximum_number_is_preserved_for_archived_projects(self):
         self.create()
         data = catalog.load_catalog(self.root)

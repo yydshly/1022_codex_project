@@ -115,15 +115,17 @@ def load_catalog(root: Path) -> dict:
 
 def render_index(projects: list[dict]) -> str:
     lines = [f"当前收录 **{len(projects)}** 个项目。", "",
-             "| 编号 | 项目 | 一句话摘要 | 研究进度 | Web 演示 |",
-             "| --- | --- | --- | --- | --- |"]
+             "| 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |",
+             "| --- | --- | --- | --- | --- | --- |"]
     for project in projects:
         path = f"projects/{directory_name(project)}/README.md"
         demo = f"[在线演示]({url(project['demo_url'])})" if project["demo_url"] else "—"
+        source_name = project["repo"].rstrip("/").rsplit("/", 1)[-1]
         lines.append(f"| {project['id']} | [{markdown(project['name'])}]({path}) | "
+                     f"[{markdown(source_name)}]({url(project['repo'])}) | "
                      f"{markdown(project['summary'])} | {STATUSES[project['status']]} | {demo} |")
     if not projects:
-        lines.append("| — | 暂无子项目 | 首个真实项目将从 001 开始收录 | — | — |")
+        lines.append("| — | 暂无子项目 | — | 首个真实项目将从 001 开始收录 | — | — |")
     return "\n".join(lines)
 
 
