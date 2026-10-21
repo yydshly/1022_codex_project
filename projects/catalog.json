@@ -51,7 +51,7 @@
       ],
       "cover": "assets/library-overview.png",
       "cover_caption": "使用我们生成的理解总结图作引导：已有图片输入、1种柔彩几何像素风格、4种输出方式，以及提示词、效果差异、适用场景和实测边界；可作为探索风格库的样本。图内缩略图为示意。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/"
     }
   ]
 }

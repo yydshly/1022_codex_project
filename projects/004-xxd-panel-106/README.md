@@ -2,7 +2,7 @@
 
 > 以已有图片为输入进行二次处理，通过提示词与图像模型重绘为柔彩几何像素海报。对我们而言，它是探索风格库的一个样本：整理风格规则、提示词、效果和适用场景，便于后续比较与复用。
 
-[展示网页](web/index.html) · [网页提示词区](web/index.html#prompts) · [一图理解](guides/README.md) · [真实演示与失败记录](demo.md) · [素材来源](assets/README.md) · [完整媒体登记](media.json) · [验证记录](verification.md)
+[在线展示](https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/) · [网页源码](web/index.html) · [网页提示词区](web/index.html#prompts) · [一图理解](guides/README.md) · [真实演示与失败记录](demo.md) · [素材来源](assets/README.md) · [完整媒体登记](media.json) · [验证记录](verification.md)
 
 | 信息 | 内容 |
 | --- | --- |
@@ -12,7 +12,7 @@
 | 研究日期 | 2026-10-21 |
 | 展示范围 | 全部8张上游样张；1张独立实拍；7张演示成品；3张未通过检查的生成结果 |
 | 实际执行 | 内置 image_gen.imagegen；按固定风格正文与相关运行契约执行；未全局安装 Skill，未运行上游 API 桥接 |
-| Web 状态 | 静态网页与 Pages 构建已通过本地检查；线上发布结果另行记录 |
+| Web 状态 | [已发布到 GitHub Pages](https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/)；构建与部署均成功，见 [部署验证](deployment-verification.json) |
 
 ![本研究一图总结XXD Panel106的能力、单一风格、提示词组织、效果差异、适用意义与边界](assets/library-overview.png)
 

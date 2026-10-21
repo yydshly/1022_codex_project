@@ -1,0 +1,458 @@
+{
+  "verified_at_utc": "2026-10-21T12:16:13.213586+00:00",
+  "url": "https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/",
+  "content_commit": "329ec7b21ed51c31657a0734c5aac72962fbd378",
+  "workflow": {
+    "conclusion": "success",
+    "databaseId": 39597904164,
+    "headSha": "329ec7b21ed51c31657a0734c5aac72962fbd378",
+    "jobs": [
+      {
+        "completedAt": "2026-10-21T12:13:49Z",
+        "conclusion": "success",
+        "databaseId": 119214710247,
+        "name": "build",
+        "startedAt": "2026-10-21T12:13:37Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-21T12:13:38Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-21T12:13:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:42Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7",
+            "number": 2,
+            "startedAt": "2026-10-21T12:13:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:43Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v7",
+            "number": 3,
+            "startedAt": "2026-10-21T12:13:42Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:43Z",
+            "conclusion": "success",
+            "name": "Validate catalog and generated shader sources",
+            "number": 4,
+            "startedAt": "2026-10-21T12:13:43Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:44Z",
+            "conclusion": "success",
+            "name": "Package offline demo and assemble numbered sites",
+            "number": 5,
+            "startedAt": "2026-10-21T12:13:43Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:44Z",
+            "conclusion": "success",
+            "name": "Run actions/configure-pages@v6",
+            "number": 6,
+            "startedAt": "2026-10-21T12:13:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:47Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@v5",
+            "number": 7,
+            "startedAt": "2026-10-21T12:13:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:47Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v7",
+            "number": 13,
+            "startedAt": "2026-10-21T12:13:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:48Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7",
+            "number": 14,
+            "startedAt": "2026-10-21T12:13:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:13:48Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 15,
+            "startedAt": "2026-10-21T12:13:48Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39597904164/job/119214710247"
+      },
+      {
+        "completedAt": "2026-10-21T12:14:21Z",
+        "conclusion": "success",
+        "databaseId": 119214816299,
+        "name": "deploy",
+        "startedAt": "2026-10-21T12:13:52Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-21T12:13:54Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-21T12:13:53Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:14:19Z",
+            "conclusion": "success",
+            "name": "Deploy to GitHub Pages",
+            "number": 2,
+            "startedAt": "2026-10-21T12:13:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-21T12:14:19Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 3,
+            "startedAt": "2026-10-21T12:14:19Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39597904164/job/119214816299"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39597904164"
+  },
+  "http": {
+    "resource_count": 42,
+    "all_200": true,
+    "all_match": true,
+    "resources": [
+      {
+        "path": "app.js",
+        "status": 200,
+        "bytes": 15232,
+        "sha256": "af8c56cb031ec868b31712d0811af7f4583a2c1e91de19e6f5cb347e65989fcf",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/design-only.png",
+        "status": 200,
+        "bytes": 1703661,
+        "sha256": "4f8dc6cbe4dcdd1aa14107807dc2b90e48bd177d833b7e2a88cfd1db96254bc8",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/left-right.png",
+        "status": 200,
+        "bytes": 2043345,
+        "sha256": "f88aefad09bf8f47784ccaeb0f7bdd3083682ad8c1000b0f7fcceeb3ed6ca5b3",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/rejected/design-only-first.png",
+        "status": 200,
+        "bytes": 2037415,
+        "sha256": "7662349fb9fdd855df5222d6e75a4f2de6bdc5e84d1586324de23780242c27df",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/rejected/wallpaper-phone-first.png",
+        "status": 200,
+        "bytes": 1931060,
+        "sha256": "053141b1dc780325a13cef4a7a135a08e0dd01f54f66c89f04e1f0c00176646f",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/rejected/wallpaper-watch-first.png",
+        "status": 200,
+        "bytes": 1743227,
+        "sha256": "4007f9665fae951f4833d01b3bf5a9c58999d9737b0f8983c39ace7920af93d2",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/source-paris.jpg",
+        "status": 200,
+        "bytes": 519656,
+        "sha256": "e5c6ff8c9087d58fd5d3482b2ed7e25b016cf2464a72563f0d6296e1fcfb56e5",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/top-bottom.png",
+        "status": 200,
+        "bytes": 1925964,
+        "sha256": "33a6574f66440810e33b1da18dc1874b16c31f7008da9fa20ec757ebc66c48b7",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/wallpaper-desktop.png",
+        "status": 200,
+        "bytes": 1853579,
+        "sha256": "22ae2efcb6642ce9c147ed53c24f31c7fabba60d1d8b8e9421f720c325eeeb37",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/wallpaper-ipad.png",
+        "status": 200,
+        "bytes": 1727830,
+        "sha256": "6d2e1f3a51b61f6e7b2401cd85202971340c4c3dc344701648d759e253dd72ca",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/wallpaper-phone.png",
+        "status": 200,
+        "bytes": 1613891,
+        "sha256": "31bd155b09dcd86329233ed118b61d84017422d552284613d458ef7d86c631f8",
+        "matches_local": true
+      },
+      {
+        "path": "assets/demo/wallpaper-watch.png",
+        "status": 200,
+        "bytes": 1821568,
+        "sha256": "2f877d2be6b731b2ad484b1a5699b92f6497a2e56178b86b9718d0f0c273ba38",
+        "matches_local": true
+      },
+      {
+        "path": "assets/library-overview.png",
+        "status": 200,
+        "bytes": 1858827,
+        "sha256": "eba8b05bde84e8d280d39b9ca171e46c9c549a56d3280ff4499229c27480db20",
+        "matches_local": true
+      },
+      {
+        "path": "assets/NOTICE.md",
+        "status": 200,
+        "bytes": 2873,
+        "sha256": "0e7ed693a8758b85988dd26fbe1e21772e6b32181a4f89c89189482dc8246026",
+        "matches_local": true
+      },
+      {
+        "path": "assets/README.md",
+        "status": 200,
+        "bytes": 2792,
+        "sha256": "58d73981913c4b6bface71fedaff7651df2cce00c2a01d7f82c664b7b84fb877",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/LICENSE.txt",
+        "status": 200,
+        "bytes": 4694,
+        "sha256": "75f5f2ae732cdc31adf8ad90a42ed4ed47476b3f27fcdf90de13e79d6788309d",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/README.original.md",
+        "status": 200,
+        "bytes": 1580,
+        "sha256": "c41da5c3a57893f8153bdc6702b171bc40d2153a9aacfb645dae980900560862",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-05.png",
+        "status": 200,
+        "bytes": 2072063,
+        "sha256": "3a7faee5ce53dc8ff6d151ff25ab4b94552828e2b211deb0e030ec9c9a5b835b",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-06.png",
+        "status": 200,
+        "bytes": 1363073,
+        "sha256": "5beb69b3c539de5414903f3ee6f2be45a6faf266d31740d7e581397bc5d1c9fa",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-07.png",
+        "status": 200,
+        "bytes": 1973417,
+        "sha256": "ad94725b1871fff5a3dc44d76c867f1c2609334b7e088ccdfe31e0fca3b5bff4",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-08.png",
+        "status": 200,
+        "bytes": 1991038,
+        "sha256": "b49f68b96a862b1fb17cf5684268807534db08ed43b219dd6b92d823ea88e060",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-09.png",
+        "status": 200,
+        "bytes": 2326444,
+        "sha256": "0f2fdb15373e5c8afebb2b1a29e6fe913c18f4945ee93da33d68b48c9c6bb4dd",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-10.png",
+        "status": 200,
+        "bytes": 2037703,
+        "sha256": "6fb6a0761c4a5b342ffcf358bdeb45601d5723ec4d7fd863f025a414e464abe2",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-11.png",
+        "status": 200,
+        "bytes": 1696143,
+        "sha256": "7643da7041591b0dd220e98912c88617d3a5476629c4eaea2941f5653680b18f",
+        "matches_local": true
+      },
+      {
+        "path": "assets/upstream/sample-12.png",
+        "status": 200,
+        "bytes": 1699405,
+        "sha256": "b56e31e3853c29dec3fac514be929da66963dda76ec37c43d5f81d1ac1e7980a",
+        "matches_local": true
+      },
+      {
+        "path": "guides/overview-prompt.txt",
+        "status": 200,
+        "bytes": 3104,
+        "sha256": "5b1b200b1ecb219a1cc1298d068e209affe545836f6c9397a699c640e6f8c44a",
+        "matches_local": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 19280,
+        "sha256": "40a6f4833038ad2d69b87558f7409c4a61465dc4c3e09836f6847dab5c98f0c5",
+        "matches_local": true
+      },
+      {
+        "path": "media.js",
+        "status": 200,
+        "bytes": 74410,
+        "sha256": "26cd677141027478545036591d91e689b4269c70100027d9d453891dfc2d6f4a",
+        "matches_local": true
+      },
+      {
+        "path": "media.json",
+        "status": 200,
+        "bytes": 13351,
+        "sha256": "e4fdb2f60b27ddd70bb3b87bb4387c10e24f4d343e6d816651e598b760a2fac4",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/design-only-retry.txt",
+        "status": 200,
+        "bytes": 4680,
+        "sha256": "4c7aa0bf6a816840164dc065583081a0a80991d749a65f082657137fcd2ac8b9",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/design-only.txt",
+        "status": 200,
+        "bytes": 4208,
+        "sha256": "40a9019ab9d372e85a8bb30dcd6fae4512cf610cbd4539862a4dafe9d0d1038f",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/left-right.txt",
+        "status": 200,
+        "bytes": 4478,
+        "sha256": "0fbf49c51c1c2847b40db3163ac58505f9e79f5dd574004f69cbfdae4aefd8f5",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/original.zh-CN.md",
+        "status": 200,
+        "bytes": 3308,
+        "sha256": "e4a4003b6b484797f2bbdf91cb888fcbc2ffec9035a9dbd38b93c61f62cd3fe7",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/top-bottom.txt",
+        "status": 200,
+        "bytes": 4412,
+        "sha256": "cd82cc494e4d9c702a51bc10036e6714aa4bce395435052f775cc5e9e0e50084",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/wallpaper-desktop.txt",
+        "status": 200,
+        "bytes": 4426,
+        "sha256": "e8f41df3f0656bdb4c2aba14e682c7a9b7843279441f03b0f4ac6062136cccf1",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/wallpaper-ipad.txt",
+        "status": 200,
+        "bytes": 4423,
+        "sha256": "de1c979dea0b49911ee844190628dc70510157b6be056e6ab28ba300b174fa9f",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/wallpaper-phone-retry.txt",
+        "status": 200,
+        "bytes": 4792,
+        "sha256": "e3ca12827aa8bc960619d3063b39b3e823816d7f355c8b425366d9a218988c99",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/wallpaper-phone.txt",
+        "status": 200,
+        "bytes": 4323,
+        "sha256": "d31b4f12e191353baed075ba56aa094a42547c82a99717f0b2713865d063d785",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/wallpaper-watch-retry.txt",
+        "status": 200,
+        "bytes": 4750,
+        "sha256": "43fda21ad414e817cf8c813c30a742f60b04774b56f7ac85fd5e4594bcc704c1",
+        "matches_local": true
+      },
+      {
+        "path": "prompts/wallpaper-watch.txt",
+        "status": 200,
+        "bytes": 4424,
+        "sha256": "a593e9cfad9a407829e5f27523ebf587d4ded41ce522461c9defa36c17b935eb",
+        "matches_local": true
+      },
+      {
+        "path": "prompts.css",
+        "status": 200,
+        "bytes": 5392,
+        "sha256": "b6586d38c27030cb3b341e71c194e49630e685ce13a59547d27f89de22728a05",
+        "matches_local": true
+      },
+      {
+        "path": "style.css",
+        "status": 200,
+        "bytes": 19192,
+        "sha256": "46128e7a769964f533635053b95325526a22ad82b577aa129d3f4e1fae68ccdd",
+        "matches_local": true
+      }
+    ]
+  },
+  "scope": "Static webpage, official samples, real study outputs, exact prompts, source/license and explanation graphic. Image-generation accuracy limits remain in demo.md.",
+  "browser": {
+    "url": "https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/#overview",
+    "viewport_width": 702,
+    "client_width": 702,
+    "scroll_width": 702,
+    "official_samples": 8,
+    "prompt_entries": 11,
+    "gallery_filter_top_bottom": 4,
+    "gallery_restored_all": 8,
+    "left_right_prompt_additions_and_download": true,
+    "guide_image_and_viewer": true,
+    "console_errors_or_warnings": [],
+    "screenshot": "assets/web-live-overview.png",
+    "clipboard_scope": "Previous automation virtual clipboard could not verify cross-host paste; full file downloads and displayed original text verified."
+  },
+  "note": "This records the first successful content deployment 329ec7b. The follow-up registration adds demo_url, deployment evidence and a source-caption clarification; image and prompt bytes are unchanged."
+}
