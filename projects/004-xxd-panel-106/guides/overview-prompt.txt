@@ -1,0 +1,60 @@
+Use case: infographic-diagram
+Asset type: single Chinese visual explainer for a software research webpage.
+Create ONE polished landscape 3:2 infographic (target 2520×1680) summarising XXD Panel 106. This is an original research explanation, not another artwork output or an app screenshot.
+Use crisp, highly legible Simplified Chinese typography. Cream paper background, deep plum text, gentle lavender, peach, milk blue accents; modular editorial layout, generous spacing, a few geometric pixel motifs. Small palette swatches and simple arrows are welcome. Text must be readable and correctly spelled.
+Input image 1 is the real Paris photograph: reference for the input thumbnail only.
+Input image 2 is an existing generated Paris comparison poster: reference for the output thumbnail and pixel visual language only.
+Create a small clearly-labelled photo-to-pixel illustration using these references. Treat the thumbnails as explanatory illustrations, not pixel-identical evidence; include the supplied note below. Preserve Eiffel Tower identity. Do not copy the poster's Chinese slogan into the infographic.
+Arrange a clear reading order: headline; capability and style with illustrative input→output; a central prominent prompt formula; then effects, significance/scenarios, and observed limits. Avoid a wall of small text and avoid repeated decorative cards. Make the title, the 1-style/4-output distinction, and the prompt formula immediately clear.
+Use the following Chinese content; headings may be arranged but do not invent new capabilities, success rates, model names, or facts:
+
+TITLE:
+XXD Panel 106｜柔彩像素记
+SUBTITLE:
+一套固定审美，把照片重构为海报
+KEY FACT:
+1 种风格 · 4 种输出方式
+
+CAPABILITY:
+能力
+上下对照｜左右对照｜纯设计｜四端壁纸
+支持多比例、文字选择与目录批处理规范
+
+STYLE:
+风格
+2—4 个视觉锚点
+柔亮配色 · 几何像素 · 硬边色块
+少量形状 · 留白 · 克制文字
+
+PROMPT:
+提示词
+“保留关键轮廓与关系，删减次要细节，用柔彩像素重新组织画面。”
+完整风格正文 ＋ 版式与尺寸 ＋ 文字规则
+→ 图像模型 → 检查与返修
+小注：此处为摘要，完整原文见网页
+
+EFFECT:
+效果为何不同
+原照内容与颜色、画幅、文字和模型执行共同影响结果
+风格固定，构图与细节可变
+
+MEANING:
+意义与场景
+把审美经验变成可复用的生成流程
+适合：个人旅行纪念、植物与生活海报、私人壁纸
+
+OBSERVED LIMITS:
+实测与边界
+8 张官方样张 · 7 张本次成品 · 3 张失败记录
+需检查主体、文字、尺寸和分界
+本次极简留白仅部分满足
+
+THUMBNAIL LABELS:
+输入照片（示意）
+柔彩像素海报（示意）
+
+FOOTER:
+研究基于 nevertoday/xxd-panel-106 · commit 12a70f6 · 非商业许可
+图中缩略图为理解示意，完整实测与原始提示词见网页
+
+Render only the final single infographic. No device frame, UI mockup, extra logos, watermarks, badges, or additional text. Do not claim that this library contains its own trained model.

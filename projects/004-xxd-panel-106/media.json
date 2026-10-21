@@ -1,0 +1,335 @@
+{
+  "study_date": "2026-10-21",
+  "upstream_commit": "12a70f6e4d9200b28a95d1b81c808439a5590c74",
+  "execution": {
+    "tool": "built-in image_gen.imagegen",
+    "underlying_model": "not exposed by tool",
+    "total_generation_calls": 10,
+    "retained_outputs": 7,
+    "rejected_outputs": 3,
+    "pixel_preserving_composition": false,
+    "metadata_removed": false,
+    "note": "Executed the pinned style brief and relevant runtime contract manually through the built-in tool. Skill was not installed globally; upstream API bridge was not run."
+  },
+  "source": {
+    "path": "assets/demo/source-paris.jpg",
+    "width": 2400,
+    "height": 1596,
+    "sha256": "e5c6ff8c9087d58fd5d3482b2ed7e25b016cf2464a72563f0d6296e1fcfb56e5",
+    "title": "Eiffel Tower, Paris France",
+    "photographer": "Chris Karidis",
+    "source": "https://unsplash.com/photos/eiffel-tower-paris-france-nnzkZNYWHaU",
+    "download": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=2400&q=90&fit=max",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "provenance": "real-photograph"
+  },
+  "upstream_samples": [
+    {
+      "path": "assets/upstream/sample-05.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3a7faee5ce53dc8ff6d151ff25ab4b94552828e2b211deb0e030ec9c9a5b835b",
+      "id": "sample-05",
+      "title": "城市与摩天轮",
+      "category": "城市",
+      "mode": "left-right",
+      "note": "保留天际线与摩天轮关系；深蓝夜景转为奶油白、淡紫与蜜桃色。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-05.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-06.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5beb69b3c539de5414903f3ee6f2be45a6faf266d31740d7e581397bc5d1c9fa",
+      "id": "sample-06",
+      "title": "一盏灯，一杯酒",
+      "category": "生活",
+      "mode": "left-right",
+      "note": "灯光、瓶杯与花束成为视觉锚点；光感转成明亮的几何色块。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-06.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-07.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ad94725b1871fff5a3dc44d76c867f1c2609334b7e088ccdfe31e0fca3b5bff4",
+      "id": "sample-07",
+      "title": "蒲公英与落日",
+      "category": "植物",
+      "mode": "left-right",
+      "note": "保留放射状花球、竖直花茎与飞散方向，删去石墙与杂草。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-07.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-08.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "b49f68b96a862b1fb17cf5684268807534db08ed43b219dd6b92d823ea88e060",
+      "id": "sample-08",
+      "title": "送给你的花束",
+      "category": "植物",
+      "mode": "left-right",
+      "note": "保留花束整体轮廓、黑包装与红色系；部分字形并非像素字体。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-08.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-09.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "0f2fdb15373e5c8afebb2b1a29e6fe913c18f4945ee93da33d68b48c9c6bb4dd",
+      "id": "sample-09",
+      "title": "城市的灯光记忆",
+      "category": "城市",
+      "mode": "top-bottom",
+      "note": "建筑高度与发光道路保留，蓝紫与粉黄像素重构城市节奏。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-09.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-10.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "6fb6a0761c4a5b342ffcf358bdeb45601d5723ec4d7fd863f025a414e464abe2",
+      "id": "sample-10",
+      "title": "石拱门里的花",
+      "category": "植物",
+      "mode": "top-bottom",
+      "note": "拱门、斜向枝条和粉色花朵保留，石材与叶片细节大幅简化。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-10.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-11.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "7643da7041591b0dd220e98912c88617d3a5476629c4eaea2941f5653680b18f",
+      "id": "sample-11",
+      "title": "骑向光里",
+      "category": "动作",
+      "mode": "top-bottom",
+      "note": "保留骑手、马匹和弧形运动方向；原图中的光弧转为暖色像素轨迹。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-11.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    },
+    {
+      "path": "assets/upstream/sample-12.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "b56e31e3853c29dec3fac514be929da66963dda76ec37c43d5f81d1ac1e7980a",
+      "id": "sample-12",
+      "title": "露营的一杯微光",
+      "category": "生活",
+      "mode": "top-bottom",
+      "note": "保留提灯、杯子与倾倒动作，深色背景转为温暖浅底。",
+      "source": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/assets/examples/sample-12.png",
+      "provenance": "upstream",
+      "license": "PolyForm Noncommercial 1.0.0; no separate sample license found"
+    }
+  ],
+  "demo_outputs": [
+    {
+      "path": "assets/demo/top-bottom.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "33a6574f66440810e33b1da18dc1874b16c31f7008da9fa20ec757ebc66c48b7",
+      "id": "top-bottom",
+      "title": "上下对照 · 自动英文",
+      "requested_pixels": "1536x2048",
+      "text_mode": "prompt",
+      "attempts": 1,
+      "note": "摄影参考区由模型生成；设计区英文为 SOME PLACES STAY SOFT。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/top-bottom.txt",
+      "references": [
+        "assets/demo/source-paris.jpg"
+      ]
+    },
+    {
+      "path": "assets/demo/left-right.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f88aefad09bf8f47784ccaeb0f7bdd3083682ad8c1000b0f7fcceeb3ed6ca5b3",
+      "id": "left-right",
+      "title": "左右对照 · 指定中文",
+      "requested_pixels": "2048x1152",
+      "text_mode": "exact",
+      "attempts": 1,
+      "note": "指定中文「把巴黎留在这一刻」正确；分界检测在 x=835，中线为836。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/left-right.txt",
+      "references": [
+        "assets/demo/source-paris.jpg"
+      ]
+    },
+    {
+      "path": "assets/demo/design-only.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "4f8dc6cbe4dcdd1aa14107807dc2b90e48bd177d833b7e2a88cfd1db96254bc8",
+      "id": "design-only",
+      "title": "纯设计海报 · 无文字",
+      "requested_pixels": "1536x2048",
+      "text_mode": "none",
+      "attempts": 2,
+      "note": "重试后去除摄影分区；铁塔、河流与桥梁可辨，细节仍偏密。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/design-only-retry.txt",
+      "references": [
+        "assets/demo/source-paris.jpg"
+      ]
+    },
+    {
+      "path": "assets/demo/wallpaper-phone.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "31bd155b09dcd86329233ed118b61d84017422d552284613d458ef7d86c631f8",
+      "id": "wallpaper-phone",
+      "title": "手机壁纸 · 连贯定调",
+      "requested_pixels": "1440x3200",
+      "text_mode": "none",
+      "attempts": 2,
+      "note": "全幅像素，竖向重构；它是其余三端的视觉家族参考。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/wallpaper-phone-retry.txt",
+      "references": [
+        "assets/demo/source-paris.jpg"
+      ]
+    },
+    {
+      "path": "assets/demo/wallpaper-ipad.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "6d2e1f3a51b61f6e7b2401cd85202971340c4c3dc344701648d759e253dd72ca",
+      "id": "wallpaper-ipad",
+      "title": "平板壁纸 · 连贯",
+      "requested_pixels": "1536x2048",
+      "text_mode": "none",
+      "attempts": 1,
+      "note": "同时参考原照与手机定调图，重新安排天空与河面。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/wallpaper-ipad.txt",
+      "references": [
+        "assets/demo/source-paris.jpg",
+        "assets/demo/wallpaper-phone.png"
+      ]
+    },
+    {
+      "path": "assets/demo/wallpaper-desktop.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "22ae2efcb6642ce9c147ed53c24f31c7fabba60d1d8b8e9421f720c325eeeb37",
+      "id": "wallpaper-desktop",
+      "title": "电脑壁纸 · 连贯",
+      "requested_pixels": "2560x1440",
+      "text_mode": "none",
+      "attempts": 1,
+      "note": "横向展开河面与桥梁，维持同一柔彩像素语言。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/wallpaper-desktop.txt",
+      "references": [
+        "assets/demo/source-paris.jpg",
+        "assets/demo/wallpaper-phone.png"
+      ]
+    },
+    {
+      "path": "assets/demo/wallpaper-watch.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2f877d2be6b731b2ad484b1a5699b92f6497a2e56178b86b9718d0f0c273ba38",
+      "id": "wallpaper-watch",
+      "title": "手表壁纸 · 连贯",
+      "requested_pixels": "1024x1024",
+      "text_mode": "none",
+      "attempts": 2,
+      "note": "首次比例错误；重试后为正方形。未模拟表盘或验证真机可读性。",
+      "provenance": "generated-in-this-study",
+      "prompt": "prompts/wallpaper-watch-retry.txt",
+      "references": [
+        "assets/demo/source-paris.jpg",
+        "assets/demo/wallpaper-phone.png"
+      ]
+    }
+  ],
+  "rejected_outputs": [
+    {
+      "path": "assets/demo/rejected/design-only-first.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "7662349fb9fdd855df5222d6e75a4f2de6bdc5e84d1586324de23780242c27df",
+      "id": "design-only-first",
+      "title": "纯设计首次失败",
+      "reason": "错误地保留上下摄影对照分区",
+      "prompt": "prompts/design-only.txt",
+      "provenance": "rejected-generation"
+    },
+    {
+      "path": "assets/demo/rejected/wallpaper-phone-first.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "053141b1dc780325a13cef4a7a135a08e0dd01f54f66c89f04e1f0c00176646f",
+      "id": "wallpaper-phone-first",
+      "title": "手机壁纸首次失败",
+      "reason": "错误地保留上下摄影对照分区",
+      "prompt": "prompts/wallpaper-phone.txt",
+      "provenance": "rejected-generation"
+    },
+    {
+      "path": "assets/demo/rejected/wallpaper-watch-first.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "4007f9665fae951f4833d01b3bf5a9c58999d9737b0f8983c39ace7920af93d2",
+      "id": "wallpaper-watch-first",
+      "title": "手表壁纸首次失败",
+      "reason": "请求正方形，返回3:4竖版",
+      "prompt": "prompts/wallpaper-watch.txt",
+      "provenance": "rejected-generation"
+    }
+  ],
+  "study_guides": [
+    {
+      "path": "assets/library-overview.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "eba8b05bde84e8d280d39b9ca171e46c9c549a56d3280ff4499229c27480db20",
+      "id": "library-overview",
+      "title": "一图读懂 XXD Panel 106",
+      "provenance": "generated-explainer",
+      "prompt": "guides/overview-prompt.txt",
+      "generation_calls": 1,
+      "tool": "built-in image_gen.imagegen",
+      "references": [
+        "assets/demo/source-paris.jpg",
+        "assets/demo/left-right.png"
+      ],
+      "note": "本研究生成的理解总结图：能力、单一风格、提示词、效果差异、意义与边界。图中缩略图为示意，提示词为摘要；完整原文与真实实测另列。"
+    }
+  ],
+  "seam_audit": {
+    "tool": "https://github.com/nevertoday/xxd-panel-106/blob/12a70f6e4d9200b28a95d1b81c808439a5590c74/scripts/compose_panel.py",
+    "top-bottom": {
+      "axis": "y",
+      "midpoint": 724,
+      "detected": 724,
+      "offset_pixels": 0
+    },
+    "left-right": {
+      "axis": "x",
+      "midpoint": 836,
+      "detected": 835,
+      "offset_pixels": -1
+    },
+    "note": "Heuristic strongest luminance transition; not a semantic or aesthetic guarantee."
+  }
+}

@@ -77,3 +77,13 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 
 - [GitHub Pages 与静态托管](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 - [使用自定义工作流部署 Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+
+## 004 · XXD Panel 106
+
+2026-10-21补充完整提示词阅读区与一张理解总结图：原始风格正文和10份实际请求均打包进media.js，可切换全文／追加指令、复制当前显示内容、下载完整原文件；成品、壁纸和失败记录可直接定位到相应请求。总结图和其生成请求以study_guides单独登记，不增加原海报实验的10次请求计数。打包及验证脚本同时核对11份提示词原文、总结图哈希与编号路径资源。
+
+[柔彩像素记研究与真实演示](../projects/004-xxd-panel-106/README.md) 使用无依赖静态网页。先运行 `python projects/004-xxd-panel-106/scripts/package_web.py`，按字节复制全部8张官方样张、独立实拍、7张本次成品、3张失败结果、来源声明、许可证和完整请求，并生成图集数据；该步骤已加入现有Pages工作流。发布检查可执行同一命令加 `--check`。
+
+源素材维护在子项目 `assets/`，打包副本、媒体数据和提示词副本在 `web/` 中按项目规则忽略，构建器再将完整 `web/` 复制到编号路径 `/1022_codex_project/004-xxd-panel-106/`。资源均使用相对路径，不依赖CDN或在线生图接口。网页支持官方图集筛选、完整图片放大、键盘切图、演示切换、四端壁纸下载、失败记录与场景说明。
+
+发布时先由 Actions 构建并部署，再验证真实 URL 和资源内容；验证通过后填写 `demo_url`。真实生成的模式与文字结果、尺寸偏差和失败过程保存在项目文档，验证范围见 [verification.md](../projects/004-xxd-panel-106/verification.md)。

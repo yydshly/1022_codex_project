@@ -1,0 +1,4 @@
+# Preserve source snapshots and exact image-generation requests.
+assets/upstream/** -text whitespace=cr-at-eol
+prompts/** -text whitespace=cr-at-eol,-blank-at-eof
+guides/overview-prompt.txt -text whitespace=cr-at-eol
