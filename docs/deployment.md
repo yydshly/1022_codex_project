@@ -115,3 +115,5 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 [角色效果与表达图鉴](../projects/007-dr-aria/README.md) 汇总能力、原理、效果和价值：用预制 ASCII 形象、状态驱动动作和文字驱动气泡及嘴型，把 Agent 回复和部分运行状态转成可见反馈。演示包含四状态切换、一键完整播放、中文文字、可选字符短音和情绪能力说明；当前仅一套 warm 温和基础表情，未连接真实模型。
 
 引导图和首页封面均采用本次生成的 understanding-summary.png。效果区由 ImageGen 参考四张本地实际截图绘制，原始截图与完整提示词保留。图可放大和下载。构建前运行 python projects/007-dr-aria/scripts/package_web.py；--check 核对图像副本，随后根汇总器发布至 /1022_codex_project/007-dr-aria/。工作流已加入此步骤。
+
+2026-10-22 已发布至 [007 · dr-aria](https://yydshly.github.io/1022_codex_project/007-dr-aria/)。内容提交 `2643cd8`，[Actions 构建与部署均成功](https://github.com/yydshly/1022_codex_project/actions/runs/39631036413)；9 个发布文件 HTTP 200，内容与提交字节一致，指定 ImageGen 引导图哈希一致。线上摘要、图像放大下载、状态与一键演示、中文流式回复、模拟 Agent 样例和三种宽度已验证。记录见 [文件验证](../projects/007-dr-aria/deployment-verification.json) 与 [网页交互验证](../projects/007-dr-aria/deployment-ui-verification.json)。未连接真实模型。

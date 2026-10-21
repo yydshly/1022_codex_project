@@ -102,7 +102,7 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "ImageGen 理解总结图：定位、原理、四状态效果、价值、场景与边界。效果区参考本地实际截图绘制；角色层仅呈现回复和部分状态，未调用真实模型。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/"
     }
   ]
 }

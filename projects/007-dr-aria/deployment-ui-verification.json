@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-22",
+  "base": "https://yydshly.github.io/1022_codex_project/007-dr-aria/",
+  "status": "passed",
+  "browser": "151.0.7922.34",
+  "checks": [
+    "能力/原理/效果/价值四项摘要",
+    "指定ImageGen引导图加载、放大、Esc关闭、下载",
+    "四状态切换与停止",
+    "一键完整演示",
+    "中文与emoji流式播放",
+    "Claude/Codex模拟事件样例",
+    "站点总导航及指定封面"
+  ],
+  "responsive": [
+    {
+      "width": 375,
+      "noOverflow": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "scope": "线上静态展示与模拟事件，未连接真实模型"
+}

@@ -2,7 +2,7 @@
 
 这个子项目用一张总结图与交互网页，汇总代码绘制的 ASCII 角色、动作效果、状态切换、价值和情绪表达边界。它可视化的是 Agent 的回复和部分运行状态；核心是事件驱动动作、文字驱动气泡与嘴型。原库是带人设、技巧卡和记忆的 Claude 聊天应用，我们抽取的是角色展示层。
 
-**展示入口：[本地网页](http://127.0.0.1:8047/)** · [网页文件](web/index.html) · [可选接入说明](integration.md)
+**展示入口：[在线网页](https://yydshly.github.io/1022_codex_project/007-dr-aria/)** · [本地网页](http://127.0.0.1:8047/) · [网页文件](web/index.html) · [可选接入说明](integration.md)
 
 ![dr-aria 理解总结图：定位、原理、四状态效果、价值、可扩展场景与当前边界](assets/understanding-summary.png)
 
@@ -52,6 +52,12 @@ python -m http.server 8047 --bind 127.0.0.1 -d projects/007-dr-aria/web
 打开 [http://127.0.0.1:8047/](http://127.0.0.1:8047/)。需要现代浏览器；通过 HTTP 加载，不直接双击 `file://` 文件。
 
 这是静态展示，不需要模型账户或 API key，不消耗 Claude / Codex 额度，也没有连接你的 Agent。后续接入可复用现有角色组件，详见 [integration.md](integration.md)。
+
+## 发布与验证
+
+2026-10-22 已发布到 [GitHub Pages](https://yydshly.github.io/1022_codex_project/007-dr-aria/)。内容提交 `2643cd8`，[构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39631036413)均成功；9 个发布文件 HTTP 200，响应与提交字节一致，指定引导图 SHA-256 一致。
+
+线上已检查四项摘要、图片放大和下载、四状态切换、一键演示、中文及 emoji 流式播放、Claude/Codex 模拟样例，以及 375 / 768 / 1440px 布局。记录见 [文件验证](deployment-verification.json) 和 [网页交互验证](deployment-ui-verification.json)。示例没有连接真实模型。
 
 ## 来源与许可
 

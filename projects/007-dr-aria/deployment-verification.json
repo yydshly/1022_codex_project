@@ -1,0 +1,88 @@
+{
+  "verified_date": "2026-10-22",
+  "status": "passed",
+  "content_commit": "2643cd82ed0fcfef6b9ff81990aa38f9796fb973",
+  "workflow_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39631036413",
+  "base_url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/",
+  "files": [
+    {
+      "path": "adapters.js",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/adapters.js",
+      "http_status": 200,
+      "bytes": 6414,
+      "sha256": "00c75227067feee474db31e8be1eaaa5d8bbc14636884b42aabb2dd7836357aa",
+      "matches_commit": true
+    },
+    {
+      "path": "assets/understanding-summary.png",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/assets/understanding-summary.png",
+      "http_status": 200,
+      "bytes": 1758009,
+      "sha256": "040975c7a799a996642c5d166d18822586448a2a34f5d8cecf8e6ccb4c68a21a",
+      "matches_commit": true
+    },
+    {
+      "path": "avatar.js",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/avatar.js",
+      "http_status": 200,
+      "bytes": 14706,
+      "sha256": "500380fd4862ce0b7451a0d16f367bae108a943974402833b9cda3b18aa46978",
+      "matches_commit": true
+    },
+    {
+      "path": "demo.css",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/demo.css",
+      "http_status": 200,
+      "bytes": 10988,
+      "sha256": "6a5611da117a94b82c36832ba524e589c470f17a7a29c76a2d0476eae3868ec7",
+      "matches_commit": true
+    },
+    {
+      "path": "demo.js",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/demo.js",
+      "http_status": 200,
+      "bytes": 7484,
+      "sha256": "b9f42b13915112ee451e536dc78399935e92fbd002e5d79f2903570ec7fa2885",
+      "matches_commit": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/index.html",
+      "http_status": 200,
+      "bytes": 10094,
+      "sha256": "90b6466bb508fde14a75a5d820e3ab16a34370a2da5c06b00f49edfef4bcad84",
+      "matches_commit": true
+    },
+    {
+      "path": "LICENSE.dr-aria.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/LICENSE.dr-aria.txt",
+      "http_status": 200,
+      "bytes": 1072,
+      "sha256": "b8a42c86812684235613ffee4d38761a75267cc0242923008fba87229863dd0f",
+      "matches_commit": true
+    },
+    {
+      "path": "upstream-art.js",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/upstream-art.js",
+      "http_status": 200,
+      "bytes": 8907,
+      "sha256": "af4b621e91c6dbd762b59eddfbb274c19f8a573207a41b7a8f4ee7a71bc36d9a",
+      "matches_commit": true
+    },
+    {
+      "path": "upstream-renderer.js",
+      "url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/upstream-renderer.js",
+      "http_status": 200,
+      "bytes": 7146,
+      "sha256": "114e281357f9c254a669d5c79a0fcd022a9fd4ff238e46474bc3d5bdc12d2d35",
+      "matches_commit": true
+    }
+  ],
+  "home": {
+    "url": "https://yydshly.github.io/1022_codex_project/",
+    "http_status": 200,
+    "project_link": true,
+    "generated_guide": true
+  },
+  "scope": "静态页面、资源与引导图的发布字节一致性；没有真实模型调用"
+}

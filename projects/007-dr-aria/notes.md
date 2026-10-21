@@ -49,3 +49,9 @@ CLI 事件可能比逐字播放更快，因此 `handle(thinking/working)` 在前
 - 内置 ImageGen 生成 1536×1024 理解图，完整请求与输入截图均保留；效果区由模型参考四状态截图绘制，不作为额外模型实测。
 - 以该图作为首页封面与网页总览，支持放大、关闭和下载；桌面、390px 手机检查通过。图片及输入哈希见 study-guide.json，网页检查见 summary-verification.json。
 - web/assets/ 为打包副本，使用 scripts/package_web.py 生成并逐字节校验；已加入现有 Pages 工作流。
+
+## 2026-10-22 · 发布并核验
+
+- 整理能力、原理、效果和价值四项摘要，保留指定理解图，并明确它参考真实本地截图绘制。
+- 在独立工作树提交 007 内容，保留共享工作区其他项目的改动；推送 main 后 Pages 构建与部署成功。
+- 9 个线上文件与 Git 提交字节一致；线上图片、状态、演示、流式文字、模拟样例、导航和响应布局检查通过。详细证据见 deployment-verification.json、deployment-ui-verification.json。

@@ -10,3 +10,5 @@
 | `overview-web-desktop.png`、`overview-web-mobile.png` | 新增总结图在桌面、390px 手机宽度的网页集成截图。 | 2026-10-21，本地 Chromium 实际截图；检查图片加载、放大、关闭、下载和布局，见 `../summary-verification.json`。 |
 
 README 使用相对路径并提供替代文字。独立组件的截图由 `tests/browser.mjs` 生成，验证记录见 `../verification.json`。
+
+线上发布截图：`deployed-desktop.png` 和 `deployed-mobile.png`，于 2026-10-22 使用 Playwright Chromium 在真实 Pages 地址采集；覆盖指定引导图、四项摘要和角色演示，事件为模拟。检查范围见 `../deployment-ui-verification.json`。
