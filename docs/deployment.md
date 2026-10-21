@@ -98,7 +98,7 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 
 构建前执行 `python projects/005-scene-card-studio/scripts/package_web.py`，已接入 Pages 工作流。该脚本将素材、提示词、规则 JSON 和许可原样打包，生成用于选择与复制的 `data.js`，`--check` 可核对副本；随后根汇总器复制至 `/1022_codex_project/005-scene-card-studio/`，并自动加入总导航。
 
-本地发布检查：`python projects/005-scene-card-studio/scripts/verify_web.py --base-url http://127.0.0.1:8037/1022_codex_project/005-scene-card-studio/ --report`。本次完成本地构建与浏览器验证，尚未发布新的线上版本，`demo_url` 留空；范围见 [web-verification.json](../projects/005-scene-card-studio/web-verification.json)。
+2026-10-21 已发布到 [005 · Scene Card Studio](https://yydshly.github.io/1022_codex_project/005-scene-card-studio/)，内容提交 `224b0fe`，[Actions 构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39619790319)。34 个项目文件与总导航均返回 HTTP 200 且字节一致；七项摘要明确说明能力、输入、处理、输出、使用场景、扩展方向与意义，网页及导航采用已生成的理解总结图。主要交互及桌面／手机布局已检查，记录见 [部署验证](../projects/005-scene-card-studio/deployment-verification.json)。
 
 ## 006 · oil-tone
 

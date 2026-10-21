@@ -68,7 +68,7 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "使用 ImageGen 生成的理解总结图：说明基于原图二次创作的原理、可复用与可检查的规则流程、四种效果参考及扩展场景与意义。效果区参考上游样张，非本次改图实测。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/"
     },
     {
       "id": "006",

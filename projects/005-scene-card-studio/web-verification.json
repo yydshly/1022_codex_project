@@ -13,7 +13,7 @@
   "resources": [
     {
       "path": "app.js",
-      "sha256": "b77cf949b4cd4ebeb65303b1c86a88a8570ea71f05b154d702fc429d111c1c52"
+      "sha256": "000d99159b3a489096ba8a67453c78ceffe0ff672d3a25e128e0814c2e7f4aa5"
     },
     {
       "path": "assets/overview.svg",
@@ -89,7 +89,7 @@
     },
     {
       "path": "media.json",
-      "sha256": "e87ca97fdba33970c0cc96b66f156ea69f2b4ce6741822e6def0c9a01b3e605c"
+      "sha256": "5606fd19050926ffe6cee3f0183df92562a4b6da5fd18bcc949f7959da1a5b74"
     },
     {
       "path": "prompts/00-quick-use.zh-CN.txt",
@@ -121,13 +121,14 @@
     },
     {
       "path": "study-guide.json",
-      "sha256": "483c1a5ae030cec24c6d9baa20e2e0ac6726af61e4acd71b8a7cbc3daa50978d"
+      "sha256": "fed023dcf9175f00a9ea294d66990333abde5e758d89ca3561f09a2cd2e38d5f"
     },
     {
       "path": "style.css",
-      "sha256": "52f32ee672b6eba56e19fcb121d3a572a76bdda340774d35be8ef2e132afb89b"
+      "sha256": "ee26173870e610780e3f8fb14b05802d1cdf6614566838412198a27ef27c594f"
     }
   ],
+  "http_verification_source": "deployment-verification.json: all 35 public resources checked with retries",
   "browser": {
     "checked_date": "2026-10-21",
     "browser": "ChatGPT in-app browser",
@@ -235,7 +236,7 @@
       "assets/web-preview-mobile.png"
     ],
     "newImageGenerationPerformed": true,
-    "publicDeploymentPerformed": false,
+    "publicDeploymentPerformed": true,
     "caseEnhancement": {
       "checked_date": "2026-10-21",
       "cases": [
@@ -451,6 +452,25 @@
       "consoleWarningsAndErrors": []
     },
     "newSourcePhotoEditingExperiment": false,
-    "imageGenerationScope": "One AI-generated research overview; upstream case images unchanged."
+    "imageGenerationScope": "One AI-generated research overview; upstream case images unchanged.",
+    "releaseSummaryLocal": {
+      "noHorizontalOverflow": true,
+      "summaryImage": "./assets/understanding-summary.png",
+      "summaryLabels": [
+        "能力",
+        "输入",
+        "如何处理",
+        "输出",
+        "使用场景",
+        "可扩展方向",
+        "意义"
+      ],
+      "viewport": 1280
+    },
+    "productionVerification": {
+      "url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/",
+      "status": "passed",
+      "report": "deployment-verification.json"
+    }
   }
 }

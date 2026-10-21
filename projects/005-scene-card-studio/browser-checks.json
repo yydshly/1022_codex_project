@@ -105,7 +105,7 @@
     "assets/web-preview-mobile.png"
   ],
   "newImageGenerationPerformed": true,
-  "publicDeploymentPerformed": false,
+  "publicDeploymentPerformed": true,
   "caseEnhancement": {
     "checked_date": "2026-10-21",
     "cases": [
@@ -335,5 +335,10 @@
       "意义"
     ],
     "viewport": 1280
+  },
+  "productionVerification": {
+    "url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/",
+    "status": "passed",
+    "report": "deployment-verification.json"
   }
 }

@@ -16,7 +16,7 @@
     "export_byte_comparison": "passed",
     "upstream_code_pin": "passed",
     "compiled_modules_and_source_modes": "passed",
-    "manual_doc_local_links": 43,
+    "manual_doc_local_links": 46,
     "local_link_failures": [],
     "svg_xml": "passed",
     "catalog": "passed",
@@ -31,7 +31,10 @@
     "study_guide_browser": "passed: navigation, loaded image, lightbox, Esc/focus restore, desktop/mobile layout",
     "staged_release_pipeline": "passed: clean exported index; 5 registered sites, all Pages packaging and verification steps",
     "source_bytes_survive_git": "passed: attributed records, snapshots and exact prompts preserved using .gitattributes",
-    "seven_part_summary": "passed: capability, input, processing, output, use cases, extension directions and meaning"
+    "seven_part_summary": "passed: capability, input, processing, output, use cases, extension directions and meaning",
+    "public_deployment": "passed: run 39619790319, build and deploy success",
+    "public_http_bytes": "passed: 35 files including root navigation; specified cover hash matches",
+    "public_browser": "passed: seven summary items, guide, cases, prompt copy UI, rules, responsive layouts and navigation"
   },
   "limitations": [
     "One AI-generated research infographic; no new source-photo editing experiment or controlled quality comparison.",
@@ -58,7 +61,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "e0b37303e1cdf81096233bd362fdcbfa42264f45de69fda53b3d27977023323a"
+      "sha256": "70cefcbbeb553b7e820a86c71e6e5e01854979260f2faed7105d8c11fbe9f53a"
     },
     {
       "path": "SOURCE.json",
@@ -66,7 +69,15 @@
     },
     {
       "path": "assets/README.md",
-      "sha256": "919749b03e6b85abae760fe17ee94fc37ca0ee63f234549124ff5b47d4290262"
+      "sha256": "3f7d33d59e47fc2ef681c2919ec3f76fed529fdaa574b6ec0c0a122782c05eae"
+    },
+    {
+      "path": "assets/deployment-preview-mobile.png",
+      "sha256": "27b2577be51cb41465eea3b2f9f6c9b7e2a2a6eb3e3bbc92df92c06a780ba7b6"
+    },
+    {
+      "path": "assets/deployment-preview.png",
+      "sha256": "e3cb170ad1e3f8ebbf11cd6bd030e8310846b6e7d855cdefb72d318f5200781d"
     },
     {
       "path": "assets/overview.svg",
@@ -162,7 +173,7 @@
     },
     {
       "path": "browser-checks.json",
-      "sha256": "54d9dd630d86f4d692b791f24c3a8de36d36aa90c67707a2f4aca53b0803c312"
+      "sha256": "dac6a30caea3ea5198a8e83aa0c38cb1bb1d6a7a879cd0a6458cabe0e3aca864"
     },
     {
       "path": "case-prompts/threaded-landscape.txt",
@@ -177,12 +188,16 @@
       "sha256": "5ad4b0ea19d5a79d582bd152d6b73ccda6bd27f6039bdb321c728ff2830f9d17"
     },
     {
+      "path": "deployment-verification.json",
+      "sha256": "f3372d9fe8091b8cf5859cdaae06ae8f134ca879e3bf3a5c6be47b2a67ab662b"
+    },
+    {
       "path": "media.json",
       "sha256": "5606fd19050926ffe6cee3f0183df92562a4b6da5fd18bcc949f7959da1a5b74"
     },
     {
       "path": "notes.md",
-      "sha256": "9990a0c421f6ebc1ff7a81bff1100bf7610fa2dc3fd9192693c229db298b6d14"
+      "sha256": "35277a1c2a6a776d7acc722b643e0f4f188a896d86475069f2fe01bfa9d4384a"
     },
     {
       "path": "prompts/00-quick-use.zh-CN.txt",
@@ -286,7 +301,7 @@
     },
     {
       "path": "verification.md",
-      "sha256": "839a2f03c080d0a90748f5bbd565aaaa80b1f3e49dd4578a931db3511d241852"
+      "sha256": "2dc3ab248ec7e8e3e2cd68e1214a815a020f6a0559a2e9617cc26e67136940da"
     },
     {
       "path": "web/app.js",
@@ -301,5 +316,6 @@
       "sha256": "ee26173870e610780e3f8fb14b05802d1cdf6614566838412198a27ef27c594f"
     }
   ],
-  "web_verification": "web-verification.json"
+  "web_verification": "web-verification.json",
+  "deployment_verification": "deployment-verification.json"
 }

@@ -2,6 +2,8 @@
 
 > 将核心场景卡、创作规则与审核方法提取成提示词。复制指令、提供照片和创作目标即可，无需安装原项目。
 
+[在线网页](https://yydshly.github.io/1022_codex_project/005-scene-card-studio/) · [站点总导航](https://yydshly.github.io/1022_codex_project/) · [部署验证](deployment-verification.json)
+
 | 信息 | 内容 |
 | --- | --- |
 | 上游与作者 | [swping999/scene-card-studio](https://github.com/swping999/scene-card-studio) |
@@ -37,7 +39,7 @@
 
 页面新增“一张图，读懂这个库”区域，总结能力、图生图原理、四种效果参考、可扩展场景和意义，支持放大与下载；总结图也作为项目导航封面。页面保留精简／完整／返修指令的复制与下载，以及 11 种叙事和 24 种表达的兼容筛选。案例原始记录和译写来源见 [cases.json](cases.json)；每组源图与成片的哈希均已核对原编译记录。
 
-发布资源使用相对路径，先运行 `python projects/005-scene-card-studio/scripts/package_web.py`，再用根 `scripts/build_site.py` 汇总至 `/005-scene-card-studio/`。打包步骤已接入现有 Pages 工作流。本次为本地构建与验证，线上 `demo_url` 待真实发布后填写。
+发布资源使用相对路径，先运行 `python projects/005-scene-card-studio/scripts/package_web.py`，再用根 `scripts/build_site.py` 汇总至 `/005-scene-card-studio/`。打包与副本检查已接入现有 Pages 工作流。2026-10-21 已发布到[正式网页](https://yydshly.github.io/1022_codex_project/005-scene-card-studio/)，内容提交 `224b0fe`，[构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39619790319)；线上 35 个文件（项目资源及总导航）均 HTTP 200 且字节一致，七项摘要、指定引导图与主要交互通过浏览器检查。
 
 [四种效果总览](assets/web-preview-effects-restored.png) · [完整案例桌面预览](assets/web-preview-inputs.png) · [完整案例手机预览](assets/web-preview-inputs-mobile.png) · [网页验证记录](web-verification.json)
 

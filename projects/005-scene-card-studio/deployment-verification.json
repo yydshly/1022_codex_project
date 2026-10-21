@@ -1,0 +1,311 @@
+{
+  "checked_date": "2026-10-21",
+  "status": "passed",
+  "deployment_url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/",
+  "navigation_url": "https://yydshly.github.io/1022_codex_project/",
+  "content_commit": "224b0fee6bb1e7c1c65922fee032231c05733d5c",
+  "workflow_run": {
+    "id": 39619790319,
+    "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39619790319",
+    "build": "success",
+    "deploy": "success"
+  },
+  "http": {
+    "resource_count": 35,
+    "all_http_200": true,
+    "all_bytes_match_staged_release": true,
+    "resources": [
+      {
+        "path": "005-scene-card-studio/app.js",
+        "status": 200,
+        "bytes": 8127,
+        "sha256": "000d99159b3a489096ba8a67453c78ceffe0ff672d3a25e128e0814c2e7f4aa5"
+      },
+      {
+        "path": "005-scene-card-studio/assets/overview.svg",
+        "status": 200,
+        "bytes": 2772,
+        "sha256": "2691f979cc5be55f38d5286be0f0f8a0093eb9ea66804e1607748c9adb9f6568"
+      },
+      {
+        "path": "005-scene-card-studio/assets/understanding-summary-prompt.txt",
+        "status": 200,
+        "bytes": 3627,
+        "sha256": "8f354b958cd00ac91b00cd0b5fec135d0daceba2c2bd870c5019ba16b4d2e1b3"
+      },
+      {
+        "path": "005-scene-card-studio/assets/understanding-summary.png",
+        "status": 200,
+        "bytes": 2479238,
+        "sha256": "b4acc9cda4a0c08f87ec51ac56fb2118f0330bb28dfb5f32d112c6c45f891d58"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/ASSET_LICENSE.md",
+        "status": 200,
+        "bytes": 1969,
+        "sha256": "2329a5041ae09adfd235b279a6ed9ad6c1895ceb98fdf30b1b298f5fe9a1a6d2"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/ink-poetry.png",
+        "status": 200,
+        "bytes": 1794877,
+        "sha256": "3afaa75cf4687aad2bdf367ea9f55f64cded5e51a507cf1dce8bfcaf7829ad94"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/lake-before.png",
+        "status": 200,
+        "bytes": 2394294,
+        "sha256": "d08e37eb81d29a9e03ba9f29b3178c6b71ece104072475b0a2fa9e46c0e479e7"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/lake-threaded.png",
+        "status": 200,
+        "bytes": 3639627,
+        "sha256": "04b9aecf586c7c2d58f9efadaf9367f8d672d547896737d975caf49f36b7a12b"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/records/threaded-landscape/prompt-manifest.json",
+        "status": 200,
+        "bytes": 14011,
+        "sha256": "e62891c50c05898fcc6cec36391fc9c4f51dffb78e1cd4d3a5dd0abe275a01b5"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/records/threaded-landscape/story.json",
+        "status": 200,
+        "bytes": 2344,
+        "sha256": "65751da205a9634ecd13559ec96be23fb12a8048babcf894add9bf2e8ccddc75"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/records/watercolor-chronicle/prompt-manifest.json",
+        "status": 200,
+        "bytes": 13670,
+        "sha256": "b3161a0f0f66f26453d2ad336759dd537ba4fbe9ea9c4d49fddf7bc82d5ed0f3"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/records/watercolor-chronicle/story.json",
+        "status": 200,
+        "bytes": 2023,
+        "sha256": "0d57ebe53c1f04a0e0a4f626cc2eb3fa0699831658dde1086184f80946d137cd"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/selective-relief.png",
+        "status": 200,
+        "bytes": 2785944,
+        "sha256": "8ce79ff05fd4c7204f30ce65aff232c4e489fe39ba47434657df8323e9e8b55d"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/watercolor-before.jpg",
+        "status": 200,
+        "bytes": 219221,
+        "sha256": "ba5cda120a8727c638ed4f20b3373dedcce36cb79e37c9e1382b3605b3613d27"
+      },
+      {
+        "path": "005-scene-card-studio/assets/upstream/watercolor.jpg",
+        "status": 200,
+        "bytes": 444471,
+        "sha256": "dec6e0d37d28779c9f63ca560e95ee6b91ab9892f8e09c6cb80d7eaafa3472a3"
+      },
+      {
+        "path": "005-scene-card-studio/case-prompts/threaded-landscape.txt",
+        "status": 200,
+        "bytes": 4237,
+        "sha256": "a1e184e5533fdbb7c2604402f06dd1d7677b7d941bac810c8c32c6ffcc1fb1da"
+      },
+      {
+        "path": "005-scene-card-studio/case-prompts/watercolor-chronicle.txt",
+        "status": 200,
+        "bytes": 4042,
+        "sha256": "7a5b6f715c6243790df5fc1110d22081ee16d6d878d0ca88b7e006953c835a5d"
+      },
+      {
+        "path": "005-scene-card-studio/cases.json",
+        "status": 200,
+        "bytes": 7019,
+        "sha256": "5ad4b0ea19d5a79d582bd152d6b73ccda6bd27f6039bdb321c728ff2830f9d17"
+      },
+      {
+        "path": "005-scene-card-studio/data.js",
+        "status": 200,
+        "bytes": 32781,
+        "sha256": "7992e49ecb8176e7878d5a253514c56fddb0861f88f3ed6d80713541741fb724"
+      },
+      {
+        "path": "005-scene-card-studio/docs/LICENSE.scene-card-studio.txt",
+        "status": 200,
+        "bytes": 10273,
+        "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68"
+      },
+      {
+        "path": "005-scene-card-studio/docs/NOTICE.md",
+        "status": 200,
+        "bytes": 3427,
+        "sha256": "82e3bb9fe9e2970797d102de740f8ec9ee6f890f3886a3092fb9cfcde8805ddc"
+      },
+      {
+        "path": "005-scene-card-studio/docs/SOURCE.json",
+        "status": 200,
+        "bytes": 6137,
+        "sha256": "65193f549ca953538c66a852d81e0b9cf0e21a933719242550bd7007e317aeec"
+      },
+      {
+        "path": "005-scene-card-studio/index.html",
+        "status": 200,
+        "bytes": 23444,
+        "sha256": "f300bc0af623dd747e3aeb536f348416a6dde3a7aa9c8f905604dc7ca247b916"
+      },
+      {
+        "path": "005-scene-card-studio/media.json",
+        "status": 200,
+        "bytes": 3170,
+        "sha256": "5606fd19050926ffe6cee3f0183df92562a4b6da5fd18bcc949f7959da1a5b74"
+      },
+      {
+        "path": "005-scene-card-studio/prompts/00-quick-use.zh-CN.txt",
+        "status": 200,
+        "bytes": 1685,
+        "sha256": "f9a63ecf08d4571aad7878e659c5d04c4db2a3d0925788d095449d0fe6e03f86"
+      },
+      {
+        "path": "005-scene-card-studio/prompts/01-direct-use.zh-CN.txt",
+        "status": 200,
+        "bytes": 6802,
+        "sha256": "89b435809186b9860f8e2f694f5562223874e1ae105e077ba9ad8cbc5b14bd04"
+      },
+      {
+        "path": "005-scene-card-studio/prompts/02-request-template.zh-CN.txt",
+        "status": 200,
+        "bytes": 814,
+        "sha256": "393e4ed01a4427774c371542e049182a0d05a11d519e2a6b7854541ab72c490d"
+      },
+      {
+        "path": "005-scene-card-studio/prompts/03-creative-rules.zh-CN.md",
+        "status": 200,
+        "bytes": 8259,
+        "sha256": "d7fd1b5e40cecf98de995af07bcb16a60320b13528fd228d73ea586837b75029"
+      },
+      {
+        "path": "005-scene-card-studio/prompts/04-review-and-retry.zh-CN.txt",
+        "status": 200,
+        "bytes": 2081,
+        "sha256": "37e7906e7af754c86cbf14fe45dd27c13d969a2ea3aa7e60245c74b91f82471a"
+      },
+      {
+        "path": "005-scene-card-studio/prompts/05-image-prompt-template.zh-CN.txt",
+        "status": 200,
+        "bytes": 2032,
+        "sha256": "ae906b3509d6354c61458534c7440852c147f72607a7e31bb86e13269ce830ab"
+      },
+      {
+        "path": "005-scene-card-studio/rules/compiled-templates.json",
+        "status": 200,
+        "bytes": 1436495,
+        "sha256": "e8d41b7fb64fd2223785d12c3af1343446c160483952413de290403125f66a62"
+      },
+      {
+        "path": "005-scene-card-studio/rules/upstream-rules.json",
+        "status": 200,
+        "bytes": 132278,
+        "sha256": "169d8c4e6188087b04dfbcd65e85502778b7a6f5652adc135a5f7211e71c3ede"
+      },
+      {
+        "path": "005-scene-card-studio/study-guide.json",
+        "status": 200,
+        "bytes": 3755,
+        "sha256": "fed023dcf9175f00a9ea294d66990333abde5e758d89ca3561f09a2cd2e38d5f"
+      },
+      {
+        "path": "005-scene-card-studio/style.css",
+        "status": 200,
+        "bytes": 26634,
+        "sha256": "ee26173870e610780e3f8fb14b05802d1cdf6614566838412198a27ef27c594f"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 9110,
+        "sha256": "deedc9449c500613380b7482ddb427514e0dc2c3ca2d23996f4e447f230fe74d"
+      }
+    ]
+  },
+  "guide_image": {
+    "path": "assets/understanding-summary.png",
+    "sha256": "b4acc9cda4a0c08f87ec51ac56fb2118f0330bb28dfb5f32d112c6c45f891d58"
+  },
+  "scope": "Project 005 and its navigation entry; no online model service or new source-photo editing experiment.",
+  "browser": {
+    "checked_date": "2026-10-21",
+    "url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/",
+    "summary": [
+      "能力",
+      "输入",
+      "如何处理",
+      "输出",
+      "使用场景",
+      "可扩展方向",
+      "意义"
+    ],
+    "responsive": [
+      {
+        "brokenImages": [],
+        "fourEffectsVisible": true,
+        "guide": true,
+        "noHorizontalOverflow": true,
+        "width": 1280
+      },
+      {
+        "brokenImages": [],
+        "fourEffectsVisible": true,
+        "noHorizontalOverflow": true,
+        "summaryRows": 7,
+        "width": 375
+      }
+    ],
+    "cases": [
+      {
+        "after": "./assets/upstream/watercolor.jpg",
+        "before": "./assets/upstream/watercolor-before.jpg",
+        "promptLength": 3983,
+        "selected": "watercolor-chronicle"
+      },
+      {
+        "after": "./assets/upstream/lake-threaded.png",
+        "before": "./assets/upstream/lake-before.png",
+        "promptLength": 4180,
+        "selected": "threaded-landscape"
+      }
+    ],
+    "prompts": [
+      {
+        "selected": "full",
+        "textLength": 2490
+      },
+      {
+        "copyUi": "已复制，可以粘贴到你的模型对话。",
+        "download": "./prompts/00-quick-use.zh-CN.txt",
+        "selected": "quick",
+        "textLength": 649
+      }
+    ],
+    "imageDialog": {
+      "opens": true,
+      "escapeCloses": true
+    },
+    "screenshots": [
+      "assets/deployment-preview.png",
+      "assets/deployment-preview-mobile.png"
+    ],
+    "ruleSelection": {
+      "profileCount": 15,
+      "ruleShown": true,
+      "system": "travel-journal"
+    },
+    "navigation": {
+      "found": true,
+      "guideImage": "./005-scene-card-studio/assets/understanding-summary.png",
+      "summary": "照片二次创作工作流：原图与表达目标输入，整理场景卡和提示词，交外部模型改图、对照返修，输出成片与记录；适合相册、内容创作和多图统一，可扩展风格模板、模型接入与团队流程，让要求可复用、结果可检查"
+    },
+    "consoleWarningsAndErrors": [],
+    "clipboardReadback": "not performed; success UI observed",
+    "nativeDownloadSave": "not retested; HTTP target bytes verified"
+  }
+}

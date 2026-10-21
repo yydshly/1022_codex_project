@@ -29,4 +29,6 @@
 
 `web-preview-understanding.png` 和 `web-preview-understanding-mobile.png` 为理解总结图接入网页后的实际浏览器截图，分别检查桌面与手机显示；不属于额外的图像生成请求。
 
+`deployment-preview.png` 和 `deployment-preview-mobile.png` 为 2026-10-21 从正式 GitHub Pages 网页采集的七项摘要桌面与手机截图，具体网址与检查结果见 [部署记录](../deployment-verification.json)。
+
 `web-preview.png` 为本地网页桌面截图，`web-preview-mobile.png` 为 375 像素视口效果区截图；由浏览器实际渲染采集，包含上述有来源的图片及本研究编写的页面。它们是网页 QA 记录，不是本次重新生图的结果。
