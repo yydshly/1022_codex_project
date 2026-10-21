@@ -2,6 +2,8 @@
 
 > 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页。
 
+**[打开在线图解与 41 种特效展示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)** · [演示总导航](https://yydshly.github.io/1022_codex_project/)
+
 [完整 41 项能力与参数](CAPABILITIES.md) · [原生 SwiftUI 展示](native/README.md) · [验证结果](verification.json) · [研究笔记](notes.md)
 
 ## 先理解它能做什么
@@ -28,7 +30,7 @@
 
 [下载 PNG](web/assets/effect-atlas.png) · [可编辑 SVG](web/assets/effect-atlas.svg)。使用相同素材与固定时间、参数；网页中的 8 个效果模块可继续调参。来源和截图边界见 [素材说明](assets/README.md)。
 
-**离线体验：[下载后打开完整交互展示](web/standalone.html)**。支持 WebGL 2 的浏览器即可运行，无需安装前端依赖。GitHub 文件页显示 HTML 源码，在线入口在 Pages 发布验证后补充。
+**离线体验：[下载后打开完整交互展示](web/standalone.html)**。支持 WebGL 2 的浏览器即可运行，无需安装前端依赖。GitHub 文件页显示 HTML 源码；直接体验请使用上方在线入口。
 
 ## 来源与研究范围
 
@@ -42,7 +44,7 @@
 | 当前阶段 | 全量能力展示与源码核对；原生设备验证待完成 |
 | 原生平台 | iOS 17+、macOS 14+、tvOS 17+、visionOS 1+；Xcode 15+ |
 | 本次验证环境 | Windows、Python 3.10.11、Playwright Chromium、ANGLE SwiftShader 软件 WebGL 2 |
-| 在线发布 | 尚未部署；登记表 `demo_url` 保持为空 |
+| 在线发布 | [GitHub Pages](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)，2026-10-21 已验证；[部署检查记录](deployment-verification.json) |
 
 原始 Metal、Swift 修饰器、参数表与包配置纳入 [`upstream/`](upstream/)；[来源与文件校验值](upstream/SOURCE.json)固定其研究版本。未引入第三方前端运行库。
 
@@ -88,6 +90,10 @@
 *图集采用明确的“展示预设”，部分参数不同于上游默认值，以便观察效果；实验区可一键恢复上游默认值。*
 
 ## 运行
+
+### 在线体验
+
+打开 [正式网页](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)。顶部是五项摘要与两张引导图，往下可体验全部特效、参数、素材、触摸交互和 PNG 导出。网页部署在仓库的编号子路径，更新 `main` 后由 GitHub Actions 自动构建发布，步骤见 [部署文档](../../docs/deployment.md)。
 
 ### 最快：离线文件
 

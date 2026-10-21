@@ -9,7 +9,7 @@
 | 总导航 | https://yydshly.github.io/1022_codex_project/ |
 | 001 · SwiftUIShaders | https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/ |
 
-首次发布正在执行；验证线上入口后再登记项目的 `demo_url`。
+2026-10-21 已完成首次发布。构建与部署任务成功，两个入口及运行资源返回 HTTP 200；两张引导图的线上内容与本地 SHA-256 一致。已在浏览器检查 41 项效果入口、完整图集、8 个真实效果模块与摘要内容。详见 [部署检查记录](../projects/001-swiftui-shaders/deployment-verification.json)。
 
 总导航展示项目能力摘要、研究入口及两张生成的引导图。项目页包含能力、原理、效果、适用场景与扩展方向，以及完整的 41 种实时特效实验。
 

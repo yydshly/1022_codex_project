@@ -49,5 +49,68 @@
       "preview_error": ""
     }
   },
-  "scope": "Browser WebGL preview verified; native Xcode build, Metal output and physical-device performance remain unverified."
+  "scope": "Browser WebGL preview verified; native Xcode build, Metal output and physical-device performance remain unverified.",
+  "online": {
+    "base_url": "https://yydshly.github.io/1022_codex_project/",
+    "project_url": "https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/",
+    "workflow_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39563159137",
+    "conclusion": "success",
+    "resources": [
+      {
+        "path": "/",
+        "status": 200,
+        "bytes": 3715
+      },
+      {
+        "path": "001-swiftui-shaders/",
+        "status": 200,
+        "bytes": 17790
+      },
+      {
+        "path": "001-swiftui-shaders/style.css",
+        "status": 200,
+        "bytes": 26960
+      },
+      {
+        "path": "001-swiftui-shaders/app.js",
+        "status": 200,
+        "bytes": 23456
+      },
+      {
+        "path": "001-swiftui-shaders/renderer.js",
+        "status": 200,
+        "bytes": 4385
+      },
+      {
+        "path": "001-swiftui-shaders/shaders.json",
+        "status": 200,
+        "bytes": 282603
+      },
+      {
+        "path": "001-swiftui-shaders/assets/understanding-overview.png",
+        "status": 200,
+        "bytes": 1338121,
+        "matches_local_sha256": true
+      },
+      {
+        "path": "001-swiftui-shaders/assets/effect-atlas.png",
+        "status": 200,
+        "bytes": 3154704,
+        "matches_local_sha256": true
+      },
+      {
+        "path": "001-swiftui-shaders/LICENSE.upstream.txt",
+        "status": 200,
+        "bytes": 1069
+      }
+    ],
+    "browser": {
+      "summary_topics": 5,
+      "both_guide_images_loaded": true,
+      "effect_choices": 41,
+      "effect_cards": 41,
+      "representative_modules": 8,
+      "preview_error": ""
+    }
+  }
 }

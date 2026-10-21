@@ -19,7 +19,7 @@
 
 | 编号 | 项目 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- |
-| 001 | [SwiftUIShaders](projects/001-swiftui-shaders/README.md) | 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页 | 研究中 | — |
+| 001 | [SwiftUIShaders](projects/001-swiftui-shaders/README.md) | 为 SwiftUI 图片、文字和卡片提供 41 种 GPU 实时特效；通过 Metal 采样与颜色变换实现镭射、波纹、折射等效果，适合封面、卡片与展示页 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览
@@ -35,7 +35,7 @@
 
 > 能力全景图：SwiftUI 视图与参数输入 → GPU 逐像素采样与变换 → 实时视图输出，并说明效果、适用场景和扩展方向。
 
-[研究详情](projects/001-swiftui-shaders/README.md) · [原始仓库](https://github.com/krispuckett/SwiftUIShaders)
+[研究详情](projects/001-swiftui-shaders/README.md) · [原始仓库](https://github.com/krispuckett/SwiftUIShaders) · [在线演示](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)
 
 标签：SwiftUI / Metal / WebGL 2 / 交互特效
 <!-- PROJECT_CARDS:END -->
@@ -86,7 +86,7 @@ python scripts/project_catalog.py check
 
 按需为子项目增加 `web/` 目录，各自选择技术栈和构建方式。GitHub Pages 部署时，统一汇总到根目录下的 `_site/`，每个演示使用自己的编号路径，例如 `/1022_codex_project/001-project-slug/`。
 
-当前已提供 [001 · SwiftUIShaders 的 41 种特效本地展示](projects/001-swiftui-shaders/README.md)，**尚未发布演示站点**。多项目部署方式、路径设置和可复用工作流见 [Web 部署指南](docs/deployment.md)。
+已发布 [演示总导航](https://yydshly.github.io/1022_codex_project/) 和 [001 · SwiftUIShaders 图解与 41 种特效](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)。项目页先用两张引导图说明能力、原理、效果、场景与扩展方向，再提供完整交互实验。构建与自动部署方式见 [Web 部署指南](docs/deployment.md)。
 
 ## 来源与许可
 
