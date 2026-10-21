@@ -1,0 +1,170 @@
+{
+  "checked_at": "2026-10-21T21:07:25.619110+08:00",
+  "content_commit": "863c9e16340c9ec895f8c2586bfc9baf610aa33f",
+  "base_url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/",
+  "comparison": "HTTP response bytes compared with git blob bytes of the committed web files, excluding local newline conversions.",
+  "files": [
+    {
+      "path": "app.js",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/app.js",
+      "status": 200,
+      "bytes": 17514,
+      "sha256": "75e6a60de91fd38a5ceae55360952c52cd21eee087fe3326456d875e3f2509cd",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/cover.svg",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/cover.svg",
+      "status": 200,
+      "bytes": 3148,
+      "sha256": "fe5c3e797db3c870daf89f63162e0ae9ca01ad3a15d13def8f836f17757b74c2",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/lint-results.json",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/lint-results.json",
+      "status": 200,
+      "bytes": 3656,
+      "sha256": "4ea31ba1c24ec857922ef7a21f2a4fcf08af6f290ca8f1252156a8b481f17abd",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/oil-tone-writing-prompt.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/oil-tone-writing-prompt.txt",
+      "status": 200,
+      "bytes": 9206,
+      "sha256": "b88955db635d5fd82a3576cc7a8a5b2652a93b6e42f9b3b1f61007b0bce4184c",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/source/LICENSE",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/source/LICENSE",
+      "status": 200,
+      "bytes": 1064,
+      "sha256": "d44a3ca218007a85d3be41a0b76553d746e42336c7a63c6c6687d2619199c3c4",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/source/SKILL.md",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/source/SKILL.md",
+      "status": 200,
+      "bytes": 5732,
+      "sha256": "4c41226e5abe9e50035ca2e4edb0615f41d1d9bcac1de2d166bb3265837ca059",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/source/manifest.json",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/source/manifest.json",
+      "status": 200,
+      "bytes": 1535,
+      "sha256": "d125a0fd92440f40533993662a57f19c99ea3ee99fec0ea6307ba9e4900c87c7",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/source/openai.yaml",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/source/openai.yaml",
+      "status": 200,
+      "bytes": 359,
+      "sha256": "bfa517852281b0de7d999938a99137fbd07d4517f558395919cdb8dc5d9e372b",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/source/tone_lint.py",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/source/tone_lint.py",
+      "status": 200,
+      "bytes": 6849,
+      "sha256": "6dd67656a1475e5c5ebe3caf8ce4f135d22309a222ec19a91bb438f0ff483bda",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "assets/understanding-summary.png",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/assets/understanding-summary.png",
+      "status": 200,
+      "bytes": 1787805,
+      "sha256": "6c83d315d4a49f5c0b9652bb8bc15c9d2a5530c0ef50e2f79bf25c4a50e7f8e1",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "data.js",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/data.js",
+      "status": 200,
+      "bytes": 61493,
+      "sha256": "33bda87b3ba845d30c3e46506dd2a4e971df90e671e34a0f5f8183a3a46ffc57",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/",
+      "status": 200,
+      "bytes": 18087,
+      "sha256": "f66ee9428c768fa1b7fb27e54273efbf489889c4387cae675b8510f3626205e1",
+      "matches_committed_bytes": true
+    },
+    {
+      "path": "style.css",
+      "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/style.css",
+      "status": 200,
+      "bytes": 35497,
+      "sha256": "7dd60dd6d21730213cb53189bfaa304415a2934cfc4f1ab9efd99ad4c153d12b",
+      "matches_committed_bytes": true
+    }
+  ],
+  "navigation": {
+    "url": "https://yydshly.github.io/1022_codex_project/",
+    "status": 200,
+    "has_project_link": true,
+    "has_chosen_cover": true,
+    "has_clear_summary": true
+  },
+  "workflow": {
+    "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39605092607",
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-10-21T13:06:56Z"
+  },
+  "browser": {
+    "checked_at": "2026-10-21T13:09:27.003Z",
+    "url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/",
+    "stages": [
+      "01 / 触发与加载",
+      "02 / 确定编辑边界",
+      "03 / 逐句与逐段改写",
+      "04 / 按清单复核",
+      "05 / 可选规则扫描",
+      "06 / 结合语境交付"
+    ],
+    "rule_groups": [
+      "显示 4 条 / 共 23 条 · 展开条目查看原文与示例",
+      "显示 6 条 / 共 23 条 · 展开条目查看原文与示例",
+      "显示 7 条 / 共 23 条 · 展开条目查看原文与示例",
+      "显示 2 条 / 共 23 条 · 展开条目查看原文与示例",
+      "显示 4 条 / 共 23 条 · 展开条目查看原文与示例",
+      "显示 23 条 / 共 23 条 · 展开条目查看原文与示例"
+    ],
+    "search_result": "显示 4 条 / 共 23 条 · 展开条目查看原文与示例",
+    "empty_state": true,
+    "annotations_clicked": 21,
+    "clipboard_characters": 4100,
+    "clipboard_exact": true,
+    "download_exact": true,
+    "mobile": {
+      "meaning": "把一句文风要求，沉淀成自己的编辑标准。",
+      "scrollWidth": 360,
+      "summaryImage": {
+        "height": 1024,
+        "width": 1536
+      },
+      "width": 360
+    },
+    "desktop": {
+      "scrollWidth": 1265,
+      "width": 1265
+    },
+    "console": [],
+    "screenshot": "assets/deployed-preview.png"
+  },
+  "limits": [
+    "Fictional teaching-case facts, not real product performance.",
+    "No model API experiment, independent reader evaluation, or universal quality guarantee."
+  ]
+}

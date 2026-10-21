@@ -98,4 +98,4 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 
 已生成的 web/data.js 与发布资源随项目提交；根汇总器直接复制到 `/006-oil-tone/`，现有 Actions 无需新增依赖。内容或上游快照变更后执行 `python projects/006-oil-tone/scripts/package_web.py`；加 `--check` 核对生成结果、快照哈希和脚本输出。源码与 MIT 许可经 web/assets/source/ 发布，不复制整个研究目录。
 
-线上地址与部署记录在完成真实验证后登记，检查范围见项目 [verification.md](../projects/006-oil-tone/verification.md)。
+2026-10-21 已发布至 [006 · oil-tone](https://yydshly.github.io/1022_codex_project/006-oil-tone/)。内容提交 `863c9e1`，[Actions 构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39605092607)；13 个发布文件 HTTP 200，响应与提交字节一致，指定总结图哈希一致。线上流程、规则搜索、21 处批注、提示词复制与下载、桌面及手机布局已检查。记录见项目 [部署验证](../projects/006-oil-tone/deployment-verification.json) 与 [verification.md](../projects/006-oil-tone/verification.md)。

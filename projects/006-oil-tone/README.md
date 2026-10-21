@@ -9,8 +9,8 @@
 | 固定版本 | [39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6](https://github.com/oil-oil/oil-tone/tree/39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6)，2026-09-23 |
 | 上游许可 | MIT；[原样保留的 LICENSE](upstream/LICENSE) |
 | 研究日期 | 2026-10-21 |
-| 网页 | [能力、规则与完整改稿实验](web/index.html) |
-| 发布状态 | 静态网页；线上地址与部署结果在完成验证后登记 |
+| 网页 | [在线阅读：能力、规则与完整改稿实验](https://yydshly.github.io/1022_codex_project/006-oil-tone/) · [本地入口](web/index.html) |
+| 发布状态 | 2026-10-21 已发布至 GitHub Pages；[构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39605092607)，13 个发布文件 HTTP 200 且字节一致 |
 
 ![oil-tone 理解总结：能力、原理、五组约束、场景、意义与边界](assets/understanding-summary.png)
 
@@ -84,5 +84,6 @@ web/                         独立静态网站及发布资源
 
 - [研究笔记](notes.md)
 - [验证记录](verification.md)
+- [线上部署与交互验证](deployment-verification.json)
 - [上游快照清单与哈希](upstream/manifest.json)
 - [返回项目总索引](../../README.md)
