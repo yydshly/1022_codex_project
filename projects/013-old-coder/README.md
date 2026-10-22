@@ -10,7 +10,7 @@
 
 源库以自然语言规则与模板约定 Agent 的工作；测试工具产生执行结果，验收者审查规格与证据。它不改变模型权重，也不能保证规格完整或绝无未知缺陷。
 
-[打开研究网页](web/index.html) · [一图读懂](web/index.html#summary) · [详细分析](analysis.md) · [验证范围](verification.md) · [来源清单](SOURCE.json) · [上游仓库](https://github.com/AmazingAng/old-coder)
+[在线研究网页](https://yydshly.github.io/1022_codex_project/013-old-coder/) · [一图读懂](https://yydshly.github.io/1022_codex_project/013-old-coder/#summary) · [本地网页](web/index.html) · [详细分析](analysis.md) · [验证范围](verification.md) · [来源清单](SOURCE.json) · [上游仓库](https://github.com/AmazingAng/old-coder)
 
 ![Old Coder 能力总览：能力、六阶段原理、重复通知扣库存案例、适用任务与价值边界](assets/old-coder-overview.png)
 
@@ -91,3 +91,5 @@ python projects/013-old-coder/scripts/reproduce_upstream.py
 `web/` 是完整发布产物，根 `scripts/build_site.py` 自动汇总到 `/013-old-coder/`。`.venv`、研究快照与缓存不进入发布产物。Pages 工作流运行教学引擎、图像身份与静态来源检查后汇总发布；登记表 `demo_url` 仅在公开部署验收通过后填写。
 
 CI 使用 `node projects/013-old-coder/scripts/verify_labs.cjs --check` 执行检查而不改写历史结果，再运行 `build_overview.py --check` 与 `verify_web.py`；无需安装本机绘图字体或上游 Python 示例依赖。引导图统一使用我们绘制的 `old-coder-overview.png`，首屏、图解阅读区与总导航封面一致。
+
+2026-10-22 已发布：内容提交 [`d727862`](https://github.com/yydshly/1022_codex_project/commit/d7278623e192ae6148eaf59961c9132c0746d052) 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39791306660)成功，16 个线上发布文件均 HTTP 200 且与提交字节一致，总导航完整摘要与指定引导图已核对。线上四实验缺陷/修复与变异检查、原文阅读、图片放大与下载及 375/768/1440 宽度检查通过。记录：[部署身份校验](deployment-verification.json) · [线上交互校验](publication-browser-verification.json) · [真实公开网页截图](assets/publication-preview.jpg)。

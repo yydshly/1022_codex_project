@@ -35,3 +35,14 @@
 检查覆盖能力、场景、六阶段原理、价值与库存 10 / 重复 10 次 / 缺陷 0 / 修复 9 的数字；修复明确为原子提交模型。PNG 及 SVG 与发布副本的 SHA-256 一致。验证命令：`python projects/013-old-coder/scripts/build_overview.py --check`。
 
 浏览器验证图片完整加载、1800 × 2600 原尺寸、放大对话框、Esc 关闭、PNG 下载及下载内容哈希，375 / 1440 宽度无页面横向溢出。结果见 `results/overview-browser-verification.json`。此前全页交互报告保留其当时源码哈希，不作为新增图解页面状态的完整重测。
+
+## 正式网页发布验收
+
+2026-10-22 内容提交 `d7278623e192ae6148eaf59961c9132c0746d052` 的 Pages 工作流 [39791306660](https://github.com/yydshly/1022_codex_project/actions/runs/39791306660)构建和部署成功，目录校验工作流同时通过。公开入口为 <https://yydshly.github.io/1022_codex_project/013-old-coder/>。
+
+- 16 个提交内发布文件均 HTTP 200，SHA-256 与该内容提交逐字节一致；总导航的完整能力/效果/沉淀/扩展摘要与 PNG 引导图已核对。
+- 线上四个场景的缺陷版会失败，修复版均 6/6；手选变异发现数依次 3/3、3/3、2/2、3/3。
+- 31 份原文加载；图解对话框开/关、Esc 关闭、PNG 下载通过，下载哈希为 `5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60`。
+- 375 / 768 / 1440 宽度无页面横向溢出；本次浏览器控制台无警告或错误。
+
+证据：[deployment-verification.json](deployment-verification.json)、[publication-browser-verification.json](publication-browser-verification.json)。身份检查可用 `scripts/verify_deployment.py --commit <精确内容提交> --run-url <Actions URL>` 复跑。网页发布验收不扩大为真实业务服务、原版完整 gauntlet 或独立新上下文验证结论。

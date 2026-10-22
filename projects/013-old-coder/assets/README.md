@@ -5,6 +5,7 @@
 - 上述四个文件以同名发布副本保存在 `web/assets/`；网页提供放大、原图、PNG 与 SVG 下载。字体从本机加载渲染，未将系统字体文件分发到仓库。
 
 - `cover.jpg`：2026-10-22 在桌面响应式检查时，用内置浏览器截取本研究网页，视口 1440 × 900。库存数字是教学示意，不是 Skill 效果基准。发布副本 `web/assets/cover.jpg`。
+- `publication-preview.jpg`：正式公开网页的真实浏览器截图，来源为本次内容提交 `d727862` 的 GitHub Pages 发布。用于记录公开首屏的摘要与指定引导图；主封面仍为 `old-coder-overview.png`。
 - `web/assets/favicon.svg`：本研究原创 SVG 文字标识。
 - `web/assets/sources.json`：31 份上游文件纯文本，固定到 `a0eb529d393a1cb3ccc564e32b2104e7e75c7a29`，每项附固定版本链接。
 - `web/assets/LICENSE.upstream.txt`：MIT，© 2026 amazingang，上游许可原文。

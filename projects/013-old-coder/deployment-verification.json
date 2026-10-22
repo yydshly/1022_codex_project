@@ -1,0 +1,161 @@
+{
+  "verifiedAt": "2026-10-22T21:58:32.245278+08:00",
+  "contentCommit": "d7278623e192ae6148eaf59961c9132c0746d052",
+  "actionsRun": "https://github.com/yydshly/1022_codex_project/actions/runs/39791306660",
+  "publicURL": "https://yydshly.github.io/1022_codex_project/013-old-coder/",
+  "status": "passed",
+  "files": [
+    {
+      "path": "app.js",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/app.js?v=d7278623e192",
+      "http": 200,
+      "bytes": 22706,
+      "sha256": "21069d8198a4f3a7b0c0b69721c3498e97c7521625ed4409e8785f196d5b58ab",
+      "expectedSHA256": "21069d8198a4f3a7b0c0b69721c3498e97c7521625ed4409e8785f196d5b58ab",
+      "identical": true
+    },
+    {
+      "path": "assets/LICENSE.upstream.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/LICENSE.upstream.txt?v=d7278623e192",
+      "http": 200,
+      "bytes": 1088,
+      "sha256": "24231bd5b6c208e7a82b2b1fabb68f661d7cffa335b8df714666dfbd98b0937b",
+      "expectedSHA256": "24231bd5b6c208e7a82b2b1fabb68f661d7cffa335b8df714666dfbd98b0937b",
+      "identical": true
+    },
+    {
+      "path": "assets/cover.jpg",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/cover.jpg?v=d7278623e192",
+      "http": 200,
+      "bytes": 84710,
+      "sha256": "64dfdf5baeb2e6f05e9832fec285b4bf40bb67c20b3a742dd4f3e0710b0647b0",
+      "expectedSHA256": "64dfdf5baeb2e6f05e9832fec285b4bf40bb67c20b3a742dd4f3e0710b0647b0",
+      "identical": true
+    },
+    {
+      "path": "assets/favicon.svg",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/favicon.svg?v=d7278623e192",
+      "http": 200,
+      "bytes": 276,
+      "sha256": "2ce8c9bf0dcb0b03d78e553ab82c5d008c6aa64ec0a531c8d67682b59408b8f7",
+      "expectedSHA256": "2ce8c9bf0dcb0b03d78e553ab82c5d008c6aa64ec0a531c8d67682b59408b8f7",
+      "identical": true
+    },
+    {
+      "path": "assets/lab-verification.json",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/lab-verification.json?v=d7278623e192",
+      "http": 200,
+      "bytes": 39762,
+      "sha256": "37f75a5a652d22bb720bf27ea8c5def6e3bfe34b9667dc530ae65f95b1dabf5c",
+      "expectedSHA256": "37f75a5a652d22bb720bf27ea8c5def6e3bfe34b9667dc530ae65f95b1dabf5c",
+      "identical": true
+    },
+    {
+      "path": "assets/old-coder-overview.png",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/old-coder-overview.png?v=d7278623e192",
+      "http": 200,
+      "bytes": 403328,
+      "sha256": "5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60",
+      "expectedSHA256": "5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60",
+      "identical": true
+    },
+    {
+      "path": "assets/old-coder-overview.svg",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/old-coder-overview.svg?v=d7278623e192",
+      "http": 200,
+      "bytes": 21603,
+      "sha256": "a51adae4551503b2518480c7878f0fbb648f84ab99f7d8618dff70c2832b6fce",
+      "expectedSHA256": "a51adae4551503b2518480c7878f0fbb648f84ab99f7d8618dff70c2832b6fce",
+      "identical": true
+    },
+    {
+      "path": "assets/overview-generation.json",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/overview-generation.json?v=d7278623e192",
+      "http": 200,
+      "bytes": 1297,
+      "sha256": "b786a19791135fe256b38ff9939fb3943727898080096bea87e503a8ce946a18",
+      "expectedSHA256": "b786a19791135fe256b38ff9939fb3943727898080096bea87e503a8ce946a18",
+      "identical": true
+    },
+    {
+      "path": "assets/overview-imagegen-prompt.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/overview-imagegen-prompt.txt?v=d7278623e192",
+      "http": 200,
+      "bytes": 4548,
+      "sha256": "a8386bb431058a4cfc3a14af1b78d99303e446c78f35ff141b1ce678e3c48aaf",
+      "expectedSHA256": "a8386bb431058a4cfc3a14af1b78d99303e446c78f35ff141b1ce678e3c48aaf",
+      "identical": true
+    },
+    {
+      "path": "assets/source-manifest.json",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/source-manifest.json?v=d7278623e192",
+      "http": 200,
+      "bytes": 5782,
+      "sha256": "2af57c548f79fd1a79144e59e650c10d682ad577751042e2dd735c231cace745",
+      "expectedSHA256": "2af57c548f79fd1a79144e59e650c10d682ad577751042e2dd735c231cace745",
+      "identical": true
+    },
+    {
+      "path": "assets/sources.json",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/sources.json?v=d7278623e192",
+      "http": 200,
+      "bytes": 225700,
+      "sha256": "3e3d5840ca44823298803a66907d6b91b8931d6e2f6f198540d7a8540ee206ba",
+      "expectedSHA256": "3e3d5840ca44823298803a66907d6b91b8931d6e2f6f198540d7a8540ee206ba",
+      "identical": true
+    },
+    {
+      "path": "assets/upstream-reproduction.json",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/assets/upstream-reproduction.json?v=d7278623e192",
+      "http": 200,
+      "bytes": 3035,
+      "sha256": "9fc867049dd1e2e9834c31e66e2fe4c9b838d935031f3f59b2798ae2ddb9e39a",
+      "expectedSHA256": "9fc867049dd1e2e9834c31e66e2fe4c9b838d935031f3f59b2798ae2ddb9e39a",
+      "identical": true
+    },
+    {
+      "path": "data.js",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/data.js?v=d7278623e192",
+      "http": 200,
+      "bytes": 15775,
+      "sha256": "4932c7649ed039ba2c5372730a59538e7a7e212eb3a1ef956cdec212a914a0cd",
+      "expectedSHA256": "4932c7649ed039ba2c5372730a59538e7a7e212eb3a1ef956cdec212a914a0cd",
+      "identical": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/index.html?v=d7278623e192",
+      "http": 200,
+      "bytes": 22819,
+      "sha256": "0dcac2ff14b395f454d6d2b38cfe98b74a20e2df09b04a10f4f4b8a70bca239f",
+      "expectedSHA256": "0dcac2ff14b395f454d6d2b38cfe98b74a20e2df09b04a10f4f4b8a70bca239f",
+      "identical": true
+    },
+    {
+      "path": "lab-engine.js",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/lab-engine.js?v=d7278623e192",
+      "http": 200,
+      "bytes": 12167,
+      "sha256": "88e5acc03f749836166ee0e2dad41beb87044f8536d6345e85c3a7e3108decee",
+      "expectedSHA256": "88e5acc03f749836166ee0e2dad41beb87044f8536d6345e85c3a7e3108decee",
+      "identical": true
+    },
+    {
+      "path": "style.css",
+      "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/style.css?v=d7278623e192",
+      "http": 200,
+      "bytes": 32790,
+      "sha256": "b3ec6f660fa70a50d9593f6508ecb703abf08cfee404be73d7d9f3651c94edd7",
+      "expectedSHA256": "b3ec6f660fa70a50d9593f6508ecb703abf08cfee404be73d7d9f3651c94edd7",
+      "identical": true
+    }
+  ],
+  "homepage": {
+    "status": 200,
+    "url": "https://yydshly.github.io/1022_codex_project/?v=d7278623e192",
+    "oneProjectCard": true,
+    "fullSummary": true,
+    "specifiedGuide": true
+  },
+  "scope": "Public HTTP content identity and project index only. Browser interactions recorded separately. No production business services were tested."
+}

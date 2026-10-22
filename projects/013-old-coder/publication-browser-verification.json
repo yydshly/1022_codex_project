@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-22",
+  "url": "https://yydshly.github.io/1022_codex_project/013-old-coder/",
+  "contentCommit": "d7278623e192ae6148eaf59961c9132c0746d052",
+  "actionsRun": "https://github.com/yydshly/1022_codex_project/actions/runs/39791306660",
+  "summarySections": [
+    "能力与效果",
+    "可沉淀技术",
+    "后续扩展场景"
+  ],
+  "guide": {
+    "path": "assets/old-coder-overview.png",
+    "width": 1800,
+    "height": 2600,
+    "downloadSHA256": "5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60"
+  },
+  "scenarios": [
+    {
+      "scenario": "inventory",
+      "defective": "3/6 通过 · 3 项失败",
+      "repaired": "6/6 通过 · 当前检查全绿",
+      "mutation": "故意改坏，测试发现了 3/3 个"
+    },
+    {
+      "scenario": "limiter",
+      "defective": "3/6 通过 · 3 项失败",
+      "repaired": "6/6 通过 · 当前检查全绿",
+      "mutation": "故意改坏，测试发现了 3/3 个"
+    },
+    {
+      "scenario": "permission",
+      "defective": "2/6 通过 · 4 项失败",
+      "repaired": "6/6 通过 · 当前检查全绿",
+      "mutation": "故意改坏，测试发现了 2/2 个"
+    },
+    {
+      "scenario": "api",
+      "defective": "3/6 通过 · 3 项失败",
+      "repaired": "6/6 通过 · 当前检查全绿",
+      "mutation": "故意改坏，测试发现了 3/3 个"
+    }
+  ],
+  "sourceReaderFiles": 31,
+  "posterDialog": {
+    "opened": true,
+    "escapeClosed": true
+  },
+  "responsive": [
+    {
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "consoleWarningsOrErrors": [],
+  "limits": [
+    "Teaching models, no live payment/database/auth service.",
+    "Original complete POSIX gauntlet and fresh-context verification were not run.",
+    "This publication test checks website operation, not causal effectiveness of the Skill."
+  ]
+}

@@ -171,6 +171,6 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 `web/` 已含全部相对路径资源、31 份上游原文阅读副本、MIT 许可与结果 JSON，由现有 `scripts/build_site.py` 直接汇总到 `/013-old-coder/`，无需增加根构建步骤。源码哈希相关文件关闭换行归一化。检查命令：`node projects/013-old-coder/scripts/verify_labs.cjs --check`、`python projects/013-old-coder/scripts/verify_web.py` 和登记表检查。
 
-发布目标为 `https://yydshly.github.io/1022_codex_project/013-old-coder/`；完成公开部署与验收后登记 `demo_url` 和部署记录。原版完整 POSIX gauntlet 和独立复核未执行，具体边界见子项目 `verification.md`。
+2026-10-22 内容提交 `d727862` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39791306660)成功，[013 公开网页](https://yydshly.github.io/1022_codex_project/013-old-coder/)的 16 个发布文件均 HTTP 200 且与提交字节一致；首页的能力效果、技术沉淀、扩展场景摘要与指定引导图已核对。线上四个实验、原文阅读、放大/下载与 375/768/1440 宽度通过，已登记 `demo_url`。原版完整 POSIX gauntlet 和独立复核仍未执行。详见子项目 `deployment-verification.json`、`publication-browser-verification.json` 与 `verification.md`。
 
 013 的首页封面与网页“一图读懂”使用同一份 `old-coder-overview.png`（1800 × 2600），附可编辑 SVG、放大阅读和下载。图解为本研究代码原生绘制，ImageGen 两次网络失败记录另存；库存业务是教学模型。图像及发布副本已经保存到源文件目录，CI 不需要安装绘图依赖；可运行 `python projects/013-old-coder/scripts/build_overview.py --check` 仅校验产物身份。
