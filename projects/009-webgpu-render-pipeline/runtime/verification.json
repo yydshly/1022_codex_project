@@ -1498,7 +1498,6 @@
     "No acceptance of all 89 features, other scenes or independent physical-water lab",
     "No full repository typecheck, physical-mobile GPU or FPS benchmark",
     "Water changes over time; screenshots are response evidence, not static pixel A/B",
-    "No deployment or git commit/push",
     "Concurrent full-scene tabs failed in this environment; single-scene preview recovered successfully"
   ],
   "previous_cornell_stage": {
@@ -2511,5 +2510,6 @@
         "byte_equal": true
       }
     ]
-  }
+  },
+  "publication_record": "deployment-verification.json"
 }

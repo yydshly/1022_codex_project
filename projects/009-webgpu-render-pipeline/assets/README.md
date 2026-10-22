@@ -7,6 +7,7 @@
 | `capability-map.svg` | 准备阶段、逐帧阶段与十类能力的原创研究图解 | 本次按固定源码组织的 SVG，不是效果截图或物理计算结果 |
 | `project-overview.svg` / `project-overview.png` | 一图入口：价值、原理、10 类全部 89 项能力、四场景实测、应用与复用边界 | 原创图解，同一组排版指令生成；嵌入四张本机实测图，只缩放排版，没有 AI 重绘或调色。来源、覆盖 ID 和哈希见 `overview.json`，读图说明见 `OVERVIEW.md` |
 | `overview-entry-desktop.png` / `overview-entry-mobile.png` | 展示页一图入口在桌面和手机宽度下的布局证据 | 本机浏览器截图；图内能力与场景链接、放大、键盘滚动和无横向溢出均另行检查，不是新的 GPU 或手机硬件测试 |
+| `deployed-desktop.png` / `deployed-mobile.png` / `deployed-beach.png` | 正式 GitHub Pages 页面摘要、引导图和真实海滩运行的验收证据 | 浏览器直接访问正式网址后截取，未重绘或调色；太阳与相机的实际回传、来源和哈希见 `deployment-verification.json`，手机宽度截图不代表实体手机 GPU 验收 |
 | `light-transport-explained.svg` | 红墙与白球的直接光、反弹光、采样和缓存复用 | 原创 SVG 教学示意；箭头表示能量关系，非逐光子模拟或上游运行结果 |
 | `rendering-vs-ai.svg` | 三维场景渲染与常见 AI 单图重绘的输入、依据及视角对照 | 原创 SVG 流程示意，没有调用 AI；结构条件的补充依据见原理文档中的 ControlNet 论文 |
 | `study-desktop.png` / `study-mobile.png` | 本次研究展示页的浏览器布局证据 | 本地静态资料页截图，不是上游 WebGPU 画面实测 |

@@ -4,7 +4,7 @@
   "upstream_commit": "ca576b601bf84527102f1768372aa8cd96a3c55a",
   "upstream_execution": "cornell_complete_village_beach_without_van_forest_profiles_passed_with_documented_sampler_guard",
   "upstream_performance": "not_measured",
-  "deployment": "not_requested",
+  "deployment": "verified_github_pages",
   "research": {
     "source_text_files": 334,
     "capability_records": 89,
@@ -66,7 +66,7 @@
       }
     ],
     "numbered_prefix_runtime": "passed_forest_first_frame_and_canopy_controls_sequential_single_tab",
-    "delivery": "One-image overview visible at http://127.0.0.1:8049/?scene=beach#overview; WebGPU rendering remains available on demand",
+    "delivery": "Published value/principle/effect/reuse entry at https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/",
     "previous_numbered_prefix_runtime": "Village-stage concurrent test failed; retained in historical runtime record"
   },
   "screenshots": [
@@ -84,8 +84,7 @@
   "limits": [
     "Only Cornell Box, complete midsee-village, beach van=0 and forest with documented profiles and sampler guard ran",
     "No acceptance of all 89 capabilities or other scenes/labs",
-    "No cross-device FPS/quality benchmark",
-    "No deployment or git commit/push"
+    "No cross-device FPS/quality benchmark"
   ],
   "catalog_check": "passed_9_projects",
   "explanation_update": {
@@ -314,5 +313,14 @@
         "scope": "static files; temporary numbered-prefix server closes after test"
       }
     ]
+  },
+  "previous_publication_status": {
+    "deployment": "not_requested"
+  },
+  "publication": {
+    "url": "https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/",
+    "record": "deployment-verification.json",
+    "status": "passed",
+    "commit": "01510fd157fa358de4ab4790a741bf1a130cad44"
   }
 }

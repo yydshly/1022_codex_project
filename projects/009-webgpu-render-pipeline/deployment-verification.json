@@ -1,0 +1,313 @@
+{
+  "status": "passed",
+  "date": "2026-10-22",
+  "site": "https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/",
+  "release_commit": "01510fd157fa358de4ab4790a741bf1a130cad44",
+  "workflow_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39734149317",
+  "hosting": "GitHub Pages via GitHub Actions",
+  "summary": "浏览器三维光照效果实现：BVH/Surfel 估计间接光，Lightmap/空间探针缓存，实时合成直接光、阴影与环境；可用于游戏、空间漫游、展厅与研究。",
+  "home_and_project_html": "passed; root guide and project value/principle/effects/reuse copy checked",
+  "guide_png_sha256": "f04f4694c1093afd7b66ab383a58ce154ff5714392dd1f7076581fb772bafa24",
+  "guide_png_matches_canonical": true,
+  "guide_svg_matches_canonical_normalized_newlines": true,
+  "runtime_files": 55,
+  "runtime_bytes": 127774374,
+  "runtime_manifest_sha256": "247163ea85d28694061b08cdb9059fd7b4f2e153423de133542308f112e9e73f",
+  "runtime_file_hashes": "all passed against deployed build-info.json",
+  "repositories": {
+    "upstream": {
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline.git",
+      "commit": "ca576b601bf84527102f1768372aa8cd96a3c55a"
+    },
+    "three": {
+      "url": "https://github.com/vibegameengine/three.js.git",
+      "commit": "7d3343686e52f532e97c67440f55b1adb7aba28c"
+    },
+    "fiber": {
+      "url": "https://github.com/vibegameengine/react-three-fiber.git",
+      "commit": "b297b512181dfddbb287f75374223a56ccf1757b"
+    }
+  },
+  "research_archive_entries": 60,
+  "research_archive": "value, overview, capabilities and canonical guide verified",
+  "limits": [
+    "Four documented scene profiles; not acceptance of all 89 capabilities",
+    "No cross-device FPS benchmark",
+    "Existing sampler coverage guard and optional beach van=0 are documented"
+  ],
+  "browser": {
+    "responsive": [
+      {
+        "guide": "assets/project-overview.png",
+        "guideLoaded": true,
+        "scenes": 4,
+        "scrollWidth": 1265,
+        "valueCards": 3,
+        "width": 1280
+      },
+      {
+        "guide": "assets/project-overview.png",
+        "guideLoaded": true,
+        "scenes": 4,
+        "scrollWidth": 360,
+        "valueCards": 3,
+        "width": 375
+      }
+    ],
+    "category": "显示 10 / 89 项能力条目",
+    "runtime": {
+      "initial": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 7507,
+        "renderCalls": 24467,
+        "computeCalls": 5842,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "applied": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -4.7636416907261765,
+        "cameraElevation": 34.2538037747521,
+        "cameraDistance": 7.284229540589727,
+        "camera": [
+          -2,
+          3.4999999999999996,
+          7.500000000000002
+        ],
+        "target": [
+          -1.5,
+          -0.6,
+          1.5
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 7535,
+        "renderCalls": 24747,
+        "computeCalls": 5898,
+        "commandRevision": 2,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "zero": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 0,
+        "cameraAzimuth": -4.7636416907261765,
+        "cameraElevation": 34.2538037747521,
+        "cameraDistance": 7.284229540589727,
+        "camera": [
+          -2,
+          3.4999999999999996,
+          7.500000000000002
+        ],
+        "target": [
+          -1.5,
+          -0.6,
+          1.5
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 7566,
+        "renderCalls": 25057,
+        "computeCalls": 5960,
+        "commandRevision": 3,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "reset": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 7645,
+        "renderCalls": 25847,
+        "computeCalls": 6118,
+        "commandRevision": 4,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      }
+    },
+    "consoleErrors": []
+  },
+  "runtime_online": "beach first frame, sun azimuth/elevation, zero intensity, water detail camera, and reset passed",
+  "screenshots": [
+    {
+      "path": "assets/deployed-desktop.png",
+      "sha256": "0c6ad75ea8c33559d41fe9edbac0e07e9f82790d24bf376f7ee8fabc15d018e9"
+    },
+    {
+      "path": "assets/deployed-mobile.png",
+      "sha256": "1bee3c4b947d89d1143aa226e6c719faafa9908b78f4aa80085321f3a4edfcbb"
+    },
+    {
+      "path": "assets/deployed-beach.png",
+      "sha256": "277499dfccbd6af3055dd6dfd8c37afd755a8d46fb4f72e0e2523dda75f9d80e"
+    }
+  ]
+}

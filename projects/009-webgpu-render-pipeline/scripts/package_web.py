@@ -42,9 +42,12 @@ def main(check: bool) -> dict:
         original = PROJECT / item["path"]
         assert original.is_file() and hashlib.sha256(original.read_bytes()).hexdigest() == item["sha256"], item["path"]
     overview_images = [PROJECT / "assets" / name for name in ("project-overview.png", "overview-entry-desktop.png", "overview-entry-mobile.png")]
+    overview_images += sorted((PROJECT / "assets").glob("deployed-*.png"))
     assets = [PROJECT / item["path"] for item in media] + sorted((PROJECT / "assets").glob("*.svg")) + overview_images + sorted((PROJECT / "assets/runtime").glob("*.png"))
     documents = list(PROJECT.glob("*.md"))
     json_files = [PROJECT / name for name in ("SOURCE.json", "capabilities.json", "scenes.json", "parameters.json", "media.json", "evidence.json", "verification.json", "explain.json", "overview.json")]
+    if (PROJECT / "deployment-verification.json").is_file():
+        json_files.append(PROJECT / "deployment-verification.json")
     copies = [(file, PROJECT / "web" / file.relative_to(PROJECT)) for file in assets]
     copies += [(file, PROJECT / "web/downloads" / file.name) for file in documents + json_files]
     runtime_records = [PROJECT / "runtime" / name for name in ("SOURCES.json", "verification.json", "screenshots.json")]

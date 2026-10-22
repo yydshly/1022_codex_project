@@ -10,6 +10,7 @@
 | 001 · SwiftUIShaders | https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/ |
 | 002 · Todofy | https://yydshly.github.io/1022_codex_project/002-todofy/ |
 | 004 · XXD Panel 106 | https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/ |
+| 009 · WebGPU 光照效果实现与复用 | https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/ |
 
 2026-10-21 已完成首次发布。构建与部署任务成功，两个入口及运行资源返回 HTTP 200；两张引导图的线上内容与本地 SHA-256 一致。已在浏览器检查 41 项效果入口、完整图集、8 个真实效果模块与摘要内容。详见 [部署检查记录](../projects/001-swiftui-shaders/deployment-verification.json)。
 
@@ -135,3 +136,5 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_runtime.py，再运行 package_web.py / verify_structure.py，最后由统一 build_site.py 汇总。源码、Three.js / R3F fork 与 npm 锁定到明确版本；运行依赖、资源与许可说明随静态产物发布。
 
 总览图的 PNG 已随研究文件保存，SVG 与覆盖记录由标准库校验；只有重新栅格化总览图才需要 Pillow 和中文字体。详细配置与范围见 [RUNTIME.md](../projects/009-webgpu-render-pipeline/RUNTIME.md)、[VALUE.md](../projects/009-webgpu-render-pipeline/VALUE.md)。
+
+2026-10-22：009 已正式发布，构建与部署任务通过；总览图、全部运行文件和线上海滩交互已核验。详见 [009 部署验收记录](../projects/009-webgpu-render-pipeline/deployment-verification.json)。

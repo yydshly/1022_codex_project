@@ -1,5 +1,7 @@
 # 原库运行与真实交互演示
 
+已发布至 [GitHub Pages](https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/#live-demo)。线上海滩已验证实际出帧、太阳与相机控制，全部运行资源按发布清单核验；记录见 [deployment-verification.json](deployment-verification.json)。下文保留本机完整四场景配置与复现过程。
+
 展示页的 [真实演示](web/index.html#live-demo) 可切换固定上游的 **Cornell Box、完整 `midsee-village` 海岸村庄、热带海滩和针叶林与溪流**，共用 `features/render-pipeline`，并提供太阳方位、高度、强度与相机环绕、仰角、距离控制。它生成真实的 WebGPU 帧，不是图片滤镜、视频或教学图解。
 
 ## 运行方式

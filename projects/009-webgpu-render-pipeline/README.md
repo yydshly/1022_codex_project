@@ -1,5 +1,7 @@
 # 009 · WebGPU Render Pipeline · 光照效果实现与复用
 
+[打开线上展示](https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/) · [线上一图总览](https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/#overview) · [部署验收记录](deployment-verification.json)
+
 **这个库的核心价值，是实现浏览器三维场景的光照效果，并把实现方法沉淀为可复用的渲染能力。** 它让物体拥有明暗、反弹光和投影，让水面、树叶等自然材质对光线产生响应。它是一套带场景与诊断工具的 WebGPU 渲染实验工程。
 
 **原理**：以几何、材质、光源和相机为输入，借助 BVH 与 Surfel 采样估计间接光，保存为静态表面的 Lightmap 和空间光照探针；逐帧读取缓存，再组合实时阳光、阴影、水面、植被与后期。移动相机可直接重绘；太阳改变后，静态间接光需要检查并重烘焙。
@@ -94,7 +96,7 @@ python projects/009-webgpu-render-pipeline/scripts/package_web.py
 python -m http.server 8049 --bind 127.0.0.1 --directory projects/009-webgpu-render-pipeline/web
 ```
 
-首次还需按 [RUNTIME.md](RUNTIME.md) 准备固定上游依赖并构建 `web/live/`。之后打开 [http://127.0.0.1:8049/](http://127.0.0.1:8049/)，资料浏览不要求 WebGPU；点击真实演示后才加载引擎，需要兼容的 WebGPU 设备。已构建的页面和纹理都从本站读取，不使用 CDN 或 AI 服务。当前未发布在线地址，登记表的 `demo_url` 保持为空。
+首次还需按 [RUNTIME.md](RUNTIME.md) 准备固定上游依赖并构建 `web/live/`。之后打开 [http://127.0.0.1:8049/](http://127.0.0.1:8049/)，资料浏览不要求 WebGPU；点击真实演示后才加载引擎，需要兼容的 WebGPU 设备。已构建的页面和纹理都从本站读取，不使用 CDN 或 AI 服务。线上版本已通过 GitHub Pages 发布，见顶部入口和部署验收记录。
 
 ## 来源、环境与许可
 

@@ -127,7 +127,7 @@
       "name": "WebGPU Render Pipeline · 光照效果实现与复用",
       "repo": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline",
       "summary": "在浏览器实现反弹光、环境补光、软阴影及水面与植被受光：先用 BVH/Surfel 估计间接光，缓存为 Lightmap/空间探针，再实时合成画面；可沉淀为游戏、空间漫游和 Web3D 展厅的渲染能力，附一图总览与四场景交互",
-      "status": "researching",
+      "status": "completed",
       "tags": [
         "WebGPU",
         "Three.js",
@@ -137,7 +137,7 @@
       ],
       "cover": "assets/project-overview.png",
       "cover_caption": "我们整理的一图总览：光照效果的核心价值、计算原理、10 类全部 89 项能力、四场景本机实测与复用方向；缩略图来自真实运行，应用方向需单独集成和验收。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/"
     }
   ]
 }
