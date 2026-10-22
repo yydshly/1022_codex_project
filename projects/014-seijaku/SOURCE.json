@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "analysis_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "upstream": [
+    {
+      "repository": "https://github.com/MengTo/seijaku",
+      "commit": "e0cb3b5f2d5d034297ef6080961f217242f01aef",
+      "source_file": "index.html",
+      "source_sha256": "14ac14c2f1076e094b05ef87e6045fc552d9f1acccaadb26eaaee33563992738",
+      "source_url": "https://github.com/MengTo/seijaku/blob/e0cb3b5f2d5d034297ef6080961f217242f01aef/index.html"
+    },
+    {
+      "repository": "https://github.com/MengTo/sublevel-studio",
+      "commit": "355a1581d9812065d808ec32ea82f956e8da805b",
+      "source_file": "index.html",
+      "source_sha256": "40827fa88c3016c1f435914f10601c926c71e7a48522a3708e00352c6ff430d3",
+      "source_url": "https://github.com/MengTo/sublevel-studio/blob/355a1581d9812065d808ec32ea82f956e8da805b/index.html"
+    },
+    {
+      "repository": "https://github.com/MengTo/kage",
+      "commit": "4399487d2fb42bce39c7b032fbbb50d230bf4f0b",
+      "source_file": "index.html",
+      "source_sha256": "2247434e6a834c38b1a4e61325eaa5f4b7cb088ab8afea5dbb3f3263fddc9933",
+      "source_url": "https://github.com/MengTo/kage/blob/4399487d2fb42bce39c7b032fbbb50d230bf4f0b/index.html"
+    }
+  ],
+  "comparison_scope": "Three fixed original works plus the independently authored 0904/080 residence extension. Later Kage creative-workbench capabilities are not attributed to the original.",
+  "live_demo_policy": "Author-hosted pages only; online versions can change independently of fixed source analysis. One active iframe at a time.",
+  "license_observation": "Seijaku explicitly grants no reuse or redistribution license for original code/design/media. Official media is hotlinked; upstream application code and assets are not republished.",
+  "local_media": [
+    {
+      "path": "assets/overview.svg",
+      "sha256": "8586bcb3e78dfc0b46830f6b33799ee572750fd37d869d61fbf4a904936fc84f",
+      "source": "Original vector illustration authored in this project.",
+      "caption": "Research flow and incremental modules, not a runtime screenshot."
+    },
+    {
+      "path": "assets/residence-journey.jpg",
+      "sha256": "7faae5a2f65db17822cb503c90af4050ce53549eb9d45ae1c9b713059beed408",
+      "source": "E:\\0904_codex_project\\projects\\080-sublevel-studio\\images\\showcase\\05-residence-journey.jpg",
+      "caption": "Historical screenshot of our original residence extension, 2026-09-05, 960x540."
+    },
+    {
+      "path": "assets/research-summary.png",
+      "sha256": "e3447d2f85794036f557b11dade89ce2d9aac7d2b98e2e787ba85fa3c63de164",
+      "source": "Built-in Imagegen, reference-guided research infographic, generated 2026-10-22.",
+      "caption": "1024x1536. AI illustrative overview; arrival panel references the author-hosted runtime view. Other scenes are schematic. Not a runtime screenshot or performance measurement."
+    },
+    {
+      "path": "assets/research-summary-prompt.txt",
+      "sha256": "e876fcbcda302d89ec337cb3ccbb438164547af1eea8064efb459086d4e18bd7",
+      "source": "Exact prompt sent to built-in Imagegen for this infographic.",
+      "caption": "Art direction, exact Chinese copy and factual constraints."
+    }
+  ],
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.11",
+    "frontend": "Native HTML, CSS and ES modules; no installed frontend dependencies."
+  },
+  "research_scope": [
+    "8 capability explanations",
+    "11 comparison rows",
+    "6 proposed research modules",
+    "4 possible use cases"
+  ],
+  "performance_scope": "Source strategies reviewed; no matched-device FPS, startup or power comparison.",
+  "image_generation": {
+    "mode": "built-in Imagegen",
+    "date": "2026-10-22",
+    "output": "assets/research-summary.png",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "prompt": "assets/research-summary-prompt.txt",
+    "reference": {
+      "source_url": "https://mengto.github.io/seijaku/?t=0&clean",
+      "captured_date": "2026-10-22",
+      "dimensions": [
+        1250,
+        712
+      ],
+      "sha256": "4874d98176fd9e1d6337066fd9756b69b80464733afd1526e42a23387742668c",
+      "local_only_path": "_upstream/014-seijaku/summary-references/arrival.png",
+      "publication": "Reference screenshot is not published or bundled."
+    },
+    "visual_review": "Chinese labels, mechanism, comparison, existing residence foundation and future-work boundary visually checked. Generated illustrations are not labelled as runtime screenshots."
+  }
+}

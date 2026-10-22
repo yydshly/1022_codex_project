@@ -157,3 +157,8 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 2026-10-22 内容提交 `d1ac92e` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39776656381)成功。43 个项目文件均 HTTP 200 且与本地发布版本逐字节一致；总导航的五项理解摘要与指定引导图已核验。新增网页交互未在本轮重新复核，验证范围如实记录。
 
+## 014 · Seijaku 住宅导览与三项目对比
+
+014 使用原生 HTML/CSS/ES modules，发布文件均在 `projects/014-seijaku/web/`。现有根汇总器会复制到 `/014-seijaku/`，不增加构建依赖。自有总览图与旧住宅截图副本随网页提交；维护时运行本项目 `scripts/package_web.py`、`--check` 和 `scripts/verify_web.py`。
+
+官方图像通过固定提交在线引用，体验区按需加载作者 GitHub Pages，每次仅运行一个 iframe；不打包未获再分发授权的原库代码和素材。分析固定版本，在线演示可能随作者更新。研究页和对比内容不要求本地 WebGL，官方实时体验需要网络与相应图形支持。实际部署核验后再填写目录 demo_url。

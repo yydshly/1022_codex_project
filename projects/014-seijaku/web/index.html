@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seijaku 用 Three.js 连续漫游、四季联动、材料特写、构造拆解和声景展示日式住宅。对比 Kage、Sublevel 及已有住宅扩展，研究季节材质、构件标注、资源预热与按需绘制，扩展到旅宿导览、展馆教育、产品工艺和空间作品集。">
+  <meta name="theme-color" content="#f2f0e8">
+  <title>Seijaku · 住宅导览与三项目对比</title>
+  <link rel="icon" href="assets/overview.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Seijaku 研究首页"><span class="brand-mark" aria-hidden="true">静</span><span>空间研究室<small>FIELD NOTES / 014</small></span></a>
+    <nav aria-label="主要导航"><a href="#overview">总览</a><a href="#experience">体验</a><a href="#capabilities">能力</a><a href="#principles">原理</a><a href="#comparison">对比</a><a href="#value">价值</a><a href="#research">沉淀</a></nav>
+    <a class="source-top" href="https://github.com/MengTo/seijaku" target="_blank" rel="noopener noreferrer">原始仓库 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-dot"></span> MENG TO / ARCHITECTURAL EXPERIENCE</p>
+        <h1 id="hero-title">Seijaku<span>静寂之间，<br>走进一座住宅。</span></h1>
+        <p class="hero-intro">滚动穿过住宅与庭院，体验四季、材料特写、构造拆解和环境声。<br>研究季节联动、构件标注与资源调度，扩展到旅宿导览、展馆教育、产品展示和空间作品集。</p>
+        <div class="hero-actions"><a class="button primary" href="#experience">亲自参观 <span aria-hidden="true">↗</span></a><a class="text-link" href="#overview">一张图看懂 Seijaku <span aria-hidden="true">↓</span></a></div>
+        <p class="hero-note">源码与原作研究 · 中文分析<br>SEIJAKU / SUBLEVEL STUDIO / KAGE</p>
+      </div>
+      <figure class="hero-figure summary-hero">
+        <a class="summary-cover" href="#overview" aria-label="阅读我们生成的 Seijaku 效果、原理与研究价值总览"><img src="assets/research-summary.png" alt="我们生成的 Seijaku 引导图：住宅效果、实现流程、三项目对比与可沉淀技术" fetchpriority="high" width="1024" height="1536"></a>
+        <figcaption><span>从一张图，读懂效果与研究增量。</span><a href="assets/research-summary.png" target="_blank" rel="noopener">Imagegen 研究概览 · 打开原图 ↗</a></figcaption>
+      </figure>
+    </section>
+
+    <div class="facts wrap" aria-label="项目定位"><div><span>能看到什么</span><strong>连续漫游与四季构造</strong></div><div><span>值得沉淀</span><strong>环境、构件与运行调度</strong></div><div><span>扩展到哪里</span><strong>住宅、展馆、产品与作品集</strong></div></div>
+
+    <section class="section wrap overview-section" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="eyebrow">00 / RESEARCH MAP</p><h2 id="overview-title">一张图，串起效果与价值。</h2></div><p>从运行效果出发，<br>看原理、看差异、看后续研究。</p></div>
+      <figure class="overview-figure"><a href="assets/research-summary.png" target="_blank" rel="noopener" aria-label="打开 Seijaku 研究总览原图，可放大查看"><img src="assets/research-summary.png" alt="Seijaku 研究总览：连续漫游、四季与构造效果；输入到 Three.js 的实现流程；与 Kage、Sublevel Studio 的重复基础和差异；四季、构造、运行调度三个研究方向及四类应用" width="1024" height="1536" loading="lazy" decoding="async"></a><figcaption>内置 Imagegen 生成的研究概览，效果区参考作者庭院运行截图绘制；其他场景为示意，真实效果见下方原库体验。图中应用价值属于研究推导，建议模块尚未提炼成通用 SDK。</figcaption></figure>
+      <div class="overview-actions"><a class="button primary" href="assets/research-summary.png" download="Seijaku-效果原理与研究价值.png">下载总览原图 ↓</a><a class="text-link" href="assets/research-summary-prompt.txt" target="_blank" rel="noopener">查看生成指令 ↗</a><a class="text-link" href="#comparison">阅读完整对比 ↓</a></div>
+    </section>
+
+    <section class="section wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / EXPERIENCE</p><h2 id="experience-title">先看效果，再谈能力。</h2></div><p>在同一个窗口中体验三份原作。<br>每次只运行一个场景。</p></div>
+      <div class="project-tabs" role="tablist" aria-label="选择原库"><button type="button" id="project-seijaku" role="tab" aria-selected="true" aria-controls="demo-panel" data-project="seijaku">Seijaku <span>住宅导览</span></button><button type="button" id="project-sublevel" role="tab" aria-selected="false" aria-controls="demo-panel" data-project="sublevel" tabindex="-1">Sublevel Studio <span>可玩作品集</span></button><button type="button" id="project-kage" role="tab" aria-selected="false" aria-controls="demo-panel" data-project="kage" tabindex="-1">Kage <span>山寺夜游</span></button></div>
+      <div class="demo-panel" id="demo-panel" role="tabpanel" aria-labelledby="project-seijaku">
+        <div class="demo-toolbar"><div><strong id="demo-name">Seijaku</strong><span id="demo-description">从前庭走进住宅，经过室内与庭院，再去看材料、构造与四季。</span></div><a id="demo-external" class="text-link" href="https://mengto.github.io/seijaku/" target="_blank" rel="noopener noreferrer">独立打开 ↗</a></div>
+        <div id="chapter-nav" class="chapter-nav" role="group" aria-label="Seijaku 体验章节"></div>
+        <div id="demo-stage" class="demo-stage">
+          <div class="demo-poster" id="demo-poster"><img id="demo-preview" src="https://raw.githubusercontent.com/MengTo/seijaku/e0cb3b5f2d5d034297ef6080961f217242f01aef/assets/seijaku-preview.webp" alt="Seijaku 官方住宅预览" width="1600" height="900" loading="lazy"><div class="poster-shade"></div><div class="poster-content"><span class="eyebrow light">AUTHOR'S LIVE EXPERIENCE</span><p id="poster-name">走进 Seijaku</p><button type="button" class="button cream" id="demo-start"><span class="play-symbol" aria-hidden="true">▷</span> 启动原库</button><small>直接加载作者官方在线页面 · 需要网络与图形支持</small></div></div>
+          <div id="frame-host" hidden></div>
+        </div>
+        <div class="demo-bottom"><p id="demo-status" role="status">尚未启动 · 先选择一个项目或章节</p><div><button type="button" class="small-button" id="demo-fullscreen" disabled>全屏体验 ⤢</button><button type="button" class="small-button" id="demo-stop" disabled>结束体验</button></div></div>
+      </div>
+      <p class="fine-print" id="demo-instructions">在画面内滚动参观；Inspect 进入旋转缩放，Escape 返回；声音由画面右上角 Ambience 主动开启。</p>
+      <p class="fine-print">官方体验随作者网站更新；下方源码分析固定到明确提交。如果内嵌页面未显示，请使用“独立打开”。原库表单只演示本地确认。</p>
+    </section>
+
+    <section class="section capabilities-section" id="capabilities" aria-labelledby="capabilities-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / CAPABILITIES</p><h2 id="capabilities-title">体验中的每一步，<br>都有可以拆解的机制。</h2></div><p>从可见效果追到实现方法，<br>再判断它能用在哪里。</p></div>
+      <div class="capability-layout"><div class="capability-tabs" role="tablist" aria-label="选择能力" aria-orientation="vertical" id="capability-tabs"></div><article id="capability-detail" class="capability-detail" role="tabpanel" tabindex="0"></article></div>
+    </div></section>
+
+    <section class="section wrap" id="principles" aria-labelledby="principles-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / UNDER THE SURFACE</p><h2 id="principles-title">一个状态，驱动空间与内容。</h2></div><p>建筑与素材在浏览器中实时组织，<br>用户的操作改变观看过程。</p></div>
+      <div class="pipeline" id="pipeline" role="tablist" aria-label="实现流程"></div><div class="pipeline-detail" id="pipeline-detail" role="tabpanel" tabindex="0"></div>
+      <div class="principle-notes"><p><strong>场景制作</strong>建筑、种植与大量表面细节由规则生成，配合锦鲤、石头、贴图与摄影资产。</p><p><strong>运行组织</strong>主漫游、材料图像与构造章节协调状态，各自按需要绘制。</p><p><strong>研究边界</strong>这是作者编排的固定作品。通用建筑编辑、自动路径规划与真实业务接入需要另外实现。</p></div>
+    </section>
+
+    <section class="section comparison-section" id="comparison" aria-labelledby="comparison-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">04 / SIDE BY SIDE</p><h2 id="comparison-title">相近的世界，<br>不同的研究增量。</h2></div><p>比较三份固定版本的原作，<br>同时记得我们已经完成的扩展。</p></div>
+      <div class="comparison-filters" role="group" aria-label="筛选对比项"><button type="button" data-filter="all" aria-pressed="true">全部能力</button><button type="button" data-filter="shared" aria-pressed="false">共用基础</button><button type="button" data-filter="enhanced" aria-pressed="false">已有增强</button><button type="button" data-filter="new" aria-pressed="false">研究增量</button><button type="button" data-filter="distinct" aria-pressed="false">各自特色</button></div>
+      <p id="comparison-status" class="fine-print" role="status"></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="三项目能力对比表，窄屏可横向滚动"><table><caption class="sr-only">Kage、Sublevel Studio 与 Seijaku 的能力和研究增量</caption><thead><tr><th scope="col">能力</th><th scope="col">Kage<small>山寺夜游</small></th><th scope="col">Sublevel Studio<small>可玩工作室</small></th><th scope="col">Seijaku<small>住宅参观</small></th><th scope="col">对我们的意义</th></tr></thead><tbody id="comparison-body"></tbody></table></div>
+      <article class="existing-study"><a class="existing-image" href="https://yydshly.github.io/0904_codex_project/projects/080-sublevel-studio/demo/residence/journey/" target="_blank" rel="noopener noreferrer"><img src="assets/residence-journey.jpg" alt="我们以前制作的住宅扩展：暮色庭院、开门入户与六站房间路线" width="960" height="540" loading="lazy"></a><div><p class="eyebrow">OUR PREVIOUS STUDY / 0904 · 080</p><h3>这条住宅路线，我们已经走过。</h3><p>我们在 Sublevel 研究中做过庭院入户、六个房间状态、平面图、自动导览与有限环绕。房间变化同步相机、门、灯光、文字和 URL。</p><p class="muted">这些是我们制作的原创扩展，比较时单独计入已有基础。Seijaku 的新增重点应落在季节、构造、运行组织与交接细节。</p><a class="text-link" href="https://yydshly.github.io/0904_codex_project/projects/080-sublevel-studio/demo/residence/journey/" target="_blank" rel="noopener noreferrer">回看已有住宅演示 ↗</a></div></article>
+      <p class="fine-print">“研究增量”表示相对这三份原版和已有住宅样例的增量；后续 Kage 创作工作台是独立扩展。对比不代表图形算法首创，也没有进行同设备画质或性能排名。</p>
+    </div></section>
+
+    <section class="section wrap" id="value" aria-labelledby="value-title"><div class="section-heading"><div><p class="eyebrow">05 / VALUE IN PRACTICE</p><h2 id="value-title">让空间，承担一个具体任务。</h2></div><p>以下是基于实现的应用推导，<br>不是已验证的商业案例。</p></div><div class="use-cases" id="use-cases"></div><div class="value-note"><span aria-hidden="true">↗</span><p>可复用的价值来自<strong>观看路线、环境状态、结构讲解与运行调度</strong>。将它们接入自己的准确内容与授权资产，才能从视觉案例走向具体产品。</p></div></section>
+
+    <section class="section research-section" id="research" aria-labelledby="research-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">06 / WHAT TO KEEP</p><h2 id="research-title">接下来，沉淀哪些能力？</h2></div><p>保留已有住宅底座，<br>用小实验验证新增模块。</p></div><div class="research-layout"><div class="research-tabs" role="tablist" aria-label="研究方向" aria-orientation="vertical" id="research-tabs"></div><article class="research-detail" id="research-detail" role="tabpanel" tabindex="0"></article></div><div class="research-actions"><a class="button outline" href="assets/research-summary.png" target="_blank" rel="noopener">打开研究总览 ↗</a><button type="button" class="button outline" id="download-research">下载研究清单 ↓</button><span id="download-status" role="status"></span></div></div></section>
+
+    <section class="section wrap sources-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><div><p class="eyebrow">07 / EVIDENCE & SOURCES</p><h2 id="sources-title">每个判断，都有出处。</h2></div><p>研究日期 2026.10.22<br>固定源码分析与在线体验分别记录。</p></div><div id="sources-list" class="sources-list"></div><div class="evidence-grid"><div><h3>当前证据范围</h3><p>三项目固定源码与已有研究记录已核对。本页展示区运行作者在线版本；研究建议尚未提炼为通用 SDK，性能收益尚未量化。</p></div><div><h3>原作与我们的内容</h3><p>预览图从作者仓库在线引用，体验区加载作者页面。中文分析、总览图与研究界面为本项目整理；住宅扩展截图来自我们以前的原创样例。</p></div><div><h3>使用与许可</h3><p>Seijaku 原创代码、设计与素材尚未授予复用或再分发许可。本项目保留来源，通过链接与内嵌页面研究原作；独立模块建议使用原创或授权资产实现。</p></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">静</span><span>Seijaku<small>空间、材料与观看的秩序</small></span></a><div><a href="../">研究总导航 ↗</a><a href="https://github.com/yydshly/1022_codex_project/tree/main/projects/014-seijaku" target="_blank" rel="noopener noreferrer">项目文档 ↗</a><a href="#top">回到顶部 ↑</a></div><p>014 / GITHUB PROJECT RESEARCH · 2026</p></footer>
+  <noscript><p class="noscript wrap">交互区需要 JavaScript。你仍可阅读页面说明，并直接打开 <a href="https://mengto.github.io/seijaku/">Seijaku 原作</a>、<a href="https://mengto.github.io/sublevel-studio/">Sublevel Studio</a> 或 <a href="https://mengto.github.io/kage/">Kage</a>。</p></noscript>
+</body>
+</html>

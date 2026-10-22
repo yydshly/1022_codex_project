@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "status": "research-page-complete; local preview, no public deployment claimed",
+  "environment": "Chromium via Codex in-app browser; Windows; static Python server on 127.0.0.1:8054",
+  "page_checks": {
+    "desktop_default": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "client_width": 1265,
+      "scroll_width": 1265
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "client_width": 375,
+      "scroll_width": 375,
+      "mobile_breakpoint": true,
+      "comparison_container_width": 339,
+      "comparison_table_width": 890
+    },
+    "medium": {
+      "viewport": [
+        768,
+        1024
+      ],
+      "client_width": 753,
+      "scroll_width": 753
+    },
+    "capability_tabs": "8/8 click-through headings and selected states checked",
+    "keyboard": "ArrowDown from first capability selects second capability",
+    "research_tabs": "6/6 titles checked",
+    "principles": "rendering step clicked; corresponding explanation visible",
+    "comparison": "new filter shows 4/11 rows; all restores 11",
+    "download": "actual downloaded JSON parsed: 8 capabilities, 11 comparisons, 6 research items, fixed upstream SHA",
+    "images": "official previews observed loading; original residence screenshot loaded when visible",
+    "console": "no error/warning entries observed in host page logs; external frame logs are not treated as fully covered"
+  },
+  "upstream_experience": {
+    "seijaku": {
+      "embedded": "rendered in browser",
+      "winter": "Winter selected; caption Light snow, bare branches, warm rooms.",
+      "craft": "chapter rendered with construct and 1050x867 drawing buffer",
+      "inspection": "source mechanism reviewed; not re-tested in this implementation turn"
+    },
+    "sublevel": {
+      "embedded": "HTML and source loader visible; full WebGL readiness not established in this run",
+      "http_status": 200,
+      "preview_and_external_link": "provided"
+    },
+    "kage": {
+      "embedded": "timed out during this run; timeout returns to preview and external entry remains available",
+      "standalone": "independent official page opened and five chapter headings observed",
+      "http_status": 200
+    }
+  },
+  "limits": [
+    "No matched-device performance comparison",
+    "No complete regression of every upstream scene or game",
+    "No mobile GPU or physical touchscreen claim",
+    "Live upstream versions can change independently of pinned source analysis",
+    "Proposed reusable modules are research plans, not delivered SDKs"
+  ],
+  "build_checks": [
+    "package_web.py and --check",
+    "verify_web.py",
+    "node --check app.js and content.js",
+    "project_catalog.py sync and check",
+    "build_site.py generated numbered 014-seijaku page"
+  ],
+  "screenshots": [
+    "D:/codex/home/visualizations/2026/10/20/01a15a39-43e3-79f3-a81b-886ce311c593/seijaku-mobile.png",
+    "D:/codex/home/visualizations/2026/10/20/01a15a39-43e3-79f3-a81b-886ce311c593/seijaku-desktop.png"
+  ],
+  "numbered_path_http": {
+    "files": [
+      "app.js",
+      "assets/overview.svg",
+      "assets/residence-journey.jpg",
+      "content.js",
+      "index.html",
+      "style.css"
+    ],
+    "status": 200,
+    "byte_comparison": "all match local final build",
+    "path": "/014-seijaku/"
+  },
+  "summary_infographic": {
+    "date": "2026-10-22",
+    "file": "assets/research-summary.png",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "bytes": 2959327,
+    "sha256": "e3447d2f85794036f557b11dade89ce2d9aac7d2b98e2e787ba85fa3c63de164",
+    "visual_review": "All four sections, Chinese labels, comparison, existing foundation, priorities and evidence boundary inspected.",
+    "desktop": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "client_width": 1265,
+      "scroll_width": 1265,
+      "natural_dimensions": [
+        1024,
+        1536
+      ],
+      "rendered_width": 858.67
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "client_width": 375,
+      "scroll_width": 375,
+      "rendered_width": 337.33
+    },
+    "download": "Actual browser download is byte-identical to the final PNG.",
+    "http": "PNG and exact generation prompt returned 200 and match source bytes.",
+    "host_console": "No error entries observed.",
+    "provenance": "Built-in Imagegen. Arrival screenshot is a local-only visual reference; generated panels are illustrative.",
+    "screenshots": [
+      "D:/codex/home/visualizations/2026/10/20/01a15a39-43e3-79f3-a81b-886ce311c593/seijaku-summary-desktop.png",
+      "D:/codex/home/visualizations/2026/10/20/01a15a39-43e3-79f3-a81b-886ce311c593/seijaku-summary-mobile.png"
+    ],
+    "numbered_build": {
+      "output": "_site/seijaku-summary-20261022-01/014-seijaku/",
+      "status": "PNG and prompt byte-identical; summary anchor and catalog cover included."
+    }
+  }
+}

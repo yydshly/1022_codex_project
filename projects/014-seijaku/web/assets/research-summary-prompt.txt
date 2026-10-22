@@ -1,0 +1,50 @@
+Create one high-resolution, portrait 2:3 Chinese editorial research infographic, ideally 1536×2304 or larger, titled “Seijaku”. This is a complete, shareable one-image explanation, not a webpage screenshot. Use the provided actual runtime screenshot as visual reference for the architecture, courtyard, warm afternoon light, stepping stones and restrained realism. Compose a fresh infographic; label the visual panels as reference-based illustration, never as exact runtime screenshots.
+
+Art direction: Japanese architectural magazine, warm ivory paper, deep pine green, muted cedar brown and rust red accents. Refined typography with a large elegant Roman “Seijaku”, crisp, highly legible simplified Chinese sans-serif content and a few restrained serif section headings. Architectural hairline rules, generous but efficient spacing, consistent grid. Precise arrows and technical mini diagrams. Sophisticated rendered architecture paired with clear diagrams. No mascot, no neon UI, no fake browser chrome, no fabricated performance numbers. All text dark and readable, not tiny. Every content block must be visibly separated and connected through the page hierarchy. Keep outer margins intact.
+
+Reading sequence and exact main text below. Render all sections on ONE coherent canvas. Make the effects area emotionally compelling and the mechanism/comparison areas concrete. Main title largest, section headings next, explanation text readable.
+
+HEADER
+Small kicker: “空间研究室 / 014 / 2026.10.22”
+Main title: “Seijaku”
+Subtitle: “住宅导览 · 效果、原理与研究价值”
+Positioning: “把房间、庭院、材料与构造，编排成可交互的参观旅程。”
+Small note: “完整的建筑交互网页”
+
+01 / 可见效果
+A generous reference-based 3D courtyard panel resembling the provided real runtime view: tile-roofed Japanese residence, stone path, moss and trees, low warm sun. Caption: “连续漫游｜从前庭走入房间”
+Beside or beneath it, two smaller coordinated architectural diagram panels. One same-house green/snow seasonal diptych, caption “四季联动｜植被、积雪与光雾”. One accurate schematic exploded timber-column, beam and paper-screen assembly with leader lines, caption “构造拆解｜部件展开与空间标注”. The diagram should show actual separated parts, not a floating roof of an unrelated mansion.
+A small secondary line: “还有：材料特写 · 水面与锦鲤 · 合成环境声 · 平面图与环绕观察”
+Explicit fine-print under these visual panels: “效果区参考原库运行画面绘制，属 AI 概览。”
+
+02 / 如何工作
+Use a clear left-to-right numbered chain with arrows, accompanied by tiny simple icons:
+“滚动／点击／拖动” → “路线与环境状态” → “相机／材质／灯光／网页” → “Three.js / WebGL”
+Below this chain three compact explanatory columns, each with a tiny diagram:
+“路线编排” / “相机关键帧插值，门与章节同步”
+“环境联动” / “季节权重驱动叶色、积雪与光雾”
+“按需运行” / “资源预热、分批加载、章节按需绘制”
+
+03 / 与以前研究的项目相比
+Three equal aligned cards:
+“Kage” / “山寺夜游” / “滚动章节、氛围与图像叠层”
+“Sublevel Studio” / “可玩工作室” / “空间状态、街机与 CRT”
+“Seijaku” / “住宅参观” / “四季、构造、材料与运行调度”
+Below the cards, shared-base band: “重复基础：三维空间、相机控制、光影氛围、网页内容联动”
+Another clear line with a small check mark: “我们已有：庭院入户、房间图、平面图、自动导览与有限环绕”
+
+04 / 后续价值与沉淀
+Strong accent heading: “优先做三个可验证的模块”
+Three aligned numbered modules, visually more prominent than the application row:
+“1 四季环境状态” / “同机位四季对照，检查叶片与阴影一致”
+“2 构造拆解与标注” / “部件可拆可合，注释跟随三维锚点”
+“3 加载与绘制调度” / “测量首屏、长任务与离屏绘制”
+Applications row using four tiny line icons, with heading “可迁移到”：
+“住宅与旅宿导览” / “博物馆与结构教育” / “产品与材料叙事” / “空间作品集”
+Small secondary row: “第二批：背景感知导航 · 材料图像叙事 · 镜头交接与声景”
+
+FOOTER / evidence boundary, two readable short lines
+“建议模块尚未提炼为通用 SDK；性能收益与商业价值待实测。”
+“来源：MengTo / seijaku · sublevel-studio · kage；研究日期 2026.10.22。”
+
+Accuracy constraints: author-curated path, not autonomous navigation. The seasonal effect is a visual rule, not physics simulation. Material photography is a 2D story, not a 3D material editor. Do not imply all suggested modules already exist in our own project. The infographic compares focus and incremental research value, not a performance ranking. These are factual constraints to honor, not extra paragraphs to cram into the image.

@@ -175,6 +175,23 @@
       "cover": "assets/super-hermes-diagnosis-v3.png",
       "cover_caption": "我们生成的理解总结图：五个 Skill、模型与工具分工、七步定位协议、逐步要求和产物、九项结论报告、验证边界与复用价值。七步与完整报告是研究提炼，非原库内置强制执行器。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/012-super-hermes/"
+    },
+    {
+      "id": "014",
+      "slug": "seijaku",
+      "name": "Seijaku · 住宅导览与三项目对比",
+      "repo": "https://github.com/MengTo/seijaku",
+      "summary": "基于 Three.js 的日式住宅交互网页：连续漫游室内外，结合四季联动、材料特写、构造拆解和声景；对比 Kage、Sublevel 及已有住宅扩展，研究季节材质、构件展开与标注、资源预热与按需绘制，可扩展到旅宿导览、展馆教育、产品工艺展示和空间作品集。",
+      "status": "completed",
+      "tags": [
+        "Three.js",
+        "住宅导览",
+        "四季与构造",
+        "同类对比"
+      ],
+      "cover": "assets/research-summary.png",
+      "cover_caption": "使用我们生成的 Seijaku 研究总览作引导图：效果、实现流程、Kage / Sublevel 对比、三项优先技术与四类扩展场景。Imagegen 参考庭院运行画面绘制，其他场景为示意；建议模块仍待独立提炼。",
+      "demo_url": ""
     }
   ]
 }

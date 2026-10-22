@@ -1,0 +1,5 @@
+# Preserve byte-identical provenance for hashed illustrations and the exact prompt.
+assets/overview.svg -text
+web/assets/overview.svg -text
+assets/research-summary-prompt.txt -text
+web/assets/research-summary-prompt.txt -text
