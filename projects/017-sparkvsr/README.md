@@ -10,7 +10,7 @@
 | 上游代码许可 | Apache-2.0；[原始 LICENSE 副本](source-snapshot/LICENSE.upstream.txt)。底座模型、参考模型与外部服务各有自身条款 |
 | 收录日期 | 2026-10-22 |
 | 当前进度 | 理解归档，暂不深入模型研究或部署推理服务 |
-| 本次网页 | GitHub Pages 静态理解页，发布验证后登记实际地址 |
+| 本次网页 | [在线理解页](https://yydshly.github.io/1022_codex_project/017-sparkvsr/) |
 | 验证范围 | 文档、静态网页、图像身份、交互与公开发布；不包含模型效果实测 |
 
 ![SparkVSR 能力、原理、效果、价值与当前判断总览](assets/sparkvsr-overview.png)
@@ -100,4 +100,4 @@ python -m http.server 8017 --bind 127.0.0.1 --directory projects/017-sparkvsr/we
 - [论文 v1](https://arxiv.org/html/2603.16864v1)、[官方动态对比](https://sparkvsr.github.io/comparison.html)
 - [返回项目索引](../../README.md#项目索引)
 
-本次仅核对固定版本与许可、整理已有资料和对话理解，并完成静态网页；没有执行 SparkVSR / PiSA-SR / Nano-Banana-Pro 推理或训练。部署记录随实际发布补齐。
+本次仅核对固定版本与许可、整理已有资料和对话理解，并完成静态网页；没有执行 SparkVSR / PiSA-SR / Nano-Banana-Pro 推理或训练。已通过 GitHub Pages 公开验证；10 个发布文件均 HTTP 200 且与内容提交字节一致，首页摘要与指定引导图已核对。详见 [文件与部署记录](deployment-verification.json)、[线上浏览器验收](publication-browser-verification.json)和 [本地验证](verification.json)。

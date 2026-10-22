@@ -33,7 +33,7 @@
 | 014 | [Seijaku · 住宅导览与三项目对比](projects/014-seijaku/README.md) | [seijaku](https://github.com/MengTo/seijaku) | 基于 Three.js 的日式住宅交互网页：连续漫游室内外，结合四季联动、材料特写、构造拆解和声景；对比 Kage、Sublevel 及已有住宅扩展，研究季节材质、构件展开与标注、资源预热与按需绘制，可扩展到旅宿导览、展馆教育、产品工艺展示和空间作品集。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/014-seijaku/) |
 | 015 | [heytea-style · 照片二次创作与桌宠](projects/015-heytea-style/README.md) | [heytea-style](https://github.com/Hchen1218/heytea-style) | 以已有照片为素材，用AI二次创作手绘海报、风味怪兽和产品互动图，再把角色制成可点击拖拽的桌宠；可沉淀风格规则、分阶段生成与身份约束、透明帧校验及事件驱动运行，扩展到餐饮电商内容、原创IP系列、互动营销与轻陪伴应用。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/015-heytea-style/) |
 | 016 | [Verdant Forest · 浏览器里的程序化森林](projects/016-verdant-forest/README.md) | [verdant-forest](https://github.com/Leonxlnx/verdant-forest) | 在浏览器生成并漫游茂密的三维森林，呈现立体枝叶、林下花草、风动与林间光雾；可沉淀参数化植物生成、空间分布、实例化与LOD、风动着色、体积光合成和确定性镜头采集，扩展到自然展厅、庭院与旅宿导览、交互叙事网页及氛围短片。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/016-verdant-forest/) |
-| 017 | [SparkVSR · 关键帧引导的视频高清重建](projects/017-sparkvsr/README.md) | [SparkVSR](https://github.com/taco-group/SparkVSR) | 以原视频约束运动与结构，用少量高清关键帧引导生成式视频超分，改善清晰度、纹理与跨帧一致性；可沉淀关键帧审核、单图修复与时序传播、参考强度调节和保真评测流程，扩展到老片修复、AIGC增强、系列风格化与人工修图接入。当前仅理解归档，未部署模型。 | 已归档 | — |
+| 017 | [SparkVSR · 关键帧引导的视频高清重建](projects/017-sparkvsr/README.md) | [SparkVSR](https://github.com/taco-group/SparkVSR) | 以原视频约束运动与结构，用少量高清关键帧引导生成式视频超分，改善清晰度、纹理与跨帧一致性；可沉淀关键帧审核、单图修复与时序传播、参考强度调节和保真评测流程，扩展到老片修复、AIGC增强、系列风格化与人工修图接入。当前仅理解归档，未部署模型。 | 已归档 | [在线演示](https://yydshly.github.io/1022_codex_project/017-sparkvsr/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览
@@ -217,7 +217,7 @@ Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集
 
 > 沿用本次对话已生成的理解总览图，说明原视频约束下的高清重建、关键帧控制、作者效果、技术沉淀与扩展场景，并保留暂不深入研究的判断；图为精确排版示意，非推理截图。
 
-[研究详情](projects/017-sparkvsr/README.md) · [原始仓库](https://github.com/taco-group/SparkVSR)
+[研究详情](projects/017-sparkvsr/README.md) · [原始仓库](https://github.com/taco-group/SparkVSR) · [在线演示](https://yydshly.github.io/1022_codex_project/017-sparkvsr/)
 
 标签：视频超分 / 关键帧引导 / 生成式修复 / 时序传播 / 理解归档
 <!-- PROJECT_CARDS:END -->

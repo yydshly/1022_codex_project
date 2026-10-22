@@ -263,7 +263,7 @@
       ],
       "cover": "assets/sparkvsr-overview.png",
       "cover_caption": "沿用本次对话已生成的理解总览图，说明原视频约束下的高清重建、关键帧控制、作者效果、技术沉淀与扩展场景，并保留暂不深入研究的判断；图为精确排版示意，非推理截图。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/017-sparkvsr/"
     }
   ]
 }

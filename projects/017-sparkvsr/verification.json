@@ -65,5 +65,6 @@
     "Commercial API generation",
     "Training",
     "GPU memory/throughput/quality benchmarks"
-  ]
+  ],
+  "public_verification": "deployment-verification.json and publication-browser-verification.json"
 }

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "status": "passed",
+  "url": "https://yydshly.github.io/1022_codex_project/017-sparkvsr/",
+  "content_commit": "1e44e18f01468cb35391e5e8cf2d9de7ce9025aa",
+  "checks": {
+    "summary": "Capability/effect, candidate reusable technology and future scenarios visible.",
+    "guide": "Both displayed images complete at 2400×3970; exact original SHA-256 verified separately.",
+    "modal": "Opened and closed; full image complete.",
+    "metrics": "PiSA mode showed PSNR 23.43, CLIP-IQA 0.6252, DOVER 0.6411; reset to NBP.",
+    "scenario": "Human keyframe retouching validation details expanded.",
+    "desktop": {
+      "width": 1280,
+      "overflow": false
+    },
+    "mobile": {
+      "width": 375,
+      "overflow": false,
+      "broken_images": 0
+    },
+    "console_warnings_and_errors": []
+  },
+  "screenshots": [
+    "assets/publication-desktop.png",
+    "assets/publication-mobile.png"
+  ],
+  "scope": "Static research page only. Model inference and model performance were not tested."
+}

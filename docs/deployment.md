@@ -203,3 +203,6 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 公开部署以本项目的 `deployment-verification.json` 和Actions记录为准；通过线上文件、引导图与摘要核对后填写登记表 `demo_url`。
 
 016 已于2026-10-22通过[正式入口](https://yydshly.github.io/1022_codex_project/016-verdant-forest/#overview)验证。内容提交 `a9f7aae` 的 [Actions构建与Pages部署](https://github.com/yydshly/1022_codex_project/actions/runs/39799136460)成功，19项资源均HTTP200且SHA-256与提交一致；已生成的理解总览图、三部分摘要、项目图注及线上主要交互均核对。详见子项目 `deployment-verification.json`；登记表已填写demo_url。
+
+
+017 已于 2026-10-22 发布到 [正式理解页](https://yydshly.github.io/1022_codex_project/017-sparkvsr/)。内容提交 1e44e18 的 [GitHub Actions](https://github.com/yydshly/1022_codex_project/actions/runs/39805710015) 构建与部署均成功，10 个发布文件 HTTP 200 且与提交字节一致。总导航三类摘要和原样引导图已核对，线上评测切换、放大与场景展开及手机布局通过。记录见本项目 deployment-verification.json 和 publication-browser-verification.json。

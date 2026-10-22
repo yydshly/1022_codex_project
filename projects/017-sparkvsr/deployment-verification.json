@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-22T23:34:31.411002+08:00",
+  "status": "passed",
+  "project_url": "https://yydshly.github.io/1022_codex_project/017-sparkvsr/",
+  "root_url": "https://yydshly.github.io/1022_codex_project/",
+  "content_commit": "1e44e18f01468cb35391e5e8cf2d9de7ce9025aa",
+  "actions_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39805710015",
+  "files": [
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "bytes": 1814,
+      "sha256": "1f810e98296c2d888dd6291b64f07a17a7119d141d3dcda0d75a22b51aca9d92",
+      "expected_sha256": "1f810e98296c2d888dd6291b64f07a17a7119d141d3dcda0d75a22b51aca9d92",
+      "matches": true
+    },
+    {
+      "path": "assets/LICENSE.upstream.txt",
+      "http_status": 200,
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "expected_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "matches": true
+    },
+    {
+      "path": "assets/manifest.json",
+      "http_status": 200,
+      "bytes": 597,
+      "sha256": "17b9b0eabf04bcd472c089879446ec28988ea1871ff1836bab18baa605501a72",
+      "expected_sha256": "17b9b0eabf04bcd472c089879446ec28988ea1871ff1836bab18baa605501a72",
+      "matches": true
+    },
+    {
+      "path": "assets/source-manifest.json",
+      "http_status": 200,
+      "bytes": 1911,
+      "sha256": "fe6345485d197b579ce7725d5d34f3b1bf8a492fe391a1c0e224b672846f0d6c",
+      "expected_sha256": "fe6345485d197b579ce7725d5d34f3b1bf8a492fe391a1c0e224b672846f0d6c",
+      "matches": true
+    },
+    {
+      "path": "assets/sparkvsr-overview.png",
+      "http_status": 200,
+      "bytes": 1953823,
+      "sha256": "56005f1845bcd728c58d15014ba1465459432569b18019801c59544288f3727d",
+      "expected_sha256": "56005f1845bcd728c58d15014ba1465459432569b18019801c59544288f3727d",
+      "matches": true
+    },
+    {
+      "path": "downloads/author-metrics.csv",
+      "http_status": 200,
+      "bytes": 367,
+      "sha256": "6cd4d549f66d119af8e5c52c3224dd60b1201ea03630a25506ecffd1abb522c8",
+      "expected_sha256": "6cd4d549f66d119af8e5c52c3224dd60b1201ea03630a25506ecffd1abb522c8",
+      "matches": true
+    },
+    {
+      "path": "downloads/UNDERSTANDING.md",
+      "http_status": 200,
+      "bytes": 4274,
+      "sha256": "015d1133d3848e89624b4f45f7603e6d81a17cb2a8d365a227830f1b785532ac",
+      "expected_sha256": "015d1133d3848e89624b4f45f7603e6d81a17cb2a8d365a227830f1b785532ac",
+      "matches": true
+    },
+    {
+      "path": "favicon.svg",
+      "http_status": 200,
+      "bytes": 249,
+      "sha256": "23d67eb7208969cebf4ce2a7a30cb076bced535615dee683715d8d3e09c4009e",
+      "expected_sha256": "23d67eb7208969cebf4ce2a7a30cb076bced535615dee683715d8d3e09c4009e",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 16662,
+      "sha256": "5a7287041a77bb4ef3b6c5244d40a891d3cc64e53618f40508ee859d041a29e1",
+      "expected_sha256": "5a7287041a77bb4ef3b6c5244d40a891d3cc64e53618f40508ee859d041a29e1",
+      "matches": true
+    },
+    {
+      "path": "style.css",
+      "http_status": 200,
+      "bytes": 11974,
+      "sha256": "6a4a334dfb9dfd8a9266c2033505aba819f1b620332a118482efbee9e39df1dd",
+      "expected_sha256": "6a4a334dfb9dfd8a9266c2033505aba819f1b620332a118482efbee9e39df1dd",
+      "matches": true
+    }
+  ],
+  "root": {
+    "http_status": 200,
+    "summary_matches": true,
+    "guide_present": true,
+    "project_link_present": true
+  },
+  "scope": "Static publication and original guide bytes. Does not verify model inference, quality, memory or speed."
+}
