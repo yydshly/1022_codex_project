@@ -65,3 +65,5 @@
 - 只有最终归档及其校验说明随 Git 保存；原始镜像与展开目录继续忽略，GitHub Pages 仍只发布原创研究网页。
 - 原始保全复核见 backup-record.json，最终统一归档身份与独立恢复结果见 preservation-package.json。没有在本机运行剪映原生引擎。
 - 从远端最新主分支建立独立发布工作区，避免将其他项目的未提交内容混入本次提交。
+
+主提交 c30682d 已推送远端 main。最终 ZIP 为 25,087,701 字节，SHA-256 为 ad9ecfa4cacfbf0a721b70b93d81df78c8fc6555d38b018d0b34d947142a6381；从远端分范围完整取回后拼接校验一致。在没有原始镜像的发布工作区，另从归档恢复全部引用、HEAD、187 个提交与 357 个精确源码 Git 对象。远端交付及 CI / Pages 的实际状态见 publication-verification.json。

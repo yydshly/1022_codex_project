@@ -8,6 +8,8 @@
 
 备份含两个全引用 Git bundle、两个主分支源码 ZIP、引用映射、文件清单、SHA-256、恢复记录和原始许可声明，共 **67 个 Git 引用、187 个可达提交、357 个主分支文件**。它不包含剪映官方引擎、安装包或用户账号数据；详细清单见 [归档记录](preservation-package.json) 与 [备份目录说明](backups/README.md)。
 
+远端内容提交为 [`c30682d`](https://github.com/yydshly/1022_codex_project/commit/c30682d1f177fa10cacfde3f6e949b79718a6fde)。已从 GitHub 完整取回 25,087,701 字节并核对 SHA-256，与本地独立恢复验证的归档一致；[远端交付核验记录](publication-verification.json) 同时记录自动检查和网页部署状态。归档可从仓库下载，网页是否发布成功以记录中的实际部署结果为准。
+
 ![理解主线总览：Skill 指导 AI 编排，核心库构建草稿并桥接剪映引擎，REA 辅助适配；标出产品、策略与接口三个扩展位置、产出和价值](assets/research-overview.svg)
 
 *原创研究图解；依据固定源码与我们的对话整理，不是剪映运行截图。*

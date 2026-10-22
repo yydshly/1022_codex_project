@@ -1,0 +1,74 @@
+{
+  "schema": "jianying-publication-verification/v1",
+  "date": "2026-10-23",
+  "repository": "https://github.com/yydshly/1022_codex_project",
+  "branch": "main",
+  "content_commit": "c30682d1f177fa10cacfde3f6e949b79718a6fde",
+  "summary": "逆向适配工程和内部接口，复用本机剪映引擎，重建AI可编排控制层；提前离线保存两个上游仓库，防止上游删除、封禁或访问中断。",
+  "remote_archive": {
+    "url": "https://raw.githubusercontent.com/yydshly/1022_codex_project/c30682d1f177fa10cacfde3f6e949b79718a6fde/projects/010-jianying-headless/backups/upstream-preservation-20261022.zip",
+    "download_method": "HTTP 206 ranges in order",
+    "bytes": 25087701,
+    "sha256": "ad9ecfa4cacfbf0a721b70b93d81df78c8fc6555d38b018d0b34d947142a6381",
+    "matches_local_verified_archive": true
+  },
+  "remote_record_matches": true,
+  "independent_recovery": {
+    "status": "independent-offline-restore-verified",
+    "network_used": false,
+    "upstream_code_executed": false,
+    "native_jianying_tested": false,
+    "source": "Only bundle bytes extracted from the final outer ZIP; no pre-existing mirrors used",
+    "target": "_upstream/clean-checkout-recovery-20261023",
+    "repositories": [
+      {
+        "name": "jianying-headless",
+        "head_commit": "27c2627bbd0fccc8484000f32e9d66a820f4b698",
+        "refs": 38,
+        "reachable_commits": 79,
+        "exact_source_blobs_verified": 108,
+        "refs_match": true,
+        "head_matches": true,
+        "fsck_passed": true,
+        "bundle_verified": true
+      },
+      {
+        "name": "yichen-skills",
+        "head_commit": "9bd78982aa75aa179258bc9009fe4dcf2f2973b9",
+        "refs": 29,
+        "reachable_commits": 108,
+        "exact_source_blobs_verified": 249,
+        "refs_match": true,
+        "head_matches": true,
+        "fsck_passed": true,
+        "bundle_verified": true
+      }
+    ]
+  },
+  "native_jianying_tested": false,
+  "pages": {
+    "status": "deployment-queued",
+    "expected_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/",
+    "public_index_last_http_status": 404,
+    "verified_published": false,
+    "scope": "远端源码、研究说明和归档已提交并校验；网页部署排队状态不等于发布成功。"
+  },
+  "checked_at": "2026-10-23T00:36:00+08:00",
+  "ci": {
+    "catalog": {
+      "run_id": 39814410409,
+      "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39814410409",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "pages": {
+      "run_id": 39814410280,
+      "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39814410280",
+      "archive_and_web_verification_step": "success",
+      "build_steps": "success",
+      "deploy_job_id": 119949797849,
+      "deploy_status": "queued",
+      "last_api_updated_at": "2026-10-22T16:30:27Z"
+    }
+  }
+}
