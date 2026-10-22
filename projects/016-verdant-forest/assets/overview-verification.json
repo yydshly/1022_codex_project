@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-22",
+  "scope": "Overview image integration",
+  "generator": "built-in image_gen.imagegen",
+  "http_files": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "sha256": "db1ae4866c854f85873e5284c9cdce45a16550b94d80189931b5f33ec27e0737",
+      "bytes": 19482
+    },
+    {
+      "path": "assets/evidence/bark-manifest.json",
+      "status": 200,
+      "sha256": "c5156e8c976e32e72690e0c6133ef979b334d80b491f17cd2bc851981c53bab0",
+      "bytes": 869
+    },
+    {
+      "path": "assets/evidence/bark-review.md",
+      "status": 200,
+      "sha256": "446a4ff3c11e15f34ea5dd8b88af983235d78a172d3cc39460f6b84786795d14",
+      "bytes": 2577
+    },
+    {
+      "path": "assets/evidence/browser-capture.json",
+      "status": 200,
+      "sha256": "52d6d86d9ddf85d2f968d099ecc2331ec81b759d921cd4889884ece99ca42faa",
+      "bytes": 4604
+    },
+    {
+      "path": "assets/evidence/film-capture.json",
+      "status": 200,
+      "sha256": "6f6a86f248060acbbe7fd55c208dafd0b051c7f828a9f54b35d02e21e5b0256c",
+      "bytes": 6362
+    },
+    {
+      "path": "assets/evidence/upstream-credits.txt",
+      "status": 200,
+      "sha256": "52f7f4f936812ce1c1af764d0bdee334adb3fe8a69f4468e7ecb9b0f5224aa5a",
+      "bytes": 567
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200,
+      "sha256": "65956bb2e5a722295db5e16357bd24a5fc732fad0a3ea7b60604d99c0460d777",
+      "bytes": 238
+    },
+    {
+      "path": "assets/overview-prompt.txt",
+      "status": 200,
+      "sha256": "9e259dadd5ec857daa81d5fe84b646347eb7fab15661b118ad1375c1166c1b8b",
+      "bytes": 4267
+    },
+    {
+      "path": "assets/overview.json",
+      "status": 200,
+      "sha256": "200ab0e3336997988338e18764b260ec684fc69f56bd460939ada319f3eadc1a",
+      "bytes": 1883
+    },
+    {
+      "path": "assets/source-manifest.json",
+      "status": 200,
+      "sha256": "b20fe55a376a63cd821d3b985f5abd5f2a1bebd542f5e07c59e926db5a80cd6f",
+      "bytes": 4022
+    },
+    {
+      "path": "assets/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "sha256": "90f339018fc5b85cd74520449ee9c2d239fc3ad60e1b92e80886e95e0bff97d5",
+      "bytes": 2340
+    },
+    {
+      "path": "assets/understanding-overview.png",
+      "status": 200,
+      "sha256": "3b1f2f154afb3b06e5b2eea220de88ceb3e513366289ad3daf7b40c79852e430",
+      "bytes": 2567073
+    },
+    {
+      "path": "assets/upstream/bark-comparison.jpg",
+      "status": 200,
+      "sha256": "94be1583044c8e2e7776fead5882bd344e5c8465de77d97df414bf084da19d8b",
+      "bytes": 253045
+    },
+    {
+      "path": "assets/upstream/canopy-start.png",
+      "status": 200,
+      "sha256": "05ebbdf5f8aee55390fb0e3ddceffaec42b5ed61bf8aa795a174604b877cd100",
+      "bytes": 2110221
+    },
+    {
+      "path": "assets/upstream/canopy.png",
+      "status": 200,
+      "sha256": "4aad60eade2185f92c1eddd06a5d57c072ee7fdd071a206d0c09b038e02fda51",
+      "bytes": 2087116
+    },
+    {
+      "path": "assets/upstream/forest-floor.png",
+      "status": 200,
+      "sha256": "61884978692cd4cfb09787504ee5f751b3570f386d2905069f1cbbdb086aa835",
+      "bytes": 2211633
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "sha256": "20f6ea0d7ae0c87e50990cf18538fddfffc1c77b4563492462f11991626ab70d",
+      "bytes": 7664
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "4006662d7273f8db57e0dedd6fc9d121e6c3d23688b90713eca745caf13f3184",
+      "bytes": 15652
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "sha256": "8d0469b9576240f3bd0764aa97ff1360e0e1ea4fd682d72a239712e929d299c7",
+      "bytes": 23886
+    }
+  ],
+  "root_navigation_uses_new_image": true,
+  "browser_checks": [
+    "Overview image loaded at its natural 1672 x 941 size",
+    "Overview modal shows correct caption and hides gallery navigation",
+    "Escape closes overview modal",
+    "Existing gallery still opens with correct caption",
+    "Download link targets the identical PNG published and verified by SHA-256",
+    "375 px mobile viewport has clientWidth=scrollWidth=360",
+    "1280 px desktop modal visually reviewed"
+  ],
+  "script_console_errors": 0,
+  "preview": "assets/research/overview-web-preview.png",
+  "public_deployment": false
+}

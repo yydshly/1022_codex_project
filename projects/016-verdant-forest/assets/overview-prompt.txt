@@ -1,0 +1,77 @@
+Use case: infographic-diagram / compositing.
+Create ONE polished Chinese research overview infographic, landscape 16:9, preferably 3840×2160, crisp typography and readable Chinese. Project: Verdant Forest, a real browser-based procedural 3D forest. The audience wants to understand capabilities, visible effects, and especially practical value to our projects.
+
+INPUT IMAGES:
+Image 1 (forest-floor.png): supporting insert — actual upstream WebGL browser frame showing flowers, ferns, trunks and distant mist.
+Image 2 (canopy.png): supporting insert — actual upstream WebGL browser frame showing the canopy and woodland depth.
+Use these two existing screenshots as the effect image panels. Preserve their scene composition, polygons, botanical details and lighting; scale/crop only for layout. Do not invent replacement forests, photographic improvements, animals, new weather, or higher realism. The poster's own diagrams and icons may be newly illustrated. Distinguish screenshot-based effects from explanatory graphics.
+
+ART DIRECTION:
+Refined botanical field-note / technical editorial poster. Warm ivory paper (#f3f3e9), deep forest green (#203829), muted moss, restrained pale lime highlights. Large readable Chinese headings, spacious aligned grid, fine dividers, elegant serif main title with clean sans-serif explanatory text. No dashboard chrome, glossy 3D icons, loud gradients, excessive rounded cards, or decorative UI. This is a complete static infographic, not a website mockup.
+
+COMPOSITION:
+Top 14%: project title, clear central statement.
+Middle 43%: two substantial screenshot panels on the left (main understory image larger, canopy image smaller); a concise four-row capability column on the right. Let the real forest imagery remain the visual focus.
+Under this, a slim left-to-right principle chain.
+Bottom 30%: visually prominent four-column value progression. Make this part genuinely informative and readable; the main takeaway is reusable natural-scene production and runtime knowledge.
+Small final strip: application directions, relation to our 009 lighting research, and provenance/boundaries. Keep generous margins. Numbered sections and tiny line icons may establish hierarchy.
+
+EXACT CHINESE COPY — reproduce verbatim, no extra paragraphs or invented metrics:
+
+Header:
+"016 / 开源项目研究"
+"Verdant Forest"
+"把植物生成、实时渲染与交互体验，组合成可探索的自然场景。"
+
+Effect section:
+"能展示什么效果"
+"林下细节"
+"草、蕨类、野花与树皮"
+"树冠与纵深"
+"立体枝叶、远景与薄雾"
+"7,155 棵树 · 上游场景总量"
+
+Capability section:
+"能力如何组成"
+"01 程序化植物"
+"规则生成树木与林下植被"
+"02 场景组织"
+"固定种子、空间分布、共享网格"
+"03 实时渲染"
+"实例化、LOD、风动、光影与雾"
+"04 交互与输出"
+"自由漫游、30 秒五镜头、逐帧采集"
+
+Principle chain:
+"参数与种子 → 植物几何 → 分区实例化 → 风动与光影 → 漫游 / 镜头"
+
+Value section heading:
+"对我们的价值：积累自然场景的制作与运行能力"
+Four aligned columns:
+"资产价值"
+"丰富自然元素"
+"树、草、蕨与地表细节"
+
+"生成价值"
+"减少重复制作"
+"用参数与规则组织变化"
+
+"工程价值"
+"学习密集场景"
+"共享网格与远近细节取舍"
+
+"体验价值"
+"形成空间表达"
+"漫游、交互叙事与镜头创作"
+
+Final strip:
+"可探索方向：自然主题展厅 / 交互叙事网页 / 自然氛围短片"
+"与 009 光照研究互补：补充植物生成、组织与运动"
+"复用需确认授权并验证设备性能；当前为研究样本。"
+
+Provenance in small but legible type:
+"Leonxlnx / verdant-forest · 研究版本 bb724d8"
+"ImageGen 研究总结图 · 效果参考真实浏览器运行图"
+
+ACCURACY CONSTRAINTS:
+Do not claim that this is a ready-made asset export library, that a reusable tool has already been completed, that it is an AI forest generator, or that there is any measured real-time FPS guarantee. The 7,155 trees are total scene objects, not a per-frame draw count. The 30-second tour is camera sequencing; video acquisition is frame-by-frame. The screenshot-based panels must keep the original render's actual visual character.

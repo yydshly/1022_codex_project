@@ -1,0 +1,34 @@
+{
+  "title": "Verdant Forest：能力、效果、原理与我们的价值",
+  "date": "2026-10-22",
+  "generator": "built-in image_gen.imagegen",
+  "mode": "infographic generation with two screenshot references",
+  "prompt": "assets/overview-prompt.txt",
+  "upstream_commit": "bb724d84fb683b8f1dea790c3e56f2ffadeb051e",
+  "image": {
+    "path": "assets/understanding-overview.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2567073,
+    "sha256": "3b1f2f154afb3b06e5b2eea220de88ceb3e513366289ad3daf7b40c79852e430"
+  },
+  "references": [
+    {
+      "path": "assets/upstream/forest-floor.png",
+      "role": "actual upstream browser rendering used as an effect reference",
+      "sha256": "61884978692cd4cfb09787504ee5f751b3570f386d2905069f1cbbdb086aa835"
+    },
+    {
+      "path": "assets/upstream/canopy.png",
+      "role": "actual upstream browser rendering used as an effect reference",
+      "sha256": "4aad60eade2185f92c1eddd06a5d57c072ee7fdd071a206d0c09b038e02fda51"
+    }
+  ],
+  "visual_review": {
+    "chinese_copy": "reviewed: section labels, four capability rows, principle chain, four values and application directions are legible",
+    "content": "No real-time FPS claim; 7155 labeled scene total; practical reuse remains a research direction",
+    "screenshots": "Generated composition uses screenshot references; the image panels are not claimed to be byte-identical original screenshots. Originals and hash manifest remain available."
+  },
+  "claims": "The project is a technical sample for natural-scene production and runtime methods. Asset export tooling and direct integration with project 009 have not been implemented.",
+  "rights": "Research layout and illustration generated for this project. Referenced forest imagery remains attributable to Leonxlnx and relevant asset contributors. See THIRD_PARTY_NOTICES.md."
+}

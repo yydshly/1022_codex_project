@@ -32,6 +32,8 @@ def build(output: Path) -> None:
             ("understanding-overview.png", "能力全景", "输入 → GPU 原理 → 实时视图输出，以及价值、场景与扩展方向。"),
             ("effect-atlas.png", "真实效果对照", "同一张原创封面：原图与 8 种代表特效，来自实际 WebGL 渲染。"),
         ):
+            if project["slug"] != "swiftui-shaders":
+                continue
             if (web / "assets" / filename).is_file():
                 src = f"./{folder}/assets/{filename}"
                 alt = escape(title + "：" + caption, quote=True)

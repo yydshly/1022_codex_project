@@ -1,0 +1,103 @@
+{
+  "base": "http://127.0.0.1:8017/1022_codex_project/016-verdant-forest/",
+  "files": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "sha256": "bc74ed87020477781b9fa602e7d75065935c2adb67055029f25c9a5b6ef3830e",
+      "bytes": 19123
+    },
+    {
+      "path": "assets/evidence/bark-manifest.json",
+      "status": 200,
+      "sha256": "c5156e8c976e32e72690e0c6133ef979b334d80b491f17cd2bc851981c53bab0",
+      "bytes": 869
+    },
+    {
+      "path": "assets/evidence/bark-review.md",
+      "status": 200,
+      "sha256": "446a4ff3c11e15f34ea5dd8b88af983235d78a172d3cc39460f6b84786795d14",
+      "bytes": 2577
+    },
+    {
+      "path": "assets/evidence/browser-capture.json",
+      "status": 200,
+      "sha256": "52d6d86d9ddf85d2f968d099ecc2331ec81b759d921cd4889884ece99ca42faa",
+      "bytes": 4604
+    },
+    {
+      "path": "assets/evidence/film-capture.json",
+      "status": 200,
+      "sha256": "6f6a86f248060acbbe7fd55c208dafd0b051c7f828a9f54b35d02e21e5b0256c",
+      "bytes": 6362
+    },
+    {
+      "path": "assets/evidence/upstream-credits.txt",
+      "status": 200,
+      "sha256": "52f7f4f936812ce1c1af764d0bdee334adb3fe8a69f4468e7ecb9b0f5224aa5a",
+      "bytes": 567
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200,
+      "sha256": "65956bb2e5a722295db5e16357bd24a5fc732fad0a3ea7b60604d99c0460d777",
+      "bytes": 238
+    },
+    {
+      "path": "assets/source-manifest.json",
+      "status": 200,
+      "sha256": "b20fe55a376a63cd821d3b985f5abd5f2a1bebd542f5e07c59e926db5a80cd6f",
+      "bytes": 4022
+    },
+    {
+      "path": "assets/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "sha256": "adc62e885232709e3b65212d74e990c650bd91fedba6deacdabbef759c74527a",
+      "bytes": 1998
+    },
+    {
+      "path": "assets/upstream/bark-comparison.jpg",
+      "status": 200,
+      "sha256": "94be1583044c8e2e7776fead5882bd344e5c8465de77d97df414bf084da19d8b",
+      "bytes": 253045
+    },
+    {
+      "path": "assets/upstream/canopy-start.png",
+      "status": 200,
+      "sha256": "05ebbdf5f8aee55390fb0e3ddceffaec42b5ed61bf8aa795a174604b877cd100",
+      "bytes": 2110221
+    },
+    {
+      "path": "assets/upstream/canopy.png",
+      "status": 200,
+      "sha256": "4aad60eade2185f92c1eddd06a5d57c072ee7fdd071a206d0c09b038e02fda51",
+      "bytes": 2087116
+    },
+    {
+      "path": "assets/upstream/forest-floor.png",
+      "status": 200,
+      "sha256": "61884978692cd4cfb09787504ee5f751b3570f386d2905069f1cbbdb086aa835",
+      "bytes": 2211633
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "sha256": "20f6ea0d7ae0c87e50990cf18538fddfffc1c77b4563492462f11991626ab70d",
+      "bytes": 7664
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "e2c451b147aa464193d69b38b3beb7a1377bd00b5867940cfb55f346743dcf1b",
+      "bytes": 14229
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "sha256": "f1082e9ad85b3aa675e2ad102f5a510b3271e475f6ebbae4f9dab9e0a3c753b3",
+      "bytes": 23675
+    }
+  ],
+  "all_http_200_and_matching": true,
+  "root_navigation_contains_project_and_cover": true
+}

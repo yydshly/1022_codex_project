@@ -228,6 +228,24 @@
       "cover": "assets/capability-overview.png",
       "cover_caption": "内置 ImageGen 参考上游样张生成的一图总览：展示海报、风味小怪兽、产品互动图与桌宠四种效果，解释照片、Skill、AI、Python及Electron的分工，并归纳内容表达、协作复用和角色延展价值。效果为概览合成，桌面为示意。",
       "demo_url": ""
+    },
+    {
+      "id": "016",
+      "slug": "verdant-forest",
+      "name": "Verdant Forest · 浏览器里的程序化森林",
+      "repo": "https://github.com/Leonxlnx/verdant-forest",
+      "summary": "在浏览器生成并漫游茂密的三维森林，呈现立体枝叶、林下花草、风动与林间光雾；可沉淀参数化植物生成、空间分布、实例化与LOD、风动着色、体积光合成和确定性镜头采集，扩展到自然展厅、庭院与旅宿导览、交互叙事网页及氛围短片。",
+      "status": "completed",
+      "tags": [
+        "Three.js",
+        "程序化植物",
+        "WebGL 2",
+        "森林漫游",
+        "渲染原理"
+      ],
+      "cover": "assets/understanding-overview.png",
+      "cover_caption": "使用我们已生成的理解总览图作引导：参考原版林下与树冠画面，说明森林生成、组织、渲染与交互输出能力，归纳可沉淀技术及自然展厅、庭院旅宿、交互叙事和短片的扩展价值。效果区为ImageGen参考排版，原始运行截图独立保留。",
+      "demo_url": ""
     }
   ]
 }

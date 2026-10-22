@@ -1,0 +1,8 @@
+# Byte-identical publish copies are recreated by scripts/package_web.py.
+web/assets/upstream/
+web/assets/evidence/
+web/assets/source-manifest.json
+web/assets/THIRD_PARTY_NOTICES.md
+web/assets/understanding-overview.png
+web/assets/overview-prompt.txt
+web/assets/overview.json

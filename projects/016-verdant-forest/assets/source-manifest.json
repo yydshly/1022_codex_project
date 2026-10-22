@@ -1,0 +1,72 @@
+{
+  "upstream": "https://github.com/Leonxlnx/verdant-forest",
+  "commit": "bb724d84fb683b8f1dea790c3e56f2ffadeb051e",
+  "retrieved": "2026-10-22",
+  "author": "Leonxlnx",
+  "license_note": "No repository-wide LICENSE/COPYING/NOTICE found in the pinned tree. Selected images are retained unmodified for attributed research commentary; no upstream application code is redistributed. Texture credits specify Poly Haven CC0 and Three.js MIT; these are not a license for the whole project.",
+  "files": [
+    {
+      "path": "assets/upstream/forest-floor.png",
+      "upstream_path": "artifacts/browser-approved-review/frame-0240.png",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/browser-approved-review/frame-0240.png",
+      "bytes": 2211633,
+      "sha256": "61884978692cd4cfb09787504ee5f751b3570f386d2905069f1cbbdb086aa835"
+    },
+    {
+      "path": "assets/upstream/canopy-start.png",
+      "upstream_path": "artifacts/browser-approved-review/frame-0750.png",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/browser-approved-review/frame-0750.png",
+      "bytes": 2110221,
+      "sha256": "05ebbdf5f8aee55390fb0e3ddceffaec42b5ed61bf8aa795a174604b877cd100"
+    },
+    {
+      "path": "assets/upstream/canopy.png",
+      "upstream_path": "artifacts/browser-approved-review/frame-0840.png",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/browser-approved-review/frame-0840.png",
+      "bytes": 2087116,
+      "sha256": "4aad60eade2185f92c1eddd06a5d57c072ee7fdd071a206d0c09b038e02fda51"
+    },
+    {
+      "path": "assets/evidence/browser-capture.json",
+      "upstream_path": "artifacts/browser-approved-review/capture-report-0.json",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/browser-approved-review/capture-report-0.json",
+      "bytes": 4604,
+      "sha256": "52d6d86d9ddf85d2f968d099ecc2331ec81b759d921cd4889884ece99ca42faa"
+    },
+    {
+      "path": "assets/upstream/bark-comparison.jpg",
+      "upstream_path": "artifacts/upgrade-bark/comparison.jpg",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/upgrade-bark/comparison.jpg",
+      "bytes": 253045,
+      "sha256": "94be1583044c8e2e7776fead5882bd344e5c8465de77d97df414bf084da19d8b"
+    },
+    {
+      "path": "assets/evidence/bark-review.md",
+      "upstream_path": "artifacts/upgrade-bark/REVIEW.md",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/upgrade-bark/REVIEW.md",
+      "bytes": 2577,
+      "sha256": "446a4ff3c11e15f34ea5dd8b88af983235d78a172d3cc39460f6b84786795d14"
+    },
+    {
+      "path": "assets/evidence/bark-manifest.json",
+      "upstream_path": "artifacts/upgrade-bark/manifest.json",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/upgrade-bark/manifest.json",
+      "bytes": 869,
+      "sha256": "c5156e8c976e32e72690e0c6133ef979b334d80b491f17cd2bc851981c53bab0"
+    },
+    {
+      "path": "assets/evidence/film-capture.json",
+      "upstream_path": "artifacts/upgrade-capture-run.json",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/artifacts/upgrade-capture-run.json",
+      "bytes": 6362,
+      "sha256": "6f6a86f248060acbbe7fd55c208dafd0b051c7f828a9f54b35d02e21e5b0256c"
+    },
+    {
+      "path": "assets/evidence/upstream-credits.txt",
+      "upstream_path": "public/credits.txt",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/verdant-forest/bb724d84fb683b8f1dea790c3e56f2ffadeb051e/public/credits.txt",
+      "bytes": 567,
+      "sha256": "52f7f4f936812ce1c1af764d0bdee334adb3fe8a69f4468e7ecb9b0f5224aa5a"
+    }
+  ]
+}

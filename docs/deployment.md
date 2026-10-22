@@ -185,3 +185,11 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 本地已检查七个效果版本、八种行为、十四个原理阶段、场景切换、键盘和六种屏宽。网页使用上游真实动画帧与阶段播放器，物理完成事件由按钮发送；未运行原生 Electron，也未按上游流程创作四类新作品。正式发布状态与证据以项目 deployment-verification.json 为准。
 
 015 源码已于 2026-10-22 推送 main。GitHub Actions 官方报告工作流与步骤结果处理延迟，发布任务仍在服务端排队，公网尚未验证成功；故 demo_url 留空。当前状态、提交和待核验项见项目 [deployment-verification.json](../projects/015-heytea-style/deployment-verification.json)。
+
+## 016 · Verdant Forest
+
+[程序化森林研究网页](../projects/016-verdant-forest/README.md)展示可漫游森林的立体枝叶、林下花草、风动和光雾；归纳参数化植物、确定性布局、实例化与LOD、GPU风动、体积光与镜头采集，探索自然展厅、庭院旅宿导览、交互叙事和氛围短片。引导图统一使用已有 `understanding-overview.png`，原始运行截图与生成图明确区分。
+
+构建前运行 `python projects/016-verdant-forest/scripts/package_web.py` 及 `--check`，由根汇总器发布 `016-verdant-forest/`。网页无npm依赖；图片、来源与生成指令按哈希校验。本页五个原理实验独立绘制，完整原版按需访问作者站点；当前未提供通用资产导出SDK或与009的直接代码整合。
+
+公开部署以本项目的 `deployment-verification.json` 和Actions记录为准；通过线上文件、引导图与摘要核对后填写登记表 `demo_url`。

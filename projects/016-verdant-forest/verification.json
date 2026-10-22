@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-22",
+  "project": "016-verdant-forest",
+  "upstream_commit": "bb724d84fb683b8f1dea790c3e56f2ffadeb051e",
+  "status": "local-complete",
+  "commands": {
+    "package_and_hash_check": "passed: 11 files; 3 images match upstream capture ledger",
+    "node_syntax_checks": "app.js and data.js passed",
+    "catalog_check": "passed: 16 projects, generated README in sync",
+    "catalog_regression_tests": "10 passed",
+    "site_assembly": "passed: 14 demos assembled in ignored _site directory",
+    "prefixed_http": "16 files HTTP 200 and SHA-256 equal to assembled files"
+  },
+  "browser": {
+    "browser": "Codex in-app browser",
+    "origin": "http://127.0.0.1:8017/1022_codex_project/016-verdant-forest/",
+    "viewports": [
+      {
+        "width": 375,
+        "height": 812,
+        "document_client_width": 360,
+        "document_scroll_width": 360
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "document_client_width": 753,
+        "document_scroll_width": 753
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "document_client_width": 1265,
+        "document_scroll_width": 1265
+      }
+    ],
+    "passed": [
+      "All gallery tabs change the image and caption",
+      "Gallery tab arrow keyboard navigation",
+      "Modal image next/previous, arrow keys and Escape",
+      "Bark comparison opens with correct label and closes with Escape",
+      "All five lab tabs, slider controls and readouts",
+      "Terrain and wind 0/100, instance 16/160, curved leaf 100",
+      "LOD high at 0, medium at 24, low at 56 and 100 metres",
+      "Wireframe checkbox and animation pause/play control",
+      "13 fixed-version source links in expandable source list",
+      "No damaged loaded images or page horizontal overflow at tested widths",
+      "Original explore/cinematic mode URL selection",
+      "Original iframe removed when stopped",
+      "Fullscreen control with an explicit exit button; exit returns to toolbar"
+    ],
+    "original_live": {
+      "remote": "https://verdant-forest.lexn8.chatgpt.site/?cinematic=1",
+      "canvas_data_status": "ready",
+      "actual_forest_frame_visually_observed": true,
+      "camera_shot_changes_visually_observed": true,
+      "interactive_fps_measured": false,
+      "performance_guarantee": false,
+      "initialization_note": "Scene generation and shader compilation take substantial time in this browser; no startup performance benchmark was performed."
+    },
+    "console": {
+      "research_page_script_errors": 0,
+      "upstream_shader_warnings": 2,
+      "warning": "Three.js X3595: gradient instruction used in a loop with varying iteration; observed on the upstream engine. Rendering still reached ready.",
+      "separate_from_local_page": true
+    },
+    "limits": [
+      "Reduced-motion preference handling is implemented but was not emulated in this browser session",
+      "Mobile and tablet checks are viewport layout tests, not physical-device GPU benchmarks",
+      "The remote live page may change independently of the pinned research version"
+    ]
+  },
+  "screenshots": {
+    "desktop": "assets/research/page-preview.png",
+    "mobile": "assets/research/mobile-preview.png",
+    "principle": "assets/research/principle-preview.png",
+    "original_live": "assets/research/original-live.png"
+  },
+  "publication": {
+    "public_deployment_performed": false,
+    "demo_url": "",
+    "github_pages_workflow_updated": true
+  },
+  "source_files": {
+    "web/index.html": "16e1c210b80da46acea8eb32763a0efa0b12d8eb608284f1c0a50f0c8c07e277",
+    "web/style.css": "2652c5de695c6037eeaca39eae286876e87fd820b278eddec416b8d07ca4f7b0",
+    "web/data.js": "20f6ea0d7ae0c87e50990cf18538fddfffc1c77b4563492462f11991626ab70d",
+    "web/app.js": "db1ae4866c854f85873e5284c9cdce45a16550b94d80189931b5f33ec27e0737",
+    "scripts/package_web.py": "b81064e64707f4ca218b8ad21af2e8d833cf54703d246858ae055d2e002c6dd0"
+  },
+  "prior_source_files_before_overview": {
+    "web/index.html": "e2c451b147aa464193d69b38b3beb7a1377bd00b5867940cfb55f346743dcf1b",
+    "web/style.css": "f1082e9ad85b3aa675e2ad102f5a510b3271e475f6ebbae4f9dab9e0a3c753b3",
+    "web/data.js": "20f6ea0d7ae0c87e50990cf18538fddfffc1c77b4563492462f11991626ab70d",
+    "web/app.js": "bc74ed87020477781b9fa602e7d75065935c2adb67055029f25c9a5b6ef3830e",
+    "scripts/package_web.py": "ec59311d77df64dfa73b12f661c34b8082bb91952b0c40b52d3632cf253dc4da"
+  },
+  "overview_update": {
+    "record": "assets/overview-verification.json",
+    "generated_image": "assets/understanding-overview.png",
+    "image_model": "built-in image_gen",
+    "source_images_unchanged": true,
+    "web_package_files": 14,
+    "published_http_files_verified_locally": 19,
+    "gallery_regression": "passed",
+    "public_deployment_performed": false
+  },
+  "publication_preflight": {
+    "date": "2026-10-22",
+    "summary": "capabilities/effects, reusable techniques, extension scenarios",
+    "guide": "assets/understanding-overview.png",
+    "guide_sha256": "3b1f2f154afb3b06e5b2eea220de88ceb3e513366289ad3daf7b40c79852e430",
+    "regression_tests": 11,
+    "catalog": "passed in isolated latest-main checkout",
+    "package": "14 source/credit files verified",
+    "javascript": "node --check passed",
+    "root_navigation": "project caption used; original shader atlas preserved",
+    "upstream_application_retested": false
+  }
+}
