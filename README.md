@@ -27,7 +27,7 @@
 | 006 | [oil-tone · 写作约束拆解](projects/006-oil-tone/README.md) | [oil-tone](https://github.com/oil-oil/oil-tone) | 将 23 条写作规则交给 AI，引导起草、润色与结构调整，保留事实、减少空话；适用于文章、产品文案与口播，可复用为我们的编辑标准和完整提示词 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/006-oil-tone/) |
 | 007 | [dr-aria · 角色效果与表达图鉴](projects/007-dr-aria/README.md) | [dr-aria](https://github.com/MPMyburgh/dr-aria) | 将 Agent 回复和部分运行状态转成可见角色反馈：预制字符画配合事件驱动动作、文字驱动气泡与嘴型，呈现等待、思考、工作和回复，让等待有反馈、对话有角色，并可作为自有 Agent 的表达层 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/007-dr-aria/) |
 | 009 | [WebGPU Render Pipeline · 光照效果实现与复用](projects/009-webgpu-render-pipeline/README.md) | [web-starter-kit-webgpu-pipline](https://github.com/vibegameengine/web-starter-kit-webgpu-pipline) | 在浏览器实现反弹光、环境补光、软阴影及水面与植被受光：先用 BVH/Surfel 估计间接光，缓存为 Lightmap/空间探针，再实时合成画面；可沉淀为游戏、空间漫游和 Web3D 展厅的渲染能力，附一图总览与四场景交互 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/) |
-| 010 | [Jianying Headless · 原理研究与双仓离线备份](projects/010-jianying-headless/README.md) | [jianying-headless](https://github.com/mcncarl/jianying-headless) | 逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；说明核心库、Skill、REA 的分工与扩展位置，并离线归档两个上游仓库的 Git 历史、源码及恢复校验资料，防止上游失联 | 研究中 | — |
+| 010 | [Jianying Headless · 原理研究与双仓离线备份](projects/010-jianying-headless/README.md) | [jianying-headless](https://github.com/mcncarl/jianying-headless) | 逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；归档 2026-10-22 获取的 jianying-headless 与整个 yichen-skills（含 yichen-jianying-edit），统一 ZIP 约 24 MiB，保留 Git 历史、源码、原许可与校验恢复资料，防止上游失联 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/010-jianying-headless/) |
 | 011 | [Auto Paper Digest · 水生毒理学研究档案](projects/011-open-notebook-research/README.md) | [auto-paper-digest](https://github.com/brianxiadong/auto-paper-digest) | Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集、NotebookLM 生成和归档；我们补 Europe PMC 领域检索，切换 Open Notebook 的 Next.js/FastAPI/SurrealDB 与 MiniMax 问答路线，再精读原文，形成可追溯的水生毒理学研究：3篇详细报告、1篇综合及完整证据。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/) |
 | 012 | [Super Hermes · 多 Skill 问题定位与审查](projects/012-super-hermes/README.md) | [super-hermes](https://github.com/Cranot/super-hermes) | 面向代码问题定位与方案审查的提示词 Skill 包：5 个 Skill 组织定向检查、多轮反驳、三视角分析、方向探索与盲区记录，7 份模板提供检查角度。模型结合材料分析，工具和证据验证；本研究归纳七步定位与九项报告，可复用为跨项目排查规范。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/012-super-hermes/) |
 | 013 | [Old Coder · AI 编码的验收与证据](projects/013-old-coder/README.md) | [old-coder](https://github.com/AmazingAng/old-coder) | 把需求写成SPEC，以测试驱动、多层检查和可复跑报告核对AI代码，让已定义的错误可暴露、交付有据可验；可沉淀验收模板、故障模型、变异与属性测试、检查器和CI门槛，扩展到订单库存、权限与API、重构迁移及团队发布验收 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/013-old-coder/) |
@@ -141,13 +141,13 @@
 
 ### 010 · Jianying Headless · 原理研究与双仓离线备份
 
-逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；说明核心库、Skill、REA 的分工与扩展位置，并离线归档两个上游仓库的 Git 历史、源码及恢复校验资料，防止上游失联
+逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；归档 2026-10-22 获取的 jianying-headless 与整个 yichen-skills（含 yichen-jianying-edit），统一 ZIP 约 24 MiB，保留 Git 历史、源码、原许可与校验恢复资料，防止上游失联
 
 ![010 · Jianying Headless · 原理研究与双仓离线备份 项目封面](projects/010-jianying-headless/assets/research-overview.svg)
 
-> 本研究原创理解总览：Skill 指导 AI，核心库构建草稿并桥接剪映引擎，REA 辅助适配；标出三个扩展位置、产出、价值与边界。源码已核对，剪映原生运行尚未本机实测。
+> 原创原理图：Skill 指导 AI，核心库桥接本机剪映引擎，REA 辅助适配；子项目另存两仓固定版本的 Git bundle、源码 ZIP、许可和恢复资料。原生运行尚未本机实测。
 
-[研究详情](projects/010-jianying-headless/README.md) · [原始仓库](https://github.com/mcncarl/jianying-headless)
+[研究详情](projects/010-jianying-headless/README.md) · [原始仓库](https://github.com/mcncarl/jianying-headless) · [在线演示](https://yydshly.github.io/1022_codex_project/010-jianying-headless/)
 
 标签：原生草稿 / 内部接口 / AI 编排 / 逆向适配 / 扩展研究 / 离线备份
 
@@ -297,6 +297,8 @@ python scripts/project_catalog.py check
 已发布 [演示总导航](https://yydshly.github.io/1022_codex_project/) 和 [001 · SwiftUIShaders 图解与 41 种特效](https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/)。项目页先用两张引导图说明能力、原理、效果、场景与扩展方向，再提供完整交互实验。构建与自动部署方式见 [Web 部署指南](docs/deployment.md)。
 
 已发布 [002 · Todofy 任务展示板与管理驱动](https://yydshly.github.io/1022_codex_project/002-todofy/)：列表、看板和日历展示任务，编辑、状态流转、提醒、计时与存储支撑管理。对我们主要是看板样式、卡片信息层级和交互组织的参考；用我们生成的总结图引导，再看八张源库官方原图、原理与六个场景。总结图和八张原图已完成线上文件校验，切换、放大、原理与场景导航已通过浏览器检查。
+
+已发布 [010 · 剪映引擎原理与双仓离线备份](https://yydshly.github.io/1022_codex_project/010-jianying-headless/)：理解逆向适配工程格式和内部接口、复用本机引擎与扩展控制层。为防上游删除、封禁或访问中断，保存 **2026-10-22** 获取的 `jianying-headless` 和**整个 `yichen-skills`（含 `yichen-jianying-edit`）**，统一 ZIP 约 **24 MiB**，保留 Git 历史、源码、原许可、SHA-256 与离线恢复资料。[备份 ZIP](projects/010-jianying-headless/backups/upstream-preservation-20261022.zip) · [备份与恢复说明](projects/010-jianying-headless/backups/README.md)。
 
 ## 来源与许可
 

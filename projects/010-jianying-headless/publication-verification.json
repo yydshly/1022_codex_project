@@ -47,13 +47,76 @@
   },
   "native_jianying_tested": false,
   "pages": {
-    "status": "deployment-queued",
-    "expected_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/",
-    "public_index_last_http_status": 404,
-    "verified_published": false,
-    "scope": "远端源码、研究说明和归档已提交并校验；网页部署排队状态不等于发布成功。"
+    "status": "public-assets-verified",
+    "url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/",
+    "public_index_last_http_status": 200,
+    "verified_published": true,
+    "verification": "10个正式路径文件均HTTP200并逐字节匹配主内容提交，已在浏览器打开首屏与备份说明。",
+    "files": [
+      {
+        "path": "app.js",
+        "status": 200,
+        "bytes": 7972,
+        "sha256": "1975402bfdda069e0ef1bd1e70b6a39f3c9b62b621560861a2716ecdf6085697"
+      },
+      {
+        "path": "data.js",
+        "status": 200,
+        "bytes": 46364,
+        "sha256": "736f78e2ed1291d1bd296a118176e108d399a62e5b4e5b2dd546fe4b861bcb0e"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 19469,
+        "sha256": "607497f247e77b8c86498d7d523d2def9a6aa4e361ab4ce876f41a1eee92a2b0"
+      },
+      {
+        "path": "standalone.html",
+        "status": 200,
+        "bytes": 120692,
+        "sha256": "0d31ef8abdf6a4f6fcdac4dc3cfade9a7d5578350b2ef6d444850c4be2208e12"
+      },
+      {
+        "path": "style.css",
+        "status": 200,
+        "bytes": 29404,
+        "sha256": "bcba83ca5788bf68f91e6a8c23cc2a821f614cf17a877a389990463cfdedf17c"
+      },
+      {
+        "path": "assets/backup-summary.json",
+        "status": 200,
+        "bytes": 496,
+        "sha256": "88672a7ed09aea0d45c54472382ca9590fb828f261ebfb1712c9c7b797b07077"
+      },
+      {
+        "path": "assets/build-manifest.json",
+        "status": 200,
+        "bytes": 1424,
+        "sha256": "decdb30234f3d37c9e0289d7c12196c7614912e6ea21171a57185cffa739f6df"
+      },
+      {
+        "path": "assets/research-data.json",
+        "status": 200,
+        "bytes": 26991,
+        "sha256": "96dcfc178c9cfec9299aec94bf3ce00e567e28981fdb19a2de00ef813335310f"
+      },
+      {
+        "path": "assets/research-notes.md",
+        "status": 200,
+        "bytes": 19052,
+        "sha256": "9e34502a27c3800775ff38e107872b5c0cf9de6eb53a238ec7964d1624e5525b"
+      },
+      {
+        "path": "assets/research-overview.svg",
+        "status": 200,
+        "bytes": 6592,
+        "sha256": "8c4497640a690721a0a5c7d1e9691290a45f2eae64ff744b209c06bd47439b43"
+      }
+    ],
+    "workflow_note": "原发布工作流现已 completed/success，build 与 deploy 均成功（updated_at 2026-10-22T16:44:42Z）。此前 waiting 为历史观察；取消请求到达时已完成，未实际取消。"
   },
-  "checked_at": "2026-10-23T00:36:00+08:00",
+  "checked_at": "2026-10-23T00:44:42.476357+08:00",
   "ci": {
     "catalog": {
       "run_id": 39814410409,
@@ -67,8 +130,39 @@
       "archive_and_web_verification_step": "success",
       "build_steps": "success",
       "deploy_job_id": 119949797849,
-      "deploy_status": "queued",
-      "last_api_updated_at": "2026-10-22T16:30:27Z"
+      "deploy_status": "completed",
+      "last_api_updated_at": "2026-10-22T16:44:42Z",
+      "status": "completed",
+      "conclusion": "success",
+      "build_status": "completed",
+      "build_conclusion": "success",
+      "deploy_conclusion": "success"
     }
+  },
+  "previous_pages_observation": {
+    "status": "deployment-queued",
+    "expected_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/",
+    "public_index_last_http_status": 404,
+    "verified_published": false,
+    "scope": "远端源码、研究说明和归档已提交并校验；网页部署排队状态不等于发布成功。"
+  },
+  "browser": {
+    "opened": true,
+    "title": "复用引擎，重建控制层 · 剪映研究 010",
+    "screenshots": {
+      "assets/verification/online-public-page.jpg": {
+        "bytes": 46508,
+        "sha256": "ed0b4b9286aa0b6538487d0d4622f5e4c6135c3a266da210337480ba85d6bbf8"
+      },
+      "assets/verification/online-backup-description.jpg": {
+        "bytes": 44442,
+        "sha256": "ff105b8ece35247c24559deae121cc6c0307f17caa6cb66effac643810c8e239"
+      }
+    }
+  },
+  "navigation_update": {
+    "status": "prepared",
+    "summary": "最外层README和总导航明确列出两仓名称、2026-10-22快照、约24MiB统一ZIP、历史/源码/许可/校验恢复内容及防失联目的；总导航新增双仓备份与恢复入口。",
+    "tests": "目录检查、11项scripts/tests单元测试、17项目站点构建和010导航内容检查通过。"
   }
 }

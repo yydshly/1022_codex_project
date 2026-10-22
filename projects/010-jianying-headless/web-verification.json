@@ -140,7 +140,6 @@
   "limitations": [
     "未在本机运行剪映、验证桥接或渲染实际视频",
     "八项扩展均为提案，尚未实现",
-    "未发布本次网页；demo_url 保持为空",
     "离线单文件未完成 file: 浏览器打开验证"
   ],
   "latest_update": {
@@ -184,5 +183,7 @@
     "archive_bytes": 25087701,
     "checks": "网页重新生成并校验；归档只依靠最终ZIP独立验证和恢复；截图保留前次首屏设计验收记录。",
     "native_jianying_tested": false
-  }
+  },
+  "publication_record": "publication-verification.json",
+  "published_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/"
 }

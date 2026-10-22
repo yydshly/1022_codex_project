@@ -19,6 +19,7 @@ Actions 汇总前运行 `python projects/017-sparkvsr/scripts/package_web.py`、
 | 002 · Todofy | https://yydshly.github.io/1022_codex_project/002-todofy/ |
 | 004 · XXD Panel 106 | https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/ |
 | 009 · WebGPU 光照效果实现与复用 | https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/ |
+| 010 · 剪映引擎原理与双仓离线备份 | https://yydshly.github.io/1022_codex_project/010-jianying-headless/ |
 
 2026-10-21 已完成首次发布。构建与部署任务成功，两个入口及运行资源返回 HTTP 200；两张引导图的线上内容与本地 SHA-256 一致。已在浏览器检查 41 项效果入口、完整图集、8 个真实效果模块与摘要内容。详见 [部署检查记录](../projects/001-swiftui-shaders/deployment-verification.json)。
 

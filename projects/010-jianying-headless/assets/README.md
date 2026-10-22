@@ -12,3 +12,5 @@
 verification/ 下的 desktop.jpg、desktop-1280.jpg、mobile-375.jpg、mechanism-desktop.jpg、extensions-desktop.jpg 为本次研究网页的真实浏览器截图，分别展示首屏、手机布局、实现链路与扩展方向。它们不是剪映原生运行证据；哈希与具体检查见 ../web-verification.json。
 
 2026-10-23 的 understanding-desktop-1280.jpg、understanding-mobile-375.jpg、understanding-mobile-rea.jpg、understanding-default.jpg 展示更新后的首屏关系图与手机端研究辅助说明；understanding-svg.jpg 为下载总览图的实际浏览器画面。此前验收画面保留为原版页面的记录。
+
+online-public-page.jpg 与 online-backup-description.jpg 是正式 GitHub Pages 地址的实际浏览器画面，展示原理总览和双仓归档说明；online-root-backup-navigation.jpg 用于记录总导航更新后的备份摘要与恢复入口。它们均为研究网页验收图，不代表剪映原生运行测试。

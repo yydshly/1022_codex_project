@@ -4,6 +4,8 @@
 
 **[打开交互研究网页](web/index.html)** · [完整离线网页](web/standalone.html) · [结构化研究资料](research.json) · **[两个上游仓库的统一备份 ZIP](backups/upstream-preservation-20261022.zip)** · [校验与恢复说明](BACKUP.md)
 
+**线上阅读：[剪映引擎原理与双仓离线备份](https://yydshly.github.io/1022_codex_project/010-jianying-headless/)**。已核对 10 个线上文件与内容提交逐字节一致，并在浏览器打开验证首屏与备份说明。
+
 **本项目包含两类成果。** 原创研究说明解释“如何调用、能力从哪里来、可以在哪层扩展”；离线备份保存 2026-10-22 获取的 `jianying-headless` 和整个 `yichen-skills`（包含 `yichen-jianying-edit`）。2026-10-23 将这些既有副本统一打包，归档随本子项目保存，远端克隆后也能恢复，后续不必依赖上游仍可访问。
 
 备份含两个全引用 Git bundle、两个主分支源码 ZIP、引用映射、文件清单、SHA-256、恢复记录和原始许可声明，共 **67 个 Git 引用、187 个可达提交、357 个主分支文件**。它不包含剪映官方引擎、安装包或用户账号数据；详细清单见 [归档记录](preservation-package.json) 与 [备份目录说明](backups/README.md)。

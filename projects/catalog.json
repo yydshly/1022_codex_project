@@ -144,7 +144,7 @@
       "slug": "jianying-headless",
       "name": "Jianying Headless · 原理研究与双仓离线备份",
       "repo": "https://github.com/mcncarl/jianying-headless",
-      "summary": "逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；说明核心库、Skill、REA 的分工与扩展位置，并离线归档两个上游仓库的 Git 历史、源码及恢复校验资料，防止上游失联",
+      "summary": "逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；归档 2026-10-22 获取的 jianying-headless 与整个 yichen-skills（含 yichen-jianying-edit），统一 ZIP 约 24 MiB，保留 Git 历史、源码、原许可与校验恢复资料，防止上游失联",
       "status": "researching",
       "tags": [
         "原生草稿",
@@ -155,8 +155,8 @@
         "离线备份"
       ],
       "cover": "assets/research-overview.svg",
-      "cover_caption": "本研究原创理解总览：Skill 指导 AI，核心库构建草稿并桥接剪映引擎，REA 辅助适配；标出三个扩展位置、产出、价值与边界。源码已核对，剪映原生运行尚未本机实测。",
-      "demo_url": ""
+      "cover_caption": "原创原理图：Skill 指导 AI，核心库桥接本机剪映引擎，REA 辅助适配；子项目另存两仓固定版本的 Git bundle、源码 ZIP、许可和恢复资料。原生运行尚未本机实测。",
+      "demo_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/"
     },
     {
       "id": "011",
