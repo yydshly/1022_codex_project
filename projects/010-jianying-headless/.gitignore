@@ -1,0 +1,5 @@
+# Keep only the portable research archive, its checksum, and recovery guide.
+backups/*
+!backups/README.md
+!backups/upstream-preservation-20261022.zip
+!backups/upstream-preservation-20261022.zip.sha256

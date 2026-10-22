@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<title id="title">Jianying Headless 核心与 Skill 本地保全</title>
+<desc id="desc">两个原始仓库保存为完整 Git 镜像，生成 bundle 和主分支 ZIP；67 个引用、357 个主分支文件通过离线恢复验证。</desc>
+<rect width="1280" height="720" rx="24" fill="#101f32"/>
+<g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif">
+<text x="64" y="72" fill="#83dfd0" font-size="18" letter-spacing="3">PROJECT 010 / LOCAL SOURCE PRESERVATION</text>
+<text x="64" y="144" fill="#f2f7ff" font-size="42" font-weight="700">先保全源码，再继续研究</text>
+<text x="64" y="187" fill="#afc1d4" font-size="21">Jianying Headless 核心 + yichen-jianying-edit 所在完整仓库</text>
+<rect x="64" y="240" width="354" height="210" rx="18" fill="#1c354d" stroke="#45647e"/>
+<text x="88" y="282" fill="#afc1d4" font-size="18">原始仓库</text>
+<text x="88" y="327" fill="#f3f8ff" font-size="26">jianying-headless</text>
+<text x="88" y="360" fill="#83dfd0" font-size="18">27c2627 · 79 commits</text>
+<text x="88" y="403" fill="#f3f8ff" font-size="26">yichen-skills</text>
+<text x="88" y="433" fill="#83dfd0" font-size="18">9bd7898 · 108 commits</text>
+<text x="440" y="355" fill="#83dfd0" font-size="34">→</text>
+<rect x="500" y="240" width="250" height="210" rx="18" fill="#1c354d" stroke="#45647e"/>
+<text x="526" y="282" fill="#afc1d4" font-size="18">保留历史与分支</text>
+<text x="526" y="341" fill="#f3f8ff" font-size="32" font-weight="700">Git 镜像</text>
+<text x="526" y="387" fill="#bed1e2" font-size="22">67 个引用</text>
+<text x="526" y="425" fill="#bed1e2" font-size="17">分支 · 标签 · PR 历史</text>
+<text x="780" y="355" fill="#83dfd0" font-size="34">→</text>
+<rect x="840" y="240" width="376" height="210" rx="18" fill="#1c354d" stroke="#45647e"/>
+<text x="866" y="282" fill="#afc1d4" font-size="18">可离线恢复的便携备份</text>
+<text x="866" y="337" fill="#f3f8ff" font-size="28" font-weight="700">bundle + 源码 ZIP</text>
+<text x="866" y="383" fill="#bed1e2" font-size="21">357 个主分支文件</text>
+<text x="866" y="425" fill="#bed1e2" font-size="18">原许可证 · 素材 · SHA-256</text>
+<rect x="64" y="497" width="1152" height="112" rx="18" fill="#163b40" stroke="#41766e"/>
+<text x="96" y="545" fill="#e6fff6" font-size="27" font-weight="600">离线恢复验证通过</text>
+<text x="96" y="581" fill="#b5dacf" font-size="20">bundle → 新镜像 → 全引用及 HEAD 一致 → fsck 与文件校验通过</text>
+<text x="64" y="667" fill="#a7bdd1" font-size="18">2026-10-22 · 本机保全 · 运行剪映所需官方程序库仍需另行安装</text>
+</g>
+</svg>

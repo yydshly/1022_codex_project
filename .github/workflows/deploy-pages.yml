@@ -42,6 +42,13 @@ jobs:
           python scripts/project_catalog.py check
           python projects/001-swiftui-shaders/scripts/build_gallery.py --check
           python projects/001-swiftui-shaders/scripts/build_native.py --check
+      - name: Verify Jianying research and offline preservation archive
+        run: |
+          python projects/010-jianying-headless/scripts/package_preservation.py --check
+          python projects/010-jianying-headless/scripts/package_web.py --check
+          python projects/010-jianying-headless/scripts/verify_web.py
+          node --check projects/010-jianying-headless/web/app.js
+          node --check projects/010-jianying-headless/web/data.js
       - name: Package and verify heytea-style research page
         run: |
           python projects/015-heytea-style/scripts/package_web.py

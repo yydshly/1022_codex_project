@@ -1,0 +1,188 @@
+{
+  "schema": "jianying-research-web-verification/v1",
+  "date": "2026-10-22",
+  "status": "local-web-verified",
+  "scope": "原创研究网页的内容、交互、响应式、下载与编号路径；不包含剪映原生运行或扩展提案实现。",
+  "build_manifest": "web/assets/build-manifest.json",
+  "build_manifest_sha256": "decdb30234f3d37c9e0289d7c12196c7614912e6ea21171a57185cffa739f6df",
+  "checks": [
+    {
+      "name": "generated-artifacts",
+      "result": "passed",
+      "evidence": "package_web.py --check 与 verify_web.py 均通过"
+    },
+    {
+      "name": "javascript-syntax",
+      "result": "passed",
+      "evidence": "node --check app.js 与 data.js 通过"
+    },
+    {
+      "name": "architecture-modes",
+      "result": "passed",
+      "evidence": "3 个模式切换，选中状态与运行时依赖文字相符"
+    },
+    {
+      "name": "mechanism-steps",
+      "result": "passed",
+      "evidence": "6 步均可切换；本地登记的可选交接关系已回查"
+    },
+    {
+      "name": "extension-filter",
+      "result": "passed",
+      "evidence": "先做基础 3、扩展工作流 2、继续研究 3、全部 8；提案可展开"
+    },
+    {
+      "name": "route-and-faq",
+      "result": "passed",
+      "evidence": "复用 / 独立重建可切换；REA 问题展开有完整说明"
+    },
+    {
+      "name": "keyboard-tabs",
+      "result": "passed",
+      "evidence": "ArrowRight 切换下一项、Home 回到首项，aria-selected 一致"
+    },
+    {
+      "name": "downloads",
+      "result": "passed",
+      "evidence": "实际下载 Markdown 与 JSON，最终结果和生成资料逐字节 / 结构一致"
+    },
+    {
+      "name": "dom-links-and-images",
+      "result": "passed",
+      "evidence": "浏览器检查无缺失内部锚点，无已加载损坏图片"
+    },
+    {
+      "name": "console",
+      "result": "passed",
+      "evidence": "主要交互后捕获的 warn / error 均为空"
+    },
+    {
+      "name": "shared-navigation",
+      "result": "passed",
+      "evidence": "根 build_site.py 实际构建成功，总导航包含 010 与原创研究封面"
+    },
+    {
+      "name": "prefixed-route",
+      "result": "passed",
+      "evidence": "10 个文件在带前缀编号路径返回成功且响应字节与源码一致"
+    },
+    {
+      "name": "private-backup-boundary",
+      "result": "passed",
+      "evidence": "web/ 不包含 _upstream、backups、bundle、ZIP 或原始上游源码"
+    }
+  ],
+  "responsive": [
+    {
+      "width": 375,
+      "documentWidth": 360,
+      "horizontalOverflow": false
+    },
+    {
+      "width": 768,
+      "documentWidth": 753,
+      "horizontalOverflow": false
+    },
+    {
+      "width": 1280,
+      "documentWidth": 1265,
+      "horizontalOverflow": false
+    }
+  ],
+  "offline_document": {
+    "path": "web/standalone.html",
+    "embedded_assets_verified": true,
+    "browser_file_open": "blocked",
+    "reason": "验收浏览器仅允许 http/https，file: 被 URL 安全策略拒绝；未通过其他浏览器或间接方式绕过。单文件嵌入资源与脚本语法已检查，不宣称直接打开离线文件的浏览器验收通过。"
+  },
+  "screenshots": {
+    "assets/verification/desktop-1280.jpg": {
+      "bytes": 77113,
+      "sha256": "f522c5edc20147773dc9768abcea75fa4d6c8a14513d4024c0dde770af31a91c"
+    },
+    "assets/verification/desktop.jpg": {
+      "bytes": 70797,
+      "sha256": "ede3d68cf051335449462ca94a6d1a5cd73ecd6defdf398d0e4f70f828c4148c"
+    },
+    "assets/verification/extensions-desktop.jpg": {
+      "bytes": 67836,
+      "sha256": "be0665ee4ed33001a802b7a2c6e4f63530c7bc9bd6e1e5dbf2859514b242f406"
+    },
+    "assets/verification/mechanism-desktop.jpg": {
+      "bytes": 79070,
+      "sha256": "2776d073c33d5046afb14e7fec8159153ef999c1fe03fbc2f396483cf6fc3edc"
+    },
+    "assets/verification/mobile-375.jpg": {
+      "bytes": 39177,
+      "sha256": "dc75bb66d0803049577139f120bc81874dad974c981dfdcaabc33edc6a53318d"
+    },
+    "assets/verification/understanding-default.jpg": {
+      "bytes": 56901,
+      "sha256": "89676551c140be6f9c2ee5d9599cee6989ff4b75f546ce3fbba16257cb2517c5"
+    },
+    "assets/verification/understanding-desktop-1280.jpg": {
+      "bytes": 86988,
+      "sha256": "798065abf2dcfc801ea8072f91842403bc4d6a3b1654b0f2ecb8fb8fc43de97e"
+    },
+    "assets/verification/understanding-mobile-375.jpg": {
+      "bytes": 40679,
+      "sha256": "6883f14e5bb422503a0c12e6562f1eb98c6472a2320cd52b52156774ed876c30"
+    },
+    "assets/verification/understanding-mobile-rea.jpg": {
+      "bytes": 38921,
+      "sha256": "2e5f34895e251408ace1ebd308195674c492b99b9bf2929c4949bc079fcee21f"
+    },
+    "assets/verification/understanding-svg.jpg": {
+      "bytes": 112437,
+      "sha256": "c56958e7550b30f9f68db755c28ddd8023a5e406d4314012208d3020f72830d3"
+    }
+  },
+  "limitations": [
+    "未在本机运行剪映、验证桥接或渲染实际视频",
+    "八项扩展均为提案，尚未实现",
+    "未发布本次网页；demo_url 保持为空",
+    "离线单文件未完成 file: 浏览器打开验证"
+  ],
+  "latest_update": {
+    "date": "2026-10-23",
+    "change": "首屏前置理解主线关系图，说明 Skill、核心库、剪映引擎与 REA，标出三个扩展位置，汇总产出、价值与边界。",
+    "checks": [
+      "当前编号路径已刷新并确认首个 figure 为 overview-title；内部锚点与已加载图片无缺失。",
+      "扩展标记可跳转至提案；移至核心理解的架构切换仍可用。",
+      "375 / 768 / 1280 视口均无文档横向溢出；900 像素及以下按执行顺序排列。",
+      "SVG 实际打开检查，文字边界均在 1280×800 范围内。",
+      "实际下载 SVG 和 Markdown，逐字节匹配最终产物；JSON 结构一致，理解主线进入两种资料。",
+      "离线单文件同步包含关系图、资料和内嵌 SVG 下载；保留此前 file: 验收限制。"
+    ],
+    "console": {
+      "observed": "导航到 SVG 再返回时捕获一次 animation in undefined 的浏览器侧异常，无来源 URL；刷新最终页面后未出现新增日志。",
+      "message": "Uncaught (in promise) TypeError: Cannot use 'in' operator to search for 'animation' in undefined",
+      "scope": "未归因到本页脚本；已通过所测交互和下载，不将控制台记录描述为全空。"
+    },
+    "responsive": [
+      {
+        "width": 375,
+        "documentWidth": 360
+      },
+      {
+        "width": 768,
+        "documentWidth": 753
+      },
+      {
+        "width": 1280,
+        "documentWidth": 1265
+      }
+    ],
+    "native_jianying_tested": false,
+    "deployed": false
+  },
+  "remote_submission_preparation": {
+    "date": "2026-10-23",
+    "change": "摘要同时说明逆向适配、引擎复用与两个原始仓库的离线归档；网页备份说明链接到子项目归档目录。",
+    "archive": "backups/upstream-preservation-20261022.zip",
+    "sha256": "ad9ecfa4cacfbf0a721b70b93d81df78c8fc6555d38b018d0b34d947142a6381",
+    "archive_bytes": 25087701,
+    "checks": "网页重新生成并校验；归档只依靠最终ZIP独立验证和恢复；截图保留前次首屏设计验收记录。",
+    "native_jianying_tested": false
+  }
+}

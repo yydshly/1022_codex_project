@@ -1,0 +1,37 @@
+{
+  "schema": "jianying-research-web/v1",
+  "date": "2026-10-22",
+  "scope": "依据固定源码、作者公开记录和本地 Git 保全结果整理；没有在本机验证剪映原生运行。扩展方向属于我们的研究提案。",
+  "upstream_code_included": false,
+  "files": {
+    "data.js": {
+      "bytes": 46364,
+      "sha256": "736f78e2ed1291d1bd296a118176e108d399a62e5b4e5b2dd546fe4b861bcb0e"
+    },
+    "assets/research-data.json": {
+      "bytes": 26991,
+      "sha256": "96dcfc178c9cfec9299aec94bf3ce00e567e28981fdb19a2de00ef813335310f"
+    },
+    "assets/research-notes.md": {
+      "bytes": 19052,
+      "sha256": "9e34502a27c3800775ff38e107872b5c0cf9de6eb53a238ec7964d1624e5525b"
+    },
+    "assets/research-overview.svg": {
+      "bytes": 6592,
+      "sha256": "8c4497640a690721a0a5c7d1e9691290a45f2eae64ff744b209c06bd47439b43"
+    },
+    "assets/backup-summary.json": {
+      "bytes": 496,
+      "sha256": "88672a7ed09aea0d45c54472382ca9590fb828f261ebfb1712c9c7b797b07077"
+    },
+    "standalone.html": {
+      "bytes": 120692,
+      "sha256": "0d31ef8abdf6a4f6fcdac4dc3cfade9a7d5578350b2ef6d444850c4be2208e12"
+    }
+  },
+  "source_files": {
+    "index.html": "607497f247e77b8c86498d7d523d2def9a6aa4e361ab4ce876f41a1eee92a2b0",
+    "app.js": "1975402bfdda069e0ef1bd1e70b6a39f3c9b62b621560861a2716ecdf6085697",
+    "style.css": "bcba83ca5788bf68f91e6a8c23cc2a821f614cf17a877a389990463cfdedf17c"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-22T13:58:29.555088+08:00",
+  "status": "verified",
+  "repositories": [
+    {
+      "name": "jianying-headless",
+      "head_commit": "27c2627bbd0fccc8484000f32e9d66a820f4b698",
+      "ref_count": 38,
+      "reachable_commits": 79,
+      "source_file_count": 108
+    },
+    {
+      "name": "yichen-skills",
+      "head_commit": "9bd78982aa75aa179258bc9009fe4dcf2f2973b9",
+      "ref_count": 29,
+      "reachable_commits": 108,
+      "source_file_count": 249
+    }
+  ]
+}

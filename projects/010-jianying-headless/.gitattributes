@@ -1,0 +1,6 @@
+# Keep generated content and SHA-256 checks stable on Windows and Linux.
+* text=auto eol=lf
+*.zip binary
+*.bundle binary
+*.jpg binary
+*.png binary

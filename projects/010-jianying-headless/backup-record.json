@@ -1,0 +1,134 @@
+{
+  "schema": "jianying-upstream-backup/v1",
+  "created_at": "2026-10-22T13:58:29.555088+08:00",
+  "git_version": "git version 2.42.0.windows.2",
+  "scope": "All locally mirrored advertised Git refs, reachable history, and HEAD source trees",
+  "excludes": [
+    "GitHub issues/comments",
+    "release attachments",
+    "unadvertised/deleted objects",
+    "Jianying application binaries",
+    "external runtime and third-party services"
+  ],
+  "backup_directory": "backups/20261022T135829+0800",
+  "manifest_sha256": "2d7141c1fea1fca15957347f84620220547a1c17d111b54c6ee671aeeece4644",
+  "repositories": [
+    {
+      "name": "jianying-headless",
+      "origin": "https://github.com/mcncarl/jianying-headless.git",
+      "head_ref": "refs/heads/main",
+      "head_commit": "27c2627bbd0fccc8484000f32e9d66a820f4b698",
+      "head_commit_time": "2026-10-21T11:57:56+08:00",
+      "reachable_commits": 79,
+      "branches": 10,
+      "tags": 0,
+      "pull_refs": 28,
+      "lfs_objects": 0,
+      "submodule_history": false,
+      "mirror": "_upstream/jianying-headless.git",
+      "bundle": "jianying-headless.bundle",
+      "source_directory": "_upstream/sources/20261022T135829+0800/jianying-headless",
+      "restored_mirror": "_upstream/restore-checks/20261022T135829+0800/jianying-headless.git",
+      "license_files": [
+        "LICENSE",
+        "NOTICE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/Apache-2.0.txt",
+        "licenses/jy-draftc-MIT.txt",
+        "licenses/pyJianYingDraft-0.3.0-Apache-2.0.txt",
+        "skills/yichen-jianying-edit/LICENSE",
+        "skills/yichen-jianying-edit/references/dependencies-and-notices.md"
+      ],
+      "artifacts": {
+        "jianying-headless.bundle": {
+          "sha256": "0ed86334a3547ae377434f49f8c0d6d5e93bf1214a7936e4523f9b0a9642eab9",
+          "bytes": 11285148
+        },
+        "jianying-headless-27c2627bbd0f.zip": {
+          "sha256": "152869eb39f85fad13539f171e1c5101c70c0f0efa7d03a48d6618961d87d0cf",
+          "bytes": 10781351
+        },
+        "jianying-headless-refs.json": {
+          "sha256": "580f6cb2fe6d4ffb9284350ae1cbb7f00025b6d45619d719b7109c001481b7b1",
+          "bytes": 2854
+        }
+      },
+      "ref_count": 38,
+      "source_file_count": 108
+    },
+    {
+      "name": "yichen-skills",
+      "origin": "https://github.com/mcncarl/yichen-skills.git",
+      "head_ref": "refs/heads/main",
+      "head_commit": "9bd78982aa75aa179258bc9009fe4dcf2f2973b9",
+      "head_commit_time": "2026-10-04T18:44:55+08:00",
+      "reachable_commits": 108,
+      "branches": 7,
+      "tags": 2,
+      "pull_refs": 20,
+      "lfs_objects": 0,
+      "submodule_history": false,
+      "mirror": "_upstream/yichen-skills.git",
+      "bundle": "yichen-skills.bundle",
+      "source_directory": "_upstream/sources/20261022T135829+0800/yichen-skills",
+      "restored_mirror": "_upstream/restore-checks/20261022T135829+0800/yichen-skills.git",
+      "license_files": [
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/JimLiu-baoyu-skills-license-note.txt",
+        "licenses/KKKKhazix-khazix-skills-LICENSE.txt",
+        "licenses/afar1-fieldtheory-cli-LICENSE.txt",
+        "licenses/joeseesun-yt-search-download-LICENSE.txt",
+        "licenses/wshuyi-x-article-publisher-skill-LICENSE.txt",
+        "yichen-codex-chatgpt/LICENSE",
+        "yichen-jianying-edit/LICENSE",
+        "yichen-jianying-edit/references/dependencies-and-notices.md",
+        "yichen-unified-search/references/THIRD_PARTY_NOTICES.md",
+        "yichen-wechat-local-vault/references/windows-snapshot/REPOSITORY_LICENSE.txt",
+        "yichen-wechat-local-vault/references/windows-snapshot/THIRD_PARTY_NOTICES.md",
+        "yichen-wechat-windows-reader/THIRD_PARTY_NOTICES.md",
+        "yichen-x-article-draft-uploader/LICENSE"
+      ],
+      "artifacts": {
+        "yichen-skills.bundle": {
+          "sha256": "ad2deecc438b2285d2f932e7f198ebd9a56ec9236038b97e4c20b888b1f726fe",
+          "bytes": 1927394
+        },
+        "yichen-skills-9bd78982aa75.zip": {
+          "sha256": "2c8c04c7b6362bd4b66cbc8e72d42fc4c3bbb83720e630cf4c2996f37aeb73d1",
+          "bytes": 1089918
+        },
+        "yichen-skills-refs.json": {
+          "sha256": "9db4a22e0fd8a7d06d7b367901ec8a7452e41226790b5d3f5b8a7658cdba1800",
+          "bytes": 2224
+        }
+      },
+      "ref_count": 29,
+      "source_file_count": 249
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "network_used": false,
+    "repositories": [
+      {
+        "name": "jianying-headless",
+        "head_commit": "27c2627bbd0fccc8484000f32e9d66a820f4b698",
+        "refs": 38,
+        "source_files": 108,
+        "offline_restored_refs_match": true,
+        "fsck_passed": true,
+        "sha256_passed": true
+      },
+      {
+        "name": "yichen-skills",
+        "head_commit": "9bd78982aa75aa179258bc9009fe4dcf2f2973b9",
+        "refs": 29,
+        "source_files": 249,
+        "offline_restored_refs_match": true,
+        "fsck_passed": true,
+        "sha256_passed": true
+      }
+    ]
+  }
+}

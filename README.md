@@ -15,7 +15,7 @@
 按收录顺序编号，从 **001** 开始递增。编号长期保留，不因进度、热度或归档重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **16** 个项目。
+当前收录 **17** 个项目。
 
 | 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- | --- |
@@ -27,6 +27,7 @@
 | 006 | [oil-tone · 写作约束拆解](projects/006-oil-tone/README.md) | [oil-tone](https://github.com/oil-oil/oil-tone) | 将 23 条写作规则交给 AI，引导起草、润色与结构调整，保留事实、减少空话；适用于文章、产品文案与口播，可复用为我们的编辑标准和完整提示词 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/006-oil-tone/) |
 | 007 | [dr-aria · 角色效果与表达图鉴](projects/007-dr-aria/README.md) | [dr-aria](https://github.com/MPMyburgh/dr-aria) | 将 Agent 回复和部分运行状态转成可见角色反馈：预制字符画配合事件驱动动作、文字驱动气泡与嘴型，呈现等待、思考、工作和回复，让等待有反馈、对话有角色，并可作为自有 Agent 的表达层 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/007-dr-aria/) |
 | 009 | [WebGPU Render Pipeline · 光照效果实现与复用](projects/009-webgpu-render-pipeline/README.md) | [web-starter-kit-webgpu-pipline](https://github.com/vibegameengine/web-starter-kit-webgpu-pipline) | 在浏览器实现反弹光、环境补光、软阴影及水面与植被受光：先用 BVH/Surfel 估计间接光，缓存为 Lightmap/空间探针，再实时合成画面；可沉淀为游戏、空间漫游和 Web3D 展厅的渲染能力，附一图总览与四场景交互 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/) |
+| 010 | [Jianying Headless · 原理研究与双仓离线备份](projects/010-jianying-headless/README.md) | [jianying-headless](https://github.com/mcncarl/jianying-headless) | 逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；说明核心库、Skill、REA 的分工与扩展位置，并离线归档两个上游仓库的 Git 历史、源码及恢复校验资料，防止上游失联 | 研究中 | — |
 | 011 | [Auto Paper Digest · 水生毒理学研究档案](projects/011-open-notebook-research/README.md) | [auto-paper-digest](https://github.com/brianxiadong/auto-paper-digest) | Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集、NotebookLM 生成和归档；我们补 Europe PMC 领域检索，切换 Open Notebook 的 Next.js/FastAPI/SurrealDB 与 MiniMax 问答路线，再精读原文，形成可追溯的水生毒理学研究：3篇详细报告、1篇综合及完整证据。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/) |
 | 012 | [Super Hermes · 多 Skill 问题定位与审查](projects/012-super-hermes/README.md) | [super-hermes](https://github.com/Cranot/super-hermes) | 面向代码问题定位与方案审查的提示词 Skill 包：5 个 Skill 组织定向检查、多轮反驳、三视角分析、方向探索与盲区记录，7 份模板提供检查角度。模型结合材料分析，工具和证据验证；本研究归纳七步定位与九项报告，可复用为跨项目排查规范。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/012-super-hermes/) |
 | 013 | [Old Coder · AI 编码的验收与证据](projects/013-old-coder/README.md) | [old-coder](https://github.com/AmazingAng/old-coder) | 把需求写成SPEC，以测试驱动、多层检查和可复跑报告核对AI代码，让已定义的错误可暴露、交付有据可验；可沉淀验收模板、故障模型、变异与属性测试、检查器和CI门槛，扩展到订单库存、权限与API、重构迁移及团队发布验收 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/013-old-coder/) |
@@ -137,6 +138,18 @@
 [研究详情](projects/009-webgpu-render-pipeline/README.md) · [原始仓库](https://github.com/vibegameengine/web-starter-kit-webgpu-pipline) · [在线演示](https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/)
 
 标签：WebGPU / Three.js / 全局光照 / 水面与大气 / 能力图鉴
+
+### 010 · Jianying Headless · 原理研究与双仓离线备份
+
+逆向适配工程格式与内部接口，复用本机剪映引擎，重建 AI 可编排的控制层；说明核心库、Skill、REA 的分工与扩展位置，并离线归档两个上游仓库的 Git 历史、源码及恢复校验资料，防止上游失联
+
+![010 · Jianying Headless · 原理研究与双仓离线备份 项目封面](projects/010-jianying-headless/assets/research-overview.svg)
+
+> 本研究原创理解总览：Skill 指导 AI，核心库构建草稿并桥接剪映引擎，REA 辅助适配；标出三个扩展位置、产出、价值与边界。源码已核对，剪映原生运行尚未本机实测。
+
+[研究详情](projects/010-jianying-headless/README.md) · [原始仓库](https://github.com/mcncarl/jianying-headless)
+
+标签：原生草稿 / 内部接口 / AI 编排 / 逆向适配 / 扩展研究 / 离线备份
 
 ### 011 · Auto Paper Digest · 水生毒理学研究档案
 

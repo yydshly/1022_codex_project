@@ -1,0 +1,442 @@
+{
+  "title": "复用引擎，重建控制层：剪映无界面调用研究",
+  "date": "2026-10-22",
+  "scope": "依据固定源码、作者公开记录和本地 Git 保全结果整理；没有在本机验证剪映原生运行。扩展方向属于我们的研究提案。",
+  "preservation": {
+    "purpose": "提前保存研究对象，防止上游删除、封禁或访问中断后资料丢失；不代表上游已经被封禁。",
+    "captured_on": "2026-10-22",
+    "packaged_on": "2026-10-23",
+    "archive": "backups/upstream-preservation-20261022.zip",
+    "record": "preservation-package.json",
+    "repositories": ["mcncarl/jianying-headless", "mcncarl/yichen-skills（完整仓库，包含 yichen-jianying-edit）"],
+    "contains": "两个全引用 Git bundle、两个主分支源码 ZIP、引用映射、文件清单、SHA-256、恢复记录与原始许可声明；共 67 个引用、187 个可达提交、357 个主分支文件。",
+    "excludes": "剪映官方引擎和安装包、GitHub Issue/评论、Release 独立附件、外部服务和素材、用户账号数据。",
+    "license": "按原个人学习和非商业使用许可及第三方条款保留，不是官方 SDK 或额外授权的技能产品。",
+    "location": "统一归档随子项目 Git 保存；web/ 和 GitHub Pages 仅包含研究说明。"
+  },
+  "overview": {
+    "thesis": "逆向适配 → 复用剪映引擎 → 重建我们的控制层 → 按层扩展与验证。把剪映已有能力变成程序和 AI 可以编排的工具。",
+    "relationships": [
+      "入口与产品层：我们的界面、AI 任务或批处理接收素材、剪辑目标和参数；程序也可以直接调用核心库。",
+      "Skill：yichen-jianying-edit 给宿主 AI 操作规则与辅助脚本，指导计划、调用、时间映射和验收。",
+      "核心库：jianying-headless 构建轨道、素材与字幕等工程数据，桥接本机剪映的编解码、工程恢复和导出服务。",
+      "剪映底层引擎：匹配版本的本机程序库与原生资源继续提供原生处理和导出能力；原生路径依赖剪映安装。",
+      "REA：通过 AI 与反编译工具辅助分析内部接口、数据结构和调用顺序，支持核心库适配；剪辑执行无需经过 REA。",
+      "产出：核心库构建可编辑草稿，可交回剪映精修；在已适配版本上由原生引擎导出视频。"
+    ],
+    "expansion_layers": [
+      "产品与工作流：自有界面、任务服务、批量多版本。",
+      "AI 编排：剪辑策略、字幕与删留规则、验收规范。",
+      "草稿构建与桥接：更多工程字段与功能、完整调用链、版本和平台适配；REA 可辅助研究。"
+    ],
+    "value": "把已有编辑能力接入 AI 编排、批量生产与人工精修，复用原生处理能力。",
+    "boundary": "图示为已适配的原生路线。接口复用仍依赖剪映；新增能力须逐项验证，完整功能覆盖与独立重建尚未实现。原项目 Windows FFmpeg 后端属于另一条路线。"
+  },
+  "theses": [
+    "已适配的无界面流程复用本机安装的剪映引擎及内部工程服务。",
+    "我们可以用计划、脚本、AI 或自有界面重新组织控制层，自动草稿仍能交回剪映精修。",
+    "复用引擎与独立重建的目标、依赖和工作量不同；界面存在某功能不意味着已经找到了完整调用链。",
+    "逆向分析需要继续落实为数据结构、初始化、调用顺序、版本适配与输出验收。"
+  ],
+  "modes": {
+    "gui": {
+      "title": "剪映界面",
+      "layers": [
+        {
+          "label": "输入与意图",
+          "title": "用户选择素材与编辑目标",
+          "copy": "通过点击、拖动和参数输入表达意图",
+          "owner": "用户"
+        },
+        {
+          "label": "控制与工程",
+          "title": "剪映界面与编辑逻辑",
+          "copy": "更新工程、组织服务调用与状态",
+          "owner": "剪映"
+        },
+        {
+          "label": "运行时与渲染",
+          "title": "剪映内部服务与渲染引擎",
+          "copy": "处理时间线、画面、声音和导出",
+          "owner": "剪映"
+        }
+      ],
+      "output": "工程 / 预览 / 成片",
+      "dependency": "依赖剪映安装与界面",
+      "note": "熟悉的交互路径：人通过剪映界面组织操作。界面与引擎之间还包含工程服务和状态管理。"
+    },
+    "automated": {
+      "title": "AI 无界面",
+      "layers": [
+        {
+          "label": "输入与意图",
+          "title": "人 / AI 提出剪辑目标",
+          "copy": "素材、删留、字幕与音量要求",
+          "owner": "用户"
+        },
+        {
+          "label": "控制与工程",
+          "title": "Skill + Python + C++ 桥接",
+          "copy": "组织计划、生成草稿、调用内部服务",
+          "owner": "项目"
+        },
+        {
+          "label": "运行时与渲染",
+          "title": "本机剪映程序库与原生资源",
+          "copy": "复用已安装引擎的恢复与导出能力",
+          "owner": "剪映"
+        }
+      ],
+      "output": "可编辑草稿 / MP4",
+      "dependency": "依赖匹配的剪映安装",
+      "note": "替换操作入口与编排方式，内部工程服务和渲染引擎仍由剪映提供。这里表示已适配的原生路径，版本范围见平台表。"
+    },
+    "independent": {
+      "title": "独立重建",
+      "layers": [
+        {
+          "label": "输入与意图",
+          "title": "用户 / AI 使用自己的产品",
+          "copy": "需求、素材与工作流由自己定义",
+          "owner": "自有"
+        },
+        {
+          "label": "控制与工程",
+          "title": "自有界面、计划协议与工程模型",
+          "copy": "自行组织编辑、依赖、预览和导出",
+          "owner": "自有"
+        },
+        {
+          "label": "运行时与渲染",
+          "title": "自有或其他可用的渲染后端",
+          "copy": "需实现算法、效果、音频与兼容性",
+          "owner": "待建设"
+        }
+      ],
+      "output": "独立产品的工程与成片",
+      "dependency": "目标是脱离剪映运行时",
+      "note": "这是另一种工程目标，不是本项目已经交付的能力。部分功能可以重建，完整效果与性能的一致性还需逐项证明。"
+    }
+  },
+  "steps": [
+    {
+      "id": "plan",
+      "short": "剪辑计划",
+      "title": "先把意图，写成可执行的数据。",
+      "description": "用户或 AI 明确素材、删留、时间位置、速度、字幕和音量。Skill 提供操作规则；口播辅助脚本把保留区间编译为新的时间映射。语义判断主要由宿主 AI 承担，脚本检查发音保护、时间边界和一致性。",
+      "input": "本地素材、明确参数；需要语义剪辑时，提供同源时间戳稿或另行转写。",
+      "output": "结构化剪辑计划；口播流程还会产生编译后的时间映射。",
+      "key": "先判断保留什么，再计算它放在哪里。语音转写是独立依赖，不由这个 Skill 自动获得。",
+      "code": "scripts/edit_plan.py → from-compiled",
+      "source": "https://github.com/mcncarl/yichen-skills/blob/9bd78982aa75aa179258bc9009fe4dcf2f2973b9/yichen-jianying-edit/references/plan-format.md",
+      "sourceLabel": "口播计划与脚本接口"
+    },
+    {
+      "id": "draft",
+      "short": "构造工程",
+      "title": "把计划，转换成剪映认识的时间线。",
+      "description": "核心以采集的原生结构蓝图为基础，创建轨道、片段、素材和 ID 关联，填入源时间、目标时间、速度及字幕。素材与字体按内容身份复制到独立草稿目录。它构造的是可编辑工程结构。",
+      "input": "经过检查的计划、原生结构蓝图、视频 / 音频 / 字体文件。",
+      "output": "轨道与素材关联、时间线对象、资源副本、工程元数据。",
+      "key": "移动片段往往对应工程数据变更。很多编辑操作需要维护多处关联，并非调用一个同名按钮函数。",
+      "code": "engine/jy14_headless.py · timeline_for() / build()",
+      "source": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/jy14_headless.py#L275",
+      "sourceLabel": "草稿结构构建"
+    },
+    {
+      "id": "codec",
+      "short": "原生编解码",
+      "title": "借助本机程序库，写出可读取的草稿。",
+      "description": "C++ 桥接器声明并调用剪映提供的 EncryptUtils 接口，对草稿内容进行编解码。Python 包装器从内存交接数据并执行回环检查。底层编解码实现由本机安装的剪映程序库提供。",
+      "input": "时间线和工程元数据；匹配版本的本机剪映程序库。",
+      "output": "剪映可以读取的草稿内容文件、元数据及相关镜像文件。",
+      "key": "项目提供调用适配与文件处理；原始编解码实现没有被独立重写。源码本身不包含官方引擎。",
+      "code": "bridge/jy14_codec.cpp · lvve::EncryptUtils",
+      "source": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/bridge/jy14_codec.cpp#L547",
+      "sourceLabel": "编解码桥接实现"
+    },
+    {
+      "id": "register",
+      "short": "本地登记",
+      "title": "按需把草稿，交回剪映界面继续编辑。",
+      "description": "build 先在独立目录生成结果。需要交给剪映界面继续编辑时，publish 在确认剪映关闭后，将已验证草稿放入本机草稿目录并更新首页索引。用户之后可以打开、修改、保存和检查；原生导出也可以独立使用冻结的 build。",
+      "input": "已通过结构检查的独立草稿；本机首页索引与匹配运行环境。",
+      "output": "可从剪映首页打开的项目，以及登记与回读记录。",
+      "key": "首页登记是可选交接步骤，不是无界面原生导出的必要前置条件。publish 只表示本地项目列表登记。",
+      "code": "engine/jy14_headless.py · publish() / verify_live()",
+      "source": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/jy14_headless.py#L668",
+      "sourceLabel": "本地登记与回读"
+    },
+    {
+      "id": "render",
+      "short": "引擎导出",
+      "title": "由自己的程序，调用剪映的原生导出服务。",
+      "description": "Python 编译 C++ 辅助程序并连接 libvideoeditor.dylib，在独立进程中初始化服务与会话、恢复工程，再构造原生导出请求。内部函数位置和对象布局按精确版本固定，完成事件也要核对。",
+      "input": "已验证的工程快照、匹配的剪映程序库、可用资源与导出设置。",
+      "output": "原生引擎渲染的 MP4、引擎日志和导出状态。",
+      "key": "找到函数只是开始；初始化、对象布局、依赖和调用顺序同样重要。更新版本后需要重新适配与验证。",
+      "code": "native_export.py → native_export.cpp → ExportService",
+      "source": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/native_export.cpp#L90",
+      "sourceLabel": "版本绑定与内部导出接口"
+    },
+    {
+      "id": "verify",
+      "short": "结果验收",
+      "title": "有文件，不等于内容已经正确。",
+      "description": "导出包装器检查编码、尺寸、帧率、帧数和完整解码，并核对输入和来源工程未被改变。可编辑草稿还需要保存重开检查；字幕、切口、特效与听感要回到实际画面和声音核对。",
+      "input": "草稿与导出文件、冻结的预期设置、资源哈希和实际播放结果。",
+      "output": "结构 / 文件检查结果、实际视听结论，以及仍未解决的差异。",
+      "key": "自动检查和主观检查回答不同问题。encoded-and-decoded 只代表相应文件检查通过。",
+      "code": "native_export.py · validate_probe() / full decode",
+      "source": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/native_export.py#L517",
+      "sourceLabel": "导出检查与结果边界"
+    }
+  ],
+  "projects": [
+    {
+      "name": "jianying-headless",
+      "layer": "工程与执行层",
+      "provides": "生成 / 修改草稿，登记、校验及已适配版本的原生导出。",
+      "depends": "本机匹配的剪映及其资源；Windows 另有 FFmpeg 后端。",
+      "status": "完整仓库已备份",
+      "revision": "27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/README.md"
+    },
+    {
+      "name": "yichen-jianying-edit",
+      "layer": "AI 操作与计划层",
+      "provides": "指导需求整理、口播删留、时间映射、工具调用和质检。",
+      "depends": "宿主 AI、核心仓库；按任务需要另行提供转写。",
+      "status": "所在完整仓库已备份",
+      "revision": "9bd7898",
+      "url": "https://github.com/mcncarl/yichen-skills/blob/9bd78982aa75aa179258bc9009fe4dcf2f2973b9/yichen-jianying-edit/SKILL.md"
+    },
+    {
+      "name": "jy-draftc",
+      "layer": "Windows 原生适配",
+      "provides": "加载 videoeditor.dll，调用草稿处理与无界面导出入口。",
+      "depends": "Windows x64、精确适配的剪映构建与依赖。",
+      "status": "公开源码已核对；本轮未备份",
+      "revision": "4f705a9",
+      "url": "https://github.com/wenshui330/jy-draftc/blob/4f705a972da3f042a79dabc8b778e95d31af0a0f/src/11.6.0.14552/video_export.cpp"
+    },
+    {
+      "name": "REA",
+      "layer": "逆向研究工具层",
+      "provides": "把反汇编、伪代码、引用和调用追踪等分析工具接给 Agent。",
+      "depends": "宿主 AI、对应分析工具与目标文件；结论仍需验证。",
+      "status": "官方说明已核对；本轮未备份",
+      "revision": "905cbaf",
+      "url": "https://github.com/morluto/rea/blob/905cbaf2398c905e96a1492b6145ece13e91c3cc/README.md"
+    }
+  ],
+  "extensions": [
+    {
+      "id": "protocol",
+      "horizon": "near",
+      "horizonLabel": "先做基础",
+      "title": "统一剪辑操作协议",
+      "subtitle": "让需求表达稳定，让不同入口说同一种语言。",
+      "scenario": "AI、命令行和未来界面复用同一份计划，减少字段与时间语义的歧义。",
+      "reuse": "已有计划格式、草稿构建器、资源校验与独立副本策略。",
+      "work": "定义动作和错误模型，声明各后端能力，固定时间单位、素材身份与版本字段。",
+      "acceptance": "同一计划重复执行的结构一致；未知动作、时间越界和版本不匹配有明确拒绝结果。"
+    },
+    {
+      "id": "voice",
+      "horizon": "near",
+      "horizonLabel": "先做基础",
+      "title": "口播初剪与人工复核",
+      "subtitle": "把语义取舍接到时间线，同时保留人的判断。",
+      "scenario": "教程、课程和产品口播：标记重复表达与口误，整理字幕和补充画面。",
+      "reuse": "Skill 的删留规则、发音保护、时间映射及音频检查思路。",
+      "work": "接入有时间戳的转写，把不确定删留集中展示；增加前后对照和确认后的版本记录。",
+      "acceptance": "关键语义、数字和完整发音保留；字幕对齐；剪口试听与草稿保存重开通过。"
+    },
+    {
+      "id": "regression",
+      "horizon": "near",
+      "horizonLabel": "先做基础",
+      "title": "建立原生结果回归样本",
+      "subtitle": "让版本升级后的判断有一套可复跑的参照。",
+      "scenario": "升级剪映或扩展效果后，核对旧能力是否仍然成立。",
+      "reuse": "快照、素材哈希、帧数检查、完整解码、冷重开回读与导出日志。",
+      "work": "准备可公开或可授权使用的小样本，覆盖静音片段、变速、字幕、叠加和尾帧；保存参考画面与音频。",
+      "acceptance": "相同构建能复跑；画面差异、响度偏差、缺帧和工程持久化问题分别报告。"
+    },
+    {
+      "id": "batch",
+      "horizon": "middle",
+      "horizonLabel": "扩展工作流",
+      "title": "素材替换与多版本生产",
+      "subtitle": "复用已确认的结构，改变画面、文字和配音。",
+      "scenario": "同一讲解结构生成多个素材版本，或统一更新系列视频中的字幕与片段。",
+      "reuse": "已有草稿的独立副本编辑、replace_text、replace_media 和音量调整。",
+      "work": "设计可替换素材位置与约束，检查时长及裁切；组织并行任务、失败隔离和每版来源记录。",
+      "acceptance": "原稿未变；新素材时长与引用有效；每版单独完成画面、声音和导出检查。"
+    },
+    {
+      "id": "service",
+      "horizon": "middle",
+      "horizonLabel": "扩展工作流",
+      "title": "封装本地工具服务 / MCP",
+      "subtitle": "让 AI 使用有边界、能检查结果的操作集合。",
+      "scenario": "Agent 按“检查 → 构建 → 复核 → 导出”的方式调度本机能力。",
+      "reuse": "现有命令入口、冻结快照、版本门禁与审计结果。",
+      "work": "定义工具参数、任务状态与取消机制；限制可操作目录；将长任务进度和错误变成结构化结果。",
+      "acceptance": "重复请求不覆盖人工修改；异常可定位；只对已支持功能声明可用；结果能回查到具体工程。"
+    },
+    {
+      "id": "rea",
+      "horizon": "research",
+      "horizonLabel": "继续研究",
+      "title": "用 REA 辅助新增版本适配",
+      "subtitle": "缩小未知范围，再用真实工程证明调用方法。",
+      "scenario": "剪映升级后查找内部函数、对象布局与初始化链路的变化。",
+      "reuse": "既有版本适配记录、桥接源码和回归样本；REA 的分析与引用追踪能力。",
+      "work": "比较目标二进制，记录函数候选与结构证据，独立验证调用顺序和资源依赖。",
+      "acceptance": "通过精确构建指纹核对和真实原生用例；分析工具给出的猜测不能直接算兼容通过。"
+    },
+    {
+      "id": "interface",
+      "horizon": "research",
+      "horizonLabel": "继续研究",
+      "title": "面向特定任务的自有界面",
+      "subtitle": "用更少的步骤，组织我们真正需要的剪辑能力。",
+      "scenario": "口播工作台、批量审片台或固定格式的内容生产界面。",
+      "reuse": "计划协议、草稿副本、引擎导出与已有剪映精修入口。",
+      "work": "实现任务界面、状态同步、撤销和修改记录；需要实时预览时，单独研究预览接入和性能。",
+      "acceptance": "界面意图与工程结构一致；人工修改不被旧计划覆盖；每个开放操作都有完整验收路径。"
+    },
+    {
+      "id": "backend",
+      "horizon": "research",
+      "horizonLabel": "继续研究",
+      "title": "把控制层与渲染后端解耦",
+      "subtitle": "为原生剪映、FFmpeg 和未来后端保留清晰边界。",
+      "scenario": "上层沿用同一计划，根据能力选择不同执行后端。",
+      "reuse": "原项目已有 Mac 原生与 Windows FFmpeg 两种路径，可作为边界样本。",
+      "work": "建立能力矩阵和语义映射；明确哪些效果可对应、哪些需要拒绝；独立后端的算法仍需另行实现。",
+      "acceptance": "相同计划只在双方已定义的共同范围内比较；差异有记录，不把功能名相同当作输出完全一致。"
+    }
+  ],
+  "routes": {
+    "reuse": {
+      "label": "复用剪映引擎",
+      "kicker": "目标 A / 重建控制方式",
+      "title": "把已有能力接到自己的工作流。",
+      "intro": "保留剪映提供的工程服务与渲染能力，把精力放在调用适配、操作编排和实际任务体验上。",
+      "dependency": "仍依赖匹配的剪映运行时、资源与相应使用条件。",
+      "work": [
+        "研究数据结构、初始化和内部接口调用顺序。",
+        "实现计划协议、独立草稿、AI 工具或自有界面。",
+        "维护版本适配、错误处理与实际输出回归。"
+      ],
+      "limit": "可以逐步扩大已验证的本地功能范围；没有依据预先保证界面中大部分或全部功能都能独立调用。"
+    },
+    "rebuild": {
+      "label": "完全独立重建",
+      "kicker": "目标 B / 建设独立实现",
+      "title": "连底层处理能力，也由自己承担。",
+      "intro": "脱离剪映运行时，使用自己的实现或其他后端处理时间线、画面、音频与效果。逆向分析为理解行为提供线索。",
+      "dependency": "目标是不再依赖剪映程序库；需要自行建立相应后端、资源和服务。",
+      "work": [
+        "把选定功能还原为明确行为与测试条件。",
+        "重写相应算法、工程模型、预览与导出后端。",
+        "核对复杂素材、长时间线、性能、稳定性与兼容性。"
+      ],
+      "limit": "可以先重建有限功能。完整产品的一致性是另一层目标；客户端未包含的云端实现或数据，也不能只靠本机分析获得。"
+    }
+  },
+  "questions": [
+    {
+      "question": "它本质上是不是逆向找到接口，再直接调用？",
+      "answer": "方向正确。项目确实适配内部接口，但还需要构造正确的工程、对象和参数，完成初始化与状态等待，再验证结果。函数地址只是调用链的一部分。"
+    },
+    {
+      "question": "是不是把剪映上层抛弃了？",
+      "answer": "更准确地说，替换的是用户操作入口和一部分编排方式。内部工程恢复、服务和渲染仍可能来自剪映。原界面也可以保留，继续精修可编辑草稿。"
+    },
+    {
+      "question": "界面里能做的功能，理论上都能调用吗？",
+      "answer": "很多本地能力有进一步适配的空间，但不能直接推出全部可用。有的操作要重建上层逻辑、组合多项服务；有的还依赖资源、账号或在线服务。每项能力需要独立证明。"
+    },
+    {
+      "question": "Windows 为什么不能直接照搬 Mac 实现？",
+      "answer": "两个平台的程序库、编译环境、内部函数位置和对象布局需要分别适配。Windows 已有 jy-draftc 的原生路线；原项目 Windows 使用 FFmpeg，是它当前实现范围的选择。作者最初为何选择 Mac，本次没有找到明确说明。"
+    },
+    {
+      "question": "有了 REA，是否就能完整复刻剪映？",
+      "answer": "REA 可以辅助定位函数、理解调用关系并支持实现验证。复用剪映引擎和独立重写剪映是两个目标；后者还要承担算法、后端、资源和产品兼容性，不能从局部分析成功推出完整复刻已可完成。"
+    },
+    {
+      "question": "最实际的价值，落在哪里？",
+      "answer": "把 AI 产生的剪辑判断落实成可编辑时间线，让人能继续精修；把重复操作沉淀为计划、批处理和工具接口；同时复用已有渲染能力。实际效率提升与覆盖范围仍需用具体任务验证。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "native",
+      "title": "原生引擎调用与版本绑定",
+      "description": "NativeAbi、函数位置、对象布局与 ExportService 的适配证据。",
+      "revision": "core / 27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/native_export.cpp#L90"
+    },
+    {
+      "id": "draft",
+      "title": "草稿构建、编解码与本地登记",
+      "description": "timeline_for、build、publish 等实现，可追踪工程结构与资源的形成。",
+      "revision": "core / 27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/jy14_headless.py#L275"
+    },
+    {
+      "id": "codec",
+      "title": "编解码来源与外部运行时",
+      "description": "第三方声明解释 EncryptUtils 接口来源与剪映程序库依赖。",
+      "revision": "core / 27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "skill",
+      "title": "独立 Skill 的职责与运行规则",
+      "description": "口播计划、工具入口、依赖与验收；与核心主分支存在版本差异。",
+      "revision": "skill / 9bd7898",
+      "url": "https://github.com/mcncarl/yichen-skills/blob/9bd78982aa75aa179258bc9009fe4dcf2f2973b9/yichen-jianying-edit/SKILL.md"
+    },
+    {
+      "id": "profiles",
+      "title": "固定快照的平台与版本边界",
+      "description": "原生导出配置为 11.5.0 / 11.4.2；11.6.0 的界面导出属于单独配置。",
+      "revision": "core / 27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/engine/runtime_profiles.py#L10"
+    },
+    {
+      "id": "windows",
+      "title": "原项目的 Windows FFmpeg 路径",
+      "description": "明确 MP4 输出范围，以及不生成 Windows 可编辑剪映草稿的边界。",
+      "revision": "core / 27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/docs/windows-ffmpeg.md"
+    },
+    {
+      "id": "windll",
+      "title": "Windows 原生调用的另一条实现",
+      "description": "jy-draftc 对 videoeditor.dll 的加载、引擎初始化和导出调用。",
+      "revision": "jy-draftc / 4f705a9",
+      "url": "https://github.com/wenshui330/jy-draftc/blob/4f705a972da3f042a79dabc8b778e95d31af0a0f/src/11.6.0.14552/video_export.cpp"
+    },
+    {
+      "id": "rea",
+      "title": "REA 的分析能力与工作方式",
+      "description": "连接 Agent 与分析工具，返回伪代码、汇编和关系证据，由 Agent 继续实现与测试。",
+      "revision": "REA / 905cbaf",
+      "url": "https://github.com/morluto/rea/blob/905cbaf2398c905e96a1492b6145ece13e91c3cc/README.md"
+    },
+    {
+      "id": "case",
+      "title": "作者公开的工程交接案例",
+      "description": "23 轨、154 段、1507 帧及保存重开记录，同时说明视觉差异和未完成项。",
+      "revision": "core / 27c2627",
+      "url": "https://github.com/mcncarl/jianying-headless/blob/27c2627bbd0fccc8484000f32e9d66a820f4b698/docs/HYPIT-COLLABORATION.md"
+    }
+  ]
+}
