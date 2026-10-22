@@ -116,7 +116,7 @@
     ],
     "workflow_note": "原发布工作流现已 completed/success，build 与 deploy 均成功（updated_at 2026-10-22T16:44:42Z）。此前 waiting 为历史观察；取消请求到达时已完成，未实际取消。"
   },
-  "checked_at": "2026-10-23T00:44:42.476357+08:00",
+  "checked_at": "2026-10-23T00:51:12.242747+08:00",
   "ci": {
     "catalog": {
       "run_id": 39814410409,
@@ -137,6 +137,21 @@
       "build_status": "completed",
       "build_conclusion": "success",
       "deploy_conclusion": "success"
+    },
+    "navigation": {
+      "head_sha": "0653f14f693b9b1e83dd0824c4abbe0f54a2e6a5",
+      "deploy": {
+        "run_id": 39816642651,
+        "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39816642651",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "catalog": {
+        "run_id": 39816642510,
+        "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39816642510",
+        "status": "completed",
+        "conclusion": "success"
+      }
     }
   },
   "previous_pages_observation": {
@@ -157,12 +172,34 @@
       "assets/verification/online-backup-description.jpg": {
         "bytes": 44442,
         "sha256": "ff105b8ece35247c24559deae121cc6c0307f17caa6cb66effac643810c8e239"
+      },
+      "assets/verification/online-root-backup-navigation.jpg": {
+        "bytes": 63639,
+        "sha256": "ca7e9814dd557f4a9c548086413e85f9520a24306c48ca92fadc65058766c65d"
       }
-    }
+    },
+    "opened_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/",
+    "checks": [
+      "正式首屏及备份说明显示",
+      "独立重建/AI无界面切换正常",
+      "继续研究筛选3项，恢复全部8项",
+      "研究页备份链接正确",
+      "线上总导航摘要和双仓备份与恢复链接正确",
+      "从总导航点击项目入口回到正式研究页"
+    ]
   },
   "navigation_update": {
-    "status": "prepared",
-    "summary": "最外层README和总导航明确列出两仓名称、2026-10-22快照、约24MiB统一ZIP、历史/源码/许可/校验恢复内容及防失联目的；总导航新增双仓备份与恢复入口。",
-    "tests": "目录检查、11项scripts/tests单元测试、17项目站点构建和010导航内容检查通过。"
-  }
+    "status": "published-and-verified",
+    "commit": "0653f14f693b9b1e83dd0824c4abbe0f54a2e6a5",
+    "url": "https://yydshly.github.io/1022_codex_project/",
+    "http_status": 200,
+    "root_html_sha256": "bb82beb222f22fe7538c98de537f8f974a109843b71818503da4c9062d1e482a",
+    "project_010_card_matches_local_build": true,
+    "project_010_card_sha256": "fdba52429bda40d300e6c94cdbbc99606998d62ab34c7ac102f34be4283bc5fb",
+    "summary": "两仓名称、2026-10-22快照、约24MiB统一ZIP、Git历史/源码/许可/校验恢复资料、防失联目的和备份直链均已上线。",
+    "backup_url": "https://github.com/yydshly/1022_codex_project/tree/main/projects/010-jianying-headless/backups",
+    "root_readme": "根索引、010项目卡片和Web演示引导均已更新，同步线上地址及ZIP/恢复说明。",
+    "tests": "目录检查、11项scripts/tests单元测试、17项目站点构建和线上010卡片逐字节核对通过。"
+  },
+  "status": "published-and-verified"
 }
