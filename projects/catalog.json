@@ -138,6 +138,24 @@
       "cover": "assets/project-overview.png",
       "cover_caption": "我们整理的一图总览：光照效果的核心价值、计算原理、10 类全部 89 项能力、四场景本机实测与复用方向；缩略图来自真实运行，应用方向需单独集成和验收。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/"
+    },
+    {
+      "id": "011",
+      "slug": "open-notebook-research",
+      "name": "Open Notebook · 水生毒理学研究档案",
+      "repo": "https://github.com/lfnovo/open-notebook",
+      "summary": "Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集、NotebookLM 生成和归档；我们补 Europe PMC 领域检索，切换 Open Notebook 的 Next.js/FastAPI/SurrealDB 与 MiniMax 问答路线，再精读原文，形成可追溯的水生毒理学研究：3篇详细报告、1篇综合及完整证据。",
+      "status": "completed",
+      "tags": [
+        "论文研究",
+        "水生毒理学",
+        "Open Notebook",
+        "模型核对",
+        "静态档案"
+      ],
+      "cover": "assets/research-overview.png",
+      "cover_caption": "原创一图总览：源库能力、技术架构、从 NotebookLM 转向 Open Notebook/MiniMax 的探索、四层扩展及实测效果。详细报告来自研究代理精读，历史模型短回答另行保留。",
+      "demo_url": ""
     }
   ]
 }

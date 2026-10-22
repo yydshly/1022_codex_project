@@ -53,6 +53,9 @@ jobs:
           python projects/009-webgpu-render-pipeline/scripts/package_web.py
           python projects/009-webgpu-render-pipeline/scripts/package_web.py --check
           python projects/009-webgpu-render-pipeline/scripts/verify_structure.py
+          python projects/011-open-notebook-research/scripts/package_web.py
+          python projects/011-open-notebook-research/scripts/package_web.py --check
+          python projects/011-open-notebook-research/scripts/verify_web.py
           python scripts/build_site.py
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5

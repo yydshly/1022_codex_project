@@ -1,0 +1,227 @@
+{
+  "paper_id": "PMC10819493",
+  "doi": "10.3390/toxics12010091",
+  "title": "Mixture Effects of Per- and Polyfluoroalkyl Substances on Embryonic and Larval Sheepshead Minnows (Cyprinodon variegatus)",
+  "source_pdf": "../../assets/papers/PMC10819493.pdf",
+  "source_jats": "../../../008-auto-paper-digest/.runtime/aquatic-toxicology/PMC10819493/article.xml",
+  "pdf_page_count": 15,
+  "analysis_date": "2026-10-22",
+  "analysis_provenance": "Codex research-agent full-text analysis of the supplied original PDF and JATS; not a NotebookLM or prior MiniMax output",
+  "read_scope": "完整正文、方法、结果、讨论和结论；图表以PDF视觉核查；未取得补充Table S3及原始数据",
+  "visually_checked_pages": [3, 5, 6, 7, 8, 10],
+  "concentration_policy": "文中实验剂量和LC50按作者报告列出。补充实测值未核对，不认定为实测校正后的LC50。",
+  "facts": [
+    {
+      "id": "organism_life_stages",
+      "claim": "试验物种为Cyprinodon variegatus；暴露开始时胚胎<6 hpf，幼鱼<24 hph。",
+      "kind": "reported_method",
+      "locators": [{"pdf_page": 3, "section": "2.3", "label": "Exposure Regime"}]
+    },
+    {
+      "id": "exposure_conditions",
+      "claim": "96小时静态更新暴露，每24小时100%换水，20 ppt过滤海水，25°C、16:8光暗周期。",
+      "kind": "reported_method",
+      "values": {"duration_h": 96, "renewal_interval_h": 24, "renewal_fraction": 1, "salinity_ppt": 20, "temperature_c": 25, "light_h": 16, "dark_h": 8},
+      "locators": [{"pdf_page": 3, "section": "2.3"}]
+    },
+    {
+      "id": "containers_water_quality",
+      "claim": "胚胎为50mL玻璃容器中30mL水，幼鱼为230mL容器中200mL水；不曝气、盖塑料盖；温度25±2°C、DO>4mg/L、盐度20±1ppt、pH7.8±1。幼鱼每日投喂新孵化卤虫。",
+      "kind": "reported_method",
+      "locators": [{"pdf_page": 3, "section": "2.3"}]
+    },
+    {
+      "id": "replication",
+      "claim": "所有暴露为独立容器三重复；LC50方法记录10尾，种类比较/阈值试验20尾，生化试验50尾；基因及生化为全鱼混样。技术复孔不增加独立生物学重复数。",
+      "kind": "reported_method_with_interpretation",
+      "values": {"independent_container_replicates": 3, "lc50_fish_count_as_written": 10, "gene_threshold_fish_count_as_written": 20, "oxidative_fish_count_as_written": 50},
+      "locators": [{"pdf_page": 3, "section": "2.3"}, {"pdf_page": 4, "section": "2.4–2.5"}]
+    },
+    {
+      "id": "lc50_design",
+      "claim": "PFOS梯度1.25、2.5、5、10mg/L；PFOA梯度12.5、25、50、100mg/L；另设1:1混合和固定100mg/L PFOA加PFOS梯度。",
+      "kind": "reported_method",
+      "values": {"pfos_mg_l": [1.25, 2.5, 5, 10], "pfoa_mg_l": [12.5, 25, 50, 100], "fixed_pfoa_mg_l": 100},
+      "locators": [{"pdf_page": 3, "section": "2.3"}]
+    },
+    {
+      "id": "mixture_gene_design",
+      "claim": "种类/基因试验为PFOS2mg/L与PFOA、PFHxA、PFBA各100mg/L单独及二元混合处理。",
+      "kind": "reported_method",
+      "locators": [{"pdf_page": 3, "section": "2.3"}, {"pdf_page": 6, "figure": "1–2"}]
+    },
+    {
+      "id": "threshold_design",
+      "claim": "PFOS固定2mg/L，PFOA为6.25、12.5、25、50、100mg/L。图3的0为PFOS单独组，不等于Control。",
+      "kind": "reported_method",
+      "values": {"fixed_pfos_mg_l": 2, "pfoa_mg_l": [6.25, 12.5, 25, 50, 100]},
+      "locators": [{"pdf_page": 3, "section": "2.3"}, {"pdf_page": 7, "figure": "3", "section": "3.4"}]
+    },
+    {
+      "id": "oxidative_design",
+      "claim": "氧化应激试验使用PFOS2mg/L、PFOA12.5mg/L及二元混合；基因试验PFOA100mg/L，因此不同试验不可当作同剂量同批样本的机制链。",
+      "kind": "reported_method_with_interpretation",
+      "locators": [{"pdf_page": 3, "section": "2.3"}, {"pdf_page": 8, "figure": "4"}]
+    },
+    {
+      "id": "water_chemistry",
+      "claim": "0和24小时水样用LC-MS/MS测定；各容器重复水样合并，每浓度一个测定；实际浓度在补充Table S3。",
+      "kind": "reported_method",
+      "values": {"sampling_time_h": [0, 24], "measurements_per_concentration_after_pooling": 1, "supplement_table": "S3", "measured_concentrations_verified": false},
+      "locators": [{"pdf_page": 4, "section": "2.6"}, {"pdf_page": 5, "section": "2.6"}]
+    },
+    {
+      "id": "statistics",
+      "claim": "LC50用SAS9.4 probit及LC50比值检验；其他结果单因素ANOVA加Tukey HSD，p=0.05；图误差为三重复SEM。",
+      "kind": "reported_method",
+      "locators": [{"pdf_page": 5, "section": "2.7"}, {"pdf_page": 6, "figure": "1"}, {"pdf_page": 8, "figure": "4"}]
+    },
+    {
+      "id": "lc50_pfos_larvae",
+      "claim": "幼鱼PFOS 96h LC50为1.97mg/L，95%CI为1.64–2.16。",
+      "kind": "reported_result",
+      "values": {"lc50_mg_l": 1.97, "ci95_mg_l": [1.64, 2.16]},
+      "locators": [{"pdf_page": 5, "table": "1", "section": "3.1"}]
+    },
+    {
+      "id": "lc50_equal_ratio",
+      "claim": "1:1 PFOS/PFOA幼鱼LC50报告为1.99mg/L，95%CI1.70–2.17，与PFOS单独无显著差异。主文未清楚定义该混合浓度轴为每成分还是总量。",
+      "kind": "reported_result_with_unit_caveat",
+      "values": {"reported_lc50_mg_l": 1.99, "ci95_mg_l": [1.70, 2.17], "comparison": "PFOS-only", "significant": false},
+      "locators": [{"pdf_page": 3, "section": "2.3"}, {"pdf_page": 5, "table": "1", "section": "3.1"}]
+    },
+    {
+      "id": "lc50_fixed_pfoa",
+      "claim": "固定100mg/L PFOA背景下PFOS相关LC50为3.10mg/L，95%CI2.62–3.79，作者报告较PFOS单独升高57.4%，p<0.05。不是混合物总质量浓度。",
+      "kind": "reported_result_with_design_interpretation",
+      "values": {"lc50_mg_l": 3.10, "ci95_mg_l": [2.62, 3.79], "fixed_pfoa_mg_l": 100, "increase_percent_as_reported": 57.4, "significant": true},
+      "locators": [{"pdf_page": 5, "table": "1", "section": "3.1"}]
+    },
+    {
+      "id": "lc50_bounds",
+      "claim": "胚胎LC50界限为PFOS>10、PFOA>100、1:1混合>10、固定100PFOA混合>10mg/L；幼鱼PFOA>100mg/L。界限不是精确LC50。",
+      "kind": "reported_result",
+      "locators": [{"pdf_page": 5, "table": "1"}]
+    },
+    {
+      "id": "mortality_species_comparison",
+      "claim": "100mg/L PFOA共暴露相对2mg/L PFOS单独组降低死亡97.0%±3.03；PFHxA或PFBA共暴露与PFOS单独无显著差异。百分比是相对PFOS死亡的降幅，不是百分点或绝对存活率。",
+      "kind": "reported_result_with_denominator",
+      "values": {"relative_mortality_reduction_percent": 97.0, "reported_sem": 3.03, "denominator": "mortality in PFOS-only group"},
+      "locators": [{"pdf_page": 5, "section": "3.2"}, {"pdf_page": 6, "figure": "1"}]
+    },
+    {
+      "id": "mortality_letters",
+      "claim": "图1 PFOS组标BC，PFOS+PFHxA为B，PFOS+PFBA为C；各自与PFOS共享显著性字母，不能据柱高宣称PFBA协同增毒。",
+      "kind": "visual_check_and_interpretation",
+      "locators": [{"pdf_page": 6, "figure": "1"}]
+    },
+    {
+      "id": "lowest_tested_effective_pfoa",
+      "claim": "6.25mg/L PFOA未显著降低PFOS相关死亡，12.5–100mg/L显著降低；12.5mg/L相对PFOS单独组降幅80.1%±4.26。12.5是最低已测显著浓度，不是精确生物阈值。",
+      "kind": "reported_result_with_interpretation",
+      "values": {"lowest_tested_significant_mg_l": 12.5, "relative_mortality_reduction_percent": 80.1, "reported_sem": 4.26},
+      "locators": [{"pdf_page": 7, "figure": "3", "section": "3.4"}]
+    },
+    {
+      "id": "qPCR_method",
+      "claim": "β-actin为内参，2^-ΔΔCt计算相对表达，技术三重复；只有pparα和apoa4两个靶基因，不是转录组分析。",
+      "kind": "reported_method_with_interpretation",
+      "locators": [{"pdf_page": 4, "section": "2.5"}]
+    },
+    {
+      "id": "ppara_single",
+      "claim": "PFOA、PFHxA、PFBA100mg/L显著上调pparα；正文报告565.4%±27.2、482.8%±61.4、605.6%±51.5，基准为对照。PFOS2mg/L无显著变化。",
+      "kind": "reported_result_with_percent_ambiguity",
+      "values": {"pfoa_reported_percent": 565.4, "pfoa_sem": 27.2, "pfhxa_reported_percent": 482.8, "pfhxa_sem": 61.4, "pfba_reported_percent": 605.6, "pfba_sem": 51.5, "fold_conversions_performed": false},
+      "locators": [{"pdf_page": 6, "figure": "2", "section": "3.3"}]
+    },
+    {
+      "id": "ppara_mixtures",
+      "claim": "PFOS+PFOA和PFOS+PFBA的pparα分别比相应羧酸单独组低72.3%±1.64和72.4%±3.87。",
+      "kind": "reported_result",
+      "locators": [{"pdf_page": 6, "figure": "2", "section": "3.3"}]
+    },
+    {
+      "id": "apoa4",
+      "claim": "PFOS使apoa4相对对照增加112.4%±17.8；加100mg/L PFOA后相对PFOS低45.4%±3.78。PFBA单独组因技术错误被排除，NA不表示无效应。",
+      "kind": "reported_result",
+      "locators": [{"pdf_page": 6, "section": "3.3"}, {"pdf_page": 7, "figure": "2"}]
+    },
+    {
+      "id": "mda_assay",
+      "claim": "MDA采用全鱼匀浆TBA反应，92°C15分钟，532nm读数和标准曲线；GSH用酶促循环412nm动力学和标准曲线。",
+      "kind": "reported_method",
+      "locators": [{"pdf_page": 3, "section": "2.4"}, {"pdf_page": 4, "section": "2.4"}]
+    },
+    {
+      "id": "mda_control_comparisons",
+      "claim": "相对对照，MDA在PFOS组增加105%±3.25，混合组增加71.4%±5.36，PFOA组增加66.5%±3.18；全部显著。",
+      "kind": "reported_result",
+      "values": {"pfos_increase_percent": 105, "pfos_sem": 3.25, "mixture_increase_percent": 71.4, "mixture_sem": 5.36, "pfoa_increase_percent": 66.5, "pfoa_sem": 3.18, "denominator": "control"},
+      "locators": [{"pdf_page": 8, "figure": "4", "section": "3.5"}]
+    },
+    {
+      "id": "mda_pfos_comparison",
+      "claim": "混合组MDA相对PFOS组降低16.5%±2.61，而非降低105%；降低后仍高于对照。",
+      "kind": "reported_result_with_denominator",
+      "values": {"reduction_percent": 16.5, "reported_sem": 2.61, "denominator": "PFOS-only"},
+      "locators": [{"pdf_page": 8, "figure": "4", "section": "3.5"}]
+    },
+    {
+      "id": "gsh",
+      "claim": "PFOS使GSH比对照降低40.7%±1.87；混合组/PFOA组与对照无显著差异；正文称混合组比PFOS组高43.8%±1.78，精确百分比算法待原始数据确认。",
+      "kind": "reported_result_with_percent_caveat",
+      "values": {"pfos_vs_control_reduction_percent": 40.7, "pfos_vs_control_sem": 1.87, "mixture_vs_pfos_increase_percent_as_reported": 43.8, "mixture_vs_pfos_sem": 1.78, "raw_data_percent_recalculation_performed": false},
+      "locators": [{"pdf_page": 8, "figure": "4", "section": "3.5"}]
+    },
+    {
+      "id": "abstract_mda_inconsistency",
+      "claim": "摘要在混合降低MDA语境中列105%，正文则明确105%为PFOS相对对照升高，混合相对PFOS降低为16.5%；本报告以正文及图4归属解释。",
+      "kind": "source_consistency_check",
+      "locators": [{"pdf_page": 1, "section": "Abstract"}, {"pdf_page": 8, "figure": "4", "section": "3.5"}]
+    },
+    {
+      "id": "mechanism_not_causal",
+      "claim": "作者明确区分pparα转录与受体激活，并指出APOA4可能受LXR调控；本文未直接确认PPARα激活。",
+      "kind": "author_discussion_and_evidence_boundary",
+      "locators": [{"pdf_page": 10, "section": "4"}]
+    },
+    {
+      "id": "embryo_chorion_hypothesis",
+      "claim": "卵膜限制摄取是作者假说，同时也可能存在与卵膜无关的阶段敏感性差异；没有去膜对照/体内负荷证明。无显著胚胎急性死亡不排除其他终点毒性。",
+      "kind": "author_hypothesis_with_analysis",
+      "locators": [{"pdf_page": 8, "section": "4"}, {"pdf_page": 9, "section": "4"}]
+    },
+    {
+      "id": "no_formal_mixture_model",
+      "claim": "主文方法为LC50比值、ANOVA及Tukey，没有正式CA/IA响应面预测与偏离检验。本文拮抗证据限于特定设计下PFOS相关死亡减少。",
+      "kind": "method_scope_analysis",
+      "locators": [{"pdf_page": 5, "section": "2.7"}, {"pdf_page": 9, "section": "4"}]
+    },
+    {
+      "id": "ecological_limits",
+      "claim": "mg/L、96h、20ppt、单一物种早期生命阶段设计不能直接量化环境风险；作者要求进一步测试环境相关浓度及机制。",
+      "kind": "author_conclusion_with_analysis",
+      "locators": [{"pdf_page": 3, "section": "2.3"}, {"pdf_page": 11, "section": "5"}]
+    }
+  ],
+  "uncertainties": [
+    {"id": "supplement_not_retrieved", "status": "unverified", "detail": "主文将0/24h实测浓度列在Table S3；官方补充ZIP下载返回403，本轮未取得补充。没有据此认定作者未测浓度，也未编造回收率/衰减率/实测校正LC50。", "source_pages": [4, 5]},
+    {"id": "mixture_concentration_axis", "status": "ambiguous_reporting", "detail": "1:1混合列出1.25–10mg/L及LC50，但主文未足够明确每成分浓度与总浓度的定义。复现时需确认配液表。固定100mg/L PFOA设计的变化轴为PFOS，不能写成总PFAS LC50。", "source_pages": [3, 5]},
+    {"id": "final_pool_composition", "status": "not_detailed_in_main_text", "detail": "全鱼混样的原始投放规模有记录，但死亡后每池最终样本数量和存活者选择过程未清楚说明；存在存活者组成影响终点的可能，非已经证明的偏倚。", "source_pages": [3, 4]},
+    {"id": "ppara_percent_language", "status": "needs_raw_data", "detail": "正文上调百分比与图中相对对照表达纵轴对percent-of-control和percent-increase的语义区分不清。本报告保存原报百分比，不计算替代倍数。", "source_pages": [6]},
+    {"id": "gsh_percent_definition", "status": "needs_raw_data", "detail": "正文称混合相对PFOS高43.8%，精确算法需核对原始归一化数据。图形用于方向及显著性核验，不从柱高反算精确值替代原报值。", "source_pages": [8]},
+    {"id": "abstract_mda_number", "status": "documented_source_inconsistency", "detail": "摘要105%的归属语境与正文不一致；正文105%是PFOS相对对照升高，混合相对PFOS下降16.5%。", "source_pages": [1, 8]},
+    {"id": "threshold_precision", "status": "design_limit", "detail": "12.5mg/L为最低已测显著浓度，不是密集浓度拟合得到的精确阈值、EC10或环境安全阈值。", "source_pages": [7]},
+    {"id": "mechanistic_causality", "status": "not_established", "detail": "没有受体功能直接测定、通路干预、鱼体内PFAS或完整时序；基因与氧化试验PFOA浓度不同，因此机制是相关线索。", "source_pages": [3, 4, 10]},
+    {"id": "replication_and_null", "status": "statistical_limit", "detail": "n=3容器/混样，不显著不等于效应等价。没有原始个体和容器数据，不能重算统计或准确柱值。", "source_pages": [3, 5, 6, 7, 8]},
+    {"id": "noac_scope", "status": "terminology_limit", "detail": "作者将100mg/L PFOA称无不良效应浓度；本报告限定为急性死亡终点，因该处理改变基因表达，不能泛化为无毒。", "source_pages": [3, 6]}
+  ],
+  "suggested_figures": [
+    {"page": 5, "caption": "表1：胚胎与幼鱼LC50，区分1:1配比无显著变化与固定100mg/L PFOA背景下LC50升高。来源：Tanabe等，Toxics2024,12,91，CC BY4.0。"},
+    {"page": 6, "caption": "图1：三种羧酸与PFOS的混合死亡效应；请同时保留字母显著性标记，避免仅看柱高推断协同。来源同上。"},
+    {"page": 7, "caption": "图3：固定PFOS2mg/L的PFOA浓度系列；0表示PFOS单独组，12.5mg/L是最低已测显著浓度。此页上半部为图2的apoa4结果。来源同上。"},
+    {"page": 8, "caption": "图4：MDA与GSH；混合组相对PFOS改善，但MDA仍显著高于对照。图形不得取代正文报告的数值及比较分母。来源同上。"}
+  ]
+}

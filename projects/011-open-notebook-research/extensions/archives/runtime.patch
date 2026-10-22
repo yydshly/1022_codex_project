@@ -1,0 +1,12 @@
+--- original/openai_compatible.py
++++ adapted/openai_compatible.py
+@@ -768,4 +768,9 @@
+             langchain_kwargs["temperature"] = 1
+             langchain_kwargs["top_p"] = None
+ 
++        # Cloud experiment: bounded reasoning and no SDK generation retries.
++        if (self.get_model_name() == "MiniMax-M3.1-Flash"
++                and self.base_url.rstrip("/") == "https://api.minimax.cn/v1"):
++            langchain_kwargs["reasoning_effort"] = "low"
++            langchain_kwargs["max_retries"] = 0
+         return ChatOpenAI(**self._clean_config(langchain_kwargs))

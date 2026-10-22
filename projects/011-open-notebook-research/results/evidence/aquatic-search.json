@@ -1,0 +1,309 @@
+{
+  "queried_at": "2026-10-21T15:45:18.989888+00:00",
+  "provider": "Europe PMC REST API",
+  "query": "(TITLE_ABS:\"aquatic toxicity\" OR TITLE_ABS:ecotoxicology OR (TITLE_ABS:zebrafish AND TITLE_ABS:toxicity) OR (TITLE_ABS:fish AND TITLE_ABS:PFOS)) AND OPEN_ACCESS:Y AND FIRST_PDATE:[2024-01-01 TO 2026-10-21]",
+  "hit_count": 916,
+  "screening": "Pilot selection: fish PFOS/PFAS toxicity, original research, accessible licensed full text; not a systematic review.",
+  "candidates": [
+    {
+      "id": "42121786",
+      "source": "MED",
+      "pmcid": "PMC13162690",
+      "doi": "10.3390/ani16091368",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Comparative Hepatotoxicity Assessment of PFOS and Its Alternative 6:2 FTSA in Adult Female Zebrafish."
+    },
+    {
+      "id": "42198499",
+      "source": "MED",
+      "pmcid": "PMC13211294",
+      "doi": "10.3390/toxics14050373",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Do Perfluorinated Chemicals Enhance the Toxicity of Other Contaminants in Aquatic Organisms? A Review."
+    },
+    {
+      "id": "41583888",
+      "source": "MED",
+      "pmcid": "PMC12831017",
+      "doi": "10.1002/ece3.72986",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Pattern of Detections Across Multiple Environmental Messenger RNAs (e-mRNAs) in Stressor-Exposed Zebrafish (Danio rerio)."
+    },
+    {
+      "id": "42515204",
+      "source": "MED",
+      "pmcid": "PMC13417377",
+      "doi": "10.3390/toxics14070639",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Parental Lifetime PBSA Exposure Induces Neurodevelopmental Toxicity in F1 Zebrafish."
+    },
+    {
+      "id": "PMC13658766",
+      "source": "PMC",
+      "pmcid": "PMC13658766",
+      "doi": null,
+      "pubYear": "2026",
+      "license": "cc by-nc-nd",
+      "isOpenAccess": "Y",
+      "title": "Silica nanoparticles antagonize while titania nanoparticles synergize silver nanoparticle toxicity in zebrafish"
+    },
+    {
+      "id": "PMC13602258",
+      "source": "PMC",
+      "pmcid": "PMC13602258",
+      "doi": null,
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Comparative developmental toxicity and oxidative stress of synthetic and natural yellow food colorants in zebrafish (Danio rerio) embryos"
+    },
+    {
+      "id": "PMC13632904",
+      "source": "PMC",
+      "pmcid": "PMC13632904",
+      "doi": null,
+      "pubYear": null,
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "QSAR Modeling of Acute Aquatic Toxicity of Ethoxylated Alcohol Mixtures, and Estimation of Solubility Cut-Offs"
+    },
+    {
+      "id": "41154801",
+      "source": "MED",
+      "pmcid": "PMC12561586",
+      "doi": "10.3390/biology14101398",
+      "pubYear": "2025",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "2-(Methylthio) Benzothiazole (MTBT) Induces Cardiovascular Toxicity in Zebrafish Larvae and Investigates Its Mechanism."
+    },
+    {
+      "id": "41725620",
+      "source": "MED",
+      "pmcid": "PMC13656876",
+      "doi": "10.1002/tox.70058",
+      "pubYear": "2026",
+      "license": "cc by-nc",
+      "isOpenAccess": "Y",
+      "title": "Multistressor Interaction of Perfluorooctane Sulfonate (PFOS) and Temperature in Two Estuarine Fish Species, Red Drum ( Sciaenops ocellatus ) and Sheepshead Minnow ( Cyprinodon variegatus )."
+    },
+    {
+      "id": "42823355",
+      "source": "MED",
+      "pmcid": "PMC13648149",
+      "doi": "10.35371/aoem.2026.38.e38",
+      "pubYear": "2026",
+      "license": "cc by-nc",
+      "isOpenAccess": "Y",
+      "title": "Association between seafood consumption and serum polyfluoroalkyl substance concentrations among Korean adolescents: the Korean National Environmental Health Survey (KoNEHS) cycle 5, 2021-2023."
+    },
+    {
+      "id": "PMC13648269",
+      "source": "PMC",
+      "pmcid": "PMC13648269",
+      "doi": null,
+      "pubYear": null,
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Translating Ecological Realism into Ecotoxicology: An Experimental Approach for Assessing Plant Biodiversity"
+    },
+    {
+      "id": "42579378",
+      "source": "MED",
+      "pmcid": "PMC13460277",
+      "doi": "10.1002/advs.77149",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Programmed Interfacial Phase Separation for Spatiotemporal Fungicide Delivery via Tunable Micro/Nano Architectures."
+    },
+    {
+      "id": "41996304",
+      "source": "MED",
+      "pmcid": "PMC13089740",
+      "doi": "10.1371/journal.pone.0346109",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Multiomics profiling of zebrafish embryonic cell line PAC2 across growth phases to assess its relevance for toxicological studies."
+    },
+    {
+      "id": "41726694",
+      "source": "MED",
+      "pmcid": "PMC12917720",
+      "doi": "10.1021/acsomega.5c08890",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Insights into Aquatic Safety and Environmental Risks of Doped LLZO Solid-State Electrolytes."
+    },
+    {
+      "id": "42783613",
+      "source": "MED",
+      "pmcid": "PMC13608656",
+      "doi": "10.3390/jox16050170",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Toxicological Assessment of the Marine-Derived Cyclic Dipeptide Cyclo(Pro-Tyr) Using In Vitro, Zebrafish Embryo, and BALB/c Mouse Models."
+    },
+    {
+      "id": "42793278",
+      "source": "MED",
+      "pmcid": "PMC13605482",
+      "doi": "10.3390/cimb48090922",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Cross-Species Triage of SERT-Oriented Polyheteroaryl Candidates Prioritizes AD20/UtIA-0108 as an Early Neuroactive Candidate."
+    },
+    {
+      "id": "42285807",
+      "source": "MED",
+      "pmcid": "PMC13394781",
+      "doi": "10.1016/j.envint.2026.110354",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Corrigendum to \"Chemical structure drives developmental toxicity of alkyl-substituted naphthalenes in zebrafish\" [Environ. Int. 204 (2025) 109837]."
+    },
+    {
+      "id": "42404492",
+      "source": "MED",
+      "pmcid": "PMC13330510",
+      "doi": "10.1016/j.toxrep.2026.102306",
+      "pubYear": "2026",
+      "license": "cc by-nc",
+      "isOpenAccess": "Y",
+      "title": "Acute and chronic toxicity of potassium bromate (KBrO₃) in zebrafish (Danio rerio): Behavioural and hepatic effects."
+    },
+    {
+      "id": "42776685",
+      "source": "MED",
+      "pmcid": "PMC13600024",
+      "doi": "10.3390/mps9050132",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Unveiling Distinct Developmental and Cellular Impacts of Cisplatin on Zebrafish (Danio rerio) Embryos: Application of a Combined Developmental Toxicity with Rapid DNA-Content Flow Cytometry Protocol."
+    },
+    {
+      "id": "42459862",
+      "source": "MED",
+      "pmcid": "PMC13368485",
+      "doi": "10.3389/ftox.2026.1862521",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Developmental toxicity and physicochemical characterization of cisplatin-loaded ginger oil nanoemulsion in casper zebrafish."
+    },
+    {
+      "id": "42057300",
+      "source": "MED",
+      "pmcid": "PMC13129262",
+      "doi": "10.1002/jeq2.70183",
+      "pubYear": "2026",
+      "license": "cc by-nc",
+      "isOpenAccess": "Y",
+      "title": "Spatial-temporal patterns of perfluoroalkyl substances in the biota of the Laurentian Great Lakes: A meta-analysis."
+    },
+    {
+      "id": "42554517",
+      "source": "MED",
+      "pmcid": "PMC13440028",
+      "doi": "10.1002/advs.76937",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Long Noncoding RNA PCALRx Interacts with Pyruvate Carboxylase to Drive Multi-Organ Developmental Toxicity in Zebrafish Embryos Exposed to Amoxicillin."
+    },
+    {
+      "id": "40809130",
+      "source": "MED",
+      "pmcid": "PMC12341969",
+      "doi": "10.3389/fsysb.2024.1367562",
+      "pubYear": "2024",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "In silico biomarker analysis of the adverse effects of perfluorooctane sulfonate (PFOS) exposure on the metabolic physiology of embryo-larval zebrafish."
+    },
+    {
+      "id": "42515137",
+      "source": "MED",
+      "pmcid": "PMC13416609",
+      "doi": "10.3390/toxics14070572",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Transcriptomic Insights into Micro- and Nanoplastic Toxicity in Zebrafish: A Narrative Review."
+    },
+    {
+      "id": "42011984",
+      "source": "MED",
+      "pmcid": "PMC13667952",
+      "doi": "10.17305/bb.2026.14030",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Effects of environmentally relevant ibuprofen and valproic acid exposure on zebrafish behavior."
+    },
+    {
+      "id": "41768362",
+      "source": "MED",
+      "pmcid": "PMC12935813",
+      "doi": "10.1007/s12403-025-00743-y",
+      "pubYear": "2026",
+      "license": "cc by-nc-nd",
+      "isOpenAccess": "Y",
+      "title": "Associations Between Seafood Consumption and Serum PFAS Levels Among Asian/Pacific Islanders in the San Francisco Bay Area, California."
+    },
+    {
+      "id": "42198498",
+      "source": "MED",
+      "pmcid": "PMC13210810",
+      "doi": "10.3390/toxics14050372",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Developmental Toxicity and Thyroid-Disrupting Effects of Combined Exposure to Pb(II) and 210Pb(II) in Zebrafish Embryos."
+    },
+    {
+      "id": "42811528",
+      "source": "MED",
+      "pmcid": "PMC13624371",
+      "doi": "10.1002/bdr2.70105",
+      "pubYear": "2026",
+      "license": "cc by-nc-nd",
+      "isOpenAccess": "Y",
+      "title": "Developmental Toxicity Study for the Antimalarial Drug Combination Cabamiquine-Pyronaridine Using a Translational Approach."
+    },
+    {
+      "id": "42622699",
+      "source": "MED",
+      "pmcid": "PMC13493487",
+      "doi": "10.1007/s10646-026-03139-z",
+      "pubYear": "2026",
+      "license": "cc by",
+      "isOpenAccess": "Y",
+      "title": "Engineered nanomaterials released from commercial nano-enabled products affect the morphology and behaviour of the zebrafish (D. rerio) embryo."
+    },
+    {
+      "id": "42811342",
+      "source": "MED",
+      "pmcid": "PMC13625479",
+      "doi": "10.1186/s12987-026-00867-6",
+      "pubYear": "2026",
+      "license": "cc by-nc-nd",
+      "isOpenAccess": "Y",
+      "title": "Integrative multi-omics profiling reveals an association between lipid metabolism dysregulation and bortezomib-induced cerebral hemorrhage in zebrafish."
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "execution": "Codex云端 /workspace，Linux x86_64；非Windows",
+  "upstream_commit": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
+  "images": {
+    "open_notebook": "sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212",
+    "surrealdb": "sha256:e5d7387e3727bbe2f7cd6d869e48cd34777272258572ead37c9656b25f745723"
+  },
+  "versions": {
+    "docker": "28.4.0",
+    "compose": "2.40.3",
+    "database": "2.7.0"
+  },
+  "resources": {
+    "cpu_quota": 4,
+    "memory_limit_GiB": 32,
+    "disk_available_bytes": 7643471872,
+    "app_memory_MiB": 477.4,
+    "database_memory_MiB": 90.84,
+    "snapshot": "导入后瞬时值，非峰值",
+    "storage_driver": "vfs",
+    "initial_available_disk_approx_GiB": 30
+  },
+  "checks": {
+    "health": "200 healthy",
+    "ui_follow_redirects": 200,
+    "unauthenticated": 401,
+    "restart": "前一轮通过，本轮未重复",
+    "paper_sources": 3,
+    "research_notebooks": 1,
+    "additional_synthetic_smoke_notebook_created": true
+  },
+  "papers": [
+    {
+      "doi": "10.3390/ani16091368",
+      "sha256": "df6cabe5407c9b9c3ed9289e1fb1277f91c2d0621209d59b09848fb2f6e6d00c",
+      "hash_verified": true,
+      "bytes": 11385126,
+      "download_http": 200,
+      "upload_http": 200,
+      "read_http": 200,
+      "parse_status": "已提取文本，未分析",
+      "characters": 50134,
+      "title_found": true,
+      "sections": "主要章节可识别；存在空格丢失",
+      "paper_id": "PMC13162690"
+    },
+    {
+      "doi": "10.3390/ani15040610",
+      "sha256": "d8e308b04f4f6b9ab9a3aad002341fe9ab8082eda61907e5e704ab3dee9737cb",
+      "hash_verified": true,
+      "bytes": 5474450,
+      "download_http": 200,
+      "upload_http": 200,
+      "read_http": 200,
+      "parse_status": "已提取文本，未分析",
+      "characters": 61337,
+      "title_found": true,
+      "sections": "主要章节可识别；空格丢失、部分标题重复",
+      "paper_id": "PMC11851982"
+    },
+    {
+      "doi": "10.3390/toxics12010091",
+      "sha256": "676abd7d63510845d3b0e91810d5478fd5c941d4a736ed3457de26b92a70d27d",
+      "hash_verified": true,
+      "bytes": 2038037,
+      "download_http": 200,
+      "upload_http": 200,
+      "read_http": 200,
+      "parse_status": "已提取文本，未分析",
+      "characters": 59970,
+      "title_found": true,
+      "sections": "主要章节可识别；空格丢失、部分标题重复",
+      "paper_id": "PMC10819493"
+    }
+  ],
+  "processing": {
+    "embed": false,
+    "transformations": [],
+    "async_processing": false,
+    "model_calls": 0,
+    "embedding_chunks": 0,
+    "insights": 0,
+    "audio": 0,
+    "video": 0
+  },
+  "network": "urllib初次重试HTTP 403；curl经现有代理成功，未绕过代理",
+  "preview": {
+    "verified_url": null,
+    "binding": "仅云端loopback",
+    "limitation": "未取得可验证的平台预览入口"
+  },
+  "configuration": {
+    "environment_name": "1022_codex_project",
+    "access": "only_me",
+    "fresh_task_restore_verified": false,
+    "state": "saved_configuration; publication_backend_outcome_unconfirmed_after_ui_errors",
+    "draft_saved": true,
+    "publication_succeeded": null,
+    "publication_error_ui": "无法完成发布；设置已保存。请重试以完成发布。",
+    "publication_failure_cause": "not_available; UI error alternates with publishing timer",
+    "draft_currently_present": false,
+    "draft_state_origin": "remote config tool draft_id=null; UI configuration saved"
+  },
+  "schema_version": 1,
+  "phase": "论文导入后、模型调用前的历史快照；后续生成结果见 open-notebook-minimax-check.json",
+  "tested_on": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "upstream_repository": "https://github.com/lfnovo/open-notebook",
+  "license": "MIT",
+  "provenance": {
+    "method": "Remote cloud task command outputs and HTTP responses, retrieved through Codex read_thread; configuration status observed in browser.",
+    "remote_evidence": "/workspace/open-notebook-runtime/evidence.json",
+    "no_windows_installation": true
+  },
+  "verification_outputs": [
+    {
+      "check": "official_container",
+      "exit_code": 0,
+      "output": "Hello from Docker! Official hello-world ran successfully."
+    },
+    {
+      "check": "synthetic_pdf_and_http",
+      "exit_code": 0,
+      "output": "health (200, {'status': 'healthy'})\nunauthenticated notebooks 401\ncreate notebook 200\nPDF import 200 embedded False text extracted True\nsource read 200\nUI final HTTP 200\nnotebook-private-test-open_notebook-1 CPU=0.38% RAM=298.8MiB / 33.29GiB\nnotebook-private-test-surrealdb-1 CPU=0.06% RAM=67.58MiB / 33.29GiB\nFilesystem      Size  Used Avail Use% Mounted on\noverlay          32G   23G  7.2G  77% /workspace\n"
+    }
+  ],
+  "local_results_view": {
+    "url": "http://127.0.0.1:7868/",
+    "purpose": "read actual saved cloud answers and paper PDFs; not the live Open Notebook UI",
+    "new_model_calls": 0,
+    "browser_tabs_verified": 4
+  }
+}

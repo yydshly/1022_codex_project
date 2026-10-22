@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-22",
+  "scope": "Fixed-commit source audit plus saved execution evidence; no new model call or literature search. Static publication is verified separately.",
+  "diagram": "assets/research-overview.svg",
+  "summary": "knowledge-summary.md",
+  "apd": {
+    "commit": "e1663ba5e73a3501904b2a43699f3c12fb4a4300",
+    "source": "https://github.com/brianxiadong/auto-paper-digest/blob/e1663ba5e73a3501904b2a43699f3c12fb4a4300/apd/nblm_bot.py#L1569",
+    "stack": [
+      "Python",
+      "Click",
+      "Requests",
+      "BeautifulSoup",
+      "SQLite",
+      "Playwright",
+      "Gradio"
+    ],
+    "source_inputs": [
+      "Hugging Face daily/weekly papers",
+      "arXiv PDF"
+    ],
+    "code_capabilities": [
+      "NotebookLM summary extraction",
+      "Video Overview generation",
+      "Slides PDF generation",
+      "media download",
+      "archiving and separate publication"
+    ],
+    "notebooklm_outputs_in_this_study": 0,
+    "independent_audio_artifact_pipeline_found": false,
+    "publication_pmc_adapted": false
+  },
+  "open_notebook": {
+    "commit": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
+    "source_paths": [
+      "frontend/package.json",
+      "pyproject.toml",
+      "open_notebook/graphs/source.py",
+      "open_notebook/graphs/chat.py",
+      "api/routers/sources.py"
+    ],
+    "source_base": "https://github.com/lfnovo/open-notebook/blob/a0f6f3081ae06328f0a451b3a3ef2959ca25721d/",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "LangGraph",
+      "LangChain",
+      "content-core",
+      "SurrealDB",
+      "Esperanto",
+      "surreal-commands",
+      "SQLite chat checkpoints"
+    ],
+    "pdf_pipeline": [
+      "FastAPI",
+      "process_source",
+      "source_graph",
+      "content-core.extract_content(file_path)",
+      "source.full_text",
+      "SurrealDB"
+    ],
+    "underlying_pdf_parser_identified_in_saved_logs": false,
+    "initial_three_pdf_processing": "async_processing=false",
+    "later_single_async_upload": "async_processing=true; extraction completed with 59970 characters",
+    "optional_docling_enabled": false,
+    "optional_crawl4ai_enabled": false,
+    "chat_context": "Full text of selected sources; not a validated vector retrieval workflow",
+    "embedding_generated": false
+  },
+  "extensions": [
+    {
+      "layer": "input",
+      "path": "projects/008-auto-paper-digest/scripts/aquatic_research.py",
+      "functions": [
+        "search",
+        "prepare"
+      ],
+      "limitation": "Publisher PDF derivation currently handles the selected MDPI naming/address rules only.",
+      "published_copy": "extensions/archives/aquatic_research.py",
+      "published_copy_scope": "search/prepare and helpers only; historical media dispatch omitted"
+    },
+    {
+      "layer": "portal",
+      "paths": [
+        "projects/008-auto-paper-digest/scripts/run_apd.py",
+        "projects/008-auto-paper-digest/scripts/launch_aquatic_portal.py"
+      ],
+      "limitation": "Preserved upstream code; no PMC publication adaptation.",
+      "published_copies": [
+        "extensions/archives/run_apd.py",
+        "extensions/archives/launch_aquatic_portal.py"
+      ]
+    },
+    {
+      "layer": "model",
+      "path": "projects/008-auto-paper-digest/deploy/open-notebook/adapter/runtime.patch",
+      "settings": {
+        "reasoning_effort": "low",
+        "max_retries": 0,
+        "max_tokens": 8192
+      },
+      "scope": "Specified MiniMax model and China endpoint only.",
+      "published_copy": "extensions/archives/runtime.patch"
+    },
+    {
+      "layer": "analysis",
+      "path": "projects/011-open-notebook-research/results/detailed/",
+      "authorship": "Current research agents; distinct from historical MiniMax output."
+    },
+    {
+      "layer": "presentation",
+      "paths": [
+        "scripts/import_artifacts.py",
+        "scripts/package_web.py",
+        "scripts/report_renderer.py",
+        "scripts/verify_web.py"
+      ],
+      "scope": "Read-only research archive."
+    }
+  ],
+  "observed_results": {
+    "query_hits": 916,
+    "saved_candidates": 30,
+    "selected_papers": 3,
+    "pdf_pages_total": 51,
+    "extracted_characters_total": 171441,
+    "complete_model_answers_characters": [
+      1460,
+      3056
+    ],
+    "truncated_answer_characters": 350,
+    "detailed_paper_reports": 3,
+    "synthesis_reports": 1,
+    "figure_page_previews": 6,
+    "pdf_page_reference_occurrences": 119,
+    "audio_video_slides_outputs": 0,
+    "measured_accuracy_time_savings_cost_savings": false
+  },
+  "local_evidence": [
+    "projects/008-auto-paper-digest/results/open-notebook-full-app-preparation.json",
+    "projects/011-open-notebook-research/results/evidence/open-notebook-cloud-check.json",
+    "projects/011-open-notebook-research/results/evidence/open-notebook-minimax-check.json",
+    "projects/011-open-notebook-research/results/evidence/aquatic-search.json",
+    "projects/011-open-notebook-research/results/detailed/index.json",
+    "projects/011-open-notebook-research/results/history/public-validation.json"
+  ],
+  "unexecuted_extension_issue": "aquatic_research.py media download branch uses two-value unpacking, while the upstream helper returns three values. Recorded but not modified or executed in this presentation task.",
+  "public_history": "results/history/public-validation.json",
+  "extension_source_manifest": "extensions/source-manifest.json"
+}

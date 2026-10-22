@@ -1,0 +1,182 @@
+{
+  "paper_id": "PMC11851982",
+  "title": "Hepatotoxicity in Carp (Carassius auratus) Exposed to Perfluorooctane Sulfonate (PFOS): Integrative Histopathology and Transcriptomics Analysis",
+  "doi": "10.3390/ani15040610",
+  "year": 2025,
+  "journal": "Animals 15:610",
+  "analysis_date": "2026-10-22",
+  "analysis_provenance": "本轮研究代理新增的全文及图表分析，不是先前 MiniMax 或 NotebookLM 输出。",
+  "pdf_path": "../../assets/papers/PMC11851982.pdf",
+  "pdf_page_count": 19,
+  "visually_checked_pages": [3, 4, 5, 7, 9, 10, 11, 12, 13, 14],
+  "scope": {
+    "main_text_read": true,
+    "supplementary_materials_read": false,
+    "raw_rna_seq_reanalysed": false,
+    "image_digitisation_performed": false
+  },
+  "facts": [
+    {
+      "id": "organism",
+      "claim": "对象为约2月龄幼鲫鱼 Carassius auratus；不是鲤鱼 Cyprinus carpio。体长7.23±0.89 cm，体重6.17±1.03 g。",
+      "type": "reported_method",
+      "locators": [{"page": 3, "section": "2.1"}]
+    },
+    {
+      "id": "acute_design",
+      "claim": "96 h急性实验0、10、15、20、25、30、35 mg/L；每浓度3重复、每重复15尾；期间不投喂、不换暴露液，每6 h观察。",
+      "type": "reported_method",
+      "value": {"duration_h": 96, "nominal_concentrations_mg_L": [0, 10, 15, 20, 25, 30, 35], "replicates_per_concentration": 3, "fish_per_replicate": 15},
+      "locators": [{"page": 3, "section": "2.2"}]
+    },
+    {
+      "id": "acute_lc50",
+      "claim": "作者报告96 h LC50=23.17 mg/L；主文未给出其95% CI数值。",
+      "type": "reported_result_not_reanalysed",
+      "value": 23.17,
+      "unit": "mg/L",
+      "locators": [{"page": 5, "section": "3.1"}, {"page": 15, "section": "Supplementary Materials", "table": "S3"}]
+    },
+    {
+      "id": "chronic_design",
+      "claim": "21 d暴露0、0.1、0.5、1.0 mg/L；每处理3重复、每重复15尾；每48 h更新暴露液。未见水体/肝组织PFOS实测浓度。",
+      "type": "reported_method_and_reporting_gap",
+      "value": {"duration_days": 21, "nominal_concentrations_mg_L": [0, 0.1, 0.5, 1], "replicates_per_group": 3, "fish_per_replicate": 15, "renewal_interval_h": 48, "measured_concentrations": null},
+      "locators": [{"page": 4, "section": "2.3"}]
+    },
+    {
+      "id": "sample_mapping",
+      "claim": "每处理9份肝样用于组织学，3份/重复；另称6份/重复用于转录组。最终12个RNA样本，但是否及如何混样、个体到库的映射不明确。",
+      "type": "reported_method_and_reporting_gap",
+      "locators": [{"page": 4, "section": "2.3"}, {"page": 6, "section": "3.3"}, {"page": 9, "figure": "3A"}]
+    },
+    {
+      "id": "histology",
+      "claim": "H&E显示作者描述的肝细胞肿胀、空泡样改变、核变形或溶解。图像支持形态异常，主文未提供盲法病理评分、脂质专一染色或定量肝甘油三酯。",
+      "type": "reported_observation_with_limit",
+      "locators": [{"page": 4, "section": "2.4"}, {"page": 6, "section": "3.2"}, {"page": 7, "figure": "1"}]
+    },
+    {
+      "id": "rna_qc",
+      "claim": "12个样本共85.72 Gb clean data；单样本≥6.39 Gb；Q30>93.94%；比对率85.63%–91.49%。",
+      "type": "reported_result",
+      "locators": [{"page": 6, "section": "3.3"}]
+    },
+    {
+      "id": "rna_pipeline",
+      "claim": "Illumina NovaSeq6000；Trim Galore、HISAT2、StringTie、RSEM、DESeq2；GO/KEGG借助DAVID/KOBAS。",
+      "type": "reported_method",
+      "locators": [{"page": 4, "section": "2.5"}, {"page": 5, "section": "2.5"}]
+    },
+    {
+      "id": "high_sample_exclusion",
+      "claim": "H_2因相关性低被剔除后续差异分析；按图3样本标签，高剂量由3个测序样本降为2个，其余各3个。",
+      "type": "reported_method_with_count_inference",
+      "value": {"initial_libraries_each_group": 3, "excluded": "H_2", "retained_libraries": {"C": 3, "L": 3, "M": 3, "H": 2}},
+      "locators": [{"page": 9, "section": "3.4", "figure": "3A"}]
+    },
+    {
+      "id": "deg_low",
+      "claim": "低剂量21个DEG，20上调、1下调；正文、图4A及图3B相符。",
+      "type": "reported_result_visually_crosschecked",
+      "value": {"total": 21, "up": 20, "down": 1, "venn_terms": [10, 4, 5, 2]},
+      "locators": [{"page": 9, "figure": "3B"}, {"page": 10, "figure": "4A", "section": "3.4"}]
+    },
+    {
+      "id": "deg_medium",
+      "claim": "中剂量417个DEG，272上调、145下调；正文、图4B及图3B相符。",
+      "type": "reported_result_visually_crosschecked",
+      "value": {"total": 417, "up": 272, "down": 145, "venn_terms": [350, 60, 5, 2]},
+      "locators": [{"page": 9, "figure": "3B"}, {"page": 10, "figure": "4B", "section": "3.4"}]
+    },
+    {
+      "id": "deg_high_text",
+      "claim": "正文报告高剂量1036个DEG，629上调、407下调；与两张图不一致，不能作为已独立复核总数。",
+      "type": "reported_result_with_internal_conflict",
+      "value": {"total": 1036, "up": 629, "down": 407},
+      "locators": [{"page": 10, "section": "3.4"}, {"page": 14, "section": "4"}]
+    },
+    {
+      "id": "deg_high_figures",
+      "claim": "图4C图例453上调+159下调=612；图3B高剂量区域546+60+4+2=612，二者相符但与正文1036冲突。",
+      "type": "visually_checked_label_arithmetic",
+      "value": {"total": 612, "up": 453, "down": 159, "venn_terms": [546, 60, 4, 2]},
+      "locators": [{"page": 9, "figure": "3B"}, {"page": 10, "figure": "4C"}]
+    },
+    {
+      "id": "deg_threshold_methods",
+      "claim": "方法规定FDR<0.05、|log2FC|>1，DESeq2/BH；图4图注为FC≥1.5或≤−1.5、p≤0.05，口径不一致。",
+      "type": "reported_method_with_internal_conflict",
+      "locators": [{"page": 5, "section": "2.5"}, {"page": 10, "figure": "4 caption"}]
+    },
+    {
+      "id": "selected_gene_values",
+      "claim": "表1所列log2FC：GPAT3 1.28、ACSBG1 1.98、DGAT 1.20、GST 7.07、ALT 2.89、AST 2.36、胰岛素受体底物1.47。表格未明确每条数值对应比较；ALT/AST为转录值，不是血清酶活。",
+      "type": "reported_table_with_scope_limit",
+      "locators": [{"page": 11, "table": "1"}]
+    },
+    {
+      "id": "kegg_counts",
+      "claim": "低剂量未发现显著通路；中/高剂量注释通路数为299/289，涉及327/516个DEG。不能把299/289直接称为显著富集通路数。",
+      "type": "reported_result_with_interpretation_limit",
+      "locators": [{"page": 11, "section": "3.5"}, {"page": 12, "figure": "5"}]
+    },
+    {
+      "id": "qpcr",
+      "claim": "11个候选基因，5上调6下调；β-actin归一化，样本检测三次；作者称大部分表达模式与RNA-seq相符。验证的是RNA表达，不是蛋白活性或因果路径。",
+      "type": "reported_validation_with_limit",
+      "locators": [{"page": 5, "section": "2.6"}, {"page": 13, "section": "3.6", "figure": "6"}]
+    },
+    {
+      "id": "nafld_scope",
+      "claim": "NAFLD相关结论来自组织形态、转录注释及KEGG网络解释；主文未直接验证关键蛋白、代谢通量、胰岛素抵抗或纤维化。应视为脂肪肝样损伤的机制假设，而非完整疾病诊断。",
+      "type": "analysis_of_evidence_scope",
+      "locators": [{"page": 14, "figure": "7", "section": "4"}, {"page": 15, "section": "4–5"}]
+    },
+    {
+      "id": "environmental_scale",
+      "claim": "本报告换算0.1–1 mg/L=100000–1000000 ng/L；对照论文引言自己所引0.2–100 ng/L的上限，为1000–10000倍。该比较不是独立环境监测结论。",
+      "type": "derived_unit_conversion",
+      "value": {"test_range_ng_L": [100000, 1000000], "paper_cited_environmental_range_ng_L": [0.2, 100], "ratio_to_cited_upper_bound": [1000, 10000]},
+      "locators": [{"page": 2, "section": "1"}, {"page": 4, "section": "2.3"}]
+    },
+    {
+      "id": "public_data",
+      "claim": "论文数据声明的RNA-seq SRA accession为PRJNA1193778；本次未下载或复算FASTQ。",
+      "type": "reported_data_accession",
+      "value": "PRJNA1193778",
+      "locators": [{"page": 16, "section": "Data Availability Statement"}]
+    }
+  ],
+  "uncertainties": [
+    {"id": "fish_accounting", "detail": "购入200尾与急性7×15×3=315尾、21天4×15×3=180尾不能直接核对；是否分批购入未交代。", "pages": [3, 4], "impact": "无法重建完整样本账；不据此推断实验无效。"},
+    {"id": "pooling_and_unit", "detail": "6份肝/重复如何对应最终3库/处理、是否混样、是否一槽一库不明确；15尾中3份病理+6份RNA的其余个体去向未说明。", "pages": [4, 6, 9], "impact": "独立重复和混样方差需元数据确认。"},
+    {"id": "exposure_dosimetry", "detail": "主文缺少水体和组织PFOS实测、具体配液/溶剂说明；纯度仅报告≥90%。", "pages": [3, 4], "impact": "名义浓度无法替代实际外部暴露或内剂量。"},
+    {"id": "high_deg_mismatch", "detail": "高剂量正文1036与图3/图4合计612冲突；原因未知，不能擅归因于H_2排除。", "pages": [9, 10, 14], "impact": "重分析前应保留并标注两种原始报告。"},
+    {"id": "threshold_mismatch", "detail": "方法FDR<0.05且|log2FC|>1与图注FC±1.5、p≤0.05不一致；表1 IL6受体α的0.55又不满足方法幅度阈值。", "pages": [5, 10, 11], "impact": "实际DEG筛选参数不确定。"},
+    {"id": "statistics_reporting", "detail": "§2.7实际印为p≤0；standard deviation of the mean (SEM)混写；方法为Probit、结果又称linear regression。", "pages": [5], "impact": "不可自行更正为0.05或认定误差线含义，需要作者/补充信息确认。"},
+    {"id": "h2_exclusion", "detail": "H_2因低相关性被剔除，但预设剔除规则、剔除原因及保留/剔除敏感性分析未见主文交代。", "pages": [9], "impact": "高剂量只有2个测序样本，推断稳定性需核查。"},
+    {"id": "rna_input_reproducibility", "detail": "具体DESeq2输入计数、参考组装版本、过滤和富集背景未充分呈现；不能仅因报告TPM而断言错误输入TPM。", "pages": [4, 5, 11, 12], "impact": "完整流程尚不可仅凭主文精确复现。"},
+    {"id": "supplementary_not_read", "detail": "未读取S1样本RIN、S2引物、S3 LC50与置信区间及S1拟合曲线。", "pages": [15], "impact": "不报告未取得的数值，不声称复核拟合质量。"},
+    {"id": "quantitative_histology_missing", "detail": "未见盲法评分、个体病变比例、脂质专一染色或肝甘油三酯定量。", "pages": [4, 6, 7], "impact": "代表性图片不能给出病变发生率或精确剂量反应。"},
+    {"id": "causal_mechanism_unverified", "detail": "无关键蛋白、通量、功能干预或救援验证；疾病通路名称属于注释，不能直接转成疾病诊断。", "pages": [11, 12, 13, 14, 15], "impact": "结论限于候选机制和危害线索。"}
+  ],
+  "suggested_figures": [
+    {"page": 7, "figure": "1", "caption": "对照与三个剂量的肝脏H&E图；同列比较，标明50/20/10 μm比例尺；解释组织异常及定量限制。"},
+    {"page": 9, "figure": "3", "caption": "样本相关性与Venn图：定位H_2异常，展示高剂量区域相加为612。"},
+    {"page": 10, "figure": "4", "caption": "火山图：L=21、M=417；H图例453+159=612，与正文1036存在不一致。"},
+    {"page": 11, "figure": "Table 1", "caption": "关键基因转录值：脂质、能量及内分泌线索；ALT/AST是转录值，不是血清酶活。"},
+    {"page": 12, "figure": "5", "caption": "KEGG气泡图：区分基因数、富集比例与校正显著性；疾病名称不等于疾病确诊。"},
+    {"page": 13, "figure": "6", "caption": "11基因qPCR与RNA-seq比较：RNA层面的交叉验证，不能扩展为蛋白或机制验证。"},
+    {"page": 14, "figure": "7", "caption": "KEGG机制网络叠加：作为候选路径示意，不应描述为所有节点与箭头均经实验验证。"}
+  ],
+  "supported_conclusion": "该条件下PFOS暴露伴随幼鲫鱼肝形态异常和转录响应，脂质与能量代谢及免疫、内分泌过程提供可进一步检验的机制线索。",
+  "unsupported_conclusions": [
+    "低于23.17 mg/L即可视为安全",
+    "高剂量1036个DEG已由图表或原始数据一致验证",
+    "6尾肝组织混成1个库已在主文明确报告",
+    "RNA表达改变已经证明同方向蛋白活性、代谢通量或酶活改变",
+    "已确诊人类定义的NAFLD或其他疾病通路所指疾病",
+    "该实验已给出真实水环境的无效应阈值或水产品食用风险"
+  ]
+}

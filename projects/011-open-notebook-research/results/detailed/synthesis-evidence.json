@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "report_id": "synthesis",
+  "analysis_date": "2026-10-22",
+  "analysis_provenance": "研究代理基于三篇原文及逐篇精读的叙述性综合，不是 MiniMax 或 NotebookLM 输出。",
+  "source_papers": ["PMC13162690", "PMC11851982", "PMC10819493"],
+  "source_evidence_files": ["PMC13162690-evidence.json", "PMC11851982-evidence.json", "PMC10819493-evidence.json"],
+  "comparison_axes": ["化合物", "名义与实测剂量", "物种和生命阶段", "暴露时间", "组织", "直接测量终点", "独立重复", "统计口径", "因果证据"],
+  "root_visual_cross_checks": [
+    {"paper_id": "PMC11851982", "pdf_page": 10, "observation": "正文1036（629+407），图4C高剂量453+159=612。"},
+    {"paper_id": "PMC13162690", "pdf_page": 9, "observation": "图6显示原始p值并用黄色星号表示校正后显著性；F500没有黄色星号。"},
+    {"paper_id": "PMC10819493", "pdf_page": 8, "observation": "正文105%归于PFOS相对对照MDA升高；混合组相对PFOS减少16.5%，仍高于对照。"}
+  ],
+  "independent_review": "另一篇报告的研究代理交叉复核了鲫鱼与混合物报告的核心数字、单位、统计和因果表述，未发现需要实质修正的问题。",
+  "interpretation_rules": [
+    "先限定实验条件再综合，不计算跨研究毒性排名。",
+    "将实验观察、作者解释与本报告推断分别记录。",
+    "没有显著差异不等同于等效或不存在效应。",
+    "机制富集不等同于功能或因果验证。",
+    "保留图文冲突，不推断冲突原因或研究无效。"
+  ],
+  "limitations": [
+    "为工作流验证挑选的小样本，不是系统检索或系统综述。",
+    "没有重新分析原始测序、容器级或个体级数据。",
+    "本轮未取得完整补充材料，未填补缺失数值。",
+    "后续实验路线属于研究建议，没有实施。"
+  ]
+}

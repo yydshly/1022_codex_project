@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "checked_on": "2026-10-22",
+  "tool": "Codex in-app browser through cua_repl",
+  "url": "http://127.0.0.1:7871/",
+  "checks": {
+    "initial_render": "Passed; actual screenshots cover.png and reader.png",
+    "architecture_switch": "Passed; original APD path and actual Europe PMC/Open Notebook path displayed distinctly",
+    "answer_switch": "Passed; 1460 / 3056 / 350 source characters and complete/truncated status observed",
+    "keyboard_tabs": "Passed; ArrowRight moved selection from single answer to synthesis",
+    "quality_notes": "Passed; species-name and over-broad synthesis notes remain separate from original answers",
+    "source_navigation": "Passed; source citation navigated to paper-PMC10819493 with matching paper heading",
+    "verification_filter": "Passed; limited filter showed 2 rows, all filter restored 9 rows",
+    "download_resources": "21 relevant HTML-linked resources returned HTTP 200 and matched local bytes; see verification.json",
+    "console_errors_warnings": 0,
+    "responsive": "390 px iframe visually inspected; 768 px iframe content loaded. Main viewport DOM at 718 CSS px had equal clientWidth/scrollWidth; sticky navigation top=0 after fix.",
+    "clipboard": "Copy action displayed success. Browser Use virtual clipboard was empty, so cross-tool paste is not verified; Markdown downloads are byte-verified.",
+    "print": "Print CSS implemented; OS print dialog not exercised",
+    "file_protocol": "No runtime fetch/CDN dependencies; file:// conditional ZIP handling reviewed. Direct file:// browser execution not tested."
+  },
+  "screenshots": [
+    "assets/cover.png",
+    "assets/reader.png",
+    "assets/detailed-reader.png",
+    "assets/overview-page.png"
+  ],
+  "new_model_calls": 0,
+  "online_deployment": false,
+  "scope": "Static archive and detailed scientific reading reports; no claim of cloud-app deployment or raw experimental reanalysis.",
+  "detailed_report_checks": {
+    "four_reports": "All four selected and their substantive content verified in DOM; 6/7/10/9 main sections.",
+    "long_form": "Article max-height=none; full page flow instead of nested short-answer scroll.",
+    "citations": "119 PDF page references checked against actual source page counts; source URLs resolved under assets/papers.",
+    "carp_conflict": "1036 and 612 visible in full report, with sample and figure explanation.",
+    "mixture_values": "LC50 1.97 and CI 1.64–2.16 present; four independent experimental designs retained.",
+    "keyboard": "ArrowRight switched mixture report to synthesis; selection and no-figure state updated.",
+    "chapter_navigation": "Carp section 3 anchor settled at viewport y=110.125 below sticky navigation.",
+    "standalone": "Mixture independent HTML displayed 7710 text characters and 37 PDF links; 1265px clientWidth equals scrollWidth.",
+    "responsive": "390px iframe visually inspected; 718px and 1265px main pages have no horizontal document overflow.",
+    "downloads": "Full Markdown, standalone HTML, evidence JSON, figures, PDF and ZIP verified by local HTTP byte checks; see verification.json.",
+    "console_errors_warnings": 0,
+    "print": "Standalone print stylesheet included; OS print dialog and exported print pagination not exercised.",
+    "provenance": "New research-agent analysis explicitly separated from historical MiniMax answers."
+  },
+  "overview_checks": {
+    "content": "Added a single 1600x1500 capability/architecture/scenario/extension/effect diagram; SVG and PNG.",
+    "source_boundaries": "APD source capabilities, tested Open Notebook/MiniMax outputs and later research-agent reports clearly separated.",
+    "architecture": "content-core parser not guessed; synchronous original imports distinguished from later asynchronous acceptance; embedding not claimed.",
+    "actual_effect": "Three observed-result cards link to search evidence, historical model answers and detailed reports; no accuracy/time/cost improvement claim.",
+    "navigation": "Nine sections; effect example selected the correct carp report; four extension details and PDF explanation open correctly.",
+    "responsive": "718px and 1265px main viewport clientWidth equals scrollWidth; 390px iframe visually checked.",
+    "diagram_review": "Full PNG visually inspected: Chinese text readable, no clipping or text overlap; SVG XML validated.",
+    "provenance": "Fixed-commit official sources and architecture-evidence.json linked; original answers unchanged."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "imported_on": "2026-10-22",
+  "method": "Allowlisted byte-for-byte copies of saved research outputs; SHA256 checked; no network or model call.",
+  "records": [
+    {
+      "path": "assets/papers/PMC13162690.pdf",
+      "source": "projects/008-auto-paper-digest/.runtime/pdfs/weekly/2026-43/PMC13162690.pdf",
+      "bytes": 11385126,
+      "sha256": "df6cabe5407c9b9c3ed9289e1fb1277f91c2d0621209d59b09848fb2f6e6d00c"
+    },
+    {
+      "path": "assets/papers/PMC11851982.pdf",
+      "source": "projects/008-auto-paper-digest/.runtime/pdfs/weekly/2026-43/PMC11851982.pdf",
+      "bytes": 5474450,
+      "sha256": "d8e308b04f4f6b9ab9a3aad002341fe9ab8082eda61907e5e704ab3dee9737cb"
+    },
+    {
+      "path": "assets/papers/PMC10819493.pdf",
+      "source": "projects/008-auto-paper-digest/.runtime/pdfs/weekly/2026-43/PMC10819493.pdf",
+      "bytes": 2038037,
+      "sha256": "676abd7d63510845d3b0e91810d5478fd5c941d4a736ed3457de26b92a70d27d"
+    },
+    {
+      "path": "results/answers/open-notebook-single-answer.md",
+      "source": "projects/008-auto-paper-digest/results/open-notebook-single-answer.md",
+      "bytes": 2876,
+      "sha256": "0984827a7849f4004a1d0e6df38b4774b8adadd23c54deb3741d446dd27b2cfc"
+    },
+    {
+      "path": "results/answers/open-notebook-synthesis-answer.md",
+      "source": "projects/008-auto-paper-digest/results/open-notebook-synthesis-answer.md",
+      "bytes": 6362,
+      "sha256": "140dfdfa36131f3610c0114fb10367a85e1ff96f6c6aaaaec15dbe09499dc935"
+    },
+    {
+      "path": "results/answers/open-notebook-single-truncated.md",
+      "source": "projects/008-auto-paper-digest/results/open-notebook-single-truncated.md",
+      "bytes": 654,
+      "sha256": "18db568df754e4109507593b48f8d4d398e92234c5828e987834813ab9637cba"
+    },
+    {
+      "path": "results/evidence/aquatic-papers.json",
+      "source": "projects/008-auto-paper-digest/results/aquatic-papers.json",
+      "bytes": 8325,
+      "sha256": "89e3c013dd2d2c46027aa8a0c3b42e6b3d0dfae4da211da469696278902aeeb3"
+    },
+    {
+      "path": "results/evidence/aquatic-search.json",
+      "source": "projects/008-auto-paper-digest/results/aquatic-search.json",
+      "bytes": 11365,
+      "sha256": "a5550efbe4c041832953b463d5413bdb2be94d29b9cbaa924d91e512daea1c01"
+    },
+    {
+      "path": "results/evidence/open-notebook-cloud-check.json",
+      "source": "projects/008-auto-paper-digest/results/open-notebook-cloud-check.json",
+      "bytes": 5112,
+      "sha256": "c401bbf9e0f5074261b8351c836f37b7e235669138b39bb56fe18d0d1a7c5363"
+    },
+    {
+      "path": "results/evidence/open-notebook-minimax-check.json",
+      "source": "projects/008-auto-paper-digest/results/open-notebook-minimax-check.json",
+      "bytes": 4417,
+      "sha256": "7e43cbff01f304fb52a98d32153cb0e17a83fb4b13283c634c1ceebec55559be"
+    },
+    {
+      "path": "assets/licenses/OpenNotebook-LICENSE.txt",
+      "source": "projects/008-auto-paper-digest/deploy/open-notebook/licenses/OpenNotebook-LICENSE",
+      "bytes": 1061,
+      "sha256": "5262176eef0dc9e46c8825249000585f115b7ef5fab500bf1f530717bf2ce0b9"
+    },
+    {
+      "path": "assets/licenses/Esperanto-LICENSE.txt",
+      "source": "projects/008-auto-paper-digest/deploy/open-notebook/licenses/Esperanto-LICENSE",
+      "bytes": 1066,
+      "sha256": "e4c7e0427bae5d63b2e31b425745d658f0c843d806fda03bcd823f9a1b677707"
+    },
+    {
+      "path": "assets/licenses/SurrealDB-LICENSE.txt",
+      "source": "projects/008-auto-paper-digest/deploy/open-notebook/licenses/SurrealDB-LICENSE",
+      "bytes": 4565,
+      "sha256": "dd98c688e54be8b85ad79e603f5112449b9789dfc031db94eb5c7dc843702aef"
+    }
+  ]
+}

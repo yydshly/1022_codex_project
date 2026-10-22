@@ -1,0 +1,122 @@
+{
+  "execution": "Codex云端 /workspace",
+  "provider": "minimax",
+  "model": "MiniMax-M3.1-Flash",
+  "upstream_commit": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
+  "image_digest": "sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212",
+  "adapter": {
+    "esperanto_version": "2.28.0",
+    "reasoning_effort": "low",
+    "max_tokens": 8192,
+    "max_retries": 0,
+    "network_free_payload_check": "passed",
+    "reversible": true,
+    "repository_source_modified": false,
+    "patch": "adapter/runtime.patch",
+    "license": "adapter/LICENSE-esperanto"
+  },
+  "generation_requests": {
+    "previous": 1,
+    "this_round": 2,
+    "total": 3
+  },
+  "baseline": {
+    "finish_reason": "length",
+    "complete": false,
+    "usage": {
+      "input_tokens": 21212,
+      "output_tokens": 8192,
+      "total_tokens": 29404
+    }
+  },
+  "single_low": {
+    "session_id": "chat_session:5i9enh207vovmwwt30mh",
+    "native_context_http": 200,
+    "native_execute_http": 200,
+    "context_characters": 60937,
+    "context_estimated_tokens": 20667,
+    "finish_reason": "stop",
+    "answer_characters": 1460,
+    "usage": {
+      "input_tokens": 21212,
+      "output_tokens": 1436,
+      "total_tokens": 22648
+    },
+    "key_fact_check": "LC50、CI、混合条件及主要氧化应激数值符合原文",
+    "answer_path": "qa/single-low-answer.md"
+  },
+  "synthesis_low": {
+    "session_id": "chat_session:zvvbxpz6sht3tg96v62o",
+    "native_context_http": 200,
+    "native_execute_http": 200,
+    "context_characters": 174111,
+    "context_estimated_tokens": 55415,
+    "finish_reason": "stop",
+    "answer_characters": 3056,
+    "usage": {
+      "input_tokens": 54717,
+      "output_tokens": 1828,
+      "total_tokens": 56545
+    },
+    "answer_path": "qa/synthesis-low-answer.md",
+    "limitations": [
+      "中文物种俗名错误，应以拉丁学名为准",
+      "发育毒性归纳过宽",
+      "部分综合断言缺少紧邻引用",
+      "篇幅超过目标，未逐句科学审定"
+    ]
+  },
+  "sources": {
+    "source:vhshfa8xv8wi6xozjagl": "10.3390/ani16091368",
+    "source:bezlz9t8sr5pu12stjfu": "10.3390/ani15040610",
+    "source:i8m54onbhh6bq0q0w7sd": "10.3390/toxics12010091"
+  },
+  "embedding_requests": 0,
+  "media_generated": 0,
+  "tls_verification_enabled": true,
+  "proxy_bypassed": false,
+  "secret_values_written": false,
+  "reasoning_in_reports": false,
+  "schema_version": 1,
+  "tested_on": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "secret_scope": "secret_values_written 指用户 MiniMax 实际 API 密钥；实例随机口令与加密密钥按运行要求保存在私有 private.env。",
+  "usage_origin": "原生会话检查点元数据；非估算上下文长度，也不是账单金额。",
+  "configuration": {
+    "state": "saved_configuration; publication_backend_outcome_unconfirmed_after_ui_errors",
+    "privacy": "only_me",
+    "fresh_task_restore_verified": false,
+    "web_app_preview_verified": false,
+    "draft_saved": true,
+    "publication_succeeded": null,
+    "publication_error_ui": "无法完成发布；设置已保存。请重试以完成发布。",
+    "publication_failure_cause": "not_available; UI error alternates with publishing timer",
+    "draft_currently_present": false,
+    "draft_state_origin": "remote config tool draft_id=null; UI configuration saved"
+  },
+  "usage_total": {
+    "input_tokens": 97141,
+    "output_tokens": 11456,
+    "total_tokens": 108597
+  },
+  "exports": {
+    "open-notebook-single-answer.md": {
+      "answer_characters": 1460,
+      "body_sha256_utf8_without_terminal_newlines": "2c7cfc9982948521a9725ceeabbf4f064047885680c60436a861765d24afd5b1"
+    },
+    "open-notebook-synthesis-answer.md": {
+      "answer_characters": 3056,
+      "body_sha256_utf8_without_terminal_newlines": "557ba431641423cf05a8484d7017c4c5842159121a68077fd850cf2f04ac63db"
+    },
+    "open-notebook-single-truncated.md": {
+      "answer_characters": 350,
+      "body_sha256_utf8_without_terminal_newlines": "c449b7fcf1379d05ff9e73253b73b72f436ff9455f201e487d82432f680f1db8"
+    }
+  },
+  "local_results_view": {
+    "url": "http://127.0.0.1:7868/",
+    "purpose": "read actual saved cloud answers and paper PDFs; not the live Open Notebook UI",
+    "new_model_calls": 0,
+    "browser_tabs_verified": 4
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "compiled_on": "2026-10-22",
+  "purpose": "Inspect how the study extended the original projects; these files do not form an independently runnable application.",
+  "records": [
+    {
+      "file": "archives/aquatic_research.py",
+      "historical_source": "projects/008-auto-paper-digest/scripts/aquatic_research.py",
+      "source_sha256": "1b1389fc3ef943afeb5dcf0bceccdff65d7b39b0be9ae69a0b5a319e943ee6be",
+      "published_sha256": "5a853bec6ebf5ff92856eb0b658a09ce95bd0d2ba8af7b106b5b30ec0bd7e8af",
+      "copy_type": "search/prepare excerpt; CLI/media dispatch removed"
+    },
+    {
+      "file": "archives/run_apd.py",
+      "historical_source": "projects/008-auto-paper-digest/scripts/run_apd.py",
+      "source_sha256": "293392b1b36501a9eaacca54fb850f01c18d9b75a6b5428928e686eb3d3a5569",
+      "published_sha256": "293392b1b36501a9eaacca54fb850f01c18d9b75a6b5428928e686eb3d3a5569",
+      "copy_type": "byte-for-byte historical source snapshot"
+    },
+    {
+      "file": "archives/launch_aquatic_portal.py",
+      "historical_source": "projects/008-auto-paper-digest/scripts/launch_aquatic_portal.py",
+      "source_sha256": "587502ee50a00f9e55c664468d114a87207266264ed8de08c89df969e27146ff",
+      "published_sha256": "587502ee50a00f9e55c664468d114a87207266264ed8de08c89df969e27146ff",
+      "copy_type": "byte-for-byte historical source snapshot"
+    },
+    {
+      "file": "archives/runtime.patch",
+      "historical_source": "projects/008-auto-paper-digest/deploy/open-notebook/adapter/runtime.patch",
+      "source_sha256": "16f90204786f50edcb7193b4dfa9b3305fb142a0b32b0b4637f5b2c37c21cabb",
+      "published_sha256": "16f90204786f50edcb7193b4dfa9b3305fb142a0b32b0b4637f5b2c37c21cabb",
+      "copy_type": "byte-for-byte historical source snapshot"
+    }
+  ]
+}

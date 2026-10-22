@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-22",
+  "purpose": "Read-only research archive of saved results; static GitHub Pages publication requested, separate from the stopped full-app access investigation.",
+  "upstream_apd": {
+    "repo": "https://github.com/brianxiadong/auto-paper-digest",
+    "commit": "e1663ba5e73a3501904b2a43699f3c12fb4a4300",
+    "scope": "Hugging Face/arXiv collection, NotebookLM automation, local storage and publishing orchestration"
+  },
+  "study_adapter": {
+    "search": "Europe PMC REST",
+    "full_text": "JATS XML metadata then publisher PDF",
+    "keyword_search_native_to_apd": false
+  },
+  "notebooklm_historical_tests": {
+    "enterprise_api": "No enterprise license in tested project",
+    "personal_http": "Redirected to location=unsupported",
+    "generated_outputs": 0,
+    "scope": "These are historical results for this account/environment, not universal API availability or current pricing claims"
+  },
+  "open_notebook_historical_tests": {
+    "pdfs": 3,
+    "complete_answers": 2,
+    "truncated_answers": 1,
+    "embedding_calls": 0,
+    "media_outputs": 0,
+    "context": "Selected sources' extracted full text",
+    "api_health_http": 200,
+    "unauthenticated_notebooks_http": 401,
+    "user_browser_upload_chat_verified": false
+  },
+  "quality_review": {
+    "scope": "Spot-checks of key values, units, experimental conditions and source assignments; not a full scientific review",
+    "known_issues": [
+      "Incorrect Chinese common names for Cyprinodon variegatus",
+      "Over-broad developmental toxicity synthesis",
+      "Some synthesis assertions lack adjacent citations",
+      "Text extraction has missing spaces and repeated headings; figures/formulas not exhaustively validated"
+    ]
+  },
+  "access_investigation": {
+    "ngrok": "Proxy CONNECT 403 Domain forbidden; HTTP CRL also 403 after saved revision 13",
+    "microsoft_dev_tunnels": "Proxy CONNECT 403 Domain forbidden after saved revision 14",
+    "control": "registry.npmjs.org through same proxy: CONNECT 200, verified TLS, HTTPS 200",
+    "root_cause": "Unknown saved/effective-policy discrepancy; not evidence that all tunnel protocols are forbidden",
+    "tunnel_created": false,
+    "user_decision": "Stop full Open Notebook application deployment investigation; later authorize a separate static research archive publication."
+  },
+  "current_deliverable": {
+    "type": "Static HTML/CSS/JS archive",
+    "online_generation": false,
+    "new_model_calls": 0,
+    "public_deployment": false,
+    "includes_pdf_and_original_answers": true,
+    "includes_detailed_reports": true,
+    "publication_status": "preparing_static_github_pages_publication; verify separately before marking published",
+    "public_history": "results/history/public-validation.json"
+  },
+  "detailed_review": {
+    "paper_analyses": 3,
+    "synthesis_reports": 1,
+    "primary_pdfs_total_pages": 51,
+    "source": "Full main texts and selected visual figure/table checks",
+    "index": "results/detailed/index.json",
+    "authorship": "Current research agents, distinct from historical MiniMax exports",
+    "raw_data_reanalysed": false,
+    "supplements_complete": false
+  }
+}

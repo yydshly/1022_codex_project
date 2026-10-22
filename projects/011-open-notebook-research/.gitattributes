@@ -1,0 +1,8 @@
+# Evidence hashes cover original bytes, including line endings.
+results/answers/* -text
+results/evidence/* -text
+assets/licenses/* -text
+extensions/archives/* -text
+web/downloads/* -text
+web/assets/licenses/* -text
+web/extensions/archives/* -text

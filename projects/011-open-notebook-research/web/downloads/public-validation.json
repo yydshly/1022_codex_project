@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "compiled_on": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "scope": "Public historical validation summary derived from saved 008 files; no new checks, model requests or cloud-app deployment. Internal account, notebook, source, cloud-chat and turn identifiers omitted.",
+  "apd": {
+    "provenance": {
+      "historical_source": "projects/008-auto-paper-digest/verification.json",
+      "source_sha256": "081aecc1fcef59881e598f3008680a637d1b504c3aee186f2ec8383dd1b9d5ac",
+      "included_as": "selected public fields; not the complete source file"
+    },
+    "verified_at": "2026-10-21T15:55:07.095126+00:00",
+    "paper_count": 3,
+    "pdf_checks": [
+      {
+        "paper_id": "PMC13162690",
+        "bytes": 11385126,
+        "pdf_magic_valid": true,
+        "sha256_matches_manifest": true
+      },
+      {
+        "paper_id": "PMC11851982",
+        "bytes": 5474450,
+        "pdf_magic_valid": true,
+        "sha256_matches_manifest": true
+      },
+      {
+        "paper_id": "PMC10819493",
+        "bytes": 2038037,
+        "pdf_magic_valid": true,
+        "sha256_matches_manifest": true
+      }
+    ],
+    "sqlite_states": {
+      "PMC10819493": "PDF_OK",
+      "PMC11851982": "PDF_OK",
+      "PMC13162690": "PDF_OK"
+    },
+    "portal_http": 200,
+    "portal_pdf_download_verified": true,
+    "notebooklm_generated_outputs": 0,
+    "publishing": {
+      "huggingface": "not_run",
+      "douyin": "not_run"
+    }
+  },
+  "notebooklm": {
+    "provenance": {
+      "historical_source": "projects/008-auto-paper-digest/results/notebooklm-api-check.json",
+      "source_sha256": "8e4d0248d039e79df52406d1c0e4c411dd30d7997bd04f3690b2d2915d7d0aaa",
+      "included_as": "selected public fields; not the complete source file"
+    },
+    "tested_on": "2026-10-22",
+    "enterprise": {
+      "checks": [
+        {
+          "method": "licenseConfigs.list",
+          "http_status": 200,
+          "response": {}
+        },
+        {
+          "method": "notebooks.listRecentlyViewed",
+          "http_status": 400,
+          "status": "FAILED_PRECONDITION",
+          "message": "User must be assigned a license in order to be granted access, the license must have a subscription tier that is not unspecified. Required license for this request is SUBSCRIPTION_TIER_NOTEBOOK_LM_INTERACT."
+        }
+      ],
+      "notebooks_created": 0,
+      "papers_uploaded": 0,
+      "subscriptions_created": 0
+    },
+    "personal_http": {
+      "repository": "https://github.com/teng-lin/notebooklm-py",
+      "version": "0.8.5",
+      "tag_commit": "50493ddf9f9eb9230de998d3dff8565243383078",
+      "license": "MIT",
+      "transport": "unofficial web HTTP/RPC; browser used only for interactive login",
+      "new_generated_outputs": 0,
+      "application_access_verified_via_http": false,
+      "browser_notebook_list_available": "confirmed by user in dedicated Chrome",
+      "redirect": {
+        "host": "https://notebook.google/",
+        "location": "unsupported",
+        "underlying_cause": "not established"
+      },
+      "papers_uploaded": 0,
+      "notebooks_created": 0
+    },
+    "limitation": "HTTP client access failed in this account/environment; browser notebook availability was reported by the user. This does not establish universal regional or subscription restrictions."
+  },
+  "later_async_upload": {
+    "provenance": {
+      "historical_source": "projects/008-auto-paper-digest/results/open-notebook-full-app-preparation.json",
+      "source_sha256": "d05b76aefa7d97495aa1543e443eb3e0a7c7b6c006027ce760b5e435cbcc139a",
+      "included_as": "selected public fields; not the complete source file"
+    },
+    "tested_on": "2026-10-22",
+    "acceptance_upload": {
+      "notebook_http": 200,
+      "embed": false,
+      "transformations": [],
+      "async_processing": true,
+      "generation_requests": 0,
+      "upload_http": 200,
+      "read_http": 200,
+      "characters": 59970,
+      "embedded": false,
+      "embedded_chunks": 0,
+      "status": "text_extracted"
+    },
+    "acceptance_scope": "Native API, same async upload parameters as frontend; not browser acceptance",
+    "new_generation_requests": 0
+  },
+  "native_preview": {
+    "provenance": {
+      "historical_source": "projects/008-auto-paper-digest/results/open-notebook-native-preview-check.json",
+      "source_sha256": "8f05de58a816d780dcdb752000a34662ab366b62c74bdeccefb34d6352aa05a9",
+      "included_as": "selected public fields; not the complete source file"
+    },
+    "checked_at": "2026-10-22T05:29:45Z",
+    "status": "blocked_at_cloud_to_user_browser_ingress",
+    "scope": "Bounded investigation of tools exposed in this session and installed CLI public help; not a claim about all Codex product capabilities",
+    "native_mapping_found": false,
+    "service_checks": {
+      "ui_8502_follow_redirects_http": 200,
+      "health_5055_http": 200,
+      "same_origin_8502_notebook_api_http": 200,
+      "unauthenticated_same_origin_api_http": 401,
+      "original_notebook_sources": 3,
+      "containers_running": 2
+    },
+    "verified_browser_url": null
+  },
+  "tunnel_access": {
+    "provenance": {
+      "historical_source": "projects/008-auto-paper-digest/results/open-notebook-tunnel-check.json",
+      "source_sha256": "b3e611c8dbc57e158b15a8bb4e30842b588ea97a96e9ff292fe1b83fae2081b5",
+      "included_as": "selected public fields; not the complete source file"
+    },
+    "checked_on": "2026-10-22",
+    "result": "BLOCKED_BEFORE_TUNNEL_CREATION",
+    "probes": [
+      {
+        "tool": "ngrok",
+        "target": "ngrok.com:443",
+        "route": "configured HTTPS proxy only",
+        "status": 403
+      },
+      {
+        "tool": "ngrok",
+        "target": "connect.ngrok-agent.com:443",
+        "route": "configured HTTPS proxy only",
+        "status": 403
+      },
+      {
+        "tool": "ngrok",
+        "target": "http://crl.ngrok-agent.com/ngrok.crl",
+        "route": "configured HTTP proxy only",
+        "status": 403
+      },
+      {
+        "tool": "microsoft_dev_tunnels",
+        "target": "global.rel.tunnels.api.visualstudio.com:443",
+        "route": "configured HTTPS proxy only",
+        "status": 403
+      },
+      {
+        "tool": "microsoft_dev_tunnels",
+        "target": "registry.npmjs.org:443",
+        "route": "configured HTTPS proxy only",
+        "status": 200,
+        "https_status": 200,
+        "tls_verified": true
+      }
+    ],
+    "tunnel_created": false,
+    "browser_upload_chat_acceptance": false,
+    "new_model_calls": 0,
+    "observed": "Both tunnel routes returned Domain forbidden through the configured proxy. The registry.npmjs.org control succeeded through the same proxy with verified TLS and HTTP 200.",
+    "unknowns": [
+      "Why saved configuration and effective connectivity differ",
+      "Whether a higher-level network policy denies these destinations",
+      "Whether ngrok or Dev Tunnels protocols would succeed once CONNECT is allowed",
+      "Whether the existing environment publication error is related"
+    ]
+  },
+  "current_scope": "The cloud-app access attempt ended. The separately authorized deliverable is a static GitHub Pages research archive; its publication is verified separately."
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "compiled_on": "2026-10-22",
+  "historical_test_dates": [
+    "2026-10-21",
+    "2026-10-22"
+  ],
+  "timezone": "Asia/Shanghai",
+  "purpose": "固定版本开源项目研究与只读成果档案：保存历史模型原文、原文精读、架构与扩展总结，并按用户要求准备静态网站发布；不新增外部模型 API 请求或完整云端应用部署。",
+  "primary_upstream": {
+    "repository": "https://github.com/lfnovo/open-notebook",
+    "author": "Luis Novo",
+    "commit": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
+    "license": "MIT",
+    "license_copy": "assets/licenses/OpenNotebook-LICENSE.txt",
+    "source_license": "https://github.com/lfnovo/open-notebook/blob/a0f6f3081ae06328f0a451b3a3ef2959ca25721d/LICENSE",
+    "container_image": "lfnovo/open_notebook@sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212",
+    "version_note": "源码 commit 与运行镜像分别记录，不把源码版本直接视为镜像构建身份。"
+  },
+  "related_upstreams": [
+    {
+      "repository": "https://github.com/brianxiadong/auto-paper-digest",
+      "commit": "e1663ba5e73a3501904b2a43699f3c12fb4a4300",
+      "declared_license": "MIT",
+      "license_evidence": [
+        "README.md",
+        "pyproject.toml"
+      ],
+      "standalone_license_file_present": false,
+      "role": "原始论文采集、SQLite 登记与 Gradio 门户；Europe PMC 为本研究适配。"
+    },
+    {
+      "repository": "https://github.com/teng-lin/notebooklm-py",
+      "version": "0.8.5",
+      "commit": "50493ddf9f9eb9230de998d3dff8565243383078",
+      "license": "MIT",
+      "role": "非官方个人网页 HTTP/RPC 路线实测；无生成产出。"
+    }
+  ],
+  "components": {
+    "database": {
+      "name": "SurrealDB",
+      "version": "2.7.0",
+      "image": "surrealdb/surrealdb@sha256:e5d7387e3727bbe2f7cd6d869e48cd34777272258572ead37c9656b25f745723",
+      "license": "Business Source License 1.1",
+      "license_copy": "assets/licenses/SurrealDB-LICENSE.txt"
+    },
+    "model_adapter": {
+      "name": "Esperanto",
+      "version": "2.28.0",
+      "license_copy": "assets/licenses/Esperanto-LICENSE.txt",
+      "runtime_adapter": {
+        "model": "MiniMax-M3.1-Flash",
+        "reasoning_effort": "low",
+        "max_retries": 0,
+        "max_tokens": 8192,
+        "scope": "仅指定模型与中国区地址",
+        "history": "results/history/README.md"
+      },
+      "license": "MIT"
+    },
+    "model": {
+      "provider": "MiniMax",
+      "name": "MiniMax-M3.1-Flash",
+      "access": "历史云端官方接口调用；静态页不使用凭据、不调用模型。"
+    }
+  },
+  "environments": {
+    "historical_cloud": {
+      "os": "Linux x86_64",
+      "docker": "28.4.0",
+      "compose": "2.40.3",
+      "cpu_quota": 4,
+      "memory_limit_GiB": 32,
+      "worker_concurrency": 1,
+      "optional_docling": false,
+      "optional_crawl4ai": false,
+      "local_models_downloaded": false,
+      "embedding_generated": false
+    },
+    "historical_collection": {
+      "os": "Windows",
+      "python": "3.12.13",
+      "gradio": "4.44.1",
+      "fastapi": "0.115.12",
+      "pydantic": "2.10.6"
+    },
+    "current_display": {
+      "format": "静态 HTML/CSS/JavaScript",
+      "preview": "Python 标准库；可选本地 HTTP 预览",
+      "cloud_dependency": false,
+      "model_calls": 0,
+      "deployment_requested": true,
+      "deployment_target": "GitHub Pages static archive; deployment verification recorded separately"
+    }
+  },
+  "paper_source": {
+    "metadata": "https://www.ebi.ac.uk/europepmc/webservices/rest",
+    "search_record": "results/evidence/aquatic-search.json",
+    "manifest": "results/evidence/aquatic-papers.json",
+    "sample_scope": "3 篇鱼类 PFAS/PFOS 原始研究；不是系统综述。",
+    "papers": [
+      {
+        "paper_id": "PMC13162690",
+        "title": "Comparative Hepatotoxicity Assessment of PFOS and Its Alternative 6:2 FTSA in Adult Female Zebrafish.",
+        "authors": "Zhang W, Dong Y, Jian Y, Jia Y, Yang K, Chen Y, Cao Y, Guo L, Zhang S, Liu D, Pang Q, Jiao S.",
+        "year": "2026",
+        "doi": "10.3390/ani16091368",
+        "license_as_indexed": "cc by",
+        "article_url": "https://europepmc.org/articles/PMC13162690",
+        "original_pdf_url": "https://mdpi-res.com/d_attachment/animals/animals-16-01368/article_deploy/animals-16-01368.pdf",
+        "local_copy": "assets/papers/PMC13162690.pdf",
+        "sha256": "df6cabe5407c9b9c3ed9289e1fb1277f91c2d0621209d59b09848fb2f6e6d00c",
+        "modifications": "原始 PDF 按字节保留；未修改。"
+      },
+      {
+        "paper_id": "PMC11851982",
+        "title": "Hepatotoxicity in Carp (Carassius auratus) Exposed to Perfluorooctane Sulfonate (PFOS): Integrative Histopathology and Transcriptomics Analysis.",
+        "authors": "Tang L, Hao G, Zhou D, Fan Y, Wei Z, Li D, Shen Y, Fang H, Lin F, Zhao M, Zhang H.",
+        "year": "2025",
+        "doi": "10.3390/ani15040610",
+        "license_as_indexed": "cc by",
+        "article_url": "https://europepmc.org/articles/PMC11851982",
+        "original_pdf_url": "https://mdpi-res.com/d_attachment/animals/animals-15-00610/article_deploy/animals-15-00610.pdf",
+        "local_copy": "assets/papers/PMC11851982.pdf",
+        "sha256": "d8e308b04f4f6b9ab9a3aad002341fe9ab8082eda61907e5e704ab3dee9737cb",
+        "modifications": "原始 PDF 按字节保留；未修改。"
+      },
+      {
+        "paper_id": "PMC10819493",
+        "title": "Mixture Effects of Per- and Polyfluoroalkyl Substances on Embryonic and Larval Sheepshead Minnows (Cyprinodon variegatus).",
+        "authors": "Tanabe P, Key PB, Chung KW, Pisarski EC, Reiner JL, Rodowa AE, Magnuson JT, DeLorenzo ME.",
+        "year": "2024",
+        "doi": "10.3390/toxics12010091",
+        "license_as_indexed": "cc by",
+        "article_url": "https://europepmc.org/articles/PMC10819493",
+        "original_pdf_url": "https://mdpi-res.com/d_attachment/toxics/toxics-12-00091/article_deploy/toxics-12-00091.pdf",
+        "local_copy": "assets/papers/PMC10819493.pdf",
+        "sha256": "676abd7d63510845d3b0e91810d5478fd5c941d4a736ed3457de26b92a70d27d",
+        "modifications": "原始 PDF 按字节保留；未修改。"
+      }
+    ]
+  },
+  "outputs": {
+    "answer_originals": [
+      "results/answers/open-notebook-single-answer.md",
+      "results/answers/open-notebook-synthesis-answer.md",
+      "results/answers/open-notebook-single-truncated.md"
+    ],
+    "complete_answers": 2,
+    "truncated_answers": 1,
+    "generation_requests_total": 3,
+    "total_tokens": 108597,
+    "usage_origin": "原生会话检查点元数据；不是账单金额。",
+    "provenance": "008 中已导出的真实回答按字节接入；保留原始内容和错误。",
+    "research_review": "保留历史抽查，并新增3篇原文精读及1篇综合，核对方法、结果和关键图页；未重分析原始实验数据。",
+    "media_generated": 0,
+    "new_generation_in_this_project": 0,
+    "new_generation_scope": "指外部模型 API 请求；本轮另有研究代理新增精读分析。",
+    "detailed_reports": {
+      "index": "results/detailed/index.json",
+      "paper_analyses": 3,
+      "synthesis": 1,
+      "authorship": "本轮研究代理",
+      "historical_minimax_output": false,
+      "supplementary_materials_complete": false,
+      "raw_experiment_reanalysis": false
+    }
+  },
+  "evidence": {
+    "import_manifest": "results/import-manifest.json",
+    "study_status": "results/study-status.json",
+    "historical_cloud": "results/evidence/open-notebook-cloud-check.json",
+    "historical_model": "results/evidence/open-notebook-minimax-check.json",
+    "current_page_verification": "verification.json",
+    "note": "云端证据中的路径和配置状态是历史快照，不代表本项目当前运行云服务；本页验收由独立 verification.json 记录。",
+    "architecture_review": "results/evidence/architecture-evidence.json",
+    "public_historical_summary": "results/history/public-validation.json",
+    "extension_source_manifest": "extensions/source-manifest.json"
+  },
+  "artwork": {
+    "cover": "assets/cover.png",
+    "kind": "本项目静态研究网页的实际截图",
+    "not": "非云端 Open Notebook 原版界面截图。",
+    "detail_reader": "assets/detailed-reader.png",
+    "overview_diagram": "assets/research-overview.svg",
+    "overview_diagram_provenance": "原创技术与研究总览；依据固定源码及保存证据，不是上游应用截图。"
+  }
+}

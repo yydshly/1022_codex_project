@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500" role="img" aria-labelledby="overview-title overview-desc">
+<title id="overview-title">从论文自动摘要库到水生毒理学研究档案：能力、架构、扩展与效果</title>
+<desc id="overview-desc">本图分开呈现 Auto Paper Digest 原库流程、Open Notebook 与 MiniMax 的实际分析路线，以及研究代理新增的详细精读。原库负责 AI 论文采集与 NotebookLM 生成编排；我们的领域检索扩展获得三篇论文，替代路线产生两份完整短回答，研究代理另行完成三篇精读及一篇综合，当前网页只展示结果。没有生成音视频或 embedding，原版云应用用户访问没有打通。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#6e8073" stroke-width="1.4"/></marker></defs>
+<style>text{font-family:'Microsoft YaHei','Segoe UI',sans-serif}.small{font-size:19px}.body{font-size:21px}.title{font-size:26px;font-weight:600}.section{font-size:25px;font-weight:600}.metric{font-size:32px;font-weight:600}.headline{font-size:45px;font-weight:600}</style>
+<rect width="1600" height="1500" fill="#f6f5ef"/>
+<text x="48" y="55" class="small" fill="#397e8a" letter-spacing="2">OPEN-SOURCE RESEARCH / 011</text>
+<text x="48" y="112" class="headline" fill="#193d36" >从论文自动摘要，到可核对的研究理解</text>
+<text x="48" y="153" class="body" fill="#334a44" >一张图读懂：库能做什么、如何运行、适合谁、我们改了什么，以及实际得到什么。</text>
+<rect x="1155" y="33" width="397" height="38" rx="19" fill="#e5eee4" stroke="#e5eee4" stroke-width="1.5"/>
+<text x="1174" y="59" class="small" fill="#285f50" >实测快照 · 2026.10.22 · 水生毒理学</text>
+<text x="48" y="207" class="section" fill="#397e8a" >01</text>
+<text x="97" y="207" class="section" fill="#193d36" >能力与使用场景</text>
+<rect x="1065" y="186" width="26" height="22" rx="4" fill="#e5eee4" stroke="#b4cbb6" stroke-width="1.5"/>
+<text x="1101" y="204" class="small" fill="#285f50" >本次已验证</text>
+<rect x="1270" y="186" width="26" height="22" rx="4" fill="#fffef9" stroke="#6e8073" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="1307" y="204" class="small" fill="#876234" >源码能力 / 未跑通</text>
+<rect x="48" y="227" width="488" height="151" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="70" y="263" class="title" fill="#193d36" >Auto Paper Digest · 自动编排</text>
+<text x="70" y="300" class="small" fill="#334a44" >AI 论文榜单采集、PDF 下载与状态管理</text>
+<text x="70" y="329" class="small" fill="#334a44" >连接 NotebookLM：摘要、视频、幻灯片</text>
+<text x="70" y="358" class="small" fill="#334a44" >适合：论文追踪、周报与内容整理</text>
+<rect x="556" y="227" width="488" height="151" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="578" y="263" class="title" fill="#193d36" >Open Notebook · 资料与问答</text>
+<text x="578" y="300" class="small" fill="#334a44" >管理来源、提取文本、问答与保存笔记</text>
+<text x="578" y="329" class="small" fill="#334a44" >模型通过 provider 接入，可选择服务商</text>
+<text x="578" y="358" class="small" fill="#334a44" >适合：专题阅读、多篇比较、资料归纳</text>
+<rect x="1064" y="227" width="488" height="151" rx="10" fill="#e5eee4" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="1086" y="263" class="title" fill="#193d36" >我们的场景 · 水生毒理学</text>
+<text x="1086" y="300" class="small" fill="#334a44" >检索 PFAS / PFOS 对鱼类的毒性研究</text>
+<text x="1086" y="329" class="small" fill="#334a44" >理解实验、图表、统计与机制证据</text>
+<text x="1086" y="358" class="small" fill="#334a44" >最终阅读：详细报告＋原文＋核对记录</text>
+<text x="48" y="424" class="section" fill="#397e8a" >02</text>
+<text x="97" y="424" class="section" fill="#193d36" >底层技术与两条路线</text>
+<rect x="48" y="445" width="1504" height="154" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="70" y="480" class="title" fill="#193d36" >原库路径</text>
+<text x="70" y="514" class="small" fill="#876234" >源码已核对</text>
+<text x="70" y="543" class="small" fill="#876234" >生成未跑通</text>
+<rect x="230" y="468" width="232" height="103" rx="10" fill="#f6f5ef" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="248" y="500" class="body" fill="#193d36" font-weight="600">Hugging Face</text>
+<text x="248" y="531" class="small" fill="#334a44" >日 / 周榜采集</text>
+<text x="248" y="557" class="small" fill="#334a44" >arXiv PDF</text>
+<rect x="486" y="468" width="232" height="103" rx="10" fill="#f6f5ef" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="504" y="500" class="body" fill="#193d36" font-weight="600">Python + SQLite</text>
+<text x="504" y="531" class="small" fill="#334a44" >编排 / 状态登记</text>
+<text x="504" y="557" class="small" fill="#334a44" >下载与去重</text>
+<rect x="742" y="468" width="232" height="103" rx="10" fill="#f6f5ef" stroke="#d5ded0" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="760" y="500" class="body" fill="#193d36" font-weight="600">Playwright</text>
+<text x="760" y="531" class="small" fill="#334a44" >控制 NotebookLM</text>
+<text x="760" y="557" class="small" fill="#334a44" >云端分析与生成</text>
+<rect x="998" y="468" width="232" height="103" rx="10" fill="#f6f5ef" stroke="#d5ded0" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="1016" y="500" class="body" fill="#193d36" font-weight="600">NotebookLM 产物</text>
+<text x="1016" y="531" class="small" fill="#334a44" >摘要 / 视频 / 幻灯片</text>
+<text x="1016" y="557" class="small" fill="#334a44" >本次没有产出</text>
+<rect x="1254" y="468" width="232" height="103" rx="10" fill="#f6f5ef" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="1272" y="500" class="body" fill="#193d36" font-weight="600">归档与展示</text>
+<text x="1272" y="531" class="small" fill="#334a44" >本地文件 + Gradio</text>
+<text x="1272" y="557" class="small" fill="#334a44" >独立发布流程</text>
+<path d="M466 519H483" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M722 519H739" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M978 519H995" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1234 519H1251" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="48" y="615" width="1504" height="226" rx="10" fill="#e5eee4" stroke="#b4cbb6" stroke-width="1.5"/>
+<text x="70" y="652" class="title" fill="#193d36" >实测路径</text>
+<text x="70" y="686" class="small" fill="#285f50" >领域检索扩展</text>
+<text x="70" y="715" class="small" fill="#285f50" >替换分析路线</text>
+<text x="70" y="744" class="small" fill="#285f50" >已得到回答</text>
+<rect x="230" y="639" width="232" height="103" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="248" y="671" class="body" fill="#193d36" font-weight="600">Europe PMC</text>
+<text x="248" y="702" class="small" fill="#334a44" >REST 检索 / JATS</text>
+<text x="248" y="728" class="small" fill="#334a44" >MDPI 公开 PDF</text>
+<rect x="486" y="639" width="232" height="103" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="504" y="671" class="body" fill="#193d36" font-weight="600">Python 适配</text>
+<text x="504" y="702" class="small" fill="#334a44" >PMCID → SQLite</text>
+<text x="504" y="728" class="small" fill="#334a44" >SHA-256 校验</text>
+<rect x="742" y="639" width="232" height="103" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="760" y="671" class="body" fill="#193d36" font-weight="600">Open Notebook</text>
+<text x="760" y="702" class="small" fill="#334a44" >content-core 提取</text>
+<text x="760" y="728" class="small" fill="#334a44" >SurrealDB 保存</text>
+<rect x="998" y="639" width="232" height="103" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="1016" y="671" class="body" fill="#193d36" font-weight="600">全文上下文问答</text>
+<text x="1016" y="702" class="small" fill="#334a44" >原生聊天 API</text>
+<text x="1016" y="728" class="small" fill="#334a44" >Esperanto→MiniMax</text>
+<rect x="1254" y="639" width="232" height="103" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="1272" y="671" class="body" fill="#193d36" font-weight="600">保存原始输出</text>
+<text x="1272" y="702" class="small" fill="#334a44" >2 份完整短回答</text>
+<text x="1272" y="728" class="small" fill="#334a44" >1 次截断另存</text>
+<path d="M466 690H483" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M722 690H739" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M978 690H995" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1234 690H1251" fill="none" stroke="#6e8073" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M230 765H1486" stroke="#d5ded0"/>
+<text x="230" y="794" class="small" fill="#285f50" >应用栈：Next.js / React → FastAPI → LangGraph / LangChain；surreal-commands 提供异步任务机制。</text>
+<text x="230" y="825" class="small" fill="#285f50" >本次选定来源全文送入模型；未生成 embedding。模型调用在云端，结果阅读不依赖云端服务。</text>
+<text x="48" y="888" class="section" fill="#397e8a" >03</text>
+<text x="97" y="888" class="section" fill="#193d36" >我们做的四层扩展，以及如何扩展</text>
+<rect x="48" y="909" width="364" height="166" rx="10" fill="#e9f1f2" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="68" y="949" class="title" fill="#193d36" >1 · 扩展文献输入</text>
+<text x="68" y="988" class="small" fill="#334a44" >Europe PMC REST 检索</text>
+<text x="68" y="1017" class="small" fill="#334a44" >JATS → MDPI PDF 获取</text>
+<text x="68" y="1046" class="small" fill="#334a44" >PMCID 登记 + SHA-256</text>
+<rect x="428" y="909" width="364" height="166" rx="10" fill="#e9f1f2" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="448" y="949" class="title" fill="#193d36" >2 · 适配分析引擎</text>
+<text x="448" y="988" class="small" fill="#334a44" >原生聊天 API → MiniMax</text>
+<text x="448" y="1017" class="small" fill="#334a44" >low 推理 / max_retries=0</text>
+<text x="448" y="1046" class="small" fill="#334a44" >输出上限保留 8192 tokens</text>
+<rect x="808" y="909" width="364" height="166" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="828" y="949" class="title" fill="#193d36" >3 · 加深理解与核对</text>
+<text x="828" y="988" class="small" fill="#334a44" >研究代理重新精读原文与图表</text>
+<text x="828" y="1017" class="small" fill="#334a44" >分析实验 / 统计 / 机制证据</text>
+<text x="828" y="1046" class="small" fill="#334a44" >3 份逐篇精读 + 1 份综合</text>
+<rect x="1188" y="909" width="364" height="166" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="1208" y="949" class="title" fill="#193d36" >4 · 扩展结果呈现</text>
+<text x="1208" y="988" class="small" fill="#334a44" >HTML / CSS / JS 只读网页</text>
+<text x="1208" y="1017" class="small" fill="#334a44" >页码引用 + 结构化证据 JSON</text>
+<text x="1208" y="1046" class="small" fill="#334a44" >图页 / Markdown / 离线 ZIP</text>
+<text x="48" y="1108" class="small" fill="#397e8a" >归属说明：后两层是本轮研究整理；详细精读不是 APD / NotebookLM / MiniMax 自动产出的效果。</text>
+<text x="48" y="1154" class="section" fill="#397e8a" >04</text>
+<text x="97" y="1154" class="section" fill="#193d36" >实际效果：拿到了什么，质量到哪里</text>
+<rect x="48" y="1175" width="488" height="185" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="70" y="1209" class="small" fill="#397e8a" >资料获取</text>
+<text x="70" y="1251" class="metric" fill="#193d36" >916 → 30 → 3</text>
+<text x="70" y="1288" class="small" fill="#334a44" >检索命中 → 保存候选 → 选取论文</text>
+<text x="70" y="1315" class="small" fill="#334a44" >3 份原始 PDF / 51 页，哈希一致</text>
+<text x="70" y="1342" class="small" fill="#334a44" >效果：获得可追溯的研究输入</text>
+<rect x="556" y="1175" width="488" height="185" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="578" y="1209" class="small" fill="#397e8a" >模型初读</text>
+<text x="578" y="1251" class="metric" fill="#193d36" >2 份完整短回答</text>
+<text x="578" y="1288" class="small" fill="#334a44" >1,460 / 3,056 字符；另有 350 字截断</text>
+<text x="578" y="1315" class="small" fill="#334a44" >能抽取关键条件；仍有译名与概括问题</text>
+<text x="578" y="1342" class="small" fill="#334a44" >效果：可做初读草稿，需回原文核对</text>
+<rect x="1064" y="1175" width="488" height="185" rx="10" fill="#fffef9" stroke="#d5ded0" stroke-width="1.5"/>
+<text x="1086" y="1209" class="small" fill="#397e8a" >详细理解与呈现</text>
+<text x="1086" y="1251" class="metric" fill="#193d36" >3 篇精读 + 1 篇综合</text>
+<text x="1086" y="1288" class="small" fill="#334a44" >逐篇约 4,000–4,500 汉字</text>
+<text x="1086" y="1315" class="small" fill="#334a44" >6 张图页 / 119 处 PDF 页码引用</text>
+<text x="1086" y="1342" class="small" fill="#334a44" >效果：解释依据、发现矛盾、形成后续问题</text>
+<rect x="48" y="1380" width="1504" height="68" rx="8" fill="#f5eedf" stroke="#e1d6bf" stroke-width="1.5"/>
+<text x="68" y="1408" class="small" fill="#876234" >验证边界：未生成音频、视频、幻灯片或 embedding；原版云应用的用户入口未打通；当前网页仅阅读已保存结果。</text>
+<text x="68" y="1435" class="small" fill="#876234" >详细精读核对主文与关键图表，未重算原始实验数据；3 篇样本不构成系统综述，也未量化提效或准确率。</text>
+<text x="48" y="1480" class="small" fill="#6e8073" >依据：固定源码 + 本地实测证据 + 原论文精读  ｜  APD e1663ba · Open Notebook a0f6f30（镜像另记）</text>
+</svg>

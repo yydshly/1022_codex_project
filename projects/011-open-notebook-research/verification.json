@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "checked_on": "2026-10-22",
+  "static_local_references": 49,
+  "pdf_hashes_verified": 3,
+  "answer_count": 3,
+  "complete_answer_count": 2,
+  "detailed_reports": [
+    {
+      "id": "PMC13162690",
+      "characters": 8350,
+      "han_characters": 4033,
+      "pdf_page_references": 28,
+      "toc_entries": 6
+    },
+    {
+      "id": "PMC11851982",
+      "characters": 8662,
+      "han_characters": 4098,
+      "pdf_page_references": 31,
+      "toc_entries": 7
+    },
+    {
+      "id": "PMC10819493",
+      "characters": 10013,
+      "han_characters": 4533,
+      "pdf_page_references": 37,
+      "toc_entries": 10
+    },
+    {
+      "id": "synthesis",
+      "characters": 6299,
+      "han_characters": 3382,
+      "pdf_page_references": 23,
+      "toc_entries": 9
+    }
+  ],
+  "archive_members": 60,
+  "http": [],
+  "browser_validation": "Recorded separately in web-ui-verification.json",
+  "new_external_model_api_calls": 0,
+  "new_research_agent_analysis": true,
+  "deployment_performed": false
+}

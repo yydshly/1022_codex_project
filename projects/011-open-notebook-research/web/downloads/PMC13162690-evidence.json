@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "paper_id": "PMC13162690",
+  "title": "Comparative Hepatotoxicity Assessment of PFOS and Its Alternative 6:2 FTSA in Adult Female Zebrafish",
+  "doi": "10.3390/ani16091368",
+  "journal": "Animals 2026, 16, 1368",
+  "analysis_date": "2026-10-22",
+  "analysis_provenance": "本轮研究代理基于本地完整 PDF 的新增全文精读；不是先前 MiniMax 或 NotebookLM 输出。",
+  "pdf": "../../assets/papers/PMC13162690.pdf",
+  "page_number_mapping": "实际 PDF 页码与文内页码相同；第 1 页为文章首页，第 2–17 页的印刷页码对应 PDF 页序。",
+  "visually_checked_pages": [
+    3,
+    5,
+    6,
+    7,
+    9,
+    10
+  ],
+  "reading_scope": {
+    "full_main_text": true,
+    "methods_results_discussion_read": true,
+    "supplementary_files_reanalyzed": false,
+    "raw_sequencing_data_reanalyzed": false,
+    "numeric_values_digitized_from_bars": false
+  },
+  "facts": [
+    {
+      "id": "organism",
+      "claim": "试验对象为 AB 野生型成年雌性斑马鱼，4–5 月龄，体重 0.156±0.005 g，适应 2 周。",
+      "type": "reported_method",
+      "locators": [
+        {
+          "pdf_page": 3,
+          "section": "2.2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "id": "treatments",
+      "claim": "四组为 CK（0.0025% DMSO）、P50（50 μg/L PFOS）、F50（50 μg/L 6:2 FTSA）、F500（500 μg/L 6:2 FTSA）；所有组统一 DMSO 浓度。",
+      "type": "reported_method",
+      "locators": [
+        {
+          "pdf_page": 3,
+          "section": "2.1",
+          "figure": "1",
+          "href": "../../assets/papers/PMC13162690.pdf#page=3"
+        },
+        {
+          "pdf_page": 4,
+          "section": "2.2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "id": "replication_exposure",
+      "claim": "半静态暴露 30 天，每组 3 缸，每缸 20 条鱼、8 L；26±1°C，光暗 14:10 h，每天喂食两次。",
+      "type": "reported_method",
+      "independent_exposure_replicates_per_group": 3,
+      "initial_fish_per_group_derived": 60,
+      "derived_calculation": "3 tanks × 20 fish/tank；60 为初始鱼数，不是 60 个独立处理重复。",
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "id": "concentrations_nominal",
+      "claim": "正文报告配制浓度，未报告水样实测暴露浓度、更新前后浓度变化或组织内负荷；本分析按名义浓度解读。",
+      "type": "reporting_gap",
+      "scope": "限已读取正文；不推定从未测量。",
+      "locators": [
+        {
+          "pdf_page": 3,
+          "section": "2.1",
+          "href": "../../assets/papers/PMC13162690.pdf#page=3"
+        },
+        {
+          "pdf_page": 4,
+          "section": "2.2–2.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "id": "sampling",
+      "claim": "每缸 3 鱼用于病理；另两套各 3 鱼分别用于 RNA 与 MDA。RNA 明确将同缸 3 鱼肝混样为一个样本，每组 3 个、合计 12 个生物学重复样本。",
+      "type": "reported_method",
+      "rna_pool_fish": 3,
+      "rna_n_per_group": 3,
+      "rna_total_samples": 12,
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.2、2.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "id": "histology_mda_method",
+      "claim": "病理采用石蜡切片 H&E；MDA 采用 TBA 法。",
+      "type": "reported_method",
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.3",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "id": "rna_quality_pipeline",
+      "claim": "RIN≥9.0，NovaSeq X Plus PE150；fastp、HISAT2、StringTie、RSEM、DESeq2；参考基因组 GRCz11（GCA_000002035.4）。Q30>95.61%，比对率 88.04%–90.80%。",
+      "type": "reported_method_and_result",
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        },
+        {
+          "pdf_page": 6,
+          "section": "3.2.1",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "deg_threshold",
+      "claim": "方法与结果使用 |log2FC|≥1、adjusted p<0.05；具体 p 调整算法未在正文明确命名。",
+      "type": "reported_method",
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        },
+        {
+          "pdf_page": 6,
+          "section": "3.2.2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "threshold_wording_discrepancy",
+      "claim": "图3图注写 |fold change|>2，与方法 |log2FC|≥1 的定义和边界表述不完全一致；需以筛选代码核对，不能据此推断数据造假。",
+      "type": "reporting_inconsistency",
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        },
+        {
+          "pdf_page": 6,
+          "figure": "3",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "enrichment_thresholds",
+      "claim": "GO/常规 KEGG 使用 Bonferroni 校正 p<0.05；GSEA 使用 |NES|>1 且 adjusted p<0.25。",
+      "type": "reported_method",
+      "locators": [
+        {
+          "pdf_page": 4,
+          "section": "2.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=4"
+        },
+        {
+          "pdf_page": 5,
+          "section": "2.4 continuation",
+          "href": "../../assets/papers/PMC13162690.pdf#page=5"
+        },
+        {
+          "pdf_page": 10,
+          "figure": "7A–C",
+          "href": "../../assets/papers/PMC13162690.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "id": "other_statistics",
+      "claim": "非 RNA 数据为单因素 ANOVA 和 Tukey，Shapiro–Wilk 检验正态性、Bartlett 检验方差齐性，显著性 p<0.05。",
+      "type": "reported_method",
+      "locators": [
+        {
+          "pdf_page": 5,
+          "section": "2.6",
+          "href": "../../assets/papers/PMC13162690.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "id": "histology_findings",
+      "claim": "作者描述 P50、F50 有气球样变性及点状坏死，F50 有其判读为纤维化的区域，F500 异常加重并有静脉淤血。图2为代表性图片，比例尺20 μm。",
+      "type": "author_histopathology_interpretation",
+      "caveat": "已视觉检查标注；正文无胶原特异染色、盲法评分、各缸损伤定量。不能把代表图替代定量效应量。",
+      "locators": [
+        {
+          "pdf_page": 5,
+          "section": "3.1",
+          "figure": "2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "id": "deg_counts",
+      "claim": "P50/F50/F500 相对 CK 分别有 645/191/85 个 DEGs。",
+      "type": "reported_numeric_result",
+      "groups": {
+        "P50": {
+          "total": 645,
+          "up": 129,
+          "down": 516
+        },
+        "F50": {
+          "total": 191,
+          "up": 81,
+          "down": 110
+        },
+        "F500": {
+          "total": 85,
+          "up": 17,
+          "down": 68
+        }
+      },
+      "locators": [
+        {
+          "pdf_page": 6,
+          "section": "3.2.2",
+          "figure": "3",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "deg_count_interpretation",
+      "claim": "高剂量 DEG 数更少与作者描述的病理更重并存，不能用 DEG 个数直接排序毒性。RNA 完整性不能排除细胞组成或统计阈值影响。",
+      "type": "our_inference",
+      "locators": [
+        {
+          "pdf_page": 5,
+          "figure": "2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=5"
+        },
+        {
+          "pdf_page": 6,
+          "figure": "3",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        },
+        {
+          "pdf_page": 11,
+          "section": "4.2",
+          "href": "../../assets/papers/PMC13162690.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "id": "qpcr",
+      "claim": "P50/F50/F500 分别验证 6/9/1 个基因，F500 为 fabp7a；选定基因跨平台 log2FC 相关 R²=0.9697、p<0.0001，图4为均值±SEM、n=3。",
+      "type": "reported_numeric_result",
+      "caveat": "没有明确独立新暴露批次；高剂量仅一基因，不构成完整应激机制验证。",
+      "locators": [
+        {
+          "pdf_page": 6,
+          "section": "3.2.3",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        },
+        {
+          "pdf_page": 7,
+          "section": "3.2.3",
+          "figure": "4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "id": "go_kegg_f500",
+      "claim": "F500 在多重校正后只有 carbohydrate binding 这一 GO 条目显著；常规 KEGG 没有校正后显著通路。",
+      "type": "reported_result",
+      "locators": [
+        {
+          "pdf_page": 8,
+          "section": "3.2.4",
+          "figure": "5C",
+          "href": "../../assets/papers/PMC13162690.pdf#page=8"
+        },
+        {
+          "pdf_page": 9,
+          "figure": "6",
+          "href": "../../assets/papers/PMC13162690.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "id": "kegg_plot_encoding",
+      "claim": "图6颜色与数字为原始 p 值；黄色星号为多重校正后 p<0.05；只需至少一个处理组原始 p<0.05 即被展示。",
+      "type": "visually_verified_plot_rule",
+      "locators": [
+        {
+          "pdf_page": 9,
+          "figure": "6",
+          "href": "../../assets/papers/PMC13162690.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "id": "gsea_directions",
+      "claim": "按作者 GSEA 标准，P50 的 DNA 复制/细胞周期/同源重组偏下调；F50 的核糖体和 DNA 复制偏下调、线粒体自噬和部分免疫集合偏上调；F500 核糖体偏下调，内质网蛋白加工、泛素介导蛋白降解、溶酶体偏上调。",
+      "type": "reported_transcriptomic_association",
+      "caveat": "转录层面关联，阈值 adjusted p<0.25；不等于蛋白或通量实测。",
+      "locators": [
+        {
+          "pdf_page": 8,
+          "section": "3.2.5",
+          "href": "../../assets/papers/PMC13162690.pdf#page=8"
+        },
+        {
+          "pdf_page": 10,
+          "figure": "7A–C",
+          "href": "../../assets/papers/PMC13162690.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "id": "mda_result",
+      "claim": "只有 F50 的 MDA 显著高于 CK（p<0.05）。图7D F50 标 a，CK/P50/F500 均为 b；单位 nmol/mg prot，均值±SEM，n=3。",
+      "type": "reported_and_visually_verified_result",
+      "exact_bar_values_available_in_main_text": false,
+      "caveat": "未从柱图目测推造精确均值；未显著不等于证明无氧化损伤。",
+      "locators": [
+        {
+          "pdf_page": 9,
+          "section": "3.3",
+          "href": "../../assets/papers/PMC13162690.pdf#page=9"
+        },
+        {
+          "pdf_page": 10,
+          "figure": "7D",
+          "href": "../../assets/papers/PMC13162690.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "id": "mechanistic_limits",
+      "claim": "PPAR 直接配体作用、内质网应激致伤和机制转换均未获直接因果验证；作者承认转录组为 hypothesis-generating，缺肝甘油三酯/胆固醇、Oil Red O、ALT/AST 等功能验证。",
+      "type": "author_acknowledged_limit_and_our_appraisal",
+      "locators": [
+        {
+          "pdf_page": 12,
+          "section": "4.4",
+          "href": "../../assets/papers/PMC13162690.pdf#page=12"
+        },
+        {
+          "pdf_page": 13,
+          "section": "4.5–4.6",
+          "href": "../../assets/papers/PMC13162690.pdf#page=13"
+        },
+        {
+          "pdf_page": 14,
+          "section": "4.7",
+          "href": "../../assets/papers/PMC13162690.pdf#page=14"
+        }
+      ]
+    },
+    {
+      "id": "extrapolation_limits",
+      "claim": "作者承认仅雌鱼限制性别外推，可能存在激素周期变异，暴露浓度高于典型环境水平。",
+      "type": "author_acknowledged_limit",
+      "locators": [
+        {
+          "pdf_page": 13,
+          "section": "4.7",
+          "href": "../../assets/papers/PMC13162690.pdf#page=13"
+        },
+        {
+          "pdf_page": 14,
+          "section": "4.7",
+          "href": "../../assets/papers/PMC13162690.pdf#page=14"
+        }
+      ]
+    },
+    {
+      "id": "raw_data_reference",
+      "claim": "正文列出 BioProject PRJNA1455118；本轮没有下载原始数据或核验其内容。补充文件列有 PCA、测序质量、DEG、富集及 GSEA 表。",
+      "type": "reported_data_locator",
+      "locators": [
+        {
+          "pdf_page": 6,
+          "section": "3.2.1",
+          "href": "../../assets/papers/PMC13162690.pdf#page=6"
+        },
+        {
+          "pdf_page": 14,
+          "section": "Supplementary Materials",
+          "href": "../../assets/papers/PMC13162690.pdf#page=14"
+        }
+      ]
+    }
+  ],
+  "uncertainties": [
+    "补充材料及原始数据未在本轮重新分析；正文未报告某信息不等于实验从未完成该测量。",
+    "半静态暴露更新频率、水样实测浓度及肝组织负荷未在正文明确报告。",
+    "MDA 每缸采 3 鱼、图示 n=3，但其混样和鱼至缸的聚合细节未明确。",
+    "病理为代表性 H&E 图片，正文缺少盲法、评分、缸水平分布、胶原特异染色验证。",
+    "qPCR 是否为独立动物批次或独立 RNA 样本未明确；F500 仅验证一个基因。",
+    "DESeq2 实际输入计数矩阵、DEG/GSEA 的具体 p 调整算法未说明充分，不能擅自统一称作 FDR<0.05。",
+    "图3图注的 fold change 表述与方法的 log2FC/边界符号不完全一致，需核对实际筛选脚本。",
+    "MDA 柱图无正文精确数表；报告仅引用显著性字母及单位，不从图像虚构精确均值。",
+    "F500 的 DEG 减少有多种可能解释，本文未排除细胞组成、统计阈值、样本变异等因素。",
+    "等水体质量浓度不等于等摩尔或等体内剂量，不能据此完成内在毒力或真实环境风险排序。"
+  ],
+  "suggested_figures": [
+    {
+      "page": 3,
+      "figure": "1",
+      "caption": "实验设计：CK、P50、F50、F500，经30天暴露后做肝病理、转录组和MDA检测。化学结构也提示6:2 FTSA不能简单理解成全分子只有6个碳。"
+    },
+    {
+      "page": 5,
+      "figure": "2",
+      "caption": "H&E代表图：作者标注气球样变性、坏死、纤维化与淤血；图像未经本文量化病理评分，纤维化尚缺胶原特异验证。"
+    },
+    {
+      "page": 6,
+      "figure": "3",
+      "caption": "DEG数量645、191、85：高剂量变化基因反而更少，不能把数量当成毒性大小；各热图均为独立基因集合的行标准化。"
+    },
+    {
+      "page": 7,
+      "figure": "4",
+      "caption": "qPCR检查了所选基因，F500仅fabp7a一个基因；跨平台一致性不等于整条机制得到验证。"
+    },
+    {
+      "page": 9,
+      "figure": "6",
+      "caption": "KEGG热图：红蓝为原始p值，黄色星号才代表校正后显著；F500没有校正后显著通路。"
+    },
+    {
+      "page": 10,
+      "figure": "7",
+      "caption": "GSEA采用adjusted p<0.25的探索阈值。右下MDA仅F50为a，其余组为b；单位nmol/mg prot，n=3，不能写成随剂量单调增加。"
+    }
+  ],
+  "pdf_page_count": 17
+}

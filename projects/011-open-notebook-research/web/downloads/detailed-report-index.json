@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-22",
+  "provenance": "本轮研究代理依据三篇完整 PDF 及关键图表新增的精读和叙述性综合。与保留的历史 MiniMax 短回答分别归档；未新增外部模型 API 调用。",
+  "reports": [
+    {
+      "id": "PMC13162690",
+      "title": "PFOS 与替代物 6:2 FTSA：肝损伤为什么不随指标同步变化？",
+      "shortTitle": "斑马鱼 · 替代物比较",
+      "tabNote": "30 天 / 肝脏与转录组",
+      "kicker": "01 / ZEBRAFISH / ANIMALS 2026",
+      "summary": "拆解四组暴露与独立缸重复，逐图理解组织损伤、645 / 191 / 85 个差异基因及非单调的 MDA 结果，判断 PPAR 与内质网应激解释的证据强度。",
+      "facts": ["成年雌性 · 3 缸/组", "PFOS 50 μg/L", "6:2 FTSA 50 / 500 μg/L", "原文 17 页"],
+      "file": "PMC13162690-analysis.md",
+      "evidence": "PMC13162690-evidence.json",
+      "figures": [
+        {"file": "PMC13162690-p05.png", "paper": "PMC13162690", "page": 5, "caption": "图2：作者标记的肝组织异常，代表性切片尚不能替代定量病理评分"},
+        {"file": "PMC13162690-p10.png", "paper": "PMC13162690", "page": 10, "caption": "图7：GSEA 与 MDA；F50 显著升高，F500 不显著，需保留终点和统计条件"}
+      ]
+    },
+    {
+      "id": "PMC11851982",
+      "title": "PFOS 如何损伤鲫鱼肝脏：从组织表型到机制线索",
+      "shortTitle": "鲫鱼 · 肝毒性证据",
+      "tabNote": "21 天 / 样本与统计复核",
+      "kicker": "02 / CARASSIUS AURATUS / ANIMALS 2025",
+      "summary": "区分急性与 21 天实验，核对肝损伤、脂质和能量代谢基因。重点追踪 H_2 样本剔除与高剂量 DEG 正文 1036、图中 612 的不一致。",
+      "facts": ["幼鲫鱼 · 21 天", "PFOS 0.1 / 0.5 / 1.0 mg/L", "H 组测序样本 3 → 2", "原文 19 页"],
+      "file": "PMC11851982-analysis.md",
+      "evidence": "PMC11851982-evidence.json",
+      "figures": [
+        {"file": "PMC11851982-p07.png", "paper": "PMC11851982", "page": 7, "caption": "图1：按相同观察尺度比较处理组，不从代表性图片推造脂质含量"},
+        {"file": "PMC11851982-p10.png", "paper": "PMC11851982", "page": 10, "caption": "图4：正文与高剂量火山图的基因数量不一致，报告保留两套原始数据"}
+      ]
+    },
+    {
+      "id": "PMC10819493",
+      "title": "PFOS 与 PFOA 混合：何时出现拮抗，为什么不能泛化？",
+      "shortTitle": "早期生命 · 混合效应",
+      "tabNote": "96 小时 / 配比与氧化应激",
+      "kicker": "03 / CYPRINODON VARIEGATUS / TOXICS 2024",
+      "summary": "分清四套实验，完整读取 LC50 和置信区间，解释 1:1 与固定 PFOA 背景的差异；核对死亡率、MDA/GSH 的比较基准和 PPARα 机制缺口。",
+      "facts": ["胚胎 / 幼鱼 · 96 h", "3 个独立容器重复", "LC50 与配比试验", "原文 15 页"],
+      "file": "PMC10819493-analysis.md",
+      "evidence": "PMC10819493-evidence.json",
+      "figures": [
+        {"file": "PMC10819493-p05.png", "paper": "PMC10819493", "page": 5, "caption": "表1：生命阶段与混合条件对应不同 LC50；大于号是试验范围界限"},
+        {"file": "PMC10819493-p08.png", "paper": "PMC10819493", "page": 8, "caption": "图4：混合物降低部分氧化损伤，但 MDA 仍高于对照；注意百分比的分母"}
+      ]
+    },
+    {
+      "id": "synthesis",
+      "title": "三篇合起来：共同机制、真正分歧与下一步研究",
+      "shortTitle": "三篇综合 · 研究路线",
+      "tabNote": "证据矩阵 / 比较边界 / 术语",
+      "kicker": "04 / CROSS-PAPER SYNTHESIS",
+      "summary": "统一比较维度，解释为何不能用基因数排名毒性，不能把富集写成疾病，也不能将特定混合条件外推为普适规律。把证据缺口转成可复核的研究方案。",
+      "facts": ["3 篇原文 · 51 页", "9 个主题章节", "叙述性综合", "非荟萃分析"],
+      "file": "synthesis-analysis.md",
+      "evidence": "synthesis-evidence.json",
+      "figures": []
+    }
+  ]
+}

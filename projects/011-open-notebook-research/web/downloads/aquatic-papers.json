@@ -1,0 +1,56 @@
+{
+  "prepared_at": "2026-10-21T15:46:21.095157+00:00",
+  "period": "2026-43",
+  "topic": "Aquatic toxicology: PFOS/PFAS effects in fish",
+  "selection_type": "Three-paper pilot; not an exhaustive or systematic review.",
+  "papers": [
+    {
+      "paper_id": "PMC13162690",
+      "title": "Comparative Hepatotoxicity Assessment of PFOS and Its Alternative 6:2 FTSA in Adult Female Zebrafish.",
+      "doi": "10.3390/ani16091368",
+      "pmid": "42121786",
+      "year": "2026",
+      "authors": "Zhang W, Dong Y, Jian Y, Jia Y, Yang K, Chen Y, Cao Y, Guo L, Zhang S, Liu D, Pang Q, Jiao S.",
+      "license": "cc by",
+      "article_url": "https://europepmc.org/articles/PMC13162690",
+      "pdf_url": "https://mdpi-res.com/d_attachment/animals/animals-16-01368/article_deploy/animals-16-01368.pdf",
+      "pdf_path": ".runtime/pdfs/weekly/2026-43/PMC13162690.pdf",
+      "pdf_bytes": 11385126,
+      "pdf_sha256": "df6cabe5407c9b9c3ed9289e1fb1277f91c2d0621209d59b09848fb2f6e6d00c",
+      "source_abstract": "As an alternative to perfluorooctane sulfonate (PFOS), 6:2 fluorotelomer sulfonic acid (6:2 FTSA) has been increasingly produced and detected in aquatic environments, yet its toxicological effects in fish remain incompletely characterized. In this study, adult female zebrafish were exposed for 30 days to solvent control (CK), 50 μg/L PFOS (P50), 50 μg/L 6:2 FTSA (F50), and 500 μg/L 6:2 FTSA (F500), respectively. Histopathological analysis revealed that both compounds induced hepatic injury, with the most severe damage observed in the F500 group. Hepatic transcriptomic analysis identified 645, 191, and 85 differentially expressed genes (DEGs) in the P50, F50, and F500 groups versus CK, respectively. Functional enrichment analysis further demonstrated distinct toxic profiles: PFOS at 50 μg/L primarily disrupted pathways related to the cell cycle, DNA replication, and reproduction. In contrast, 50 μg/L 6:2 FTSA predominantly activated PPAR-mediated lipid metabolism pathways, consistent with a \"metabolic toxicity\" phenotype. Notably, at 500 μg/L, 6:2 FTSA induced the most severe injury accompanied by a distinct transcriptomic signature-characterized by fewer DEGs but a pronounced enrichment of endoplasmic reticulum stress pathways-suggestive of a shift from metabolic perturbation to overwhelming cellular stress. Biochemical analysis confirmed a significant increase in malondialdehyde (MDA) only in the F50 group, supporting oxidative stress-mediated metabolic toxicity. Collectively, these findings demonstrate that 6:2 FTSA is not a safe alternative to PFOS but exhibits a dose-dependent and multifaceted toxicological profile, with high-dose effects indicative of acute cellular stress. This study underscores the need for case-specific, dose-range inclusive risk assessment of emerging PFAS alternatives.",
+      "source_abstract_provenance": "Europe PMC indexed author abstract; not a NotebookLM-generated result."
+    },
+    {
+      "paper_id": "PMC11851982",
+      "title": "Hepatotoxicity in Carp (Carassius auratus) Exposed to Perfluorooctane Sulfonate (PFOS): Integrative Histopathology and Transcriptomics Analysis.",
+      "doi": "10.3390/ani15040610",
+      "pmid": "40003090",
+      "year": "2025",
+      "authors": "Tang L, Hao G, Zhou D, Fan Y, Wei Z, Li D, Shen Y, Fang H, Lin F, Zhao M, Zhang H.",
+      "license": "cc by",
+      "article_url": "https://europepmc.org/articles/PMC11851982",
+      "pdf_url": "https://mdpi-res.com/d_attachment/animals/animals-15-00610/article_deploy/animals-15-00610.pdf",
+      "pdf_path": ".runtime/pdfs/weekly/2026-43/PMC11851982.pdf",
+      "pdf_bytes": 5474450,
+      "pdf_sha256": "d8e308b04f4f6b9ab9a3aad002341fe9ab8082eda61907e5e704ab3dee9737cb",
+      "source_abstract": "Perfluorooctane sulfonate (PFOS) contamination poses a significant environmental threat due to its widespread distribution and persistence. However, the hepatotoxic effects of PFOS on key aquatic species, such as crucian carp, remain understudied. This study systematically investigated the hepatotoxicity and underlying molecular mechanisms associated with PFOS exposure in crucian carp over a 21 day period. We determined a 96 h 50% lethal concentration (LC50) of 23.17 mg/L. Histopathological and transcriptomic analyses confirmed PFOS-induced liver damage in the carp, characterized by venous congestion, nucleolar dissolution and cellular vacuolation. Transcriptomic profiling further identified 1036 differentially expressed genes (DEGs), involving critical pathways related to lipid and energy metabolism, immunity, and endocrine regulation. These pathways are integral to the development of nonalcoholic fatty liver disease (NAFLD). Specifically, DEGs related to lipid metabolism showed significant changes, while those involved in energy metabolism indicated disrupted ATP production and mitochondrial function. Genes associated with immune response revealed an upregulation of pro-inflammatory markers, and hormone regulation genes highlighted alterations in endocrine signaling. Our findings emphasized that PFOS exhibits acute toxicity to crucian carp, potentially inducing hepatotoxicity by disrupting multiple physiological systems. This research provides a theoretical foundation for mitigating aquatic pollution and protecting eco-health, contributing to broader ecological and conservation biology discussions.",
+      "source_abstract_provenance": "Europe PMC indexed author abstract; not a NotebookLM-generated result."
+    },
+    {
+      "paper_id": "PMC10819493",
+      "title": "Mixture Effects of Per- and Polyfluoroalkyl Substances on Embryonic and Larval Sheepshead Minnows (Cyprinodon variegatus).",
+      "doi": "10.3390/toxics12010091",
+      "pmid": "38276726",
+      "year": "2024",
+      "authors": "Tanabe P, Key PB, Chung KW, Pisarski EC, Reiner JL, Rodowa AE, Magnuson JT, DeLorenzo ME.",
+      "license": "cc by",
+      "article_url": "https://europepmc.org/articles/PMC10819493",
+      "pdf_url": "https://mdpi-res.com/d_attachment/toxics/toxics-12-00091/article_deploy/toxics-12-00091.pdf",
+      "pdf_path": ".runtime/pdfs/weekly/2026-43/PMC10819493.pdf",
+      "pdf_bytes": 2038037,
+      "pdf_sha256": "676abd7d63510845d3b0e91810d5478fd5c941d4a736ed3457de26b92a70d27d",
+      "source_abstract": "Per- and polyfluoroalkyl substances (PFAS) are ubiquitous and persistent environmental contaminants originating from many everyday products. Perfluorooctane sulfonic acid (PFOS) and perfluorooctanoic acid (PFOA) are two PFAS that are commonly found at high concentrations in aquatic environments. Both chemicals have previously been shown to be toxic to fish, as well as having complex and largely uncharacterized mixture effects. However, limited information is available on marine and estuarine species. In this study, embryonic and larval sheepshead minnows (Cyprinodon variegatus) were exposed to several PFAS mixtures to assess lethal and sublethal effects. PFOS alone was acutely toxic to larvae, with a 96 h LC50 of 1.97 mg/L (1.64-2.16). PFOS + PFOA resulted in a larval LC50 of 3.10 (2.62-3.79) mg/L, suggesting an antagonistic effect. These observations were supported by significant reductions in malondialdehyde (105% ± 3.25) and increases in reduced glutathione concentrations (43.8% ± 1.78) in PFOS + PFOA exposures compared to PFOS-only treatments, indicating reduced oxidative stress. While PFOA reduced PFOS-induced mortality (97.0% ± 3.03), perfluorohexanoic acid (PFHxA) and perfluorobutanoic acid (PFBA) did not. PFOS alone did not affect expression of peroxisome proliferator-activated receptor alpha (pparα) but significantly upregulated apolipoprotein A4 (apoa4) (112.4% ± 17.8), a downstream product of pparα, while none of the other individually tested PFAS affected apoa4 expression. These findings suggest that there are antagonistic interactions between PFOA and PFOS that may reduce mixture toxicity in larval sheepshead minnows through reduced oxidative stress. Elucidating mechanisms of toxicity and interactions between PFAS will aid environmental regulation and management of these ubiquitous pollutants.",
+      "source_abstract_provenance": "Europe PMC indexed author abstract; not a NotebookLM-generated result."
+    }
+  ]
+}
