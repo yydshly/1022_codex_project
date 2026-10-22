@@ -74,7 +74,7 @@ def standalone(files):
     images = {name.removeprefix("assets/upstream/"): data_url(name, data)
               for name, data in files.items() if name.startswith("assets/upstream/") and Path(name).suffix != ".json"}
     payload = {"images": images, "manifest": json.loads((ROOT / "assets/upstream/pet-v3/pet.json").read_text(encoding="utf-8"))}
-    inline = "window.__HEYTEA_RESEARCH_OFFLINE__=" + json.dumps(payload, ensure_ascii=True, separators=(",", ":")) + ";\n"
+    inline = "window.__HEYTEA_RESEARCH_OFFLINE__=" + json.dumps(payload, ensure_ascii=True, sort_keys=True, separators=(",", ":")) + ";\n"
     inline += files["assets/runtime/episode-player.js"].decode("utf-8") + "\n"
     inline += (ROOT / "web/app.js").read_text(encoding="utf-8")
     html = html.replace("</body>", "<script>" + inline.replace("</script", "<\\/script") + "</script></body>")
@@ -88,7 +88,7 @@ def expected_files():
         if sha256(data).hexdigest() != record["sha256"]:
             raise ValueError(f"Source differs from pinned snapshot: {record['local_path']}")
     files = {"assets/" + path.relative_to(ROOT / "assets").as_posix(): path.read_bytes()
-             for path in (ROOT / "assets/upstream").rglob("*") if path.is_file()}
+             for path in sorted((ROOT / "assets/upstream").rglob("*")) if path.is_file()}
     for name in ("overview.png", "capability-overview.png"):
         if (ROOT / "assets" / name).is_file():
             files["assets/" + name] = (ROOT / "assets" / name).read_bytes()

@@ -10,7 +10,11 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def main(url):
+def main(url, screenshots_dir=None, report_path=None):
+    screenshots_dir = Path(screenshots_dir) if screenshots_dir else ROOT / "assets"
+    report_path = Path(report_path) if report_path else ROOT / "browser-verification.json"
+    screenshots_dir.mkdir(parents=True, exist_ok=True)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
     report = {"date": "2026-10-22", "url": url, "status": "passed", "checks": [], "viewports": []}
     errors, failed_responses = [], []
     with sync_playwright() as p:
@@ -163,22 +167,25 @@ def main(url):
         report["checks"].append("all 5 downloadable files return HTTP 200")
         page.set_viewport_size({"width": 1440, "height": 1000})
         page.evaluate("window.scrollTo({top:0,behavior:'instant'})")
-        page.screenshot(path=str(ROOT / "assets/overview.png"))
-        page.locator("#pet-lab").screenshot(path=str(ROOT / "assets/preview-pet.png"))
-        page.locator("#principles").screenshot(path=str(ROOT / "assets/preview-principles.png"))
+        page.screenshot(path=str(screenshots_dir / "overview.png"))
+        page.locator("#pet-lab").screenshot(path=str(screenshots_dir / "preview-pet.png"))
+        page.locator("#principles").screenshot(path=str(screenshots_dir / "preview-principles.png"))
         page.set_viewport_size({"width": 390, "height": 844})
         page.evaluate("window.scrollTo({top:0,behavior:'instant'})")
-        page.screenshot(path=str(ROOT / "assets/preview-mobile-hero.png"))
-        page.screenshot(path=str(ROOT / "assets/preview-mobile.png"), full_page=True)
+        page.screenshot(path=str(screenshots_dir / "preview-mobile-hero.png"))
+        page.screenshot(path=str(screenshots_dir / "preview-mobile.png"), full_page=True)
         browser.close()
     assert not errors, errors
     assert not failed_responses, failed_responses
     report["page_errors"], report["failed_http_responses"] = errors, failed_responses
-    (ROOT / "browser-verification.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8015/projects/015-heytea-style/web/")
-    main(parser.parse_args().url.rstrip("/") + "/")
+    parser.add_argument("--screenshots-dir", help="Save verification screenshots without changing published assets")
+    parser.add_argument("--report", help="Save a separate report, for example for public deployment verification")
+    args = parser.parse_args()
+    main(args.url.rstrip("/") + "/", args.screenshots_dir, args.report)

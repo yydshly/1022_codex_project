@@ -27,7 +27,7 @@ def verify(url, commit, run_id):
                 total += len(chunk)
             actual = digest.hexdigest()
             if response.status != 200 or actual != expected:
-                raise ValueError(f"Published file differs: {relative}, HTTP {response.status}")
+                raise ValueError(f"Published file differs: {relative}, HTTP {response.status}, expected {expected}, actual {actual}")
             return {"path": relative, "http_status": response.status, "bytes": total,
                     "sha256": actual, "matches_local": actual == expected}
 
@@ -39,7 +39,7 @@ def verify(url, commit, run_id):
               "workflow_url": f"https://github.com/yydshly/1022_codex_project/actions/runs/{run_id}",
               "files_checked": len(results), "all_http_200": True, "all_sha256_match": True,
               "guide_image": "assets/capability-overview.png", "files": results,
-              "browser_verification": "browser-verification.json",
+              "browser_verification": "public-browser-verification.json",
               "limits": ["No new upstream poster/character generation", "No native Electron runtime execution"]}
     (ROOT / "deployment-verification.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({key: value for key, value in report.items() if key != "files"}, ensure_ascii=False, indent=2))
