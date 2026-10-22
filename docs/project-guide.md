@@ -9,7 +9,7 @@
 
 ## 登记表
 
-`projects/catalog.json` 是首页索引和项目图览的唯一数据源。初始为空，不包含虚构的研究项目。
+`projects/catalog.json` 是首页一句话导读、索引和项目图览的唯一数据源。
 
 每条记录的格式如下。这是填写说明，不是已收录项目：
 
@@ -20,6 +20,12 @@
   "name": "项目名称",
   "repo": "https://github.com/owner/repository",
   "summary": "项目用途与研究价值的一句话摘要",
+  "intro": "用一句话说明项目能做什么，以及对我们的价值。",
+  "summary_parts": {
+    "capability": "项目提供的主要功能或效果",
+    "principle": "实现这些能力的核心机制",
+    "value": "我们能复用的技术、流程或场景"
+  },
   "status": "planned",
   "tags": ["工具", "可视化"],
   "cover": "assets/cover.svg",
@@ -35,6 +41,9 @@
 | `name` | 首页展示名称 |
 | `repo` | 原项目 GitHub 仓库 HTTPS 地址 |
 | `summary` | 简短、可独立阅读的一句话摘要 |
+| `intro` | 可选：首页索引上方的一句话导读，说明能力与价值；未填写时使用 `summary` |
+| `summary_parts` | 可选：索引分行摘要，须同时填写 `capability` 能力、`principle` 原理、`value` 价值；可补充 `backup` 备份、`boundary` 边界 |
+| `additional_repos` | 可选：共同研究或备份的其他 GitHub 仓库 HTTPS 地址数组；首页自动显示真实仓库名称 |
 | `status` | `planned` 待研究 / `researching` 研究中 / `completed` 已完成 / `archived` 已归档 |
 | `tags` | 技术或主题标签，可为空数组 |
 | `cover` | 相对子项目目录的本地图片路径，不能为空 |
@@ -42,6 +51,16 @@
 | `demo_url` | 已发布演示的完整 HTTPS 地址，尚未发布时留空 |
 
 修改后运行 `python scripts/project_catalog.py sync`。不要直接维护首页自动生成区块，以免下次同步时被覆盖。
+
+### 首页摘要怎么写
+
+- **一句话导读**：优先写可感知的能力和实际用途，避免堆技术名词；建议约 40–65 字。
+- **能力 / 原理 / 价值**：每项一句短语，建议约 25–45 字；分别回答“做什么、怎么做、我们用在哪里”。需要时明确区分源库能力与本研究扩展。
+- **备份**：说明保存的真实仓库、固定日期、内容与恢复入口；完整清单仍放子项目。**边界**：说明尚未运行、作者报告或本研究提炼等影响理解的信息。
+- 登记表只填单行纯文本。脚本统一生成加粗标签与单元格内换行，`summary_parts` 未填写时保留原摘要，便于逐步完善新项目。
+- `repo` 和 `additional_repos` 使用仓库根地址；链接名称从 URL 提取，保留实际拼写与大小写。
+
+`PROJECT_OVERVIEW`、`PROJECT_INDEX`、`PROJECT_CARDS` 三个区块分别生成导读、索引、图览，统一由 `sync` 更新、`check` 校验。
 
 ## 最小研究记录
 

@@ -16,7 +16,14 @@
       ],
       "cover": "assets/overview.png",
       "cover_caption": "能力全景图：SwiftUI 视图与参数输入 → GPU 逐像素采样与变换 → 实时视图输出，并说明效果、适用场景和扩展方向。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/001-swiftui-shaders/",
+      "intro": "为 SwiftUI 图片、文字和卡片添加镭射、波纹等实时特效，复用 GPU 算法来丰富封面、展示页与交互反馈。",
+      "summary_parts": {
+        "capability": "为 SwiftUI 视图提供 41 种实时特效，涵盖光影、变形与触摸反馈。",
+        "principle": "将视图交给 Metal，逐像素改变采样位置、颜色与混合方式。",
+        "value": "复用算法与参数，减少封面、卡片和展示页的特效接入工作。",
+        "boundary": "网页为 WebGL 移植展示；原生设备效果与性能尚待验证。"
+      }
     },
     {
       "id": "002",
@@ -34,7 +41,13 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "我们生成的总结图：引用官方看板画面，说明任务数据、管理界面、驱动逻辑三层本质，归纳能力与效果；重点参考看板布局、卡片信息层级和交互组织。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/002-todofy/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/002-todofy/",
+      "intro": "用列表、看板和日历组织个人任务，配合提醒与计时推进管理；重点参考看板布局、卡片层级与交互组织。",
+      "summary_parts": {
+        "capability": "提供任务编辑、状态流转、日历、提醒、计时与本地保存。",
+        "principle": "多种视图共用任务数据，由 Preact、Tauri/Rust 与 SQLite 驱动。",
+        "value": "参考看板布局、卡片信息层级，以及界面交互与业务规则的分工。"
+      }
     },
     {
       "id": "003",
@@ -51,7 +64,13 @@
       ],
       "cover": "assets/research/emotion-art-research-overview-v3.png",
       "cover_caption": "ImageGen研究总览：突出源库三组效果与数字连接，串联情绪、风格、提示词、图片视频探索和Skill沉淀。案例为依据原件的AI概览合成；21份情绪档案和跨媒介方法为本研究扩展。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/",
+      "intro": "把照片转为实体与数据融合海报，并将研究扩展为情绪图片、短片与返修方法，积累可复用的艺术方向 Skill。",
+      "summary_parts": {
+        "capability": "组织照片重绘，呈现像素、点云、字符与数据连接海报。",
+        "principle": "Skill 将视觉要求组织成提示词，交外部图像模型生成并对照返修。",
+        "value": "把模糊审美转为创作条件；本研究扩展情绪导演、图片短片与 Skill。"
+      }
     },
     {
       "id": "004",
@@ -68,7 +87,13 @@
       ],
       "cover": "assets/library-overview.png",
       "cover_caption": "使用我们生成的理解总结图作引导：已有图片输入、1种柔彩几何像素风格、4种输出方式，以及提示词、效果差异、适用场景和实测边界；可作为探索风格库的样本。图内缩略图为示意。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/004-xxd-panel-106/",
+      "intro": "将已有照片重绘为柔彩几何像素海报、对照图与多端壁纸，为我们比较和复用视觉风格提供完整样本。",
+      "summary_parts": {
+        "capability": "把照片重绘为柔彩几何像素风，输出对照图、纯设计或多端壁纸。",
+        "principle": "Agent 读取固定风格提示词，追加版式与文字要求，再调用图像模型。",
+        "value": "积累风格规则、完整请求与返修案例，作为后续风格库的研究样本。"
+      }
     },
     {
       "id": "005",
@@ -85,7 +110,13 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "使用 ImageGen 生成的理解总结图：说明基于原图二次创作的原理、可复用与可检查的规则流程、四种效果参考及扩展场景与意义。效果区参考上游样张，非本次改图实测。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/005-scene-card-studio/",
+      "intro": "把照片二次创作整理为场景卡、提示词和对照返修流程，让相册、内容制作与多图统一的要求能够复用和检查。",
+      "summary_parts": {
+        "capability": "组织照片二次创作，明确保留、改变、删除范围及叙事与材质要求。",
+        "principle": "场景卡编译为提示词，交外部模型改图，再对照检查与定向返修。",
+        "value": "让改图要求可复用、结果可检查，便于多图统一与团队交接。"
+      }
     },
     {
       "id": "006",
@@ -102,7 +133,13 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "使用 ImageGen 生成的理解总结图：能力、规则进入 AI 上下文的原理、五组共 23 条约束、可选的 16 组正则检查、使用场景、对我们的意义与能力边界。教学提醒数不代表质量评分。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/006-oil-tone/",
+      "intro": "用 23 条编辑规则引导 AI 起草和改稿，保留事实、减少空话，并转为文章、产品文案与口播的复用标准。",
+      "summary_parts": {
+        "capability": "引导 AI 起草、润色与调整结构，补清逻辑并删去无依据的评价。",
+        "principle": "将 23 条规则与事实、原稿一起交给模型，按清单复核；脚本辅助提醒。",
+        "value": "把“写自然、讲清楚”落实为编辑动作、完整提示词与复核标准。"
+      }
     },
     {
       "id": "007",
@@ -119,7 +156,14 @@
       ],
       "cover": "assets/understanding-summary.png",
       "cover_caption": "ImageGen 理解总结图：定位、原理、四状态效果、价值、场景与边界。效果区参考本地实际截图绘制；角色层仅呈现回复和部分状态，未调用真实模型。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/007-dr-aria/",
+      "intro": "把 Agent 回复与工作状态变成会动的字符角色，为自有助手增加可见反馈、稳定形象和可嵌入的表达层。",
+      "summary_parts": {
+        "capability": "用字符角色呈现等待、思考、工作和回复，配合气泡、嘴型与点头。",
+        "principle": "预制字符网格构成形象，状态事件驱动动作，回复文字驱动气泡与嘴型。",
+        "value": "让等待有反馈、对话有角色，可适配为聊天或任务助手的表达层。",
+        "boundary": "展示未连接真实模型；角色动作不代表理解或识别了语义情绪。"
+      }
     },
     {
       "id": "009",
@@ -137,7 +181,13 @@
       ],
       "cover": "assets/project-overview.png",
       "cover_caption": "我们整理的一图总览：光照效果的核心价值、计算原理、10 类全部 89 项能力、四场景本机实测与复用方向；缩略图来自真实运行，应用方向需单独集成和验收。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/009-webgpu-render-pipeline/",
+      "intro": "在浏览器三维场景中实现反弹光、软阴影与自然材质受光，把光照计算和缓存方法沉淀为游戏、漫游和展厅的渲染能力。",
+      "summary_parts": {
+        "capability": "呈现反弹光、环境补光、软阴影，以及水面、植被与大气效果。",
+        "principle": "BVH/Surfel 估计间接光，缓存为 Lightmap/探针，再与实时光影合成。",
+        "value": "为浏览器游戏、空间漫游与 Web3D 展厅积累可复用的渲染方法。"
+      }
     },
     {
       "id": "010",
@@ -156,7 +206,18 @@
       ],
       "cover": "assets/research-overview.svg",
       "cover_caption": "原创原理图：Skill 指导 AI，核心库桥接本机剪映引擎，REA 辅助适配；子项目另存两仓固定版本的 Git bundle、源码 ZIP、许可和恢复资料。原生运行尚未本机实测。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/010-jianying-headless/",
+      "intro": "通过逆向适配复用本机剪映引擎，让 AI 编排剪辑；同时离线保全核心库与完整 Skill 仓库，防止上游失联。",
+      "summary_parts": {
+        "capability": "构造可编辑多轨草稿，适配版本可调用本机剪映引擎导出。",
+        "principle": "逆向适配工程与内部接口；Skill 指导 AI，REA 辅助研究与版本适配。",
+        "value": "连接 AI 编排、批量剪辑与人工精修，并保全可能失联的上游资料。",
+        "backup": "2026-10-22 获取 jianying-headless 与整个 yichen-skills（含 yichen-jianying-edit）；统一 ZIP 约 24 MiB，保留 Git 历史、源码、原许可与校验恢复资料，防止上游失联。",
+        "boundary": "原生运行尚未本机实测；固定主分支 Windows 导出使用 FFmpeg。"
+      },
+      "additional_repos": [
+        "https://github.com/mcncarl/yichen-skills"
+      ]
     },
     {
       "id": "011",
@@ -175,7 +236,13 @@
       ],
       "cover": "assets/research-overview.png",
       "cover_caption": "原创一图总览：源库能力、技术架构、从 NotebookLM 转向 Open Notebook/MiniMax 的探索、四层扩展及实测效果。详细报告来自研究代理精读，历史模型短回答另行保留。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/",
+      "intro": "从 Auto Paper Digest 的论文采集出发，探索 Open Notebook 问答与原文核读，形成可追溯的水生毒理学档案。",
+      "summary_parts": {
+        "capability": "编排论文采集与解读；本研究保存三篇精读及一份跨论文综合报告。",
+        "principle": "源库用 Python 连接采集与 NotebookLM；本研究另探 Open Notebook 并核读原文。",
+        "value": "借鉴领域检索、模型适配与证据归档，建立可复核的论文研究流程。"
+      }
     },
     {
       "id": "012",
@@ -193,7 +260,14 @@
       ],
       "cover": "assets/super-hermes-diagnosis-v3.png",
       "cover_caption": "我们生成的理解总结图：五个 Skill、模型与工具分工、七步定位协议、逐步要求和产物、九项结论报告、验证边界与复用价值。七步与完整报告是研究提炼，非原库内置强制执行器。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/012-super-hermes/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/012-super-hermes/",
+      "intro": "用五个 Skill 组织问题定位、反驳与盲区复查；我们进一步提炼七步定位协议和九项报告，便于跨项目复用。",
+      "summary_parts": {
+        "capability": "组织问题定位、多轮反驳、三视角审查、方向探索与历史盲区复查。",
+        "principle": "Markdown 约定检查动作与产物，模型分析材料，运行证据检验判断。",
+        "value": "将排查经验整理成可复用规范；本研究提炼七步协议与九项报告。",
+        "boundary": "七步协议是研究提炼，并非原库自动执行器。"
+      }
     },
     {
       "id": "013",
@@ -211,7 +285,13 @@
       ],
       "cover": "assets/old-coder-overview.png",
       "cover_caption": "本研究原创能力总览图：四项能力、六阶段原理、库存重复通知案例、适用任务与价值边界。案例为本地教学模型，图解用矢量排版绘制并导出PNG，非真实支付系统实测。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/013-old-coder/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/013-old-coder/",
+      "intro": "把 AI 编码要求整理成规格、测试和证据报告，让需求与结果逐项对应，减少反复提醒并支持复跑验收。",
+      "summary_parts": {
+        "capability": "要求 AI 按验收规格实现代码，交付测试结果与可复跑的证据报告。",
+        "principle": "Skill 组织 SPEC、测试驱动和多层检查；脚本与 CI 执行门槛。",
+        "value": "沉淀故障模型与验收模板，用于修复、重构、订单及 API 交付。"
+      }
     },
     {
       "id": "014",
@@ -228,7 +308,13 @@
       ],
       "cover": "assets/research-summary.png",
       "cover_caption": "使用我们生成的 Seijaku 研究总览作引导图：效果、实现流程、Kage / Sublevel 对比、三项优先技术与四类扩展场景。Imagegen 参考庭院运行画面绘制，其他场景为示意；建议模块仍待独立提炼。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/014-seijaku/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/014-seijaku/",
+      "intro": "用连续镜头、四季和构造拆解讲解日式住宅；对比同类项目，提炼可用于旅宿导览、建筑教育与产品说明的方法。",
+      "summary_parts": {
+        "capability": "滚动穿行住宅，联动四季、材料特写、构造拆解、水面与环境声。",
+        "principle": "Three.js 将镜头、环境状态、构件展开与标注统一到参观流程。",
+        "value": "研究季节材质、结构讲解与加载调度，服务旅宿、展馆和工艺展示。"
+      }
     },
     {
       "id": "015",
@@ -246,7 +332,14 @@
       ],
       "cover": "assets/capability-overview.png",
       "cover_caption": "内置 ImageGen 参考上游样张生成的一图总览：展示海报、风味小怪兽、产品互动图与桌宠四种效果，解释照片、Skill、AI、Python及Electron的分工，并归纳内容表达、协作复用和角色延展价值。效果为概览合成，桌面为示意。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/",
+      "intro": "把照片二次创作为手绘海报、怪兽和产品互动图，再交付可互动桌宠，为商品内容与原创角色创作提供流程参考。",
+      "summary_parts": {
+        "capability": "基于照片创作海报、风味怪兽和产品互动图，并交付点击拖拽桌宠。",
+        "principle": "Skill 组织分阶段生图与身份约束，透明动画帧由事件和运行器驱动。",
+        "value": "沉淀风格规则、局部返修和角色资产流程，扩展商品内容与原创 IP。",
+        "boundary": "已验证样张、角色包与浏览器动画；未实测生图或启动原生桌宠。"
+      }
     },
     {
       "id": "016",
@@ -264,7 +357,13 @@
       ],
       "cover": "assets/understanding-overview.png",
       "cover_caption": "使用我们已生成的理解总览图作引导：参考原版林下与树冠画面，说明森林生成、组织、渲染与交互输出能力，归纳可沉淀技术及自然展厅、庭院旅宿、交互叙事和短片的扩展价值。效果区为ImageGen参考排版，原始运行截图独立保留。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/016-verdant-forest/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/016-verdant-forest/",
+      "intro": "在浏览器生成并漫游有枝叶、花草、风动和光雾的森林，学习自然场景制作与运行，用于空间导览和氛围表达。",
+      "summary_parts": {
+        "capability": "生成茂密三维森林，支持自由漫游、自动导览、风动和林间光雾。",
+        "principle": "参数化植物与空间分布结合实例化、LOD、风动着色和体积光合成。",
+        "value": "积累自然场景制作与运行方法，扩展展厅、庭院导览和氛围短片。"
+      }
     },
     {
       "id": "017",
@@ -282,7 +381,14 @@
       ],
       "cover": "assets/sparkvsr-overview.png",
       "cover_caption": "沿用本次对话已生成的理解总览图，说明原视频约束下的高清重建、关键帧控制、作者效果、技术沉淀与扩展场景，并保留暂不深入研究的判断；图为精确排版示意，非推理截图。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/017-sparkvsr/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/017-sparkvsr/",
+      "intro": "用原视频约束运动与结构，以少量高清关键帧引导整段视频重建，研究可审核、可调节的修复与增强流程。",
+      "summary_parts": {
+        "capability": "生成式视频超分与修复，并将少量高清关键帧的外观传播到视频。",
+        "principle": "原视频约束运动和结构，参考帧提供纹理，视频模型联合重建。",
+        "value": "借鉴选帧审核、单图修复与时序传播，用于老片和 AIGC 视频增强。",
+        "boundary": "仅完成理解归档，未部署或运行模型；生成细节不等于真实信息恢复。"
+      }
     },
     {
       "id": "018",
@@ -300,7 +406,14 @@
       ],
       "cover": "assets/orchard-agentic-overview.png",
       "cover_caption": "沿用本次讨论生成并确认的中文理解长图：区分模型、Agent 框架与沙箱，解释执行架构、十二项环境能力、Docker 对比、技术价值及效果口径。图为文字与矢量排版，指标为作者报告，未本地复现；快照分叉标为后续计划。",
-      "demo_url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/"
+      "demo_url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/",
+      "intro": "为 Agent 提供可批量管理的容器、命令和文件接口，再连接轨迹与评测训练，作为远程执行和自动修复的底座。",
+      "summary_parts": {
+        "capability": "批量提供可控容器，支持代码、文件、终端操作及配套评测训练。",
+        "principle": "Kubernetes 管理环境生命周期，Pod 执行服务通过统一 API 返回结果。",
+        "value": "沉淀沙箱接口、资源网络策略和轨迹规范，支持自动修复与回归评测。",
+        "boundary": "未运行上游集群、模型或训练；作者成绩与性能数字未本地复现。"
+      }
     }
   ]
 }

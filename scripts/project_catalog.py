@@ -23,6 +23,10 @@ STATUSES = {
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 REPO = re.compile(r"https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/?")
 TEXT_FIELDS = ("id", "slug", "name", "repo", "summary", "status", "cover", "cover_caption")
+SUMMARY_LABELS = {
+    "capability": "能力", "principle": "原理", "value": "价值",
+    "backup": "备份", "boundary": "边界",
+}
 
 
 class CatalogError(ValueError):
@@ -76,6 +80,21 @@ def load_catalog(root: Path) -> dict:
         require(project["slug"] not in slugs, f"slug 重复：{project['slug']}")
         require(REPO.fullmatch(project["repo"]) is not None,
                 f"原项目必须是 GitHub 仓库 HTTPS 地址：{project['repo']}")
+        if "intro" in project:
+            require(single_line(project["intro"]), f"{project_id}: intro 必须是非空单行文本。")
+        if "summary_parts" in project:
+            parts = project["summary_parts"]
+            require(isinstance(parts, dict) and {"capability", "principle", "value"} <= parts.keys()
+                    and parts.keys() <= SUMMARY_LABELS.keys()
+                    and all(single_line(value) for value in parts.values()),
+                    f"{project_id}: summary_parts 必须包含能力、原理、价值，可补充备份、边界；均为非空单行文本。")
+        additional = project.get("additional_repos", [])
+        require(isinstance(additional, list)
+                and all(isinstance(repo, str) and REPO.fullmatch(repo) for repo in additional),
+                f"{project_id}: additional_repos 必须是 GitHub 仓库 HTTPS 地址数组。")
+        sources = [project["repo"], *additional]
+        require(len({repo.rstrip("/").casefold() for repo in sources}) == len(sources),
+                f"{project_id}: 源库地址不能重复。")
         require(project["status"] in STATUSES, f"未知研究进度：{project['status']}")
         tags = project.get("tags")
         require(isinstance(tags, list) and all(single_line(tag) for tag in tags),
@@ -113,17 +132,42 @@ def load_catalog(root: Path) -> dict:
     return data
 
 
+def source_name(repo: str) -> str:
+    return repo.rstrip("/").rsplit("/", 1)[-1]
+
+
+def source_links(project: dict, separator: str) -> str:
+    return separator.join(f"[{markdown(source_name(repo))}]({url(repo)})"
+                          for repo in [project["repo"], *project.get("additional_repos", [])])
+
+
+def render_overview(projects: list[dict]) -> str:
+    if not projects:
+        return "暂无子项目；收录后会在这里展示每个项目的能力与价值。"
+    return "\n".join(
+        f"- **{project['id']} · [{markdown(source_name(project['repo']))}]"
+        f"(projects/{directory_name(project)}/README.md)**："
+        f"{markdown(project.get('intro', project['summary']))}"
+        for project in projects)
+
+
+def render_summary(project: dict) -> str:
+    if "summary_parts" not in project:
+        return markdown(project["summary"])
+    return "<br>".join(f"**{label}**：{markdown(project['summary_parts'][key])}"
+                       for key, label in SUMMARY_LABELS.items() if key in project["summary_parts"])
+
+
 def render_index(projects: list[dict]) -> str:
     lines = [f"当前收录 **{len(projects)}** 个项目。", "",
-             "| 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |",
+             "| 编号 | 项目 | 关注源库 | 理解摘要 | 研究进度 | Web 演示 |",
              "| --- | --- | --- | --- | --- | --- |"]
     for project in projects:
         path = f"projects/{directory_name(project)}/README.md"
         demo = f"[在线演示]({url(project['demo_url'])})" if project["demo_url"] else "—"
-        source_name = project["repo"].rstrip("/").rsplit("/", 1)[-1]
         lines.append(f"| {project['id']} | [{markdown(project['name'])}]({path}) | "
-                     f"[{markdown(source_name)}]({url(project['repo'])}) | "
-                     f"{markdown(project['summary'])} | {STATUSES[project['status']]} | {demo} |")
+                     f"{source_links(project, '<br>')} | "
+                     f"{render_summary(project)} | {STATUSES[project['status']]} | {demo} |")
     if not projects:
         lines.append("| — | 暂无子项目 | — | 首个真实项目将从 001 开始收录 | — | — |")
     return "\n".join(lines)
@@ -140,7 +184,7 @@ def render_cards(projects: list[dict]) -> str:
                  f"![{project['id']} · {markdown(project['name'])} 项目封面]"
                  f"({url(path + '/' + project['cover'])})", "",
                  f"> {markdown(project['cover_caption'])}", "",
-                 f"[研究详情]({path}/README.md) · [原始仓库]({project['repo']})"]
+                 f"[研究详情]({path}/README.md) · 源库：{source_links(project, ' / ')}"]
         if project["demo_url"]:
             lines[-1] += f" · [在线演示]({url(project['demo_url'])})"
         if project["tags"]:
@@ -151,7 +195,8 @@ def render_cards(projects: list[dict]) -> str:
 
 def updated_readme(root: Path, data: dict) -> str:
     content = (root / "README.md").read_text(encoding="utf-8")
-    for key, body in (("PROJECT_INDEX", render_index(data["projects"])),
+    for key, body in (("PROJECT_OVERVIEW", render_overview(data["projects"])),
+                      ("PROJECT_INDEX", render_index(data["projects"])),
                       ("PROJECT_CARDS", render_cards(data["projects"]))):
         start, end = f"<!-- {key}:START -->", f"<!-- {key}:END -->"
         require(content.count(start) == 1 and content.count(end) == 1,
@@ -235,7 +280,7 @@ def main() -> int:
     create = commands.add_parser("add", help="分配编号并从模板创建项目")
     for field in ("slug", "name", "repo", "summary"):
         create.add_argument(f"--{field}", required=True)
-    commands.add_parser("sync", help="根据登记表更新首页索引与图览")
+    commands.add_parser("sync", help="根据登记表更新首页导读、索引与图览")
     commands.add_parser("check", help="检查登记表、项目目录、图片与首页")
     args = parser.parse_args()
     try:
@@ -244,7 +289,7 @@ def main() -> int:
             print(f"Created projects/{folder}/ and updated README.md")
         elif args.command == "sync":
             sync(ROOT)
-            print("README.md index and project cards updated.")
+            print("README.md overview, index and project cards updated.")
         else:
             print(f"Catalog OK: {check(ROOT)} project(s); README.md is up to date.")
     except (ValueError, OSError) as error:

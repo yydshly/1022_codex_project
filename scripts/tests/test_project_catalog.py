@@ -77,6 +77,65 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(self.create("next"), "011-next")
         self.assertEqual(catalog.check(self.root), 2)
 
+    def test_structured_summary_overview_and_multiple_sources(self):
+        self.create()
+        data = catalog.load_catalog(self.root)
+        data["projects"][0].update(
+            intro="处理图片，让素材能够复用。",
+            summary_parts={
+                "value": "风格复用", "principle": "规则与模型",
+                "capability": "图片 A | B <br> *处理*", "backup": "源码与许可",
+                "boundary": "尚未运行原生程序",
+            },
+            additional_repos=["https://github.com/owner/AnotherRepo/"],
+        )
+        self.save(data)
+        catalog.sync(self.root)
+        text = (self.root / "README.md").read_text(encoding="utf-8")
+        overview = text.split("<!-- PROJECT_OVERVIEW:START -->", 1)[1].split(
+            "<!-- PROJECT_OVERVIEW:END -->", 1)[0]
+        self.assertIn("**001 · [repository](projects/001-example/README.md)**：处理图片", overview)
+        index = text.split("<!-- PROJECT_INDEX:START -->", 1)[1].split(
+            "<!-- PROJECT_INDEX:END -->", 1)[0]
+        self.assertIn(r"**能力**：图片 A \| B \<br\> \*处理\*<br>**原理**：规则与模型"
+                      "<br>**价值**：风格复用<br>**备份**：源码与许可<br>**边界**：尚未运行原生程序", index)
+        self.assertIn("[repository](https://github.com/owner/repository)<br>"
+                      "[AnotherRepo](https://github.com/owner/AnotherRepo/)", index)
+        self.assertIn("源库：[repository](https://github.com/owner/repository) / "
+                      "[AnotherRepo](https://github.com/owner/AnotherRepo/)", text)
+        self.assertEqual(catalog.check(self.root), 1)
+        catalog.sync(self.root)
+        self.assertEqual((self.root / "README.md").read_text(encoding="utf-8"), text)
+        (self.root / "README.md").write_text(text.replace("**001 ·", "**改动 ·"), encoding="utf-8")
+        with self.assertRaisesRegex(catalog.CatalogError, "过期"):
+            catalog.check(self.root)
+
+    def test_legacy_summary_is_used_when_optional_fields_are_missing(self):
+        self.create()
+        text = (self.root / "README.md").read_text(encoding="utf-8")
+        self.assertIn("**001 · [repository](projects/001-example/README.md)**：测试用途与研究价值", text)
+        self.assertIn("| 测试用途与研究价值 | 待研究 |", text)
+        self.assertEqual(catalog.check(self.root), 1)
+
+    def test_invalid_structured_metadata_and_duplicate_sources_are_rejected(self):
+        self.create()
+        data = catalog.load_catalog(self.root)
+        project = data["projects"][0]
+        cases = [
+            {"intro": "两行\n文本"},
+            {"summary_parts": {"capability": "只有能力"}},
+            {"summary_parts": {"capability": "能力", "principle": "原理", "value": "价值", "other": "未知"}},
+            {"summary_parts": {"capability": "能力", "principle": "原理", "value": ""}},
+            {"additional_repos": ["https://example.com/repo"]},
+            {"additional_repos": [project["repo"].upper().replace("HTTPS://GITHUB.COM", "https://github.com") + "/"]},
+        ]
+        for fields in cases:
+            with self.subTest(fields=fields):
+                candidate = {**data, "projects": [{**project, **fields}]}
+                self.save(candidate)
+                with self.assertRaises(catalog.CatalogError):
+                    catalog.check(self.root)
+
     def test_numeric_order_and_metadata_escaping(self):
         self.create("first", "工具 < & [x] | 说明")
         self.create("second")
