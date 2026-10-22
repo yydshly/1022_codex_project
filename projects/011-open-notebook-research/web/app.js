@@ -17,7 +17,7 @@
   }
   document.querySelectorAll('[data-architecture]').forEach((button) => button.addEventListener('click', () => showArchitecture(button.dataset.architecture)));
   function arrowTabs(container) { container.addEventListener('keydown', (event) => { if (!['ArrowRight','ArrowLeft','ArrowDown','ArrowUp','Home','End'].includes(event.key)) return; const buttons = [...container.querySelectorAll('[role="tab"]')]; const index = buttons.indexOf(document.activeElement); if (index < 0) return; event.preventDefault(); let next = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : (index + (['ArrowRight','ArrowDown'].includes(event.key) ? 1 : -1) + buttons.length) % buttons.length; buttons[next].click(); buttons[next].focus(); }); }
-  arrowTabs($('.segmented')); showArchitecture('tested');
+  arrowTabs($('.segmented')); showArchitecture('upstream');
 
   const reportTabs = $('#report-tabs');
   let selectedReport = null;

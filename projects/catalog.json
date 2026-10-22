@@ -142,11 +142,12 @@
     {
       "id": "011",
       "slug": "open-notebook-research",
-      "name": "Open Notebook · 水生毒理学研究档案",
-      "repo": "https://github.com/lfnovo/open-notebook",
+      "name": "Auto Paper Digest · 水生毒理学研究档案",
+      "repo": "https://github.com/brianxiadong/auto-paper-digest",
       "summary": "Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集、NotebookLM 生成和归档；我们补 Europe PMC 领域检索，切换 Open Notebook 的 Next.js/FastAPI/SurrealDB 与 MiniMax 问答路线，再精读原文，形成可追溯的水生毒理学研究：3篇详细报告、1篇综合及完整证据。",
       "status": "completed",
       "tags": [
+        "Auto Paper Digest",
         "论文研究",
         "水生毒理学",
         "Open Notebook",

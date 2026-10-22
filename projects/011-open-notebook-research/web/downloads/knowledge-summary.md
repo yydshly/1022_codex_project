@@ -2,6 +2,8 @@
 
 研究快照：2026-10-22。本文总结固定版本源码及本次真实测试；不是当前云服务价格、产品全量能力或模型排名调查。
 
+研究起点是 [Auto Paper Digest](https://github.com/brianxiadong/auto-paper-digest)；[Open Notebook](https://github.com/lfnovo/open-notebook) 是后续为完成论文分析而独立探索的替代应用。两个仓库的角色与成果分别记录。
+
 ## 研究摘要
 
 本次从 Auto Paper Digest 出发，验证它能否支持水生毒理学论文的理解与整理。原库用 Python / SQLite 管理论文和处理状态，以 Playwright 调用 NotebookLM，用 Gradio 展示产物，并提供归档发布步骤。我们先补充 Europe PMC 检索和公开 PDF 获取；NotebookLM 接入没有取得生成结果后，转向 Open Notebook 的 Next.js 前端、FastAPI 后端与 SurrealDB 资料库，经 Esperanto 接入 MiniMax。随后通过参数适配取得完整短回答，再由研究代理精读原文，补足实验、图表、统计和机制分析。

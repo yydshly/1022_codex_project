@@ -8,26 +8,27 @@
   "timezone": "Asia/Shanghai",
   "purpose": "固定版本开源项目研究与已发布静态成果档案：保存历史模型原文、原文精读、架构与扩展总结；本轮未新增外部模型 API 请求，原版云端应用的访问排查已停止。",
   "primary_upstream": {
-    "repository": "https://github.com/lfnovo/open-notebook",
-    "author": "Luis Novo",
-    "commit": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
-    "license": "MIT",
-    "license_copy": "assets/licenses/OpenNotebook-LICENSE.txt",
-    "source_license": "https://github.com/lfnovo/open-notebook/blob/a0f6f3081ae06328f0a451b3a3ef2959ca25721d/LICENSE",
-    "container_image": "lfnovo/open_notebook@sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212",
-    "version_note": "源码 commit 与运行镜像分别记录，不把源码版本直接视为镜像构建身份。"
+    "repository": "https://github.com/brianxiadong/auto-paper-digest",
+    "commit": "e1663ba5e73a3501904b2a43699f3c12fb4a4300",
+    "declared_license": "MIT",
+    "license_evidence": [
+      "README.md",
+      "pyproject.toml"
+    ],
+    "standalone_license_file_present": false,
+    "role": "本研究的原始源库与起点：论文采集、NotebookLM 内容生成编排、归档与发布；领域检索为我们的扩展。"
   },
   "related_upstreams": [
     {
-      "repository": "https://github.com/brianxiadong/auto-paper-digest",
-      "commit": "e1663ba5e73a3501904b2a43699f3c12fb4a4300",
-      "declared_license": "MIT",
-      "license_evidence": [
-        "README.md",
-        "pyproject.toml"
-      ],
-      "standalone_license_file_present": false,
-      "role": "原始论文采集、SQLite 登记与 Gradio 门户；Europe PMC 为本研究适配。"
+      "repository": "https://github.com/lfnovo/open-notebook",
+      "author": "Luis Novo",
+      "commit": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
+      "license": "MIT",
+      "license_copy": "assets/licenses/OpenNotebook-LICENSE.txt",
+      "source_license": "https://github.com/lfnovo/open-notebook/blob/a0f6f3081ae06328f0a451b3a3ef2959ca25721d/LICENSE",
+      "container_image": "lfnovo/open_notebook@sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212",
+      "version_note": "源码 commit 与运行镜像分别记录，不把源码版本直接视为镜像构建身份。",
+      "role": "后续独立探索的替代应用：NotebookLM 接入未取得产出后，用于资料管理、全文提取和 MiniMax 问答。"
     },
     {
       "repository": "https://github.com/teng-lin/notebooklm-py",
@@ -187,5 +188,11 @@
     "detail_reader": "assets/detailed-reader.png",
     "overview_diagram": "assets/research-overview.svg",
     "overview_diagram_provenance": "原创技术与研究总览；依据固定源码及保存证据，不是上游应用截图。"
+  },
+  "research_route": {
+    "origin_repository": "https://github.com/brianxiadong/auto-paper-digest",
+    "alternative_repository": "https://github.com/lfnovo/open-notebook",
+    "reason": "NotebookLM 程序接入未取得生成产出，转向可配置模型的 Open Notebook 进行独立验证。",
+    "relationship": "研究路线的切换，不是 Auto Paper Digest 的原生依赖、内置模块或已经实现的自动切换功能。"
   }
 }

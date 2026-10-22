@@ -64,5 +64,15 @@
     "console_errors_warnings": 0,
     "screenshot": "assets/published-summary.png",
     "scope": "Static archive only; no online model generation"
+  },
+  "source_repository_correction": {
+    "checked_on": "2026-10-22",
+    "origin": "https://github.com/brianxiadong/auto-paper-digest",
+    "alternative": "https://github.com/lfnovo/open-notebook",
+    "primary_link_order": "Auto Paper Digest first, Open Notebook labelled as later alternative",
+    "architecture_default": "Original APD path",
+    "switch_to_alternative": "Passed: subsequent exploration flow rendered",
+    "viewport_css_px": 1265,
+    "horizontal_overflow": false
   }
 }

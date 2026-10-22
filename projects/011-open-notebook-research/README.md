@@ -1,6 +1,8 @@
-# 011 · Open Notebook · 水生毒理学研究档案
+# 011 · Auto Paper Digest · 水生毒理学研究档案
 
 > 从 Auto Paper Digest 的「采集论文 → NotebookLM 生成 → 归档发布」出发，研究如何将通用论文工具用于水生毒理学。原库以 Python、SQLite、Playwright 和 Gradio 编排流程；本次因 NotebookLM 接入未取得产出，转用 Open Notebook 的 Next.js / FastAPI / SurrealDB 架构，通过 Esperanto 接入 MiniMax，完成 PDF 提取与全文问答。再加入 Europe PMC 领域检索、模型参数适配和原文精读，形成可追溯、可阅读、可下载的研究档案：3 篇详细报告、1 篇跨论文综合、2 份历史模型短回答及失败证据。
+
+[原始源库：Auto Paper Digest](https://github.com/brianxiadong/auto-paper-digest) → [替代探索：Open Notebook](https://github.com/lfnovo/open-notebook) → 本项目研究成果
 
 [打开正式研究网页](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/) · [直接阅读详细报告](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/#deep-reports) · [研究方法](research-method.md) · [研究笔记](notes.md) · [来源与版本](SOURCE.json)
 
@@ -48,7 +50,7 @@ Auto Paper Digest 编排论文采集、NotebookLM 生成与归档发布；Open N
 
 这一流程可以拆成四项工作：找到可用论文、取得并登记原文、让模型基于论文回答、检查回答并呈现。Python 负责检索下载和流程连接；NotebookLM 或 Open Notebook 负责组织来源和模型交互；模型提供解读内容；结果页负责阅读与追溯。网页能打开、接口返回成功、模型回答完整和科学结论可靠，是不同的验收条件。
 
-本研究从 [Auto Paper Digest 的历史试跑](results/history/README.md) 延续而来。本子项目以 Open Notebook 为主要研究对象，集中展示跨工具验证和最终产出；008 保留原 APD 试跑与历史故障记录；本项目已保存阅读与复核所需的公开摘要和证据，不依赖 008 公开发布。替代路线的生成结果没有记成 NotebookLM 已成功。
+本研究从 [Auto Paper Digest 的历史试跑](results/history/README.md) 延续而来。本子项目以 Auto Paper Digest 为研究起点，按「原库能力 → NotebookLM 接入验证 → Open Notebook 替代探索 → 水生毒理学研究成果」组织内容；008 保留原 APD 试跑与历史故障记录；本项目已保存阅读与复核所需的公开摘要和证据，不依赖 008 公开发布。替代路线的生成结果没有记成 NotebookLM 已成功。
 
 | 组成 | 原本负责什么 | 本轮实际做了什么 |
 | --- | --- | --- |
@@ -121,8 +123,9 @@ python projects/011-open-notebook-research/scripts/serve.py --port 7871
 
 | 项目 | 记录 |
 | --- | --- |
-| 主要上游 | [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook)，Luis Novo |
-| 研究源码 | `a0f6f3081ae06328f0a451b3a3ef2959ca25721d` |
+| 原始源库 / 研究起点 | [brianxiadong/auto-paper-digest](https://github.com/brianxiadong/auto-paper-digest) |
+| 后续替代探索 | [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook)，Luis Novo |
+| Open Notebook 研究源码 | `a0f6f3081ae06328f0a451b3a3ef2959ca25721d` |
 | Open Notebook 许可 | MIT，保留原始许可证链接和历史副本 |
 | APD 源码 | `e1663ba5e73a3501904b2a43699f3c12fb4a4300`；声明 MIT，该版本无独立 LICENSE 文件 |
 | 云端运行 | Linux x86_64，Docker 28.4.0，Compose 2.40.3，SurrealDB 2.7.0 |

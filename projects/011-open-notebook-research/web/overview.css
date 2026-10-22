@@ -21,3 +21,6 @@
 @media(max-width:650px){.research-abstract{padding:22px;margin-top:26px}.abstract-heading h2{font-size:22px}.abstract-intro{font-size:12px}.research-route{grid-template-columns:1fr;gap:21px}.abstract-foot a{margin-left:0;margin-right:18px}}
 
 @media print{.research-abstract{display:none!important}}
+
+/* Keep the original repository distinct from the later alternative. */
+.repository-route{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:center;margin:20px 0 24px}.repository-route>a{display:block;padding:16px;background:var(--white);border:1px solid #c7d4bf;border-radius:3px}.repository-route>a:hover{border-color:var(--green)}.repository-route a>span{display:block;font-size:10px;color:var(--blue)}.repository-route strong{display:block;font-size:16px;color:var(--ink);margin:7px 0;line-height:1.5}.repository-route small{display:block;font-size:10px;line-height:1.8;color:#617365}.repository-route-step{text-align:center}.repository-route-step>span{display:block;font-size:23px;color:var(--green)}#research-purpose{scroll-margin-top:110px}@media(max-width:650px){.repository-route{grid-template-columns:1fr;gap:10px}.repository-route-step{display:flex;gap:14px;align-items:center;justify-content:center}.repository-route-step>span{transform:rotate(90deg)}.repository-route-step br{display:none}}

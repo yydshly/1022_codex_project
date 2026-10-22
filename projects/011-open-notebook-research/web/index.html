@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#183f39">
   <meta name="description" content="从 Auto Paper Digest 的论文采集、NotebookLM 生成与归档出发，转向 Open Notebook + MiniMax，补充领域检索与原文精读；查看技术架构、路线选择、三篇水生毒理学详细报告和真实效果。">
-  <title>水生毒理学研究档案 · Open Notebook</title>
+  <title>Auto Paper Digest · 水生毒理学研究档案</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="overview.css">
   <script src="data.js" defer></script>
@@ -15,9 +15,9 @@
 <a class="skip-link" href="#main">跳到主要内容</a>
 <aside class="sidebar">
   <a class="brand" href="#overview" aria-label="研究档案首页"><span class="brand-mark" aria-hidden="true">◒</span><span>FIELD NOTES<small>开源研究 · 011</small></span></a>
-  <div class="sidebar-subject"><span>RESEARCH ARCHIVE</span><strong>论文阅读，<br>保留证据。</strong><p>Open Notebook<br>水生毒理学实测</p></div>
+  <div class="sidebar-subject"><span>RESEARCH ARCHIVE</span><strong>论文阅读，<br>保留证据。</strong><p>Auto Paper Digest 起点<br>Open Notebook 替代探索</p></div>
   <nav aria-label="研究内容"><a href="#overview" class="active"><span>01</span>研究概览</a><a href="#understanding"><span>02</span>一图理解全貌</a><a href="#effects"><span>03</span>实际效果</a><a href="#deep-reports"><span>04</span>论文详细报告</a><a href="#architecture"><span>05</span>技术与扩展</a><a href="#results"><span>06</span>历史模型输出</a><a href="#papers"><span>07</span>论文资料</a><a href="#verification"><span>08</span>验证与边界</a><a href="#method"><span>09</span>复用与下载</a></nav>
-  <div class="sidebar-foot"><span class="status-dot"></span>已保存的研究结果<p>2026.10.22 · 只读档案<br>浏览本页不调用模型</p><a href="https://github.com/lfnovo/open-notebook" target="_blank" rel="noopener noreferrer">上游 Open Notebook ↗</a></div>
+  <div class="sidebar-foot"><span class="status-dot"></span>已保存的研究结果<p>2026.10.22 · 只读档案<br>浏览本页不调用模型</p><a href="https://github.com/brianxiadong/auto-paper-digest" target="_blank" rel="noopener noreferrer">原始源库 · Auto Paper Digest ↗</a><br><a href="https://github.com/lfnovo/open-notebook" target="_blank" rel="noopener noreferrer">替代探索 · Open Notebook ↗</a></div>
 </aside>
 <main id="main">
   <header class="topline"><span>开源项目研究 / 论文分析工作流</span><span class="date">研究快照 · 2026 年 10 月 22 日</span></header>
@@ -35,6 +35,11 @@
 
   <section class="research-abstract" aria-labelledby="research-purpose">
     <div class="abstract-heading"><p class="eyebrow">RESEARCH ABSTRACT / 研究摘要</p><h2 id="research-purpose">把工具试跑，变成有依据的论文理解</h2></div>
+    <div class="repository-route" aria-label="从原始源库到替代探索">
+      <a href="https://github.com/brianxiadong/auto-paper-digest" target="_blank" rel="noopener noreferrer"><span>研究起点 · 原始源库</span><strong>Auto Paper Digest ↗</strong><small>论文采集、NotebookLM 生成、归档发布</small></a>
+      <div class="repository-route-step"><span aria-hidden="true">→</span><small>接入未产出后<br>探索替代方案</small></div>
+      <a href="https://github.com/lfnovo/open-notebook" target="_blank" rel="noopener noreferrer"><span>后续探索 · 替代应用</span><strong>Open Notebook ↗</strong><small>资料管理、全文提取、连接 MiniMax 问答</small></a>
+    </div>
     <p class="abstract-intro">Auto Paper Digest 用 <strong>Python + SQLite</strong> 采集和登记论文，以 <strong>Playwright</strong> 操作 NotebookLM 生成内容，再用 <strong>Gradio</strong> 展示并衔接归档发布。我们的目标，是将这条思路用于水生毒理学，说明白论文的实验、结果与机制，并让每个重要判断能够回到原文。</p>
     <ol class="research-route">
       <li><span>01 / 领域输入</span><h3>从 AI 榜单到 Europe PMC</h3><p>原库入口不覆盖本次选题，因此新增主题查询、PMCID 登记和 PDF 校验。916 条命中 → 30 条候选 → 3 篇原文。</p></li>
@@ -47,7 +52,7 @@
 
   <section id="understanding" class="content-section section-anchor">
     <div class="section-heading"><div><p class="eyebrow">02 / THE WHOLE PICTURE</p><h2>一张图理解研究全貌</h2></div><p>库的能力 → 底层架构 → 领域扩展 → 实际效果。<br>图中分别标出原库、实测路径和精读加工。</p></div>
-    <div class="role-summary"><article><span>原始研究对象</span><h3>Auto Paper Digest</h3><p>把论文采集、下载、NotebookLM 生成、归档和发布串成流程，适合跟踪 AI 论文榜单。</p></article><article><span>本次替代引擎</span><h3>Open Notebook</h3><p>管理来源、提取文本、组织上下文，连接可配置的模型做资料问答。本次接入 MiniMax。</p></article><article><span>我们交付的成果</span><h3>水生毒理学研究档案</h3><p>保存真实输入和模型原文，再补充逐篇精读、图表核对及可离线阅读的结果网页。</p></article></div>
+    <div class="role-summary"><article><span>原始研究对象</span><h3><a href="https://github.com/brianxiadong/auto-paper-digest" target="_blank" rel="noopener">Auto Paper Digest ↗</a></h3><p>把论文采集、下载、NotebookLM 生成、归档和发布串成流程，适合跟踪 AI 论文榜单。</p></article><article><span>本次替代引擎</span><h3><a href="https://github.com/lfnovo/open-notebook" target="_blank" rel="noopener">Open Notebook ↗</a></h3><p>管理来源、提取文本、组织上下文，连接可配置的模型做资料问答。本次接入 MiniMax。</p></article><article><span>我们交付的成果</span><h3>水生毒理学研究档案</h3><p>保存真实输入和模型原文，再补充逐篇精读、图表核对及可离线阅读的结果网页。</p></article></div>
     <figure class="overview-map"><a href="assets/research-overview.svg" target="_blank" rel="noopener" aria-label="放大查看能力、架构、扩展与效果总览图"><img src="assets/research-overview.svg" width="1600" height="1500" alt="研究总览图：Auto Paper Digest 的榜单采集与 NotebookLM 生成流程；Open Notebook 的前端、API、资料提取、数据库和模型调用；我们新增的 Europe PMC 检索、PDF 登记、MiniMax 适配与精读归档；实际产出及验证边界。"></a><figcaption><span>按固定源码与运行证据整理 · 2026.10.22 · 图中文字可放大阅读</span><div><a href="assets/research-overview.svg" target="_blank" rel="noopener">放大查看 ↗</a><a href="assets/research-overview.svg" download>下载 SVG ↓</a><a href="assets/research-overview.png" download>下载 PNG ↓</a></div></figcaption></figure>
     <div class="scenario-heading"><h3>使用场景怎么选</h3><p>按你要完成的任务选择组件。</p></div>
     <div class="scenario-list"><article><span>01 / 跟踪论文</span><h3>持续关注 AI 研究动态</h3><p>原 APD 接 Hugging Face 日榜、周榜和 arXiv，适合自动整理批次论文，衔接 NotebookLM 内容生产。</p><small>前提：生成服务的登录与访问可用。</small></article><article><span>02 / 基于资料问答</span><h3>围绕选定论文提出问题</h3><p>Open Notebook 管理来源，选择资料后调用模型，适合初读、提取研究条件和形成比较初稿。</p><small>本次验证全文上下文问答；向量检索未测试。</small></article><article><span>03 / 领域精读与汇报</span><h3>理解实验并保留依据</h3><p>领域检索取得论文，随后核读方法与图表，分清观察、解释和推断，整理为可追溯的长报告。</p><small>本页可阅读和下载；长报告包含额外研究代理工作。</small></article></div>
@@ -77,7 +82,7 @@
 
   <section id="architecture" class="content-section section-anchor">
     <div class="section-heading"><div><p class="eyebrow">05 / ARCHITECTURE & EXTENSIONS</p><h2>技术架构与扩展</h2></div><p>Auto Paper Digest 负责采集和生成编排；<br>Open Notebook 管理资料与模型交互。</p></div>
-    <div class="segmented" role="tablist" aria-label="架构路径"><button id="architecture-tested" role="tab" aria-selected="true" aria-controls="architecture-panel" data-architecture="tested">本次实测路径</button><button id="architecture-upstream" role="tab" aria-selected="false" aria-controls="architecture-panel" data-architecture="upstream" tabindex="-1">原库路径</button></div>
+    <div class="segmented" role="tablist" aria-label="架构路径"><button id="architecture-upstream" role="tab" aria-selected="true" aria-controls="architecture-panel" data-architecture="upstream">原始源库路径</button><button id="architecture-tested" role="tab" aria-selected="false" aria-controls="architecture-panel" data-architecture="tested" tabindex="-1">后续探索路径</button></div>
     <div id="architecture-panel" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tested" tabindex="0"></div>
     <div class="stack-grid"><article><span class="small-label">01 / 采集与编排</span><h3>Python + SQLite</h3><p>APD 用 Click 提供 CLI，Requests / BeautifulSoup 采集榜单，SQLite 保存论文和处理状态，Playwright 操作 NotebookLM。Gradio 展示已有产物，发布为独立步骤。</p></article><article><span class="small-label">02 / 资料与模型服务</span><h3>Next.js → FastAPI</h3><p>Open Notebook 的 React / TypeScript 前端调用 Python API；LangGraph / LangChain 组织来源处理和聊天，content-core 抽取文档，Esperanto 连接模型服务。</p></article><article><span class="small-label">03 / 状态与持久化</span><h3>SurrealDB + 任务执行</h3><p>SurrealDB 保存来源与文本；surreal-commands 支持后台任务；聊天检查点另用 SQLite。本次资料提取完成后，将选定全文送给 MiniMax。</p></article></div>
     <details class="technical-note"><summary>PDF 如何解析？与向量检索是什么关系？</summary><p>源码调用链为 <code>FastAPI → process_source → source_graph → content-core.extract_content → source.full_text → SurrealDB</code>。本次 3 篇原始导入使用同步处理；后续另一次异步上传 API 验收也完成文本提取。</p><p>保存证据未记录 content-core 最终采用的具体 PDF 解析器，因此不能认定 OCR 或某个解析引擎已验证。Docling / Crawl4AI 在本次环境关闭。抽取结果有空格丢失和重复标题，图表另由研究代理查看原始页面。</p><p>本次聊天是“选定来源全文 → 上下文 → 模型回答”。没有建立 embedding，也没有验证向量召回、重排或扫描件识别；不能将这次效果描述为已验证的完整 RAG 系统。</p></details>
@@ -105,7 +110,7 @@
   <section id="verification" class="content-section section-anchor"><div class="section-heading"><div><p class="eyebrow">08 / EVIDENCE & LIMITS</p><h2>我们究竟验证到了哪里</h2></div><p>把接口成功、内容完整与科学可靠分开判断。<br>未完成的验证保留为边界。</p></div><div class="filter-bar" role="group" aria-label="筛选验证记录"><button class="active" data-filter="all" aria-pressed="true">全部记录</button><button data-filter="passed" aria-pressed="false">已验证</button><button data-filter="limited" aria-pressed="false">有边界</button><button data-filter="blocked" aria-pressed="false">未跑通 / 未测</button><span id="verification-count" aria-live="polite"></span></div><div class="table-scroll"><table class="evidence-table"><thead><tr><th scope="col">验证环节</th><th scope="col">方法与证据</th><th scope="col">结果</th></tr></thead><tbody id="verification-rows"></tbody></table></div><div class="adaptation"><span class="small-label">一次失败留下的经验</span><h3>接口返回成功，正文也可能没有完成。</h3><div class="adaptation-compare"><div><span>原版默认参数</span><strong>350 <small>字符</small></strong><p><code>finish_reason=length</code><br>输出额度耗尽，正文截断</p></div><span class="compare-arrow" aria-hidden="true">→</span><div><span>低推理档位适配后</span><strong>1,460 <small>/ 3,056 字符</small></strong><p><code>finish_reason=stop</code><br>单篇与综合回答完整返回</p></div></div><p>保留 8,192-token 上限，仅针对当前模型与中国区地址设置 <code>reasoning_effort=low</code>、<code>max_retries=0</code>。这是经过本轮适配的效果，不能算作原版默认参数直接成功。三次调用累计 108,597 tokens，用量不等于账单金额。</p></div><details class="technical-note"><summary>展开访问问题的结论记录</summary><p>原版应用在云机内通过 HTTP 与 API 检查，但用户浏览器没有可用入口。原生预览排查未找到当前任务可用的端口映射；ngrok 与 Microsoft Dev Tunnels 的必要目标被平台代理以 <code>403 Domain forbidden</code> 拒绝，而 npm 对照请求正常。</p><p>这只能说明本次访问路径未打通，不能据此断言所有云环境都禁止内网穿透。已停止完整 Open Notebook 应用的访问排查；本轮将保存的研究结果发布为静态网站，提供阅读和下载。</p></details></section>
 
   <section id="method" class="content-section section-anchor"><div class="section-heading"><div><p class="eyebrow">09 / REUSABLE METHOD</p><h2>留下可以复用的研究方法</h2></div><p>换一个领域，仍然保留同样的证据链。<br>先验证小样本，再决定是否扩大。</p></div><ol class="method-list"><li><span>01</span><div><h3>先定义研究问题与检索边界</h3><p>明确污染物、物种、生命阶段、暴露周期和效应终点。保存检索式、日期、候选记录及取舍理由，避免把少量样本称作系统综述。</p></div></li><li><span>02</span><div><h3>保存原始资料，确认可解析</h3><p>记录 DOI、开放许可与下载源，核验 PDF 文件头及 SHA-256。检查提取文本是否包含实验与结果章节，另行核对图表、单位和缺失内容。</p></div></li><li><span>03</span><div><h3>先做单篇解读，再做综合比较</h3><p>要求回答区分作者结论、模型推断与研究建议，并保留来源 ID。核对物种、处理组、剂量单位、时间和统计量，再比较研究之间的共性与差异。</p></div></li><li><span>04</span><div><h3>连同失败记录一起归档</h3><p>同时保存模型原文、提示词或请求记录、版本、结束原因、实际用量与质量批注。明确哪些由程序确认、哪些由研究代理抽查、哪些尚未验证。</p></div></li></ol><div class="archive-heading"><h3>研究记录与证据下载</h3><span>已保存文件 · 不含密钥和登录信息</span></div><div id="download-list" class="download-list"></div></section>
-  <footer><div><strong>FIELD NOTES / 011</strong><p>研究结果可以被重读，结论应该能够被追溯。</p></div><div><span>Open Notebook · 水生毒理学研究档案</span><p>2026.10.22 · 详细精读、原始模型回答与核对说明分别保留</p><a href="#overview">返回顶部 ↑</a></div></footer>
+  <footer><div><strong>FIELD NOTES / 011</strong><p>研究结果可以被重读，结论应该能够被追溯。</p></div><div><span>Auto Paper Digest · 水生毒理学研究档案</span><p>2026.10.22 · 详细精读、原始模型回答与核对说明分别保留</p><a href="#overview">返回顶部 ↑</a></div></footer>
 </main><div id="toast" role="status" aria-live="polite"></div>
 <noscript><div class="noscript">请启用 JavaScript 以读取保存的回答和论文清单。架构与方法说明仍可阅读。</div></noscript>
 </body>
