@@ -4,7 +4,6 @@ from io import BytesIO
 import argparse
 import base64
 import json
-import mimetypes
 from pathlib import Path
 import re
 import zipfile
@@ -26,17 +25,21 @@ def example_zip():
     files = {path.relative_to(ROOT / "assets/upstream/pet-v3").as_posix(): path.read_bytes()
              for path in (ROOT / "assets/upstream/pet-v3").rglob("*") if path.is_file()}
     files["ATTRIBUTION.txt"] = ATTRIBUTION.encode()
-    with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_STORED) as archive:
         for name, data in sorted(files.items()):
             info = zipfile.ZipInfo("pink-green-flavor-monster-v3/" + name, (2026, 9, 4, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
+            info.compress_type = zipfile.ZIP_STORED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data)
     return output.getvalue()
 
 
 def data_url(name, data):
-    mime = mimetypes.guess_type(name)[0] or "application/octet-stream"
+    # Fixed MIME names keep standalone bytes identical on Windows and Linux.
+    mime = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
+            ".webp": "image/webp", ".gif": "image/gif", ".json": "application/json",
+            ".md": "text/markdown;charset=utf-8", ".txt": "text/plain;charset=utf-8",
+            ".zip": "application/zip", ".js": "text/javascript;charset=utf-8"}.get(Path(name).suffix.lower(), "application/octet-stream")
     return f"data:{mime};base64," + base64.b64encode(data).decode("ascii")
 
 
