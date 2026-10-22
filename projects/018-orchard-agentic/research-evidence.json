@@ -1,0 +1,162 @@
+{
+  "checked_date": "2026-10-22",
+  "upstream": "https://github.com/microsoft/Orchard-Agentic",
+  "commit": "bd8da32b3a075128700caab75bbc491fb6fdc16e",
+  "commit_date": "2026-10-09T05:14:11Z",
+  "license": "MIT",
+  "trainer_submodule": {
+    "repository": "https://github.com/MSR-Orchard/slime",
+    "commit": "331efaaeef75c98aad6ba1a2f5f50bd8149f6ab9"
+  },
+  "paper": "https://arxiv.org/html/2605.15040v3",
+  "scope": "Fixed-source review only. No cluster, model inference, GPU training or paper-result reproduction.",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/README.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/README.md",
+      "bytes": 18343,
+      "sha256": "99d1b5d061ddaa8ad9d9de347fcc5124c3eeac101eb0b8bbcc5435d3b75b7a5f"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/LICENSE",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/LICENSE",
+      "bytes": 1074,
+      "sha256": "7df20dcdf9197e9945c14858d41c60f11b52b93e5b69e2b63416b874d598d322"
+    },
+    {
+      "path": "docs/overview.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/docs/overview.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/docs/overview.md",
+      "bytes": 6019,
+      "sha256": "27cb453bc34ca20358cf7a2e2b56c9f6e59868dde4883c37ffce4fac2ff115d6"
+    },
+    {
+      "path": "orchard_env/README.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/README.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/README.md",
+      "bytes": 11829,
+      "sha256": "72239b57a483ca07ce31a9a66465b2088526f339a8735211c0f25638a9a64ab1"
+    },
+    {
+      "path": "orchard_env/pyproject.toml",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/pyproject.toml",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/pyproject.toml",
+      "bytes": 2060,
+      "sha256": "fde1dda1da9f675c14e12a79bcfbf62a045ce29f2ea7abdf90ea8a6507bc048c"
+    },
+    {
+      "path": "orchard_env/docs/architecture.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/architecture.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/architecture.md",
+      "bytes": 19623,
+      "sha256": "cf36daec3def958c893645cf65a9189f521f919287cc2e86f3513569849ecd21"
+    },
+    {
+      "path": "orchard_env/docs/api.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/api.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/api.md",
+      "bytes": 6355,
+      "sha256": "8535282810fda2bf60f78a56891019c9597e122d51a0496d287e17459ae7ace9"
+    },
+    {
+      "path": "orchard_env/docs/deployment.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/deployment.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/deployment.md",
+      "bytes": 10977,
+      "sha256": "539aa6a67f5362469ff163923447b814194b3978c5f6756c6f0e1c6809002e5a"
+    },
+    {
+      "path": "orchard_env/orchard_env/client/sandbox_client.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/client/sandbox_client.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/client/sandbox_client.py",
+      "bytes": 75214,
+      "sha256": "dab3327bddc77013e58ea4e55e531a4a8736e1ec0d711c1d05de34ddaae08095"
+    },
+    {
+      "path": "orchard_env/orchard_env/orchestrator/api.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/api.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/api.py",
+      "bytes": 33540,
+      "sha256": "4217ed3bb7fc7b6bd3cad00b5c4cc3126dd338ddd0e149e2d1a023f4b9eb0ea2"
+    },
+    {
+      "path": "orchard_env/orchard_env/orchestrator/exec_manager.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/exec_manager.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/exec_manager.py",
+      "bytes": 11099,
+      "sha256": "dca2d8d924ab8708574d250181f230ee76b52817b02be580474d5ccae50d87fd"
+    },
+    {
+      "path": "orchard_env/orchard_env/orchestrator/agent_client.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/agent_client.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/agent_client.py",
+      "bytes": 6952,
+      "sha256": "17560bcd5339ec868cf7cb541663f89bd1bc42b68cd29a88b9ef88739ecddd70"
+    },
+    {
+      "path": "orchard_env/orchard_env/agent/server.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/agent/server.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/agent/server.py",
+      "bytes": 20601,
+      "sha256": "26f3ef93ca0d35d2c1bfffbc895693207e1ff406af1750ce4596bdc4f91d9b37"
+    },
+    {
+      "path": "orchard_env/orchard_env/orchestrator/sandbox_manager.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/sandbox_manager.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/sandbox_manager.py",
+      "bytes": 45699,
+      "sha256": "561877e6ff82f09d9051055128cd1fb3446c36c9f4680d4289dd39398c62cfbc"
+    },
+    {
+      "path": "orchard_env/orchard_env/orchestrator/settings.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/settings.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/settings.py",
+      "bytes": 6346,
+      "sha256": "1da66eea765ff78740870966307926246a08134c37593071c6e2662702b47c67"
+    },
+    {
+      "path": "orchard_env/orchard_env/orchestrator/redis_store.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/redis_store.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/orchard_env/orchestrator/redis_store.py",
+      "bytes": 11452,
+      "sha256": "7e46a608fe6c8d5ae2285b1409583cb3da8127927b0b5fd6907b0dea99936c5b"
+    },
+    {
+      "path": "orchard_eval/README.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/README.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/README.md",
+      "bytes": 27034,
+      "sha256": "152b378391434e1eaa5e2b82701e91c2d78c48e2088b20876382fdee08879016"
+    },
+    {
+      "path": "orchard_eval/orchard_evalkit/runner.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/orchard_evalkit/runner.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/orchard_evalkit/runner.py",
+      "bytes": 27177,
+      "sha256": "1f19a1f5a93567a9e7da4af91a1d696c53b06ea4153bd46490fbfee797b16c21"
+    },
+    {
+      "path": "orchard_eval/orchard_evalkit/harnesses/trajectory.py",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/orchard_evalkit/harnesses/trajectory.py",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/orchard_evalkit/harnesses/trajectory.py",
+      "bytes": 19717,
+      "sha256": "d877e136786fdf7a49f81a99c1815b1d872dced96cfa7d99d32708383dd6b912"
+    },
+    {
+      "path": "projects/openwebrl.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/projects/openwebrl.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/projects/openwebrl.md",
+      "bytes": 2388,
+      "sha256": "a5a29a6ff6855210d959251a97f968977b1ed4d9de2a05e23aa2c0643d0878f0"
+    },
+    {
+      "path": "projects/openforge-rl.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/projects/openforge-rl.md",
+      "raw_url": "https://raw.githubusercontent.com/microsoft/Orchard-Agentic/bd8da32b3a075128700caab75bbc491fb6fdc16e/projects/openforge-rl.md",
+      "bytes": 4624,
+      "sha256": "c2fa6cb38542a34ae670634f1c7db679f5f7f1a016eeacf3d6f57f9616ad519a"
+    }
+  ]
+}

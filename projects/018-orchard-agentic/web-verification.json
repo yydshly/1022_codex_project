@@ -1,0 +1,235 @@
+{
+  "verifiedAt": "2026-10-22T23:42:42.419355+08:00",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Catalog and page have the identical capability/technology/scenario summary",
+      "passed": true
+    },
+    {
+      "name": "README includes the full summary",
+      "passed": true
+    },
+    {
+      "name": "Cover points to the approved guide",
+      "passed": true
+    },
+    {
+      "name": "Approved source identity: assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Exact published image copy: web/assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Approved source identity: assets/orchard-agentic-overview.svg",
+      "passed": true
+    },
+    {
+      "name": "Exact published image copy: web/assets/orchard-agentic-overview.svg",
+      "passed": true
+    },
+    {
+      "name": "PNG dimensions retain the original 2400 x 5480",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./style.css",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./style.css",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./style.css",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./app.js",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./app.js",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./app.js",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./reuse-plan.md",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./reuse-plan.md",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./reuse-plan.md",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./research-evidence.json",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./research-evidence.json",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./research-evidence.json",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./LICENSE.upstream.txt",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./LICENSE.upstream.txt",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./LICENSE.upstream.txt",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./assets/orchard-agentic-overview.svg",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./assets/orchard-agentic-overview.svg",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./assets/orchard-agentic-overview.svg",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Relative publishing path: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource stays inside web: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Resource exists: ./assets/orchard-agentic-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Research section exists: roles",
+      "passed": true
+    },
+    {
+      "name": "Research section exists: capabilities",
+      "passed": true
+    },
+    {
+      "name": "Research section exists: techniques",
+      "passed": true
+    },
+    {
+      "name": "Research section exists: scenarios",
+      "passed": true
+    },
+    {
+      "name": "Research section exists: metrics",
+      "passed": true
+    },
+    {
+      "name": "Research section exists: sources",
+      "passed": true
+    },
+    {
+      "name": "Sources point at the reviewed fixed commit",
+      "passed": true
+    },
+    {
+      "name": "Published evidence identity",
+      "passed": true
+    },
+    {
+      "name": "Evidence commit matches the page",
+      "passed": true
+    },
+    {
+      "name": "All source files have full SHA-256 hashes",
+      "passed": true
+    },
+    {
+      "name": "License publishing identity",
+      "passed": true
+    },
+    {
+      "name": "MIT notice retained",
+      "passed": true
+    },
+    {
+      "name": "Editable reuse plan publishing identity",
+      "passed": true
+    },
+    {
+      "name": "Metrics disclose reranking and pass@3",
+      "passed": true
+    },
+    {
+      "name": "Future snapshot features are labeled as roadmap",
+      "passed": true
+    },
+    {
+      "name": "No raw HTML injection from research JSON",
+      "passed": true
+    }
+  ],
+  "scope": "Static links, artifact identity, provenance and research consistency only; browser interactions and public deployment are recorded separately."
+}

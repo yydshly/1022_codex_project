@@ -264,6 +264,24 @@
       "cover": "assets/sparkvsr-overview.png",
       "cover_caption": "沿用本次对话已生成的理解总览图，说明原视频约束下的高清重建、关键帧控制、作者效果、技术沉淀与扩展场景，并保留暂不深入研究的判断；图为精确排版示意，非推理截图。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/017-sparkvsr/"
+    },
+    {
+      "id": "018",
+      "slug": "orchard-agentic",
+      "name": "Orchard-Agentic · Agent 沙箱与评测训练",
+      "repo": "https://github.com/microsoft/Orchard-Agentic",
+      "summary": "基于 Kubernetes 为 Agent 批量提供可控容器，执行代码、文件和终端操作，配套轨迹记录、评测与训练；作者报告 SWE 修复率 69.7%，六候选重排后 73.0%（未复现）。可沉淀沙箱 API、生命周期治理、网络资源策略和评测数据规范，扩展到远程代码执行、自动修复、回归评测、浏览器任务及 Agent 训练。",
+      "status": "completed",
+      "tags": [
+        "Agent 沙箱",
+        "Kubernetes",
+        "评测与训练",
+        "生命周期治理",
+        "技术复用"
+      ],
+      "cover": "assets/orchard-agentic-overview.png",
+      "cover_caption": "沿用本次讨论生成并确认的中文理解长图：区分模型、Agent 框架与沙箱，解释执行架构、十二项环境能力、Docker 对比、技术价值及效果口径。图为文字与矢量排版，指标为作者报告，未本地复现；快照分叉标为后续计划。",
+      "demo_url": ""
     }
   ]
 }

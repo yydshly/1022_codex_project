@@ -1,0 +1,27 @@
+Orchard-Agentic 中文能力信息图
+资料核对日期：2026-10-22（Asia/Shanghai）
+最终制作：Python / Pillow 排版绘制 PNG，同步输出含可编辑文字的 SVG。内置 image_gen 调用因网络错误失败，未使用其图像；原始尝试指令保留在 orchard-agentic-prompt.txt。
+定位：帮助初次了解项目的读者区分模型、Agent 框架、沙箱环境与整个研究工具集。
+
+主要来源：
+1. 项目 README：https://github.com/microsoft/Orchard-Agentic
+2. 环境说明：https://github.com/microsoft/Orchard-Agentic/blob/main/orchard_env/README.md
+3. 架构：https://github.com/microsoft/Orchard-Agentic/blob/main/orchard_env/docs/architecture.md
+4. API：https://github.com/microsoft/Orchard-Agentic/blob/main/orchard_env/docs/api.md
+5. 整体组成：https://github.com/microsoft/Orchard-Agentic/blob/main/docs/overview.md
+6. 评测：https://github.com/microsoft/Orchard-Agentic/blob/main/orchard_eval/README.md
+7. 论文第三版：https://arxiv.org/html/2605.15040v3
+8. Docker Engine：https://docs.docker.com/engine/
+
+口径：
+- Orchard Env 为 Kubernetes 原生容器沙箱服务，并非自研容器运行时。
+- Pod 内的轻量 agent 是命令执行服务，区别于决策模型及外层 Agent 框架。
+- 模型接口、凭据、任务镜像和项目依赖需要使用者配置。
+- 完整状态快照、暂停/恢复、分叉与前缀共享，在 README 中列为后续计划。
+- 论文和系统指标均为作者报告，未在本地复现。
+- SWE 73.0% 使用 best-of-6 候选与价值模型重排；对应单模型 RPR 成绩为69.7%。
+- Claw pass@3 衡量三次尝试中至少一次成功，不是单次成功率。
+- 性能指标依赖作者测试配置，不是任意部署的性能保证。
+- “什么时候用 Docker / Orchard”的选择建议是基于项目架构与部署要求的判断。
+
+

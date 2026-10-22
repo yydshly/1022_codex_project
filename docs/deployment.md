@@ -206,3 +206,12 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 
 017 已于 2026-10-22 发布到 [正式理解页](https://yydshly.github.io/1022_codex_project/017-sparkvsr/)。内容提交 1e44e18 的 [GitHub Actions](https://github.com/yydshly/1022_codex_project/actions/runs/39805710015) 构建与部署均成功，10 个发布文件 HTTP 200 且与提交字节一致。总导航三类摘要和原样引导图已核对，线上评测切换、放大与场景展开及手机布局通过。记录见本项目 deployment-verification.json 和 publication-browser-verification.json。
+
+
+## 018 · Orchard-Agentic 沙箱与评测训练研究
+
+[研究文档](../projects/018-orchard-agentic/README.md)与[静态网页源码](../projects/018-orchard-agentic/web/index.html)整理模型、Agent 框架和执行环境的分工，解释容器能力、集群治理、评测训练、Docker 对比、可沉淀技术及未来场景。摘要同步到登记表、README 索引和 Pages 总导航；实验成绩明确为作者报告，六候选重排、pass@3 与未复现范围均保留。
+
+指定引导图采用对话确认的 orchard-agentic-overview.png，保留原始字节和可编辑 SVG；首页封面、研究首页、网页首屏统一引用。web/ 已跟踪完整相对路径资源，现有 build_site.py 直接汇总到 /018-orchard-agentic/，无需新增构建依赖或修改部署工作流。
+
+本地执行 python projects/018-orchard-agentic/scripts/verify_web.py 后，用根构建器输出到新的空目录并预览。公开发布需确认 Actions 成功，再以 scripts/verify_deployment.py 核对页面、资源字节与总导航摘要；结果见 [部署记录](../projects/018-orchard-agentic/deployment-verification.json)，交互范围见 [浏览器验收](../projects/018-orchard-agentic/browser-verification.json)。本研究仅发布静态说明，不部署 Orchard 的 Kubernetes 服务，不创建云资源或执行模型训练。

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Orchard-Agentic 研究：面向 Agent 的容器沙箱、批量评测与训练，解释能力效果、Docker 差别、可沉淀技术及后期扩展场景。">
+<meta name="theme-color" content="#102d37">
+<title>Orchard-Agentic · Agent 的执行底座与研究工具</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#understanding">跳到研究正文</a>
+<header class="site-header"><a class="brand" href="../"><span class="brand-mark">O</span><span>开源研究 <b>/ 018</b></span></a><nav aria-label="页面导航"><a href="#understanding">理解</a><a href="#capabilities">能力</a><a href="#reuse">技术沉淀</a><a href="#scenarios">扩展场景</a><a href="#evidence">来源</a></nav><a class="source-link" href="https://github.com/microsoft/Orchard-Agentic" target="_blank" rel="noreferrer">上游仓库 ↗</a></header>
+<main>
+<section class="hero">
+<div class="hero-copy"><p class="eyebrow">ORCHARD-AGENTIC / RESEARCH NOTE</p><h1>给 Agent 一个<br><em>可控的执行环境。</em></h1><p class="hero-lead">容器隔离环境 + Agent 操作工具 + 批量管理服务。<br>在同一个底座上执行任务、记录过程、评测和训练。</p><div class="hero-actions"><a class="button primary" href="#understanding">从工作原理开始 <span>↓</span></a><button class="button secondary" data-open-guide>打开完整引导图 ↗</button></div><div class="hero-meta"><span><i></i>固定版本研究</span><span>2026.10.22</span><span>MIT</span><span>静态研究展示</span></div></div>
+<figure class="guide-cover"><button class="guide-image-button" data-open-guide aria-label="放大我们生成的 Orchard-Agentic 理解引导图" aria-haspopup="dialog"><img src="./assets/orchard-agentic-overview.png" width="2400" height="5480" alt="我们生成的中文理解长图：模型、Agent 与沙箱分工，十二项环境能力、Docker 对比、价值和效果" fetchpriority="high"></button><figcaption><span>我们的理解总览</span><button data-open-guide>放大阅读 ↗</button></figcaption></figure>
+</section>
+<section class="summary-band" aria-labelledby="summary-title"><div><p class="eyebrow">WHAT WE UNDERSTAND</p><h2 id="summary-title">先把能力与价值说清楚。</h2></div><p id="project-summary">正在载入完整研究摘要。Orchard Env 提供可控执行与环境管理；评测与训练需要相应模型、任务和资源。</p></section>
+<section id="understanding" class="section">
+<div class="section-head"><div><span class="section-no">01 / 理解与原理</span><h2>模型思考，框架组织，<br>沙箱执行。</h2></div><p>Orchard Env 是环境底座。整个 Orchard-Agentic 还包括评测工具、训练配方和数据，范围大于一个沙箱。</p></div>
+<div class="roles" id="roles"></div>
+<div class="architecture"><div class="architecture-head"><h3>一套环境，三条使用路径</h3><div class="tabs" role="tablist" aria-label="工作原理"><button id="tab-execute" role="tab" aria-selected="true" aria-controls="flow-panel" data-flow="execute">任务执行</button><button id="tab-manage" role="tab" aria-selected="false" aria-controls="flow-panel" data-flow="manage" tabindex="-1">集群管理</button><button id="tab-research" role="tab" aria-selected="false" aria-controls="flow-panel" data-flow="research" tabindex="-1">评测与训练</button></div></div><div id="flow-panel" role="tabpanel" aria-labelledby="tab-execute" tabindex="0"></div><p class="architecture-note">关系示意。Pod 内的轻量执行服务负责运行命令；模型接口与凭据由使用者另行配置。</p></div>
+<div class="steps" id="steps"></div>
+</section>
+<section id="capabilities" class="section">
+<div class="section-head"><div><span class="section-no">02 / 能力边界</span><h2>沙箱提供什么，<br>配套工具增加什么。</h2></div><p>运行代码、修改文件、交互终端和受控联网属于执行底座；模型能力和任务成功判定来自另外接入的模型与任务协议。</p></div>
+<div id="capability-list" class="capability-grid"></div>
+<div class="layer-list" id="layers"></div>
+<aside class="notice"><strong>需要按任务准备</strong><p>Python、浏览器、项目依赖、数据、模型接口、凭据与评分规则。预装 Agent 工具不代表已经接入模型，也不代表具有任意任务的业务能力。</p></aside>
+</section>
+<section id="docker" class="section">
+<div class="section-head"><div><span class="section-no">03 / DOCKER 对比</span><h2>基础能力相通，<br>差别在管理工作。</h2></div><p>Docker 本身也有 API、资源限制和网络能力。Orchard 将它们所在的容器生态组合成统一的任务服务，并提供 AI 研究配套。</p></div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Docker 与 Orchard 对比"><table><thead><tr><th>对比项</th><th>直接用 Docker</th><th>Orchard Env</th></tr></thead><tbody id="comparison"></tbody></table></div>
+<div class="decision"><div class="decision-intro"><span class="eyebrow">WHEN TO USE IT</span><h3>按真实需求选择。</h3><p>这是基于架构与维护成本的使用建议。</p></div><div><div id="decision-buttons" class="choice-buttons" role="group" aria-label="选择使用需求"></div><div id="decision-result" class="decision-result" aria-live="polite"></div></div></div>
+</section>
+<section id="reuse" class="section">
+<div class="section-head"><div><span class="section-no">04 / 可沉淀的技术</span><h2>先沉淀执行契约，<br>再扩展规模和学习。</h2></div><p>以下是对固定源码的复用建议，尚未抽取成独立产品。每项都列出输入、输出和验收条件，便于后续按需求落地。</p></div>
+<div class="reuse-list" id="techniques"></div>
+<div class="roadmap-strip"><span>建议落地顺序</span><strong>单机任务协议</strong><b>→</b><strong>远程环境服务</strong><b>→</b><strong>批量评测证据</strong><b>→</b><strong>任务环境与训练</strong></div>
+<a class="text-link" href="./reuse-plan.md" download>下载技术沉淀与扩展计划 ↓</a>
+</section>
+<section id="scenarios" class="section">
+<div class="section-head"><div><span class="section-no">05 / 后期扩展</span><h2>同一个底座，<br>可以承载不同任务。</h2></div><p>复用执行能力之后，仍需补充场景特有的镜像、工具、模型、数据或评分器。扩展设想与现有能力分别标明。</p></div>
+<div class="filter-bar" id="scenario-filters" role="group" aria-label="按扩展类型筛选"></div><p id="scenario-count" class="small-note" aria-live="polite"></p>
+<div class="scenario-grid" id="scenario-list"></div>
+</section>
+<section id="results" class="section">
+<div class="section-head"><div><span class="section-no">06 / 效果与口径</span><h2>成绩值得看，<br>条件也要一起看。</h2></div><p>以下都是作者报告，未在本地复现。模型基座、Agent 框架、任务集合与推理预算都会影响结果，不能当作安装沙箱后的自动收益。</p></div>
+<div class="metric-grid" id="metrics"></div>
+<aside class="notice amber"><strong>当前能力与后续计划</strong><p>基础是容器隔离与可控执行，实际边界由容器与集群配置决定。完整状态快照、暂停 / 恢复、分叉与前缀共享仍在上游路线图中；“继续未完成评测任务”不等于恢复进程和内存快照。</p></aside>
+</section>
+<section id="evidence" class="section evidence-section">
+<div class="section-head"><div><span class="section-no">07 / 来源与验证</span><h2>固定来源，<br>保留验证边界。</h2></div><p>本次完成源码与文档研究、引导图整理及静态网页展示；未创建云资源，未运行模型、Kubernetes 服务、GPU 训练或性能实验。</p></div>
+<div class="evidence-grid"><div><h3>研究版本</h3><p><a id="commit-link" href="https://github.com/microsoft/Orchard-Agentic/commit/bd8da32b3a075128700caab75bbc491fb6fdc16e"><code>bd8da32b3a07</code> ↗</a></p><p class="small-note">上游提交日期：2026-10-09<br>研究日期：2026-10-22（Asia/Shanghai）<br>trainer/slime 固定子模块：331efaaeef75</p><div class="download-links"><a href="./research-evidence.json" download>下载来源与哈希清单 ↓</a><a href="./LICENSE.upstream.txt">查看上游 MIT 许可 ↗</a><a href="./assets/orchard-agentic-overview.png" download>下载原始 PNG ↓</a><a href="./assets/orchard-agentic-overview.svg" download>下载可编辑 SVG ↓</a></div></div><div><h3>一手资料</h3><div class="source-grid" id="source-list"></div><a class="text-link" href="https://arxiv.org/html/2605.15040v3" target="_blank" rel="noreferrer">论文第三版 · arXiv:2605.15040v3 ↗</a><a class="text-link" href="https://docs.docker.com/engine/" target="_blank" rel="noreferrer">Docker Engine 官方文档 ↗</a></div></div>
+</section>
+<p id="load-status" role="status" class="load-status"></p>
+</main>
+<footer><a class="brand" href="../"><span class="brand-mark">O</span><span>开源项目研究 / 018</span></a><p>独立研究整理，非 Microsoft 官方网站。<br>本页用于理解与研究，不提供在线沙箱或模型服务。</p><a href="https://github.com/yydshly/1022_codex_project/tree/main/projects/018-orchard-agentic">研究文档与源码 ↗</a></footer>
+<dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-toolbar"><h2 id="guide-title">Orchard-Agentic · 完整理解引导图</h2><div><button id="guide-zoom" aria-pressed="false">按原始大小查看</button><a href="./assets/orchard-agentic-overview.png" download>下载 PNG ↓</a><button id="guide-close" aria-label="关闭引导图">关闭 ×</button></div></div><div class="guide-viewport"><img id="dialog-image" src="./assets/orchard-agentic-overview.png" width="2400" height="5480" alt="完整长图：八个板块介绍 Orchard-Agentic 的能力、原理、沙箱功能、价值与效果" loading="lazy"></div></dialog>
+<noscript><p class="noscript">完整研究内容需要 JavaScript 渲染。你也可以直接<a href="./assets/orchard-agentic-overview.png">查看完整引导图</a>或阅读<a href="https://github.com/yydshly/1022_codex_project/tree/main/projects/018-orchard-agentic">研究文档</a>。</p></noscript>
+</body></html>

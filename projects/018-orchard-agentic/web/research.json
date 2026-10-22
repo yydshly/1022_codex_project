@@ -1,0 +1,368 @@
+{
+  "id": "018",
+  "name": "Orchard-Agentic",
+  "date": "2026-10-22",
+  "summary": "基于 Kubernetes 为 Agent 批量提供可控容器，执行代码、文件和终端操作，配套轨迹记录、评测与训练；作者报告 SWE 修复率 69.7%，六候选重排后 73.0%（未复现）。可沉淀沙箱 API、生命周期治理、网络资源策略和评测数据规范，扩展到远程代码执行、自动修复、回归评测、浏览器任务及 Agent 训练。",
+  "upstream": "https://github.com/microsoft/Orchard-Agentic",
+  "commit": "bd8da32b3a075128700caab75bbc491fb6fdc16e",
+  "trainerCommit": "331efaaeef75c98aad6ba1a2f5f50bd8149f6ab9",
+  "license": "MIT",
+  "guide": "assets/orchard-agentic-overview.png",
+  "roles": [
+    [
+      "大模型",
+      "判断下一步做什么",
+      "模型接口与凭据由使用者准备。"
+    ],
+    [
+      "Agent 框架",
+      "组织任务、上下文与工具调用",
+      "可使用不同框架，行为与成绩也受框架影响。"
+    ],
+    [
+      "Orchard Env",
+      "执行操作，管理环境并返回结果",
+      "Pod 内的轻量 agent 是执行服务，不是大模型。"
+    ]
+  ],
+  "capabilities": [
+    [
+      "环境与镜像",
+      "为每个任务准备独立的 Linux 容器；自选镜像，创建、等待就绪、查询和删除。",
+      "create_sandbox / get_sandbox / delete_sandbox",
+      "orchard_env/orchard_env/client/sandbox_client.py"
+    ],
+    [
+      "命令与代码",
+      "运行脚本、编译、安装依赖、执行测试，取得标准输出、错误与退出码。",
+      "exec / jobs",
+      "orchard_env/orchard_env/orchestrator/exec_manager.py"
+    ],
+    [
+      "文件与补丁",
+      "上传、下载、列目录；用命令编辑文件或生成差异，应用 Git 补丁。",
+      "files / apply_patch",
+      "orchard_env/docs/api.md"
+    ],
+    [
+      "交互式终端",
+      "通过 PTY 和 WebSocket 持续输入、读取输出。",
+      "exec/pty",
+      "orchard_env/orchard_env/agent/server.py"
+    ],
+    [
+      "资源与时限",
+      "为环境配置 CPU、内存与运行时限，对命令设置超时。",
+      "cpu / memory / timeout",
+      "orchard_env/orchard_env/orchestrator/settings.py"
+    ],
+    [
+      "网络策略",
+      "禁外网、开放出口或使用 IP/CIDR 与端口白名单；可更新运行中的策略。",
+      "network / Calico NetworkPolicy",
+      "orchard_env/docs/api.md"
+    ],
+    [
+      "状态与回收",
+      "命令任务状态、心跳、TTL 与清理机制，减少遗留环境。",
+      "heartbeat / jobs / sandbox_manager",
+      "orchard_env/orchard_env/orchestrator/sandbox_manager.py"
+    ],
+    [
+      "批量与远程",
+      "HTTP API、同步/异步 Python SDK，并发控制；多副本通过 Redis 共享状态与锁。",
+      "SandboxClient / AsyncSandboxClient",
+      "orchard_env/docs/architecture.md"
+    ],
+    [
+      "预装 Agent 工具",
+      "Codex CLI、Claude Code、pi、OpenCode、Hermes、mini-swe-agent；模型和项目依赖另外配置。",
+      "只读工具载荷",
+      "orchard_env/README.md"
+    ]
+  ],
+  "steps": [
+    [
+      "创建环境",
+      "选镜像，约定资源、网络和时限。"
+    ],
+    [
+      "准备任务",
+      "放入代码、数据、依赖和任务说明。"
+    ],
+    [
+      "执行与反馈",
+      "Agent 调用模型决定动作；沙箱执行并返回输出、错误或文件。"
+    ],
+    [
+      "循环尝试",
+      "读取反馈、修改并继续，直到提交结果或达到预算。"
+    ],
+    [
+      "导出与评分",
+      "保留补丁、日志、轨迹与制品，按具体任务评分。"
+    ],
+    [
+      "回收环境",
+      "主动删除，并以心跳和 TTL 进行补充清理。"
+    ]
+  ],
+  "layers": [
+    [
+      "Orchard Env",
+      "环境底座",
+      "可控执行、文件与终端、网络资源策略、批量管理。"
+    ],
+    [
+      "Orchard Eval",
+      "配套评测",
+      "保存轨迹、日志、补丁和成绩；区分环境故障。原生 SWE 流程使用新的评分 Pod。"
+    ],
+    [
+      "trainer / slime",
+      "研究训练",
+      "专家轨迹 SFT、任务反馈 RL；BAR、OPD、RPR 与价值模型重排按具体配方选用。"
+    ],
+    [
+      "数据与后续项目",
+      "研究资产",
+      "SWE/GUI 轨迹；OpenWebRL 与 OpenForge RL 为独立后续项目，需分别配置和核对许可。"
+    ]
+  ],
+  "comparisons": [
+    [
+      "执行与隔离",
+      "基础容器、命令、文件、资源和网络能力。",
+      "复用容器技术，封装为面向任务的沙箱服务。"
+    ],
+    [
+      "批量任务",
+      "自行写并发、状态、超时和清理脚本，或组合其他工具。",
+      "已有统一接口及状态、并发、心跳、TTL 和回收机制。"
+    ],
+    [
+      "跨机器运行",
+      "另外配置集群编排与服务管理。",
+      "基于 Kubernetes 调度；仍需维护集群和网络策略。"
+    ],
+    [
+      "AI 研究配套",
+      "自行组织任务、轨迹、评分与训练。",
+      "仓库提供评测、研究数据与训练配方。"
+    ],
+    [
+      "部署与维护",
+      "单机使用通常简单。",
+      "引入编排服务、策略和状态组件，有额外运维成本。"
+    ]
+  ],
+  "techniques": [
+    {
+      "priority": "P0",
+      "name": "统一沙箱后端契约",
+      "description": "把创建、执行、文件、补丁和销毁抽成稳定接口，业务层可适配本地 Docker 或远程服务。",
+      "input": "任务镜像、命令、资源与网络预算",
+      "output": "状态、stdout/stderr、退出码、文件与补丁",
+      "acceptance": "同一任务在不同后端产生可解释的状态和可追踪制品。",
+      "source": "orchard_env/orchard_env/client/sandbox_client.py"
+    },
+    {
+      "priority": "P0",
+      "name": "生命周期与预算治理",
+      "description": "沉淀任务状态、超时、取消、心跳、TTL、幂等清理与失败分类。",
+      "input": "创建请求、心跳、取消与时限",
+      "output": "就绪/完成/失败/回收记录",
+      "acceptance": "失败与重复清理不遗留环境，任务取消和重试有明确语义。",
+      "source": "orchard_env/orchard_env/orchestrator/sandbox_manager.py"
+    },
+    {
+      "priority": "P0",
+      "name": "轨迹与干净评测协议",
+      "description": "保留原始事件与标准化轨迹，绑定补丁、评分、模型、框架和任务版本。",
+      "input": "执行事件、补丁、测试与版本",
+      "output": "可重评分的结果、日志和制品清单",
+      "acceptance": "区分任务失败和环境故障；相同预算与版本下比较成绩。",
+      "source": "orchard_eval/README.md"
+    },
+    {
+      "priority": "P1",
+      "name": "资源与网络策略模板",
+      "description": "按任务类型配置 CPU、内存、镜像、时限和出口白名单。",
+      "input": "任务类型、依赖与出口需求",
+      "output": "可记录和审计的资源/网络策略",
+      "acceptance": "在支持策略的集群验证准备阶段与执行阶段的实际边界。",
+      "source": "orchard_env/docs/api.md"
+    },
+    {
+      "priority": "P1",
+      "name": "集群执行与并发治理",
+      "description": "借鉴 Pod IP 执行路径、多副本共享状态与并发管理，让环境规模与模型资源独立扩展。",
+      "input": "远程批量任务与目标集群容量",
+      "output": "统一状态、执行结果、尾延迟与回收证据",
+      "acceptance": "在自己的集群验证容量和故障恢复，不照搬论文性能。",
+      "source": "orchard_env/docs/architecture.md"
+    },
+    {
+      "priority": "P2",
+      "name": "训练反馈与候选排序",
+      "description": "在确有训练需求时沉淀轨迹筛选、结果/过程奖励、教师指导及价值模型重排。",
+      "input": "轨迹、结果验证、教师或评分器",
+      "output": "训练样本、反馈或候选价值分数",
+      "acceptance": "模型、数据许可、GPU 预算与评测条件齐备，先验证小规模数据闭环。",
+      "source": "README.md"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "基础执行",
+      "name": "远程代码执行与数据处理",
+      "reuse": "命令、文件、预算与自动回收",
+      "extra": "语言与数据工具镜像、制品存储、上层用户权限",
+      "stage": "可复用底座，需任务适配"
+    },
+    {
+      "type": "评测与工程",
+      "name": "AI 自动修复与回归检查",
+      "reuse": "Agent 环境、Git 补丁、干净测试和日志",
+      "extra": "项目依赖、验收测试、模型与失败处理",
+      "stage": "可复用评测流程，需仓库适配"
+    },
+    {
+      "type": "评测与工程",
+      "name": "模型 / Agent 框架对比",
+      "reuse": "一致环境、任务与轨迹规范",
+      "extra": "固定模型、框架、镜像、推理预算与统计口径",
+      "stage": "适合批量研究"
+    },
+    {
+      "type": "任务扩展",
+      "name": "浏览器多步任务",
+      "reuse": "并行沙箱、网络策略与轨迹基础",
+      "extra": "浏览器镜像、观察/动作工具、视觉模型、成功判定和网站故障处理",
+      "stage": "需额外任务环境与工具"
+    },
+    {
+      "type": "任务扩展",
+      "name": "编程教学与自动评分",
+      "reuse": "每题独立环境、测试、时限与回收",
+      "extra": "题库、评分器、账户权限和课程流程",
+      "stage": "需业务层与题库"
+    },
+    {
+      "type": "训练研究",
+      "name": "Agent 交互数据工厂与训练",
+      "reuse": "多轮执行、失败分类、环境与评测一致性",
+      "extra": "数据治理、奖励器、模型、训练器与计算资源",
+      "stage": "需模型、数据与 GPU 预算"
+    },
+    {
+      "type": "后续能力",
+      "name": "同一状态分叉探索多条路径",
+      "reuse": "当前可先独立重跑不同尝试",
+      "extra": "完整状态快照、暂停/恢复、分叉和前缀共享仍在上游路线图",
+      "stage": "后续研究，非现成功能"
+    }
+  ],
+  "decisions": [
+    {
+      "key": "local",
+      "label": "本机 / 少量任务",
+      "title": "先用 Docker + 脚本",
+      "body": "少量固定任务，或现有脚本稳定时，先明确任务输入、镜像、时限和输出，不必先搭集群。",
+      "needs": "保留日志、结果和回收步骤即可；没有固定的任务数量切换阈值。"
+    },
+    {
+      "key": "remote",
+      "label": "统一远程执行",
+      "title": "考虑 Orchard Env",
+      "body": "多个程序要统一申请环境，或跨机器运行任务时，统一 API、状态、预算和清理可以减少重复管理代码。",
+      "needs": "需配置 Kubernetes、网络策略、镜像仓库与编排组件，并验证实际隔离边界。"
+    },
+    {
+      "key": "eval",
+      "label": "批量评测",
+      "title": "底座 + Orchard Eval",
+      "body": "在一致条件下比较不同模型和 Agent 框架，保留原始轨迹、标准日志、补丁和干净评分。",
+      "needs": "固定任务、模型、框架、重试和推理预算，区分任务失败与环境故障。"
+    },
+    {
+      "key": "train",
+      "label": "Agent 训练",
+      "title": "先通数据与评分，再扩大训练",
+      "body": "需要大量多轮交互和模型训练时，再接训练器与奖励管线。环境资源和模型资源可分别扩展。",
+      "needs": "需数据许可、模型、教师/评分器、GPU 与训练经验；沙箱本身不会自动提升模型能力。"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "代码修复 · SWE-bench Verified",
+      "value": "61.4% → 69.7% → 73.0%",
+      "body": "Qwen3.5-35B-A3B：基础 → RPR → 价值模型重排。",
+      "condition": "73.0% 使用六候选筛选，包含额外推理预算。",
+      "url": "https://arxiv.org/html/2605.15040v3#S3.S6"
+    },
+    {
+      "title": "网页操作 · 4B 模型",
+      "value": "74.1% / 67.0% / 64.0%",
+      "body": "依次为 WebVoyager、Online-Mind2Web、DeepShop；平均 68.4%。",
+      "condition": "特定网页任务与协议上的成功率。",
+      "url": "https://arxiv.org/html/2605.15040v3#S4"
+    },
+    {
+      "title": "工具工作流 · Claw-Eval",
+      "value": "59.6% → 73.9%",
+      "body": "原框架 → ZeroClaw；两项均为 pass@3。",
+      "condition": "三次尝试至少一次成功，不能当作单次成功率。",
+      "url": "https://arxiv.org/html/2605.15040v3#S5"
+    },
+    {
+      "title": "沙箱性能 · 作者测试配置",
+      "value": "0.28 秒 / 1,000 个",
+      "body": "平均命令延迟 0.28 秒；并行启动 1,000 个沙箱约 26 秒。",
+      "condition": "配置相关，未本地复现，不是任意部署的性能保证。",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/README.md"
+    }
+  ],
+  "sources": [
+    {
+      "label": "项目与研究配方",
+      "path": "README.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/README.md"
+    },
+    {
+      "label": "整体组件",
+      "path": "docs/overview.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/docs/overview.md"
+    },
+    {
+      "label": "环境架构",
+      "path": "orchard_env/docs/architecture.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/architecture.md"
+    },
+    {
+      "label": "HTTP API",
+      "path": "orchard_env/docs/api.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/api.md"
+    },
+    {
+      "label": "部署前提",
+      "path": "orchard_env/docs/deployment.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_env/docs/deployment.md"
+    },
+    {
+      "label": "评测协议",
+      "path": "orchard_eval/README.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/orchard_eval/README.md"
+    },
+    {
+      "label": "OpenWebRL",
+      "path": "projects/openwebrl.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/projects/openwebrl.md"
+    },
+    {
+      "label": "OpenForge RL",
+      "path": "projects/openforge-rl.md",
+      "url": "https://github.com/microsoft/Orchard-Agentic/blob/bd8da32b3a075128700caab75bbc491fb6fdc16e/projects/openforge-rl.md"
+    }
+  ]
+}

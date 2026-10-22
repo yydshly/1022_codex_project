@@ -1,0 +1,23 @@
+{
+  "created_date": "2026-10-22",
+  "dimensions": [
+    2400,
+    5480
+  ],
+  "method": "Deterministic typography and vector drawing; original conversation artifact, exact bytes retained.",
+  "imagegen_attempt": "Network request failed; no generated image used.",
+  "assets": [
+    {
+      "path": "assets/orchard-agentic-overview.png",
+      "sha256": "22f4f96ac276acc89fbd1d046b8210e9e15fffa0102f3665c4035a7e3e111866",
+      "bytes": 2547153,
+      "published_copy": "web/assets/orchard-agentic-overview.png"
+    },
+    {
+      "path": "assets/orchard-agentic-overview.svg",
+      "sha256": "1908d54ddf4a19b18a8e104178d8b985b21c598572bfa3653d6df4539b955a49",
+      "bytes": 36547,
+      "published_copy": "web/assets/orchard-agentic-overview.svg"
+    }
+  ]
+}

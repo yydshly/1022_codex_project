@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="5480" viewBox="0 0 2400 5480" role="img" aria-labelledby="title desc">
+<title id="title">一图读懂 Orchard-Agentic</title>
+<desc id="desc">项目定位、工作原理、十二项沙箱能力、评测与训练、Docker 对比、使用价值、作者报告的效果与能力边界。</desc>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif}</style>
+<rect width="2400" height="5480" fill="#F3F6FB"/>
+<rect x="0" y="0" width="2400" height="360" rx="0" fill="#112B46"/>
+<text x="92.00" y="138.00" font-size="88" font-weight="700" fill="#FFFFFF" xml:space="preserve">一图读懂 Orchard-Agentic</text>
+<text x="92.00" y="207.00" font-size="38" font-weight="400" fill="#D7E5F3" xml:space="preserve">面向 AI Agent 的容器沙箱、批量评测与训练研究体系</text>
+<text x="92.00" y="286.00" font-size="48" font-weight="700" fill="#7CE0D0" xml:space="preserve">独立执行环境  +  Agent 工具  +  批量管理服务</text>
+<text x="92.00" y="337.00" font-size="28" font-weight="400" fill="#D7E5F3" xml:space="preserve">Orchard Env 是沙箱底座；整个仓库还包含评测、训练配方与研究数据。</text>
+<rect x="92" y="406" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="443.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">01</text>
+<text x="186.00" y="447.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">先分清：谁负责什么？</text>
+<rect x="92" y="484" width="680" height="190" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="118" y="506" width="100" height="48" rx="20" fill="#F0EAFA"/>
+<text x="143.00" y="538.12" font-size="25" font-weight="700" fill="#7650B9" xml:space="preserve">决策</text>
+<text x="242.00" y="550.00" font-size="42" font-weight="700" fill="#7650B9" xml:space="preserve">大模型</text>
+<text x="122.00" y="622.00" font-size="31" font-weight="400" fill="#172D47" xml:space="preserve">判断下一步做什么</text>
+<rect x="860" y="484" width="680" height="190" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="886" y="506" width="100" height="48" rx="20" fill="#EAF0FF"/>
+<text x="911.00" y="538.12" font-size="25" font-weight="700" fill="#325CD5" xml:space="preserve">组织</text>
+<text x="1010.00" y="550.00" font-size="42" font-weight="700" fill="#325CD5" xml:space="preserve">Agent 框架</text>
+<text x="890.00" y="622.00" font-size="31" font-weight="400" fill="#172D47" xml:space="preserve">组织任务、上下文与工具调用</text>
+<rect x="1628" y="484" width="680" height="190" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1654" y="506" width="100" height="48" rx="20" fill="#E5F5F1"/>
+<text x="1679.00" y="538.12" font-size="25" font-weight="700" fill="#087F76" xml:space="preserve">执行</text>
+<text x="1778.00" y="550.00" font-size="42" font-weight="700" fill="#087F76" xml:space="preserve">Orchard Env</text>
+<text x="1658.00" y="622.00" font-size="31" font-weight="400" fill="#172D47" xml:space="preserve">提供环境，执行操作，返回结果</text>
+<polyline points="786,572 846,572" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="846.0,572.0 831.0,564.0 831.0,580.0" fill="#53677F"/>
+<polygon points="786.0,572.0 801.0,580.0 801.0,564.0" fill="#53677F"/>
+<polyline points="1554,572 1614,572" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1614.0,572.0 1599.0,564.0 1599.0,580.0" fill="#53677F"/>
+<polygon points="1554.0,572.0 1569.0,580.0 1569.0,564.0" fill="#53677F"/>
+<text x="764.00" y="725.00" font-size="29" font-weight="400" fill="#53677F" xml:space="preserve">模型与框架通过请求 / 动作交互；框架与沙箱通过操作 / 反馈交互。</text>
+<rect x="92" y="780" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="817.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">02</text>
+<text x="186.00" y="821.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">工作原理：把大量容器变成统一的沙箱服务</text>
+<rect x="92" y="852" width="2216" height="600" rx="28" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="128" y="900" width="360" height="178" rx="20" fill="#F3F6FB"/>
+<text x="152.00" y="955.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">使用方</text>
+<text x="152.00" y="1008.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">自建程序 / 评测器</text>
+<text x="152.00" y="1045.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">训练器与任务驱动</text>
+<rect x="550" y="900" width="300" height="178" rx="20" fill="#EAF0FF"/>
+<text x="574.00" y="955.00" font-size="34" font-weight="700" fill="#325CD5" xml:space="preserve">接入接口</text>
+<text x="574.00" y="1008.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">HTTP API</text>
+<text x="574.00" y="1045.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">Python SDK</text>
+<rect x="930" y="900" width="550" height="178" rx="20" fill="#E5F5F1"/>
+<text x="954.00" y="955.00" font-size="34" font-weight="700" fill="#087F76" xml:space="preserve">Orchard 编排服务</text>
+<text x="954.00" y="1008.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">状态 / 并发 / 时限 / 回收</text>
+<text x="954.00" y="1045.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">Redis 支持多副本共享状态</text>
+<rect x="1700" y="900" width="570" height="178" rx="20" fill="#EAF0FF"/>
+<text x="1724.00" y="955.00" font-size="34" font-weight="700" fill="#325CD5" xml:space="preserve">Kubernetes</text>
+<text x="1724.00" y="1008.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">容器调度与生命周期</text>
+<text x="1724.00" y="1045.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">网络策略与资源分配</text>
+<polyline points="496,985 538,985" fill="none" stroke="#325CD5" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="538.0,985.0 523.0,977.0 523.0,993.0" fill="#325CD5"/>
+<polyline points="860,985 918,985" fill="none" stroke="#325CD5" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="918.0,985.0 903.0,977.0 903.0,993.0" fill="#325CD5"/>
+<polygon points="860.0,985.0 875.0,993.0 875.0,977.0" fill="#325CD5"/>
+<polyline points="1494,985 1685,985" fill="none" stroke="#325CD5" stroke-width="4" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="1685.0,985.0 1670.0,977.0 1670.0,993.0" fill="#325CD5"/>
+<text x="1569.00" y="963.00" font-size="25" font-weight="400" fill="#325CD5" xml:space="preserve">管理</text>
+<polyline points="1205,1092 1205,1157" fill="none" stroke="#087F76" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="1205.0,1157.0 1213.0,1142.0 1197.0,1142.0" fill="#087F76"/>
+<polygon points="1205.0,1092.0 1197.0,1107.0 1213.0,1107.0" fill="#087F76"/>
+<text x="1252.00" y="1133.00" font-size="27" font-weight="400" fill="#087F76" xml:space="preserve">直接通过 Pod IP 执行 / 返回</text>
+<polyline points="1985,1092 1985,1157" fill="none" stroke="#325CD5" stroke-width="4" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="1985.0,1157.0 1993.0,1142.0 1977.0,1142.0" fill="#325CD5"/>
+<text x="2040.00" y="1132.00" font-size="26" font-weight="400" fill="#325CD5" xml:space="preserve">创建 / 删除</text>
+<text x="150.00" y="1146.00" font-size="28" font-weight="700" fill="#53677F" xml:space="preserve">每个任务一个独立 Pod</text>
+<rect x="128" y="1170" width="676" height="185" rx="20" fill="#E5F5F1" stroke="#B8DDD5" stroke-width="2"/>
+<text x="154.00" y="1220.00" font-size="33" font-weight="700" fill="#087F76" xml:space="preserve">沙箱 A · 任务 A</text>
+<text x="154.00" y="1265.00" font-size="27" font-weight="400" fill="#172D47" xml:space="preserve">任务镜像 + 项目文件 + 轻量执行服务</text>
+<text x="154.00" y="1312.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">命令 / 文件 / 终端 → 输出 / 错误</text>
+<rect x="862" y="1170" width="676" height="185" rx="20" fill="#E5F5F1" stroke="#B8DDD5" stroke-width="2"/>
+<text x="888.00" y="1220.00" font-size="33" font-weight="700" fill="#087F76" xml:space="preserve">沙箱 B · 任务 B</text>
+<text x="888.00" y="1265.00" font-size="27" font-weight="400" fill="#172D47" xml:space="preserve">任务镜像 + 项目文件 + 轻量执行服务</text>
+<text x="888.00" y="1312.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">命令 / 文件 / 终端 → 输出 / 错误</text>
+<rect x="1596" y="1170" width="676" height="185" rx="20" fill="#E5F5F1" stroke="#B8DDD5" stroke-width="2"/>
+<text x="1622.00" y="1220.00" font-size="33" font-weight="700" fill="#087F76" xml:space="preserve">沙箱 C · 任务 C</text>
+<text x="1622.00" y="1265.00" font-size="27" font-weight="400" fill="#172D47" xml:space="preserve">任务镜像 + 项目文件 + 轻量执行服务</text>
+<text x="1622.00" y="1312.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">命令 / 文件 / 终端 → 输出 / 错误</text>
+<text x="128.00" y="1400.00" font-size="28" font-weight="400" fill="#53677F" xml:space="preserve">Pod 内轻量服务负责执行命令；模型决策来自另行配置的模型接口。</text>
+<text x="128.00" y="1437.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">执行与文件请求直达 Pod，减少 Kubernetes 控制接口的负担。</text>
+<rect x="92" y="1496" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="1533.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">03</text>
+<text x="186.00" y="1537.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">沙箱具体包含哪些能力？</text>
+<text x="1988.00" y="1533.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">现有功能 · 任务依赖按需准备</text>
+<rect x="92.0" y="1570" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="112.0" y="1590" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="122.00" y="1619.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">01</text>
+<text x="178.00" y="1627.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">自选镜像</text>
+<text x="116.00" y="1690.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">按任务准备 Linux 容器环境</text>
+<rect x="651.0" y="1570" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="671.0" y="1590" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="681.00" y="1619.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">02</text>
+<text x="737.00" y="1627.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">创建与销毁</text>
+<text x="675.00" y="1690.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">为每个任务分配独立环境</text>
+<rect x="1210.0" y="1570" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1230.0" y="1590" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="1240.00" y="1619.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">03</text>
+<text x="1296.00" y="1627.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">运行代码</text>
+<text x="1234.00" y="1690.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">执行命令、脚本、编译和测试</text>
+<rect x="1769.0" y="1570" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1789.0" y="1590" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="1799.00" y="1619.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">04</text>
+<text x="1855.00" y="1627.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">文件操作</text>
+<text x="1793.00" y="1690.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">上传、下载、列目录；用命令编辑</text>
+<rect x="92.0" y="1758" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="112.0" y="1778" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="122.00" y="1807.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">05</text>
+<text x="178.00" y="1815.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">Git 补丁</text>
+<text x="116.00" y="1878.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">应用补丁，配合命令导出代码差异</text>
+<rect x="651.0" y="1758" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="671.0" y="1778" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="681.00" y="1807.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">06</text>
+<text x="737.00" y="1815.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">交互终端</text>
+<text x="675.00" y="1878.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">PTY 输入输出与持续交互</text>
+<rect x="1210.0" y="1758" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1230.0" y="1778" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="1240.00" y="1807.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">07</text>
+<text x="1296.00" y="1815.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">任务查询</text>
+<text x="1234.00" y="1878.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">状态、标准输出、错误和退出码</text>
+<rect x="1769.0" y="1758" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1789.0" y="1778" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="1799.00" y="1807.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">08</text>
+<text x="1855.00" y="1815.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">资源限制</text>
+<text x="1793.00" y="1878.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">CPU、内存与执行时限</text>
+<rect x="92.0" y="1946" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="112.0" y="1966" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="122.00" y="1995.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">09</text>
+<text x="178.00" y="2003.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">网络策略</text>
+<text x="116.00" y="2066.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">禁外网、放行或 IP / 端口白名单</text>
+<rect x="651.0" y="1946" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="671.0" y="1966" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="681.00" y="1995.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">10</text>
+<text x="737.00" y="2003.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">自动回收</text>
+<text x="675.00" y="2066.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">时限、心跳与清理机制</text>
+<rect x="1210.0" y="1946" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1230.0" y="1966" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="1240.00" y="1995.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">11</text>
+<text x="1296.00" y="2003.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">批量运行</text>
+<text x="1234.00" y="2066.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">异步并发，多机器集群调度</text>
+<rect x="1769.0" y="1946" width="539.0" height="168" rx="20" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1789.0" y="1966" width="48" height="44" rx="20" fill="#E5F5F1"/>
+<text x="1799.00" y="1995.15" font-size="22" font-weight="700" fill="#087F76" xml:space="preserve">12</text>
+<text x="1855.00" y="2003.00" font-size="34" font-weight="700" fill="#172D47" xml:space="preserve">程序接入</text>
+<text x="1793.00" y="2066.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">同步 / 异步 SDK，API Key 认证</text>
+<rect x="92" y="2142" width="2216" height="84" rx="20" fill="#EAF0FF"/>
+<text x="116.00" y="2177.00" font-size="29" font-weight="700" fill="#325CD5" xml:space="preserve">预装 Agent：Codex CLI、Claude Code、pi、OpenCode、Hermes、mini-swe-agent</text>
+<text x="116.00" y="2214.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">工具需配置模型接口与凭据；Python、浏览器及项目依赖按所选镜像和任务准备。</text>
+<rect x="92" y="2266" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="2303.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">04</text>
+<text x="186.00" y="2307.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">一次任务怎么完成？</text>
+<rect x="125" y="2355" width="290" height="90" rx="18" fill="#E5F5F1" stroke="#DCE5EF" stroke-width="1"/>
+<text x="208.00" y="2406.00" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">创建沙箱</text>
+<polyline points="417,2400 433,2400" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="433.0,2400.0 418.0,2392.0 418.0,2408.0" fill="#53677F"/>
+<rect x="435" y="2355" width="290" height="90" rx="18" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="518.00" y="2406.00" font-size="31" font-weight="700" fill="#172D47" xml:space="preserve">放入项目</text>
+<polyline points="727,2400 743,2400" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="743.0,2400.0 728.0,2392.0 728.0,2408.0" fill="#53677F"/>
+<rect x="745" y="2355" width="290" height="90" rx="18" fill="#E5F5F1" stroke="#DCE5EF" stroke-width="1"/>
+<text x="807.00" y="2406.00" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">Agent 执行</text>
+<polyline points="1037,2400 1053,2400" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1053.0,2400.0 1038.0,2392.0 1038.0,2408.0" fill="#53677F"/>
+<rect x="1055" y="2355" width="290" height="90" rx="18" fill="#E5F5F1" stroke="#DCE5EF" stroke-width="1"/>
+<text x="1138.00" y="2406.00" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">查看反馈</text>
+<polyline points="1347,2400 1363,2400" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1363.0,2400.0 1348.0,2392.0 1348.0,2408.0" fill="#53677F"/>
+<rect x="1365" y="2355" width="290" height="90" rx="18" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="1432.50" y="2406.00" font-size="31" font-weight="700" fill="#172D47" xml:space="preserve">修改并重试</text>
+<polyline points="1657,2400 1673,2400" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1673.0,2400.0 1658.0,2392.0 1658.0,2408.0" fill="#53677F"/>
+<rect x="1675" y="2355" width="290" height="90" rx="18" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="1758.00" y="2406.00" font-size="31" font-weight="700" fill="#172D47" xml:space="preserve">导出结果</text>
+<polyline points="1967,2400 1983,2400" fill="none" stroke="#53677F" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1983.0,2400.0 1968.0,2392.0 1968.0,2408.0" fill="#53677F"/>
+<rect x="1985" y="2355" width="290" height="90" rx="18" fill="#E5F5F1" stroke="#DCE5EF" stroke-width="1"/>
+<text x="2068.00" y="2406.00" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">回收环境</text>
+<polyline points="1200,2458 1200,2490 890,2490 890,2458" fill="none" stroke="#087F76" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="890.0,2458.0 882.0,2473.0 898.0,2473.0" fill="#087F76"/>
+<rect x="942" y="2472" width="210" height="38" rx="8" fill="#F3F6FB"/>
+<text x="955.00" y="2498.00" font-size="23" font-weight="400" fill="#087F76" xml:space="preserve">根据反馈继续尝试</text>
+<rect x="92" y="2525" width="1094.0" height="410" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="1214.0" y="2525" width="1094.0" height="410" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="124.00" y="2592.00" font-size="39" font-weight="700" fill="#325CD5" xml:space="preserve">评测 · Orchard Eval</text>
+<rect x="126" y="2640" width="9" height="9" rx="4" fill="#325CD5"/>
+<text x="152.00" y="2657.00" font-size="30" font-weight="400" fill="#172D47" xml:space="preserve">标准任务：SWE-bench / Terminal-Bench 等</text>
+<rect x="126" y="2699" width="9" height="9" rx="4" fill="#325CD5"/>
+<text x="152.00" y="2716.00" font-size="30" font-weight="400" fill="#172D47" xml:space="preserve">保存交互轨迹、日志、补丁和成绩</text>
+<rect x="126" y="2758" width="9" height="9" rx="4" fill="#325CD5"/>
+<text x="152.00" y="2775.00" font-size="30" font-weight="400" fill="#172D47" xml:space="preserve">代码修复在新沙箱中，沿用基准评分逻辑</text>
+<rect x="126" y="2817" width="9" height="9" rx="4" fill="#325CD5"/>
+<text x="152.00" y="2834.00" font-size="30" font-weight="400" fill="#172D47" xml:space="preserve">支持恢复评测，区分环境故障与任务失败</text>
+<text x="126.00" y="2906.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">基准、Agent 框架与环境保持分层。</text>
+<text x="1246.00" y="2592.00" font-size="39" font-weight="700" fill="#7650B9" xml:space="preserve">训练 · trainer / slime</text>
+<rect x="1248.0" y="2635" width="9" height="9" rx="4" fill="#7650B9"/>
+<text x="1274.00" y="2651.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">专家轨迹 → 监督微调 SFT</text>
+<rect x="1248.0" y="2684" width="9" height="9" rx="4" fill="#7650B9"/>
+<text x="1274.00" y="2700.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">执行任务与反馈 → 强化学习 RL</text>
+<rect x="1248.0" y="2733" width="9" height="9" rx="4" fill="#7650B9"/>
+<text x="1274.00" y="2749.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">BAR：组织成功 / 失败样本组</text>
+<rect x="1248.0" y="2782" width="9" height="9" rx="4" fill="#7650B9"/>
+<text x="1274.00" y="2798.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">OPD：教师指导；RPR：过程质量奖励</text>
+<rect x="1248.0" y="2831" width="9" height="9" rx="4" fill="#7650B9"/>
+<text x="1274.00" y="2847.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">价值模型：重新排序多个候选结果</text>
+<text x="1248.00" y="2911.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">以上方法按具体配方选用。</text>
+<rect x="92.0" y="2960" width="539.0" height="92" rx="18" fill="#F0EAFA"/>
+<text x="112.00" y="2997.00" font-size="29" font-weight="700" fill="#7650B9" xml:space="preserve">Orchard-SWE</text>
+<text x="112.00" y="3037.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">修代码</text>
+<rect x="651.0" y="2960" width="539.0" height="92" rx="18" fill="#F0EAFA"/>
+<text x="671.00" y="2997.00" font-size="29" font-weight="700" fill="#7650B9" xml:space="preserve">Orchard-GUI</text>
+<text x="671.00" y="3037.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">操作网页</text>
+<rect x="1210.0" y="2960" width="539.0" height="92" rx="18" fill="#F0EAFA"/>
+<text x="1230.00" y="2997.00" font-size="29" font-weight="700" fill="#7650B9" xml:space="preserve">Orchard-Claw</text>
+<text x="1230.00" y="3037.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">工具工作流</text>
+<rect x="1769.0" y="2960" width="539.0" height="92" rx="18" fill="#F0EAFA"/>
+<text x="1789.00" y="2997.00" font-size="29" font-weight="700" fill="#7650B9" xml:space="preserve">后续项目</text>
+<text x="1789.00" y="3037.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">OpenWebRL / OpenForge RL</text>
+<rect x="92" y="3096" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="3133.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">05</text>
+<text x="186.00" y="3137.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">与直接用 Docker 的区别</text>
+<rect x="92" y="3170" width="2216" height="443" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<rect x="92" y="3170" width="2216" height="68" rx="20" fill="#112B46"/>
+<text x="118.00" y="3215.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">对比项</text>
+<text x="508.00" y="3215.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">直接用 Docker</text>
+<text x="1308.00" y="3215.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">Orchard Env</text>
+<text x="118.00" y="3287.00" font-size="29" font-weight="700" fill="#172D47" xml:space="preserve">执行与隔离</text>
+<text x="508.00" y="3287.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">提供基础容器能力</text>
+<text x="1308.00" y="3287.00" font-size="29" font-weight="400" fill="#087F76" xml:space="preserve">复用容器能力，封装沙箱接口</text>
+<polyline points="112,3313 2288,3313" fill="none" stroke="#DCE5EF" stroke-width="1" stroke-linejoin="round"/>
+<rect x="93" y="3313" width="2214" height="75" rx="0" fill="#F6F8FC"/>
+<text x="118.00" y="3362.00" font-size="29" font-weight="700" fill="#172D47" xml:space="preserve">批量任务</text>
+<text x="508.00" y="3362.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">自己写脚本或组合工具</text>
+<text x="1308.00" y="3362.00" font-size="29" font-weight="400" fill="#087F76" xml:space="preserve">状态、并发、回收等现成服务</text>
+<polyline points="112,3388 2288,3388" fill="none" stroke="#DCE5EF" stroke-width="1" stroke-linejoin="round"/>
+<text x="118.00" y="3437.00" font-size="29" font-weight="700" fill="#172D47" xml:space="preserve">跨机器运行</text>
+<text x="508.00" y="3437.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">另外配置编排与管理</text>
+<text x="1308.00" y="3437.00" font-size="29" font-weight="400" fill="#087F76" xml:space="preserve">基于 Kubernetes 调度</text>
+<polyline points="112,3463 2288,3463" fill="none" stroke="#DCE5EF" stroke-width="1" stroke-linejoin="round"/>
+<rect x="93" y="3463" width="2214" height="75" rx="0" fill="#F6F8FC"/>
+<text x="118.00" y="3512.00" font-size="29" font-weight="700" fill="#172D47" xml:space="preserve">AI 评测与训练</text>
+<text x="508.00" y="3512.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">自行组织流程与工具</text>
+<text x="1308.00" y="3512.00" font-size="29" font-weight="400" fill="#087F76" xml:space="preserve">仓库提供配套工具与研究配方</text>
+<polyline points="112,3538 2288,3538" fill="none" stroke="#DCE5EF" stroke-width="1" stroke-linejoin="round"/>
+<text x="118.00" y="3587.00" font-size="29" font-weight="700" fill="#172D47" xml:space="preserve">部署维护</text>
+<text x="508.00" y="3587.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">单机通常简单</text>
+<text x="1308.00" y="3587.00" font-size="29" font-weight="400" fill="#087F76" xml:space="preserve">需集群、网络策略及服务维护</text>
+<text x="104.00" y="3669.00" font-size="29" font-weight="400" fill="#53677F" xml:space="preserve">Docker 也有 API、资源限制和网络能力；Orchard 的价值是减少管理与集成工作。</text>
+<rect x="92" y="3736" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="3773.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">06</text>
+<text x="186.00" y="3777.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">价值：什么时候值得用？</text>
+<text x="1888.00" y="3773.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">选择建议 · 按任务规模和维护成本判断</text>
+<rect x="92" y="3810" width="720" height="64" rx="20" fill="#E5F5F1"/>
+<text x="359.00" y="3852.07" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">少写管理代码</text>
+<rect x="840" y="3810" width="720" height="64" rx="20" fill="#E5F5F1"/>
+<text x="1060.50" y="3852.07" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">统一执行与评测流程</text>
+<rect x="1588" y="3810" width="720" height="64" rx="20" fill="#E5F5F1"/>
+<text x="1777.50" y="3852.07" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">环境与模型训练独立扩展</text>
+<rect x="92" y="3896" width="1094.0" height="210" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="124.00" y="3959.00" font-size="38" font-weight="700" fill="#172D47" xml:space="preserve">优先用 Docker</text>
+<text x="124.00" y="4014.00" font-size="30" font-weight="400" fill="#53677F" xml:space="preserve">本机试验 / 少量固定任务</text>
+<text x="124.00" y="4060.00" font-size="30" font-weight="400" fill="#53677F" xml:space="preserve">已有脚本够用，维护成本低</text>
+<rect x="1214.0" y="3896" width="1094.0" height="210" rx="24" fill="#E5F5F1"/>
+<text x="1246.00" y="3959.00" font-size="38" font-weight="700" fill="#087F76" xml:space="preserve">考虑 Orchard</text>
+<text x="1246.00" y="4014.00" font-size="30" font-weight="400" fill="#53677F" xml:space="preserve">统一远程沙箱 / 跨机器大量任务</text>
+<text x="1246.00" y="4060.00" font-size="30" font-weight="400" fill="#53677F" xml:space="preserve">Agent 批量评测 / 交互数据采集 / RL</text>
+<rect x="92" y="4128" width="2216" height="90" rx="20" fill="#EAF0FF"/>
+<text x="116.00" y="4166.00" font-size="29" font-weight="700" fill="#325CD5" xml:space="preserve">资源与配置：环境层使用 CPU；模型推理与训练所需资源另配。</text>
+<text x="116.00" y="4207.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">任务、模型接口、凭据、项目依赖与评分规则仍需按具体用途准备。</text>
+<rect x="92" y="4256" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="4293.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">07</text>
+<text x="186.00" y="4297.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">作者报告了哪些效果？</text>
+<text x="1913.00" y="4293.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">论文第三版与仓库指标 · 未本地复现</text>
+<rect x="92" y="4330" width="1094.0" height="240" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="120.00" y="4380.00" font-size="31" font-weight="700" fill="#7650B9" xml:space="preserve">代码修复 · SWE-bench Verified</text>
+<text x="120.00" y="4449.00" font-size="47" font-weight="700" fill="#7650B9" xml:space="preserve">61.4% → 69.7% → 73.0%</text>
+<text x="120.00" y="4507.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">基础模型 → RPR 训练 → 候选重排</text>
+<text x="120.00" y="4544.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">Qwen3.5-35B-A3B；73.0% 使用 6 个候选筛选。</text>
+<rect x="1214.0" y="4330" width="1094.0" height="240" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="1242.00" y="4380.00" font-size="31" font-weight="700" fill="#325CD5" xml:space="preserve">网页操作 · 4B 模型</text>
+<text x="1242.00" y="4449.00" font-size="47" font-weight="700" fill="#325CD5" xml:space="preserve">74.1% / 67.0% / 64.0%</text>
+<text x="1242.00" y="4507.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">依次为 WebVoyager / Online-Mind2Web / DeepShop</text>
+<text x="1242.00" y="4544.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">三项平均成功率 68.4%。</text>
+<rect x="92" y="4590" width="1094.0" height="240" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="120.00" y="4640.00" font-size="31" font-weight="700" fill="#7650B9" xml:space="preserve">工具工作流 · Claw-Eval</text>
+<text x="120.00" y="4709.00" font-size="47" font-weight="700" fill="#7650B9" xml:space="preserve">59.6% → 73.9%</text>
+<text x="120.00" y="4767.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">原框架 → ZeroClaw；两项均为 pass@3。</text>
+<text x="120.00" y="4804.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">pass@3：三次尝试至少一次成功。</text>
+<rect x="1214.0" y="4590" width="1094.0" height="240" rx="24" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1"/>
+<text x="1242.00" y="4640.00" font-size="31" font-weight="700" fill="#087F76" xml:space="preserve">沙箱性能 · 作者测试配置</text>
+<text x="1242.00" y="4709.00" font-size="47" font-weight="700" fill="#087F76" xml:space="preserve">0.28 秒 · 1,000 个</text>
+<text x="1242.00" y="4767.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">平均命令延迟 0.28 秒；并行启动 1,000 个沙箱</text>
+<text x="1242.00" y="4804.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">约 26 秒。实际表现取决于部署配置。</text>
+<text x="104.00" y="4885.00" font-size="28" font-weight="400" fill="#53677F" xml:space="preserve">这些成绩受模型、Agent 框架、任务和配置影响；使用沙箱本身不会自动获得对应模型能力。</text>
+<rect x="92" y="4936" width="70" height="54" rx="16" fill="#112B46"/>
+<text x="108.00" y="4973.00" font-size="31" font-weight="700" fill="#FFFFFF" xml:space="preserve">08</text>
+<text x="186.00" y="4977.00" font-size="44" font-weight="700" fill="#172D47" xml:space="preserve">能力边界与后续计划</text>
+<rect x="92" y="5010" width="2216" height="205" rx="24" fill="#FFF3DC"/>
+<text x="120.00" y="5056.00" font-size="32" font-weight="700" fill="#9F6714" xml:space="preserve">当前边界</text>
+<text x="120.00" y="5101.00" font-size="29" font-weight="400" fill="#172D47" xml:space="preserve">基础是容器隔离与可控执行；实际隔离强度取决于底层容器与集群配置。</text>
+<text x="120.00" y="5157.00" font-size="32" font-weight="700" fill="#9F6714" xml:space="preserve">后续计划</text>
+<text x="120.00" y="5201.00" font-size="28" font-weight="400" fill="#172D47" xml:space="preserve">完整状态快照、暂停 / 恢复、从同一状态分叉与前缀共享，目前列在路线图中。</text>
+<polyline points="92,5250 2308,5250" fill="none" stroke="#DCE5EF" stroke-width="2" stroke-linejoin="round"/>
+<text x="92.00" y="5299.00" font-size="27" font-weight="400" fill="#53677F" xml:space="preserve">资料核对：2026-10-22  ·  项目许可：MIT  ·  本图为独立整理的技术说明</text>
+<text x="92.00" y="5344.00" font-size="26" font-weight="400" fill="#53677F" xml:space="preserve">项目：github.com/microsoft/Orchard-Agentic  ｜  论文：arXiv:2605.15040v3</text>
+<text x="92.00" y="5387.00" font-size="25" font-weight="400" fill="#53677F" xml:space="preserve">依据：orchard_env/README.md · docs/architecture.md · docs/api.md · orchard_eval/README.md</text>
+<text x="92.00" y="5429.00" font-size="24" font-weight="400" fill="#53677F" xml:space="preserve">制作：矢量图形与文字排版；完整来源与生成脚本随图提供。</text>
+</svg>

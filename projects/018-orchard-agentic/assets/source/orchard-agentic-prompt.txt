@@ -1,0 +1,122 @@
+Use case: infographic-diagram.
+Create ONE high-resolution, polished, information-rich Simplified Chinese educational infographic, portrait 2160×3840 or higher equivalent, suitable for opening and zooming. Explain Microsoft Orchard-Agentic comprehensively to a technically curious beginner who already understands Docker. ALL explanatory text in Simplified Chinese, keep official project/product names in English. This is a rigorous technical explainer, not marketing. Crisp accurate Chinese typography is the highest priority. Clean white / very pale slate background, dark navy typography, teal for sandbox execution, blue for control / infrastructure, violet for training, amber for conditions and roadmap. Restrained flat vector diagrams, small meaningful line icons, consistent rounded cards, clear numbered reading order, strong spacing and alignment. No decorative robots, fake logos, fake UI, gradients that hurt reading, illegible small type, text overlapping arrows, watermark, or made-up claims. Maximize legibility while retaining the exact facts below. This is ONE continuous infographic, not multiple disconnected images. Use a full-width header and wide central architecture diagram, with balanced two-column sections below. Every section must be included. Allocate enough vertical space for all content.
+
+HEADER:
+"一图读懂 Orchard-Agentic"
+subtitle "面向 AI Agent 的容器沙箱、批量评测与训练研究体系"
+prominent plain-language statement:
+"独立执行环境 + Agent 工具 + 批量管理服务"
+small note:
+"Orchard Env 是沙箱底座；整个仓库还包含评测、训练配方与研究数据。"
+
+01 — "先分清：谁负责什么？"
+Three distinct large boxes with icons and visible feedback arrows:
+"大模型" / "判断下一步做什么"
+"Agent 框架" / "组织任务、上下文与工具调用"
+"Orchard Env" / "提供环境，执行操作，返回结果"
+label Agent-to-model arrow "请求决策 / 返回动作"
+label Agent-to-Orchard arrow "命令、文件操作 / 输出、错误"
+small note "模型接口与凭据由使用者配置；预装 Agent 工具不等于内置模型。"
+
+02 — "工作原理：把大量容器变成统一的沙箱服务"
+Accurate architecture diagram:
+"自建程序 / 评测器 / 训练器" → "HTTP API / Python SDK" → "Orchard 编排服务"
+From orchestrator:
+solid teal bidirectional arrow to a large "沙箱池" containing three independent boxes:
+"沙箱 A · 任务 A", "沙箱 B · 任务 B", "沙箱 C · 任务 C"
+Each contains "任务镜像 + 项目文件 + 轻量执行服务"
+label solid arrow "直接通过 Pod IP 执行命令、传输文件、返回结果"
+separate blue side box "Kubernetes" with a distinct dashed arrow from orchestrator, label "创建 / 调度 / 删除容器"
+a small side box connected to orchestrator "Redis：多副本共享状态与锁"
+clear small architecture note:
+"Pod 内轻量服务负责执行命令，不是负责思考的大模型。"
+"执行与文件请求直达 Pod，减少 Kubernetes 控制接口的负担。"
+
+03 — "沙箱具体包含哪些能力？"
+A well-spaced 3×4 grid of twelve compact capability cards. Exact labels and short descriptions:
+"自选镜像" — "按任务准备 Linux 容器环境"
+"创建与销毁" — "每个任务分配独立环境"
+"运行代码" — "执行命令、脚本、编译和测试"
+"文件操作" — "上传、下载、列目录；用命令编辑"
+"Git 补丁" — "应用修改，提取和保存修复结果"
+"交互终端" — "PTY 输入输出与持续交互"
+"任务查询" — "状态、标准输出、错误和退出码"
+"资源限制" — "CPU、内存与执行时限"
+"网络策略" — "禁外网、放行或 IP / 端口白名单"
+"自动回收" — "时限、心跳与清理机制"
+"批量运行" — "异步并发，多机器集群调度"
+"程序接入" — "同步 / 异步 SDK，API Key 认证"
+Under capability grid:
+"预装 Agent：Codex CLI、Claude Code、pi、OpenCode、Hermes、mini-swe-agent"
+"Python、浏览器及项目依赖按镜像和具体任务准备。"
+
+04 — "一次任务怎么完成？"
+Readable horizontal step strip or loop:
+"创建沙箱 → 放入项目 → Agent 执行 → 查看反馈 → 修改并重试 → 导出结果 → 回收环境"
+Draw feedback arrow from "查看反馈" back to "Agent 执行".
+Then two distinct adjacent cards:
+"评测 Orchard Eval"
+"跑标准任务，保存交互轨迹、日志和成绩；支持恢复评测与区分环境故障。"
+"代码修复使用新的评测沙箱和基准自身的评分逻辑。"
+"训练 trainer / slime"
+"专家操作轨迹 → 监督微调 SFT"
+"实际任务与反馈 → 强化学习 RL"
+"BAR：组织有信息量的成功 / 失败样本组"
+"OPD：教师指导；RPR：奖励复现、测试和验证"
+"价值模型：对多个候选结果重新排序"
+Do not imply every recipe uses every listed learning method. Caption "训练方法按具体配方选用。"
+A small project-family strip:
+"Orchard-SWE：修代码"
+"Orchard-GUI：操作网页"
+"Orchard-Claw：工具工作流"
+"后续项目：OpenWebRL / OpenForge RL"
+
+05 — "与直接用 Docker 的区别"
+A compact clean table with header "对比项 | 直接用 Docker | Orchard Env"
+Rows:
+"执行与隔离 | 提供基础容器能力 | 复用容器能力，封装沙箱接口"
+"批量管理 | 自己写脚本或组合工具 | 状态、并发、回收等现成服务"
+"跨机器运行 | 另外配置编排与管理 | 基于 Kubernetes 调度"
+"AI 配套 | 自行组织评测与训练 | 仓库提供配套工具与研究配方"
+"部署成本 | 单机通常简单 | 需集群、网络策略及服务维护"
+An emphasized small statement:
+"Docker 本身也有 API、资源限制和网络能力；Orchard 的价值是减少管理与集成工作。"
+Do not depict Orchard as a stronger container kernel or require Docker Engine inside every Kubernetes node.
+
+06 — "价值：什么时候值得用？"
+Three value chips:
+"少写管理代码" / "统一执行与评测流程" / "让环境规模与模型训练独立扩展"
+Two adjacent clearly labelled decision boxes, as usage guidance rather than an absolute requirement:
+"优先用 Docker"
+"本机试验、少量固定任务、现有脚本已够用。"
+"考虑 Orchard"
+"统一远程沙箱服务、多机器大量任务、Agent 批量评测、交互数据采集与强化学习。"
+A resource conditions line:
+"环境层用 CPU；模型推理与训练资源另配。具体任务、模型接口、依赖与评分规则仍需配置。"
+
+07 — "作者报告了哪些效果？"
+Small exact metrics dashboard with clear conditions:
+"代码修复 · SWE-bench Verified"
+"61.4% 基础模型 → 69.7% RPR 训练 → 73.0% 候选重排"
+"Qwen3.5-35B-A3B；73.0% 使用 6 个候选与价值模型筛选。"
+"网页操作 · 4B 模型"
+"WebVoyager 74.1%｜Online-Mind2Web 67.0%｜DeepShop 64.0%"
+"工具工作流 · Claw-Eval"
+"59.6% pass@3；配 ZeroClaw 为 73.9%"
+"pass@3：三次尝试至少一次成功。"
+"沙箱性能 · 作者测试配置"
+"平均命令延迟 0.28 秒；并行启动 1,000 个沙箱约 26 秒。"
+Metrics caption "论文与仓库报告，未在本地复现；成绩受模型、框架、任务和配置影响。"
+
+08 — "能力边界与后续计划"
+A narrow amber band with exact text:
+"现有基础：容器隔离与可控执行；隔离强度取决于底层容器和集群配置。"
+"后续计划：完整状态快照、暂停 / 恢复、从同一状态分叉与前缀共享。"
+Do not claim snapshots or fork are already supported.
+
+FOOTER with small but readable source references:
+"资料核对：2026-10-22｜项目许可：MIT"
+"来源：github.com/microsoft/Orchard-Agentic"
+"架构与 API：orchard_env/docs/architecture.md · api.md"
+"评测：orchard_eval/README.md｜论文：arXiv:2605.15040v3"
+Design must communicate which is the sandbox foundation and which is the broader research toolkit. All factual labels must remain correct. Keep typography large enough for zooming. High-quality Chinese editorial infographic, clear and factual, with no accidental duplicated panels.

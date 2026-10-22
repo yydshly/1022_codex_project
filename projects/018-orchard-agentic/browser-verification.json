@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-10-22",
+  "status": "passed",
+  "method": "CUA browser UI, plus local same-origin iframe viewports",
+  "localURL": "http://127.0.0.1:8927/018-orchard-agentic/",
+  "interactions": {
+    "guideOpen": true,
+    "originalSizeToggle": true,
+    "escapeCloseAndFocusReturn": true,
+    "architectureManagementTab": true,
+    "remoteUsageRecommendation": true,
+    "futureScenarioFilterOneResult": true,
+    "reuseAssetExpandedInputsOutputsAcceptance": true
+  },
+  "responsive": [
+    {
+      "viewport": 375,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "ready": true,
+      "brokenVisibleImages": 0
+    },
+    {
+      "viewport": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753,
+      "ready": true,
+      "brokenVisibleImages": 0
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "screenshots": [
+    "assets/web-preview-mobile.png"
+  ],
+  "scope": "Research page rendering and interactions. Original-size image and download target verified; actual public file identities are recorded separately. No upstream cluster, model inference or training."
+}

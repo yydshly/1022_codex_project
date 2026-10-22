@@ -15,7 +15,7 @@
 按收录顺序编号，从 **001** 开始递增。编号长期保留，不因进度、热度或归档重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **15** 个项目。
+当前收录 **16** 个项目。
 
 | 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- | --- |
@@ -34,6 +34,7 @@
 | 015 | [heytea-style · 照片二次创作与桌宠](projects/015-heytea-style/README.md) | [heytea-style](https://github.com/Hchen1218/heytea-style) | 以已有照片为素材，用AI二次创作手绘海报、风味怪兽和产品互动图，再把角色制成可点击拖拽的桌宠；可沉淀风格规则、分阶段生成与身份约束、透明帧校验及事件驱动运行，扩展到餐饮电商内容、原创IP系列、互动营销与轻陪伴应用。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/015-heytea-style/) |
 | 016 | [Verdant Forest · 浏览器里的程序化森林](projects/016-verdant-forest/README.md) | [verdant-forest](https://github.com/Leonxlnx/verdant-forest) | 在浏览器生成并漫游茂密的三维森林，呈现立体枝叶、林下花草、风动与林间光雾；可沉淀参数化植物生成、空间分布、实例化与LOD、风动着色、体积光合成和确定性镜头采集，扩展到自然展厅、庭院与旅宿导览、交互叙事网页及氛围短片。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/016-verdant-forest/) |
 | 017 | [SparkVSR · 关键帧引导的视频高清重建](projects/017-sparkvsr/README.md) | [SparkVSR](https://github.com/taco-group/SparkVSR) | 以原视频约束运动与结构，用少量高清关键帧引导生成式视频超分，改善清晰度、纹理与跨帧一致性；可沉淀关键帧审核、单图修复与时序传播、参考强度调节和保真评测流程，扩展到老片修复、AIGC增强、系列风格化与人工修图接入。当前仅理解归档，未部署模型。 | 已归档 | [在线演示](https://yydshly.github.io/1022_codex_project/017-sparkvsr/) |
+| 018 | [Orchard-Agentic · Agent 沙箱与评测训练](projects/018-orchard-agentic/README.md) | [Orchard-Agentic](https://github.com/microsoft/Orchard-Agentic) | 基于 Kubernetes 为 Agent 批量提供可控容器，执行代码、文件和终端操作，配套轨迹记录、评测与训练；作者报告 SWE 修复率 69.7%，六候选重排后 73.0%（未复现）。可沉淀沙箱 API、生命周期治理、网络资源策略和评测数据规范，扩展到远程代码执行、自动修复、回归评测、浏览器任务及 Agent 训练。 | 已完成 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览
@@ -220,6 +221,18 @@ Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集
 [研究详情](projects/017-sparkvsr/README.md) · [原始仓库](https://github.com/taco-group/SparkVSR) · [在线演示](https://yydshly.github.io/1022_codex_project/017-sparkvsr/)
 
 标签：视频超分 / 关键帧引导 / 生成式修复 / 时序传播 / 理解归档
+
+### 018 · Orchard-Agentic · Agent 沙箱与评测训练
+
+基于 Kubernetes 为 Agent 批量提供可控容器，执行代码、文件和终端操作，配套轨迹记录、评测与训练；作者报告 SWE 修复率 69.7%，六候选重排后 73.0%（未复现）。可沉淀沙箱 API、生命周期治理、网络资源策略和评测数据规范，扩展到远程代码执行、自动修复、回归评测、浏览器任务及 Agent 训练。
+
+![018 · Orchard-Agentic · Agent 沙箱与评测训练 项目封面](projects/018-orchard-agentic/assets/orchard-agentic-overview.png)
+
+> 沿用本次讨论生成并确认的中文理解长图：区分模型、Agent 框架与沙箱，解释执行架构、十二项环境能力、Docker 对比、技术价值及效果口径。图为文字与矢量排版，指标为作者报告，未本地复现；快照分叉标为后续计划。
+
+[研究详情](projects/018-orchard-agentic/README.md) · [原始仓库](https://github.com/microsoft/Orchard-Agentic)
+
+标签：Agent 沙箱 / Kubernetes / 评测与训练 / 生命周期治理 / 技术复用
 <!-- PROJECT_CARDS:END -->
 
 ## 目录结构

@@ -1,0 +1,7 @@
+assets/*.svg -text whitespace=cr-at-eol
+web/assets/*.svg -text whitespace=cr-at-eol
+research-evidence.json -text
+web/research-evidence.json -text
+LICENSE.upstream.txt -text
+web/LICENSE.upstream.txt -text
+assets/source/* -text -whitespace
