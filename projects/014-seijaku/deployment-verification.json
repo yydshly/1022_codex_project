@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-22T13:41:06.746163+00:00",
+  "timezone": "Asia/Shanghai",
+  "status": "published and verified",
+  "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/",
+  "repository": "https://github.com/yydshly/1022_codex_project",
+  "content_commit": "f92e770d1f37ebe8f3a94fd0d8fe3d6aafd39acd",
+  "workflow": {
+    "conclusion": "success",
+    "headSha": "f92e770d1f37ebe8f3a94fd0d8fe3d6aafd39acd",
+    "status": "completed",
+    "updatedAt": "2026-10-22T13:36:10Z",
+    "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39787944045"
+  },
+  "guide": {
+    "path": "assets/research-summary.png",
+    "sha256": "e3447d2f85794036f557b11dade89ce2d9aac7d2b98e2e787ba85fa3c63de164",
+    "usage": "Catalog, README, web hero and full overview use the generated research guide."
+  },
+  "summary_scope": {
+    "effects": "Continuous indoor/outdoor residential walk, seasons, material photography, assembly explanation and synthesized ambience.",
+    "reusable_technology": "Season/material state, assembly offsets with projected anchors, resource warmup and on-demand loading/rendering; proposed independent modules.",
+    "future_scenarios": "Residential/hospitality tours, museum and structural education, product/material storytelling and spatial portfolios.",
+    "comparison": "Kage and Sublevel originals plus our earlier independent residence extension; do not count existing navigation as new."
+  },
+  "checks": {
+    "packaging": "package_web.py, --check and verify_web.py passed.",
+    "catalog": "Isolated release catalog (11) and shared workspace catalog (16) passed.",
+    "javascript": "app.js and content.js passed node --check.",
+    "numbered_build": "11 numbered project sites assembled; generated guide and summary included."
+  },
+  "http": {
+    "schema_version": 1,
+    "checked_at": "2026-10-22T13:37:30.088195+00:00",
+    "commit": "f92e770d1f37ebe8f3a94fd0d8fe3d6aafd39acd",
+    "workflow_run": {
+      "conclusion": "success",
+      "headSha": "f92e770d1f37ebe8f3a94fd0d8fe3d6aafd39acd",
+      "status": "completed",
+      "updatedAt": "2026-10-22T13:36:10Z",
+      "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39787944045"
+    },
+    "file_count": 8,
+    "files": [
+      {
+        "path": "app.js",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/app.js",
+        "expected_bytes": 12472,
+        "expected_sha256": "b12319de7ad592f2eb4cf00d04ce890b4f332dff987f495e2fd21bfe5eb972ee",
+        "status": 200,
+        "bytes": 12472,
+        "sha256": "b12319de7ad592f2eb4cf00d04ce890b4f332dff987f495e2fd21bfe5eb972ee",
+        "match": true
+      },
+      {
+        "path": "assets/overview.svg",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/assets/overview.svg",
+        "expected_bytes": 4112,
+        "expected_sha256": "8586bcb3e78dfc0b46830f6b33799ee572750fd37d869d61fbf4a904936fc84f",
+        "status": 200,
+        "bytes": 4112,
+        "sha256": "8586bcb3e78dfc0b46830f6b33799ee572750fd37d869d61fbf4a904936fc84f",
+        "match": true
+      },
+      {
+        "path": "assets/research-summary-prompt.txt",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/assets/research-summary-prompt.txt",
+        "expected_bytes": 5116,
+        "expected_sha256": "e876fcbcda302d89ec337cb3ccbb438164547af1eea8064efb459086d4e18bd7",
+        "status": 200,
+        "bytes": 5116,
+        "sha256": "e876fcbcda302d89ec337cb3ccbb438164547af1eea8064efb459086d4e18bd7",
+        "match": true
+      },
+      {
+        "path": "assets/research-summary.png",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/assets/research-summary.png",
+        "expected_bytes": 2959327,
+        "expected_sha256": "e3447d2f85794036f557b11dade89ce2d9aac7d2b98e2e787ba85fa3c63de164",
+        "status": 200,
+        "bytes": 2959327,
+        "sha256": "e3447d2f85794036f557b11dade89ce2d9aac7d2b98e2e787ba85fa3c63de164",
+        "match": true
+      },
+      {
+        "path": "assets/residence-journey.jpg",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/assets/residence-journey.jpg",
+        "expected_bytes": 59674,
+        "expected_sha256": "7faae5a2f65db17822cb503c90af4050ce53549eb9d45ae1c9b713059beed408",
+        "status": 200,
+        "bytes": 59674,
+        "sha256": "7faae5a2f65db17822cb503c90af4050ce53549eb9d45ae1c9b713059beed408",
+        "match": true
+      },
+      {
+        "path": "content.js",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/content.js",
+        "expected_bytes": 17007,
+        "expected_sha256": "25a5c94c06305f61373b325300b2c0dc9f808c3d87c96d3d6794cea6db61f0dd",
+        "status": 200,
+        "bytes": 17007,
+        "sha256": "25a5c94c06305f61373b325300b2c0dc9f808c3d87c96d3d6794cea6db61f0dd",
+        "match": true
+      },
+      {
+        "path": "index.html",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/index.html",
+        "expected_bytes": 15721,
+        "expected_sha256": "c261306faf87a96b384ae8ba422f3449a7c7bf8787209145bfbe06ff52009097",
+        "status": 200,
+        "bytes": 15721,
+        "sha256": "c261306faf87a96b384ae8ba422f3449a7c7bf8787209145bfbe06ff52009097",
+        "match": true
+      },
+      {
+        "path": "style.css",
+        "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/style.css",
+        "expected_bytes": 24756,
+        "expected_sha256": "79dd0ddb8544ca622cec68d3961d8dc50c0c1fb17f28a0871ca20b354dab5a0d",
+        "status": 200,
+        "bytes": 24756,
+        "sha256": "79dd0ddb8544ca622cec68d3961d8dc50c0c1fb17f28a0871ca20b354dab5a0d",
+        "match": true
+      }
+    ],
+    "navigation": {
+      "url": "https://yydshly.github.io/1022_codex_project/",
+      "expected_summary": "基于 Three.js 的日式住宅交互网页：连续漫游室内外，结合四季联动、材料特写、构造拆解和声景；对比 Kage、Sublevel 及已有住宅扩展，研究季节材质、构件展开与标注、资源预热与按需绘制，可扩展到旅宿导览、展馆教育、产品工艺展示和空间作品集。",
+      "expected_cover": "./014-seijaku/assets/research-summary.png",
+      "status": 200,
+      "bytes": 17882,
+      "sha256": "8e186512d191c2774bc4328984829645921055d5ec6c5cc9b7fb26acc6d83247",
+      "summary_present": true,
+      "cover_present": true
+    },
+    "failures": [],
+    "result": "passed"
+  },
+  "browser": {
+    "desktop": {
+      "viewport": [
+        1280,
+        1024
+      ],
+      "client_width": 1265,
+      "scroll_width": 1265,
+      "guide_loaded": [
+        1024,
+        1536
+      ]
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "client_width": 375,
+      "scroll_width": 375,
+      "guide_rendered": [
+        337.33,
+        506
+      ]
+    },
+    "capability_tab": "Clicked seasons; heading became 同一庭院的四季.",
+    "comparison_filter": "Clicked research increment; 4 / 11 rows shown.",
+    "research_tab": "Clicked assembly; heading became 构造拆解与标注.",
+    "download": "Actual downloaded JSON parsed: 8 capabilities, 11 comparisons, 6 research items and pinned Seijaku SHA.",
+    "console": "No warning or error entries observed in host page.",
+    "screenshots": [
+      "D:/codex/home/visualizations/2026/10/20/01a15a39-43e3-79f3-a81b-886ce311c593/seijaku-published-desktop.png",
+      "D:/codex/home/visualizations/2026/10/20/01a15a39-43e3-79f3-a81b-886ce311c593/seijaku-published-mobile.png"
+    ]
+  },
+  "limits": [
+    "This publication verifies the host research page and static files, not a complete retest of every upstream WebGL scene.",
+    "No matched-device performance or commercial-benefit measurement.",
+    "Proposed reusable modules have not been extracted as an SDK."
+  ]
+}

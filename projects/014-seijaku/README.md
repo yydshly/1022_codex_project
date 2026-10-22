@@ -2,7 +2,7 @@
 
 **Seijaku 是基于 Three.js 的日式住宅交互网页：滚动镜头连续穿行室内外，结合四季联动、材料特写、构造拆解、水面和环境声。** 本研究对比 Kage、Sublevel Studio 及已有住宅扩展，重点研究季节材质状态、构件展开与投影标注、资源预热和按需绘制，可扩展到住宅旅宿导览、展馆与结构教育、产品工艺展示及空间作品集。
 
-[打开研究网页](web/index.html) · [官方体验](https://mengto.github.io/seijaku/) · [关注源库](https://github.com/MengTo/seijaku) · [来源与版本](SOURCE.json) · [研究与验证记录](notes.md)
+[在线研究网页](https://yydshly.github.io/1022_codex_project/014-seijaku/) · [本地网页](web/index.html) · [官方体验](https://mengto.github.io/seijaku/) · [关注源库](https://github.com/MengTo/seijaku) · [来源与版本](SOURCE.json) · [研究与验证记录](notes.md)
 
 ![Seijaku 研究总览：效果、实现流程、三项目对比、优先研究模块与应用方向](assets/research-summary.png)
 
@@ -70,7 +70,7 @@ python -m http.server 8054 --bind 127.0.0.1
 
 ## GitHub Pages 接入
 
-发布目录为 `web/`，所需研究文件都在此目录内；根 `scripts/build_site.py` 汇总到 `/014-seijaku/`。Actions 在汇总前执行本项目打包、字节一致性与静态路径检查，无需安装前端依赖。引导图统一使用 `research-summary.png`；部署成功并核对实际网址后登记 `demo_url` 和部署验证记录。
+发布目录为 `web/`，由现有 Actions 打包、检查并汇总到 `/014-seijaku/`，无需安装前端依赖。引导图统一使用 `research-summary.png`。2026-10-22 内容提交 `f92e770` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39787944045)成功；[公开网页](https://yydshly.github.io/1022_codex_project/014-seijaku/)的 8 个发布文件均 HTTP 200，且与提交字节和 SHA-256 一致。桌面／窄屏、能力切换、对比筛选、研究方向及实际 JSON 下载已在线核验，见 [部署验证记录](deployment-verification.json)。
 
 ## 来源与许可
 

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-22",
   "timezone": "Asia/Shanghai",
-  "status": "research-page-complete; local preview, no public deployment claimed",
+  "status": "research-page-complete; publicly deployed and verified",
   "environment": "Chromium via Codex in-app browser; Windows; static Python server on 127.0.0.1:8054",
   "page_checks": {
     "desktop_default": {
@@ -134,5 +134,12 @@
       "output": "_site/seijaku-summary-20261022-01/014-seijaku/",
       "status": "PNG and prompt byte-identical; summary anchor and catalog cover included."
     }
+  },
+  "publication": {
+    "url": "https://yydshly.github.io/1022_codex_project/014-seijaku/",
+    "content_commit": "f92e770d1f37ebe8f3a94fd0d8fe3d6aafd39acd",
+    "workflow": "https://github.com/yydshly/1022_codex_project/actions/runs/39787944045",
+    "conclusion": "success",
+    "verification_file": "deployment-verification.json"
   }
 }

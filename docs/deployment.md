@@ -159,6 +159,8 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 ## 014 · Seijaku 住宅导览与三项目对比
 
-014 使用原生 HTML/CSS/ES modules，发布文件均在 `projects/014-seijaku/web/`。现有根汇总器会复制到 `/014-seijaku/`，不增加构建依赖。自有总览图与旧住宅截图副本随网页提交；维护时运行本项目 `scripts/package_web.py`、`--check` 和 `scripts/verify_web.py`。
+014 使用原生 HTML/CSS/ES modules，发布文件均在 `projects/014-seijaku/web/`。Actions 先执行本项目 `scripts/package_web.py`、`--check` 和 `scripts/verify_web.py`，再由根汇总器复制到 `/014-seijaku/`，不增加前端构建依赖。首页、项目说明与网页首屏统一以生成的 `research-summary.png` 引导；摘要明确连续漫游、四季和构造效果，季节材质、构件标注、资源调度技术，以及住宅、展馆、产品与作品集扩展场景。
 
-官方图像通过固定提交在线引用，体验区按需加载作者 GitHub Pages，每次仅运行一个 iframe；不打包未获再分发授权的原库代码和素材。分析固定版本，在线演示可能随作者更新。研究页和对比内容不要求本地 WebGL，官方实时体验需要网络与相应图形支持。实际部署核验后再填写目录 demo_url。
+官方图像通过固定提交在线引用，体验区按需加载作者 GitHub Pages，每次仅运行一个 iframe；不打包未获再分发授权的原库代码和素材。分析固定版本，在线演示可能随作者更新。研究页和对比内容不要求本地 WebGL，官方实时体验需要网络与相应图形支持。
+
+2026-10-22 内容提交 `f92e770` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39787944045)成功，[014 公开网页](https://yydshly.github.io/1022_codex_project/014-seijaku/)的 8 个发布文件均 HTTP 200 且与提交字节一致；总导航完整摘要和生成引导图已核对。桌面／窄屏、能力切换、对比筛选、研究方向和实际清单下载检查通过；已登记 `demo_url`，详见 [部署验证记录](../projects/014-seijaku/deployment-verification.json)。

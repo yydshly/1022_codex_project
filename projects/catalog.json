@@ -191,7 +191,7 @@
       ],
       "cover": "assets/research-summary.png",
       "cover_caption": "使用我们生成的 Seijaku 研究总览作引导图：效果、实现流程、Kage / Sublevel 对比、三项优先技术与四类扩展场景。Imagegen 参考庭院运行画面绘制，其他场景为示意；建议模块仍待独立提炼。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/014-seijaku/"
     }
   ]
 }
