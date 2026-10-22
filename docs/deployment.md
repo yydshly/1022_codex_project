@@ -193,3 +193,5 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 构建前运行 `python projects/016-verdant-forest/scripts/package_web.py` 及 `--check`，由根汇总器发布 `016-verdant-forest/`。网页无npm依赖；图片、来源与生成指令按哈希校验。本页五个原理实验独立绘制，完整原版按需访问作者站点；当前未提供通用资产导出SDK或与009的直接代码整合。
 
 公开部署以本项目的 `deployment-verification.json` 和Actions记录为准；通过线上文件、引导图与摘要核对后填写登记表 `demo_url`。
+
+016 已于2026-10-22通过[正式入口](https://yydshly.github.io/1022_codex_project/016-verdant-forest/#overview)验证。内容提交 `a9f7aae` 的 [Actions构建与Pages部署](https://github.com/yydshly/1022_codex_project/actions/runs/39799136460)成功，19项资源均HTTP200且SHA-256与提交一致；已生成的理解总览图、三部分摘要、项目图注及线上主要交互均核对。详见子项目 `deployment-verification.json`；登记表已填写demo_url。

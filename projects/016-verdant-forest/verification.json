@@ -2,7 +2,7 @@
   "date": "2026-10-22",
   "project": "016-verdant-forest",
   "upstream_commit": "bb724d84fb683b8f1dea790c3e56f2ffadeb051e",
-  "status": "local-complete",
+  "status": "published-verified",
   "commands": {
     "package_and_hash_check": "passed: 11 files; 3 images match upstream capture ledger",
     "node_syntax_checks": "app.js and data.js passed",
@@ -77,9 +77,12 @@
     "original_live": "assets/research/original-live.png"
   },
   "publication": {
-    "public_deployment_performed": false,
-    "demo_url": "",
-    "github_pages_workflow_updated": true
+    "public_deployment_performed": true,
+    "demo_url": "https://yydshly.github.io/1022_codex_project/016-verdant-forest/",
+    "github_pages_workflow_updated": true,
+    "content_commit": "a9f7aae7a80726dce598829d023edc7bd2b0ed4b",
+    "actions_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39799136460",
+    "verification_record": "deployment-verification.json"
   },
   "source_files": {
     "web/index.html": "16e1c210b80da46acea8eb32763a0efa0b12d8eb608284f1c0a50f0c8c07e277",

@@ -11,7 +11,7 @@
 | 研究网页 | [web/index.html](web/index.html)，需先打包资源并使用 HTTP 预览 |
 | 原版体验 | [自由漫游](https://verdant-forest.lexn8.chatgpt.site/) / [30 秒自动导览](https://verdant-forest.lexn8.chatgpt.site/?cinematic=1) |
 | 本页环境 | Python 3.10.11 标准库；浏览器原生 HTML / CSS / JavaScript / Canvas，无 npm 依赖 |
-| 部署 | 已准备 GitHub Pages 编号路径 `016-verdant-forest/`，是否上线以部署验证为准 |
+| 正式网页 | [能力、原理、效果与价值总览](https://yydshly.github.io/1022_codex_project/016-verdant-forest/#overview) |
 
 ## 一图总览
 
@@ -106,3 +106,18 @@ python -m http.server 8016 --bind 127.0.0.1 --directory projects/016-verdant-for
 - [作者浏览器采样台账](assets/evidence/browser-capture.json)
 - [作者影片验证记录](assets/evidence/film-capture.json)
 - [返回总索引](../../README.md#项目索引)
+
+## 公开部署验证
+
+2026-10-22 已发布至 [016 · Verdant Forest](https://yydshly.github.io/1022_codex_project/016-verdant-forest/#overview)。内容提交 `a9f7aae` 的 [GitHub Actions 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39799136460)均成功，目录校验工作流也通过。
+
+- 19 项发布文件均 HTTP 200，响应 SHA-256 与该提交中的来源字节一致；其中包含已生成的指定引导图。
+- 总导航摘要、图注与引导图路径逐项核对；摘要明确能力效果、可沉淀技术和后期应用场景。
+- 正式站点的总览放大与关闭、效果图切换、LOD参数操作已检查，浏览器控制台无警告或错误。本轮不重复测量上游GPU性能。
+- 素材打包检查、JavaScript语法检查与 11 项目录/导航回归测试通过。
+
+准确范围与逐文件哈希见 [deployment-verification.json](deployment-verification.json)，线上截图见 [deployed-overview.png](assets/research/deployed-overview.png)。可复跑验证：
+
+```powershell
+python projects/016-verdant-forest/scripts/verify_deployment.py --revision a9f7aae7a80726dce598829d023edc7bd2b0ed4b --run-url https://github.com/yydshly/1022_codex_project/actions/runs/39799136460
+```
