@@ -210,6 +210,24 @@
       "cover": "assets/research-summary.png",
       "cover_caption": "使用我们生成的 Seijaku 研究总览作引导图：效果、实现流程、Kage / Sublevel 对比、三项优先技术与四类扩展场景。Imagegen 参考庭院运行画面绘制，其他场景为示意；建议模块仍待独立提炼。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/014-seijaku/"
+    },
+    {
+      "id": "015",
+      "slug": "heytea-style",
+      "name": "heytea-style · 照片二次创作与桌宠",
+      "repo": "https://github.com/Hchen1218/heytea-style",
+      "summary": "以已有照片为素材，用AI二次创作手绘海报、风味怪兽和产品互动图，再把角色制成可点击拖拽的桌宠；可沉淀风格规则、分阶段生成与身份约束、透明帧校验及事件驱动运行，扩展到餐饮电商内容、原创IP系列、互动营销与轻陪伴应用。",
+      "status": "completed",
+      "tags": [
+        "AI 海报",
+        "手绘叙事",
+        "角色设计",
+        "Agent Skill",
+        "Electron"
+      ],
+      "cover": "assets/capability-overview.png",
+      "cover_caption": "内置 ImageGen 参考上游样张生成的一图总览：展示海报、风味小怪兽、产品互动图与桌宠四种效果，解释照片、Skill、AI、Python及Electron的分工，并归纳内容表达、协作复用和角色延展价值。效果为概览合成，桌面为示意。",
+      "demo_url": ""
     }
   ]
 }

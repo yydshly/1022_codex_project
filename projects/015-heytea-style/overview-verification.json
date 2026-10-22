@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-22",
+  "status": "passed",
+  "image": "assets/capability-overview.png",
+  "image_sha256": "8921de11bccb3cd737ec4b5b3555d4b03a0d3a80495903aeb023c6d9e7888bfe",
+  "generation": "built-in ImageGen; original output copied without image postprocessing",
+  "width": 1672,
+  "height": 941,
+  "checks": [
+    "overview embedded in standalone HTML",
+    "overview natural dimensions",
+    "pet initialization still works offline",
+    "offline overview download matches original PNG bytes and chosen filename",
+    "new numbered-path build contains every web file unchanged",
+    "built offline page displays overview",
+    "HTML anchors, catalog and packaged bytes checked"
+  ],
+  "viewports": [
+    {
+      "width": 375,
+      "horizontal_overflow": false,
+      "overview_visible": true
+    },
+    {
+      "width": 768,
+      "horizontal_overflow": false,
+      "overview_visible": true
+    },
+    {
+      "width": 1440,
+      "horizontal_overflow": false,
+      "overview_visible": true
+    }
+  ],
+  "public_deployment": false,
+  "built_files_checked": 45,
+  "page_errors": []
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "status": "passed",
+  "source_commit": "d5125372adcc945c2314cfb649c50407379a18ab",
+  "packaged_files": 42,
+  "html_local_references": 15,
+  "html_images_with_alt": 5,
+  "checks": [
+    "all pinned source SHA-256",
+    "all packaged bytes",
+    "section anchors",
+    "local resource links",
+    "original pack bytes and attribution",
+    "upstream player and MIT license included",
+    "generated overview hash and provenance"
+  ],
+  "pack_sha256": "4aac76e722869a867d362837f6c86af77de90b50cdc186c5e4b030416471a180",
+  "limits": [
+    "AI-generated overview is a research illustration; upstream creative workflows not run",
+    "No Electron runtime installation or execution",
+    "No public deployment"
+  ]
+}

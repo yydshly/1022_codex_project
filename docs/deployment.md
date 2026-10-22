@@ -174,3 +174,12 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 2026-10-22 内容提交 `d727862` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39791306660)成功，[013 公开网页](https://yydshly.github.io/1022_codex_project/013-old-coder/)的 16 个发布文件均 HTTP 200 且与提交字节一致；首页的能力效果、技术沉淀、扩展场景摘要与指定引导图已核对。线上四个实验、原文阅读、放大/下载与 375/768/1440 宽度通过，已登记 `demo_url`。原版完整 POSIX gauntlet 和独立复核仍未执行。详见子项目 `deployment-verification.json`、`publication-browser-verification.json` 与 `verification.md`。
 
 013 的首页封面与网页“一图读懂”使用同一份 `old-coder-overview.png`（1800 × 2600），附可编辑 SVG、放大阅读和下载。图解为本研究代码原生绘制，ImageGen 两次网络失败记录另存；库存业务是教学模型。图像及发布副本已经保存到源文件目录，CI 不需要安装绘图依赖；可运行 `python projects/013-old-coder/scripts/build_overview.py --check` 仅校验产物身份。
+
+
+## 015 · heytea-style 照片二次创作与桌宠
+
+[heytea-style 研究网页](../projects/015-heytea-style/README.md)以已有照片的二次创作为主线，展示手绘海报、风味怪兽、产品互动图与可运行桌宠。引导图使用我们生成的 capability-overview.png；原始样张与总览合成图分开标注。网页还归纳风格规则、分阶段生成、身份约束、透明帧校验与事件运行器的技术沉淀，并解释餐饮电商、原创 IP、互动营销及轻陪伴的扩展条件。
+
+构建步骤为 `python projects/015-heytea-style/scripts/package_web.py` 和 `python projects/015-heytea-style/scripts/verify_web.py`，随后由根汇总器发布到 `015-heytea-style/`。打包仅使用 Python 标准库，核对固定上游哈希，生成自包含资源、许可、示例角色 ZIP 与离线单文件；源文件换行通过项目 .gitattributes 保持。
+
+本地已检查七个效果版本、八种行为、十四个原理阶段、场景切换、键盘和六种屏宽。网页使用上游真实动画帧与阶段播放器，物理完成事件由按钮发送；未运行原生 Electron，也未按上游流程创作四类新作品。正式发布状态与证据以项目 deployment-verification.json 为准。

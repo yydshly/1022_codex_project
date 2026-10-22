@@ -42,6 +42,10 @@ jobs:
           python scripts/project_catalog.py check
           python projects/001-swiftui-shaders/scripts/build_gallery.py --check
           python projects/001-swiftui-shaders/scripts/build_native.py --check
+      - name: Package and verify heytea-style research page
+        run: |
+          python projects/015-heytea-style/scripts/package_web.py
+          python projects/015-heytea-style/scripts/verify_web.py
       - name: Package offline demo and assemble numbered sites
         run: |
           python projects/001-swiftui-shaders/scripts/package_web.py

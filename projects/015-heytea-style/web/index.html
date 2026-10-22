@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6ef">
+  <meta name="description" content="heytea-style 开源研究：看真实照片如何变成手绘海报、风味小怪兽和桌宠，拆解分阶段生成、角色锁定与事件驱动原理。">
+  <title>heytea-style · 照片二次创作与桌宠</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M13 20Q20 6 36 13T53 35Q51 54 29 51T13 20' fill='%23dfe7b5' stroke='%232c3226' stroke-width='3'/%3E%3Ccircle cx='25' cy='29' r='2'/%3E%3Ccircle cx='40' cy='28' r='2'/%3E%3Cpath d='m27 39 9 1' stroke='%232c3226' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/runtime/episode-player.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="heytea-style 研究首页"><svg viewBox="0 0 45 44" aria-hidden="true"><path d="M7 17Q12 3 26 7T39 25Q37 40 21 37T7 17Z"/><path d="m16 20 1 2m12-3v2m-10 7 8-1"/></svg><span>heytea-style<span class="wordmark-note">一份开源创作研究</span></span></a>
+    <nav aria-label="主要导航"><a href="#overview">一图看懂</a><a href="#principles">懂原理</a><a href="#value">看价值</a><a href="#sources" class="source-nav">研究来源 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-summary wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-dot"></span> OPEN SOURCE STUDY <span class="edition">NO. 015</span></p>
+        <h1 id="hero-title">一张照片，<br>长出一点<span class="scribble">想象<svg viewBox="0 0 220 22" aria-hidden="true"><path d="M5 14Q101 0 213 10M25 20Q112 7 191 15"/></svg></span>。</h1>
+        <p class="hero-description">以已有照片为素材，用 AI 做二次创作。<br>输出手绘海报、怪兽角色和产品互动图，<br class="desktop-break">再把角色做成可点击、拖拽的桌宠。</p>
+        <div class="hero-actions"><a class="button dark" href="#effects">看看它能做什么 <span aria-hidden="true">↘</span></a><a class="text-link" href="#principles">拆开创作的过程 <span aria-hidden="true">→</span></a></div>
+        <p class="hero-footnote">Skill 创作流程 <span>＋</span> 图像处理工具 <span>＋</span> 桌宠运行器</p>
+      </div>
+      <div class="hero-art" aria-label="我们生成的能力、四种效果、原理与价值总览"><figure class="hero-guide"><a href="#overview"><img src="assets/capability-overview.png" width="1672" height="941" alt="heytea-style 一图总览：已有照片经 AI 二次创作，形成手绘海报、风味怪兽、产品互动图与桌宠，并说明处理原理和价值" fetchpriority="high"></a><figcaption>我们的研究总览 · 四种效果与实现原理 <a href="#overview">展开看懂 ↘</a></figcaption></figure></div>
+    </section>
+
+    <div class="intro-strip wrap"><p>给照片一种<span>表达方式</span></p><div><span>真实的产品</span><i>＋</i><span>不完美的线条</span><i>＋</i><span>有因果的动作</span></div><a href="https://github.com/Hchen1218/heytea-style" target="_blank" rel="noreferrer">源库 Hchen1218/heytea-style ↗</a></div>
+
+    <section class="overview-section wrap" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="eyebrow">THE WHOLE PICTURE / 一图看懂</p><h2 id="overview-title">已有照片，四种创作去向。</h2></div><a class="text-link" href="assets/capability-overview.png" download="heytea-style-overview.png">保存总览图 ↓</a></div>
+      <figure class="overview-figure"><img id="capability-overview" src="assets/capability-overview.png" width="1672" height="941" alt="heytea-style 总览：以已有照片为素材，AI 二次创作手绘海报、风味小怪兽、产品互动图与可运行桌宠；原理为 Skill 规则、分阶段生成、Python 处理校验与 Electron 运行；价值为内容表达、协作复用和角色延展" loading="lazy"><figcaption>内置 ImageGen 根据上游样张合成的研究总览；桌面场景为示意，原始样张在下方独立保留。样张与角色：heytea-style contributors，CC BY 4.0。<a href="downloads/overview-guide.md">查看图片与生成说明 ↗</a></figcaption></figure>
+    </section>
+
+    <section class="section wrap" id="effects" aria-labelledby="effects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / WHAT IT MAKES</p><h2 id="effects-title">让照片，有不同的说法。</h2></div><p class="section-intro">同一个来源，可以延伸出不同产物。<br>切换看看：保留了什么，又改变了什么。</p></div>
+      <div class="capability-tabs" role="tablist" aria-label="创作能力">
+        <button id="tab-poster" role="tab" aria-selected="true" aria-controls="capability-panel" data-capability="poster"><span>01</span>手绘海报<small>实物与文字 / 动作</small></button>
+        <button id="tab-monster" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="monster" tabindex="-1"><span>02</span>风味小怪兽<small>从食物特征到角色</small></button>
+        <button id="tab-fusion" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="fusion" tabindex="-1"><span>03</span>产品互动图<small>让角色回到产品旁</small></button>
+        <button id="tab-pet" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="pet" tabindex="-1"><span>04</span>桌面伙伴<small>从形象到动作回应</small></button>
+      </div>
+      <div class="capability-panel" id="capability-panel" role="tabpanel" aria-labelledby="tab-poster">
+        <div class="comparison">
+          <figure class="input-figure"><span class="image-label">从这里开始 / INPUT</span><img id="input-image" src="assets/upstream/poster/source-food.jpg" alt="餐桌上的原始食物照片" loading="lazy"><figcaption id="input-caption">一张餐桌照片，提供真实主体、色彩和质感。</figcaption><svg class="comparison-arrow" viewBox="0 0 100 65" aria-hidden="true"><path d="M5 38Q47 0 87 30m-17-2 20 5-10-18"/></svg></figure>
+          <figure class="output-figure"><span class="image-label" id="output-label">带字海报 / OUTPUT</span><button class="zoom-button" id="zoom-image" aria-label="放大查看当前效果"><img id="output-image" src="assets/upstream/poster/typography-poster.png" alt="泰香开饭带字海报" loading="lazy"><span aria-hidden="true">↗</span></button><figcaption id="output-caption">用大留白、歪扭标题和小人动作，重新组织实物。</figcaption></figure>
+        </div>
+        <div class="capability-copy"><span class="source-tag">上游作者样张</span><p class="capability-kicker" id="capability-kicker">真实食物，手绘表达</p><h3 id="capability-title">给日常的一餐，<br>一个有趣的开场。</h3><p id="capability-description">保留食物的摄影质感，在留白中加入不规则的手写标题。小人围绕产品做一个明确动作，让实物成为画面的故事中心。</p><div class="variant-switch" role="group" aria-label="效果版本" id="variant-switch"><button class="active" data-variant="0" aria-pressed="true">带字版</button><button data-variant="1" aria-pressed="false">无字版</button></div><dl class="result-facts" id="result-facts"><div><dt>保留</dt><dd>主体外观、表面质感与自然阴影</dd></div><div><dt>变化</dt><dd>背景、构图、手写字与小人动作</dd></div><div><dt>交付</dt><dd>两种独立构图的静态海报</dd></div></dl><a class="text-link" id="effect-source" href="https://github.com/Hchen1218/heytea-style/blob/d5125372adcc945c2314cfb649c50407379a18ab/README.md" target="_blank" rel="noreferrer">查看上游案例说明 ↗</a></div>
+      </div>
+      <p class="section-note">本图集保留上游未修改样张，归属 heytea-style contributors，按 CC BY 4.0 引用；新增总览为 AI 研究合成图。照片中的第三方标识仍归原权利人所有。</p>
+    </section>
+
+    <section class="pet-section" id="pet-lab" aria-labelledby="pet-title">
+      <div class="wrap"><div class="section-heading"><div><p class="eyebrow">02 / A CHARACTER THAT RESPONDS</p><h2 id="pet-title">从一张角色稿，到一次回应。</h2></div><p class="section-intro">用上游真实透明动画帧，观察行为怎样接起来。<br>浏览器演示覆盖帧播放与事件切换。</p></div>
+        <div class="pet-layout"><div class="pet-playground"><div class="playground-top"><span><span class="tiny-dot"></span> 浏览器行为演示</span><span>SCHEMA V3</span></div><div class="pet-stage" id="pet-stage"><p class="stage-note">试试点一下小怪兽</p><canvas id="pet-canvas" width="384" height="384" role="button" tabindex="0" aria-label="点击风味小怪兽，播放回应动作；睡眠时点击可唤醒">你的浏览器不支持 Canvas，请查看下方上游动作预览。</canvas><div class="stage-ground"></div><span class="stage-flower" aria-hidden="true">✳</span></div><div class="playground-bottom"><span>粉绿风味小怪兽 / 上游示例角色</span><button id="pause-pet" aria-pressed="false">暂停动画 Ⅱ</button></div></div>
+          <div class="pet-controls"><p class="small-label">选一个动作，看看它的阶段</p><div class="behavior-buttons" role="group" aria-label="桌宠行为"><button data-behavior="awake-story" aria-pressed="true">日常发呆</button><button data-behavior="explore-walk" aria-pressed="false">走两步</button><button data-behavior="fruit-hiccup" aria-pressed="false">果粒打嗝</button><button data-behavior="sleep-cycle" aria-pressed="false">睡个觉</button><button data-behavior="affection-click" aria-pressed="false">点一下</button><button data-behavior="held" aria-pressed="false">拎起来</button><button data-behavior="drop-recover" aria-pressed="false">落地恢复</button><button data-behavior="cursor-encounter" aria-pressed="false">遇见光标</button></div><div class="phase-card"><p class="small-label">当前行为 <strong id="behavior-name">正在加载动画…</strong></p><ol id="phase-list" aria-label="行为阶段"></ol><p class="phase-detail" id="phase-detail">准备读取上游 pet.json 与透明帧条。</p><button class="button event-button" id="phase-event" hidden>发送完成事件 →</button><p class="pet-error" id="pet-error" role="alert" hidden></p></div><p class="pet-explanation">一次行为由若干阶段组成。播放完毕、走到目标、放开鼠标或收到唤醒请求，才会进入下一阶段。睡眠会停留在循环阶段，等待唤醒。</p><a class="text-link" href="assets/upstream/desktop-pet/motion-preview.gif" target="_blank">另看写实卡通桌宠的完整动作预览 ↗</a></div></div>
+        <p class="section-note">本页用简化播放器演示上游行为数据；行走、光标接近和落地通过按钮发送完成事件。系统透明窗口、桌面拖拽、物理和托盘由 Electron 原生运行器负责，未在本页运行。</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="principles" aria-labelledby="principles-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / HOW IT WORKS</p><h2 id="principles-title">把“这种感觉”，拆成可以执行的步骤。</h2></div></div>
+      <p class="principle-lead">风格规则决定画面怎么组织，图像模型负责创作，Python 负责处理与校验，Electron 负责桌面运行。<br>这个库把它们安排成有先后顺序、可单独返修的流程。</p>
+      <div class="layer-map"><div><span>创作规则</span><strong>Skill + 参考文档</strong><p>路由、构图、线条、字形与身份约束</p></div><b aria-hidden="true">→</b><div><span>视觉生成</span><strong>宿主的图像模型</strong><p>结合照片、参考图与分阶段提示创作</p></div><b aria-hidden="true">→</b><div><span>处理与校验</span><strong>Python + Pillow</strong><p>文字合成、帧条处理、审核图与角色包</p></div><b aria-hidden="true">→</b><div><span>桌面运行</span><strong>Electron + Canvas</strong><p>透明窗口、帧播放与事件驱动行为</p></div></div>
+      <div class="pipeline-top"><p class="small-label">选择一条创作路径，逐步查看</p><div class="segmented" role="group" aria-label="原理路径"><button data-pipeline="poster" aria-pressed="true">带字海报</button><button data-pipeline="monster" aria-pressed="false">风味小怪兽</button><button data-pipeline="desktop" aria-pressed="false">可运行桌宠</button></div></div>
+      <div class="pipeline-workbench"><ol class="pipeline-steps" id="pipeline-steps" aria-label="创作步骤"></ol><div class="step-content" id="step-content" aria-live="polite"></div></div>
+      <div class="principle-observation"><span aria-hidden="true">✳</span><p><strong>为什么要拆开？</strong>文字不对，可以只改文字；角色不对，先修角色；某个动作失败，只返修那个动作。已经通过的部分继续锁定，降低一次重做牵动整张图、整套动作的机会。</p></div>
+    </section>
+
+    <section class="value-section" id="value" aria-labelledby="value-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">04 / WHY IT IS USEFUL</p><h2 id="value-title">值得带走的，是一套创作方法。</h2></div><p class="section-intro">把审美经验写成规则，<br>让一张图的创作经验可以继续复用。</p></div>
+      <div class="value-editorial"><p class="value-statement">让风格<span>有依据</span>，<br>让修改<span>有落点</span>，<br>让角色<span>有延续</span>。</p><div class="value-analysis"><article><span>01 / 表达</span><h3>给产品一个小故事</h3><p>实物提供可信质感，手绘动作提供轻松的叙事。适合餐饮、生活方式内容与社交海报的视觉探索。</p></article><article><span>02 / 协作</span><h3>把“差一点感觉”说具体</h3><p>把线条、字形、留白和材料关系拆成可检查要求。反馈可以定位到一个字形、一段轮廓或一个动作。</p></article><article><span>03 / 延展</span><h3>同一个角色，走向不同媒介</h3><p>确认后的角色身份同时约束产品互动图与桌宠动作，连接静态内容和轻互动体验。</p></article></div></div>
+      <div class="technology-summary" aria-labelledby="technology-title"><p class="eyebrow">可沉淀的技术</p><h3 id="technology-title">从风格经验，到可复用的创作与运行工具。</h3><div class="technology-table"><div><strong>风格与参考协议</strong><p>构图、线条、字形与材料规则 → 可切换风格的 Skill 和提示模板。</p></div><div><strong>分阶段生成与局部返修</strong><p>底图与标题分离、先线后色、锁定通过项 → 可记录和定向修改的创作流程。</p></div><div><strong>角色身份约束</strong><p>固定轮廓、脸、四肢和材料 → 供海报、姿态和动画共用的角色身份档案。</p></div><div><strong>透明动画资产工具链</strong><p>帧条、锚点、贴地、manifest 和 ZIP 校验 → 可重复运行的处理、审核与打包工具。</p></div><div><strong>事件行为与共享运行器</strong><p>阶段完成事件、优先级、冷却、角色包分离 → 可导入不同角色的轻互动运行层。</p></div></div><p class="section-note">以上已有上游规则或代码依据，可继续提炼为独立模块；本研究尚未将它们封装为通用 SDK。</p></div>
+      <p class="extension-intro">后期可扩展的使用场景 · 下面是候选方向，需要额外集成与实测。</p>
+      <div class="scenario-picker"><label for="scenario">如果我想用它来做</label><select id="scenario"><option value="content">餐饮与电商内容</option><option value="character">原创 IP 与系列视觉</option><option value="companion">互动营销与轻陪伴</option><option value="workflow">多风格 AI 创作工具</option></select><span aria-hidden="true">↙</span></div><div class="scenario-result" id="scenario-result" aria-live="polite"></div>
+      <p class="section-note">以上为基于源码与样张的价值分析。效率、转化率、系列一致性和用户留存的提升，仍需用自己的任务与受众实测。</p>
+    </div></section>
+
+    <section class="section wrap" id="boundaries" aria-labelledby="boundaries-title"><div class="boundary-heading"><p class="eyebrow">05 / KNOW THE EDGES</p><h2 id="boundaries-title">用之前，先知道它依赖什么。</h2></div><div class="boundary-grid"><article><span>创作依赖</span><h3>图像能力来自宿主</h3><p>仓库提供 Skill、参考规则和工具。实际生成需要可用的图像模型；单独安装 Python 依赖还不能完成海报创作。</p></article><article><span>质量边界</span><h3>一致性需要人工看图</h3><p>中文、主体细节、透明边缘和角色动作都可能偏离要求。上游设有形象与动作两次确认，格式校验覆盖文件结构和部分可量化约束。</p></article><article><span>使用条件</span><h3>静态创作与桌面运行分开</h3><p>海报和静态角色无需 Electron；运行桌宠才需要对应环境。风味小怪兽使用 schema v3，要求运行器 3.1.0 或更高。</p></article></div></section>
+
+    <section class="sources-section wrap" id="sources" aria-labelledby="sources-title"><div><p class="eyebrow">06 / RESEARCH NOTES</p><h2 id="sources-title">每一个结论，都能回到来源。</h2><p>固定研究版本 <code>d5125372adcc</code> · 2026.10.22<br>本页展示上游样张与真实动画帧，附源码分析及浏览器验证记录。</p><div class="source-actions"><a class="button dark" href="downloads/research-notes.md" download>下载研究笔记 ↓</a><a class="text-link" href="downloads/example-pet-v3.zip" download>下载上游示例角色包 ↓</a><a class="text-link" href="standalone.html" download="heytea-style-offline.html">下载离线网页 ↓</a></div><p class="download-note">示例 ZIP 需导入独立桌宠运行器；本页不安装软件。</p></div><ol class="source-links"><li><a data-source="SKILL.md" href="https://github.com/Hchen1218/heytea-style/blob/d5125372adcc945c2314cfb649c50407379a18ab/SKILL.md" target="_blank" rel="noreferrer"><span>01</span>Skill 路由与确认流程 ↗</a></li><li><a data-source="references/lettering-guide.md" href="https://github.com/Hchen1218/heytea-style/blob/d5125372adcc945c2314cfb649c50407379a18ab/references/lettering-guide.md" target="_blank" rel="noreferrer"><span>02</span>海报风格与标题分层 ↗</a></li><li><a data-source="references/desktop-pet-workflow.md" href="https://github.com/Hchen1218/heytea-style/blob/d5125372adcc945c2314cfb649c50407379a18ab/references/desktop-pet-workflow.md" target="_blank" rel="noreferrer"><span>03</span>角色设计与动作工作流 ↗</a></li><li><a data-source="references/desktop-pet-pack.md" href="https://github.com/Hchen1218/heytea-style/blob/d5125372adcc945c2314cfb649c50407379a18ab/references/desktop-pet-pack.md" target="_blank" rel="noreferrer"><span>04</span>角色包与运行器协议 ↗</a></li><li><a href="downloads/SOURCE.json" download><span>05</span>素材来源、固定版本与 SHA-256 ↓</a></li><li><a href="downloads/NOTICE.md"><span>06</span>许可与素材署名说明 ↗</a></li></ol></section>
+  </main>
+  <footer class="site-footer wrap"><a class="footer-brand" href="#">heytea-style <span>照片的手绘想象</span></a><p>015 / GitHub 项目研究库 · 独立研究，非喜茶官方项目</p><a href="https://github.com/Hchen1218/heytea-style" target="_blank" rel="noreferrer">探索原始仓库 ↗</a></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-caption"><button id="close-dialog" aria-label="关闭大图">关闭 ×</button><img id="dialog-image" alt="当前选中效果的放大图片"><p id="dialog-caption"></p></dialog>
+  <noscript><p class="noscript-note">启用 JavaScript 可切换图集、查看交互原理和播放桌宠。当前海报、说明与来源链接仍可阅读。</p></noscript>
+</body>
+</html>

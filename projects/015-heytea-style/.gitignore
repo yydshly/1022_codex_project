@@ -1,0 +1,5 @@
+web/assets/
+web/downloads/
+web/standalone.html
+__pycache__/
+upstream/scripts/__pycache__/

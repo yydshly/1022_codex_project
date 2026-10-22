@@ -1,0 +1,729 @@
+{
+  "repository": "https://github.com/Hchen1218/heytea-style",
+  "commit": "d5125372adcc945c2314cfb649c50407379a18ab",
+  "commit_date": "2026-09-04T07:11:37Z",
+  "research_date": "2026-10-22",
+  "files": [
+    {
+      "upstream_path": "assets/examples/desktop-pet/canonical-pet.png",
+      "local_path": "assets/upstream/desktop-pet/canonical-pet.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/desktop-pet/canonical-pet.png",
+      "sha256": "6d1573fec36e9e59a023c7bacc922ca1fca4455313ec4a76d2364d5983c294a2",
+      "bytes": 532871,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/desktop-pet/contact-sheet.png",
+      "local_path": "assets/upstream/desktop-pet/contact-sheet.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/desktop-pet/contact-sheet.png",
+      "sha256": "1d5940b2140c30138da84cabb2fdc6b1f04f5f9fac1ffc958223e4849afe9767",
+      "bytes": 513500,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/desktop-pet/motion-preview.gif",
+      "local_path": "assets/upstream/desktop-pet/motion-preview.gif",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/desktop-pet/motion-preview.gif",
+      "sha256": "7d67a5d167d91c29c40c9dab4a4f60046e9fd396e621d3a0c3a6f73effae1786",
+      "bytes": 1136477,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/desktop-pet/runtime-screenshot.png",
+      "local_path": "assets/upstream/desktop-pet/runtime-screenshot.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/desktop-pet/runtime-screenshot.png",
+      "sha256": "a643b48f32eca3728685c4767bf4e7193890d1fca434ab8c976c559347933c64",
+      "bytes": 157381,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/desktop-pet/source-drink.png",
+      "local_path": "assets/upstream/desktop-pet/source-drink.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/desktop-pet/source-drink.png",
+      "sha256": "ef3ec8d22b41a784106192bf1378c9557b888bf49bf6db6ddf95cb6a34cbcc8b",
+      "bytes": 1960990,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/monster-poster/pink-green-monster-product-interaction.png",
+      "local_path": "assets/upstream/monster-poster/pink-green-monster-product-interaction.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/monster-poster/pink-green-monster-product-interaction.png",
+      "sha256": "c9d8f8669ab915a536a527f88c83c9ab7aa4d310dba633bc1ffbc9030a0fd7be",
+      "bytes": 1506288,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/affection-click/response.webp",
+      "local_path": "assets/upstream/pet-v3/animations/affection-click/response.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/affection-click/response.webp",
+      "sha256": "2f5cce7ddb876d6c420d0dd5bbd4bef12b42c488fa47c2d5edd1c95ee1fb76c3",
+      "bytes": 383608,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/awake-story/story.webp",
+      "local_path": "assets/upstream/pet-v3/animations/awake-story/story.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/awake-story/story.webp",
+      "sha256": "fe73eb68d27e86a167f3314742c08e58ea679c40786f446dcff2d8a0d088a82c",
+      "bytes": 421254,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/approach.webp",
+      "local_path": "assets/upstream/pet-v3/animations/cursor-encounter/approach.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/approach.webp",
+      "sha256": "fef2d96d82fb24b62c5fe088860cdc73bb347fff11825c5b6024e93b110fca42",
+      "bytes": 94290,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/notice.webp",
+      "local_path": "assets/upstream/pet-v3/animations/cursor-encounter/notice.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/notice.webp",
+      "sha256": "16624bfc0557e6b3966c6ca7d57ae4da79cc54377f5aef36cb0189d9100a561f",
+      "bytes": 136488,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/retreat.webp",
+      "local_path": "assets/upstream/pet-v3/animations/cursor-encounter/retreat.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/retreat.webp",
+      "sha256": "cc62e71477684fb526ae4befeae69b3ffb1cb8109385f225b90ba3a0e7b80514",
+      "bytes": 44450,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/settle.webp",
+      "local_path": "assets/upstream/pet-v3/animations/cursor-encounter/settle.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/settle.webp",
+      "sha256": "0778004926b92dd005b3f2420c22b809a6de561cebecc1e52e15b4cda878dc51",
+      "bytes": 47760,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/touch.webp",
+      "local_path": "assets/upstream/pet-v3/animations/cursor-encounter/touch.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/cursor-encounter/touch.webp",
+      "sha256": "32984510daf2030927f351dc8429d16aa74d98bbb7ba5cdf5f9d03ce27c294dd",
+      "bytes": 44314,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/fall-loop.webp",
+      "local_path": "assets/upstream/pet-v3/animations/drop-recover/fall-loop.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/fall-loop.webp",
+      "sha256": "1c9fca0bc45f6d7d3370482e7ba316dd5465a48b7043b95ec62d34c66f333709",
+      "bytes": 135972,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/impact.webp",
+      "local_path": "assets/upstream/pet-v3/animations/drop-recover/impact.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/impact.webp",
+      "sha256": "9b34746c4e5b4037377ead002547a64cb16d46cbf6ab8d8efd2de0c41d871a91",
+      "bytes": 35892,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/rebound.webp",
+      "local_path": "assets/upstream/pet-v3/animations/drop-recover/rebound.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/rebound.webp",
+      "sha256": "64a7874cf89389f25ff39f3fe90d2e7c163e08d2fe0a2ac443f697383b3c1f59",
+      "bytes": 46572,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/settle.webp",
+      "local_path": "assets/upstream/pet-v3/animations/drop-recover/settle.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/drop-recover/settle.webp",
+      "sha256": "4891cd7dadd298ef51e5ed9fae14fe798507416128766459ebd3d89f23504932",
+      "bytes": 92154,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/explore-walk/start.webp",
+      "local_path": "assets/upstream/pet-v3/animations/explore-walk/start.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/explore-walk/start.webp",
+      "sha256": "26fcc9c061b3ea97f73a0aa6ea70b417bb9912eed6da29c2d492f91818b1173b",
+      "bytes": 89008,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/explore-walk/stop.webp",
+      "local_path": "assets/upstream/pet-v3/animations/explore-walk/stop.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/explore-walk/stop.webp",
+      "sha256": "326d608a12404f34deb0eff39248d3afee1ebdb4a8d414ace53aa007358b1da3",
+      "bytes": 158838,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/explore-walk/walk-loop.webp",
+      "local_path": "assets/upstream/pet-v3/animations/explore-walk/walk-loop.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/explore-walk/walk-loop.webp",
+      "sha256": "51f088191701a258bc2526700240610a4887662a8a998de019a595877560fbd8",
+      "bytes": 138390,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/fruit-hiccup/hiccup.webp",
+      "local_path": "assets/upstream/pet-v3/animations/fruit-hiccup/hiccup.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/fruit-hiccup/hiccup.webp",
+      "sha256": "1ac0a8d940bd165eb2af335383374938950ce0012174bbe1efee898597ad2d7f",
+      "bytes": 371052,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/held/grab-enter.webp",
+      "local_path": "assets/upstream/pet-v3/animations/held/grab-enter.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/held/grab-enter.webp",
+      "sha256": "56548b8a788025bae7aa4dd7bb6262f7ced235dfe3438a14bcb2e3ed281299be",
+      "bytes": 169134,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/held/held-loop.webp",
+      "local_path": "assets/upstream/pet-v3/animations/held/held-loop.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/held/held-loop.webp",
+      "sha256": "e798211b89ea5dfeecd3d720e9367850a3739c49fc4bd6ee5584893dc8518072",
+      "bytes": 90522,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/sleep-cycle/sleep-enter.webp",
+      "local_path": "assets/upstream/pet-v3/animations/sleep-cycle/sleep-enter.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/sleep-cycle/sleep-enter.webp",
+      "sha256": "cda4580a1764c1b656962df55588fcd5bfd613d5b43ef6689155f6e2859469be",
+      "bytes": 166020,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/sleep-cycle/sleeping-loop.webp",
+      "local_path": "assets/upstream/pet-v3/animations/sleep-cycle/sleeping-loop.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/sleep-cycle/sleeping-loop.webp",
+      "sha256": "c650e9163246c69bc7a2630d83035a0c800d36f9d95e6fb53300407c0d51b971",
+      "bytes": 66050,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/animations/sleep-cycle/wake-exit.webp",
+      "local_path": "assets/upstream/pet-v3/animations/sleep-cycle/wake-exit.webp",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/animations/sleep-cycle/wake-exit.webp",
+      "sha256": "cb54d7ce214e4286fea2052c5537325e7ca1b84b6a1c3716090a7ea48fccf9a9",
+      "bytes": 153626,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/pet.json",
+      "local_path": "assets/upstream/pet-v3/pet.json",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/pet.json",
+      "sha256": "aefc38268dba3cf5348c44b12a35ceb9124bcea27d29131274fd6aed04a727ee",
+      "bytes": 6030,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "examples/desktop-pet/pink-green-flavor-monster-v3/preview.png",
+      "local_path": "assets/upstream/pet-v3/preview.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/examples/desktop-pet/pink-green-flavor-monster-v3/preview.png",
+      "sha256": "240daeb552fef3e25e0c5ba291edc629074c49486b13c9ae389028f3da0dc2fa",
+      "bytes": 2005652,
+      "license": "CC BY 4.0",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/poster/doodle-poster.png",
+      "local_path": "assets/upstream/poster/doodle-poster.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/poster/doodle-poster.png",
+      "sha256": "b431eacdeb39b4f921572a2b0fa78a9c4c90268addee2ad9dc120d02a0e96445",
+      "bytes": 1910264,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/poster/source-food.jpg",
+      "local_path": "assets/upstream/poster/source-food.jpg",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/poster/source-food.jpg",
+      "sha256": "1e9abfeb2314b340f05e09da41bdd89cf7c1e66dca7a953ae5b1b9f2a2d09506",
+      "bytes": 303941,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/examples/poster/typography-poster.png",
+      "local_path": "assets/upstream/poster/typography-poster.png",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/examples/poster/typography-poster.png",
+      "sha256": "1c643fc53939ef2d835a5c27301cb7fc6bf0c7132e2fc38b2e4e9dd5e7eef4aa",
+      "bytes": 1860983,
+      "license": "CC BY 4.0; embedded third-party marks retain their rights",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "ASSET-NOTICE.md",
+      "local_path": "upstream/ASSET-NOTICE.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/ASSET-NOTICE.md",
+      "sha256": "3012540e7c506b0da9805a1ca7f35d13d07daab4af2dc2d956d8edf37a18fc19",
+      "bytes": 994,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "LICENSE",
+      "local_path": "upstream/LICENSE",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/LICENSE",
+      "sha256": "d83ab8f95fba890d9f50e257597155fa327197a615c6ba215821b3b089528a30",
+      "bytes": 1082,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "README.md",
+      "local_path": "upstream/README.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/README.md",
+      "sha256": "df80df2373d5ab28a99f44a1bf17b825c1a2bf82133eca407c74c49490e6b361",
+      "bytes": 8470,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "SKILL.md",
+      "local_path": "upstream/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/SKILL.md",
+      "sha256": "875a27258cbfdadec809cbd386ee42b70d70f6ea591f09891c6ba51909451ad3",
+      "bytes": 8041,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/package.json",
+      "local_path": "upstream/assets/desktop-pet-runtime/package.json",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/package.json",
+      "sha256": "838fc4632c2909abe9717d2119af790de98054bfb4cedc35b14584da50d40f6d",
+      "bytes": 1141,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/command-line.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/command-line.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/command-line.js",
+      "sha256": "aaf2825e4927a4f27a3ef16642a6d63fcc8dcecdeb9d02186e1dcdb8bdd61fd7",
+      "bytes": 718,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/command-queue.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/command-queue.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/command-queue.js",
+      "sha256": "6a28f81dc483ad9b079576c2f71d1de120930b121d621438573a1b3b9bf35cfa",
+      "bytes": 613,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/episode-player.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/episode-player.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/episode-player.js",
+      "sha256": "35c6e41df4401fe337331be16f85645b60adbd11fa8ea3f280642876efae86aa",
+      "bytes": 2197,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/floor-policy.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/floor-policy.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/floor-policy.js",
+      "sha256": "5b5430b7b7dc4249904abd3abfbb76b49be77c95dca30f1e82967b64b7bb70ef",
+      "bytes": 360,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/frame-grounding.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/frame-grounding.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/frame-grounding.js",
+      "sha256": "bd21577af7722af7c9c3b8ddc5f9fd811e77501981ca18b52324cce6ffc2206e",
+      "bytes": 711,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/gesture-state.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/gesture-state.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/gesture-state.js",
+      "sha256": "ec3e17d5556c9ccbaf158fd0a8d351fad92cfb69908d244b23d707e8d1502a53",
+      "bytes": 1366,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/manifest.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/manifest.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/manifest.js",
+      "sha256": "fd4abe87dfdbde5f5073352bf598623f38af76c60956fb25743bbd8fc1da8f9b",
+      "bytes": 11561,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/motion-planner.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/motion-planner.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/motion-planner.js",
+      "sha256": "ce10aac2f9c93fa77e65c0cd558cc42440dfda8207aa9cdde7ad4fcf51416ca9",
+      "bytes": 1117,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/runtime-model.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/runtime-model.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/runtime-model.js",
+      "sha256": "96a52f7e2b084d6c34ee1bce0e3350d97cf97452c50818e437e53624810634bc",
+      "bytes": 4634,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/trigger-controller.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/trigger-controller.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/trigger-controller.js",
+      "sha256": "596539aceccabbdcef8ccd9eba9b7a202ccf0d9d3cef5e395a01cd3c5e6f0c9f",
+      "bytes": 7023,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/core/walk-planner.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/core/walk-planner.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/core/walk-planner.js",
+      "sha256": "b01ea136f231c1c413b98770706b209b58efadf5afbb88751561014dac165b50",
+      "bytes": 765,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/main.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/main.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/main.js",
+      "sha256": "86bfdfd9db67600732874c21a0208ea3d941fd28f4903d5c6a6771f46afeccea",
+      "bytes": 29143,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/preload.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/preload.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/preload.js",
+      "sha256": "94a9cbb349855766789e3e628d7c000d3159d5117534f76ad2199e0ea84204b6",
+      "bytes": 2029,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/renderer/index.html",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/renderer/index.html",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/renderer/index.html",
+      "sha256": "9ec01b95147687fe0defa1049ee11efea8278e651e105f4ec980ec45adf2ab1e",
+      "bytes": 730,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/renderer/pet.js",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/renderer/pet.js",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/renderer/pet.js",
+      "sha256": "2af99e1af9d9f004298562869c12035e2c0dddf7f7cc00fca48194df9c14d5da",
+      "bytes": 14105,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "assets/desktop-pet-runtime/src/renderer/style.css",
+      "local_path": "upstream/assets/desktop-pet-runtime/src/renderer/style.css",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/assets/desktop-pet-runtime/src/renderer/style.css",
+      "sha256": "b44b9e17166fc55cebb5e63b2fb9d46e57345bed79923674ba5954c1b13017a9",
+      "bytes": 969,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/desktop-pet-character-modes.md",
+      "local_path": "upstream/references/desktop-pet-character-modes.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/desktop-pet-character-modes.md",
+      "sha256": "3be859d816fc58317ef0b15f3d827e31fb593c3f2d3c62893af6848d22e5d2c4",
+      "bytes": 16061,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/desktop-pet-environment.md",
+      "local_path": "upstream/references/desktop-pet-environment.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/desktop-pet-environment.md",
+      "sha256": "047e8b25021755636e81248550220baf01c58913eb5f9005c2d3b3338b39bd8e",
+      "bytes": 9157,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/desktop-pet-pack.md",
+      "local_path": "upstream/references/desktop-pet-pack.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/desktop-pet-pack.md",
+      "sha256": "6b37c797ba92b51e7e3e8cb0de80abf657a12a2b751b04e0041affc41dd8991a",
+      "bytes": 7996,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/desktop-pet-workflow.md",
+      "local_path": "upstream/references/desktop-pet-workflow.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/desktop-pet-workflow.md",
+      "sha256": "8c378c402ef0214b134c812aa3345d1809d632938fe56870eb2751f6aeba59c6",
+      "bytes": 23593,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/evaluation.md",
+      "local_path": "upstream/references/evaluation.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/evaluation.md",
+      "sha256": "042df7ec7633c5cf9c9780f8732d156c64869c9c40b911fda473124ba5731ae6",
+      "bytes": 25784,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/flavor-monster-v3-phase-recipe.json",
+      "local_path": "upstream/references/flavor-monster-v3-phase-recipe.json",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/flavor-monster-v3-phase-recipe.json",
+      "sha256": "98afeb80d6f6bb8d63bccd9b553e73619ee59c5c3c3966125c17add9d705dafd",
+      "bytes": 1415,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/lettering-guide.md",
+      "local_path": "upstream/references/lettering-guide.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/lettering-guide.md",
+      "sha256": "7aebd85153be217028c8da2c83c21f14d59b624f542dfd1a8ec02c5b63cec1fa",
+      "bytes": 11684,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/mixed-media-style-guide.md",
+      "local_path": "upstream/references/mixed-media-style-guide.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/mixed-media-style-guide.md",
+      "sha256": "51f911a9cddab101eef4768eef991e0546a86dd489b3acb3ca60fa7b42674101",
+      "bytes": 12658,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/monster-poster-workflow.md",
+      "local_path": "upstream/references/monster-poster-workflow.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/monster-poster-workflow.md",
+      "sha256": "2f2d727c86884b8144f05f14069bf68ba1f377b20a610a37761582ce09f9b402",
+      "bytes": 3925,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "references/style-guide.md",
+      "local_path": "upstream/references/style-guide.md",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/references/style-guide.md",
+      "sha256": "1839414e03f7eac385726884c36f8d37767c8dc3cfa66c707073ba533ae06bca",
+      "bytes": 25221,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "requirements.txt",
+      "local_path": "upstream/requirements.txt",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/requirements.txt",
+      "sha256": "1c803ca04270f3acd340ace239b1e86931871344e0070b4f6db9a59ae56336cb",
+      "bytes": 17,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/build_desktop_pet_delivery.py",
+      "local_path": "upstream/scripts/build_desktop_pet_delivery.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/build_desktop_pet_delivery.py",
+      "sha256": "a6396684bed37cc229bfe13d20086b2dfc96b51d88be1d0beccaf6bfd83789ee",
+      "bytes": 7862,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/build_desktop_pet_pack.py",
+      "local_path": "upstream/scripts/build_desktop_pet_pack.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/build_desktop_pet_pack.py",
+      "sha256": "12400abc5393e2d7fed44dcefb63ce30e1cfcc4abd788ace68d4ce3bc695f862",
+      "bytes": 9665,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/build_title_reference_sheet.py",
+      "local_path": "upstream/scripts/build_title_reference_sheet.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/build_title_reference_sheet.py",
+      "sha256": "610a88cdbe4c2ed3b884e7755d95de558bc1cbbc29eca481f4708f84a476f33e",
+      "bytes": 8590,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/check_desktop_pet_environment.py",
+      "local_path": "upstream/scripts/check_desktop_pet_environment.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/check_desktop_pet_environment.py",
+      "sha256": "44c0f6d21147cfc88d32321ca89b9a2170720a7164e3d1b9d24a196c7a3a6988",
+      "bytes": 18678,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/composite_title_layer.py",
+      "local_path": "upstream/scripts/composite_title_layer.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/composite_title_layer.py",
+      "sha256": "be978269b2f40f9df4371c9bba5fcab01977ece6a354c3f61c7cf1540eb67f20",
+      "bytes": 2447,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/desktop_pet.py",
+      "local_path": "upstream/scripts/desktop_pet.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/desktop_pet.py",
+      "sha256": "0ebd53d2159c7d820f721ec18bd51ec677132eb321791348394dadde0f88b022",
+      "bytes": 9683,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/install_desktop_pet_runtime.py",
+      "local_path": "upstream/scripts/install_desktop_pet_runtime.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/install_desktop_pet_runtime.py",
+      "sha256": "aa53548c75db14a8d834e2bc4648d8a21218477903d80ff76aae732ad0fd048e",
+      "bytes": 24814,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/prepare_generated_animation_strips.py",
+      "local_path": "upstream/scripts/prepare_generated_animation_strips.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/prepare_generated_animation_strips.py",
+      "sha256": "30ee27f2e305b5a94e3b4a2d58d6b1f79f0aa3b02ee9e181ec6ced6935f9109c",
+      "bytes": 9213,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    },
+    {
+      "upstream_path": "scripts/validate_desktop_pet_pack.py",
+      "local_path": "upstream/scripts/validate_desktop_pet_pack.py",
+      "url": "https://raw.githubusercontent.com/Hchen1218/heytea-style/d5125372adcc945c2314cfb649c50407379a18ab/scripts/validate_desktop_pet_pack.py",
+      "sha256": "9f2164299e6cd5c119f41c247b6c0abde66ef4737d0138f5eb63566d692ab135",
+      "bytes": 22478,
+      "license": "MIT; see upstream/ASSET-NOTICE.md for references",
+      "attribution": "heytea-style contributors",
+      "modified": false
+    }
+  ],
+  "scope": "Public original examples and source only; no private-assets/reference-cutouts"
+}

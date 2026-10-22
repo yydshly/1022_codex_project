@@ -1,0 +1,10 @@
+*.json text eol=lf
+*.md text eol=lf
+scripts/*.py text eol=lf
+web/*.html text eol=lf
+web/*.css text eol=lf
+web/*.js text eol=lf
+# Keep original upstream bytes stable across Windows and CI checkouts.
+upstream/** -text
+assets/upstream/** -text
+LICENSE.upstream.txt -text

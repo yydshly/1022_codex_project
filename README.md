@@ -15,7 +15,7 @@
 按收录顺序编号，从 **001** 开始递增。编号长期保留，不因进度、热度或归档重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **12** 个项目。
+当前收录 **13** 个项目。
 
 | 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- | --- |
@@ -31,6 +31,7 @@
 | 012 | [Super Hermes · 多 Skill 问题定位与审查](projects/012-super-hermes/README.md) | [super-hermes](https://github.com/Cranot/super-hermes) | 面向代码问题定位与方案审查的提示词 Skill 包：5 个 Skill 组织定向检查、多轮反驳、三视角分析、方向探索与盲区记录，7 份模板提供检查角度。模型结合材料分析，工具和证据验证；本研究归纳七步定位与九项报告，可复用为跨项目排查规范。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/012-super-hermes/) |
 | 013 | [Old Coder · AI 编码的验收与证据](projects/013-old-coder/README.md) | [old-coder](https://github.com/AmazingAng/old-coder) | 把需求写成SPEC，以测试驱动、多层检查和可复跑报告核对AI代码，让已定义的错误可暴露、交付有据可验；可沉淀验收模板、故障模型、变异与属性测试、检查器和CI门槛，扩展到订单库存、权限与API、重构迁移及团队发布验收 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/013-old-coder/) |
 | 014 | [Seijaku · 住宅导览与三项目对比](projects/014-seijaku/README.md) | [seijaku](https://github.com/MengTo/seijaku) | 基于 Three.js 的日式住宅交互网页：连续漫游室内外，结合四季联动、材料特写、构造拆解和声景；对比 Kage、Sublevel 及已有住宅扩展，研究季节材质、构件展开与标注、资源预热与按需绘制，可扩展到旅宿导览、展馆教育、产品工艺展示和空间作品集。 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/014-seijaku/) |
+| 015 | [heytea-style · 照片二次创作与桌宠](projects/015-heytea-style/README.md) | [heytea-style](https://github.com/Hchen1218/heytea-style) | 以已有照片为素材，用AI二次创作手绘海报、风味怪兽和产品互动图，再把角色制成可点击拖拽的桌宠；可沉淀风格规则、分阶段生成与身份约束、透明帧校验及事件驱动运行，扩展到餐饮电商内容、原创IP系列、互动营销与轻陪伴应用。 | 已完成 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览
@@ -181,6 +182,18 @@ Auto Paper Digest 用 Python、SQLite、Playwright 与 Gradio 串联论文采集
 [研究详情](projects/014-seijaku/README.md) · [原始仓库](https://github.com/MengTo/seijaku) · [在线演示](https://yydshly.github.io/1022_codex_project/014-seijaku/)
 
 标签：Three.js / 住宅导览 / 四季与构造 / 同类对比
+
+### 015 · heytea-style · 照片二次创作与桌宠
+
+以已有照片为素材，用AI二次创作手绘海报、风味怪兽和产品互动图，再把角色制成可点击拖拽的桌宠；可沉淀风格规则、分阶段生成与身份约束、透明帧校验及事件驱动运行，扩展到餐饮电商内容、原创IP系列、互动营销与轻陪伴应用。
+
+![015 · heytea-style · 照片二次创作与桌宠 项目封面](projects/015-heytea-style/assets/capability-overview.png)
+
+> 内置 ImageGen 参考上游样张生成的一图总览：展示海报、风味小怪兽、产品互动图与桌宠四种效果，解释照片、Skill、AI、Python及Electron的分工，并归纳内容表达、协作复用和角色延展价值。效果为概览合成，桌面为示意。
+
+[研究详情](projects/015-heytea-style/README.md) · [原始仓库](https://github.com/Hchen1218/heytea-style)
+
+标签：AI 海报 / 手绘叙事 / 角色设计 / Agent Skill / Electron
 <!-- PROJECT_CARDS:END -->
 
 ## 目录结构
