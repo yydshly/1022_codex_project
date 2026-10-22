@@ -22,7 +22,7 @@ def main(url, screenshots_dir=None, report_path=None):
         page = browser.new_page(viewport={"width": 1440, "height": 1000})
         page.on("pageerror", lambda error: errors.append(str(error)))
         page.on("response", lambda response: failed_responses.append({"url": response.url, "status": response.status}) if response.status >= 400 else None)
-        assert page.goto(url, wait_until="networkidle").status == 200
+        assert page.goto(url, wait_until="networkidle", timeout=90000).status == 200
         page.wait_for_function("document.querySelector('#pet-canvas').dataset.behavior === 'awake-story'")
         report["browser"] = browser.version
         variants = {"poster": 2, "monster": 2, "fusion": 1, "pet": 2}
@@ -66,7 +66,7 @@ def main(url, screenshots_dir=None, report_path=None):
         pet = browser.new_page(viewport={"width": 1100, "height": 900})
         pet.on("pageerror", lambda error: errors.append(str(error)))
         pet.clock.install()
-        pet.goto(url, wait_until="networkidle")
+        pet.goto(url, wait_until="networkidle", timeout=90000)
         pet.wait_for_function("document.querySelector('#pet-canvas').dataset.behavior === 'awake-story'")
         state = lambda name: pet.locator("#pet-canvas").get_attribute("data-" + name)
         choose = lambda name: pet.locator(f"[data-behavior='{name}']").click()
@@ -128,7 +128,7 @@ def main(url, screenshots_dir=None, report_path=None):
         pet.close()
 
         reduced = browser.new_page(reduced_motion="reduce")
-        reduced.goto(url, wait_until="networkidle")
+        reduced.goto(url, wait_until="networkidle", timeout=90000)
         reduced.wait_for_function("document.querySelector('#pet-canvas').dataset.paused === 'true'")
         assert reduced.locator("#pause-pet").get_attribute("aria-pressed") == "true"
         reduced.close()

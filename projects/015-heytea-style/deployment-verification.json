@@ -1,14 +1,14 @@
 {
   "date": "2026-10-22",
-  "checked_at_utc": "2026-10-22T14:40:56.050555+00:00",
-  "status": "waiting_for_github_actions",
+  "checked_at_utc": "2026-10-22T14:54:08.328322+00:00",
+  "status": "online_browser_passed_final_bytes_pending",
   "published_and_verified": false,
   "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/",
   "content_commit": "a3d0032b1cec09d48db8f8da4a5fb77144d621ba",
   "workflow_url": "https://github.com/yydshly/1022_codex_project/actions/workflows/deploy-pages.yml",
   "observed_run_id": 39797162903,
   "observed_run_status": "queued",
-  "last_public_http_status": 404,
+  "last_public_http_status": 200,
   "completed": [
     "remote main push",
     "catalog validation",
@@ -21,10 +21,8 @@
     "prior release build and artifact upload"
   ],
   "remaining": [
-    "Pages deployment completion",
-    "public file SHA-256 comparison",
-    "public browser interactions",
-    "register verified demo_url"
+    "publish standalone ordering fix",
+    "public file SHA-256 comparison after ordering fix"
   ],
   "incidents": [
     {
@@ -34,5 +32,8 @@
       "updated_at": "2026-10-22T14:35:29.243Z",
       "latest_update": "Repository update processing has recovered. We’re continuing to work on delays affecting GitHub Actions workflow and step results. We’ll share another update as we make progress."
     }
-  ]
+  ],
+  "page_available": true,
+  "browser_verification": "public-browser-verification.json",
+  "browser_status": "passed"
 }

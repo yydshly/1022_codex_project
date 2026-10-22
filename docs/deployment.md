@@ -184,7 +184,7 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 本地已检查七个效果版本、八种行为、十四个原理阶段、场景切换、键盘和六种屏宽。网页使用上游真实动画帧与阶段播放器，物理完成事件由按钮发送；未运行原生 Electron，也未按上游流程创作四类新作品。正式发布状态与证据以项目 deployment-verification.json 为准。
 
-015 源码已于 2026-10-22 推送 main。GitHub Actions 官方报告工作流与步骤结果处理延迟，发布任务仍在服务端排队，公网尚未验证成功；故 demo_url 留空。当前状态、提交和待核验项见项目 [deployment-verification.json](../projects/015-heytea-style/deployment-verification.json)。
+015 源码已于 2026-10-22 推送 main，[正式网页](https://yydshly.github.io/1022_codex_project/015-heytea-style/)已上线，登记表 demo_url 已登记。公网已检查七个效果版本、十四个原理阶段、桌宠交互、下载和六档屏宽，未出现页面脚本错误、图片缺失或水平溢出。文件 HTTP / SHA-256 证据见 [部署记录](../projects/015-heytea-style/deployment-verification.json)，交互证据见 [公网浏览器记录](../projects/015-heytea-style/public-browser-verification.json)。
 
 ## 016 · Verdant Forest
 

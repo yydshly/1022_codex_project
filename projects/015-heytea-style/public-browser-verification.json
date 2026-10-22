@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-22",
+  "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/",
+  "status": "passed",
+  "checks": [
+    "7 gallery variants load and expose correct selection",
+    "keyboard tab navigation, image dialog Escape, and focus return",
+    "14 steps across 3 pipelines show pinned source evidence",
+    "4 distinct value and validation scenarios",
+    "persistent sleep, explicit wake exit, then click response",
+    "walk enters loop, awaits motion-finished, then stops",
+    "held release leads to fall; floor-impact advances recovery",
+    "cursor notice, approach, touch, retreat, settle sequence",
+    "pause freezes frames, resume progresses, keyboard activates pet",
+    "reduced-motion defaults to a paused animation",
+    "standalone file works with network offline, gallery, animation and notes download",
+    "all 4 capability layouts fit 6 viewport widths",
+    "all 5 downloadable files return HTTP 200"
+  ],
+  "viewports": [
+    {
+      "width": 320,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 375,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 390,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 768,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 1024,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 1440,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    }
+  ],
+  "browser": "147.0.7727.15",
+  "page_errors": [],
+  "failed_http_responses": []
+}

@@ -227,7 +227,7 @@
       ],
       "cover": "assets/capability-overview.png",
       "cover_caption": "内置 ImageGen 参考上游样张生成的一图总览：展示海报、风味小怪兽、产品互动图与桌宠四种效果，解释照片、Skill、AI、Python及Electron的分工，并归纳内容表达、协作复用和角色延展价值。效果为概览合成，桌面为示意。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/"
     },
     {
       "id": "016",

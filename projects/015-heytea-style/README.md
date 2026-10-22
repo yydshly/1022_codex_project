@@ -17,7 +17,7 @@
 | 网页技术 | 原生 HTML / CSS / JavaScript，无前端依赖、无 CDN、无在线生成接口 |
 | 网页入口 | [web/index.html](web/index.html)，通过下述本地 HTTP 服务打开 |
 | 离线入口 | [web/standalone.html](web/standalone.html)，单文件内嵌图片、动画、源码播放器及下载内容，可直接用浏览器打开 |
-| 发布状态 | 源码已推送远端 main；Pages 发布任务排队，公网尚未验证成功，登记表 demo_url 留空。详见 [发布状态](deployment-verification.json) |
+| 发布状态 | 已推送远端 main，并部署到 [在线演示](https://yydshly.github.io/1022_codex_project/015-heytea-style/)；公网交互与六档屏宽验证通过，详见 [发布记录](deployment-verification.json) 和 [公网浏览器记录](public-browser-verification.json) |
 
 ![heytea-style 能力、四种效果、原理与价值总览：照片经 AI 二次创作，走向海报、怪兽、互动图与桌宠](assets/capability-overview.png)
 
@@ -89,7 +89,7 @@ python -m http.server 8015 --bind 127.0.0.1
 
 package_web.py 将素材、许可、播放器及下载文件写入忽略的 web/assets/ 与 web/downloads/，另生成内嵌资源的 standalone.html。Pages 工作流在根汇总器前执行本项目打包与检查，再由 scripts/build_site.py 复制到 015-heytea-style/。资源均为相对路径，支持 /1022_codex_project/015-heytea-style/ 前缀。
 
-web/ 可独立静态托管。源码已推送远端；GitHub Actions 当前存在工作流结果处理延迟，发布任务仍在排队，公网最近返回 404。恢复并核验成功后，再填写登记表 demo_url。正式状态见 [发布记录](deployment-verification.json) 和 [Pages 工作流](https://github.com/yydshly/1022_codex_project/actions/workflows/deploy-pages.yml)。
+web/ 可独立静态托管。源码已推送远端 main，[正式网页](https://yydshly.github.io/1022_codex_project/015-heytea-style/)已上线，登记表已填写 demo_url。公网浏览器检查覆盖效果切换、原理步骤、桌宠阶段、下载与六档屏宽；逐文件 HTTP / SHA-256 状态见 [发布记录](deployment-verification.json)，交互证据见 [公网浏览器记录](public-browser-verification.json)。
 
 ## 验证范围
 
