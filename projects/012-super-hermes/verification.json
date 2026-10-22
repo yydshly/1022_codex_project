@@ -152,5 +152,13 @@
     "staticChecksPassed": true,
     "browserRechecked": false,
     "supersedes": "Earlier six-step synthesis and eight-step case teaching; earlier verification entries are historical."
+  },
+  "publicationUpdate": {
+    "record": "deployment-verification.json",
+    "contentCommit": "d1ac92e0e3b80eb07cf00d375893c0ffa30847d1",
+    "actionsRun": "https://github.com/yydshly/1022_codex_project/actions/runs/39776656381",
+    "projectFilesHttp200AndByteIdentical": 43,
+    "guideSha256": "67c8e856d8b8920d25b7315063c67ff3ff0027a135701dd58db9f351de444ad5",
+    "browserRechecked": false
   }
 }

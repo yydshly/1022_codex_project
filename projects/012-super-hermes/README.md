@@ -2,7 +2,7 @@
 
 > 用 5 个 Markdown Skill 与 7 份分析模板组织 AI 问题定位和方案审查：规定检查动作、顺序、反驳与报告，模型结合材料完成分析，宿主提供工具、运行证据检验判断。我们将方法提炼为七步定位协议和九项报告，供不同项目复用；上游代码分析主要限定单文件。
 
-[打开研究网页](web/index.html) · [七步流程与能力总结图](assets/super-hermes-diagnosis-v3.png) · [七步协议与九项报告](web/assets/problem-diagnosis-protocol.txt) · [流程、规范与角度提炼](analysis-method.md) · [研究笔记](notes.md) · [来源与文件校验](SOURCE.json) · [上游仓库](https://github.com/Cranot/super-hermes)
+[在线网页](https://yydshly.github.io/1022_codex_project/012-super-hermes/) · [打开本地网页](web/index.html) · [七步流程与能力总结图](assets/super-hermes-diagnosis-v3.png) · [七步协议与九项报告](web/assets/problem-diagnosis-protocol.txt) · [流程、规范与角度提炼](analysis-method.md) · [研究笔记](notes.md) · [来源与文件校验](SOURCE.json) · [上游仓库](https://github.com/Cranot/super-hermes)
 
 ![Super Hermes 能力总结：多个分析 Skill、七步定位协议、逐步要求与产物、九项结论报告、验证要求和我们的复用价值](assets/super-hermes-diagnosis-v3.png)
 
@@ -132,7 +132,7 @@ python projects/012-super-hermes/scripts/verify_web.py
 python scripts/project_catalog.py check
 ```
 
-根汇总器会自动复制本项目 `web/`，兼容 `/1022_codex_project/012-super-hermes/`，无需新增前端依赖。现有 Pages 工作流在汇总前运行本项目资源与原文完整性检查；发布状态、Actions 与线上文件核验见 [部署记录](deployment-verification.json)。
+根汇总器会自动复制本项目 `web/`，兼容 `/1022_codex_project/012-super-hermes/`，无需新增前端依赖。现有 Pages 工作流在汇总前运行本项目资源与原文完整性检查；2026-10-22 已发布至 [正式入口](https://yydshly.github.io/1022_codex_project/012-super-hermes/)；[Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39776656381)成功。43 个项目发布文件均 HTTP 200 且与本地发布版本逐字节一致，总导航摘要和指定引导图已核验。详见 [部署记录](deployment-verification.json)。
 
 ## 在 Hermes 中使用上游 Skill
 

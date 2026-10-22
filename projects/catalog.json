@@ -174,7 +174,7 @@
       ],
       "cover": "assets/super-hermes-diagnosis-v3.png",
       "cover_caption": "我们生成的理解总结图：五个 Skill、模型与工具分工、七步定位协议、逐步要求和产物、九项结论报告、验证边界与复用价值。七步与完整报告是研究提炼，非原库内置强制执行器。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/012-super-hermes/"
     }
   ]
 }

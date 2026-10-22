@@ -153,4 +153,7 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 [多 Skill 问题定位与审查](../projects/012-super-hermes/README.md)通过五个问题说明能力、底层原理、模块、步骤和复用价值。上游提供 5 个 Markdown Skill 与 7 份分析模板，模型结合材料分析，宿主提供工具与证据检验；网页进一步展示我们提炼的七步定位协议、逐步输入与产物、九项报告、内存和并发实测、69 条规则及固定版本原文。七步和完整报告是研究提炼，原库主要用提示词引导且代码分析侧重单文件。
 
-首屏、网页全图与总导航封面统一使用已生成的 `super-hermes-diagnosis-v3.png`。项目无前端构建依赖，工作流先执行 `python projects/012-super-hermes/scripts/verify_web.py`，由根汇总器复制 `web/` 到 `/1022_codex_project/012-super-hermes/`。候选公开入口为 https://yydshly.github.io/1022_codex_project/012-super-hermes/ ；准确部署状态与线上字节核对见 [发布记录](../projects/012-super-hermes/deployment-verification.json)。
+首屏、网页全图与总导航封面统一使用已生成的 `super-hermes-diagnosis-v3.png`。项目无前端构建依赖，工作流先执行 `python projects/012-super-hermes/scripts/verify_web.py`，由根汇总器复制 `web/` 到 `/1022_codex_project/012-super-hermes/`。正式入口为 https://yydshly.github.io/1022_codex_project/012-super-hermes/ ；准确部署状态与线上字节核对见 [发布记录](../projects/012-super-hermes/deployment-verification.json)。
+
+2026-10-22 内容提交 `d1ac92e` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39776656381)成功。43 个项目文件均 HTTP 200 且与本地发布版本逐字节一致；总导航的五项理解摘要与指定引导图已核验。新增网页交互未在本轮重新复核，验证范围如实记录。
+

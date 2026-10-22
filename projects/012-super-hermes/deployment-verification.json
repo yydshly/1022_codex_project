@@ -1,11 +1,351 @@
 {
-  "updatedAt": "2026-10-22T12:11:56.106744+00:00",
-  "status": "prepared; awaiting remote commit and Pages deployment",
-  "targetUrl": "https://yydshly.github.io/1022_codex_project/012-super-hermes/",
+  "updatedAt": "2026-10-22T12:19:21.151549+00:00",
+  "status": "published and verified",
+  "siteUrl": "https://yydshly.github.io/1022_codex_project/012-super-hermes/",
+  "repository": "https://github.com/yydshly/1022_codex_project",
+  "contentCommit": "d1ac92e0e3b80eb07cf00d375893c0ffa30847d1",
+  "contentCommitUrl": "https://github.com/yydshly/1022_codex_project/commit/d1ac92e0e3b80eb07cf00d375893c0ffa30847d1",
+  "actions": {
+    "runId": 39776656381,
+    "url": "https://github.com/yydshly/1022_codex_project/actions/runs/39776656381",
+    "status": "completed",
+    "conclusion": "success"
+  },
   "guideImage": "assets/super-hermes-diagnosis-v3.png",
   "guideSha256": "67c8e856d8b8920d25b7315063c67ff3ff0027a135701dd58db9f351de444ad5",
-  "publicationBase": "57c02cbc44c81d74bb99d36fe08910dc35026f5d",
-  "scope": "012 project, its catalog/index entry, deployment docs, and one workflow integrity-check command. Other uncommitted projects excluded.",
-  "browserVerification": "No new browser interaction verification; prior Computer Use ended because browser URL could not be reliably determined.",
-  "modelInvoked": false
+  "summary": "Capabilities, prompt/context mechanism, 5 skills and 7 lenses, our 7-step diagnosis protocol with 9 report fields, and cross-project reuse value.",
+  "localChecks": {
+    "catalog": "passed in the isolated release (10 projects) and original workspace (13 projects)",
+    "sourceAndResources": "32 references, 129 IDs, 18 pinned upstream sources, study ZIP, race/memory evidence, 69 rules, 3 image versions and prompt copies verified",
+    "javascriptSyntax": "app.js and investigation.js passed node --check",
+    "numberedPackaging": "All 43 project web files copied byte for byte under 012-super-hermes; summary and selected image in generated landing page"
+  },
+  "http": {
+    "verifiedAt": "2026-10-22T12:17:35.950501+00:00",
+    "contentCommit": "d1ac92e0e3b80eb07cf00d375893c0ffa30847d1",
+    "siteUrl": "https://yydshly.github.io/1022_codex_project/012-super-hermes/",
+    "files": [
+      {
+        "path": "012-super-hermes/app.js",
+        "status": 200,
+        "bytes": 16207,
+        "sha256": "75c1604b113b8d8a80b69920ec84ec0829f5af189c48feec1aef1f1f31cfbbc0",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/analysis-protocol.txt",
+        "status": 200,
+        "bytes": 1569,
+        "sha256": "f9348d8abf5a06d07c53df0cdee665530c0f64435108de25ba1da14c788490f7",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/cover.png",
+        "status": 200,
+        "bytes": 65698,
+        "sha256": "74e470c2e89ad1663542afbbc84e957e92910af5d7232f85f13c6c973b6c1d07",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/favicon.svg",
+        "status": 200,
+        "bytes": 290,
+        "sha256": "e22ea0857cd6997fae367a830fee080ac232789570ac09c301a0da2f0d8f7c93",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/memory-demo/cache_fixture.py",
+        "status": 200,
+        "bytes": 976,
+        "sha256": "cd303deee25fd1794cddb84cbbf5b0a51404260d6de1353db8299aac77989090",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/memory-reproduction.json",
+        "status": 200,
+        "bytes": 5546,
+        "sha256": "29ac114c9fce259ebe4063696a81c6b6cee00d81864f1cf10acf897b8a3f927e",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/overview-imagegen-prompt.txt",
+        "status": 200,
+        "bytes": 6695,
+        "sha256": "5e7fa29919797bab589ab638a6842b02abe499f59804e3cf6d09978e7eed6e1b",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/problem-diagnosis-protocol.txt",
+        "status": 200,
+        "bytes": 5843,
+        "sha256": "01d6adee8a26b11653ebb2afaeb713d9c45739446d8f1c906ef28ddcccfc5f9e",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/race-reproduction.json",
+        "status": 200,
+        "bytes": 658,
+        "sha256": "a861e07f3916a4152fe87775366c3749770e3bbcf960a41e262ebd5a14f28b86",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/seven-step-imagegen-prompt.txt",
+        "status": 200,
+        "bytes": 6516,
+        "sha256": "22917f70c2ceeb8c5abe19e048c9f23d78f84f1c642d8cc6c90e2c9b9f5ac351",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/super-hermes-diagnosis-v3.png",
+        "status": 200,
+        "bytes": 2133063,
+        "sha256": "67c8e856d8b8920d25b7315063c67ff3ff0027a135701dd58db9f351de444ad5",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/super-hermes-overview.png",
+        "status": 200,
+        "bytes": 2201040,
+        "sha256": "ed0ef06d43d6cefad393b18409cef7139c17562658139362bc2a3ef9732ae270",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/super-hermes-rules.json",
+        "status": 200,
+        "bytes": 65433,
+        "sha256": "35406eca6bf48affec5caec5087b2d2793d8662e8b137fa9d07fb8216cd62113",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/super-hermes-rules.txt",
+        "status": 200,
+        "bytes": 49891,
+        "sha256": "d1bc9f9a17b0eb32fcb65dc1319c8befe9b583fa712cb4a327a409aa73001bba",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/super-hermes-study-kit.zip",
+        "status": 200,
+        "bytes": 33399,
+        "sha256": "144f57c5374124be11aaf14aab79e4652ce63f39ecb054d6e20752f94411f2f3",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/super-hermes-understanding-v2.png",
+        "status": 200,
+        "bytes": 1940321,
+        "sha256": "9fec14f51bfb15ff19dcc14c9855206d8911a209bb13211fdcf8622bd513a205",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/understanding-imagegen-prompt.txt",
+        "status": 200,
+        "bytes": 6137,
+        "sha256": "4876f7da2144f70835f79149c4b3802b88832038f84d9cf289c07b116e92fc9f",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/LICENSE",
+        "status": 200,
+        "bytes": 1063,
+        "sha256": "28273a2e019078e77d7ddbecaa18ca518e18a5e30c694c4115b82b431bfe35ca",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/README.md",
+        "status": 200,
+        "bytes": 15834,
+        "sha256": "cf47b29ff3a08b45468f975a5cdce30bfb939df82944ed736007719028b1f2f2",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/examples/circuit_breaker.py",
+        "status": 200,
+        "bytes": 4407,
+        "sha256": "9e77645eb9f88ac8a12df32771cea4ac017d9d36bfd16e9eafde07cf13503ca0",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/examples/growth-demo.md",
+        "status": 200,
+        "bytes": 3255,
+        "sha256": "c0c03504857fe4c31aaf7397e2eaebd105446765aede35af9d6f94cc65cdf398",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/examples/prism-scan-output.md",
+        "status": 200,
+        "bytes": 9259,
+        "sha256": "1b60320c8731cf26d08d43284faddf5d6dec9f378d15fb51d9500afdc345312f",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/install.ps1",
+        "status": 200,
+        "bytes": 2419,
+        "sha256": "a22b5058ce4e5a302f7d6f15a6e7b20b2e09a978b6717aa99b732cab428d2317",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-3way/SKILL.md",
+        "status": 200,
+        "bytes": 3656,
+        "sha256": "d77cc8625341324116c40924a0b195c2ebb3604a7ed5b742ed46179e1d01f958",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-discover/SKILL.md",
+        "status": 200,
+        "bytes": 2341,
+        "sha256": "3f8af1949cd04b0052783cb376f686e1d5b2d505d225698b824f3ffa2d2c9f11",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-full/SKILL.md",
+        "status": 200,
+        "bytes": 3581,
+        "sha256": "4499fabf3ae1dd6119f6974ab911c342c854f275b577822b6466e51529d752cd",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-reflect/SKILL.md",
+        "status": 200,
+        "bytes": 4502,
+        "sha256": "a3e256408f146cdff157a54e71e87c8dbf90202a54ce741b97d19e85e944147d",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/SKILL.md",
+        "status": 200,
+        "bytes": 5915,
+        "sha256": "ce18487b2304c0a897cca481fcbb47294ac75e8e717e49041218adb71a5dd72d",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/claim.md",
+        "status": 200,
+        "bytes": 836,
+        "sha256": "ab02a1215316614640b97e215dd24b4442f7e5ba1f10ef9e7f91f32a49a4dcad",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/deep_scan.md",
+        "status": 200,
+        "bytes": 2189,
+        "sha256": "60e57ac532fffcfc8e9af9168b0d782506eb54f801adc8240200801610f2f892",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/error_resilience.md",
+        "status": 200,
+        "bytes": 1797,
+        "sha256": "ddacb2a756beda838f18575975dfec9a74475a949b5e61525b7445d3adcc81cd",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/identity.md",
+        "status": 200,
+        "bytes": 2198,
+        "sha256": "c28848da710e80c107e608c44307bb40b7f133c598e61a5477354ca882457962",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/l12.md",
+        "status": 200,
+        "bytes": 2567,
+        "sha256": "b5b39851623d8b4acf9bdd10e46bbe2784c001e48d2dfdbbc71270223a8ae622",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/optimize.md",
+        "status": 200,
+        "bytes": 1530,
+        "sha256": "cf93048922986074275acd76fc6ea39e6274624f3983de6712703722191b6d4b",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/assets/upstream/skills/prism-scan/references/simulation.md",
+        "status": 200,
+        "bytes": 1767,
+        "sha256": "3a8a60647dd80396ac88c772f6d126f6c1d7382dabf205ed55be74b4ff17d52c",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/data.js",
+        "status": 200,
+        "bytes": 11084,
+        "sha256": "1e29dfb5e9dca46adda023a40fc80307a11b04c4930deea2db7e5991427f95dd",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/index.html",
+        "status": 200,
+        "bytes": 72051,
+        "sha256": "b391628e850f6e22d5e9fce18868fd1361c1714baae36e75f1a2c55ee15c367b",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/investigation.js",
+        "status": 200,
+        "bytes": 7741,
+        "sha256": "6718aa3e96e5aba38eee499e2fce25537c305895ab6c72fb6de48413dd44c06e",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/memory-data.js",
+        "status": 200,
+        "bytes": 5568,
+        "sha256": "5447719adf71a03d3f3d0328078f8c3a7945822bbab3edd38dd0344dbeeb7e20",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/rulebook-data.js",
+        "status": 200,
+        "bytes": 65452,
+        "sha256": "3f606dc638d3bcb08b4d8f0333f219062a55538da7956f3a22a55d43b6b28e0a",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/rulebook.js",
+        "status": 200,
+        "bytes": 5936,
+        "sha256": "20de40b849b96bbdcaf0f88cc1bddb5170cee400d12a96015690d8dc58d0d41a",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/source-data.js",
+        "status": 200,
+        "bytes": 71265,
+        "sha256": "2826dc0591ee316eaebcb144bb746cca4bc226dc40c34487d922d479c9f866e7",
+        "verified": true
+      },
+      {
+        "path": "012-super-hermes/style.css",
+        "status": 200,
+        "bytes": 64770,
+        "sha256": "50f774ca9e3f5fe027eb7da111806316f1e4c56565ca1b61d7895e2f9206276f",
+        "verified": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 16392,
+        "sha256": "7c03b13deded1d2bc7476fa989fbb2d0c8e48777ff04bad465b94559ef711032",
+        "verified": true
+      }
+    ],
+    "projectFilesVerified": 43,
+    "allProjectFilesByteIdentical": true,
+    "rootSummaryAndSelectedGuidePresent": true
+  },
+  "browserVerification": {
+    "rechecked": false,
+    "reason": "Prior Computer Use ended because the current browser URL could not be determined reliably; this release is verified by CI, HTTP and file hashes, without claiming new interaction/responsive checks."
+  },
+  "publicationMethod": "Authenticated GitHub Git Data APIs after Git HTTPS SSL connection failed. Parent tree verified, allowlist enforced, unrelated remote files preserved, main advanced without force.",
+  "modelInvoked": false,
+  "notExecuted": [
+    "Hermes installation or invocation",
+    "LLM quality comparison"
+  ]
 }
