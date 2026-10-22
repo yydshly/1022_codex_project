@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-22",
+  "url": "http://127.0.0.1:7878/1022_codex_project/012-super-hermes/",
+  "eightSteps": [
+    {
+      "measurementHidden": true,
+      "output": "本次对象：单个缓存文件。\n重点：分配、持有、淘汰。\n待确认：每次请求都增长，还是只在出现新 key 时增长？",
+      "panel": "investigation-0",
+      "selected": "investigation-0",
+      "sourceHidden": false,
+      "title": "先把“内存高”变成一个有范围的问题。"
+    },
+    {
+      "measurementHidden": true,
+      "output": "本例检查方法大意（教学改写）：\n① 逐个追踪大对象：在哪里创建，被谁保存？\n② 比较 800 个新 key 与重复一个 key。\n③ 找退出路径：淘汰、过期、主动清理是否存在？\n④ 构造一个有限缓存替代方案，解释改善与代价。\n⑤ 输出可疑行、触发条件和待验证预测。",
+      "panel": "investigation-1",
+      "selected": "investigation-1",
+      "sourceHidden": false,
+      "title": "先写“要检查哪些关系、构造什么场景”。"
+    },
+    {
+      "measurementHidden": true,
+      "output": "从代码推演出的预测：\n新 key → 创建新响应，缓存条目持续增加。\n同一 key → 命中已有响应，条目不会随请求数增加。\n有限缓存 → 超过上限时，旧响应退出缓存。",
+      "panel": "investigation-2",
+      "selected": "investigation-2",
+      "sourceHidden": false,
+      "title": "主动改变一个条件，看哪里会分叉。"
+    },
+    {
+      "measurementHidden": true,
+      "output": "分配点：第 11 行，创建 64 KiB bytearray。\n持有点：第 20 行，self.cache[key] 保存响应。\n触发条件：缓存长期存活，持续出现不同 key。\n可检验预测：保留内存约随不同 key 数 × 64 KiB 增长。",
+      "panel": "investigation-3",
+      "selected": "investigation-3",
+      "sourceHidden": false,
+      "title": "把可疑现象连接到持有关系与具体代码行。"
+    },
+    {
+      "measurementHidden": true,
+      "output": "反证方向：\n若响应没有被 cache 持有，持有链判断就不成立。\n若清空 cache 后响应仍保留，需继续找其他引用。\n重复同一 key 也持续增长，则当前原因不足以解释。\n不应仅凭内存上涨就断言“GC 失效”。",
+      "panel": "investigation-4",
+      "selected": "investigation-4",
+      "sourceHidden": false,
+      "title": "明确什么结果会推翻刚才的判断。"
+    },
+    {
+      "measurementHidden": false,
+      "output": "本研究实测：每组 800 次请求，每条响应 64 KiB。\n不同 key + 无上限 → 50.126 MiB，800 条。\n同一个 key + 无上限 → 0.065 MiB，1 条。\n不同 key + 32 条 LRU → 2.010 MiB，32 条。\n清空缓存后，各组响应分配行的增量均为 0。\n度量：Python 跟踪的存活内存增量，非进程 RSS。",
+      "panel": "investigation-5",
+      "selected": "investigation-5",
+      "sourceHidden": true,
+      "title": "让代码运行结果决定哪些预测站得住。"
+    },
+    {
+      "measurementHidden": true,
+      "output": "位置：cache_fixture.py:20。\n问题：长期缓存无淘汰，持续保留新 key 的响应。\n影响：长寿命服务中可持续消耗内存；本例未测至 OOM。\n可修复：限制容量 / 合理淘汰，代价是重新计算或加载。\n证据：新 key 增长、重复 key 有界、清空后响应释放。\n未覆盖：真实服务、原生内存、跨文件引用。",
+      "panel": "investigation-6",
+      "selected": "investigation-6",
+      "sourceHidden": false,
+      "title": "最后留下别人可以核查和处理的结论。"
+    },
+    {
+      "measurementHidden": true,
+      "output": "# Prism Constraint History（内容示意）\n### 2026-10-22 — cache_fixture.py\n- Maximized: 缓存持有与淘汰路径。\n- Sacrificed: 原生内存、跨文件持有关系。\n- Recommendations: 下次补查这些范围，并提供对应材料。",
+      "panel": "investigation-7",
+      "selected": "investigation-7",
+      "sourceHidden": false,
+      "title": "把本次检查的边界，变成下次的起点。"
+    }
+  ],
+  "sourceReaders": [
+    {
+      "index": 1,
+      "path": "skills/prism-scan/SKILL.md",
+      "loaded": true
+    },
+    {
+      "index": 4,
+      "path": "skills/prism-full/SKILL.md",
+      "loaded": true
+    },
+    {
+      "index": 7,
+      "path": "skills/prism-reflect/SKILL.md",
+      "loaded": true
+    }
+  ],
+  "nextWrapsToFirst": true,
+  "firstPreviousDisabled": true,
+  "keyboardArrowRight": true,
+  "responsive": [
+    {
+      "client": 305,
+      "overflow": [],
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 360,
+      "overflow": [],
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "client": 753,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    }
+  ],
+  "desktop": {
+    "client": 1265,
+    "scroll": 1265,
+    "width": 1280
+  },
+  "consoleIssues": [],
+  "screenshot": "assets/guided-investigation.png",
+  "provenance": "Research teaching reconstruction; not a Hermes transcript. Runtime memory controls executed separately.",
+  "modelInvoked": false,
+  "http": {
+    "base": "http://127.0.0.1:7878/1022_codex_project/012-super-hermes/",
+    "files": [
+      "app.js",
+      "assets/analysis-protocol.txt",
+      "assets/cover.png",
+      "assets/favicon.svg",
+      "assets/memory-demo/cache_fixture.py",
+      "assets/memory-reproduction.json",
+      "assets/overview-imagegen-prompt.txt",
+      "assets/race-reproduction.json",
+      "assets/super-hermes-overview.png",
+      "assets/super-hermes-study-kit.zip",
+      "assets/upstream/examples/circuit_breaker.py",
+      "assets/upstream/examples/growth-demo.md",
+      "assets/upstream/examples/prism-scan-output.md",
+      "assets/upstream/install.ps1",
+      "assets/upstream/LICENSE",
+      "assets/upstream/README.md",
+      "assets/upstream/skills/prism-3way/SKILL.md",
+      "assets/upstream/skills/prism-discover/SKILL.md",
+      "assets/upstream/skills/prism-full/SKILL.md",
+      "assets/upstream/skills/prism-reflect/SKILL.md",
+      "assets/upstream/skills/prism-scan/references/claim.md",
+      "assets/upstream/skills/prism-scan/references/deep_scan.md",
+      "assets/upstream/skills/prism-scan/references/error_resilience.md",
+      "assets/upstream/skills/prism-scan/references/identity.md",
+      "assets/upstream/skills/prism-scan/references/l12.md",
+      "assets/upstream/skills/prism-scan/references/optimize.md",
+      "assets/upstream/skills/prism-scan/references/simulation.md",
+      "assets/upstream/skills/prism-scan/SKILL.md",
+      "data.js",
+      "index.html",
+      "investigation.js",
+      "memory-data.js",
+      "source-data.js",
+      "style.css"
+    ],
+    "count": 34,
+    "allFilesByteIdentical": true
+  }
+}

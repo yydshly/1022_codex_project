@@ -1,0 +1,14 @@
+{
+  "state_after_new_failure": "open",
+  "new_failure_age_seconds": 0.000732,
+  "stale_reader_observed_state": "half_open",
+  "race_reproduced": true,
+  "configured_cooldown_seconds": 30,
+  "transition_line": 49,
+  "upstream_revision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "method": "sys.settrace pauses reader after expired-time check and before state write; main thread records a new failure; reader resumes.",
+  "scope": "A controlled interleaving demonstrates the race; no LLM or Hermes session was executed.",
+  "python": "3.10.11",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "executed_at": "2026-10-22T14:29:35.718306+08:00"
+}

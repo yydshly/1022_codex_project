@@ -1,0 +1,117 @@
+Use case: infographic-diagram.
+Create ONE complete, highly legible Chinese technical knowledge poster summarizing our final understanding of Super Hermes and the seven-step general problem-diagnosis protocol we derived from it.
+New image, not an edit. No reference images.
+Audience: Chinese-speaking software practitioners. The poster must answer: what the library can do, why it is essentially multiple Markdown Skills, what the model decides, how Skill instructions organize actions, how the seven steps lead to an evidence-based conclusion report, and what we can reuse across projects.
+Asset: one standalone PNG infographic for the project website and download.
+Canvas: tall portrait, approximately 3:5, highest practical resolution for clear Chinese typography. Show the entire design with safe margins. Do not cram the bottom. Use crisp Chinese sans-serif text, large enough to read when zoomed; clean editorial table design with ivory, forest green, sage panels and terracotta emphasis. No 3D, no decorative illustration, no fake logos.
+Primary visual hierarchy: title and model/Skill/evidence roles; five-Skill capability strip; input band; seven-step matrix as centerpiece; full nine-field conclusion-report panel; validation and implementation boundary footer.
+Avoid enumerating the 69-rule catalogue. Prioritize the complete seven-step protocol and report fields.
+All quoted wording below is exact visible content; render it faithfully, without invented claims. Use compact but readable line wrapping.
+Accuracy: the original library provides 5 Skills + 7 lenses. The SEVEN-STEP end-to-end protocol and expanded report are OUR synthesis/extension, not a shipped automatic pipeline. Runtime experiments, repair, regression checks and complete-case archiving require external tools or our added process. The original code-analysis scope is single-file. Highlight these distinctions clearly.
+
+TITLE:
+"Super Hermes：用多个 Skill 组织问题定位"
+SUBTITLE:
+"本质：5 个 Markdown Skill + 7 份分析模板"
+PROMINENT SENTENCE:
+"模型负责分析判断，Skill 约定动作与产物，证据检验结论。"
+
+CAPABILITY STRIP:
+"discover：列方向"
+"scan：定向检查"
+"full：多轮与反驳"
+"3way：三个视角"
+"reflect：复查与盲区"
+Small line:
+"辅助定位、代码审查、方案权衡与盲区复查；不是独立的自动诊断引擎。"
+
+ROLES BAND:
+"Skill：规定先做什么、检查什么、交付什么。"
+"模型：选择具体查法、解释证据；不保证每步都正确。"
+"宿主 / 工具：提供读写、执行、观测与权限。"
+"约束可见动作和输出，不能控制或证明模型内部每一步思考。"
+
+INPUT BAND:
+"输入"
+"至少：问题现象（预期 / 实际 / 触发条件）＋项目或材料入口。"
+"按需补充：环境与近期变化、日志与复现、操作范围、是否修复、完成标准。"
+
+MAIN MATRIX TITLE:
+"我们提炼的七步通用定位协议"
+Important subtitle directly below:
+"借鉴上游规则的跨项目协议；不是原库内置的七阶段强制流程。"
+Columns:
+"顺序" / "要求 AI 做什么" / "必须留下什么"
+Row 01:
+"定义问题"
+"区分预期与实际，确定影响范围和完成标准。"
+"问题描述 / 范围 / 验收条件"
+Row 02:
+"建立事实基础"
+"读相关代码、配置和运行证据；尝试最小复现，找异常传播路径。"
+"已知事实 / 复现结果 / 路径 / 证据缺口"
+Row 03:
+"提出候选解释"
+"每个假设说明支持依据、可观察预测与反证条件。"
+"可区分的候选假设表"
+Row 04:
+"设计并执行检查"
+"选能区分假设的低成本检查；尽量只改一个关键条件。"
+"检查目的 / 方法 / 预期 / 实际结果"
+Row 05:
+"收敛并反驳根因"
+"更新或排除假设；解释因果链，检查其他解释是否也成立。"
+"根因或剩余候选 / 排除依据 / 成立条件"
+Row 06:
+"验证修复"
+"任务包含修复时，做针对性修改，重测原场景与相关回归。"
+"修改说明 / 修复前后结果 / 回归结果"
+Add a visible small badge inside row 06:
+"只定位时可不修改"
+Row 07:
+"报告与沉淀"
+"交付结论，记录方法、适用条件、证据与未查范围。"
+"定位报告 / 后续建议 / 经验记录"
+Draw a loop around rows 03, 04, 05, with arrows returning from 05 to 03:
+"假设 → 检查 → 更新，循环收敛"
+Do not draw a return loop that forces a conclusion regardless of evidence.
+
+REPORT PANEL TITLE:
+"结论以这份报告为准"
+Subline:
+"结论状态：根因已有证据支持 / 候选待验证 / 尚未定位"
+Nine clearly numbered fields in a readable two-column checklist or table. Preserve ALL fields:
+"01 结论状态：明确已支持、待验证或未定位。"
+"02 问题与影响：预期、实际、受影响范围。"
+"03 定位位置：文件、函数、配置、依赖或环境。"
+"04 触发条件：何时发生，何时不发生。"
+"05 因果链：条件 → 异常状态或操作 → 最终现象。"
+"06 证据：来源、检查方法、实际结果。"
+"07 其他解释：已排除什么，还有什么未排除。"
+"08 修复与验证：修改、原场景结果、相关回归。"
+"09 局限与下一步：缺什么证据，下一项检查是什么。"
+Below:
+"每条重要结论指向证据；报告格式完整不代表结论已经成立。"
+
+VALIDATION BAND:
+"验证底线"
+"事实、假设、实测分开；没运行就标为推演或待执行。"
+"根因要解释触发与传播，并尝试排除替代解释。"
+"修复需重测原故障与相关回归；缺证据允许未定位。"
+
+VALUE AND BOUNDARY PANEL:
+"对我们的价值"
+"固定定位流程、报告与验证标准；让 AI 按项目选择方法和工具。"
+"把个人排查经验沉淀为可审阅、可复用的团队协议。"
+"边界：主要是提示词软约束。阶段闸门、结构校验、证据验收、失败重试需另加运行器。"
+
+FOOTER, READABLE:
+"原库代码分析侧重单文件；跨项目七步协议、完整报告与修复验收是我们的提炼和扩展。"
+"依据：Cranot/super-hermes @ ffe2d10｜研究总结，未进行模型效果评测。"
+
+Forbidden:
+Do not claim every original Skill automatically executes all seven steps.
+Do not claim runtime verification or code repair is built into Super Hermes.
+Do not say the model determines objective facts or that agreeing roles prove correctness.
+Do not imply modifying model weights or observing its hidden internal thought.
+Do not invent performance, accuracy or test results.

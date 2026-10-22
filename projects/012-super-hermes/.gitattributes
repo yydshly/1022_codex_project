@@ -1,0 +1,3 @@
+# Preserve pinned upstream evidence and the measured fixture byte for byte.
+web/assets/upstream/** -text
+web/assets/memory-demo/** -text

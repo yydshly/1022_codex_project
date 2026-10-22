@@ -1,0 +1,23 @@
+{
+  "created_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "generator": "built-in image_gen",
+  "source_image": "D:\\codex\\home\\generated_images\\01a15a38-b35c-70f0-8358-870b32d70d7f\\exec-13fdc647-a731-4002-b35c-7440d8c41cf7.png",
+  "image": "assets/super-hermes-diagnosis-v3.png",
+  "web_image": "web/assets/super-hermes-diagnosis-v3.png",
+  "width": 971,
+  "height": 1619,
+  "bytes": 2133063,
+  "sha256": "67c8e856d8b8920d25b7315063c67ff3ff0027a135701dd58db9f351de444ad5",
+  "prompt_file": "assets/seven-step-imagegen-prompt.txt",
+  "upstream_revision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "description": "Five Skills, seven lenses, model/Skill/evidence roles, our seven-step protocol and nine-field conclusion report.",
+  "scope": "Research synthesis and proposed cross-project protocol, not an upstream seven-stage executor or a model evaluation. Prior images preserved.",
+  "review": {
+    "content": "Generated image manually inspected: all seven stages, nine report fields, candidate/check/refutation loop, conditional repair, evidence states, value and soft-constraint boundaries.",
+    "sourceAndWebCopiesIdentical": true,
+    "promptCopiesIdentical": true,
+    "staticWebCheck": "passed",
+    "browserCheck": "Not completed: Computer Use stopped because current browser URL could not be determined reliably."
+  }
+}

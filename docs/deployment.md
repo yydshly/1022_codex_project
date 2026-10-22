@@ -148,3 +148,9 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 - 页面包含总览图、3 篇详细报告、1 篇综合、原 PDF、关键图页、历史回答与扩展源码快照；浏览不调用模型。
 - 构建使用 Python 标准库：`package_web.py` → `package_web.py --check` → `verify_web.py` → 根 `build_site.py`。原始证据以项目 `.gitattributes` 关闭换行归一化，保持 SHA-256。
 - 这是静态成果网站发布，未开放 Open Notebook 原版应用的上传与在线问答入口。验收见项目 `publication-verification.json`。
+
+## 012 · Super Hermes
+
+[多 Skill 问题定位与审查](../projects/012-super-hermes/README.md)通过五个问题说明能力、底层原理、模块、步骤和复用价值。上游提供 5 个 Markdown Skill 与 7 份分析模板，模型结合材料分析，宿主提供工具与证据检验；网页进一步展示我们提炼的七步定位协议、逐步输入与产物、九项报告、内存和并发实测、69 条规则及固定版本原文。七步和完整报告是研究提炼，原库主要用提示词引导且代码分析侧重单文件。
+
+首屏、网页全图与总导航封面统一使用已生成的 `super-hermes-diagnosis-v3.png`。项目无前端构建依赖，工作流先执行 `python projects/012-super-hermes/scripts/verify_web.py`，由根汇总器复制 `web/` 到 `/1022_codex_project/012-super-hermes/`。候选公开入口为 https://yydshly.github.io/1022_codex_project/012-super-hermes/ ；准确部署状态与线上字节核对见 [发布记录](../projects/012-super-hermes/deployment-verification.json)。

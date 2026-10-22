@@ -1,0 +1,21 @@
+{
+  "created_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "generator": "built-in image_gen",
+  "source_image": "D:\\codex\\home\\generated_images\\01a15a38-b35c-70f0-8358-870b32d70d7f\\exec-23791272-1ba1-4d1b-9917-7ad593cccdd2.png",
+  "image": "assets/super-hermes-overview.png",
+  "web_image": "web/assets/super-hermes-overview.png",
+  "width": 941,
+  "height": 1672,
+  "bytes": 2201040,
+  "sha256": "ed0ef06d43d6cefad393b18409cef7139c17562658139362bc2a3ef9732ae270",
+  "prompt_file": "assets/overview-imagegen-prompt.txt",
+  "upstream_revision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "description": "Chinese overview: shared steps, five Skills, seven fixed lenses, output standards, roles, history feedback, limitations and extension levels.",
+  "scope": "Research synthesis based on pinned upstream sources. The combined protocol and extension suggestions are labeled. The diagram is not an LLM quality benchmark.",
+  "cache_relocation": {
+    "reason": "F drive full; restore space using a reversible move of an ignored old generated preview, without deleting research source.",
+    "from": "F:\\codex_project\\1022_codex_project\\_site\\oil-tone-prompt-20261021-01",
+    "to": "D:\\codex\\home\\visualizations\\2026\\10\\20\\01a15a38-b35c-70f0-8358-870b32d70d7f\\relocated-oil-tone-preview-20261021-01"
+  }
+}

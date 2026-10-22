@@ -1,0 +1,99 @@
+Use case: infographic-diagram.
+Create ONE finished Chinese educational infographic that summarizes our verified understanding of the open-source project Super Hermes (Cranot/super-hermes, pinned revision ffe2d10).
+Asset: a clear, shareable knowledge poster for a research website. Generate a brand-new image. No reference image or edit target.
+Audience: Chinese-speaking software practitioners who were confused about whether the project actually diagnoses faults, how Skills guide models, and whether its constraints are enforced by code.
+Primary goal: make the distinction between reusable analysis instructions, model execution, host tools, and independent runtime verification immediately understandable. A complete SIX-STEP flow with per-step constraints and deliverables is the centerpiece.
+Canvas: portrait, approximately 3:4 or 4:5. Use the highest practical resolution for legible Chinese text. Show the entire poster with safe margins; never crop text. Flat, crisp editorial information design, ivory background, deep forest green headings, sage panels, restrained terracotta emphasis for constraint boundaries. Match a thoughtful technical field guide. Excellent Chinese sans-serif typography; larger headings and body text; no ornamental illustration, no 3D, no fake logo, no decorative text. Prioritize reading order, generous space, precise arrows and consistent alignment.
+Do not try to enumerate all 69 rules. Summarize the common backbone accurately, with exact applicability and strong constraints clearly shown.
+All visible Chinese must be correct, crisp and readable. Use the supplied wording verbatim; do not add invented capabilities or claims. English identifiers must be spelled accurately.
+Composition:
+1. Title and essential definition.
+2. Compact capabilities/principle band.
+3. Main six-row flow table with visible arrows downward, columns "通用步骤", "怎样要求 AI", "留下什么". The step applicability can be shown as a small label in each row. This must take the largest area.
+4. A narrow seven-lens strip and a tiny concrete memory example.
+5. A clearly separated boundary panel and our practical value.
+6. Small research attribution.
+Render the following content, avoiding duplication:
+
+TITLE:
+"Super Hermes：把排查经验变成 AI 的工作指令"
+SUBTITLE:
+"本质：5 个 Markdown Skill + 7 份可复用分析模板"
+PROMINENT KEY SENTENCE:
+"通用规则固定，具体查法由 AI 结合问题生成。"
+
+CAPABILITY / PRINCIPLE BAND:
+"能力：辅助代码审查、问题定位、设计权衡与盲区复查"
+"原理：宿主加载 Skill 指令 → 模型制定查法 → 模型执行分析"
+Under it, small but readable:
+"Skill 提供方法；宿主提供工具；底层模型完成分析。"
+
+MAIN SIX-STEP TABLE:
+Row 01
+Step: "确定对象与方向"
+Constraints: "读取材料、用户重点和历史；不清楚查什么时先列方向。"
+Deliverable: "检查范围 / 方向菜单"
+Applicability: "discover / scan"
+Row 02
+Step: "生成或选择查法"
+Constraints: "贴合当前问题；包含构造动作；先展示方法，再执行。"
+Deliverable: "Generated Lens / Pipeline"
+Applicability: "scan / full"
+Important numerical sublabel within this row: "scan：75–200 单词；full：2–4 轮，每轮 75–200 单词"
+Row 03
+Step: "构造、追踪、分析"
+Constraints: "构造反例或替代设计；追踪调用、状态、持有关系；按所选方法检查。"
+Deliverable: "具体线索 / 候选问题"
+Applicability: "模型执行所选指令"
+Row 04
+Step: "反驳或交叉检查"
+Constraints: "full 寻找反证，撤回误判、补充遗漏；3way 从结构、时间、目标冲突比较。"
+Deliverable: "修正发现 / 视角分歧"
+Applicability: "full 或 3way"
+Row 05
+Step: "交付发现与边界"
+Constraints: "列出位置、问题、严重度、可修复性；说明侧重与遗漏。"
+Deliverable: "发现表 + 盲区说明"
+Applicability: "scan / full / reflect"
+Row 06
+Step: "记录并补查"
+Constraints: "reflect 追加侧重、遗漏、建议；下次 scan 先读历史。"
+Deliverable: ".prism-history.md"
+Applicability: "reflect → scan"
+Draw a clear return arrow from Row 06 to Row 02 labeled:
+"作为下次生成方法的上下文"
+Below main flow, clear readable qualifier:
+"这是跨 Skill 的通用归纳；各入口按需选择，并非内置自动流水线。"
+
+LENSES STRIP:
+"可复用视角"
+"错误传播｜结构权衡｜性能成本｜接口与行为｜信息损失｜假设反转｜长期演化"
+
+SMALL CONCRETE EXAMPLE:
+"内存问题示例（研究者归纳）"
+"内存上涨 → 查创建 / 持有 / 淘汰 → 定位无上限缓存 → 接工具对照验证"
+Small label:
+"构造与分析不等于已经运行测试。"
+
+BOUNDARY PANEL, HIGH VISIBILITY:
+"约束强度：主要是提示词软约束"
+"模型靠指令遵循完成步骤；库没有内置阶段闸门、内容验收或自动重试。"
+"运行测量和修复验收需接工具；多角色一致、公式和完整格式都不等于证明。"
+
+VALUE PANEL:
+"对我们的价值"
+"可直接复用：排查步骤、构造动作、反驳问题、发现字段、盲区记录。"
+"可沉淀团队方法：把个人经验写成可审阅、可复用的分析协议。"
+"若要硬约束：另加阶段运行器、结构校验、证据门槛与失败重试。"
+
+FOOTER:
+"依据：Cranot/super-hermes @ ffe2d10｜完整 69 条规则由本研究归纳"
+"研究总结图；未运行 Hermes 或模型效果评测。"
+
+Accuracy constraints:
+- This project is fundamentally a Markdown analysis Skill package, not a new model, runtime profiler, or autonomous fault-localization engine.
+- Do NOT imply every Skill executes the whole flow. Do NOT imply scan includes full's adversarial pass.
+- Do NOT imply three model roles are isolated independent experts.
+- History stores focus/gaps/recommendations, not model training or automatic storage of all patches and evidence.
+- Clearly distinguish language instructions from programmatic enforcement, and our proposed engineering extensions from shipped features.
+- No fabricated benchmark, accuracy, cost, success rate, or memory measurement.

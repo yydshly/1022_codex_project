@@ -1,0 +1,23 @@
+{
+  "created_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "generator": "built-in image_gen",
+  "source_image": "D:\\codex\\home\\generated_images\\01a15a38-b35c-70f0-8358-870b32d70d7f\\exec-955831d2-5f8f-4c5a-b066-b800a3d4c09c.png",
+  "image": "assets/super-hermes-understanding-v2.png",
+  "web_image": "web/assets/super-hermes-understanding-v2.png",
+  "width": 1086,
+  "height": 1448,
+  "bytes": 1940321,
+  "sha256": "9fec14f51bfb15ff19dcc14c9855206d8911a209bb13211fdcf8622bd513a205",
+  "prompt_file": "assets/understanding-imagegen-prompt.txt",
+  "upstream_revision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "description": "Current understanding: analysis Skill package, six-step synthesis, per-step constraints and outputs, seven lenses, soft constraint boundary and practical reuse value.",
+  "scope": "Research synthesis, not a single automatic Skill pipeline or model evaluation. All prior images are preserved.",
+  "review": {
+    "content": "Manually reviewed the generated poster: 6 steps, applicable skills, constraints, deliverables, history feedback, 7 lenses, soft constraint boundary and reuse value.",
+    "sourceAndWebCopiesIdentical": true,
+    "promptCopiesIdentical": true,
+    "staticWebCheck": "passed",
+    "browserCheck": "Not rerun in this turn; previous CUA tool is unavailable in the current tool inventory."
+  }
+}

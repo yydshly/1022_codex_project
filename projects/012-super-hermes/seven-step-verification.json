@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-22",
+  "upstreamRevision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "scope": "Research-derived seven-step protocol and nine-field report; not an upstream execution engine or model evaluation.",
+  "checks": {
+    "verifyWeb": "PASS: 31 local references, 129 unique IDs, 18 source hashes, ZIP, race/memory evidence, 69 rules, all 3 generated PNGs and prompt copies.",
+    "appJsSyntax": "PASS: node --check web/app.js",
+    "investigationJsSyntax": "PASS: node --check web/investigation.js",
+    "catalog": "PASS: 12 projects; generated root README is up to date.",
+    "protocolAndReport": "PASS: seven ordered protocol rows and nine ordered report fields.",
+    "copyAndDownload": "PASS: HTML copy attribute exactly matches downloadable protocol text; clipboard behavior not rechecked.",
+    "teachingData": "PASS: seven HTML case tabs match seven JavaScript entries in order; all referenced upstream source files exist.",
+    "imageContent": "Manually inspected generated PNG: role boundaries, inputs, 7 stages, 3-5 loop, conditional repair, 9 fields, 3 conclusion states, verification and value."
+  },
+  "browserCheck": {
+    "completed": false,
+    "tool": "computer-use / @oai/sky",
+    "reason": "Computer Use stopped this turn because it could not determine the current browser URL with enough confidence to enforce policy.",
+    "action": "No further UI input attempted; no browser-layout or interaction verification claimed for this update."
+  },
+  "image": "assets/super-hermes-diagnosis-v3.png",
+  "imageRecord": "seven-step-image.json",
+  "protocol": "web/assets/problem-diagnosis-protocol.txt",
+  "notExecuted": [
+    "Hermes installation or invocation",
+    "LLM analysis or model quality comparison",
+    "public deployment"
+  ]
+}

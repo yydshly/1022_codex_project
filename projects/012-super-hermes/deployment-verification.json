@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-10-22T12:11:56.106744+00:00",
+  "status": "prepared; awaiting remote commit and Pages deployment",
+  "targetUrl": "https://yydshly.github.io/1022_codex_project/012-super-hermes/",
+  "guideImage": "assets/super-hermes-diagnosis-v3.png",
+  "guideSha256": "67c8e856d8b8920d25b7315063c67ff3ff0027a135701dd58db9f351de444ad5",
+  "publicationBase": "57c02cbc44c81d74bb99d36fe08910dc35026f5d",
+  "scope": "012 project, its catalog/index entry, deployment docs, and one workflow integrity-check command. Other uncommitted projects excluded.",
+  "browserVerification": "No new browser interaction verification; prior Computer Use ended because browser URL could not be reliably determined.",
+  "modelInvoked": false
+}

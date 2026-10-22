@@ -1,0 +1,627 @@
+Super Hermes 通用步骤与规则全表
+上游版本：ffe2d10042041dcc23325f013e8b7e607e069952
+范围：5 个 Skill + 7 份模板；研究者归纳 69 条，不是上游自报数量。
+每条含原文动作概括、指导作用、产物、教学示例与来源。
+这些主要是提示词约定，不是程序硬限制；示例未运行 Hermes。
+
+通用动作
+====================================
+C01 · 先确定材料与检查重点
+类型：跨文件归纳
+原文动作概括：读取用户给定的单个文件、设计或文字材料；用户指定性能、安全等重点时，围绕该重点设计分析。
+如何指导 AI：给模型限定观察对象与目标，减少脱离材料的泛泛建议。
+应留下的产物：明确的分析对象、用户重点与本次范围。
+教学示例：把“内存有问题”落实为检查 cache_fixture.py 中的缓存持有。
+使用边界（研究解读）：代码范围限定见上游 README；不能据此宣称已有跨文件整库分析。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L20
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L25
+
+C02 · 先读历史，用遗漏调整方向
+类型：跨文件归纳
+原文动作概括：scan 查找 .prism-history.md；不存在就正常继续，存在则读取侧重、牺牲的维度与建议，让新方法补查遗漏。
+如何指导 AI：把以往分析边界作为本次上下文，减少反复只查同一方向。
+应留下的产物：受历史盲区影响的新检查重点。
+教学示例：上次只查并发，这次将性能或可观测性加入检查。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L24
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L75
+
+C03 · 为当前问题重新设计方法
+类型：跨文件归纳
+原文动作概括：scan 生成一个贴合当前材料的分析视角；full 为当前材料设计多个轮次。结合代码实际和用户重点。
+如何指导 AI：将通用分析骨架实例化成这次应执行的动作。
+应留下的产物：针对当前对象的 Lens 或 Pipeline。
+教学示例：对缓存查创建、持有、淘汰；对状态机查时序假设与锁。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L30
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L23
+
+C04 · 方法中必须包含构造动作
+类型：跨文件归纳
+原文动作概括：生成的方法必须让模型构造一个方案或情形，再诊断构造结果揭示了什么。
+如何指导 AI：推动模型主动改变条件、推演差别，超出只描述现有代码的层次。
+应留下的产物：被构造的情形或替代设计，以及它暴露的问题。
+教学示例：构造新 key 与重复 key 两种请求序列，比较对象累积。
+使用边界（研究解读）：构造可能是文本推演；不能自动当作代码已经执行。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L45
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L37
+
+C05 · 限定生成方法的长度
+类型：跨文件归纳
+原文动作概括：scan 的新方法与 full 的每个轮次要求为 75–200 个单词。
+如何指导 AI：用长度要求促使模型写出动作关系与检查步骤，而非只给几个主题词。
+应留下的产物：规定长度范围内的分析指令。
+教学示例：写清追踪对象、设计对照、判断结果与交付字段。
+使用边界（研究解读）：这是生成方法的约定，不是所有固定模板的统一字数；没有自动字数验收。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L47
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L36
+
+C06 · 先公开方法，再执行
+类型：跨文件归纳
+原文动作概括：scan 在 Generated Lens 下展示方法；full 在 Generated Pipeline 下展示每轮及其角色。
+如何指导 AI：把准备怎样查变成用户可见的中间产物，便于核对是否贴题。
+应留下的产物：可阅读的检查方法或轮次计划。
+教学示例：先列出要比较的请求情形，然后才给出分析。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L49
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L39
+
+C07 · 按所选流程完整执行
+类型：跨文件归纳
+原文动作概括：scan 执行生成方法中的每条指令，输出完整分析，不跳步；full 逐轮执行；固定模板按原文步骤执行。
+如何指导 AI：将阶段标题和不得省略的文字要求作为执行约定。
+应留下的产物：所选流程的各阶段产物。
+教学示例：不能只展示检查计划就结束，也不能只有结论而没有规定的检查。
+使用边界（研究解读）：scan 另要求直接继续，不再问许可；这仍是提示词指令，不能覆盖宿主的权限与审批要求。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L53
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L43
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L11
+
+C08 · 发现要能定位并分类
+类型：跨文件归纳
+原文动作概括：scan、full、reflect 交付发现表，包含位置、什么会出错、严重程度、可修复或结构性问题。L12 汇集各阶段暴露的 bug、边界情况与静默失败。
+如何指导 AI：把抽象评价转成可逐条核查的问题记录。
+应留下的产物：带位置与分类的发现表。
+教学示例：指出第 20 行保留响应，以及什么请求模式下会持续累积。
+使用边界（研究解读）：位置和分类不是证据本身；full 最终表仅保留通过对抗复查的发现。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L55
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L66
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L34
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+C09 · 让主张可被反驳，并设置不同角色
+类型：跨文件归纳
+原文动作概括：reflect 与 L12 先提出可证伪的结构主张，再让支持者、反对者和共同假设检查者挑战它。
+如何指导 AI：让模型显式探索不同立场与共同前提，改变最初解释。
+应留下的产物：初始主张、挑战与修正后的主张。
+教学示例：支持“缓存持有导致增长”，再问是否还有别的持有者。
+使用边界（研究解读）：角色是提示词安排，不代表独立模型或隔离上下文。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L28
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+C10 · 把抽象词落实为具体证据线索
+类型：跨文件归纳
+原文动作概括：按模板要求指出精确函数、参数、模式、行号、字段和状态；性能要说具体成本，错误要说丢失了什么上下文。
+如何指导 AI：减少“有开销”“耦合高”等无法进一步追查的判断。
+应留下的产物：可回到材料逐项核对的定位与描述。
+教学示例：写出字典持有哪类对象，而不只说“存在内存风险”。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md#L28
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L47
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L14
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/optimize.md#L17
+
+C11 · 用改进和反向设计检查代价
+类型：跨文件归纳
+原文动作概括：多个模板要求构造改进、观察新问题，或反转假设、构造相反设计，寻找重复出现的权衡。
+如何指导 AI：让模型检查修改将问题移到了哪里，以及哪些收益需要付出代价。
+应留下的产物：原设计、改进或反转设计之间的差别与权衡。
+教学示例：限制缓存减少持有内存，但被淘汰的数据再访问时需要重建。
+使用边界（研究解读）：上游部分指令预设一定存在不可能性或守恒律；其成立条件与证据需要额外核查。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L30
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L20
+
+C12 · 明确侧重、遗漏和下一步
+类型：跨文件归纳
+原文动作概括：scan 追加最大化了什么、未查哪 1–2 个具体角度及后续入口；reflect 展开侧重、牺牲和推荐。
+如何指导 AI：给用户分析范围，帮助下一轮改变方向。
+应留下的产物：盲区脚注或约束报告。
+教学示例：已查缓存生命周期；尚未查原生内存和跨文件引用。
+使用边界（研究解读）：盲区是模型的自我报告，并不保证遗漏已被完整识别。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L61
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L55
+
+入口专属
+====================================
+S01 · scan 默认生成新方法，固定模板按需选
+类型：上游指令概括
+原文动作概括：scan 的 Step 1 始终生成新视角。用户点名某个 prism，或要求固定、可重复的视角时，才按需加载参考文件。
+如何指导 AI：区分临时定制方法与现成模板，避免默认把七份模板全部运行。
+应留下的产物：当前问题的新方法，或被明确选择的一份模板。
+教学示例：明确要求性能 prism 时可读取 optimize.md。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L72
+
+S02 · scan 用样例学习方法的写法
+类型：上游指令概括
+原文动作概括：生成方法前参考评分样例：显式选择与被排除的替代、反转经验主张、推演维护周期等。
+如何指导 AI：通过示例展示“动作 + 构造 + 具体产出”的指令结构。
+应留下的产物：沿用写法、但针对当前对象重新生成的方法。
+教学示例：借鉴“反转资源假设”的动作，检查缓存能否无限增长。
+使用边界（研究解读）：样例评分是作者材料，不能当成当前任务可靠性或检出率。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L34
+
+F01 · full 设计 2–4 轮并累积输入
+类型：上游指令概括
+原文动作概括：首轮分析原材料；后续每轮接收原材料和之前所有分析。
+如何指导 AI：让后轮能检查、扩展和挑战前轮结果。
+应留下的产物：带角色和依赖顺序的 2–4 轮分析计划。
+教学示例：首轮找持有点，后轮检查修复代价和先前判断。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L33
+
+F02 · full 逐轮标明执行身份
+类型：上游指令概括
+原文动作概括：每轮先说明正在执行哪一轮，再按完整指令分析；第二轮起包含前轮结果，输出完整分析。
+如何指导 AI：使轮次切换和各轮职责在输出中可见。
+应留下的产物：逐轮标注的分析内容。
+教学示例：明确区分持有分析与修复审查两轮产物。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L44
+
+F03 · full 在预设轮次之外追加对抗轮
+类型：上游指令概括
+原文动作概括：所有设计好的轮次执行完后，再追加一个未列入原计划的对抗复查。
+如何指导 AI：防止最初设计的检查方法同时遗漏同一类问题。
+应留下的产物：专门攻击已有发现的一轮输出。
+教学示例：追问是否把缓存问题误判成 GC 失效。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L48
+
+F04 · full 对每条发现寻找反证
+类型：上游指令概括
+原文动作概括：逐条检查 bug、结构主张与守恒律，说明什么证据能够推翻它。
+如何指导 AI：把结论变成可以失败的预测，给后续验证方向。
+应留下的产物：每条发现的反证条件。
+教学示例：清空缓存后响应仍存活，会要求继续找其他引用。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L52
+
+F05 · full 同时检查过度断言和遗漏
+类型：上游指令概括
+原文动作概括：检查是否把可修复问题说成结构性限制，是否漏掉已有分析暗示的发现，以及各轮共享的假设是否错误。
+如何指导 AI：既收缩说得太满的结论，也补充推导没有走完的部分。
+应留下的产物：过度判断、遗漏和共同假设清单。
+教学示例：有限缓存能修复当前无界持有，就不能称它不可避免。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L53
+
+F06 · full 明确撤回与补充
+类型：上游指令概括
+原文动作概括：发现过度断言时显式撤回；发现漏判时新增。
+如何指导 AI：让纠错在最终结果中可追踪。
+应留下的产物：撤回记录和新增发现。
+教学示例：明确撤回“所有请求都必然增加内存”的说法。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L57
+
+F07 · full 综合经复查保留的结果
+类型：上游指令概括
+原文动作概括：最终包含经反驳保留的结构判断、被撤回主张、通过复查的问题表，以及仅因反驳才出现的最深发现。
+如何指导 AI：要求结果与纠错过程对得上，避免原结论未经修正进入交付。
+应留下的产物：四部分 Final Findings。
+教学示例：把增长条件修正为持续不同 key，并说明修正来源。
+使用边界（研究解读）：输出标题和模型自审不等于独立验证；结构性结论需另核查。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L63
+
+D01 · discover 本轮只发现方向
+类型：上游指令概括
+原文动作概括：不分析材料、不生成 lens 或提示词，只命名可研究的领域。
+如何指导 AI：把探索入口与深入判断分开，避免还没选方向就提前下结论。
+应留下的产物：供用户选择的方向菜单。
+教学示例：列出缓存性能、接口语义和运维成本，暂不宣称发现漏洞。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-discover/SKILL.md#L23
+
+D02 · discover 扩展到不明显的领域
+类型：上游指令概括
+原文动作概括：既列架构、安全等明显方向，也考虑用户心理、教学、定位、监管、运营和团队扩张等不同领域；非代码材料同样跨出其表面类别。
+如何指导 AI：扩大候选观察范围，帮助用户发现未想到的问题。
+应留下的产物：显性与非显性研究方向。
+教学示例：除吞吐之外，也列出新人理解 API 的困难。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-discover/SKILL.md#L25
+
+D03 · discover 去掉同义方向
+类型：上游指令概括
+原文动作概括：方向必须真正不同，错误处理与异常传播不能算成两个独立领域。
+如何指导 AI：要求模型按实质差异组织覆盖面，避免用改名凑数量。
+应留下的产物：去重后的领域菜单。
+教学示例：把错误处理与用户心理分开，把异常包装并入错误处理。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-discover/SKILL.md#L29
+
+D04 · discover 交付约 10–20 个可选择方向
+类型：上游指令概括
+原文动作概括：用编号列方向名，每项用 1–2 句话说明该方向会揭示什么，再由用户选 scan 或 full 深查。
+如何指导 AI：让探索结果能够支持下一步决策。
+应留下的产物：有解释的编号方向清单。
+教学示例：“缓存策略——揭示容量、命中率与重建成本的关系”。
+使用边界（研究解读）：10–20 是目标数量，不应把不适用领域硬凑进去。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-discover/SKILL.md#L31
+
+T01 · 3way 先分别看，再综合
+类型：上游指令概括
+原文动作概括：WHERE、WHEN、WHY 各自执行，要求前面的分析不影响后面的分析；最后才交叉比较。
+如何指导 AI：尝试保持不同视角的差异，延后合并结论。
+应留下的产物：三份视角分析和综合结果。
+教学示例：结构看缓存持有，时间看增长，目标看容量与命中诉求。
+使用边界（研究解读）：这是同一流程中的提示词要求，不代表上下文隔离或独立评审。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L21
+
+T02 · WHERE 挖结构层次和历史接缝
+类型：上游指令概括
+原文动作概括：从表面到基础逐层看可见内容、隐藏内容与依赖；找已被替换但残留的模式、新旧设计接缝，再提出跨层权衡，要求 A × B = Constant。
+如何指导 AI：将模型的注意力放到层次边界、依赖和历史遗留。
+应留下的产物：层次图、隐藏关系、接缝与权衡主张。
+教学示例：公开 get 接口下面实际藏着长期存活的字典。
+使用边界（研究解读）：跨层守恒律是上游要求模型推导的主张，格式不构成证明。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L23
+
+T03 · WHEN 推演 3–5 个变化周期
+类型：上游指令概括
+原文动作概括：每周期说明什么会坏、什么会固化、什么知识丢失；之后找未经验证却成常识的预测、新脆弱点和时间演化权衡。
+如何指导 AI：从当前能否运行转向未来变化条件下的行为。
+应留下的产物：逐周期推演、未验证假设与时间风险。
+教学示例：从低流量推演到高基数请求和维护人员更替。
+使用边界（研究解读）：未来推演属于预测，不能写成已经发生的运行事实。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L29
+
+T04 · WHY 检查三个期望性质的冲突
+类型：上游指令概括
+原文动作概括：选出材料声称同时提供的三个好性质，要求论证为何不能共存，以及满足两个时如何牺牲第三个。
+如何指导 AI：推动模型把模糊取舍转成明确目标、条件和冲突关系。
+应留下的产物：三个目标及冲突论证。
+教学示例：检查有限内存、永久保留所有 key、永不重建能否同时满足。
+使用边界（研究解读）：上游预设必须有不可能三角；使用时需要核查前提，并允许证据不足。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L40
+
+T05 · WHY 连续构造两次改进
+类型：上游指令概括
+原文动作概括：构造修复核心张力的方案，要求检查问题是否在深层重现，再做第二次改进并寻找持续存在的性质。
+如何指导 AI：让模型检查修复是否只是转移成本。
+应留下的产物：两次设计尝试、重现的问题和不变量主张。
+教学示例：改成磁盘缓存后，继续检查存储、淘汰与加载成本。
+使用边界（研究解读）：不能因为指令要求重现，就认定任何修复都必然失败。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L42
+
+T06 · 综合时按视角支持数分类
+类型：上游指令概括
+原文动作概括：三视角都发现的列为 STRUCTURAL CERTAINTIES，两个为 STRONG SIGNALS，一个为 UNIQUE PERSPECTIVES。
+如何指导 AI：显式比较不同视角是否收敛、各自补充了什么。
+应留下的产物：按 3/2/1 个视角支持分类的发现。
+教学示例：区分多视角都提到的增长问题与某一视角独有的风险。
+使用边界（研究解读）：上游把全体一致称为真实；本研究不把同一模型的一致当作独立证据。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L48
+
+T07 · 解释独有发现为什么被其他视角遗漏
+类型：上游指令概括
+原文动作概括：逐个独有发现说明另外两种操作为何看不到它。
+如何指导 AI：把视角的适用范围与盲区变成可解释的差异。
+应留下的产物：独有发现与遗漏机制。
+教学示例：维护知识丢失可能只有时间推演直接检查到。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L54
+
+T08 · 综合不同权衡并给出集成洞见
+类型：上游指令概括
+原文动作概括：比较三条守恒律是同一关系的不同说法，还是不同约束；最后给出只能由三视角整合得到的一条洞见。
+如何指导 AI：要求模型处理发现之间的关系，而不是简单拼接三份报告。
+应留下的产物：跨视角关系说明与一条整合洞见。
+教学示例：将持有结构、增长条件和目标冲突连接起来。
+使用边界（研究解读）：整合产生的新判断仍需证据支持。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L56
+
+R01 · reflect 诊断隐藏机制并构造改进
+类型：上游指令概括
+原文动作概括：从被挑战后变化的主张命名隐藏问题的机制；构造修复核心问题的改进，要求检查深层重现并指出新暴露的信息。
+如何指导 AI：让模型分析设计如何让问题不易被看见，并借修改暴露关系。
+应留下的产物：隐藏机制、改进尝试与新线索。
+教学示例：接口只展示读操作，却没有展示背后的对象持有寿命。
+使用边界（研究解读）：“必须重现问题”是强预设，应独立核查。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L28
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L30
+
+R02 · reflect 要求结构权衡表达式
+类型：上游指令概括
+原文动作概括：用 A × B = Constant 表达材料无法摆脱的结构权衡，并交付具体发现表。
+如何指导 AI：促使模型显式命名被关联的目标和结构性主张。
+应留下的产物：权衡表达式与问题表。
+教学示例：区分缓存容量的实现缺陷与具体使用目标间的代价。
+使用边界（研究解读）：公式外观不是数学证明，需列出变量、适用条件与证据。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L32
+
+R03 · reflect 把自己的输出当成新材料
+类型：上游指令概括
+原文动作概括：使用同一协议复查第一轮输出，对其错误和遗漏提出可证伪主张，再由三个角色挑战，找分析框架隐藏的问题。
+如何指导 AI：把分析报告本身纳入检查对象。
+应留下的产物：关于初轮分析偏差的元分析。
+教学示例：检查只追缓存是否遗漏原生内存来源。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L36
+
+R04 · reflect 区分分析过程与代码的权衡
+类型：上游指令概括
+原文动作概括：推导关于所有分析方式的元层次权衡；对象是分析过程，而非再次只描述代码。
+如何指导 AI：促使模型反思选用某种方法会牺牲什么。
+应留下的产物：分析方式的权衡主张。
+教学示例：深入查单文件持有关系时，覆盖不到跨文件全貌。
+使用边界（研究解读）：从一次分析不能自动证明关于所有分析的普遍规律。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L42
+
+R05 · reflect 按固定字段交付约束报告
+类型：上游指令概括
+原文动作概括：报告方法名、模型名、MAXIMIZED、SACRIFICED、RECOMMENDATIONS 与分析守恒律；给各盲区指定不同 focus 的 scan 或 full。
+如何指导 AI：让模型交代分析选择的得失，并把遗漏转换成下一步任务。
+应留下的产物：完整 CONSTRAINT REPORT。
+教学示例：列出已查缓存、未查原生分配，并建议下次提供相应材料补查。
+使用边界（研究解读）：这些字段是上游报告要求，不等于模型自报信息都已验证。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L44
+
+R06 · reflect 以追加方式保存盲区
+类型：上游指令概括
+原文动作概括：向项目 .prism-history.md 追加时间、对象名、Maximized、Sacrificed、Recommendations；文件不存在则创建并写入标题。
+如何指导 AI：把这次的分析边界放入后续 scan 能读取的材料。
+应留下的产物：按固定格式追加的历史条目。
+教学示例：记录本次未查跨文件引用，作为下次生成方法的输入。
+使用边界（研究解读）：默认保存侧重与盲区，不是完整故障、补丁和验证证据库，也不修改模型权重。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L75
+
+固定视角
+====================================
+E01 · 错误韧性：找显式与隐式的失败边界
+类型：上游指令概括
+原文动作概括：搜索捕获、包装、转换和静默失败，包括类型强转、默认值、未触发回调与空值跳过；逐处说明变量值、栈、部分状态、时序等上下文保留或丢失。
+如何指导 AI：让模型从具体信息损失入手检查错误处理。
+应留下的产物：失败边界与丢失字段、状态。
+教学示例：异常变成默认空结果时，丢掉了哪个请求与失败阶段？
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L13
+
+E02 · 错误韧性：追到多跳后的用户损害
+类型：上游指令概括
+原文动作概括：对每个丢失信息，沿所有相关后续调用和条件追踪：哪个决策需要它，实际走错哪条分支，直到误导性报错或静默错误结果。
+如何指导 AI：把捕获异常与最终影响连成因果链。
+应留下的产物：边界 → 信息损失 → 错误决策 → 用户可见损害。
+教学示例：请求失败被当空数据，后续错误地覆盖已有结果。
+使用边界（研究解读）：跨文件追踪若缺材料，需要补上下文；模板要求本身不提供跨文件检索器。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L16
+
+E03 · 错误韧性：构造最小修复和相反修复
+类型：上游指令概括
+原文动作概括：选丢信息最多的边界，构造保留信息的最小改动；检查新增损失，再构造保留相反信息的修复，比较共同保留的性质。
+如何指导 AI：用两种相反选择揭示修改代价。
+应留下的产物：修复 A、修复 B、各自丢失的信息与不变量主张。
+教学示例：保留完整底层异常与隐藏内部细节，分别会失去什么？
+使用边界（研究解读）：不应把两次设计中出现的现象直接推广到所有实现。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L19
+
+E04 · 错误韧性：使用七列结果表
+类型：上游指令概括
+原文动作概括：交付 Boundary、Destroyed、Wrong Decision、Harm、Fix A Destroys、Fix B Destroys、Invariant。
+如何指导 AI：要求边界、后果、方案代价和结论在同一条记录中对齐。
+应留下的产物：七列错误链与修复对照表。
+教学示例：每个默认值掩盖问题的记录，都连接到具体错误决策。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L20
+
+L01 · L12：利用主张变化诊断隐藏机制
+类型：上游指令概括
+原文动作概括：提出可证伪主张，三角色挑战后比较原始与变化后的主张；把差异本身作为线索，命名隐藏机制并应用诊断。
+如何指导 AI：把观点变化当成可分析的产物，而非只投票决定谁对。
+应留下的产物：原主张、修正主张、差异和隐藏机制。
+教学示例：从“分配太大”转为“对象长期保留”，检查为何初看只注意到分配。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+L02 · L12：故意加强隐藏，再找三条新性质
+类型：上游指令概括
+原文动作概括：构造一个看似合理、可通过代码审查却加深问题隐藏的改进；指出只有尝试加强它后才暴露的三条性质。
+如何指导 AI：使用反向构造刺激模型发现常规改进叙事遗漏的关系。
+应留下的产物：反向改进与三条新可见性质。
+教学示例：再封装一层缓存接口，观察哪些寿命与淘汰信息更难看到。
+使用边界（研究解读）：这是分析构造，不是要求实际提交有害代码。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+L03 · L12：重复诊断改进，寻找持续问题
+类型：上游指令概括
+原文动作概括：把改进当作新代码继续诊断；找重现的性质，再做第二次改进，区分实现缺陷与声称属于问题空间的不变量。
+如何指导 AI：让模型沿设计变化反复检查问题是否转移。
+应留下的产物：两次改进、重复出现的性质与分类依据。
+教学示例：从内存缓存改为磁盘后，继续检查存储增长和淘汰。
+使用边界（研究解读）：问题空间层面的普遍断言需要超出少量例子的依据。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+L04 · L12：反转不变量，检查新增的不可能性
+类型：上游指令概括
+原文动作概括：构造一个让原先不可能性质轻易成立的设计，命名新产生的不可能性，再描述两者的权衡。
+如何指导 AI：迫使模型尝试改变基本前提，而不只在原方案附近优化。
+应留下的产物：反转设计、新约束及原反方案的关系。
+教学示例：允许按需重新计算后，有限内存可满足，但不再保证所有 key 永久命中。
+使用边界（研究解读）：原先“不可能”的条件和反转后的前提必须写清。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+L05 · L12：连权衡结论本身也要检查
+类型：上游指令概括
+原文动作概括：对守恒律再做同样诊断、改进与反转；元规律不能只是扩大分类，必须说明本问题被原结论隐藏的部分，并预测具体可测试后果。
+如何指导 AI：防止用一个宏大结论过早终止分析。
+应留下的产物：针对本问题的元层次判断与可测试预测。
+教学示例：检查“容量与命中率权衡”是否掩盖了 key 分布这一条件。
+使用边界（研究解读）：可测试预测仍需独立测试；仅生成元规律不提高可信度。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14
+
+O01 · 性能：找隐藏实现细节的具体边界
+类型：上游指令概括
+原文动作概括：找跨模块、动态派发和序列化等边界，说明分配、缓存、分支预测、内存局部性或锁竞争信息被隐藏在哪里。
+如何指导 AI：将泛泛的性能关注落实到可追踪的边界与数据。
+应留下的产物：边界与被隐藏的性能信息。
+教学示例：检查缓存 API 是否隐藏了响应大小和条目增长。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/optimize.md#L13
+
+O02 · 性能：追踪被阻断的最优路径并量化
+类型：上游指令概括
+原文动作概括：对每项隐藏信息，找原本可选的更优路径和实际替代动作，例如复制代替共享、轮询代替等待、重试代替续传；用纳秒、分配、缓存未命中或往返次数表述成本。
+如何指导 AI：让模型说明成本如何产生、由什么动作付出。
+应留下的产物：受阻优化、替代动作和具体成本。
+教学示例：按不同 key 数与响应大小估算持有量，再用采样验证。
+使用边界（研究解读）：指令要求量化不意味着已有测量；估计与实测必须区分。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/optimize.md#L16
+
+O03 · 性能：比较暴露信息的收益与破坏
+类型：上游指令概括
+原文动作概括：选信息损失最大的边界，说明展开它暴露什么、破坏什么；输出 Boundary、Erased Data、Blocked Optimization、Blind Workaround、Concrete Cost、Flattening Breaks。
+如何指导 AI：要求优化建议同时包含作用机制和代价。
+应留下的产物：六列性能边界对照表。
+教学示例：暴露缓存内部状态方便观测，但需要处理接口稳定性。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/optimize.md#L19
+
+I01 · 接口身份：先列它承诺自己是什么
+类型：上游指令概括
+原文动作概括：读取类型签名、契约、文档、命名和自我描述，列出用户据此形成的预期。
+如何指导 AI：先建立检查行为的参照，而不是直接凭感觉判错。
+应留下的产物：接口承诺与用户预期清单。
+教学示例：名为 get 的操作是否让用户以为只是读取？
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md#L13
+
+I02 · 接口身份：对照承诺与实际行为
+类型：上游指令概括
+原文动作概括：检查上下文含义变化的哨兵值、会改状态的读取、不同情形返回不同类型、名称与用途不符；逐项写 X 声称是 Y，实际是 Z。
+如何指导 AI：让模型沿承诺与实现的差异寻找语义错位。
+应留下的产物：具体函数、参数或模式的身份错位说明。
+教学示例：属性读取却触发状态转换，应明确其副作用。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md#L16
+
+I03 · 接口身份：区分必要代价与偶然债务
+类型：上游指令概括
+原文动作概括：问错位换来了性能、方便或兼容性中的什么；更诚实的版本会牺牲什么；分成移除会损失价值的必要代价与没有收益的偶然债务。
+如何指导 AI：避免把所有不直观行为都当作应删除的 bug。
+应留下的产物：收益、替代代价与必要/偶然分类。
+教学示例：兼容旧返回值的设计可能有实际迁移收益。
+使用边界（研究解读）：必要性需要结合实际约束判断，不能靠模型命名确定。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md#L25
+
+B01 · 深扫：显式查目标、复杂度与支付位置
+类型：上游指令概括
+原文动作概括：问哪三个好性质冲突、哪里存在无法省去的 O(n) 工作、系统为别处的灵活性付出了什么，并命名声称被保留的量。
+如何指导 AI：让模型寻找复杂度和成本在结构中的分布。
+应留下的产物：目标冲突、复杂度位置与权衡主张。
+教学示例：查配置灵活性是否把校验成本移到了每次请求。
+使用边界（研究解读）：复杂度下界和不可能性需要给出适用前提。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L13
+
+B02 · 深扫：追踪诊断信息如何被泛化
+类型：上游指令概括
+原文动作概括：找带上下文的异常变成通用异常、未说明尝试范围的 not found、掩盖配置错误的默认值；追踪哪些诊断信息丢失、哪些继续传播。
+如何指导 AI：指导模型寻找报告症状与真实失败之间的信息断点。
+应留下的产物：信息泛化边界与丢失的诊断线索。
+教学示例：连接失败最终被报告成资源不存在。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L21
+
+B03 · 深扫：检查异步交接的可变状态
+类型：上游指令概括
+原文动作概括：查共享可变状态交给异步操作，特别是 dict.update 后异步调用、await 前修改对象；找并发任务读到不一致状态的情况。
+如何指导 AI：给模型明确的模式与时序问题入口。
+应留下的产物：状态交接点、并发交错与违规状态。
+教学示例：构造任务 A 修改配置、任务 B 在中途读取的交错。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L32
+
+B04 · 深扫：检查先匹配压过最佳匹配
+类型：上游指令概括
+原文动作概括：查线性搜索提前返回、部分匹配不比较就保存，以及 O(n) 搜索缓存次优结果的路径。
+如何指导 AI：让模型检查优先级是否因控制流和缓存被错误固定。
+应留下的产物：首次匹配与最佳匹配的冲突路径。
+教学示例：较宽泛规则先命中，遮住后面的精确规则。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L37
+
+B05 · 深扫：用空值和边界检查组合
+类型：上游指令概括
+原文动作概括：查字符串拼接、路径组合、负切片，特别是 x 为空时的 [:-len(x)] 与空路径加斜杠；指出精确模式与行号。
+如何指导 AI：将边界分析变成可直接构造的输入。
+应留下的产物：边界输入、具体表达式与错误组合结果。
+教学示例：令 x 为空，检查本想移除后缀的切片是否变成空串。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L42
+
+A01 · 假设反转：把经验主张逐一设为假
+类型：上游指令概括
+原文动作概括：提取关于时序、因果、资源与人类行为的经验主张，逐个假设为假，追踪与现实冲突后的损坏。
+如何指导 AI：让模型挑战默认前提，而非只在前提成立时读代码。
+应留下的产物：主张、反例条件与后果链。
+教学示例：反转“key 数量有限”的资源假设。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/claim.md#L9
+
+A02 · 假设反转：构造三个替代设计
+类型：上游指令概括
+原文动作概括：构造三个设计，每个反转一个主张；展示具体结果并说明揭示了原设计的什么隐藏假设。
+如何指导 AI：用替代设计检查哪些结论依赖特定前提。
+应留下的产物：三组主张反转、设计与结果。
+教学示例：分别改变容量、寿命和计算成本的假设。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/claim.md#L9
+
+A03 · 假设反转：预测最慢且隐蔽的失败
+类型：上游指令概括
+原文动作概括：命名材料试图优化的核心不可能性，并预测哪个错误主张导致最慢、最难察觉的失败。
+如何指导 AI：引导模型优先注意不会立即报错的风险。
+应留下的产物：隐蔽失效的预测及其依赖假设。
+教学示例：无界缓存可能先长期正常运行，之后才暴露资源压力。
+使用边界（研究解读）：不可能性与未来失效是待验证判断。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/claim.md#L9
+
+V01 · 时间模拟：固定推演五种维护变化
+类型：上游指令概括
+原文动作概括：每轮都说明什么坏掉、什么固化、什么知识丢失。五轮固定检查：①新人加功能：误解什么、违反哪个假设；②依赖破坏性升级：哪些接口吸收或传播冲击，哪些应急补丁会固化；③原作者离开：丢失哪些未记录知识，哪些决策变成盲从，哪里无法修复；④用量十倍：哪些性能假设失效，哪些临时方案变成承重设施；⑤安全审计：暴露哪些隐藏信任假设，哪些边界从来没有真正成立。
+如何指导 AI：为模型提供稳定的外部扰动，而非笼统预测未来。
+应留下的产物：五周期的误解、接口冲击、应急补丁、知识丢失、负载与信任边界分析。
+教学示例：用量十倍时哪些临时方案变成承重设施？安全审计暴露了哪些假边界？
+使用边界（研究解读）：这是场景推演，没有运行真实升级、负载或安全审计。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/simulation.md#L14
+
+V02 · 时间模拟：找固化模式和被牺牲的量
+类型：上游指令概括
+原文动作概括：映射五周期中反复固化的模式，命名跨周期保存的量，要求 A × B = constant，并说明代码牺牲了什么。
+如何指导 AI：让模型归纳演化过程中的重复代价。
+应留下的产物：固化模式、跨周期权衡与牺牲项。
+教学示例：应急兼容分支逐渐成为不能移除的路径。
+使用边界（研究解读）：模拟中的重复不自动证明所有未来周期都成立。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/simulation.md#L28
+
+V03 · 时间模拟：反查自己的时间假设
+类型：上游指令概括
+原文动作概括：把刚提出的规律用于自己的模拟，说明模拟依赖什么时间假设，第六个周期可能揭示什么。
+如何指导 AI：让模型检查预测框架自身的遗漏。
+应留下的产物：模拟假设与第六周期的新问题。
+教学示例：五轮都假定团队规模稳定，下一轮可以挑战这个条件。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/simulation.md#L32
+
+实现与边界
+====================================
+M01 · 阶段标题是指令约定，不是程序闸门
+类型：运行说明与研究解读
+原文动作概括：Skill 用阶段标题、必须执行、不得跳步等文字组织处理；上游将 full 标为一次响应内的多轮分析。
+如何指导 AI：利用模型遵循指令与前序输出的能力来组织生成。
+应留下的产物：按约定组织的文字输出。
+教学示例：模型漏了反驳时，包内没有阶段校验器自动判失败并重试。
+使用边界（研究解读）：没有逐阶段状态机、输出 schema 验收或自动证据门槛；这里是对实现的研究解读。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L22
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L21
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/README.md#L48
+
+M02 · 工具字段需要宿主解释
+类型：运行说明与研究解读
+原文动作概括：scan 声明 allowed-tools 为 Read；reflect 声明 Write、Read。文件读取和历史追加需宿主实际提供相应工具。
+如何指导 AI：向支持这些字段的宿主表达工具需求或限制。
+应留下的产物：宿主允许的实际读取、写入行为。
+教学示例：reflect 只有取得写入能力，才可能追加历史文件。
+使用边界（研究解读）：不能只看声明就断言已强制限制权限；具体语义与执行需核对宿主。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L8
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L8
+
+M03 · 单次无工具模式是额外的运行选项
+类型：运行说明与研究解读
+原文动作概括：scan 的运行说明建议在 Claude CLI 中使用 --tools ""，以避免工具循环并让完整分析在一次响应中进行。
+如何指导 AI：通过宿主 CLI 关闭工具来改变运行方式，区别于只写“不要跳步”。
+应留下的产物：一次无工具响应中的分析。
+教学示例：材料已提供时，模型只生成分析文本。
+使用边界（研究解读）：这不是 Hermes 的通用参数，也不校验内容、字数或结论正确性；本研究未执行该命令。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L66
+
+M04 · 评分、校准日期和模型推荐属于材料说明
+类型：运行说明与研究解读
+原文动作概括：模板前置信息记录分数、模型、版本、词数、来源轮次；L12 还写了检查频率和退化阈值。将它们作为作者说明阅读。
+如何指导 AI：帮助选择与理解模板背景，不会自行启动评测或监控。
+应留下的产物：模板背景与作者的质量主张。
+教学示例：写有每周检查频率，不等于仓库运行了每周检查服务。
+使用边界（研究解读）：不能把元数据、模型角色一致、公式或格式完整当作运行保证；固定模板的长度说明也不是 scan 的生成长度规则。
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L7
+来源：https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md#L7

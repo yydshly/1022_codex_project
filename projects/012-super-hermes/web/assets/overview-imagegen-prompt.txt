@@ -1,0 +1,109 @@
+Use case: infographic-diagram.
+Create ONE finished, exceptionally clear Chinese educational infographic about Super Hermes. This is the deliverable image itself, not a mockup or a screenshot. Portrait 2160×3840 or equivalent high resolution, generous readable Chinese typography, suitable for zooming and sharing. A single complete poster with a clear top-to-bottom reading order. Match the existing research website's warm ivory background, dark forest-green typography and lines, sage green secondary panels, and restrained terracotta accents for caveats. Flat editorial vector-like information design, thin precise connectors, minimal relevant line icons, no photography, no decorative characters, no 3D device framing, no watermark. All important text must be accurate Chinese with the exact English Skill/file names below. Keep letters and numbers crisp. Use meaningful arrows only. Use sufficient contrast and visible margins; no microprint or clipped sections.
+
+Main title, large:
+“SUPER HERMES”
+“AI 深度审查：流程、规范与视角全景”
+Subtitle:
+“5 个 Skill + 7 份固定模板，指导 AI 怎样分析问题”
+Definition:
+“你提供单个代码文件或方案、目标与重点；AI 交付问题、设计权衡和分析盲区。”
+Scenario tags:
+“检查关键代码” “评审设计方案” “寻找研究方向” “补查分析遗漏”
+
+Section 1 — “01  共用的分析思路”
+Draw a clear five-step connected horizontal or vertical diagram with step numbers:
+“明确对象与范围” → “公开检查方法” → “构造情形并分析” → “反驳与修正” → “报告发现与盲区”
+Small but readable qualifier:
+“研究者归纳的通用协议；各 Skill 侧重不同，并非全部串行执行。”
+Under the diagram, show the action equation prominently:
+“观察对象 + 检查动作 + 具体产出”
+One small explanatory example:
+“并发安全 → 构造线程交错 → 找出违规状态转换”
+
+Section 2 — “02  五个 Skill，各自怎样限制流程”
+Use five equally clear capability panels plus one compact role panel, ideally a 2×3 layout; every panel should have command name, when to use, steps, output. Exact content:
+A. “/prism-discover｜先找方向”
+“适用：还不知道值得查什么”
+“列出约 10–20 个不同方向 → 用户选择”
+“输出：研究方向菜单”
+“本轮只找方向，不执行深入分析”
+
+B. “/prism-scan｜定向扫描”
+“适用：一个文件或方案，需要深入检查”
+“读材料与历史 → 生成 75–200 单词的方法 → 执行”
+“输出：生成的方法 + 问题表 + 盲区说明”
+“可按安全、性能等用户重点定制”
+
+C. “/prism-full｜深入复查”
+“适用：重要材料，需要更充分检查”
+“设计 2–4 轮 → 后轮接收前轮结果 → 必做反驳”
+“输出：保留的发现、撤回的误判与新增问题”
+“逐项寻找能推翻结论的证据”
+
+D. “/prism-3way｜三个角度”
+“适用：想检查结构、变化与设计取舍”
+“WHERE 结构 → WHEN 3–5 个变化周期 → WHY 目标冲突”
+“输出：三个角度的发现与交叉综合”
+“角度一致仍需证据验证”
+
+E. “/prism-reflect｜检查遗漏”
+“适用：想知道分析没看到什么”
+“结构分析 → 分析自己的输出 → 盲区报告 → 追加历史”
+“输出：侧重点、遗漏与下一步建议”
+“写入 .prism-history.md”
+
+F. “谁负责什么”
+“Skill：规定规则和步骤”
+“Hermes Agent：载入指令、提供读写工具”
+“底层模型：生成并执行分析”
+“历史文件：给下一次分析补充上下文”
+
+A meaningful feedback arrow must clearly show:
+“reflect 保存 .prism-history.md → 下一次 scan 读取 → 调整检查重点”
+Do not imply training, updating model weights, or an automated improvement guarantee.
+
+Section 3 — “03  交付规范：怎样才算查过”
+Use six numbered concise requirements, not generic marketing:
+“方法具体：贴合当前材料，包含构造或反转动作”
+“问题可定位：位置、什么会出错、严重程度、可修复性”
+“过程有产物：展示方法或分析轮次，再执行”
+“结论可反驳：找反证，明确撤回过度判断”
+“范围要公开：MAXIMIZED / SACRIFICED / RECOMMENDATIONS”
+“历史有结构：时间、材料名、重点、遗漏、建议”
+
+Section 4 — “04  七份固定分析视角”
+Use a clean seven-row matrix with headers “模板｜看什么｜怎么检查”. Exact row content:
+“error_resilience｜错误传播｜追踪信息丢失如何导致后续错误”
+“l12｜结构权衡｜构造替代设计，反转假设，找具体问题”
+“optimize｜性能成本｜追踪分配、缓存、锁争用与往返”
+“identity｜承诺与行为｜对照命名、接口、文档和真实实现”
+“deep_scan｜信息损失｜检查错误被模糊化、状态交接和组合边界”
+“claim｜假设反转｜假设某条前提为假，追踪后果”
+“simulation｜长期演化｜推演接手、升级、离职、增长与审查”
+Readable note:
+“scan 默认动态生成新方法；固定模板按需选用，也可作为系统提示词使用。”
+
+Section 5 — “05  限制与扩展”
+Two distinct columns, caveats in terracotta, extensions in sage.
+Left title: “已有边界”
+Six clear items:
+“代码分析目前限单文件，缺少跨文件整库分析”
+“主要靠提示词引导，没有逐阶段程序强校验”
+“多角色与多角度不等于独立隔离的审查者”
+“历史是追加文本，无去重、检索或改进保证”
+“效果依赖模型；作者评分缺少标准化外部基准”
+“守恒律、不可能三角是待验证判断，不是自动证明”
+Right title: “怎样继续扩展”
+Three graded levels, with explicit implementation status:
+“直接可用：指定重点、固定模板、历史补查”
+“改 Skill：团队规范、领域模板、证据与报告格式”
+“需额外开发：跨文件检索、PR/CI、结构化历史、自动评测”
+Bottom highlighted reusable rule:
+“保留：反例、复查、统一交付、盲区说明”
+“允许：证据不足、未发现必然冲突”
+
+Footer in readable small type:
+“来源：Cranot/super-hermes · MIT · 研究版本 ffe2d10 · 2026-10-22”
+“中文流程归纳与扩展建议来自本研究；图示不代表模型效果实测。”
+Everything must fit within ONE image, fully composed, no missing section, no extra panels that invent capabilities. Prefer precise diagram architecture and usable text hierarchy over decoration.

@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-22",
+  "upstreamRevision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "url": "http://127.0.0.1:7878/1022_codex_project/012-super-hermes/#rulebook",
+  "checks": {
+    "groups": [
+      {
+        "group": "common",
+        "count": 12,
+        "label": "通用动作 · 12 / 69 条"
+      },
+      {
+        "group": "skills",
+        "count": 27,
+        "label": "入口专属 · 27 / 69 条"
+      },
+      {
+        "group": "lenses",
+        "count": 26,
+        "label": "固定视角 · 26 / 69 条"
+      },
+      {
+        "group": "boundary",
+        "count": 4,
+        "label": "实现与边界 · 4 / 69 条"
+      },
+      {
+        "group": "all",
+        "count": 69,
+        "label": "全部规则 · 69 / 69 条"
+      }
+    ],
+    "sources": [
+      {
+        "key": "scan",
+        "path": "skills/prism-scan/SKILL.md",
+        "highlight": "Use on a single code file",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md#L20"
+      },
+      {
+        "key": "full",
+        "path": "skills/prism-full/SKILL.md",
+        "highlight": "Read the artifact the user provided.",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md#L25"
+      },
+      {
+        "key": "3way",
+        "path": "skills/prism-3way/SKILL.md",
+        "highlight": "Each operation is independent",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md#L21"
+      },
+      {
+        "key": "discover",
+        "path": "skills/prism-discover/SKILL.md",
+        "highlight": "Do NOT analyze the artifact.",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-discover/SKILL.md#L23"
+      },
+      {
+        "key": "reflect",
+        "path": "skills/prism-reflect/SKILL.md",
+        "highlight": "## PHASE 4:",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md#L75"
+      },
+      {
+        "key": "error_resilience",
+        "path": "skills/prism-scan/references/error_resilience.md",
+        "highlight": "Execute every step below.",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md#L11"
+      },
+      {
+        "key": "l12",
+        "path": "skills/prism-scan/references/l12.md",
+        "highlight": "Finally: collect every concrete bug",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md#L14"
+      },
+      {
+        "key": "optimize",
+        "path": "skills/prism-scan/references/optimize.md",
+        "highlight": "State costs in nanoseconds",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/optimize.md#L17"
+      },
+      {
+        "key": "identity",
+        "path": "skills/prism-scan/references/identity.md",
+        "highlight": "Force specificity:",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md#L28"
+      },
+      {
+        "key": "deep_scan",
+        "path": "skills/prism-scan/references/deep_scan.md",
+        "highlight": "Force specificity:",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md#L47"
+      },
+      {
+        "key": "claim",
+        "path": "skills/prism-scan/references/claim.md",
+        "highlight": "Extract every empirical claim",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/claim.md#L9"
+      },
+      {
+        "key": "simulation",
+        "path": "skills/prism-scan/references/simulation.md",
+        "highlight": "## Temporal Simulation Protocol",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/simulation.md#L14"
+      },
+      {
+        "key": "readme",
+        "path": "README.md",
+        "highlight": "1 (multi-pass within single response)",
+        "link": "https://github.com/Cranot/super-hermes/blob/ffe2d10042041dcc23325f013e8b7e607e069952/README.md#L48"
+      }
+    ],
+    "expandedAll": 69,
+    "collapsedAll": 0,
+    "noResultShown": true,
+    "searchAcrossAll": [
+      "B03"
+    ],
+    "legacySourceReader": {
+      "path": "skills/prism-scan/SKILL.md",
+      "highlightCount": 0
+    },
+    "responsive": [
+      {
+        "client": 305,
+        "overflow": [],
+        "scroll": 305,
+        "width": 320
+      },
+      {
+        "client": 360,
+        "overflow": [],
+        "scroll": 360,
+        "width": 375
+      },
+      {
+        "client": 753,
+        "overflow": [],
+        "scroll": 753,
+        "width": 768
+      }
+    ],
+    "sourceCounts": [
+      {
+        "key": "scan",
+        "count": 14
+      },
+      {
+        "key": "full",
+        "count": 15
+      },
+      {
+        "key": "3way",
+        "count": 8
+      },
+      {
+        "key": "discover",
+        "count": 4
+      },
+      {
+        "key": "reflect",
+        "count": 12
+      },
+      {
+        "key": "error_resilience",
+        "count": 7
+      },
+      {
+        "key": "l12",
+        "count": 9
+      },
+      {
+        "key": "optimize",
+        "count": 4
+      },
+      {
+        "key": "identity",
+        "count": 5
+      },
+      {
+        "key": "deep_scan",
+        "count": 6
+      },
+      {
+        "key": "claim",
+        "count": 3
+      },
+      {
+        "key": "simulation",
+        "count": 3
+      },
+      {
+        "key": "readme",
+        "count": 1
+      }
+    ],
+    "coverageRows": 13,
+    "desktop": {
+      "client": 1265,
+      "scroll": 1265,
+      "titleTransform": "none",
+      "width": 1280
+    },
+    "consoleIssues": []
+  },
+  "clipboard": "Success feedback verified; actual clipboard contents were not independently verified.",
+  "screenshot": "assets/rulebook.png",
+  "modelInvoked": false,
+  "sourceCountsMatchExport": true,
+  "http": {
+    "base": "http://127.0.0.1:7878/1022_codex_project/012-super-hermes/",
+    "files": [
+      "app.js",
+      "assets/analysis-protocol.txt",
+      "assets/cover.png",
+      "assets/favicon.svg",
+      "assets/memory-demo/cache_fixture.py",
+      "assets/memory-reproduction.json",
+      "assets/overview-imagegen-prompt.txt",
+      "assets/race-reproduction.json",
+      "assets/super-hermes-overview.png",
+      "assets/super-hermes-rules.json",
+      "assets/super-hermes-rules.txt",
+      "assets/super-hermes-study-kit.zip",
+      "assets/upstream/examples/circuit_breaker.py",
+      "assets/upstream/examples/growth-demo.md",
+      "assets/upstream/examples/prism-scan-output.md",
+      "assets/upstream/install.ps1",
+      "assets/upstream/LICENSE",
+      "assets/upstream/README.md",
+      "assets/upstream/skills/prism-3way/SKILL.md",
+      "assets/upstream/skills/prism-discover/SKILL.md",
+      "assets/upstream/skills/prism-full/SKILL.md",
+      "assets/upstream/skills/prism-reflect/SKILL.md",
+      "assets/upstream/skills/prism-scan/references/claim.md",
+      "assets/upstream/skills/prism-scan/references/deep_scan.md",
+      "assets/upstream/skills/prism-scan/references/error_resilience.md",
+      "assets/upstream/skills/prism-scan/references/identity.md",
+      "assets/upstream/skills/prism-scan/references/l12.md",
+      "assets/upstream/skills/prism-scan/references/optimize.md",
+      "assets/upstream/skills/prism-scan/references/simulation.md",
+      "assets/upstream/skills/prism-scan/SKILL.md",
+      "data.js",
+      "index.html",
+      "investigation.js",
+      "memory-data.js",
+      "rulebook-data.js",
+      "rulebook.js",
+      "source-data.js",
+      "style.css"
+    ],
+    "count": 38,
+    "allFilesByteIdentical": true
+  },
+  "keyboardSummaryEnter": true,
+  "copySuccessFeedback": true
+}

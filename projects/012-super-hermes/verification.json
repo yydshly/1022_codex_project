@@ -1,0 +1,156 @@
+{
+  "researchDate": "2026-10-22",
+  "upstreamRevision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "browser": "Codex in-app browser",
+  "checks": {
+    "fourScenarioRecommendations": true,
+    "fiveSkillSourceReaders": true,
+    "sevenLensSourceReaders": true,
+    "fiveMechanismStepsWithHistoryToggle": true,
+    "raceFourStepsAndFinalDisable": true,
+    "raceReset": true,
+    "keyboardTabsArrowDownAndHome": true,
+    "dialogEscapeAndMobileBounds": true,
+    "prefixedPagesRouteAndRelativeDownloads": true,
+    "copyButtonSuccessFeedback": true
+  },
+  "copyLimitation": "The page reported a successful clipboard write, but the automation clipboard API returned an empty value; actual system clipboard content was not independently verified.",
+  "responsive": [
+    {
+      "bodyWidth": 305,
+      "overflowing": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "bodyWidth": 360,
+      "overflowing": [],
+      "scrollWidth": 360,
+      "width": 375
+    },
+    {
+      "bodyWidth": 753,
+      "overflowing": [],
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "bodyWidth": 1425,
+      "overflowing": [],
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "notExecuted": [
+    "Hermes installation",
+    "LLM analysis or A/B quality benchmark",
+    "public deployment"
+  ],
+  "offlineFileVerification": "The in-app browser blocks file: URLs. Direct-file behavior was designed without fetch but was not browser-verified; HTTP versions were verified.",
+  "screenshots": [
+    "assets/cover.png",
+    "assets/capabilities.png",
+    "assets/mobile.png"
+  ],
+  "methodSectionUpdate": {
+    "date": "2026-10-22",
+    "threeConstraintGroups": true,
+    "protocolExpands": true,
+    "protocolCopyAttributeMatchesDisplayedText": true,
+    "copyFeedback": "已复制，可以粘贴到你的 AI 工具中。",
+    "responsive": [
+      {
+        "clientWidth": 360,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      {
+        "clientWidth": 753,
+        "scrollWidth": 753,
+        "width": 768
+      },
+      {
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "width": 1440
+      }
+    ],
+    "consoleIssues": [],
+    "screenshot": "assets/analysis-method.png"
+  },
+  "overviewImageUpdate": {
+    "date": "2026-10-22",
+    "imageLoadedAtNativeSize": {
+      "width": 941,
+      "height": 1672
+    },
+    "modalOpenAndClose": true,
+    "zoomAndFitToggle": true,
+    "escapeClose": true,
+    "responsive": [
+      {
+        "clientWidth": 375,
+        "dialogWidth": 339.3333435058594,
+        "frameWidth": 287,
+        "imageWidth": 941,
+        "pageWidth": 375,
+        "scrollableFrame": true,
+        "width": 375
+      },
+      {
+        "clientWidth": 768,
+        "dialogWidth": 732,
+        "frameWidth": 664,
+        "imageWidth": 941,
+        "pageWidth": 768,
+        "scrollableFrame": true,
+        "width": 768
+      },
+      {
+        "clientWidth": 1440,
+        "dialogWidth": 1100,
+        "frameWidth": 1032,
+        "imageWidth": 941,
+        "pageWidth": 1440,
+        "scrollableFrame": false,
+        "width": 1440
+      }
+    ],
+    "consoleIssues": []
+  },
+  "memoryCaseUpdate": {
+    "record": "memory-verification.json",
+    "measurement": "web/assets/memory-reproduction.json",
+    "modelInvoked": false
+  },
+  "guidedInvestigationUpdate": {
+    "record": "guidance-verification.json",
+    "eightStages": true,
+    "repeatedKeyControlMeasured": true,
+    "modelInvoked": false
+  },
+  "completeRulebookUpdate": {
+    "record": "rulebook-verification.json",
+    "rules": 69,
+    "coreDocuments": 12,
+    "modelInvoked": false
+  },
+  "understandingImageUpdate": {
+    "record": "understanding-image.json",
+    "image": "assets/super-hermes-understanding-v2.png",
+    "width": 1086,
+    "height": 1448,
+    "staticChecksPassed": true,
+    "browserRechecked": false
+  },
+  "sevenStepProtocolUpdate": {
+    "record": "seven-step-verification.json",
+    "imageRecord": "seven-step-image.json",
+    "protocolSteps": 7,
+    "reportFields": 9,
+    "staticChecksPassed": true,
+    "browserRechecked": false,
+    "supersedes": "Earlier six-step synthesis and eight-step case teaching; earlier verification entries are historical."
+  }
+}

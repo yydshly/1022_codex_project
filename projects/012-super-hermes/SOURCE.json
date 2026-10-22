@@ -1,0 +1,138 @@
+{
+  "repository": "https://github.com/Cranot/super-hermes",
+  "revision": "ffe2d10042041dcc23325f013e8b7e607e069952",
+  "revision_date": "2026-07-27",
+  "research_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "license": "MIT",
+  "author": "Cranot",
+  "modifications": "Snapshot bytes preserved without edits.",
+  "files": [
+    {
+      "upstream_path": "README.md",
+      "local_path": "web/assets/upstream/README.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/README.md",
+      "bytes": 15834,
+      "sha256": "cf47b29ff3a08b45468f975a5cdce30bfb939df82944ed736007719028b1f2f2"
+    },
+    {
+      "upstream_path": "LICENSE",
+      "local_path": "web/assets/upstream/LICENSE",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/LICENSE",
+      "bytes": 1063,
+      "sha256": "28273a2e019078e77d7ddbecaa18ca518e18a5e30c694c4115b82b431bfe35ca"
+    },
+    {
+      "upstream_path": "install.ps1",
+      "local_path": "web/assets/upstream/install.ps1",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/install.ps1",
+      "bytes": 2419,
+      "sha256": "a22b5058ce4e5a302f7d6f15a6e7b20b2e09a978b6717aa99b732cab428d2317"
+    },
+    {
+      "upstream_path": "examples/circuit_breaker.py",
+      "local_path": "web/assets/upstream/examples/circuit_breaker.py",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/examples/circuit_breaker.py",
+      "bytes": 4407,
+      "sha256": "9e77645eb9f88ac8a12df32771cea4ac017d9d36bfd16e9eafde07cf13503ca0"
+    },
+    {
+      "upstream_path": "examples/prism-scan-output.md",
+      "local_path": "web/assets/upstream/examples/prism-scan-output.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/examples/prism-scan-output.md",
+      "bytes": 9259,
+      "sha256": "1b60320c8731cf26d08d43284faddf5d6dec9f378d15fb51d9500afdc345312f"
+    },
+    {
+      "upstream_path": "examples/growth-demo.md",
+      "local_path": "web/assets/upstream/examples/growth-demo.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/examples/growth-demo.md",
+      "bytes": 3255,
+      "sha256": "c0c03504857fe4c31aaf7397e2eaebd105446765aede35af9d6f94cc65cdf398"
+    },
+    {
+      "upstream_path": "skills/prism-scan/SKILL.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/SKILL.md",
+      "bytes": 5915,
+      "sha256": "ce18487b2304c0a897cca481fcbb47294ac75e8e717e49041218adb71a5dd72d"
+    },
+    {
+      "upstream_path": "skills/prism-full/SKILL.md",
+      "local_path": "web/assets/upstream/skills/prism-full/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-full/SKILL.md",
+      "bytes": 3581,
+      "sha256": "4499fabf3ae1dd6119f6974ab911c342c854f275b577822b6466e51529d752cd"
+    },
+    {
+      "upstream_path": "skills/prism-3way/SKILL.md",
+      "local_path": "web/assets/upstream/skills/prism-3way/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-3way/SKILL.md",
+      "bytes": 3656,
+      "sha256": "d77cc8625341324116c40924a0b195c2ebb3604a7ed5b742ed46179e1d01f958"
+    },
+    {
+      "upstream_path": "skills/prism-discover/SKILL.md",
+      "local_path": "web/assets/upstream/skills/prism-discover/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-discover/SKILL.md",
+      "bytes": 2341,
+      "sha256": "3f8af1949cd04b0052783cb376f686e1d5b2d505d225698b824f3ffa2d2c9f11"
+    },
+    {
+      "upstream_path": "skills/prism-reflect/SKILL.md",
+      "local_path": "web/assets/upstream/skills/prism-reflect/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-reflect/SKILL.md",
+      "bytes": 4502,
+      "sha256": "a3e256408f146cdff157a54e71e87c8dbf90202a54ce741b97d19e85e944147d"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/error_resilience.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/error_resilience.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/error_resilience.md",
+      "bytes": 1797,
+      "sha256": "ddacb2a756beda838f18575975dfec9a74475a949b5e61525b7445d3adcc81cd"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/l12.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/l12.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/l12.md",
+      "bytes": 2567,
+      "sha256": "b5b39851623d8b4acf9bdd10e46bbe2784c001e48d2dfdbbc71270223a8ae622"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/optimize.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/optimize.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/optimize.md",
+      "bytes": 1530,
+      "sha256": "cf93048922986074275acd76fc6ea39e6274624f3983de6712703722191b6d4b"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/identity.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/identity.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/identity.md",
+      "bytes": 2198,
+      "sha256": "c28848da710e80c107e608c44307bb40b7f133c598e61a5477354ca882457962"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/deep_scan.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/deep_scan.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/deep_scan.md",
+      "bytes": 2189,
+      "sha256": "60e57ac532fffcfc8e9af9168b0d782506eb54f801adc8240200801610f2f892"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/claim.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/claim.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/claim.md",
+      "bytes": 836,
+      "sha256": "ab02a1215316614640b97e215dd24b4442f7e5ba1f10ef9e7f91f32a49a4dcad"
+    },
+    {
+      "upstream_path": "skills/prism-scan/references/simulation.md",
+      "local_path": "web/assets/upstream/skills/prism-scan/references/simulation.md",
+      "url": "https://raw.githubusercontent.com/Cranot/super-hermes/ffe2d10042041dcc23325f013e8b7e607e069952/skills/prism-scan/references/simulation.md",
+      "bytes": 1767,
+      "sha256": "3a8a60647dd80396ac88c772f6d126f6c1d7382dabf205ed55be74b4ff17d52c"
+    }
+  ]
+}

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="看懂 Super Hermes 的 5 个分析 Skill 与 7 份模板，理解模型、Skill 和证据的作用；完整展示我们提炼的七步定位协议、逐步要求、九项结论报告、验证边界与复用价值。">
+  <meta name="theme-color" content="#163e35">
+  <title>Super Hermes · 多个 Skill、七步定位与结论报告</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="source-data.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="memory-data.js" defer></script>
+  <script src="investigation.js" defer></script>
+  <script src="rulebook-data.js" defer></script>
+  <script src="rulebook.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <aside class="sidebar" aria-label="阅读导航">
+    <a class="brand" href="#overview" aria-label="Super Hermes 首页">
+      <svg viewBox="0 0 44 48" aria-hidden="true"><path d="M22 2 42 36 22 46 2 36Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m22 2 0 44M2 36l20-13 20 13M22 23l20 13" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span>SUPER<br>HERMES<small>开源项目研究 / 012</small></span>
+    </a>
+    <p class="nav-label">使用与能力指南</p>
+    <nav id="section-nav">
+      <a href="#overview" class="active"><span>00</span> 先看懂它</a>
+      <a href="#brief"><span>摘</span> 五个问题读懂摘要</a>
+      <a href="#diagnosis-protocol"><span>七</span> 我们的理解与七步协议</a>
+      <a href="#capability-map"><span>图</span> 能力与流程总结图</a>
+      <a href="#rulebook"><span>规</span> 通用步骤与完整规则</a>
+      <a href="#guidance"><span>法</span> 从现象到定位结果</a>
+      <a href="#memory-case"><span>例</span> 内存为什么一直涨</a>
+      <a href="#scenarios"><span>01</span> 什么场景用</a>
+      <a href="#capabilities"><span>02</span> 支持哪些能力</a>
+      <a href="#mechanism"><span>03</span> 如何约束 AI</a>
+      <a href="#case-study"><span>04</span> 看一个真实问题</a>
+      <a href="#extensions"><span>05</span> 还能怎样扩展</a>
+      <a href="#start"><span>06</span> 开始使用与来源</a>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span> 源码核对 · 本地复现<small>研究版本 ffe2d10<br>2026.10.22 · MIT</small><a href="https://github.com/Cranot/super-hermes" target="_blank" rel="noopener">查看上游仓库 <span aria-hidden="true">↗</span></a></div>
+  </aside>
+
+  <div class="page">
+    <header class="topbar"><span>研究手册 <span class="slash">/</span> Agent Skill <span class="slash">/</span> Super Hermes</span><a href="#start">获取原始技能 <span aria-hidden="true">↗</span></a></header>
+    <main id="main">
+      <section id="overview" class="hero observed">
+        <div class="hero-copy"><p class="eyebrow"><span class="tiny-prism">△</span> AN ANALYSIS FIELD GUIDE</p><h1>用多个 Skill<br>组织<span class="underlined">问题定位</span>。</h1><p class="hero-lead">Super Hermes 把排查与审查方法写成 <strong>5 个 Markdown Skill + 7 份分析模板</strong>，指导 AI 选角度、设计查法、追踪问题、反驳结论与记录盲区。内存增长、并发异常、失败恢复和方案审查，都可按需选择入口。</p><div class="hero-actions"><a class="button primary" href="#brief">先看能力、原理与价值 <span aria-hidden="true">↘</span></a><a class="text-link" href="#capability-map">用一张图看懂 <span aria-hidden="true">→</span></a></div><p class="hero-note">模型完成分析和判断；Skill 规定可见动作与产物；证据检验结论。</p></div>
+        <figure class="hero-guide"><a href="#capability-map" aria-label="查看我们生成的 Super Hermes 能力与七步流程完整总结图"><img src="assets/super-hermes-diagnosis-v3.png" alt="我们生成的总结图：五个 Skill、七步定位协议、逐步约束、九项报告、验证要求与复用价值。" width="971" height="1619" decoding="async"></a><figcaption><strong>我们的一图总结</strong><span>能力 → 七步定位 → 九项报告</span><a href="#capability-map">查看完整图并放大 ↗</a></figcaption></figure>
+      </section>
+
+      <div class="definition-strip"><div><strong>5</strong><span>个分析 Skill<small>不同问题，选不同入口</small></span></div><div><strong>7</strong><span>份固定分析模板<small>也可单独作为系统提示词</small></span></div><div class="scope-definition"><span class="scope-icon">↳</span><span>重点审查单个文件<small>也适用于设计说明与文字材料</small></span></div></div>
+
+      <section id="brief" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">READ THIS FIRST / 我们的理解摘要</p><h2>先用五个问题，讲清它的能力和价值。</h2></div></div>
+        <dl class="research-brief">
+          <div><dt>能力是什么？</dt><dd><strong>辅助 AI 定位问题、审查代码与方案。</strong>输入现象和相关材料，指导 AI 设计查法、找可疑位置与触发条件、检查反例、说明结论依据和遗漏。可用于内存增长、并发异常、失败恢复、性能退化与设计权衡；原库代码分析重点是单文件。</dd></div>
+          <div><dt>底层原理是什么？</dt><dd><strong>Markdown 提示词＋上下文工作流。</strong>Skill 写明检查动作、顺序、角度与产物，模型结合具体材料选择方法并分析；宿主提供读写、执行与测量工具。历史盲区进入后续上下文。约束主要是自然语言指令，效果取决于模型、材料、工具与验证。</dd></div>
+          <div><dt>包含哪些模块？</dt><dd><strong>5 个 Skill：</strong>scan 定向检查；full 多轮分析与反驳；3way 从结构、时间和目标冲突审查；discover 列调查方向；reflect 复查并记录盲区。<br><strong>7 份视角模板：</strong>错误韧性、结构权衡、性能成本、接口与行为、信息损失、假设反转、长期演化。<strong>历史记录：</strong><code>.prism-history.md</code> 保存侧重、遗漏和建议。<a href="#capabilities">查看模块与原文 →</a></dd></div>
+          <div><dt>具体步骤是什么？</dt><dd><strong>我们的七步：</strong>定义问题 → 建立事实基础 → 提出候选解释 → 设计并执行检查 → 收敛并反驳根因 → 验证修复 → 报告与沉淀。③–⑤循环，修复步骤按任务适用；最终交付九项结论报告。<strong>七步与完整报告是我们基于上游提炼的通用协议</strong>，原库各 Skill 按职责选用。<a href="#diagnosis-protocol">查看每步输入、要求与产物 →</a></dd></div>
+          <div><dt>对我有什么意义？</dt><dd><strong>把排查经验沉淀成可复用、可核查的 AI 工作规范。</strong>在不同项目保留输入、假设、检查、反驳、报告与验证要求，替换领域清单和工具；让 AI 的交付更便于检查和交接。先将其用作团队定位协议，再按需要增加证据校验和阶段门禁；复用价值需在自己的任务中验证。</dd></div>
+        </dl>
+        <p class="brief-boundary">判断与具体查法由模型完成；Skill 组织可见动作，证据检验结论。网页保存研究材料与教学案例，没有在线模型接口；内存和并发复现支持具体缺陷机制，不代表已评测 Skill 的检出效果。</p>
+      </section>
+
+      <section id="diagnosis-protocol" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">OUR UNDERSTANDING / 从规则到通用定位协议</p><h2>Skill 定步骤，模型找原因，证据决定结论。</h2></div><a class="button secondary" href="assets/problem-diagnosis-protocol.txt" download>下载七步协议与报告 TXT ↓</a></div>
+        <p class="protocol-lead">我们的核心理解：这个库的价值，是把<strong>问题定位与审查的经验，整理成多个可复用 Skill</strong>。它没有替模型完成推理，而是约定“先检查什么、从哪些角度查、每步留下什么、怎样复查”。具体查法与判断仍由模型完成，正确性要靠材料和执行证据检验。</p>
+        <div class="protocol-roles"><article><span>模型 / 分析与判断</span><h3>结合当前问题选具体查法</h3><p>解释代码和数据、提出假设、选择检查、综合证据。能力与遵循程度会影响效果。</p></article><article><span>Skill / 可见动作与产物</span><h3>规定怎样调查和交付</h3><p>用自然语言规定顺序、检查角度、反驳要求、报告字段和盲区记录；不能锁定模型内部思维。</p></article><article><span>宿主与证据 / 执行和检验</span><h3>提供工具，核对判断</h3><p>宿主提供权限和工具；日志、复现、测量与回归结果用于检验候选原因和修复效果。</p></article></div>
+        <p class="protocol-scope"><strong>原库能力与我们的提炼要分清：</strong>上游提供 5 个入口及其各自流程；下面七步、完整报告和修复验收，是我们基于它整理的通用协议。它们不是原库内置的七阶段执行器，也不要求把所有 Skill 顺序运行一遍。原库代码分析侧重单文件，跨项目使用需补充上下文和工具适配。</p>
+        <div class="protocol-input"><span class="small-label">输入约定</span><h3>先把现象和材料交代清楚。</h3><p><strong>最小输入：</strong>问题现象（预期与实际、触发条件）＋项目或材料入口。</p><p><strong>按需补充：</strong>环境、最近变更、日志、最小复现、允许操作范围、是否需要修复、完成标准。缺少的材料先记为缺口。</p></div>
+        <h3 class="protocol-subtitle">七步：从现象到可以核查的结果</h3>
+        <div class="protocol-table-wrap" tabindex="0" role="region" aria-label="七步问题定位协议，可横向滚动"><table class="protocol-table"><thead><tr><th scope="col">顺序与输入</th><th scope="col">怎样指导 AI</th><th scope="col">本步产物与约束</th></tr></thead><tbody>
+          <tr data-protocol-step="1"><th scope="row"><span>01</span>定义问题<small>现象、预期、材料入口</small></th><td>写明预期与实际、触发条件、影响范围、完成标准，确认任务是否包含修复。</td><td><strong>问题定义＋范围＋验收条件</strong><br>尚不明确的条件列为待确认。</td></tr>
+          <tr data-protocol-step="2"><th scope="row"><span>02</span>建立事实基础<small>问题定义与相关材料</small></th><td>读取代码、配置和运行证据，建立最小复现，追踪现象沿哪些路径传播。</td><td><strong>事实＋复现＋路径＋缺口</strong><br>标明来源；代码推演与实际运行分开。</td></tr>
+          <tr data-protocol-step="3"><th scope="row"><span>03</span>提出候选解释<small>事实、可疑路径与缺口</small></th><td>提出合理假设，逐项写出支持依据、可检验预测和推翻条件。</td><td><strong>可区分、可反驳的候选</strong><br>候选不能直接当成已证实根因。</td></tr>
+          <tr data-protocol-step="4"><th scope="row"><span>04</span>设计并执行检查<small>候选及其预测</small></th><td>优先选择低成本、能区分候选的检查；每次改变一个主要条件，比较预期与实际。</td><td><strong>目的＋方法＋预期＋实际</strong><br>如实报告执行；未运行标为推演或待验证。</td></tr>
+          <tr data-protocol-step="5"><th scope="row"><span>05</span>收敛并反驳根因<small>检查结果与候选</small></th><td>按证据更新、排除候选，建立因果链；主动寻找反例、替代解释和成立边界。</td><td><strong>根因或剩余候选＋排除依据＋成立条件</strong><br>证据不足返回第 3–4 步，不强行结案。</td></tr>
+          <tr data-protocol-step="6"><th scope="row"><span>06</span>验证修复<small>定位结果、范围与验收条件</small></th><td>任务包含修复时，针对原因做修改，在原触发场景比较前后结果，再检查相关回归。</td><td><strong>修改＋前后对照＋回归结果</strong><br>只定位时可不修改；未验证不得声称已修复。</td></tr>
+          <tr data-protocol-step="7"><th scope="row"><span>07</span>报告与沉淀<small>调查记录与修复状态</small></th><td>按下方九项报告交付；保存可复用查法、适用条件、盲区和下次补查方向。</td><td><strong>结论报告＋下一步＋可复用经验</strong><br>完整故障档案需要另行存储。</td></tr>
+        </tbody></table></div>
+        <p class="protocol-loop"><strong>循环关系：③ 候选 → ④ 检查 → ⑤ 收敛 / 反驳 → 返回③或④。</strong>七步规定调查主线，具体检查内容随问题、证据和项目变化。</p>
+        <div class="protocol-report"><p class="eyebrow">DELIVERABLE / 以这份结论报告为准</p><h3>最终交付：九项报告，允许证据不足。</h3><p>先明确结论状态，再说明依据；不能把“走完流程”当成“已经定位”。</p><div class="protocol-statuses" aria-label="三种结论状态"><span>根因已有证据支持</span><span>候选待验证</span><span>尚未定位</span></div><dl class="protocol-report-fields">
+          <div data-report-field="1"><dt>01 · 结论状态</dt><dd>从三种状态中选择，并说明证据强度。</dd></div>
+          <div data-report-field="2"><dt>02 · 问题与影响</dt><dd>预期、实际、影响范围。</dd></div>
+          <div data-report-field="3"><dt>03 · 定位位置</dt><dd>文件、函数、配置、依赖或环境。</dd></div>
+          <div data-report-field="4"><dt>04 · 触发条件</dt><dd>什么时候发生，什么时候不发生。</dd></div>
+          <div data-report-field="5"><dt>05 · 因果链</dt><dd>条件 → 异常状态或动作 → 最终结果。</dd></div>
+          <div data-report-field="6"><dt>06 · 证据</dt><dd>来源、方法、实际结果；区分事实与推演。</dd></div>
+          <div data-report-field="7"><dt>07 · 其他解释</dt><dd>已排除、未排除的解释及其依据。</dd></div>
+          <div data-report-field="8"><dt>08 · 修复与验证</dt><dd>修改内容、原场景对照、相关回归。</dd></div>
+          <div data-report-field="9"><dt>09 · 局限与下一步</dt><dd>缺失证据、未覆盖范围、下一项检查。</dd></div>
+        </dl><p class="protocol-report-note">不适用或未执行的字段须如实说明。根因应解释触发条件与传播过程；修复结论需要原场景和相关回归证据。</p></div>
+        <div class="protocol-value"><article><h3>对我们的价值</h3><p>把个人排查经验变成团队可复用的输入、动作、产物与验收约定。内存、并发、接口错误、性能退化或配置故障共用主线，按项目替换领域清单、材料入口和检查工具。</p></article><article><h3>约束能做到什么</h3><p>原库主要用提示词引导，不能保证每步都执行或判断都正确。需要更强约束时，另加阶段产物校验、工具证据要求、权限控制和失败回退；这些工程扩展未在原库完整实现。</p></article></div>
+      </section>
+
+      <section id="capability-map" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">THE UNDERSTANDING MAP</p><h2>一张图：多个 Skill、七步流程、九项报告。</h2></div><a class="button secondary" href="assets/super-hermes-diagnosis-v3.png" download>下载完整 PNG ↓</a></div>
+        <p class="map-intro">本质是用多个分析 Skill 组织问题定位。图中汇总原库的五个入口、七份视角，以及我们提炼的七步协议和九项结论报告；重点展示每步如何指导 AI、留下什么、如何验证，以及对我们的复用价值。</p>
+        <figure class="overview-figure"><button id="open-overview-map" class="overview-map-open" aria-label="放大 Super Hermes 全景图"><img src="assets/super-hermes-diagnosis-v3.png" alt="Super Hermes 能力与理解总结：五个分析 Skill、七份模板，模型与 Skill 及证据的作用；输入约定、七步定位流程、每步要求与产物、候选检查反驳循环、条件修复验证、九项结论报告、三种结论状态、软约束边界和复用价值。" width="971" height="1619" loading="lazy" decoding="async"><span class="map-enlarge">点击放大 ↗</span></button><figcaption>使用内置 ImageGen 绘制，依据固定版本 ffe2d10 与本研究讨论。原始 PNG 为 971 × 1619；七步协议和九项报告是我们的提炼与扩展，不是原库内置执行器或模型效果实测。<a href="assets/seven-step-imagegen-prompt.txt" download>完整生成提示词 ↓</a><a href="assets/super-hermes-understanding-v2.png" download>上一版理解图 ↓</a><a href="assets/super-hermes-overview.png" download>初版全景图 ↓</a></figcaption></figure>
+      </section>
+
+      <section id="rulebook" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">THE RULEBOOK / 逐条看它怎样指导 AI</p><h2>通用步骤与规则，完整拆开看。</h2></div><a class="button secondary" href="assets/super-hermes-rules.txt" download>下载全部规则 TXT ↓</a></div>
+        <p class="rulebook-intro">作者把<strong>观察对象、检查动作、执行顺序和交付要求</strong>写成 Skill 与模板，AI 再结合当前材料生成具体查法。这里逐份核对 <strong>5 个 Skill + 7 份固定模板</strong>，归纳为 <strong id="rulebook-total">69</strong> 条；数量与分组由本研究整理，README 另补运行说明。</p>
+        <p class="rulebook-boundary">上面的<a href="#diagnosis-protocol">七步协议</a>是我们的整合；下面保留上游逐条依据。各入口职责不同：discover 只列方向，full 要求额外对抗复查，reflect 保存盲区。条数不等于强制执行顺序。</p>
+        <div class="rulebook-groups" aria-label="规则分组">
+          <button data-rule-group="common" aria-pressed="true">通用动作 <span>12</span></button>
+          <button data-rule-group="skills" aria-pressed="false">入口专属 <span>27</span></button>
+          <button data-rule-group="lenses" aria-pressed="false">固定视角 <span>26</span></button>
+          <button data-rule-group="boundary" aria-pressed="false">实现与边界 <span>4</span></button>
+          <button data-rule-group="all" aria-pressed="false">全部 <span>69</span></button>
+        </div>
+        <div class="rulebook-filters">
+          <label for="rulebook-search">搜索当前筛选范围<input id="rulebook-search" type="search" placeholder="规则编号、反驳、缓存、O(n)…" autocomplete="off"></label>
+          <label for="rulebook-source">按 Skill / 模板筛选<select id="rulebook-source"><option value="all">全部来源</option></select></label>
+          <button class="text-button" id="rulebook-reset">重置筛选</button>
+        </div>
+        <div class="rulebook-toolbar"><p id="rulebook-result" role="status">通用动作 · 12 / 69 条</p><div><button class="text-button" id="rulebook-expand">展开当前结果</button><button class="text-button" id="rulebook-collapse">收起当前结果</button></div></div>
+        <p class="rulebook-reading-note">点击一条查看：原文动作的中文概括 → 如何指导 AI → 应留下的产物 → 应用示例。作用、示例与使用边界为研究者解读，未评测模型增益；原文按钮会定位并高亮依据。</p>
+        <div id="rulebook-list" class="rulebook-list"></div>
+        <div id="rulebook-empty" class="rulebook-empty" hidden><p>当前筛选没有匹配规则。</p><button class="text-button" id="rulebook-search-all">保留关键词，在全部规则中查找 →</button></div>
+        <details class="rulebook-coverage"><summary>核对范围：5 个 Skill、7 份模板及来源映射</summary><div><p>下表映射到固定上游版本 ffe2d10。相同动作合并到通用规则，一条规则可引用多份原文；条数不等于强制步骤数。这是人工内容核对，不是自动语义覆盖率评分。评分、模型推荐等元数据单列到 M04。</p><div class="rulebook-table-wrap"><table><thead><tr><th scope="col">原始文档</th><th scope="col">对应规则</th><th scope="col">原文</th></tr></thead><tbody id="rulebook-source-table"></tbody></table></div></div></details>
+        <div class="rulebook-downloads"><a href="assets/super-hermes-rules.txt" download>完整中文规则 TXT ↓</a><a href="assets/super-hermes-rules.json" download>结构化规则与来源 JSON ↓</a><a href="#guidance">沿内存案例看每步输入与产物 →</a></div>
+      </section>
+
+      <section id="guidance" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">HOW IT GUIDES / 跟着一个问题走</p><h2>它把“怎么查”，写成 AI 要执行的动作。</h2></div></div>
+        <p class="guidance-intro">它沉淀的是<strong>检查动作、交付要求和分析盲区</strong>。核心做法是：先让 AI 公开一份针对当前问题的检查方法，再执行其中的构造、追踪与复查，留下可定位的发现。</p>
+        <div class="guidance-storage" aria-label="排查方法沉淀在哪里"><article><span>作者预先写好 / SKILL.md</span><h3>通用分析规则</h3><p>规定先设计方法、再执行，必须构造场景、指出位置、交代盲区；full 另外要求反驳。</p></article><article><span>每次按问题生成 / Generated Lens</span><h3>本次具体查法</h3><p>把“查内存”展开成分配、持有、退出和对照场景。它是当次输出，scan 不保证自动永久存档。</p></article><article><span>reflect 追加 / .prism-history.md</span><h3>下次补查线索</h3><p>记录本次侧重、遗漏和建议；下次 scan 读取它，调整检查方法。完整故障案例需另行归档。</p></article></div>
+        <p class="guidance-provenance">下面用内存案例走一遍<strong>我们的七步协议</strong>：scan 的方法设计、full 的反驳、reflect 的盲区记录可按需借鉴，运行检验另接工具。这是研究者编写的教学，不是原库内置流程或 Hermes 分析记录；同一主线也可用于并发、接口、配置与性能问题。</p>
+        <div class="guided-investigation">
+          <div class="guidance-steps" role="tablist" aria-label="从现象到结果的排查步骤">
+            <button role="tab" aria-selected="true" id="investigation-0" aria-controls="investigation-panel" data-investigation="0"><span>01</span>定义问题</button>
+            <button role="tab" aria-selected="false" tabindex="-1" id="investigation-1" aria-controls="investigation-panel" data-investigation="1"><span>02</span>建立事实基础</button>
+            <button role="tab" aria-selected="false" tabindex="-1" id="investigation-2" aria-controls="investigation-panel" data-investigation="2"><span>03</span>提出候选解释</button>
+            <button role="tab" aria-selected="false" tabindex="-1" id="investigation-3" aria-controls="investigation-panel" data-investigation="3"><span>04</span>设计并执行检查</button>
+            <button role="tab" aria-selected="false" tabindex="-1" id="investigation-4" aria-controls="investigation-panel" data-investigation="4"><span>05</span>收敛并反驳根因</button>
+            <button role="tab" aria-selected="false" tabindex="-1" id="investigation-5" aria-controls="investigation-panel" data-investigation="5"><span>06</span>验证修复</button>
+            <button role="tab" aria-selected="false" tabindex="-1" id="investigation-6" aria-controls="investigation-panel" data-investigation="6"><span>07</span>报告与沉淀</button>
+          </div>
+          <div id="investigation-panel" class="investigation-panel" role="tabpanel" aria-labelledby="investigation-0" tabindex="0">
+            <p id="investigation-owner" class="small-label"></p><h3 id="investigation-title"></h3>
+            <div class="investigation-rule"><span>本步具体要求</span><ol id="investigation-instructions"></ol></div>
+            <div class="investigation-artifacts"><div><span>这一步接收什么</span><pre id="investigation-input"></pre></div><div><span>这一步留下什么</span><pre id="investigation-output"></pre></div></div>
+            <p class="investigation-why"><strong>这一步的作用</strong><span id="investigation-why"></span></p>
+            <div class="investigation-source"><p id="investigation-provenance"></p><button id="investigation-source" class="text-button">查看借鉴的上游原文 ↗</button><a id="investigation-measurement" href="assets/memory-reproduction.json" target="_blank" rel="noopener" hidden>查看真实执行数据 ↗</a></div>
+          </div>
+          <div class="investigation-controls"><button class="text-button" id="investigation-prev">← 上一步</button><span id="investigation-count" class="mono" aria-live="polite">01 / 07</span><button class="button primary" id="investigation-next">下一步 →</button></div>
+        </div>
+        <p class="guidance-loop">留下本次盲区 → 下次读取历史 → 生成新的检查方法。七份固定模板也可按需复用；这些要求通过自然语言指令引导模型，仓库没有逐阶段校验器保证执行。</p>
+      </section>
+
+      <section id="memory-case" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">A CONCRETE EXAMPLE / 内存问题</p><h2>“服务越跑越占内存”，怎么查？</h2></div><span class="evidence-badge"><span class="status-dot"></span> 自建案例 · Python 实测</span></div>
+        <p class="memory-intro">它可以用来<strong>辅助定位内存持续增长的代码原因</strong>。例如：每次请求都往缓存写入大对象，缓存却没有容量上限。关键是追到“对象在哪里创建、被谁持有、什么时候退出”，再用运行数据验证。</p>
+        <p class="memory-origin">下面用本研究自建案例解释流程：代码与内存数据已经运行验证，尚未验证 Super Hermes 的检出效果。</p>
+        <ol class="memory-flow" aria-label="内存问题的排查过程">
+          <li><span>01 / 你提供</span><strong>现象 + 相关文件</strong><p>请求越多，内存越高；附缓存代码、对象大小与采样数据。</p></li>
+          <li><span>02 / Skill 指导 AI</span><strong>沿生命周期追查</strong><p>检查分配、持有、淘汰路径；列出位置、条件与待验证项。</p></li>
+          <li><span>03 / 本例定位</span><strong>长期缓存只有进入，没有退出</strong><p>请求 key 持续增加，cache 强引用所有响应；执行 GC 仍不能释放。</p></li>
+          <li><span>04 / 运行检验</span><strong>限制缓存，再测一次</strong><p>同样请求量，对比内存曲线、缓存条目与分配行。</p></li>
+        </ol>
+        <div class="memory-layout">
+          <div class="memory-diagnosis">
+            <div class="code-card"><div class="code-heading"><span>cache_fixture.py</span><span>研究自建 · 原文件 18–21 行</span></div><pre><code><span class="memory-code-line"><i>18</i> def get(self, key):</span><span class="memory-code-line"><i>19</i>     if key not in self.cache:</span><span class="memory-code-line highlight"><i>20</i>         self.cache[key] = make_response()</span><span class="memory-code-line"><i>21</i>     return self.cache[key]</span></code></pre></div>
+            <dl class="memory-findings"><div><dt>分配点 · 第 11 行</dt><dd><code>bytearray(PAYLOAD_BYTES)</code> 每次创建 64 KiB 响应。</dd></div><div><dt>持有点 · 第 20 行</dt><dd><code>self.cache[key]</code> 保留响应。对象仍可访问，所以 GC 不会替你清掉缓存。</dd></div><div><dt>触发条件 · 持续出现新 key</dt><dd>缓存实例长期存活，且请求 key 不断增加。重复访问同一个 key 不会产生同样的增长。</dd></div><div><dt>修复与代价 · 限制为 32 条 LRU</dt><dd>超过容量淘汰最久未访问的条目；之后再访问它，需要重新生成响应。</dd></div></dl>
+            <p class="memory-chain"><span>持有链</span> 长期存活的 cache → 请求 key → 64 KiB 响应</p>
+          </div>
+          <div class="memory-results">
+            <div class="memory-results-heading"><h3>同样的请求，内存走向不同。</h3><p>独立进程运行 · 800 个不同 key · 每个响应 64 KiB</p></div>
+            <div class="memory-legend"><span><i class="unbounded-dot"></i> 无上限缓存</span><span><i class="bounded-dot"></i> 32 条 LRU 缓存</span></div>
+            <svg id="memory-chart" viewBox="0 0 600 260" role="img" aria-labelledby="memory-chart-title memory-chart-desc"><title id="memory-chart-title">无上限缓存与有限缓存的内存实测曲线</title><desc id="memory-chart-desc">无上限缓存随请求增长到约 50.13 MiB，32 条 LRU 缓存约 2.01 MiB。度量为 Python 跟踪内存相对空缓存的增量。</desc><g class="memory-grid"><path d="M55 30H575M55 120H575M55 210H575"/><text x="46" y="34" text-anchor="end">50</text><text x="46" y="124" text-anchor="end">25</text><text x="46" y="214" text-anchor="end">0</text><text x="55" y="16">MiB</text><text x="55" y="234" text-anchor="middle">0</text><text x="185" y="234" text-anchor="middle">200</text><text x="315" y="234" text-anchor="middle">400</text><text x="445" y="234" text-anchor="middle">600</text><text x="575" y="234" text-anchor="middle">800</text><text x="315" y="254" text-anchor="middle">已处理的不同请求数</text></g><polyline id="memory-unbounded-path"/><polyline id="memory-bounded-path"/><line id="memory-cursor" x1="575" x2="575" y1="25" y2="210"/><circle id="memory-unbounded-point" r="5"/><circle id="memory-bounded-point" r="5"/></svg>
+            <label class="memory-range-label" for="memory-sample">查看已记录采样点 <strong id="memory-request-count">800 个请求</strong></label><input id="memory-sample" type="range" min="0" max="4" value="4" step="1" aria-valuetext="800 个请求">
+            <div class="memory-metrics" aria-live="polite" aria-atomic="true"><div><span>无上限缓存</span><strong id="memory-unbounded-value">50.13 <small>MiB</small></strong><p id="memory-unbounded-entries">800 条，持续增加</p></div><div><span>32 条 LRU 缓存</span><strong id="memory-bounded-value">2.01 <small>MiB</small></strong><p id="memory-bounded-entries">32 条，保持上限</p></div></div>
+            <p class="memory-measurement-note">度量：Python 跟踪的存活内存增量，非进程总内存。每次采样前执行 GC；清空缓存后，两组响应对象在第 11 行的分配增量均归零。</p>
+            <div class="memory-downloads"><a href="assets/memory-demo/cache_fixture.py" download>下载问题与修复代码 ↓</a><a href="assets/memory-reproduction.json" download>下载原始实测 JSON ↓</a></div>
+          </div>
+        </div>
+        <details class="memory-provenance"><summary>这个案例证明了什么？Super Hermes 在其中负责什么？</summary><div><p><strong>能力依据：</strong>上游性能模板要求检查分配、缓存行为与具体成本；scan 支持指定检查重点。内存生命周期是我们据此展开的应用场景。<button class="text-button" data-document="skills/prism-scan/references/optimize.md">阅读上游性能模板 ↗</button></p><p><strong>演示来源：</strong>问题代码、定位说明、LRU 修改与测量脚本均由本研究编写；本轮没有运行 Hermes 或调用模型。实测确认了这段代码的无界持有问题和限制缓存的效果，没有测得该 Skill 的检出率或相对普通 AI 的提升。</p><p><strong>能力边界：</strong>这属于仍被引用的对象无限累积，常被称为逻辑内存泄漏。只看内存上涨不能确定泄漏；原生内存、堆转储与跨文件持有链可能还需要额外工具和上下文。当前库本身没有提供运行时内存探针。上图交互只查看已有采样记录。</p><p>本地复现：<code>python projects/012-super-hermes/scripts/reproduce_memory.py</code>。测量使用 Python 标准库 <a href="https://docs.python.org/3/library/tracemalloc.html" target="_blank" rel="noopener">tracemalloc ↗</a>，两组各在独立子进程执行。</p></div></details>
+        <div class="memory-prompt"><div><span class="small-label">真实使用时，可以这样明确任务</span><p>分析 cache_fixture.py，重点检查内存是否会随请求持续增长。追踪对象的创建、长期持有与淘汰条件；列出可疑位置、成立条件、修复代价和需要采集的运行证据。证据不足时明确说明。</p></div><button class="text-button" data-copy="/prism-scan analyze cache_fixture.py focusing on unbounded memory retention: trace allocation, retaining references and eviction; report locations, trigger conditions, fix tradeoffs and runtime evidence needed.">复制使用指令 ↗</button></div>
+      </section>
+
+      <section id="scenarios" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">01 / USE CASES</p><h2>从你遇到的问题开始。</h2></div><p>先确定想检查什么，<br>再选择合适的分析方法。</p></div>
+        <div class="scenario-tabs" role="tablist" aria-label="使用场景">
+          <button role="tab" aria-selected="false" tabindex="-1" id="scenario-memory" aria-controls="scenario-panel" data-scenario="memory">排查内存增长</button>
+          <button role="tab" aria-selected="true" id="scenario-code" aria-controls="scenario-panel" data-scenario="code">检查关键代码</button>
+          <button role="tab" aria-selected="false" tabindex="-1" id="scenario-design" aria-controls="scenario-panel" data-scenario="design">评审设计方案</button>
+          <button role="tab" aria-selected="false" tabindex="-1" id="scenario-research" aria-controls="scenario-panel" data-scenario="research">研究陌生项目</button>
+          <button role="tab" aria-selected="false" tabindex="-1" id="scenario-gaps" aria-controls="scenario-panel" data-scenario="gaps">补查分析遗漏</button>
+        </div>
+        <div class="scenario-panel" id="scenario-panel" role="tabpanel" aria-labelledby="scenario-code" tabindex="0">
+          <div class="scenario-story"><span class="tag">最典型的场景</span><h3 id="scenario-title">这段代码看起来能跑，<br>但边界情况安全吗？</h3><p id="scenario-desc">准备修改一个重要文件，想找出普通阅读容易忽略的失败路径、并发冲突和隐藏假设。</p><div class="input-output"><div><span>你提供</span><p id="scenario-input">单个代码文件 + 检查重点，例如线程安全。</p></div><div><span>你得到</span><p id="scenario-output">问题位置、触发条件、严重程度、可修复性，以及尚未覆盖的角度。</p></div></div></div>
+          <div class="scenario-action"><p class="small-label">建议从这里开始</p><div class="recommendation"><span id="scenario-skill">/prism-scan</span><a id="scenario-detail" href="#capabilities">了解此能力 ↗</a></div><p class="quote-label">可以这样提问</p><blockquote id="scenario-request">检查 circuit_breaker.py，重点关注线程安全：找出状态转换与锁之间的冲突，并列出触发条件。</blockquote><div class="command-row"><code id="scenario-command">/prism-scan analyze circuit_breaker.py focusing on thread safety</code><button class="icon-button" id="copy-scenario" aria-label="复制场景指令">复制</button></div><p class="fine-print" id="scenario-boundary">示例提问。真实并发漏洞及本地复现见下方案例。</p></div>
+        </div>
+        <p class="section-footnote">适合深入审查一个明确对象；当前上游明确限定代码分析为单文件。<a class="source-link" data-source="README.md" data-anchor="limitations" href="https://github.com/Cranot/super-hermes#limitations" target="_blank" rel="noopener">范围依据 ↗</a></p>
+      </section>
+
+      <section id="capabilities" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">02 / CAPABILITIES</p><h2>五个入口，各有分工。</h2></div><p>Skill 是交给 AI 的工作指令。<br>选中一项，看看它如何组织分析。</p></div>
+        <div class="capability-layout"><div class="skill-list" role="tablist" aria-label="五个分析 Skill" aria-orientation="vertical">
+          <button class="skill-choice" role="tab" id="skill-scan" aria-controls="skill-panel" aria-selected="true" data-skill="scan"><span class="skill-num">01</span><span>定向扫描<small>/prism-scan</small></span><b aria-hidden="true">↗</b></button>
+          <button class="skill-choice" role="tab" id="skill-full" aria-controls="skill-panel" aria-selected="false" tabindex="-1" data-skill="full"><span class="skill-num">02</span><span>深入复查<small>/prism-full</small></span><b aria-hidden="true">↗</b></button>
+          <button class="skill-choice" role="tab" id="skill-three" aria-controls="skill-panel" aria-selected="false" tabindex="-1" data-skill="three"><span class="skill-num">03</span><span>三个角度<small>/prism-3way</small></span><b aria-hidden="true">↗</b></button>
+          <button class="skill-choice" role="tab" id="skill-discover" aria-controls="skill-panel" aria-selected="false" tabindex="-1" data-skill="discover"><span class="skill-num">04</span><span>寻找方向<small>/prism-discover</small></span><b aria-hidden="true">↗</b></button>
+          <button class="skill-choice" role="tab" id="skill-reflect" aria-controls="skill-panel" aria-selected="false" tabindex="-1" data-skill="reflect"><span class="skill-num">05</span><span>检查遗漏<small>/prism-reflect</small></span><b aria-hidden="true">↗</b></button>
+        </div><div class="skill-panel" id="skill-panel" role="tabpanel" aria-labelledby="skill-scan" tabindex="0"><div class="skill-panel-top"><span class="tag light" id="skill-kind">单次定向分析</span><span class="mono" id="skill-id">prism-scan</span></div><h3 id="skill-title">先为这个问题，设计一套检查方法。</h3><p id="skill-desc">读取材料与既往盲区，生成一段针对当前对象的分析指令，再按指令完成审查。</p><ol class="mini-pipeline" id="skill-steps"></ol><div class="skill-deliverable"><span class="small-label">最终交付</span><p id="skill-output"></p></div><p class="fine-print" id="skill-limit"></p><div class="skill-links"><button class="text-button" id="read-skill">阅读完整 Skill <span aria-hidden="true">↗</span></button><a id="download-skill" href="assets/upstream/skills/prism-scan/SKILL.md" download="prism-scan-SKILL.md">下载原文件 ↓</a><a id="skill-upstream" target="_blank" rel="noopener">源码依据 ↗</a></div></div></div>
+
+        <div class="lens-library"><div><p class="eyebrow">THE LENS LIBRARY</p><h3>还有 7 份现成的“检查视角”。</h3><p>固定模板适合重复使用；<code>prism-scan</code> 默认仍为当前问题生成新方法。<a class="source-link" data-source="skills/prism-scan/SKILL.md" href="https://github.com/Cranot/super-hermes/blob/master/skills/prism-scan/SKILL.md" target="_blank" rel="noopener">依据 ↗</a></p></div><div class="lens-controls"><label for="lens-select">选择一种分析模板</label><select id="lens-select"><option value="error_resilience">错误传播 · error_resilience</option><option value="l12">结构权衡 · l12</option><option value="optimize">性能成本 · optimize</option><option value="identity">接口与实际行为 · identity</option><option value="deep_scan">信息损失 · deep_scan</option><option value="claim">假设反转 · claim</option><option value="simulation">长期演化 · simulation</option></select><p id="lens-desc"></p><button class="text-button" id="read-lens">阅读模板原文 ↗</button></div></div>
+      </section>
+
+      <section id="mechanism" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">03 / UNDER THE HOOD</p><h2>它如何约束 AI 的分析？</h2></div><p>规则进入模型的上下文，<br>引导它按指定方法检查材料。</p></div>
+
+        <div id="method-rules" class="method-rules">
+          <p class="method-intro">把它拆开，真正可复用的是三类约束：<strong>执行顺序、交付要求、检查视角。</strong>下面是对五个 Skill 的归纳，各个 Skill 的原始流程并不完全相同。</p>
+          <div class="method-grid">
+            <article><span class="method-number">01 / 流程</span><h3>先做什么，后做什么。</h3><dl><div><dt>先公开方法</dt><dd>scan 先生成并展示 75–200 单词的专用检查方法，然后执行。</dd></div><div><dt>逐轮传递结果</dt><dd>full 设计 2–4 轮，后轮接收原材料和前轮分析。</dd></div><div><dt>加一道反驳环节</dt><dd>full 必须另做对抗复查；discover 只列方向，不提前下结论。</dd></div></dl><p class="method-value">作用：让分析有顺序、有中间产物，也允许推翻前面的判断。</p><a class="source-link" data-source="skills/prism-full/SKILL.md" target="_blank" rel="noopener">流程依据 ↗</a></article>
+            <article><span class="method-number">02 / 规范</span><h3>什么才算交付完成。</h3><dl><div><dt>问题要可定位</dt><dd>发现表包含位置、什么会出错、严重程度、可修复或结构性问题。</dd></div><div><dt>错误要明确撤回</dt><dd>指出什么证据会推翻结论，纠正过度断言并补上遗漏。</dd></div><div><dt>范围要交代清楚</dt><dd>列出侧重点、未查角度和下一步建议，reflect 将记录追加到历史。</dd></div></dl><p class="method-value">作用：把“说得很深入”变成可以逐条核查的报告要求。</p><a class="source-link" data-source="skills/prism-reflect/SKILL.md" target="_blank" rel="noopener">报告依据 ↗</a></article>
+            <article><span class="method-number">03 / 角度</span><h3>从哪里看，做什么检查。</h3><dl><div><dt>先选领域</dt><dd>discover 列约 10–20 个不同方向；scan 再结合用户重点与历史遗漏定制。</dd></div><div><dt>固定三种视角</dt><dd>WHERE 查结构依赖，WHEN 推演变化，WHY 检查目标之间的冲突。</dd></div><div><dt>把角度写成动作</dt><dd>追踪错误传播、反转假设、比较接口承诺与行为，或构造线程交错。</dd></div></dl><p class="method-value">作用：明确观察对象、检查动作和产出，给多角度分析具体抓手。</p><a class="source-link" data-source="skills/prism-3way/SKILL.md" target="_blank" rel="noopener">视角依据 ↗</a></article>
+          </div>
+          <div class="method-boundary"><strong>约束通过提示词实现</strong><p>阶段标题、角色、数量、输出字段和“必须执行”等指令负责引导模型；仓库没有逐阶段程序校验来保证遵守。复用时保留反例、复查和盲区说明，同时允许“证据不足”或“未发现必然冲突”，避免预设一定存在守恒律。</p></div>
+          <details class="protocol-template"><summary>复制完整七步协议与九项报告 <span aria-hidden="true">＋</span></summary><div><p>当前统一版本。上方逐步讲解；此处提供完整复用文本。它是我们的协议设计，没有安装为 Skill，也没有模型效果评测。</p><div class="protocol-actions"><button class="text-button" data-copy="通用问题定位协议 · 本研究提炼版
+日期：2026-10-22
+参考：Cranot/super-hermes @ ffe2d10042041dcc23325f013e8b7e607e069952
+
+【定位与边界】
+Super Hermes 提供 5 个 Markdown 分析 Skill 和 7 份固定分析模板。
+作者把通用检查动作、顺序、角度、报告要求和盲区记录写成自然语言指令。
+模型根据材料选择具体查法、解释证据并作出判断；工具执行和权限由宿主提供。
+Skill 约束可见动作和交付产物，不能读取或锁定模型的内部思维。
+仅有提示词约定不能保证遵循，也不能保证结论正确。事实与运行结果用于检验判断。
+以下七步、完整报告和修复验收是我们的通用协议，不是上游内置的七阶段执行器。
+上游代码审查以单文件为主；跨项目使用需要补充项目上下文、工具与证据适配。
+
+【输入】
+最小输入：问题现象（预期与实际、触发条件）＋项目或材料入口。
+按需补充：环境、最近变更、日志、最小复现、允许操作范围、是否需要修复、完成标准。
+材料不足时先记录缺口；不得编造日志、运行结果或已有结论。
+
+【七步流程】
+1. 定义问题
+输入：现象、预期、材料入口。
+要求：说明预期与实际、触发条件、影响范围和完成标准；区分定位与修复任务。
+产物：问题定义、调查范围、验收条件；不明确的条件列为待确认。
+
+2. 建立事实基础
+输入：问题定义与相关材料。
+要求：读取相关代码、配置和运行证据；建立最小复现，追踪现象的传播路径。
+产物：有来源的事实、复现步骤、相关路径与证据缺口。
+要求：代码推演与实际运行分开记录；无法复现可以继续，但必须标明。
+
+3. 提出候选解释
+输入：已知事实、可疑路径与缺口。
+要求：提出合理的候选解释；逐项写出支持依据、可检验预测和推翻条件。
+产物：可被区分、可被反驳的假设列表；不得把候选直接写成已证实根因。
+
+4. 设计并执行检查
+输入：候选解释及其预测。
+要求：优先选择低成本、能区分候选的检查；每次改变一个主要条件。
+产物：检查目的、方法、预期、实际结果与执行状态。
+要求：只能如实报告执行；未运行必须标为推演或待验证。
+
+5. 收敛并反驳根因
+输入：检查结果与候选解释。
+要求：按证据更新或排除候选，形成条件→异常状态或动作→结果的因果链。
+要求：主动检查替代解释、反例与适用边界；证据不足时返回第 3–4 步。
+产物：有证据支持的根因，或仍待验证的候选；附排除依据与成立条件。
+第 3–5 步可以循环，不得为了走完流程强行得出唯一根因。
+
+6. 验证修复（仅任务包含修复时）
+输入：定位结果、修复范围与验收条件。
+要求：针对原因做修改；在原触发场景下比较前后结果，并检查相关回归。
+产物：修改内容、前后对照、回归结果与未覆盖范围。
+要求：只定位时可不修改；没有完成验证不得声明“已修复”。
+
+7. 报告与沉淀
+输入：调查记录、证据、候选与修复状态。
+要求：按下列九项报告交付；保存可复用查法、适用条件、盲区和后续检查方向。
+产物：结论报告＋下一步＋可复用经验；完整故障档案需要另行存储。
+
+【结论报告：九项字段】
+1. 结论状态：根因已有证据支持 / 候选待验证 / 尚未定位。
+2. 问题与影响：预期、实际、影响范围。
+3. 定位位置：文件、函数、配置、依赖或环境。
+4. 触发条件：什么时候发生，什么时候不发生。
+5. 因果链：条件 → 异常状态或动作 → 最终结果。
+6. 证据：来源、检查方法、实际结果；区分事实、推演和待验证内容。
+7. 其他解释：已排除与尚未排除的解释及其依据。
+8. 修复与验证：是否修复、修改内容、原场景前后对照、相关回归。
+9. 局限与下一步：缺失证据、未覆盖范围、下一个最有效的检查。
+不适用或未执行的字段须如实说明；不得用空白冒充完成。
+
+【验证要求】
+- 事实、假设、代码推演和实际执行分别标记，并保留来源与复现方式。
+- 根因应能解释触发条件和传播过程，还需检查有竞争力的替代解释。
+- 没有实际运行，就不能声称运行验证通过。
+- 任务包含修复时，原场景验证和相关回归都应留下结果；缺项列为未完成。
+- 证据不足时允许交付候选待验证或尚未定位，并指出下一步。
+
+【从上游复用什么】
+scan：先生成针对材料的检查方法，再执行，交代问题位置与盲区。
+full：自行规划 2–4 轮，并额外对抗复查，修正或撤回发现。
+3way：结构（WHERE）、长期变化（WHEN）、目标冲突（WHY）三个视角。
+discover：只提出约 10–20 个调查方向，不代替深入分析。
+reflect：复查侧重与遗漏，追加 .prism-history.md，供后续补查。
+七份模板：错误韧性、结构权衡、性能成本、接口与实际行为、信息损失、假设反转、长期演化。
+本协议按问题按需选用这些能力，不要求把 5 个 Skill 或 7 份模板全部运行一遍。
+
+【对我们的价值】
+把排查经验变成可复用的输入、动作、产物与验收约定，减少漏查与无法复核的结论。
+不同项目保留通用流程，替换领域检查清单、材料入口和工具适配。
+需要更强执行约束时，另行实现阶段产物校验、工具证据要求、权限控制和失败回退。
+这些工程扩展在原库中没有完整实现；本研究未运行 Hermes 或评测模型增益。
+">复制完整协议</button><a href="assets/problem-diagnosis-protocol.txt" download>下载协议文本 ↓</a><a href="#diagnosis-protocol">回看七步与报告 →</a></div><pre>通用问题定位协议 · 本研究提炼版
+日期：2026-10-22
+参考：Cranot/super-hermes @ ffe2d10042041dcc23325f013e8b7e607e069952
+
+【定位与边界】
+Super Hermes 提供 5 个 Markdown 分析 Skill 和 7 份固定分析模板。
+作者把通用检查动作、顺序、角度、报告要求和盲区记录写成自然语言指令。
+模型根据材料选择具体查法、解释证据并作出判断；工具执行和权限由宿主提供。
+Skill 约束可见动作和交付产物，不能读取或锁定模型的内部思维。
+仅有提示词约定不能保证遵循，也不能保证结论正确。事实与运行结果用于检验判断。
+以下七步、完整报告和修复验收是我们的通用协议，不是上游内置的七阶段执行器。
+上游代码审查以单文件为主；跨项目使用需要补充项目上下文、工具与证据适配。
+
+【输入】
+最小输入：问题现象（预期与实际、触发条件）＋项目或材料入口。
+按需补充：环境、最近变更、日志、最小复现、允许操作范围、是否需要修复、完成标准。
+材料不足时先记录缺口；不得编造日志、运行结果或已有结论。
+
+【七步流程】
+1. 定义问题
+输入：现象、预期、材料入口。
+要求：说明预期与实际、触发条件、影响范围和完成标准；区分定位与修复任务。
+产物：问题定义、调查范围、验收条件；不明确的条件列为待确认。
+
+2. 建立事实基础
+输入：问题定义与相关材料。
+要求：读取相关代码、配置和运行证据；建立最小复现，追踪现象的传播路径。
+产物：有来源的事实、复现步骤、相关路径与证据缺口。
+要求：代码推演与实际运行分开记录；无法复现可以继续，但必须标明。
+
+3. 提出候选解释
+输入：已知事实、可疑路径与缺口。
+要求：提出合理的候选解释；逐项写出支持依据、可检验预测和推翻条件。
+产物：可被区分、可被反驳的假设列表；不得把候选直接写成已证实根因。
+
+4. 设计并执行检查
+输入：候选解释及其预测。
+要求：优先选择低成本、能区分候选的检查；每次改变一个主要条件。
+产物：检查目的、方法、预期、实际结果与执行状态。
+要求：只能如实报告执行；未运行必须标为推演或待验证。
+
+5. 收敛并反驳根因
+输入：检查结果与候选解释。
+要求：按证据更新或排除候选，形成条件→异常状态或动作→结果的因果链。
+要求：主动检查替代解释、反例与适用边界；证据不足时返回第 3–4 步。
+产物：有证据支持的根因，或仍待验证的候选；附排除依据与成立条件。
+第 3–5 步可以循环，不得为了走完流程强行得出唯一根因。
+
+6. 验证修复（仅任务包含修复时）
+输入：定位结果、修复范围与验收条件。
+要求：针对原因做修改；在原触发场景下比较前后结果，并检查相关回归。
+产物：修改内容、前后对照、回归结果与未覆盖范围。
+要求：只定位时可不修改；没有完成验证不得声明“已修复”。
+
+7. 报告与沉淀
+输入：调查记录、证据、候选与修复状态。
+要求：按下列九项报告交付；保存可复用查法、适用条件、盲区和后续检查方向。
+产物：结论报告＋下一步＋可复用经验；完整故障档案需要另行存储。
+
+【结论报告：九项字段】
+1. 结论状态：根因已有证据支持 / 候选待验证 / 尚未定位。
+2. 问题与影响：预期、实际、影响范围。
+3. 定位位置：文件、函数、配置、依赖或环境。
+4. 触发条件：什么时候发生，什么时候不发生。
+5. 因果链：条件 → 异常状态或动作 → 最终结果。
+6. 证据：来源、检查方法、实际结果；区分事实、推演和待验证内容。
+7. 其他解释：已排除与尚未排除的解释及其依据。
+8. 修复与验证：是否修复、修改内容、原场景前后对照、相关回归。
+9. 局限与下一步：缺失证据、未覆盖范围、下一个最有效的检查。
+不适用或未执行的字段须如实说明；不得用空白冒充完成。
+
+【验证要求】
+- 事实、假设、代码推演和实际执行分别标记，并保留来源与复现方式。
+- 根因应能解释触发条件和传播过程，还需检查有竞争力的替代解释。
+- 没有实际运行，就不能声称运行验证通过。
+- 任务包含修复时，原场景验证和相关回归都应留下结果；缺项列为未完成。
+- 证据不足时允许交付候选待验证或尚未定位，并指出下一步。
+
+【从上游复用什么】
+scan：先生成针对材料的检查方法，再执行，交代问题位置与盲区。
+full：自行规划 2–4 轮，并额外对抗复查，修正或撤回发现。
+3way：结构（WHERE）、长期变化（WHEN）、目标冲突（WHY）三个视角。
+discover：只提出约 10–20 个调查方向，不代替深入分析。
+reflect：复查侧重与遗漏，追加 .prism-history.md，供后续补查。
+七份模板：错误韧性、结构权衡、性能成本、接口与实际行为、信息损失、假设反转、长期演化。
+本协议按问题按需选用这些能力，不要求把 5 个 Skill 或 7 份模板全部运行一遍。
+
+【对我们的价值】
+把排查经验变成可复用的输入、动作、产物与验收约定，减少漏查与无法复核的结论。
+不同项目保留通用流程，替换领域检查清单、材料入口和工具适配。
+需要更强执行约束时，另行实现阶段产物校验、工具证据要求、权限控制和失败回退。
+这些工程扩展在原库中没有完整实现；本研究未运行 Hermes 或评测模型增益。
+</pre></div></details>
+        </div>
+
+        <div class="mechanism-box"><div class="mechanism-toolbar"><span>以 prism-scan → prism-reflect → 下一次扫描为例</span><label class="switch-control"><input id="history-toggle" type="checkbox"><span class="switch-track" aria-hidden="true"></span>已有盲区历史</label></div><div class="mechanism-steps" role="tablist" aria-label="工作原理步骤"><button role="tab" id="step-0" aria-controls="mechanism-detail" aria-selected="true" data-step="0"><span>01</span> 读材料</button><button role="tab" id="step-1" aria-controls="mechanism-detail" aria-selected="false" tabindex="-1" data-step="1"><span>02</span> 定方法</button><button role="tab" id="step-2" aria-controls="mechanism-detail" aria-selected="false" tabindex="-1" data-step="2"><span>03</span> 做分析</button><button role="tab" id="step-3" aria-controls="mechanism-detail" aria-selected="false" tabindex="-1" data-step="3"><span>04</span> 查遗漏</button><button role="tab" id="step-4" aria-controls="mechanism-detail" aria-selected="false" tabindex="-1" data-step="4"><span>05</span> 留记录</button></div><div id="mechanism-detail" class="mechanism-detail" role="tabpanel" aria-labelledby="step-0" tabindex="0"><div><span class="small-label" id="mechanism-owner"></span><h3 id="mechanism-title"></h3><p id="mechanism-desc"></p><a class="source-link" id="mechanism-source" target="_blank" rel="noopener">查看对应指令 ↗</a></div><div class="context-sheet"><div><span class="status-dot"></span><span id="context-name"></span></div><pre id="mechanism-example"></pre></div></div><p class="mechanism-caption">交互使用预设文字解释机制，不会调用模型。多专家是提示词中的角色安排；历史文件是补充上下文，不会更新模型权重。</p></div>
+        <div class="responsibilities"><div><strong>Skill</strong><span>规定分析步骤</span></div><span class="plus">+</span><div><strong>Hermes Agent</strong><span>载入指令、提供读写工具</span></div><span class="plus">+</span><div><strong>底层模型</strong><span>生成与执行分析</span></div><span class="plus">+</span><div><strong>历史文件</strong><span>提醒下次补查盲区</span></div></div>
+      </section>
+
+      <section id="case-study" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">04 / A REPRODUCIBLE CASE</p><h2>看一个真正能复现的问题。</h2></div><span class="evidence-badge"><span class="status-dot"></span> 本地 Python 复现通过</span></div>
+        <div class="case-intro"><h3>刚失败，为什么又允许请求了？</h3><p>熔断器像一道保护闸：服务连续失败后暂停请求，等 30 秒再放少量请求试探。上游教学样例把“等待是否结束”的判断和“打开试探通道”的写入分开，线程可能在两者之间插入新失败。</p></div>
+        <div class="case-layout"><div class="code-card"><div class="code-heading"><span>circuit_breaker.py</span><span>上游片段 · 43–51 行 · 缩进缩短</span></div><pre><code><span class="line"><i>43</i> @property</span><span class="line"><i>44</i> def state(self) -&gt; State:</span><span class="line"><i>45</i>     if self._state == State.OPEN:</span><span class="line"><i>46</i>         if self._last_failure_time and (</span><span class="line"><i>47</i>             time.time() - self._last_failure_time &gt;= self.recovery_timeout</span><span class="line"><i>48</i>         ):</span><span class="line highlight"><i>49</i>             self._state = State.HALF_OPEN</span><span class="line"><i>50</i>             self._half_open_calls = 0</span><span class="line"><i>51</i>     return self._state</span></code></pre><div class="code-note"><span>问题位置</span><p>先判断，再写状态；这段转换没有用同一把锁保护。</p><button class="text-button" data-document="examples/circuit_breaker.py">看完整原文件 ↗</button></div></div><div class="race-demo"><div class="race-top"><span class="small-label">逐步看线程如何交错</span><span id="race-counter" class="mono">00 / 04</span></div><div class="race-state"><span>当前熔断器</span><strong id="race-state">OPEN · 暂停请求</strong></div><ol class="race-timeline" id="race-timeline"><li data-race="1"><span>A</span><div><strong>线程 A：确认旧等待已结束</strong><p>距离上次失败已过去 60 秒。</p></div></li><li data-race="2"><span>B</span><div><strong>线程 B：又记录了一次失败</strong><p>冷却时间重置，应再等 30 秒。</p></div></li><li data-race="3"><span>A</span><div><strong>线程 A：继续用旧判断写入状态</strong><p>未重新检查失败时间，写入 HALF_OPEN。</p></div></li><li data-race="4"><span>!</span><div><strong>等待未结束，却已允许试探</strong><p>新失败后不足 30 秒就进入半开状态。</p></div></li></ol><div class="race-actions"><button class="button primary" id="race-next">下一步 <span aria-hidden="true">→</span></button><button class="text-button" id="race-reset">从头演示</button></div><p class="fine-print">预设顺序演示，复现脚本在本机执行。<a href="assets/race-reproduction.json" target="_blank" rel="noopener">查看真实执行记录 ↗</a></p></div></div>
+        <div class="case-evidence"><div><span class="evidence-label">来源中的发现</span><p>上游保存的 AI 报告指出了无锁状态转换。示例代码注明“故意包含设计缺陷”。</p><button class="text-button" data-document="examples/prism-scan-output.md">阅读上游完整输出 ↗</button></div><div><span class="evidence-label verified">本次实际验证</span><p>使用原始代码和受控线程交错复现竞态。验证了这个漏洞，没有重新运行 Hermes 或模型效果对比。</p><a href="assets/race-reproduction.json" download>下载复现记录 ↓</a></div></div>
+      </section>
+
+      <section id="extensions" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">05 / ROOM TO EXTEND</p><h2>从个人审查，到团队方法。</h2></div><p>沿着“规则、流程、工具”扩展，<br>先分清哪些已经能用。</p></div>
+        <div class="extension-grid"><article class="extension-column"><span class="extension-status ready">现在就能用</span><h3>改变检查重点</h3><p>复用现有 Skill 的参数与模板。</p><ul><li><strong>指定重点</strong><span>让 scan 聚焦性能、安全或错误处理。</span></li><li><strong>选固定视角</strong><span>用 7 份模板对同类问题重复检查。</span></li><li><strong>补查历史遗漏</strong><span>reflect 留下盲区，再由 scan 补查。</span></li></ul><a class="source-link" data-source="skills/prism-scan/SKILL.md" target="_blank" rel="noopener">已实现的指令依据 ↗</a></article><article class="extension-column"><span class="extension-status adaptable">修改 Skill 可扩展</span><h3>写入自己的标准</h3><p>需要编辑提示词，并测试新规则的效果。</p><ul><li><strong>团队审查规范</strong><span>加入错误码约定、日志要求与质量清单。</span></li><li><strong>领域专用视角</strong><span>为数据管道、API 设计等编写新模板。</span></li><li><strong>规范报告格式</strong><span>增加证据、复现步骤、置信度和待核查项。</span></li></ul><span class="extension-note">我们的可行扩展建议，尚未实现或验收。</span></article><article class="extension-column"><span class="extension-status build">需要额外开发</span><h3>接进工程流程</h3><p>增加运行器、数据结构与验证工具。</p><ul><li><strong>PR / CI 自动审查</strong><span>连接变更、调用模型、校验报告并控制成本。</span></li><li><strong>跨文件项目分析</strong><span>补依赖图、上下文检索与跨文件证据。</span></li><li><strong>可靠的长期记忆</strong><span>为盲区记录加去重、过期处理与效果评测。</span></li></ul><span class="extension-note">当前库未提供完整的这些工程能力。</span></article></div>
+        <div class="extension-choice"><div><h3>如果用于我们的研究库</h3><p>先做“单文件审查记录”：固定版本 → 选择视角 → 保存报告 → 跑复现 → 留下未验证项。之后再考虑自动化。</p></div><a class="button secondary" href="#start">从最小用法开始 ↗</a></div>
+      </section>
+
+      <section id="start" class="content-section observed">
+        <div class="section-heading"><div><p class="eyebrow">06 / GET STARTED</p><h2>准备一个文件，就能开始。</h2></div><a href="assets/super-hermes-study-kit.zip" download class="button secondary">下载原始资料包 ↓</a></div>
+        <div class="start-grid"><article><span class="start-num">01</span><h3>先准备运行环境</h3><p>完整 Skill 流程需要 <a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">Hermes Agent ↗</a>、已配置的模型，以及可读取的本地材料。</p><small>本展示页只提供阅读、交互解释和资料下载。</small></article><article><span class="start-num">02</span><h3>安装一个 Skill</h3><p>先装最常用的定向扫描；它附带 7 份固定模板。</p><div class="command-row"><code>hermes skills install Cranot/super-hermes/skills/prism-scan</code><button class="icon-button" data-copy="hermes skills install Cranot/super-hermes/skills/prism-scan" aria-label="复制安装命令">复制</button></div><small>上游文档命令；安装后在新会话中使用。</small></article><article><span class="start-num">03</span><h3>指定材料与目标</h3><p>在 Hermes 对话中输入，例如：</p><div class="command-row"><code>/prism-scan analyze circuit_breaker.py focusing on thread safety</code><button class="icon-button" data-copy="/prism-scan analyze circuit_breaker.py focusing on thread safety" aria-label="复制运行示例">复制</button></div><small>确保文件存在，逐条验证生成的发现。</small></article></div>
+        <details class="standalone"><summary>已有其他 AI 工具？7 份固定模板也可作为系统提示词使用 <span aria-hidden="true">＋</span></summary><div><p>完整 Skill 是为 Hermes 编写的。固定模板是独立提示词，可交给支持系统提示词的模型工具；读文件、写历史和多轮编排需要宿主工具支持。迁移完整 Skill 时应检查工具名与加载方式。</p><p>例如上游文档中的 Claude CLI 用法：</p><div class="command-row"><code>claude -p --system-prompt-file l12.md --tools "" &lt; your_code.py</code><button class="icon-button" data-copy="claude -p --system-prompt-file l12.md --tools &quot;&quot; &lt; your_code.py" aria-label="复制固定模板用法">复制</button></div><p class="fine-print">先从本页模板库下载 l12.md，并准备 your_code.py；该命令没有在本次研究中实测。</p></div></details>
+
+        <div class="limits-block"><h3>阅读分析报告时，保留这三点判断。</h3><div><p><span>01</span><strong>分析结果需要证据</strong>“守恒律”“不可能三角”是模型提出的判断，需要验证假设和推导；格式像公式不代表已被证明。</p><p><span>02</span><strong>深度评分来自作者实验</strong>上游没有标准化外部基准；报告更长、列出更多问题，不能直接说明正确率更高。</p><p><span>03</span><strong>盲区记录不保证改进</strong>历史只是追加文本，尚无去重、语义检索及后续质量提升的验证机制。</p></div><a class="source-link" data-source="README.md" data-anchor="limitations" target="_blank" rel="noopener">上游限制说明 ↗</a></div>
+        <details class="source-details"><summary>来源、固定版本与验证范围 <span aria-hidden="true">＋</span></summary><div class="source-body"><dl><div><dt>上游项目</dt><dd><a href="https://github.com/Cranot/super-hermes" target="_blank" rel="noopener">Cranot / super-hermes ↗</a></dd></div><div><dt>研究版本</dt><dd><a href="https://github.com/Cranot/super-hermes/tree/ffe2d10042041dcc23325f013e8b7e607e069952" target="_blank" rel="noopener"><code>ffe2d10042041dcc23325f013e8b7e607e069952</code></a></dd></div><div><dt>日期与许可</dt><dd>2026-10-22 · Asia/Shanghai · <a href="assets/upstream/LICENSE" target="_blank" rel="noopener">MIT 原始许可证</a></dd></div><div><dt>已验证</dt><dd>5 个 Skill 与 7 个模板的源文件、原理链路、原始示例中的并发竞态、网页交互。</dd></div><div><dt>未实测</dt><dd>Hermes 安装、在线模型输出增益、模型成本、CI 集成及跨文件分析。</dd></div></dl><p>原始资料包含 18 份固定版本文件与许可证。命令与机制来自上游；场景提问与扩展方案由本研究整理；线程演示使用预设数据。</p><div class="source-buttons"><button class="text-button" data-document="README.md">阅读上游 README ↗</button><button class="text-button" data-document="examples/growth-demo.md">阅读上游历史反馈演示 ↗</button><a href="assets/race-reproduction.json" target="_blank" rel="noopener">本地复现记录 ↗</a></div></div></details>
+      </section>
+    </main>
+    <footer><div><span class="footer-brand">SUPER HERMES</span><p>把审查方法写清楚，把分析结果查明白。</p></div><span>项目研究 012 <span class="slash">/</span> 2026.10.22</span><a href="#overview">回到开头 ↑</a></footer>
+  </div>
+  <dialog id="source-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><div><p class="eyebrow">PINNED UPSTREAM SOURCE · MIT</p><h2 id="dialog-title">原始技能文件</h2></div><button class="dialog-close icon-button" id="close-dialog" aria-label="关闭原文">关闭 ×</button></div><p id="dialog-path" class="mono"></p><div class="dialog-actions"><button class="text-button" id="copy-document">复制全文</button><a id="dialog-download" download>下载原文件 ↓</a><a id="dialog-source" target="_blank" rel="noopener">固定版本源码 ↗</a></div><pre id="dialog-content" tabindex="0"></pre></dialog>
+  <dialog id="overview-map-dialog" class="overview-map-dialog" aria-labelledby="overview-map-title"><div class="dialog-header"><div><p class="eyebrow">SUPER HERMES / UNDERSTANDING MAP</p><h2 id="overview-map-title">能力、七步定位协议与九项结论报告</h2></div><button class="icon-button" id="close-overview-map" aria-label="关闭全景图">关闭 ×</button></div><div class="dialog-actions"><button class="text-button" id="zoom-overview-map" aria-pressed="false">查看原尺寸</button><a href="assets/super-hermes-diagnosis-v3.png" download>下载完整 PNG ↓</a><a href="assets/seven-step-imagegen-prompt.txt" download>生成提示词 ↓</a></div><div class="map-image-frame" id="map-image-frame"><img src="assets/super-hermes-diagnosis-v3.png" alt="Super Hermes 能力总结：多个分析 Skill、七步定位协议、逐步要求与产物、九项结论报告、验证要求、提示词边界和我们的价值。" width="971" height="1619"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">此页正文可直接阅读；场景切换与原文阅读需要 JavaScript。全部原文件也可从“下载原始资料包”获取。</div></noscript>
+</body>
+</html>

@@ -1,0 +1,189 @@
+{
+  "checked_at": "2026-10-22T15:46:47.151536+08:00",
+  "base_url": "http://127.0.0.1:7877/1022_codex_project/012-super-hermes/",
+  "file_count": 30,
+  "all_http_200_and_byte_identical": true,
+  "root_navigation_and_cover_present": true,
+  "files": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 10994,
+      "sha256": "d60765e7950b8faa7082d2949b2c05d0ca53b6411831aabd42839fd51fdf6f07"
+    },
+    {
+      "path": "assets/analysis-protocol.txt",
+      "status": 200,
+      "bytes": 1569,
+      "sha256": "f9348d8abf5a06d07c53df0cdee665530c0f64435108de25ba1da14c788490f7"
+    },
+    {
+      "path": "assets/cover.png",
+      "status": 200,
+      "bytes": 65698,
+      "sha256": "74e470c2e89ad1663542afbbc84e957e92910af5d7232f85f13c6c973b6c1d07"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200,
+      "bytes": 290,
+      "sha256": "e22ea0857cd6997fae367a830fee080ac232789570ac09c301a0da2f0d8f7c93"
+    },
+    {
+      "path": "assets/overview-imagegen-prompt.txt",
+      "status": 200,
+      "bytes": 6695,
+      "sha256": "5e7fa29919797bab589ab638a6842b02abe499f59804e3cf6d09978e7eed6e1b"
+    },
+    {
+      "path": "assets/race-reproduction.json",
+      "status": 200,
+      "bytes": 658,
+      "sha256": "a861e07f3916a4152fe87775366c3749770e3bbcf960a41e262ebd5a14f28b86"
+    },
+    {
+      "path": "assets/super-hermes-overview.png",
+      "status": 200,
+      "bytes": 2201040,
+      "sha256": "ed0ef06d43d6cefad393b18409cef7139c17562658139362bc2a3ef9732ae270"
+    },
+    {
+      "path": "assets/super-hermes-study-kit.zip",
+      "status": 200,
+      "bytes": 33399,
+      "sha256": "144f57c5374124be11aaf14aab79e4652ce63f39ecb054d6e20752f94411f2f3"
+    },
+    {
+      "path": "assets/upstream/examples/circuit_breaker.py",
+      "status": 200,
+      "bytes": 4407,
+      "sha256": "9e77645eb9f88ac8a12df32771cea4ac017d9d36bfd16e9eafde07cf13503ca0"
+    },
+    {
+      "path": "assets/upstream/examples/growth-demo.md",
+      "status": 200,
+      "bytes": 3255,
+      "sha256": "c0c03504857fe4c31aaf7397e2eaebd105446765aede35af9d6f94cc65cdf398"
+    },
+    {
+      "path": "assets/upstream/examples/prism-scan-output.md",
+      "status": 200,
+      "bytes": 9259,
+      "sha256": "1b60320c8731cf26d08d43284faddf5d6dec9f378d15fb51d9500afdc345312f"
+    },
+    {
+      "path": "assets/upstream/install.ps1",
+      "status": 200,
+      "bytes": 2419,
+      "sha256": "a22b5058ce4e5a302f7d6f15a6e7b20b2e09a978b6717aa99b732cab428d2317"
+    },
+    {
+      "path": "assets/upstream/LICENSE",
+      "status": 200,
+      "bytes": 1063,
+      "sha256": "28273a2e019078e77d7ddbecaa18ca518e18a5e30c694c4115b82b431bfe35ca"
+    },
+    {
+      "path": "assets/upstream/README.md",
+      "status": 200,
+      "bytes": 15834,
+      "sha256": "cf47b29ff3a08b45468f975a5cdce30bfb939df82944ed736007719028b1f2f2"
+    },
+    {
+      "path": "assets/upstream/skills/prism-3way/SKILL.md",
+      "status": 200,
+      "bytes": 3656,
+      "sha256": "d77cc8625341324116c40924a0b195c2ebb3604a7ed5b742ed46179e1d01f958"
+    },
+    {
+      "path": "assets/upstream/skills/prism-discover/SKILL.md",
+      "status": 200,
+      "bytes": 2341,
+      "sha256": "3f8af1949cd04b0052783cb376f686e1d5b2d505d225698b824f3ffa2d2c9f11"
+    },
+    {
+      "path": "assets/upstream/skills/prism-full/SKILL.md",
+      "status": 200,
+      "bytes": 3581,
+      "sha256": "4499fabf3ae1dd6119f6974ab911c342c854f275b577822b6466e51529d752cd"
+    },
+    {
+      "path": "assets/upstream/skills/prism-reflect/SKILL.md",
+      "status": 200,
+      "bytes": 4502,
+      "sha256": "a3e256408f146cdff157a54e71e87c8dbf90202a54ce741b97d19e85e944147d"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/claim.md",
+      "status": 200,
+      "bytes": 836,
+      "sha256": "ab02a1215316614640b97e215dd24b4442f7e5ba1f10ef9e7f91f32a49a4dcad"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/deep_scan.md",
+      "status": 200,
+      "bytes": 2189,
+      "sha256": "60e57ac532fffcfc8e9af9168b0d782506eb54f801adc8240200801610f2f892"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/error_resilience.md",
+      "status": 200,
+      "bytes": 1797,
+      "sha256": "ddacb2a756beda838f18575975dfec9a74475a949b5e61525b7445d3adcc81cd"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/identity.md",
+      "status": 200,
+      "bytes": 2198,
+      "sha256": "c28848da710e80c107e608c44307bb40b7f133c598e61a5477354ca882457962"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/l12.md",
+      "status": 200,
+      "bytes": 2567,
+      "sha256": "b5b39851623d8b4acf9bdd10e46bbe2784c001e48d2dfdbbc71270223a8ae622"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/optimize.md",
+      "status": 200,
+      "bytes": 1530,
+      "sha256": "cf93048922986074275acd76fc6ea39e6274624f3983de6712703722191b6d4b"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/references/simulation.md",
+      "status": 200,
+      "bytes": 1767,
+      "sha256": "3a8a60647dd80396ac88c772f6d126f6c1d7382dabf205ed55be74b4ff17d52c"
+    },
+    {
+      "path": "assets/upstream/skills/prism-scan/SKILL.md",
+      "status": 200,
+      "bytes": 5915,
+      "sha256": "ce18487b2304c0a897cca481fcbb47294ac75e8e717e49041218adb71a5dd72d"
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "bytes": 10210,
+      "sha256": "c72fab7539238a50f368d5acd5714212ad3ea56a8aef87f04ec90aea7e6e503e"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 35813,
+      "sha256": "907b4049fbb4a2c55e992a64ab577a13c8b3e34bbd509b5ec2f5ced2fae785e1"
+    },
+    {
+      "path": "source-data.js",
+      "status": 200,
+      "bytes": 71265,
+      "sha256": "2826dc0591ee316eaebcb144bb746cca4bc226dc40c34487d922d479c9f866e7"
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 41271,
+      "sha256": "83aa957a54367fb091934645b7544d22bf27d286f808779f30c1fa4a1c58100a"
+    }
+  ]
+}
