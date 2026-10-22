@@ -183,3 +183,5 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 构建步骤为 `python projects/015-heytea-style/scripts/package_web.py` 和 `python projects/015-heytea-style/scripts/verify_web.py`，随后由根汇总器发布到 `015-heytea-style/`。打包仅使用 Python 标准库，核对固定上游哈希，生成自包含资源、许可、示例角色 ZIP 与离线单文件；源文件换行通过项目 .gitattributes 保持。
 
 本地已检查七个效果版本、八种行为、十四个原理阶段、场景切换、键盘和六种屏宽。网页使用上游真实动画帧与阶段播放器，物理完成事件由按钮发送；未运行原生 Electron，也未按上游流程创作四类新作品。正式发布状态与证据以项目 deployment-verification.json 为准。
+
+015 源码已于 2026-10-22 推送 main。GitHub Actions 官方报告工作流与步骤结果处理延迟，发布任务仍在服务端排队，公网尚未验证成功；故 demo_url 留空。当前状态、提交和待核验项见项目 [deployment-verification.json](../projects/015-heytea-style/deployment-verification.json)。
