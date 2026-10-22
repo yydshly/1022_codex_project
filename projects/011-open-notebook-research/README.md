@@ -2,7 +2,7 @@
 
 > 从 Auto Paper Digest 的「采集论文 → NotebookLM 生成 → 归档发布」出发，研究如何将通用论文工具用于水生毒理学。原库以 Python、SQLite、Playwright 和 Gradio 编排流程；本次因 NotebookLM 接入未取得产出，转用 Open Notebook 的 Next.js / FastAPI / SurrealDB 架构，通过 Esperanto 接入 MiniMax，完成 PDF 提取与全文问答。再加入 Europe PMC 领域检索、模型参数适配和原文精读，形成可追溯、可阅读、可下载的研究档案：3 篇详细报告、1 篇跨论文综合、2 份历史模型短回答及失败证据。
 
-[打开详细报告网页](web/index.html#deep-reports) · [研究方法](research-method.md) · [研究笔记](notes.md) · [来源与版本](SOURCE.json)
+[打开正式研究网页](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/) · [直接阅读详细报告](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/#deep-reports) · [研究方法](research-method.md) · [研究笔记](notes.md) · [来源与版本](SOURCE.json)
 
 ![水生毒理学研究档案的实际网页：论文、解读与验证结果](assets/cover.png)
 
@@ -101,6 +101,8 @@ Open Notebook 在 Codex 云端容器中完成实际导入与 REST 问答。原�
 云机内服务健康、来源和问答可读取；用户浏览器访问原版完整应用未验收。原生预览与内网穿透没有取得可用入口，ngrok 与 Microsoft Dev Tunnels 目标被当前代理返回 `403 Domain forbidden`。根因未确认，也不能推断所有 Codex 环境都禁止隧道。完整 Open Notebook 应用的访问排查已停止，失败记录作为研究材料保留；本轮发布的是下述静态成果网站。
 
 ## 网页发布与本地阅读
+
+已通过 GitHub Pages 发布：[正式研究网站](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/)。首次发布提交 `a496004`，[构建与部署通过](https://github.com/yydshly/1022_codex_project/actions/runs/39743460386)；HTTP 与离线包验收记录见 [publication-verification.json](publication-verification.json)。
 
 `web/` 保存已打包的只读页面及其资料，可直接打开；修改研究原始文件后再运行打包脚本更新。静态资源使用相对路径，兼容仓库编号目录。本轮按仓库 GitHub Pages 规范发布此静态成果，站点入口及部署验收状态以项目登记表和部署记录为准；完整 Open Notebook 在线应用未部署给用户使用。
 

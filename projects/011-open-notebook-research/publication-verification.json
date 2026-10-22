@@ -1,0 +1,442 @@
+{
+  "checked_on": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/",
+  "verified_commit": "a496004a00b6bf277ae616e24e7cabbed3be858c",
+  "workflow_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39743460386",
+  "workflow_conclusion": "success",
+  "scope": "Initial static research archive publication, not the original Open Notebook application",
+  "http": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "sha256": "a754ea6d5fa271b574b0f2fc9d8afd4fc2fbbc04e8cc96ac3efe369874444a8a",
+      "matches_local": true,
+      "bytes": 16501
+    },
+    {
+      "path": "assets/cover.png",
+      "status": 200,
+      "sha256": "788e86c9d04ad4dbc585b652b7f47e4457497dad7dabd797c9b4a251a144fbeb",
+      "matches_local": true,
+      "bytes": 78362
+    },
+    {
+      "path": "assets/detailed-reader.png",
+      "status": 200,
+      "sha256": "63fbcc1457ab9f66f071904988d173e490b74dda1e8e14ad372f68cafae0cc79",
+      "matches_local": true,
+      "bytes": 86010
+    },
+    {
+      "path": "assets/figures/PMC10819493-p05.png",
+      "status": 200,
+      "sha256": "db023c5d78c080285f8504215fe844f51775e9cf785285c15e4558267023bb7b",
+      "matches_local": true,
+      "bytes": 249747
+    },
+    {
+      "path": "assets/figures/PMC10819493-p08.png",
+      "status": 200,
+      "sha256": "04c10c558a068dd38a10c7048f11aacf5beed5f10380c7c6a949ab4ae11309d1",
+      "matches_local": true,
+      "bytes": 268582
+    },
+    {
+      "path": "assets/figures/PMC11851982-p07.png",
+      "status": 200,
+      "sha256": "74db596fff35a6b28328f9cb3bcbaa03a142c6a787a0cac0c68263b7ad276e18",
+      "matches_local": true,
+      "bytes": 1061295
+    },
+    {
+      "path": "assets/figures/PMC11851982-p10.png",
+      "status": 200,
+      "sha256": "559999686e8781a43288c58249bf695e20d4310a36cc12f27b1165941be33c7e",
+      "matches_local": true,
+      "bytes": 147265
+    },
+    {
+      "path": "assets/figures/PMC13162690-p05.png",
+      "status": 200,
+      "sha256": "614c97da66a1c4a42a388980b393197770c5cf9743a3c5b05b44a290b7596536",
+      "matches_local": true,
+      "bytes": 895832
+    },
+    {
+      "path": "assets/figures/PMC13162690-p10.png",
+      "status": 200,
+      "sha256": "765f37ad5b2568b5966aeba5b206a1486c6dbc5ff441ada0c0995d2d646e0d1c",
+      "matches_local": true,
+      "bytes": 289980
+    },
+    {
+      "path": "assets/licenses/Esperanto-LICENSE.txt",
+      "status": 200,
+      "sha256": "e4c7e0427bae5d63b2e31b425745d658f0c843d806fda03bcd823f9a1b677707",
+      "matches_local": true,
+      "bytes": 1066
+    },
+    {
+      "path": "assets/licenses/OpenNotebook-LICENSE.txt",
+      "status": 200,
+      "sha256": "5262176eef0dc9e46c8825249000585f115b7ef5fab500bf1f530717bf2ce0b9",
+      "matches_local": true,
+      "bytes": 1061
+    },
+    {
+      "path": "assets/licenses/SurrealDB-LICENSE.txt",
+      "status": 200,
+      "sha256": "dd98c688e54be8b85ad79e603f5112449b9789dfc031db94eb5c7dc843702aef",
+      "matches_local": true,
+      "bytes": 4565
+    },
+    {
+      "path": "assets/overview-page.png",
+      "status": 200,
+      "sha256": "92c1b06b8740c48d368592ab839681a36207606d0aab2ae5c825cd6955277df0",
+      "matches_local": true,
+      "bytes": 108453
+    },
+    {
+      "path": "assets/papers/PMC10819493.pdf",
+      "status": 200,
+      "sha256": "676abd7d63510845d3b0e91810d5478fd5c941d4a736ed3457de26b92a70d27d",
+      "matches_local": true,
+      "bytes": 2038037
+    },
+    {
+      "path": "assets/papers/PMC11851982.pdf",
+      "status": 200,
+      "sha256": "d8e308b04f4f6b9ab9a3aad002341fe9ab8082eda61907e5e704ab3dee9737cb",
+      "matches_local": true,
+      "bytes": 5474450
+    },
+    {
+      "path": "assets/papers/PMC13162690.pdf",
+      "status": 200,
+      "sha256": "df6cabe5407c9b9c3ed9289e1fb1277f91c2d0621209d59b09848fb2f6e6d00c",
+      "matches_local": true,
+      "bytes": 11385126
+    },
+    {
+      "path": "assets/reader.png",
+      "status": 200,
+      "sha256": "4ea06983e7080ba648fabb06b6941e113b4d1275466c47b45517c2a27edf1577",
+      "matches_local": true,
+      "bytes": 78868
+    },
+    {
+      "path": "assets/research-overview.png",
+      "status": 200,
+      "sha256": "414ed5738dc7c944ed47c21c2a6565fdd3e8f6dfc5586cc09f56758f29b6dd6f",
+      "matches_local": true,
+      "bytes": 449395
+    },
+    {
+      "path": "assets/research-overview.svg",
+      "status": 200,
+      "sha256": "e42e9b0afb678327083a74b122765c4d72cfa87c4a6ba5f1b251a3c075d885b8",
+      "matches_local": true,
+      "bytes": 14517
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "sha256": "ff5ae9c2d672f15823ec6ef44300a068ad74ebaa0fade3e12b1083be7927c30f",
+      "matches_local": true,
+      "bytes": 123482
+    },
+    {
+      "path": "downloads/aquatic-papers.json",
+      "status": 200,
+      "sha256": "89e3c013dd2d2c46027aa8a0c3b42e6b3d0dfae4da211da469696278902aeeb3",
+      "matches_local": true,
+      "bytes": 8325
+    },
+    {
+      "path": "downloads/aquatic-search.json",
+      "status": 200,
+      "sha256": "a5550efbe4c041832953b463d5413bdb2be94d29b9cbaa924d91e512daea1c01",
+      "matches_local": true,
+      "bytes": 11365
+    },
+    {
+      "path": "downloads/architecture-evidence.json",
+      "status": 200,
+      "sha256": "024de4438452487d2d370b7ddc18c25562504ec53e52967f557655c691b7149b",
+      "matches_local": true,
+      "bytes": 5438
+    },
+    {
+      "path": "downloads/asset-sources.md",
+      "status": 200,
+      "sha256": "815678c4778e5bda5e393cdf5e398633521f804cb4aa71a4f30bad46710485d1",
+      "matches_local": true,
+      "bytes": 3639
+    },
+    {
+      "path": "downloads/detailed-report-index.json",
+      "status": 200,
+      "sha256": "26dae967b152d2c0cddbc8fdeca60708fc5f75fe3c5ce3f79d4622777aadddd6",
+      "matches_local": true,
+      "bytes": 4153
+    },
+    {
+      "path": "downloads/extension-sources.md",
+      "status": 200,
+      "sha256": "157f6e337159851ab5a383451739b43c4ff6d85fd48198bc54a2e7114c748c1b",
+      "matches_local": true,
+      "bytes": 2300
+    },
+    {
+      "path": "downloads/history-summary.md",
+      "status": 200,
+      "sha256": "17faeec81ab81ba14f3ca0ec348f683c299cf9af24df519d937f5b1ab770cf3a",
+      "matches_local": true,
+      "bytes": 3638
+    },
+    {
+      "path": "downloads/import-manifest.json",
+      "status": 200,
+      "sha256": "192d1bd72e5c40ab59309c7bbca0e438024467d1104dbba13b5aa36fb3b43d36",
+      "matches_local": true,
+      "bytes": 3662
+    },
+    {
+      "path": "downloads/knowledge-summary.md",
+      "status": 200,
+      "sha256": "9ea7066d952275fee3e7fb19dd3902619863f5b26c9affb1596fad325d97a280",
+      "matches_local": true,
+      "bytes": 11482
+    },
+    {
+      "path": "downloads/notes.md",
+      "status": 200,
+      "sha256": "7777b8d83e76af3de51017613f8a9af9a55acc63bd8d34581c0f64d31f7df066",
+      "matches_local": true,
+      "bytes": 6289
+    },
+    {
+      "path": "downloads/open-notebook-cloud-check.json",
+      "status": 200,
+      "sha256": "c401bbf9e0f5074261b8351c836f37b7e235669138b39bb56fe18d0d1a7c5363",
+      "matches_local": true,
+      "bytes": 5112
+    },
+    {
+      "path": "downloads/open-notebook-minimax-check.json",
+      "status": 200,
+      "sha256": "7e43cbff01f304fb52a98d32153cb0e17a83fb4b13283c634c1ceebec55559be",
+      "matches_local": true,
+      "bytes": 4417
+    },
+    {
+      "path": "downloads/open-notebook-single-answer.md",
+      "status": 200,
+      "sha256": "0984827a7849f4004a1d0e6df38b4774b8adadd23c54deb3741d446dd27b2cfc",
+      "matches_local": true,
+      "bytes": 2876
+    },
+    {
+      "path": "downloads/open-notebook-single-truncated.md",
+      "status": 200,
+      "sha256": "18db568df754e4109507593b48f8d4d398e92234c5828e987834813ab9637cba",
+      "matches_local": true,
+      "bytes": 654
+    },
+    {
+      "path": "downloads/open-notebook-synthesis-answer.md",
+      "status": 200,
+      "sha256": "140dfdfa36131f3610c0114fb10367a85e1ff96f6c6aaaaec15dbe09499dc935",
+      "matches_local": true,
+      "bytes": 6362
+    },
+    {
+      "path": "downloads/PMC10819493-analysis.md",
+      "status": 200,
+      "sha256": "565e8ad5dc0c39a898fb2782434cd42bd68e99cde9d1d9b095af789032f61b32",
+      "matches_local": true,
+      "bytes": 20276
+    },
+    {
+      "path": "downloads/PMC10819493-evidence.json",
+      "status": 200,
+      "sha256": "00fc4e41d8ad23d1b0d677047efebc1edd2d3dfa6a0e6beb8d601b1c51eaaafd",
+      "matches_local": true,
+      "bytes": 15986
+    },
+    {
+      "path": "downloads/PMC11851982-analysis.md",
+      "status": 200,
+      "sha256": "652530f4d3c6958ac1518db93ef3655ec3a451c8a8018f8d39a30d7eb0d92df6",
+      "matches_local": true,
+      "bytes": 18015
+    },
+    {
+      "path": "downloads/PMC11851982-evidence.json",
+      "status": 200,
+      "sha256": "886b1ad46bb51865e813d9f3ad4905c8cb547e506574ddd7d062e01d91f1503e",
+      "matches_local": true,
+      "bytes": 12667
+    },
+    {
+      "path": "downloads/PMC13162690-analysis.md",
+      "status": 200,
+      "sha256": "91dddcdfe3a967e415ad1d900e80da75586b33951a176991004f46491d8ab3b2",
+      "matches_local": true,
+      "bytes": 17559
+    },
+    {
+      "path": "downloads/PMC13162690-evidence.json",
+      "status": 200,
+      "sha256": "b127aa0a1b9e8c3bcd51453a9c95132627377b3ad75c3cc322bb98d41fd8927d",
+      "matches_local": true,
+      "bytes": 16102
+    },
+    {
+      "path": "downloads/public-validation.json",
+      "status": 200,
+      "sha256": "c5084e7abf46b3c686890049d32e80a9d769766014f549e27197fb6a02f8f6b6",
+      "matches_local": true,
+      "bytes": 7198
+    },
+    {
+      "path": "downloads/research-archive.zip",
+      "status": 200,
+      "sha256": "d87b3cb58cfaee37dc4065214d4cd26774159c4e602345c2aeaa9b13a262ea63",
+      "matches_local": false,
+      "bytes": 21625844
+    },
+    {
+      "path": "downloads/research-method.md",
+      "status": 200,
+      "sha256": "8db205439c2288cbe3fe3be9cb4e3fd32c5186b9edbe04d6ded9d57a06f99d40",
+      "matches_local": true,
+      "bytes": 8583
+    },
+    {
+      "path": "downloads/SOURCE.json",
+      "status": 200,
+      "sha256": "d9dbbffe39a404bf11d6bde68adb8f656d18d72c85b46e33bdbf56d243a653f8",
+      "matches_local": true,
+      "bytes": 8567
+    },
+    {
+      "path": "downloads/study-status.json",
+      "status": 200,
+      "sha256": "aa7151fc0bd69baf58f68db0ffcd4fa24880c0b5174f15ceec58b3026912e5a8",
+      "matches_local": true,
+      "bytes": 3191
+    },
+    {
+      "path": "downloads/synthesis-analysis.md",
+      "status": 200,
+      "sha256": "a1bd7474fe3785bf62c68eaf6e593e4dd3479d4bb68a1a9ae32b4e3714889e65",
+      "matches_local": true,
+      "bytes": 13773
+    },
+    {
+      "path": "downloads/synthesis-evidence.json",
+      "status": 200,
+      "sha256": "43f4fe914f31817f0bcc2632923c30369a83bf1d10cde5168521da3780bf90cf",
+      "matches_local": true,
+      "bytes": 1922
+    },
+    {
+      "path": "extensions/archives/aquatic_research.py",
+      "status": 200,
+      "sha256": "5a853bec6ebf5ff92856eb0b658a09ce95bd0d2ba8af7b106b5b30ec0bd7e8af",
+      "matches_local": true,
+      "bytes": 6680
+    },
+    {
+      "path": "extensions/archives/launch_aquatic_portal.py",
+      "status": 200,
+      "sha256": "587502ee50a00f9e55c664468d114a87207266264ed8de08c89df969e27146ff",
+      "matches_local": true,
+      "bytes": 6474
+    },
+    {
+      "path": "extensions/archives/run_apd.py",
+      "status": 200,
+      "sha256": "293392b1b36501a9eaacca54fb850f01c18d9b75a6b5428928e686eb3d3a5569",
+      "matches_local": true,
+      "bytes": 1116
+    },
+    {
+      "path": "extensions/archives/runtime.patch",
+      "status": 200,
+      "sha256": "16f90204786f50edcb7193b4dfa9b3305fb142a0b32b0b4637f5b2c37c21cabb",
+      "matches_local": true,
+      "bytes": 575
+    },
+    {
+      "path": "extensions/source-manifest.json",
+      "status": 200,
+      "sha256": "73503ab041c50731cd5c14d94edaf2f4d1b3245927a00b585d9ee0a45c2ccbab",
+      "matches_local": true,
+      "bytes": 1777
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "d5aae3841f03908ed51b031e9647ab3a4433915acc75693d9100642f26d141f1",
+      "matches_local": true,
+      "bytes": 30752
+    },
+    {
+      "path": "overview.css",
+      "status": 200,
+      "sha256": "836db507de8182496d661245f29f8fcbf4e2ec5aa64a5be12cd095438cb38866",
+      "matches_local": true,
+      "bytes": 8389
+    },
+    {
+      "path": "reports/PMC10819493.html",
+      "status": 200,
+      "sha256": "1896134091364a898e32f505c3b71e2ae317c826d60a43245a48a9ec47afce9d",
+      "matches_local": true,
+      "bytes": 26022
+    },
+    {
+      "path": "reports/PMC11851982.html",
+      "status": 200,
+      "sha256": "8ebb5c0413451571e31e73de7f3bc181ef0622654b83f9a26ce97b5857ff4098",
+      "matches_local": true,
+      "bytes": 22895
+    },
+    {
+      "path": "reports/PMC13162690.html",
+      "status": 200,
+      "sha256": "f85feb296654eb788c5b7e5e77359918dcfde95b503bc29a408151e28c87d670",
+      "matches_local": true,
+      "bytes": 22182
+    },
+    {
+      "path": "reports/synthesis.html",
+      "status": 200,
+      "sha256": "ebeab42bdbf2969ff9bddb3e907e482cef3eb5a8705f10358d43a1dcb002beba",
+      "matches_local": true,
+      "bytes": 18027
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "sha256": "9aa2b99f5dd30ee549e689c180e114cbf0192c005de0354b927bb0783b6e3e70",
+      "matches_local": true,
+      "bytes": 32550
+    }
+  ],
+  "all_http_200_and_bytes_match": false,
+  "new_model_calls": 0,
+  "offline_zip": {
+    "members": 60,
+    "all_member_bytes_match": true,
+    "container_bytes_differ": true,
+    "note": "ZIP container/compression differs across build environments; uncompressed members compared to the initial release",
+    "different_members": [],
+    "downloaded_sha256": "d87b3cb58cfaee37dc4065214d4cd26774159c4e602345c2aeaa9b13a262ea63"
+  },
+  "passed": true
+}

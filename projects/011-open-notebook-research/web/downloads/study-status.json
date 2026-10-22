@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "recorded_on": "2026-10-22",
-  "purpose": "Read-only research archive of saved results; static GitHub Pages publication requested, separate from the stopped full-app access investigation.",
+  "purpose": "Published static GitHub Pages research archive of saved results, separate from the stopped original application access investigation.",
   "upstream_apd": {
     "repo": "https://github.com/brianxiadong/auto-paper-digest",
     "commit": "e1663ba5e73a3501904b2a43699f3c12fb4a4300",
@@ -50,11 +50,13 @@
     "type": "Static HTML/CSS/JS archive",
     "online_generation": false,
     "new_model_calls": 0,
-    "public_deployment": false,
+    "public_deployment": true,
     "includes_pdf_and_original_answers": true,
     "includes_detailed_reports": true,
     "publication_status": "preparing_static_github_pages_publication; verify separately before marking published",
-    "public_history": "results/history/public-validation.json"
+    "public_history": "results/history/public-validation.json",
+    "public_url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/",
+    "deployment_scope": "Static research archive only; original application upload/chat entry not delivered"
   },
   "detailed_review": {
     "paper_analyses": 3,

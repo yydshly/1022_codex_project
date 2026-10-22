@@ -6,7 +6,7 @@
     "2026-10-22"
   ],
   "timezone": "Asia/Shanghai",
-  "purpose": "固定版本开源项目研究与只读成果档案：保存历史模型原文、原文精读、架构与扩展总结，并按用户要求准备静态网站发布；不新增外部模型 API 请求或完整云端应用部署。",
+  "purpose": "固定版本开源项目研究与已发布静态成果档案：保存历史模型原文、原文精读、架构与扩展总结；本轮未新增外部模型 API 请求，原版云端应用的访问排查已停止。",
   "primary_upstream": {
     "repository": "https://github.com/lfnovo/open-notebook",
     "author": "Luis Novo",
@@ -91,7 +91,9 @@
       "cloud_dependency": false,
       "model_calls": 0,
       "deployment_requested": true,
-      "deployment_target": "GitHub Pages static archive; deployment verification recorded separately"
+      "deployment_target": "GitHub Pages static archive; deployment verification recorded separately",
+      "public_url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/",
+      "deployment": "GitHub Pages static archive; original Open Notebook application not publicly deployed"
     }
   },
   "paper_source": {

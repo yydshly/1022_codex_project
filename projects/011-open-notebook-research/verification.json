@@ -40,5 +40,6 @@
   "browser_validation": "Recorded separately in web-ui-verification.json",
   "new_external_model_api_calls": 0,
   "new_research_agent_analysis": true,
-  "deployment_performed": false
+  "deployment_performed_by_this_check": false,
+  "publication_record": "publication-verification.json"
 }

@@ -59,7 +59,7 @@ PDF 调用链为 `FastAPI → process_source → source_graph → content-core.e
 | 原库复用 | 重定位运行目录，保留上游代码，复用 Paper/SQLite/`show_papers()`；用真实本地文件和标签展示 | [run_apd.py](../extensions/archives/run_apd.py)、[launch_aquatic_portal.py](../extensions/archives/launch_aquatic_portal.py)。原发布仍以 arXiv 为前提，未适配 PMC |
 | 模型路线 | PDF 导入 Open Notebook；`/api/chat/context` → `/api/chat/execute`；只给指定 MiniMax 模型和中国区地址设置 `reasoning_effort=low`、`max_retries=0`，保留 8192 上限 | [runtime.patch](../extensions/archives/runtime.patch)。这是独立替代路线及针对性适配，不是 APD 通用引擎改造 |
 | 理解深度 | 阅读完整主文与关键图页，记录实验、独立重复、统计、机制与限制，交叉核对数字 | [详细报告](detailed-report-index.json)。研究代理新增，不归入历史 MiniMax 原始产出 |
-| 结果交付 | 白名单导入及哈希核验，生成目录、页码和静态报告，打包可离线阅读的 ZIP | [import_artifacts.py](scripts/import_artifacts.py)、[package_web.py](scripts/package_web.py)、[report_renderer.py](scripts/report_renderer.py)、[verify_web.py](scripts/verify_web.py) |
+| 结果交付 | 白名单导入及哈希核验，生成目录、页码和静态报告，打包可离线阅读的 ZIP | [import_artifacts.py](https://github.com/yydshly/1022_codex_project/blob/main/projects/011-open-notebook-research/scripts/import_artifacts.py)、[package_web.py](https://github.com/yydshly/1022_codex_project/blob/main/projects/011-open-notebook-research/scripts/package_web.py)、[report_renderer.py](https://github.com/yydshly/1022_codex_project/blob/main/projects/011-open-notebook-research/scripts/report_renderer.py)、[verify_web.py](https://github.com/yydshly/1022_codex_project/blob/main/projects/011-open-notebook-research/scripts/verify_web.py) |
 
 已发现 `aquatic_research.py` 未执行的媒体下载分支与上游返回值数量不匹配；原分支未修改或执行；公开快照只保留检索和准备函数及其辅助代码，详见[扩展说明](extension-sources.md)。结合尚未适配 PMC 的发布路径，不能将扩展描述为全自动媒体流水线已经完成。
 

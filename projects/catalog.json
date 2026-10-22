@@ -155,7 +155,7 @@
       ],
       "cover": "assets/research-overview.png",
       "cover_caption": "原创一图总览：源库能力、技术架构、从 NotebookLM 转向 Open Notebook/MiniMax 的探索、四层扩展及实测效果。详细报告来自研究代理精读，历史模型短回答另行保留。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/"
     }
   ]
 }

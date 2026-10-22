@@ -45,3 +45,8 @@
 `overview-page.png` 为新增总览区的本地网页实际截图，仅证明展示效果，不代表原版云应用已经部署。
 
 `research-overview.png` 为同一 SVG 使用已有 Sharp 运行库渲染的 1600×1500 PNG，便于下载和分享；内容与矢量图一致，未生成额外科学数据。
+
+
+## published-summary.png
+
+2026-10-22 通过内置浏览器直接访问 [GitHub Pages 正式网站](https://yydshly.github.io/1022_codex_project/011-open-notebook-research/#research-purpose) 保存的实际截图，展示研究摘要与四阶段路线。页面 CSS 内容宽度 718 px；未经重绘或修饰。它证明静态成果站的公开呈现，不代表 Open Notebook 原版在线应用已经部署。

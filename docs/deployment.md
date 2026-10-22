@@ -138,3 +138,13 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 总览图的 PNG 已随研究文件保存，SVG 与覆盖记录由标准库校验；只有重新栅格化总览图才需要 Pillow 和中文字体。详细配置与范围见 [RUNTIME.md](../projects/009-webgpu-render-pipeline/RUNTIME.md)、[VALUE.md](../projects/009-webgpu-render-pipeline/VALUE.md)。
 
 2026-10-22：009 已正式发布，构建与部署任务通过；总览图、全部运行文件和线上海滩交互已核验。详见 [009 部署验收记录](../projects/009-webgpu-render-pipeline/deployment-verification.json)。
+
+
+## 011 · 水生毒理学研究档案
+
+- 正式入口：https://yydshly.github.io/1022_codex_project/011-open-notebook-research/
+- 首次发布提交：`a496004a00b6bf277ae616e24e7cabbed3be858c`；[Pages 构建与部署成功](https://github.com/yydshly/1022_codex_project/actions/runs/39743460386)。
+- 摘要覆盖 Auto Paper Digest 的论文采集、NotebookLM 生成与归档能力及技术架构，说明 Europe PMC 领域适配、Open Notebook + MiniMax 替代路线、参数修复、原文精读和静态交付。
+- 页面包含总览图、3 篇详细报告、1 篇综合、原 PDF、关键图页、历史回答与扩展源码快照；浏览不调用模型。
+- 构建使用 Python 标准库：`package_web.py` → `package_web.py --check` → `verify_web.py` → 根 `build_site.py`。原始证据以项目 `.gitattributes` 关闭换行归一化，保持 SHA-256。
+- 这是静态成果网站发布，未开放 Open Notebook 原版应用的上传与在线问答入口。验收见项目 `publication-verification.json`。

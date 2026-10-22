@@ -112,7 +112,7 @@ def main():
                 if response.status != 200 or content != (WEB / relative).read_bytes():
                     raise ValueError(f"HTTP content mismatch: {relative}")
                 http.append({"path": relative, "status": response.status, "sha256": hashlib.sha256(content).hexdigest()})
-    report = {"schema_version": 2, "checked_on": "2026-10-22", "static_local_references": len(local), "pdf_hashes_verified": 3, "answer_count": 3, "complete_answer_count": 2, "detailed_reports": report_checks, "archive_members": archive_files, "http": http, "browser_validation": "Recorded separately in web-ui-verification.json", "new_external_model_api_calls": 0, "new_research_agent_analysis": True, "deployment_performed": False}
+    report = {"schema_version": 2, "checked_on": "2026-10-22", "static_local_references": len(local), "pdf_hashes_verified": 3, "answer_count": 3, "complete_answer_count": 2, "detailed_reports": report_checks, "archive_members": archive_files, "http": http, "browser_validation": "Recorded separately in web-ui-verification.json", "new_external_model_api_calls": 0, "new_research_agent_analysis": True, "deployment_performed_by_this_check": False, "publication_record": "publication-verification.json"}
     (ROOT / "verification.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Verified {len(local)} local resources, 3 PDF hashes, {archive_files} ZIP members, {len(http)} HTTP responses.")
 

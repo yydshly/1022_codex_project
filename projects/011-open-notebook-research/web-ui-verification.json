@@ -51,5 +51,18 @@
     "responsive": "718px and 1265px main viewport clientWidth equals scrollWidth; 390px iframe visually checked.",
     "diagram_review": "Full PNG visually inspected: Chinese text readable, no clipping or text overlap; SVG XML validated.",
     "provenance": "Fixed-commit official sources and architecture-evidence.json linked; original answers unchanged."
+  },
+  "public_pages_check": {
+    "checked_on": "2026-10-22",
+    "url": "https://yydshly.github.io/1022_codex_project/011-open-notebook-research/",
+    "initial_publication_commit": "a496004a00b6bf277ae616e24e7cabbed3be858c",
+    "summary_visible": true,
+    "detailed_report_tabs": 4,
+    "carp_report_switch": "Passed: title, 1036/612 discussion, 31 PDF-page links, Markdown destination",
+    "viewport_css_px": 718,
+    "horizontal_overflow": false,
+    "console_errors_warnings": 0,
+    "screenshot": "assets/published-summary.png",
+    "scope": "Static archive only; no online model generation"
   }
 }

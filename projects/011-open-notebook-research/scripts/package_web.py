@@ -188,6 +188,8 @@ def expected_files():
             if destination not in files and destination not in ("index.html", "styles.css", "overview.css", "app.js"):
                 destination = "downloads/" + {"assets/README.md": "asset-sources.md", "extensions/README.md": "extension-sources.md", "results/history/README.md": "history-summary.md", "results/detailed/index.json": "detailed-report-index.json"}.get(key, source.name)
             if destination not in files and destination != "index.html":
+                if source.is_file():
+                    return match[1] + "https://github.com/yydshly/1022_codex_project/blob/main/projects/011-open-notebook-research/" + key + ("#" + target.fragment if target.fragment else "") + ")"
                 return match[0]
             suffix = ("?" + target.query if target.query else "") + ("#" + target.fragment if target.fragment else "")
             return match[1] + posixpath.relpath(destination, "downloads") + suffix + ")"
