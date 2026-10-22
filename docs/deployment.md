@@ -127,3 +127,11 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 构建前运行`python projects/003-algorithmic-sublime-poster/scripts/package_web.py`，再执行同一命令加`--check`。现有Pages工作流已加入两步，之后由根汇总器发布编号路径；静态网页无需在线生成接口。原始资源在`assets/`维护，`web/assets/`副本不重复提交；项目记录固定上游提交、媒体来源及许可边界。
 
 已于2026-10-22通过[公开入口](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/)验证；内容提交`3a51bb7`的[GitHub Actions构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39731082554)成功。32个页面文件与160项素材共192项HTTP200且SHA-256与提交内容一致，两条真实AI原片Range206；桌面/手机、原作切换、真实原片播放、完整指令展开及Skill ZIP下载检查通过。登记表已填写demo_url并同步索引。[完整验证记录](../projects/003-algorithmic-sublime-poster/assets/deployment-verification.json)。
+
+## 009 · WebGPU 光照效果实现与复用
+
+009 的核心是浏览器三维光照效果：先用 BVH / Surfel 估计反弹光，存入 Lightmap / 空间探针，再实时组合直接光、阴影、水面和植被。入口使用本研究已有的一图总览，说明效果、原理、游戏与空间漫游等复用方向；四场景交互按需加载。
+
+GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_runtime.py，再运行 package_web.py / verify_structure.py，最后由统一 build_site.py 汇总。源码、Three.js / R3F fork 与 npm 锁定到明确版本；运行依赖、资源与许可说明随静态产物发布。
+
+总览图的 PNG 已随研究文件保存，SVG 与覆盖记录由标准库校验；只有重新栅格化总览图才需要 Pillow 和中文字体。详细配置与范围见 [RUNTIME.md](../projects/009-webgpu-render-pipeline/RUNTIME.md)、[VALUE.md](../projects/009-webgpu-render-pipeline/VALUE.md)。

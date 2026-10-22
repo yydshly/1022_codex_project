@@ -1,0 +1,225 @@
+[
+  {
+    "id": "cornell",
+    "title": "Cornell Box",
+    "kind": "参考场景",
+    "route": "/?hud=1",
+    "focus": "彩色墙面反弹光、移动物体、探针与烘焙分层",
+    "cameras": [],
+    "source": "src/widgets/world/cornellScene.ts",
+    "note": "未指定 scene 时的默认参考场景。",
+    "checks": "先用 split=baked 看反弹光，再对比 surfelGi=1。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/cornellScene.ts"
+  },
+  {
+    "id": "beach",
+    "title": "热带海滩",
+    "kind": "主场景",
+    "route": "/?scene=beach",
+    "focus": "浅水、沙地、棕榈、树皮、叶片透光、浪花",
+    "cameras": [
+      "shore",
+      "rocks",
+      "water",
+      "surf",
+      "eye",
+      "leaves",
+      "trunkLit",
+      "shrub",
+      "sunward",
+      "van"
+    ],
+    "source": "src/widgets/world/beachScene.ts",
+    "note": "已接入真实演示，使用 entities/water/index.ts 主场景水实现；固定源码缺少房车 GLB，展示设 van=0。",
+    "checks": "分别看 leaves、trunkLit 和 water，避免仅用远景判断材质。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/beachScene.ts"
+  },
+  {
+    "id": "forest",
+    "title": "针叶林与溪流",
+    "kind": "主场景",
+    "route": "/?scene=forest",
+    "focus": "自适应地形、程序化树木、群落阴影与溪流",
+    "cameras": [
+      "hero",
+      "wide",
+      "trail",
+      "stream",
+      "ledge",
+      "canopy",
+      "rim"
+    ],
+    "source": "src/widgets/world/forestScene.ts",
+    "note": "已接入真实演示，保留近远景植被；溪流为不透明波纹材质，区别于海滩浅水模拟。",
+    "checks": "对比 canopy、stream 与 rim，记录 TAA 是否闪烁。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/forestScene.ts"
+  },
+  {
+    "id": "corridor",
+    "title": "封闭走廊",
+    "kind": "参考场景",
+    "route": "/?scene=corridor",
+    "focus": "室内外探针分层、墙体漏光、地面与长椅接触",
+    "cameras": [
+      "hero",
+      "wide",
+      "bench",
+      "panels",
+      "floor",
+      "deep"
+    ],
+    "source": "src/widgets/world/corridorScene.ts",
+    "note": "可用 lmDensity=0.1 与 0.03 观察光照密度差异。",
+    "checks": "从 floor/bench 检查接触处，再用 leak=1 追踪阶段。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/corridorScene.ts"
+  },
+  {
+    "id": "corridor-lights",
+    "title": "走廊动态彩灯",
+    "kind": "专用实验",
+    "route": "/?scene=corridor-lights",
+    "focus": "三个移动彩灯、实时直接光和阴影",
+    "cameras": [
+      "hero",
+      "bench",
+      "deep"
+    ],
+    "source": "src/widgets/world/corridorLightsScene.ts",
+    "note": "静态照明设置与普通走廊不同，不能把两场景当作单参数 A/B。",
+    "checks": "暂停 lightMotion=0，分别控制每个灯的启用和强度。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/corridorLightsScene.ts"
+  },
+  {
+    "id": "midsee-village",
+    "title": "地中海村庄",
+    "kind": "开发中场景",
+    "route": "/?scene=midsee-village",
+    "focus": "台地建筑、钟楼、咖啡馆、海湾、船和植物",
+    "cameras": [
+      "front",
+      "side",
+      "rear",
+      "quay",
+      "roofs"
+    ],
+    "source": "src/widgets/world/midseeVillageScene.tsx",
+    "note": "作者标注开发中；本研究已将该完整场景接入上方真实演示，历史截图另行标明。",
+    "checks": "先选 front，再查看 quay/roofs；关注启动时间与光照页占用。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/midseeVillageScene.tsx"
+  },
+  {
+    "id": "village-light",
+    "title": "单栋房屋轻量夹具",
+    "kind": "专用实验",
+    "route": "/?scene=village-light",
+    "focus": "同一建筑材质与光照问题的低成本定位",
+    "cameras": [],
+    "source": "src/widgets/world/villageLightScene.tsx",
+    "note": "降低场景内容量，适合区分材质编译与全村几何成本。",
+    "checks": "配合 lodLab=1 和 bakedOnly=1 定位贴图、页表和补光。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/villageLightScene.tsx"
+  },
+  {
+    "id": "sky",
+    "title": "天空、大气与云",
+    "kind": "专用实验",
+    "route": "/?scene=sky&cam=objects",
+    "focus": "午间、黄金时刻、落日、暮光、云影与高空视角",
+    "cameras": [
+      "objects",
+      "sunward",
+      "zenith",
+      "horizon"
+    ],
+    "source": "src/widgets/world/skyLabScene.tsx",
+    "note": "太阳与反射可即时变化；静态间接光使用 GUI 的 bake light from this sky 更新。",
+    "checks": "对比 sunEl=45、10、2、-4；分别关闭 clouds 与 aerial。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/skyLabScene.tsx"
+  },
+  {
+    "id": "lod-scale",
+    "title": "光照 LOD 比例尺",
+    "kind": "专用实验",
+    "route": "/?scene=lod-scale&cam=overview",
+    "focus": "格栅细影、不同尺寸房屋、长墙、mip 与 tile 接缝",
+    "cameras": [
+      "overview",
+      "eye",
+      "grazing",
+      "glow",
+      "pergola",
+      "ladder",
+      "wall",
+      "far"
+    ],
+    "source": "src/widgets/world/lodScaleScene.tsx",
+    "note": "这是光照纹理 LOD 夹具，不是通用几何 LOD 系统。",
+    "checks": "lod=0 对比虚拟纹理，再用 vtPool=4 或 vtEvict=all 压缩工作池。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/lodScaleScene.tsx"
+  },
+  {
+    "id": "leak-room",
+    "title": "全封闭漏光房间",
+    "kind": "专用实验",
+    "route": "/?scene=leak-room&cam=contact",
+    "focus": "封闭室内应为零光照，开缝后应恢复真实光线",
+    "cameras": [
+      "contact",
+      "inside",
+      "floor",
+      "outside"
+    ],
+    "source": "src/widgets/world/leakRoomScene.ts",
+    "note": "gap 的单位是毫米；房间正确全黑不意味着贴图缺失。",
+    "checks": "比较 gap=0、1、20；使用 leak=1 逐阶段核对。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/leakRoomScene.ts"
+  },
+  {
+    "id": "water-pool",
+    "title": "物理水实验室 · 水池",
+    "kind": "独立实验室",
+    "route": "/labs/water/?scene=pool",
+    "focus": "折射、反射、焦散、体积散射与测试物体",
+    "cameras": [],
+    "source": "src/labs/water/main.ts",
+    "note": "调用 physicalWater.ts；catalog 声明了此路径，但固定树未找到对应 HTML 入口或路径接线，需先补接。",
+    "checks": "补齐入口后用红柱、水下石块和水上球观察光学路径。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/main.ts"
+  },
+  {
+    "id": "water-ocean",
+    "title": "物理水实验室 · 海面",
+    "kind": "独立实验室",
+    "route": "/labs/water/?scene=ocean",
+    "focus": "风浪频谱、FFT 微细节、较大振幅水面",
+    "cameras": [],
+    "source": "src/labs/water/main.ts",
+    "note": "海面有独立风速、水深和波幅设置；固定树未找到该实验室的 HTML 接线。",
+    "checks": "补接入口后逐项改变 wind，结合 FFT/反射诊断看响应。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/main.ts"
+  },
+  {
+    "id": "fiber-lab",
+    "title": "React Three Fiber 实验室",
+    "kind": "独立实验室",
+    "route": "/labs/fiber/",
+    "focus": "定制 R3F、React 19 与 WebGPU 场景接入",
+    "cameras": [],
+    "source": "src/labs/fiber/main.tsx",
+    "note": "固定版本缺少 vendor、部分包声明和对应 HTML 入口；此处为作者声明路径。",
+    "checks": "补齐入口、vendor/react-three-fiber 和 React 依赖后再启动。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/fiber/main.tsx"
+  },
+  {
+    "id": "pipeline-doc",
+    "title": "渲染管线技术阅读页",
+    "kind": "独立资料",
+    "route": "/pipeline",
+    "focus": "RDR2、Lumen、Alan Wake、Cyberpunk 的研究与本项目设计",
+    "cameras": [],
+    "source": "src/widgets/pipeline/PipelinePage.tsx",
+    "note": "有说明组件但未找到 /pipeline 接线；商业引擎技术讨论不自动计入本项目实现。",
+    "checks": "先补 src/app/pipeline.tsx 的页面入口，再分清技术比较与实际实现。",
+    "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/PipelinePage.tsx"
+  }
+]

@@ -1,0 +1,1725 @@
+[
+  {
+    "id": "pipeline-01",
+    "category": "pipeline",
+    "title": "WebGPU 渲染与计算",
+    "effect": "在浏览器中同时渲染场景并运行光照计算",
+    "mechanism": "WebGPURenderer、storage buffer 与 compute dispatch",
+    "availability": "主管线",
+    "boundary": "无 WebGL 降级；还需满足程序申请的设备上限",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "gputime=1",
+    "source": {
+      "path": "src/shared/render/renderer.ts",
+      "line": 63,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/renderer.ts#L63"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-02",
+    "category": "pipeline",
+    "title": "TSL 与 WGSL 着色器",
+    "effect": "材质、光照和计算过程可组合扩展",
+    "mechanism": "Three.js 节点表达式配合手写 WGSL 函数",
+    "availability": "主管线",
+    "boundary": "依赖 r182 及定制补丁，跨版本迁移需检查节点行为",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/gi/surfel/surfelIntegratePass.ts",
+      "line": 4,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelIntegratePass.ts#L4"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-03",
+    "category": "pipeline",
+    "title": "MRT 多缓冲输出",
+    "effect": "可以分别观察颜色、法线、速度和深度",
+    "mechanism": "一次场景通道写入多个渲染附件供后续步骤共享",
+    "availability": "主管线",
+    "boundary": "每个附件增加内存与带宽成本",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "split=normal",
+    "source": {
+      "path": "src/shared/render/frameGraph.ts",
+      "line": 192,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/frameGraph.ts#L192"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-04",
+    "category": "pipeline",
+    "title": "统一画面合成",
+    "effect": "间接光、反射、水面和后期按顺序组成最终画面",
+    "mechanism": "FrameGraph 组织渲染目标与节点链，变化时重建图",
+    "availability": "主管线",
+    "boundary": "这是项目内部帧流程，未提供通用引擎插件契约",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/render/frameGraph.ts",
+      "line": 99,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/frameGraph.ts#L99"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-05",
+    "category": "pipeline",
+    "title": "静态与动态几何分离",
+    "effect": "移动物体可参与部分遮挡和追踪",
+    "mechanism": "分别管理静态 BVH 与动态几何加速数据",
+    "availability": "主管线",
+    "boundary": "实时探针更新当前以静态几何为主，不能概括为任意动态 GI",
+    "scenes": [
+      "cornell",
+      "corridor-lights"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/gi/surfel/dynamicBvh.ts",
+      "line": 30,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/dynamicBvh.ts#L30"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-06",
+    "category": "pipeline",
+    "title": "实例化绘制与运动向量",
+    "effect": "树、花和建筑细节重复出现时降低对象组织成本",
+    "mechanism": "InstancedMesh、MultiInstances 与上一帧变换记录",
+    "availability": "按场景",
+    "boundary": "正确 TAA 还依赖定制 Three.js 的实例速度修复",
+    "scenes": [
+      "midsee-village",
+      "forest"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/fiber/MultiInstances.tsx",
+      "line": 5,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/MultiInstances.tsx#L5"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-07",
+    "category": "pipeline",
+    "title": "水面独立叠加通道",
+    "effect": "水可读取已画好的水底颜色与深度",
+    "mechanism": "Overlay 层在主体光照合成后绘制，屏幕纹理供水材质读取",
+    "availability": "按场景",
+    "boundary": "水的光学着色与主体 GI 存在专门的排除和接入规则",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/render/frameGraph.ts",
+      "line": 92,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/frameGraph.ts#L92"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "pipeline-08",
+    "category": "pipeline",
+    "title": "线性光照与统一输出转换",
+    "effect": "降低颜色重复转换和重复曝光造成的偏差",
+    "mechanism": "材质色彩空间、HDR 计算和末端 tone mapping 分开处理",
+    "availability": "主管线",
+    "boundary": "参考图与实测必须统一曝光、调色和输出转换",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "lookOutput=linear",
+    "source": {
+      "path": "src/shared/render/outputStage.ts",
+      "line": 12,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/outputStage.ts#L12"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-01",
+    "category": "gi",
+    "title": "Surfel 表面光照采样",
+    "effect": "阴影区域仍可获得环境与反弹光的层次",
+    "mechanism": "把表面离散为带位置、法线和辐照信息的小型采样单元",
+    "availability": "主管线",
+    "boundary": "采样密度和射线数量会影响启动时间与细节质量",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "sample=0.1",
+    "source": {
+      "path": "src/shared/gi/bake/lightmapSurfels.ts",
+      "line": 64,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightmapSurfels.ts#L64"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-02",
+    "category": "gi",
+    "title": "基于 BVH 的光线求交",
+    "effect": "采样光线能找到墙体、地面和其他表面",
+    "mechanism": "在 WebGPU 计算中遍历空间层级，避免逐个测试所有三角形",
+    "availability": "主管线",
+    "boundary": "计算着色器追踪不代表已接入硬件 RT 管线",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/gi/surfel/sceneBvh.ts",
+      "line": 14,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/sceneBvh.ts#L14"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-03",
+    "category": "gi",
+    "title": "间接光迭代与缓存",
+    "effect": "逐步累积表面之间的反弹照明",
+    "mechanism": "Surfel 积分器读取场景光源和已有辐照缓存，迭代更新",
+    "availability": "主管线",
+    "boundary": "依赖近似缓存及收敛过程，不是逐像素无偏路径追踪",
+    "scenes": [
+      "cornell"
+    ],
+    "parameters": "iters=64&rays=32",
+    "source": {
+      "path": "src/shared/gi/surfel/surfelIntegratePass.ts",
+      "line": 73,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelIntegratePass.ts#L73"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-04",
+    "category": "gi",
+    "title": "三维光照探针体积",
+    "effect": "没有光照 UV 的物体也能获得位置相关的环境补光",
+    "mechanism": "规则空间网格保存方向辐照，着色时对周边探针加权",
+    "availability": "主管线",
+    "boundary": "低密度探针不能替代所有表面细节；接收对象由材质规则选择",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "probeSpacing=2",
+    "source": {
+      "path": "src/shared/gi/probes/probeVolume.ts",
+      "line": 81,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeVolume.ts#L81"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-05",
+    "category": "gi",
+    "title": "DDGI 风格方向编码",
+    "effect": "物体朝向不同，接收的间接光也不同",
+    "mechanism": "探针以八面体贴图保存方向辐照及距离矩",
+    "availability": "主管线",
+    "boundary": "借鉴 DDGI 存储与采样，不等同于完整 RTXGI 产品",
+    "scenes": [
+      "cornell",
+      "corridor"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/gi/probes/probeVolume.ts",
+      "line": 77,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeVolume.ts#L77"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-06",
+    "category": "gi",
+    "title": "探针遮挡权重与偏移",
+    "effect": "减少隔着墙取得错误亮光",
+    "mechanism": "距离均值、二阶矩、Chebyshev 权重和法线/视线偏移",
+    "availability": "主管线",
+    "boundary": "属于漏光抑制近似；参数过大也会改变细节",
+    "scenes": [
+      "corridor",
+      "leak-room"
+    ],
+    "parameters": "probeVisibility=1",
+    "source": {
+      "path": "src/shared/gi/probes/probeVolume.ts",
+      "line": 282,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeVolume.ts#L282"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-07",
+    "category": "gi",
+    "title": "探针分类与重定位",
+    "effect": "降低落在实体内部的无效采样影响",
+    "mechanism": "追踪周边几何，为探针设置有效状态和位移",
+    "availability": "主管线",
+    "boundary": "复杂薄壁与边界仍需用漏光实验验证",
+    "scenes": [
+      "corridor",
+      "leak-room"
+    ],
+    "parameters": "probeClassify=1",
+    "source": {
+      "path": "src/shared/gi/probes/probeClassify.ts",
+      "line": 13,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeClassify.ts#L13"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-08",
+    "category": "gi",
+    "title": "室内外探针分层",
+    "effect": "室内物体优先使用合适的室内光照",
+    "mechanism": "根据室内容积标记探针和接收点的层掩码",
+    "availability": "按场景",
+    "boundary": "需场景提供 interiorVolumes，不会自动理解任意建筑室内",
+    "scenes": [
+      "corridor",
+      "corridor-lights"
+    ],
+    "parameters": "probeLayers=1",
+    "source": {
+      "path": "src/shared/gi/probes/probeLayers.ts",
+      "line": 4,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeLayers.ts#L4"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-09",
+    "category": "gi",
+    "title": "探针渐进实时更新",
+    "effect": "太阳改变后，探针补光可逐步跟随",
+    "mechanism": "保留探针方向 Surfel，按每帧射线预算刷新",
+    "availability": "可选",
+    "boundary": "probeLive 默认关闭；响应以秒收敛；不自动重算静态 Lightmap",
+    "scenes": [
+      "sky",
+      "cornell"
+    ],
+    "parameters": "probeLive=1&probeRayBudget=8192",
+    "source": {
+      "path": "src/shared/gi/probes/probeLive.ts",
+      "line": 42,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeLive.ts#L42"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "gi-10",
+    "category": "gi",
+    "title": "实时 Surfel GI 路径",
+    "effect": "研究按当前视角持续更新的间接光",
+    "mechanism": "每帧分配、积分并解析活动 Surfel，和静态烘焙路径并存",
+    "availability": "历史路径",
+    "boundary": "surfelGi 默认关闭；pipeline=legacy 是另一条旧管线入口",
+    "scenes": [
+      "cornell"
+    ],
+    "parameters": "surfelGi=1",
+    "source": {
+      "path": "src/features/render-pipeline/index.ts",
+      "line": 693,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/index.ts#L693"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-01",
+    "category": "lightmap",
+    "title": "自动分配光照 UV 与图表",
+    "effect": "建筑表面能对应到自己的光照贴图区域",
+    "mechanism": "按几何和表面特征拆 chart、打包到 atlas 页",
+    "availability": "主管线",
+    "boundary": "不等于支持所有导入模型；退化、复杂和实例化几何需检查",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "split=lightmap",
+    "source": {
+      "path": "src/shared/gi/bake/lightmapUv.ts",
+      "line": 5,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightmapUv.ts#L5"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-02",
+    "category": "lightmap",
+    "title": "按世界尺寸控制光照密度",
+    "effect": "近看墙面和阴影时可获得更细的照明纹理",
+    "mechanism": "以米/texel 指定目标密度，场景大时增加 atlas 页",
+    "availability": "主管线",
+    "boundary": "0.03 比 0.1 更细，内存和烘焙代价也更高",
+    "scenes": [
+      "corridor",
+      "midsee-village"
+    ],
+    "parameters": "lmDensity=0.05",
+    "source": {
+      "path": "src/features/render-pipeline/staticLight.ts",
+      "line": 26,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/staticLight.ts#L26"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-03",
+    "category": "lightmap",
+    "title": "稀疏采样与可见性传播",
+    "effect": "用较少 Surfel 覆盖更多贴图像素",
+    "mechanism": "按世界采样步距建点，再沿追踪得到的链接传播",
+    "availability": "主管线",
+    "boundary": "跨表面传播可能产生误差，项目配有漏光定位工具",
+    "scenes": [
+      "corridor",
+      "leak-room"
+    ],
+    "parameters": "sample=0.1&filterLinks=1",
+    "source": {
+      "path": "src/shared/gi/bake/filterLinks.ts",
+      "line": 16,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/filterLinks.ts#L16"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-04",
+    "category": "lightmap",
+    "title": "表面约束的填洞与去噪",
+    "effect": "降低烘焙噪点、空白与薄壁漏光",
+    "mechanism": "按表面归属、法线、可见性链接限制滤波和填充",
+    "availability": "主管线",
+    "boundary": "精度仍受射线数量和几何分辨率影响",
+    "scenes": [
+      "leak-room"
+    ],
+    "parameters": "leak=1",
+    "source": {
+      "path": "src/shared/gi/bake/holeFill.ts",
+      "line": 98,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/holeFill.ts#L98"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-05",
+    "category": "lightmap",
+    "title": "Chart 边缘扩张与隔离",
+    "effect": "降低 UV 接缝处的暗线和邻区串光",
+    "mechanism": "给每个图表单独填充边界 texel",
+    "availability": "主管线",
+    "boundary": "它处理纹理过滤边界，不会修复错误几何或错误 UV",
+    "scenes": [
+      "lod-scale"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/gi/bake/chartPadding.ts",
+      "line": 2,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/chartPadding.ts#L2"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-06",
+    "category": "lightmap",
+    "title": "烘焙结果持久化",
+    "effect": "重复打开场景时可跳过已有光照积分",
+    "mechanism": "二进制缓存与配套清单保存 atlas、Surfel 和探针",
+    "availability": "主管线",
+    "boundary": "写入流程依赖开发服务插件；不能假设静态托管可直接回写",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "bakeCache=0",
+    "source": {
+      "path": "src/shared/gi/bake/persistedBake.ts",
+      "line": 2,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/persistedBake.ts#L2"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-07",
+    "category": "lightmap",
+    "title": "光照来源与陈旧状态检查",
+    "effect": "修改环境后能知道缓存是否仍匹配",
+    "mechanism": "记录环境、太阳和传输设置的 provenance，再比较当前条件",
+    "availability": "主管线",
+    "boundary": "提示过期不会自动完成全场景重烘焙",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "bakeCache=0",
+    "source": {
+      "path": "src/shared/gi/bake/lightingProvenance.ts",
+      "line": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightingProvenance.ts#L3"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-08",
+    "category": "lightmap",
+    "title": "每个 Chart 独立 Mip 金字塔",
+    "effect": "远处读取较粗光照，近处保留细节",
+    "mechanism": "逐 chart 降采样并切成带边框的 tile",
+    "availability": "主管线",
+    "boundary": "独立金字塔用于隔离不同表面；不是完整材质虚拟纹理系统",
+    "scenes": [
+      "lod-scale"
+    ],
+    "parameters": "vtTile=64",
+    "source": {
+      "path": "src/shared/gi/lod/chartPyramids.ts",
+      "line": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/chartPyramids.ts#L3"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-09",
+    "category": "lightmap",
+    "title": "按可见需求驻留光照 Tile",
+    "effect": "有限 GPU 工作池服务当前镜头需要的光照细节",
+    "mechanism": "反馈通道收集请求，页表指向驻留页或同 chart 粗级 tail",
+    "availability": "主管线",
+    "boundary": "仍需保留完整数据的 CPU 内存，不是网络按需下载",
+    "scenes": [
+      "lod-scale",
+      "midsee-village"
+    ],
+    "parameters": "vtPool=16",
+    "source": {
+      "path": "src/shared/gi/lod/tileResidency.ts",
+      "line": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/tileResidency.ts#L3"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lightmap-10",
+    "category": "lightmap",
+    "title": "CPU 到 GPU 的分块上传",
+    "effect": "镜头变化时逐步送入需要的光照页",
+    "mechanism": "当前代码将半精度 tile 存在 tab 内存，通过 writeTexture 上传",
+    "availability": "主管线",
+    "boundary": "旧虚拟纹理文档还写着全量 GPU store，当前代码已前进；不承诺总内存恒定",
+    "scenes": [
+      "lod-scale"
+    ],
+    "parameters": "vtUploadKiB=1024",
+    "source": {
+      "path": "src/shared/gi/lod/tilePool.ts",
+      "line": 34,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/tilePool.ts#L34"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-01",
+    "category": "lighting",
+    "title": "太阳方向与强度控制",
+    "effect": "调整光照朝向、阴影方向与明暗",
+    "mechanism": "DirectionalLight 与太阳方位角、高度角控制",
+    "availability": "主管线",
+    "boundary": "静态间接光仍保留烘焙时条件，变化后应检查缓存状态",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "sunAz=-60&sunEl=10",
+    "source": {
+      "path": "src/features/render-pipeline/sun.ts",
+      "line": 124,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/sun.ts#L124"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-02",
+    "category": "lighting",
+    "title": "太阳能量从环境图估计",
+    "effect": "HDR 天空与直接太阳光更协调",
+    "mechanism": "从环境贴图提取太阳方向/能量供解析光源使用",
+    "availability": "按场景",
+    "boundary": "受环境图内容和场景主机配置影响",
+    "scenes": [
+      "beach",
+      "forest"
+    ],
+    "parameters": "sun=2",
+    "source": {
+      "path": "src/features/lighting-pipeline/sunFromEnvironment.ts",
+      "line": 17,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/lighting-pipeline/sunFromEnvironment.ts#L17"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-03",
+    "category": "lighting",
+    "title": "接触硬化软阴影",
+    "effect": "遮挡物附近阴影较硬，离开后更柔和",
+    "mechanism": "PCSS 风格遮挡搜索与半影滤波，太阳视直径参与计算",
+    "availability": "主管线",
+    "boundary": "基于阴影贴图的近似；受分辨率和滤波预算限制",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "shadowFilter=soft&sunDisc=0.533",
+    "source": {
+      "path": "src/shared/render/softSunShadow.ts",
+      "line": 38,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/softSunShadow.ts#L38"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-04",
+    "category": "lighting",
+    "title": "接收面修正与阴影范围适配",
+    "effect": "减少斜面条纹与阴影精度浪费",
+    "mechanism": "接收面导数补偿和相机范围拟合",
+    "availability": "可选",
+    "boundary": "shadowFit 默认关闭；偏移需要按场景验证",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "shadowFit=1&shadowFilter=receiverPlane",
+    "source": {
+      "path": "src/features/render-pipeline/sun.ts",
+      "line": 141,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/sun.ts#L141"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-05",
+    "category": "lighting",
+    "title": "移动彩色光源与阴影",
+    "effect": "走廊里彩灯移动，照明和阴影随之变化",
+    "mechanism": "专门场景逐帧更新多个解析光源",
+    "availability": "按场景",
+    "boundary": "演示动态直接光，不代表所有静态反弹光都实时更新",
+    "scenes": [
+      "corridor-lights"
+    ],
+    "parameters": "scene=corridor-lights&lightMotion=0",
+    "source": {
+      "path": "src/widgets/world/corridorLightsScene.ts",
+      "line": 6,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/corridorLightsScene.ts#L6"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-06",
+    "category": "lighting",
+    "title": "短射线接触遮蔽",
+    "effect": "墙脚、椅脚和物体接触更有重量感",
+    "mechanism": "对近距离几何发射短光线，只调制间接光",
+    "availability": "可选",
+    "boundary": "默认关闭；不能当作完整远距离阴影",
+    "scenes": [
+      "corridor"
+    ],
+    "parameters": "contact=1",
+    "source": {
+      "path": "src/shared/gi/contact/contactOcclusionPass.ts",
+      "line": 25,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/contact/contactOcclusionPass.ts#L25"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-07",
+    "category": "lighting",
+    "title": "场景射线反射",
+    "effect": "低粗糙度表面可反映屏幕外几何",
+    "mechanism": "根据 G-buffer 方向追踪静态/动态 BVH，并对命中点着色",
+    "availability": "主管线",
+    "boundary": "有最大粗糙度、射线节点预算和更新间隔",
+    "scenes": [
+      "cornell",
+      "sky"
+    ],
+    "parameters": "reflections=0",
+    "source": {
+      "path": "src/shared/gi/reflect/reflectionPass.ts",
+      "line": 44,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/reflectionPass.ts#L44"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-08",
+    "category": "lighting",
+    "title": "反射降噪与粗糙表面补充",
+    "effect": "降低反射噪点并给较粗表面环境响应",
+    "mechanism": "空间降噪，以及光照探针方向采样作为粗糙反射补充",
+    "availability": "主管线",
+    "boundary": "探针补充是近似，不等同于逐像素精确镜面反射",
+    "scenes": [
+      "cornell"
+    ],
+    "parameters": "probeSpecular=0",
+    "source": {
+      "path": "src/features/render-pipeline/index.ts",
+      "line": 697,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/index.ts#L697"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "lighting-09",
+    "category": "lighting",
+    "title": "反射缓存与局部代理体积",
+    "effect": "以分时更新的反射探针研究可控成本反射",
+    "mechanism": "捕获、过滤、发布、版本状态和盒/球代理体积",
+    "availability": "可选",
+    "boundary": "通过 reflections=cached 选择；当前默认仍走另一条反射路径",
+    "scenes": [
+      "sky",
+      "cornell"
+    ],
+    "parameters": "reflections=cached",
+    "source": {
+      "path": "src/shared/gi/reflect/cache/reflectionCache.ts",
+      "line": 50,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionCache.ts#L50"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-01",
+    "category": "water",
+    "title": "浅水高度与流速求解",
+    "effect": "浪接近岸边和障碍物时发生变化",
+    "mechanism": "二维浅水方程在高度/流速网格上推进",
+    "availability": "按场景",
+    "boundary": "高度场流体，不是任意三维体积流体或完整海洋数值模型",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/shallowWater.ts",
+      "line": 46,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/shallowWater.ts#L46"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-02",
+    "category": "water",
+    "title": "水底地形与障碍物采样",
+    "effect": "水深和岸线跟随底部及障碍形状",
+    "mechanism": "将水底与障碍几何烘焙为 bathymetry 高度数据",
+    "availability": "按场景",
+    "boundary": "精度受格点尺寸与几何覆盖限制",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/bathymetry.ts",
+      "line": 14,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/bathymetry.ts#L14"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-03",
+    "category": "water",
+    "title": "水面折射与水下成像",
+    "effect": "透过水面看见位置偏移的水底",
+    "mechanism": "主场景重建深度和折射路径，实验室进一步追踪水下几何",
+    "availability": "按场景",
+    "boundary": "主场景与实验室算法不同，不能用实验室能力概括所有水面",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/index.ts",
+      "line": 550,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/index.ts#L550"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-04",
+    "category": "water",
+    "title": "随路径长度的吸收与散射",
+    "effect": "浅水透明、深水更有颜色和厚度",
+    "mechanism": "逐 RGB 通道 Beer–Lambert 衰减与散射项",
+    "availability": "按场景",
+    "boundary": "颜色由光学系数、路径和底色共同决定",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/index.ts",
+      "line": 210,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/index.ts#L210"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-05",
+    "category": "water",
+    "title": "Fresnel 天空反射与太阳闪光",
+    "effect": "掠视时更像镜子，顺光看到水面亮点",
+    "mechanism": "Fresnel 混合天空与透射，结合太阳 GGX 响应",
+    "availability": "按场景",
+    "boundary": "主场景天空反射与实验室的几何反射需要分别理解",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/index.ts",
+      "line": 704,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/index.ts#L704"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-06",
+    "category": "water",
+    "title": "水底焦散图案",
+    "effect": "水下沙地出现流动的明亮纹理",
+    "mechanism": "主水面材质生成并调制焦散近似",
+    "availability": "按场景",
+    "boundary": "主场景焦散是视觉近似，不能宣称全物理光子传输",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/index.ts",
+      "line": 73,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/index.ts#L73"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-07",
+    "category": "water",
+    "title": "持续泡沫场与湿沙",
+    "effect": "泡沫随水流漂移并逐渐消散，岸边留下湿润痕迹",
+    "mechanism": "Ping-pong 纹理保存泡沫、湿度和撞击源",
+    "availability": "按场景",
+    "boundary": "需要多帧状态推进；冻结模拟后不再按真实时间演变",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/index.ts",
+      "line": 365,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/index.ts#L365"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-08",
+    "category": "water",
+    "title": "浪花与喷溅粒子",
+    "effect": "岸线或撞击处出现抛出的细小水滴",
+    "mechanism": "根据水面状态和泡沫源驱动喷溅粒子",
+    "availability": "按场景",
+    "boundary": "视觉粒子表现，不是每滴水都参与完整流体求解",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "spray=0",
+    "source": {
+      "path": "src/entities/water/spray.ts",
+      "line": 61,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/spray.ts#L61"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-09",
+    "category": "water",
+    "title": "独立 Worker 水模拟",
+    "effect": "重水模拟可从页面主线程移走",
+    "mechanism": "Worker 使用自己的 WebGPU device，异步传回状态",
+    "availability": "按场景",
+    "boundary": "线程与 GPU 数据传递仍有开销，需要目标设备实测",
+    "scenes": [
+      "beach",
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/simHost.ts",
+      "line": 22,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/simHost.ts#L22"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-10",
+    "category": "water",
+    "title": "漂浮球交互样例",
+    "effect": "球会随局部水高与斜率浮动",
+    "mechanism": "独立 Worker 计算示例球受力，主线程应用姿态",
+    "availability": "按场景",
+    "boundary": "是特定物体样例，不能视为通用刚体物理引擎",
+    "scenes": [
+      "beach"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/ball/index.ts",
+      "line": 9,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/ball/index.ts#L9"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-11",
+    "category": "water",
+    "title": "风浪频谱与 FFT 微细节",
+    "effect": "独立水实验室里可观察多尺度海面起伏",
+    "mechanism": "方向频谱与波分量控制几何，逆 FFT 产生细尺度表面场",
+    "availability": "实验室",
+    "boundary": "通过 labs/water 的 physicalWater 路径接入，主场景仍使用另一套水入口",
+    "scenes": [
+      "water-ocean"
+    ],
+    "parameters": "wind=8",
+    "source": {
+      "path": "src/entities/water/physicalWater.ts",
+      "line": 162,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/physicalWater.ts#L162"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-12",
+    "category": "water",
+    "title": "几何反射与波面追踪",
+    "effect": "独立实验中水面可反射测试物体",
+    "mechanism": "平面反射、波面反射通道和表面射线求交共同工作",
+    "availability": "实验室",
+    "boundary": "代价与近似需要单独验证；不能推断所有主场景已使用",
+    "scenes": [
+      "water-pool",
+      "water-ocean"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/water/physicalWater.ts",
+      "line": 20,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/physicalWater.ts#L20"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "water-13",
+    "category": "water",
+    "title": "水体体积光与光学诊断",
+    "effect": "实验室可单独查看水下散射与光线路径",
+    "mechanism": "水体射线步进、表面交点和多种诊断视图",
+    "availability": "实验室",
+    "boundary": "属于独立光学研究模块，未完成跨设备验收",
+    "scenes": [
+      "water-pool"
+    ],
+    "parameters": "waterInspect=1",
+    "source": {
+      "path": "src/entities/water/volumeLight.ts",
+      "line": 17,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/volumeLight.ts#L17"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-01",
+    "category": "nature",
+    "title": "叶片生化光学",
+    "effect": "不同叶片具有不同反射色与透射色",
+    "mechanism": "PROSPECT 风格板层模型，把色素/结构参数转换为光谱再转 RGB",
+    "availability": "按场景",
+    "boundary": "是渲染模型实现，未完成植物实验数据拟合验证",
+    "scenes": [
+      "beach"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/foliage/leafOptics.ts",
+      "line": 267,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/foliage/leafOptics.ts#L267"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-02",
+    "category": "nature",
+    "title": "薄叶透光与表面反光",
+    "effect": "逆光时叶片发亮，正面保留表面光泽",
+    "mechanism": "薄叶 BSDF、方向透射和 GGX 角质层响应",
+    "availability": "按场景",
+    "boundary": "屏幕合成、光线命中和叶材质的透射路径并不完全相同",
+    "scenes": [
+      "beach",
+      "forest"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/render/foliage/leafMaterial.ts",
+      "line": 206,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/foliage/leafMaterial.ts#L206"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-03",
+    "category": "nature",
+    "title": "程序化叶脉与微表面",
+    "effect": "近看叶片有脉络凹凸与光泽差异",
+    "mechanism": "在叶片局部空间生成表面纹理和光学变化",
+    "availability": "按场景",
+    "boundary": "细节表达取决于相机距离、纹理分辨率和光照",
+    "scenes": [
+      "beach"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/foliage/leafSurface.ts",
+      "line": 25,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/foliage/leafSurface.ts#L25"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-04",
+    "category": "nature",
+    "title": "程序化棕榈与树干",
+    "effect": "形成叶冠、环状叶痕、裂缝和风化细节",
+    "mechanism": "几何构建结合统一高度场导出的颜色、法线与粗糙度",
+    "availability": "按场景",
+    "boundary": "形体是程序化资产，不是通用植物扫描或建模编辑器",
+    "scenes": [
+      "beach"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/palm/trunkSurface.ts",
+      "line": 32,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/palm/trunkSurface.ts#L32"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-05",
+    "category": "nature",
+    "title": "针叶树与灌木生成",
+    "effect": "森林里可布置多种树形和灌木层次",
+    "mechanism": "ez-tree、分枝生长、针束和实例化几何",
+    "availability": "按场景",
+    "boundary": "不同植物走不同生成模块，参数并非统一编辑器",
+    "scenes": [
+      "forest"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/conifer/index.ts",
+      "line": 11,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/conifer/index.ts#L11"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-06",
+    "category": "nature",
+    "title": "风动植被与顶点运动",
+    "effect": "叶片随风摆动，TAA 可跟随形变",
+    "mechanism": "顶点位移与前后帧运动记录组合",
+    "availability": "按场景",
+    "boundary": "自定义形变必须同步速度，否则可能出现拖影和闪烁",
+    "scenes": [
+      "beach",
+      "forest"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/render/vertexMotion.ts",
+      "line": 8,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/vertexMotion.ts#L8"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-07",
+    "category": "nature",
+    "title": "多层沙地与湿润过渡",
+    "effect": "干沙、湿沙、贝壳和风纹自然交替",
+    "mechanism": "按地形条件混合贴图、法线、粗糙度和层间细节",
+    "availability": "按场景",
+    "boundary": "部分贴图来自上游资源，复用需逐项确认素材权利",
+    "scenes": [
+      "beach"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/island/sandMaterial.ts",
+      "line": 25,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/sandMaterial.ts#L25"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-08",
+    "category": "nature",
+    "title": "抗重复地形表面采样",
+    "effect": "大面积地面降低明显的平铺重复",
+    "mechanism": "分层表面、分块噪声与变化采样",
+    "availability": "按场景",
+    "boundary": "属于材质采样方法，不包含完整地形编辑与植被散布工具",
+    "scenes": [
+      "beach",
+      "forest"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/render/terrain/layerSampler.ts",
+      "line": 29,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/terrain/layerSampler.ts#L29"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-09",
+    "category": "nature",
+    "title": "自适应地形与程序化岩石",
+    "effect": "森林与海岛有起伏、岩壁、石块和溪流",
+    "mechanism": "高度场、局部自适应网格和程序化岩石构建",
+    "availability": "按场景",
+    "boundary": "场景专用的建模代码，不是通用开放世界流送系统",
+    "scenes": [
+      "forest",
+      "beach"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/grove/adaptiveMesh.ts",
+      "line": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/adaptiveMesh.ts#L3"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "nature-10",
+    "category": "nature",
+    "title": "村庄建筑与陈设组件",
+    "effect": "台地房屋、钟楼、咖啡馆、船和植物可组合成场景",
+    "mechanism": "多个 React 预制组件共享材质和实例化几何",
+    "availability": "按场景",
+    "boundary": "村庄标注开发中；组件运行还依赖未打包的 R3F 定制源码",
+    "scenes": [
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/entities/village/VillagePrefab.tsx",
+      "line": 28,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/VillagePrefab.tsx#L28"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-01",
+    "category": "sky",
+    "title": "物理大气与天空 LUT",
+    "effect": "天空随太阳高度和观察高度改变颜色",
+    "mechanism": "计算透射、多次散射和天空视图查找表",
+    "availability": "按场景",
+    "boundary": "默认是否开启由场景是否提供 sky 决定",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "scene=sky",
+    "source": {
+      "path": "src/shared/render/sky/atmosphereLuts.ts",
+      "line": 51,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/atmosphereLuts.ts#L51"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-02",
+    "category": "sky",
+    "title": "Rayleigh 与 Mie 散射",
+    "effect": "出现蓝天、暖色低太阳和近太阳泛白",
+    "mechanism": "空气与气溶胶散射系数、相函数和光线积分",
+    "availability": "按场景",
+    "boundary": "参数化地球大气模型，未宣称天文或气象计算精度",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "sunEl=2",
+    "source": {
+      "path": "src/shared/render/sky/scatteringMarch.ts",
+      "line": 11,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/scatteringMarch.ts#L11"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-03",
+    "category": "sky",
+    "title": "空气透视",
+    "effect": "远处物体对比减弱并向天空颜色融合",
+    "mechanism": "沿视线估算空气透射与入射散射",
+    "availability": "按场景",
+    "boundary": "效果强度可以艺术放大；aerialScale 不是实际距离测量",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "aerialScale=400",
+    "source": {
+      "path": "src/shared/render/sky/aerialPerspective.ts",
+      "line": 36,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/aerialPerspective.ts#L36"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-04",
+    "category": "sky",
+    "title": "体积云与云层光照",
+    "effect": "能看到厚薄不同、具有内部明暗的云",
+    "mechanism": "程序化密度、射线步进和云层光照采样",
+    "availability": "按场景",
+    "boundary": "属于有限云层模型，分辨率和步数影响细节与耗时",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "cloudCoverage=0.55",
+    "source": {
+      "path": "src/shared/render/sky/cloudLayer.ts",
+      "line": 46,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudLayer.ts#L46"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-05",
+    "category": "sky",
+    "title": "移动云影",
+    "effect": "地面与场景表面随云移动出现遮光变化",
+    "mechanism": "云密度生成太阳透射图，作用于直接光",
+    "availability": "按场景",
+    "boundary": "烘焙的静态间接光不会跟每一帧云影完整重算",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "clouds=1",
+    "source": {
+      "path": "src/shared/render/sky/cloudShadowMap.ts",
+      "line": 24,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudShadowMap.ts#L24"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-06",
+    "category": "sky",
+    "title": "天空作为环境照明与反射来源",
+    "effect": "天空变化能传递到环境反射",
+    "mechanism": "生成天空环境纹理并接入渲染与烘焙来源",
+    "availability": "按场景",
+    "boundary": "需要更新静态间接光时仍须明确发起重烘焙",
+    "scenes": [
+      "sky"
+    ],
+    "parameters": "skyEnvironment=1",
+    "source": {
+      "path": "src/shared/render/sky/skyEnvironment.ts",
+      "line": 27,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/skyEnvironment.ts#L27"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "sky-07",
+    "category": "sky",
+    "title": "Froxel 体积雾",
+    "effect": "光穿过有密度变化的空气，远景产生空间层次",
+    "mechanism": "视锥体素保存散射/透射，沿视线合成并做时间积累",
+    "availability": "按场景",
+    "boundary": "不同场景可默认关闭；不是实体烟火流体模拟",
+    "scenes": [
+      "beach",
+      "forest"
+    ],
+    "parameters": "fog=1",
+    "source": {
+      "path": "src/shared/render/atmosphere/volumetricFog.ts",
+      "line": 44,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/atmosphere/volumetricFog.ts#L44"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-01",
+    "category": "post",
+    "title": "TAA 时间抗锯齿",
+    "effect": "减少几何边缘、植被和高光的闪烁",
+    "mechanism": "相机抖动、速度重投影、历史裁剪与累积",
+    "availability": "主管线",
+    "boundary": "依赖准确运动向量；快速运动和遮挡变化仍有拖影风险",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "aa=taa",
+    "source": {
+      "path": "src/shared/render/temporalAA.ts",
+      "line": 120,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/temporalAA.ts#L120"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-02",
+    "category": "post",
+    "title": "FXAA 与关闭抗锯齿对照",
+    "effect": "可对比单帧平滑与原始像素边缘",
+    "mechanism": "在 TAA、FXAA 和 none 三种模式间选择",
+    "availability": "可选",
+    "boundary": "用于成本/画质对照，不承诺每种模式质量一致",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "aa=fxaa",
+    "source": {
+      "path": "src/shared/render/frameGraph.ts",
+      "line": 28,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/frameGraph.ts#L28"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-03",
+    "category": "post",
+    "title": "自动曝光与手动曝光",
+    "effect": "从暗处看向亮处时逐步适应亮度",
+    "mechanism": "测光、时间适应、手动曝光与曝光补偿分开控制",
+    "availability": "主管线",
+    "boundary": "截图比较需等适应稳定或固定曝光",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "exposure=1&exposureEV=-1",
+    "source": {
+      "path": "src/shared/render/exposure.ts",
+      "line": 24,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/exposure.ts#L24"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-04",
+    "category": "post",
+    "title": "艺术 Look 调色",
+    "effect": "控制对比、饱和度、暗部和色彩平衡",
+    "mechanism": "在正确阶段应用艺术调整，部分参数单独作用于间接光",
+    "availability": "主管线",
+    "boundary": "美术增益会改变物理响应；并非所有旋钮都是末端后期",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "look=0&indirectEV=1",
+    "source": {
+      "path": "src/shared/render/look.ts",
+      "line": 74,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/look.ts#L74"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-05",
+    "category": "post",
+    "title": "Neutral、AgX 与线性输出",
+    "effect": "同一 HDR 场景可采用不同高光压缩方式",
+    "mechanism": "选择末端输出转换，避免重复 tone mapping",
+    "availability": "主管线",
+    "boundary": "线性输出主要用于诊断，不代表可直接和显示图比较",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "lookOutput=agx",
+    "source": {
+      "path": "src/shared/render/look.ts",
+      "line": 37,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/look.ts#L37"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-06",
+    "category": "post",
+    "title": "镜头眩光与胶片颗粒",
+    "effect": "高亮向邻域扩散，画面带少量颗粒质感",
+    "mechanism": "眩光扩散合成，tone mapping 后叠加显示空间噪声",
+    "availability": "按场景",
+    "boundary": "截图比较应关闭颗粒；眩光不是完整镜头光学仿真",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "glare=0&grain=0",
+    "source": {
+      "path": "src/features/render-pipeline/postStages.ts",
+      "line": 34,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/postStages.ts#L34"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-07",
+    "category": "post",
+    "title": "速度驱动运动模糊",
+    "effect": "相机或物体运动时出现随方向的拖曳",
+    "mechanism": "根据运动向量、快门角度和积分时间采样",
+    "availability": "可选",
+    "boundary": "默认关闭；开启不等于自动得到准确摄影曝光",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "motionBlur=1&shutter=0.5",
+    "source": {
+      "path": "src/shared/render/motionBlur.ts",
+      "line": 50,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/motionBlur.ts#L50"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "post-08",
+    "category": "post",
+    "title": "摄影机与镜头预设",
+    "effect": "不同传感器与焦距改变取景范围",
+    "mechanism": "使用 ALEXA、VENICE、IMAX 等参数预设设置 FOV 和快门",
+    "availability": "可选",
+    "boundary": "预设不是认证相机模拟；代码没有完整景深、镜片像差与传感器仿真",
+    "scenes": [
+      "midsee-village"
+    ],
+    "parameters": "cine=alexa35-32",
+    "source": {
+      "path": "src/features/render-pipeline/cineCamera.ts",
+      "line": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/cineCamera.ts#L3"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-01",
+    "category": "tools",
+    "title": "左右分屏查看中间层",
+    "effect": "直接对照最终画面和光照/法线等缓冲",
+    "mechanism": "SplitView 在同一视角输出所选中间结果",
+    "availability": "可选",
+    "boundary": "分屏是诊断结果，不是不同渲染引擎的画质排名",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "split=baked",
+    "source": {
+      "path": "src/shared/render/frameGraph.ts",
+      "line": 59,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/frameGraph.ts#L59"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-02",
+    "category": "tools",
+    "title": "漏光阶段追踪",
+    "effect": "定位烘焙在哪一步把黑处变亮",
+    "mechanism": "保存原始、去噪、填洞、padding 和发布阶段的数据",
+    "availability": "可选",
+    "boundary": "leak=1 会改变缓存与捕获流程，应与基线分开测量",
+    "scenes": [
+      "leak-room",
+      "corridor"
+    ],
+    "parameters": "leak=1&split=leak",
+    "source": {
+      "path": "src/shared/gi/bake/leakStages.ts",
+      "line": 4,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/leakStages.ts#L4"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-03",
+    "category": "tools",
+    "title": "封闭房间与毫米级开缝标尺",
+    "effect": "用本应全黑的室内检查漏光，再打开真实缝隙",
+    "mechanism": "专门几何夹具和 gap 参数建立可解释参照",
+    "availability": "按场景",
+    "boundary": "几何标尺是测试场景，仍需检查追踪和采样设置",
+    "scenes": [
+      "leak-room"
+    ],
+    "parameters": "scene=leak-room&gap=1",
+    "source": {
+      "path": "src/widgets/world/leakRoomScene.ts",
+      "line": 7,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/leakRoomScene.ts#L7"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-04",
+    "category": "tools",
+    "title": "光照 Tile 驻留实验室",
+    "effect": "同时看场景与实际 GPU 光照工作池",
+    "mechanism": "LOD lab 显示 tile、mip、占用和相关参数",
+    "availability": "可选",
+    "boundary": "这是光照缓存调试，不是通用模型 LOD 预览器",
+    "scenes": [
+      "lod-scale",
+      "midsee-village"
+    ],
+    "parameters": "lodLab=1",
+    "source": {
+      "path": "src/widgets/lod-lab/index.ts",
+      "line": 14,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/lod-lab/index.ts#L14"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-05",
+    "category": "tools",
+    "title": "GPU 通道计时与绘制统计",
+    "effect": "知道时间花在何处、哪些对象被重复绘制",
+    "mechanism": "可选 timestamp queries、每通道审计和 draw count hooks",
+    "availability": "可选",
+    "boundary": "计时本身有开销；不同 CPU/GPU 列不能混当总帧时间",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "gputime=1",
+    "source": {
+      "path": "src/features/render-pipeline/audit.ts",
+      "line": 37,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/audit.ts#L37"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-06",
+    "category": "tools",
+    "title": "CPU 帧循环与启动阶段诊断",
+    "effect": "区分构建场景、烘焙、编译和首帧瓶颈",
+    "mechanism": "bootStage、动画循环计时、作者的启动检查脚本",
+    "availability": "可选",
+    "boundary": "作者历史数据不直接代表当前机器或发布构建",
+    "scenes": [
+      "midsee-village"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/ui/bootProgress.ts",
+      "line": 1,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/ui/bootProgress.ts#L1"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-07",
+    "category": "tools",
+    "title": "可重复相机与冻结画面",
+    "effect": "相同机位比较参数前后的差别",
+    "mechanism": "场景相机预设、still 参数与截图脚本",
+    "availability": "可选",
+    "boundary": "仍需关闭颗粒、固定曝光并处理 TAA 收敛",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "still=1&grain=0&aa=none",
+    "source": {
+      "path": "src/app/home/catalog.ts",
+      "line": 194,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/home/catalog.ts#L194"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-08",
+    "category": "tools",
+    "title": "浏览器自动检查脚本",
+    "effect": "为反射、TAA、软阴影和水模拟提供回归入口",
+    "mechanism": "Playwright 打开参数化场景、读取诊断钩子并截图比较",
+    "availability": "可选",
+    "boundary": "脚本存在不表示本次已全部运行，部分脚本引用缺失资源",
+    "scenes": [
+      "water-pool"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "scripts/check-water-sim.mjs",
+      "line": 32,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-water-sim.mjs#L32"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-09",
+    "category": "tools",
+    "title": "GUI 设置与研究配置",
+    "effect": "保存每个场景的参数组合，恢复研究视角",
+    "mechanism": "lil-gui 控制面板配合开发服务器设置插件",
+    "availability": "按场景",
+    "boundary": "增加查询参数可能绕过保存的配置，比较前须统一来源",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "hud=0",
+    "source": {
+      "path": "src/app/guiSettings.ts",
+      "line": 8,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/guiSettings.ts#L8"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "tools-10",
+    "category": "tools",
+    "title": "渲染技术阅读页",
+    "effect": "比较 RDR2、Lumen 等管线的取舍",
+    "mechanism": "独立静态说明页组织作者技术研究",
+    "availability": "独立资料",
+    "boundary": "是研究资料，提及的商业引擎能力不等于本项目已实现",
+    "scenes": [
+      "pipeline-doc"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/widgets/pipeline/PipelinePage.tsx",
+      "line": 12,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/PipelinePage.tsx#L12"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "integration-01",
+    "category": "integration",
+    "title": "可替换场景主机接口",
+    "effect": "把不同场景插入同一套光照与渲染流程",
+    "mechanism": "SceneHost 交付 scene、camera、sun、更新函数和可选设置",
+    "availability": "主管线",
+    "boundary": "接入新场景仍需标记静态性、光照接收和室内容积",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/features/render-pipeline/host.ts",
+      "line": 11,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/host.ts#L11"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "integration-02",
+    "category": "integration",
+    "title": "React Three Fiber 场景组件",
+    "effect": "以组件描述建筑、岩石和其他预制体",
+    "mechanism": "自定义 scene root、StaticGroup 和 MultiInstances 连接 WebGPU 场景",
+    "availability": "集成待补",
+    "boundary": "定制 R3F vendor 和部分 React 依赖未随固定版本完整提交",
+    "scenes": [
+      "midsee-village",
+      "fiber-lab"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "src/shared/fiber/sceneRoot.tsx",
+      "line": 20,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/sceneRoot.tsx#L20"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "integration-03",
+    "category": "integration",
+    "title": "Three.js 定制修复说明",
+    "effect": "改善实例 TAA 稳定性和部分 CPU 提交开销",
+    "mechanism": "r182 分支回移运动向量修复，并维护影子材质等补丁",
+    "availability": "集成待补",
+    "boundary": "文档记录了依赖，但 vendor/three 不在本库树中",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "",
+    "source": {
+      "path": "docs/lessons-three-fork.md",
+      "line": 15,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-three-fork.md#L15"
+    },
+    "verification": "source_review"
+  },
+  {
+    "id": "integration-04",
+    "category": "integration",
+    "title": "参数化场景与相机接入",
+    "effect": "同一应用可以选择不同场景与观察配置",
+    "mechanism": "URL 查询选择主场景，各场景读取自己的 cam 等参数",
+    "availability": "按场景",
+    "boundary": "不同场景支持的参数不同；独立实验室路径仍需补入口",
+    "scenes": [
+      "all"
+    ],
+    "parameters": "scene=beach",
+    "source": {
+      "path": "src/app/main.ts",
+      "line": 83,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/main.ts#L83"
+    },
+    "verification": "source_review"
+  }
+]

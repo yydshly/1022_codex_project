@@ -25,6 +25,13 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Build four pinned WebGPU scene demos
+        run: |
+          python projects/009-webgpu-render-pipeline/scripts/setup_runtime.py
+          python projects/009-webgpu-render-pipeline/scripts/build_runtime.py
       - name: Validate catalog and generated shader sources
         run: |
           python scripts/project_catalog.py check
@@ -43,6 +50,9 @@ jobs:
           python projects/005-scene-card-studio/scripts/verify_web.py
           python projects/007-dr-aria/scripts/package_web.py
           python projects/007-dr-aria/scripts/package_web.py --check
+          python projects/009-webgpu-render-pipeline/scripts/package_web.py
+          python projects/009-webgpu-render-pipeline/scripts/package_web.py --check
+          python projects/009-webgpu-render-pipeline/scripts/verify_structure.py
           python scripts/build_site.py
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5

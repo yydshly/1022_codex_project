@@ -1,0 +1,5 @@
+# Published copies are rebuilt from canonical research files by package_web.py.
+web/assets/
+web/docs/
+web/downloads/
+web/live/

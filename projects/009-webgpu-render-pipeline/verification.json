@@ -1,0 +1,318 @@
+{
+  "scope": "research_atlas_with_four_pinned_webgpu_scene_profiles",
+  "completed_on": "2026-10-22",
+  "upstream_commit": "ca576b601bf84527102f1768372aa8cd96a3c55a",
+  "upstream_execution": "cornell_complete_village_beach_without_van_forest_profiles_passed_with_documented_sampler_guard",
+  "upstream_performance": "not_measured",
+  "deployment": "not_requested",
+  "research": {
+    "source_text_files": 334,
+    "capability_records": 89,
+    "categories": 10,
+    "scene_and_document_entries": 14,
+    "parameter_names": 163,
+    "source_anchors": "verified_against_pinned_source",
+    "media": "original_bytes_sha256_verified"
+  },
+  "browser": {
+    "engine": "Codex in-app Chromium",
+    "status": "passed",
+    "default_viewport_width": 1280,
+    "responsive_widths": [
+      375,
+      768,
+      1280
+    ],
+    "horizontal_overflow": false,
+    "broken_loaded_images": 0,
+    "console_errors_and_warnings": 0,
+    "checks": [
+      "89 cards / 10 groups / 14 scene entries load",
+      "FFT search returns one entry",
+      "FFT entry says independent laboratory and links fixed line 162",
+      "Escape closes capability dialog",
+      "water category returns 13 entries",
+      "water + laboratory filter returns 3 entries",
+      "unmatched query shows empty state",
+      "reset restores 89 entries",
+      "pipeline step 06 changes explanation",
+      "beach route clipboard equals /?scene=beach",
+      "probeLive parameter search returns 1 / 163",
+      "concept image modal labels it non-runtime",
+      "image Escape closes modal",
+      "375px details fit without internal horizontal overflow",
+      "768px tablet has no page overflow",
+      "numbered repository prefix loads 89 cards and 14 entries",
+      "ZIP download control triggers without console errors"
+    ],
+    "scope": "Historical static research-page checks; see runtime/verification.json for current WebGPU scene checks"
+  },
+  "preview": {
+    "direct": "http://127.0.0.1:8049/",
+    "numbered_prefix": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/",
+    "http_file_verification": "passed",
+    "http_checks": [
+      {
+        "base": "http://127.0.0.1:8049/",
+        "files": 116,
+        "status": 200,
+        "byte_equal": true
+      },
+      {
+        "base": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/",
+        "files": 116,
+        "status": 200,
+        "byte_equal": true
+      }
+    ],
+    "numbered_prefix_runtime": "passed_forest_first_frame_and_canopy_controls_sequential_single_tab",
+    "delivery": "One-image overview visible at http://127.0.0.1:8049/?scene=beach#overview; WebGPU rendering remains available on demand",
+    "previous_numbered_prefix_runtime": "Village-stage concurrent test failed; retained in historical runtime record"
+  },
+  "screenshots": [
+    {
+      "path": "assets/study-desktop.png",
+      "sha256": "23484ed2bf048b5699402118e6d213beefb6805553d0864cdbfc870deac515c8",
+      "meaning": "research_page_layout_only"
+    },
+    {
+      "path": "assets/study-mobile.png",
+      "sha256": "d31eac0f3980891de2dc7d5073e44f46cbbb656a0e9303512d59f264be186bd3",
+      "meaning": "research_page_layout_only"
+    }
+  ],
+  "limits": [
+    "Only Cornell Box, complete midsee-village, beach van=0 and forest with documented profiles and sampler guard ran",
+    "No acceptance of all 89 capabilities or other scenes/labs",
+    "No cross-device FPS/quality benchmark",
+    "No deployment or git commit/push"
+  ],
+  "catalog_check": "passed_9_projects",
+  "explanation_update": {
+    "completed_on": "2026-10-22",
+    "scope": "plain_language_teaching_material_only",
+    "canonical_source": "explain.json",
+    "generated_outputs": [
+      "PRINCIPLES-AND-AI.md",
+      "web/explain-data.js"
+    ],
+    "counts": {
+      "light_steps": 4,
+      "algorithm_groups": 9,
+      "algorithm_source_links": 24,
+      "comparison_rows": 7,
+      "house_scenarios": 3,
+      "original_new_diagrams": 2
+    },
+    "browser": {
+      "status": "passed",
+      "widths": [
+        375,
+        768,
+        1280
+      ],
+      "horizontal_page_overflow": false,
+      "console_errors_and_warnings": 0,
+      "broken_loaded_images": 0,
+      "checks": [
+        "All four light steps change explanation",
+        "Tab preserves step focus and Enter selects next step",
+        "All nine algorithm disclosures open and link pinned source",
+        "All three house scenarios change answers",
+        "Seven comparison rows adapt to narrow screen",
+        "Three model meanings expand",
+        "Both diagrams open in modal and Escape closes it",
+        "Mobile diagram region scrolls horizontally by keyboard (scrollLeft=40)",
+        "Numbered-prefix page loads all lesson data and scenario interaction"
+      ]
+    },
+    "http_checks": [
+      {
+        "base": "http://127.0.0.1:8049/",
+        "files": 30,
+        "status": 200,
+        "byte_equal": true
+      },
+      {
+        "base": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/",
+        "files": 30,
+        "status": 200,
+        "byte_equal": true
+      }
+    ],
+    "archive": {
+      "entries": 23,
+      "new_artifacts_present_and_byte_equal": true
+    },
+    "checks": {
+      "generated_outputs": "passed",
+      "packaging": "passed",
+      "structure_and_links": "passed",
+      "svg_diagrams": 3,
+      "javascript_syntax": "passed",
+      "catalog": "passed_9_projects"
+    },
+    "screenshots": [
+      {
+        "path": "assets/principles-desktop.png",
+        "sha256": "f5d24df650c061611ed0a21a0be26cfc4990d836434c1ed50c1a8eef1852bc0d",
+        "meaning": "static_teaching_page_layout_only"
+      },
+      {
+        "path": "assets/principles-mobile.png",
+        "sha256": "c021a0320ae6a6e4643c7c0f030b031c4c77d983bb45823fe484b2782affce70",
+        "meaning": "static_teaching_page_layout_only"
+      }
+    ],
+    "upstream_execution": "not_run",
+    "ai_generation": "not_run",
+    "performance": "not_measured"
+  },
+  "historical_static_phase": {
+    "upstream_execution": "not_run",
+    "upstream_performance": "not_measured",
+    "limits": [
+      "No upstream WebGPU rendering was executed",
+      "No actual FPS, boot, memory or GPU compatibility measurement",
+      "Source/API presence is not runtime acceptance",
+      "Independent labs still need missing HTML/router assembly",
+      "No remote deployment or git commit/push performed"
+    ]
+  },
+  "runtime_verification": "runtime/verification.json",
+  "four_scene_update": {
+    "status": "passed",
+    "runtime_verification": "runtime/verification.json",
+    "screenshots": "runtime/screenshots.json",
+    "source_patches": "runtime/SOURCES.json",
+    "responsive": [
+      {
+        "detailsVisible": true,
+        "options": 4,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      {
+        "detailsVisible": true,
+        "options": 4,
+        "scrollWidth": 753,
+        "width": 768
+      },
+      {
+        "detailsVisible": true,
+        "options": 4,
+        "scrollWidth": 1265,
+        "width": 1280
+      }
+    ]
+  },
+  "overview_update": {
+    "status": "passed",
+    "completed_on": "2026-10-22",
+    "dimensions": {
+      "width": 2200,
+      "height": 4400
+    },
+    "capability_records": 89,
+    "categories": 10,
+    "hotspots": 24,
+    "canonical_record": "overview.json",
+    "scope": "Original complete entry infographic and web navigation; uses prior runtime screenshots; no new GPU/AI/performance claim",
+    "browser": {
+      "resetFilteredQuery": {
+        "result": "显示 10 / 89 项能力条目",
+        "fields": {
+          "category": "true",
+          "query": "",
+          "scope": "all"
+        }
+      },
+      "water": "显示 13 / 89 项能力条目",
+      "scenes": [
+        {
+          "selected": "cornell",
+          "status": "尚未启动 · 按需加载真实渲染"
+        },
+        {
+          "selected": "midsee-village",
+          "status": "尚未启动 · 按需加载真实渲染"
+        },
+        {
+          "selected": "beach",
+          "status": "尚未启动 · 按需加载真实渲染"
+        },
+        {
+          "selected": "forest",
+          "status": "尚未启动 · 按需加载真实渲染"
+        }
+      ],
+      "modal": {
+        "clientWidth": 641,
+        "displayWidth": 1600,
+        "naturalWidth": 2200,
+        "open": true,
+        "scrollWidth": 1600,
+        "source": "assets/project-overview.svg"
+      },
+      "keyboardPan": 0.6666666865348816,
+      "closed": true,
+      "responsive": [
+        {
+          "hotspotWithinImage": true,
+          "imageLoaded": true,
+          "naturalWidth": 2200,
+          "scrollWidth": 1265,
+          "width": 1280
+        },
+        {
+          "hotspotWithinImage": true,
+          "imageLoaded": true,
+          "naturalWidth": 2200,
+          "scrollWidth": 753,
+          "width": 768
+        },
+        {
+          "hotspotWithinImage": true,
+          "imageLoaded": true,
+          "naturalWidth": 2200,
+          "scrollWidth": 360,
+          "width": 375
+        }
+      ],
+      "mobileModal": {
+        "pan": 40,
+        "pageOverflow": false
+      },
+      "consoleErrors": []
+    },
+    "screenshots": [
+      {
+        "path": "assets/overview-entry-desktop.png",
+        "sha256": "afc2a88fd13565e69dc664e315ae42bc77626040e61019fd0f51d7bf170f5e23"
+      },
+      {
+        "path": "assets/overview-entry-mobile.png",
+        "sha256": "bc8cd5017fb4453999084d8345dfa42b735105c32aef3cb9cc4ead9a317608bf"
+      }
+    ],
+    "app_js_sha256": "fe2fb6be8c76bb83d3b0a3ec4bec2f6ce81f7c277c0fe342b054e09d2a9bda64",
+    "page_html_sha256": "b65773ba6a9572c5268cc4c27b39b6ac73ed2750421699843a1e636b902fbaed",
+    "style_css_sha256": "9da02d62e40965f68122d42b085c025460405af852341ef32872f376b0217cfc",
+    "http_checks": [
+      {
+        "base": "http://127.0.0.1:8049/",
+        "files": 122,
+        "status": 200,
+        "byte_equal": true,
+        "scope": "static files; temporary numbered-prefix server closes after test"
+      },
+      {
+        "base": "http://127.0.0.1:60921/1022_codex_project/009-webgpu-render-pipeline/",
+        "files": 122,
+        "status": 200,
+        "byte_equal": true,
+        "scope": "static files; temporary numbered-prefix server closes after test"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "path": "assets/upstream/lighting-baseline.png",
+    "label": "上游文档中的现有画面，作者历史截图；非本次运行",
+    "original_alt": "Приглушённые фасады и кроны, слабее световое разделение воды и берега. Оригинальный присланный кадр.",
+    "source": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/public/lighting-look-development.html",
+    "html_id": "live-image",
+    "sha256": "25b0ffc14bbb77a61d051f387ad592a53fb1432c2f287cefae07989fa894088f",
+    "bytes": 3281156,
+    "modified": false,
+    "license": "上游未给出仓库级许可，原作者及原素材权利人保留权利；仅为研究引用保留，未授权素材再分发。"
+  },
+  {
+    "path": "assets/upstream/lighting-concept.png",
+    "label": "上游概念参考图，非运行效果",
+    "original_alt": "Светлые тёплые фасады, читаемые тени, более выразительные блики, пена и каустика. Оригинальный концепт.",
+    "source": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/public/lighting-look-development.html",
+    "html_id": "concept-image",
+    "sha256": "79f17dc523767064b0da21323bd724061df586e0ad8e31b1b11281cacf1ad295",
+    "bytes": 3378641,
+    "modified": false,
+    "license": "上游未给出仓库级许可，原作者及原素材权利人保留权利；仅为研究引用保留，未授权素材再分发。"
+  }
+]

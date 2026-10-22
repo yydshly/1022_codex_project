@@ -1,0 +1,830 @@
+{
+  "date": "2026-10-22",
+  "upstream_commit": "ca576b601bf84527102f1768372aa8cd96a3c55a",
+  "three_commit": "7d3343686e52f532e97c67440f55b1adb7aba28c",
+  "screenshots": [
+    {
+      "path": "assets/runtime/cornell-initial.png",
+      "sha256": "3b7caa31c9dc975b3642f7259d28d9d5be7d998a14033850cf56fca8ed8eeab4",
+      "bytes": 8094,
+      "basis": "standalone_original_pipeline",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 0,
+        "cameraDistance": 10
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/default-light.png",
+      "sha256": "dd2ba9845537f6037631e6da2991b46156b8b102d1289764661dab88fb603929",
+      "bytes": 41629,
+      "basis": "engine_acknowledged_controls",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 0,
+        "cameraDistance": 10
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/sun-zero.png",
+      "sha256": "a7ec383417a59af77211c1e8f360af2391b8790c9625dcea73c5e67b827f6c48",
+      "bytes": 38767,
+      "basis": "engine_acknowledged_controls",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 0,
+        "cameraAzimuth": 0,
+        "cameraElevation": 0,
+        "cameraDistance": 10
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/sun-low-angle.png",
+      "sha256": "5efd655c208c6083c788ea8fe8312c689399c92acfe64f8cddf857d5573100ed",
+      "bytes": 41240,
+      "basis": "engine_acknowledged_controls",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 0,
+        "cameraDistance": 10
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/camera-side.png",
+      "sha256": "0d3f8c1409b09955aa3178d155aefd07e7828e65487ca2b5ef7a60b7fe5dd82f",
+      "bytes": 36106,
+      "basis": "engine_acknowledged_controls",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -28,
+        "cameraElevation": 12,
+        "cameraDistance": 12
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/demo-desktop.png",
+      "sha256": "926d4f9ca051d8f072def39e1d388b235fd28dde7449bc264faf59a84a38380c",
+      "bytes": 102092,
+      "basis": "actual_page_and_engine_scene",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "viewport": [
+        1280,
+        1300
+      ],
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 0,
+        "cameraDistance": 10
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot or section-region crop only"
+    },
+    {
+      "path": "assets/runtime/demo-mobile.png",
+      "sha256": "fe3a7df04b70a30ab863bafb208d511839049346b9dc3dda33ced6900cd0389c",
+      "bytes": 38745,
+      "basis": "actual_page_and_engine_scene",
+      "scene": "cornell",
+      "pipeline": "render-pipeline",
+      "viewport": [
+        375,
+        950
+      ],
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 0,
+        "cameraDistance": 10
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot or section-region crop only"
+    },
+    {
+      "path": "assets/runtime/village-default.png",
+      "sha256": "5a89ed974f0e1111239ab4f813e281af9c58bd4d4e0c1cf48c41516e6ac7bcc7",
+      "bytes": 79534,
+      "basis": "engine_acknowledged_controls",
+      "scene": "midsee-village",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664
+      },
+      "camera": [
+        24.500000000000007,
+        14.399999999999997,
+        38.8
+      ],
+      "target": [
+        0,
+        -0.9,
+        0
+      ],
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only",
+      "note": "water continues simulating; not a static pixel A/B"
+    },
+    {
+      "path": "assets/runtime/village-sun-zero.png",
+      "sha256": "b66f6b7043960064ab9418d76ad65737e5e3c33590a94a82f2b18a2a8f607c04",
+      "bytes": 67294,
+      "basis": "engine_acknowledged_controls",
+      "scene": "midsee-village",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 0,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664
+      },
+      "camera": [
+        24.500000000000007,
+        14.399999999999997,
+        38.8
+      ],
+      "target": [
+        0,
+        -0.9,
+        0
+      ],
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only",
+      "note": "water continues simulating; not a static pixel A/B"
+    },
+    {
+      "path": "assets/runtime/village-low-sun.png",
+      "sha256": "2a277a3135c38bb021c662b6011b499bd853d35a56e5ab874428281849c72ce9",
+      "bytes": 81143,
+      "basis": "engine_acknowledged_controls",
+      "scene": "midsee-village",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664
+      },
+      "camera": [
+        24.500000000000007,
+        14.399999999999997,
+        38.8
+      ],
+      "target": [
+        0,
+        -0.9,
+        0
+      ],
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only",
+      "note": "water continues simulating; not a static pixel A/B"
+    },
+    {
+      "path": "assets/runtime/village-side.png",
+      "sha256": "c4be79fa8b1c5e2b91f2fe7783c14d7d408b45aacc6b6ac3e022ce48e7281ac4",
+      "bytes": 69731,
+      "basis": "engine_acknowledged_controls",
+      "scene": "midsee-village",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 88.75463573323164,
+        "cameraElevation": 16.923743164339776,
+        "cameraDistance": 48.0936586256442
+      },
+      "camera": [
+        46.00000000000001,
+        15.999999999999998,
+        5.10702591327572e-15
+      ],
+      "target": [
+        0,
+        2,
+        -1
+      ],
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only",
+      "note": "water continues simulating; not a static pixel A/B"
+    },
+    {
+      "path": "assets/runtime/village-desktop.png",
+      "sha256": "0bb3f3fa4f4e2cae3251f3539f70be1d434774c6c5289669a07268eb982edb81",
+      "bytes": 113559,
+      "basis": "actual_page_and_engine_scene",
+      "scene": "midsee-village",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664
+      },
+      "camera": [
+        24.500000000000007,
+        14.399999999999997,
+        38.8
+      ],
+      "target": [
+        0,
+        -0.9,
+        0
+      ],
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only",
+      "note": "water continues simulating; not a static pixel A/B",
+      "viewport": [
+        1280,
+        950
+      ]
+    },
+    {
+      "path": "assets/runtime/village-mobile.png",
+      "sha256": "8d414b921fa3dc4c353f35d152608df2aa94d402b0c7c73c5f19f0429d4a7b15",
+      "bytes": 43325,
+      "basis": "actual_page_and_engine_scene",
+      "scene": "midsee-village",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 31.999999999999996,
+        "cameraElevation": 18.000000000000007,
+        "cameraDistance": 48.499999999999986
+      },
+      "camera": [
+        24.44318371392715,
+        14.087324227184949,
+        39.11727089709149
+      ],
+      "target": [
+        0,
+        -0.9,
+        0
+      ],
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only",
+      "note": "water continues simulating; not a static pixel A/B",
+      "viewport": [
+        375,
+        950
+      ]
+    },
+    {
+      "path": "assets/runtime/beach-default.png",
+      "sha256": "7588f61c2a296cc371e8918c60bd4daf88f7aed77a8417be30cd484ec1403f5f",
+      "bytes": 45484,
+      "basis": "engine_acknowledged_controls",
+      "scene": "beach",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/beach-water.png",
+      "sha256": "a816f4635080786dabd77016ea73ced9da5daaddab1d77e107cd47e68f3c251e",
+      "bytes": 56355,
+      "basis": "engine_acknowledged_controls",
+      "scene": "beach",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -4.7636416907261765,
+        "cameraElevation": 34.2538037747521,
+        "cameraDistance": 7.284229540589727,
+        "camera": [
+          -2,
+          3.4999999999999996,
+          7.500000000000002
+        ],
+        "target": [
+          -1.5,
+          -0.6,
+          1.5
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/beach-foliage.png",
+      "sha256": "72b3e5f0463d263c58cec4bb2af52acf374088ea428f9c73c59aa1f0ec6e0e03",
+      "bytes": 68276,
+      "basis": "engine_acknowledged_controls",
+      "scene": "beach",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -59.215853473673555,
+        "cameraElevation": -4.181741351334367,
+        "cameraDistance": 5.485435260760991,
+        "camera": [
+          -1.5,
+          3.1999999999999993,
+          -0.7999999999999994
+        ],
+        "target": [
+          3.2,
+          3.5999999999999996,
+          -3.5999999999999996
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/beach-low-sun.png",
+      "sha256": "5296dd699589f926a55ced682c874778fbc72f083bc2218f05d8ada56e28ce3c",
+      "bytes": 44709,
+      "basis": "engine_acknowledged_controls",
+      "scene": "beach",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/beach-sun-zero.png",
+      "sha256": "3d738517100d962cde352a299b16502fef252dcd10442e4613bb9e0592570cd2",
+      "bytes": 38080,
+      "basis": "engine_acknowledged_controls",
+      "scene": "beach",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 0,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-default.png",
+      "sha256": "5ed3e8e8e51aa316d94de244b0aace66e2967d9ae0ebf68ae02a0e001eec575e",
+      "bytes": 52871,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-stream.png",
+      "sha256": "c52263455284f706b5fd968fcdce60d1280be2d5c116fdef1219c0149b75eb99",
+      "bytes": 69633,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 27.552811576717804,
+        "cameraElevation": 18.141430620188963,
+        "cameraDistance": 5.45985347788748,
+        "camera": [
+          -0.5999999999999992,
+          2.1999999999999993,
+          3.000000000000001
+        ],
+        "target": [
+          -2.9999999999999996,
+          0.4999999999999999,
+          -1.5999999999999999
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-canopy.png",
+      "sha256": "f50a395e0dba20785a9f668609e882fd87f2bfa4e6da609ad5332b2afb904701",
+      "bytes": 57820,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -11.309932474020213,
+        "cameraElevation": -29.870479337415155,
+        "cameraDistance": 8.232253640407347,
+        "camera": [
+          1.6,
+          2.4000000000000012,
+          5
+        ],
+        "target": [
+          3,
+          6.5,
+          -2
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-low-sun.png",
+      "sha256": "1995dc166a276c195bb97f1d44b19c89496a99bab832ab8e1f5e1ce65500f36d",
+      "bytes": 50682,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-sun-zero.png",
+      "sha256": "946b0e0c3938006bdd4c551fad0221eaf8cf260ca8a618de4b17f5740c6b5174",
+      "bytes": 43655,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 0,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-desktop.png",
+      "sha256": "71587cffa974bd1f234bbf81612707cbe0f6b4ddfa1dc42253346bca9ac65196",
+      "bytes": 146107,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/forest-mobile.png",
+      "sha256": "24c814d3296a677fdc9f7436252dae823fdd42e2822b0960e1e4ee473dca6844",
+      "bytes": 46003,
+      "basis": "engine_acknowledged_controls",
+      "scene": "forest",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    },
+    {
+      "path": "assets/runtime/beach-desktop.png",
+      "sha256": "071c1d0070791403c066c6db477a73b39e72d5a23b40adaa09f93ac4d3ebd5b4",
+      "bytes": 132339,
+      "basis": "engine_acknowledged_controls",
+      "scene": "beach",
+      "pipeline": "render-pipeline",
+      "parameters": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ]
+      },
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "runtime_variant": "pinned upstream plus covered-texel fallback guard; see SOURCES.json source_patches",
+      "processing": "none; raw browser screenshot, viewport or scene-region crop only"
+    }
+  ]
+}

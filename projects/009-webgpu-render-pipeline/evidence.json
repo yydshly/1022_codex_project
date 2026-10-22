@@ -1,0 +1,536 @@
+{
+  "pipeline-01": {
+    "path": "src/shared/render/renderer.ts",
+    "needle": "requiredLimits",
+    "line": 63,
+    "sha256": "d6cc6666f213e74bbbf596973a6508bc7d8a55fd6730253def16dfcfe88fa3be"
+  },
+  "pipeline-02": {
+    "path": "src/shared/gi/surfel/surfelIntegratePass.ts",
+    "needle": "wgslFn",
+    "line": 4,
+    "sha256": "bd7aa74147a0cf5c9e5b5546a0d47b2f17fe3b821585cfeebb82b78c6604c95f"
+  },
+  "pipeline-03": {
+    "path": "src/shared/render/frameGraph.ts",
+    "needle": "setMRT",
+    "line": 192,
+    "sha256": "61a914e1829d44a98e3196e8e33e799f58a8f181cfa13ea87288e0db211951f1"
+  },
+  "pipeline-04": {
+    "path": "src/shared/render/frameGraph.ts",
+    "needle": "class FrameGraph",
+    "line": 99,
+    "sha256": "61a914e1829d44a98e3196e8e33e799f58a8f181cfa13ea87288e0db211951f1"
+  },
+  "pipeline-05": {
+    "path": "src/shared/gi/surfel/dynamicBvh.ts",
+    "needle": "export ",
+    "line": 30,
+    "sha256": "62370e008283d5f639029f3325d324965755339217410eef8206130d0b9f9ca5"
+  },
+  "pipeline-06": {
+    "path": "src/shared/fiber/MultiInstances.tsx",
+    "needle": "export ",
+    "line": 5,
+    "sha256": "196ed08e20f3550afa9bf69e38b273d3d2f5299595b03ff390dd1c7c4ed8b281"
+  },
+  "pipeline-07": {
+    "path": "src/shared/render/frameGraph.ts",
+    "needle": "onScreenTextures",
+    "line": 92,
+    "sha256": "61a914e1829d44a98e3196e8e33e799f58a8f181cfa13ea87288e0db211951f1"
+  },
+  "pipeline-08": {
+    "path": "src/shared/render/outputStage.ts",
+    "needle": "export ",
+    "line": 12,
+    "sha256": "38cdd49a20253d68fb9bbbbe06fdf555a145a1a13eb3e6598446d7b7f4e543f8"
+  },
+  "gi-01": {
+    "path": "src/shared/gi/bake/lightmapSurfels.ts",
+    "needle": "export ",
+    "line": 64,
+    "sha256": "be18de3eaa005081f2dbddd3a83de11fd81658637cd6ff8eafa1c848767cc631"
+  },
+  "gi-02": {
+    "path": "src/shared/gi/surfel/sceneBvh.ts",
+    "needle": "export ",
+    "line": 14,
+    "sha256": "a588650392bdfde7e15ad79bc9684685fc4fa54c74214a600f2406368713c998"
+  },
+  "gi-03": {
+    "path": "src/shared/gi/surfel/surfelIntegratePass.ts",
+    "needle": "export ",
+    "line": 73,
+    "sha256": "bd7aa74147a0cf5c9e5b5546a0d47b2f17fe3b821585cfeebb82b78c6604c95f"
+  },
+  "gi-04": {
+    "path": "src/shared/gi/probes/probeVolume.ts",
+    "needle": "class ProbeVolume",
+    "line": 81,
+    "sha256": "6f654dd8df501dfe9bf98d3f5b1a5f19a8e33ed08d932aacdef2933da94e9863"
+  },
+  "gi-05": {
+    "path": "src/shared/gi/probes/probeVolume.ts",
+    "needle": "DDGI storage",
+    "line": 77,
+    "sha256": "6f654dd8df501dfe9bf98d3f5b1a5f19a8e33ed08d932aacdef2933da94e9863"
+  },
+  "gi-06": {
+    "path": "src/shared/gi/probes/probeVolume.ts",
+    "needle": "chebyshev",
+    "line": 282,
+    "sha256": "6f654dd8df501dfe9bf98d3f5b1a5f19a8e33ed08d932aacdef2933da94e9863"
+  },
+  "gi-07": {
+    "path": "src/shared/gi/probes/probeClassify.ts",
+    "needle": "export ",
+    "line": 13,
+    "sha256": "8104e12ef271c24368a39f8f4fe5f39ae9521b1de4044fdc9733574af3b5a6c1"
+  },
+  "gi-08": {
+    "path": "src/shared/gi/probes/probeLayers.ts",
+    "needle": "export ",
+    "line": 4,
+    "sha256": "40003a4880545ce4fe9ff2e6d634aebebc12b77943db31bc18833bcc89ed4677"
+  },
+  "gi-09": {
+    "path": "src/shared/gi/probes/probeLive.ts",
+    "needle": "class ProbeLiveUpdate",
+    "line": 42,
+    "sha256": "4baaee35e5d43ceb561b3b13d27659dceedcf63933757ad2d6fb3b2d2a24a9d6"
+  },
+  "gi-10": {
+    "path": "src/features/render-pipeline/index.ts",
+    "needle": "url.flag('surfelGi'",
+    "line": 693,
+    "sha256": "c47ad62863e44cb03423aafc46b27a3c1f344cf503f4c73ab119e84a0e7ace87"
+  },
+  "lightmap-01": {
+    "path": "src/shared/gi/bake/lightmapUv.ts",
+    "needle": "export ",
+    "line": 5,
+    "sha256": "9af03205a9f7d912840ac8a4728b2b96f532e560e8d839be9ef108192e2a97e0"
+  },
+  "lightmap-02": {
+    "path": "src/features/render-pipeline/staticLight.ts",
+    "needle": "DEFAULT_METRES_PER_TEXEL",
+    "line": 26,
+    "sha256": "3e6f6be627eece9b066c39988d08b7fcb4610c9fb6de5a16538c29ca35f51066"
+  },
+  "lightmap-03": {
+    "path": "src/shared/gi/bake/filterLinks.ts",
+    "needle": "export ",
+    "line": 16,
+    "sha256": "4332b6d8770866891ab0eb427ed6d4922c22ed7b0a2e39294091b2780dfd52a7"
+  },
+  "lightmap-04": {
+    "path": "src/shared/gi/bake/holeFill.ts",
+    "needle": "export ",
+    "line": 98,
+    "sha256": "75001103bc0f1ce81c595498e4c22316e225c21fb59e86745541223147178dd4"
+  },
+  "lightmap-05": {
+    "path": "src/shared/gi/bake/chartPadding.ts",
+    "needle": "export ",
+    "line": 2,
+    "sha256": "94ea2b2b2d5af7214b0fc57218f7d9028daf9c047c9c6728b2ffd8c881042955"
+  },
+  "lightmap-06": {
+    "path": "src/shared/gi/bake/persistedBake.ts",
+    "needle": "export ",
+    "line": 2,
+    "sha256": "596f49c475baf4f3728b8f2796e126aa936c8de03022335bcf76493d2e638c2d"
+  },
+  "lightmap-07": {
+    "path": "src/shared/gi/bake/lightingProvenance.ts",
+    "needle": "export ",
+    "line": 3,
+    "sha256": "fd8853dfbf6fc063c7f32d866b2b549d630dee3a92823b04b873c5ce06c9ac9b"
+  },
+  "lightmap-08": {
+    "path": "src/shared/gi/lod/chartPyramids.ts",
+    "needle": "export ",
+    "line": 3,
+    "sha256": "06523531da6e556b9b2bd06a189dfc8879c056c9f77f36d76bf314ca9b91231e"
+  },
+  "lightmap-09": {
+    "path": "src/shared/gi/lod/tileResidency.ts",
+    "needle": "export ",
+    "line": 3,
+    "sha256": "ff85bbb73c66f6c1d886fbd6051c150a88f74479e36ce388b312465475b53746"
+  },
+  "lightmap-10": {
+    "path": "src/shared/gi/lod/tilePool.ts",
+    "needle": "device.queue.writeTexture",
+    "line": 34,
+    "sha256": "e7697fb1dcc7201c5cbcb930e0dbeaf6808a535d6d6f2cc133969f925c27e86c"
+  },
+  "lighting-01": {
+    "path": "src/features/render-pipeline/sun.ts",
+    "needle": "function setupSun",
+    "line": 124,
+    "sha256": "7b18027a3dab8362e520774400017a1450c45856378bcf009793a4540a3ef8bf"
+  },
+  "lighting-02": {
+    "path": "src/features/lighting-pipeline/sunFromEnvironment.ts",
+    "needle": "export ",
+    "line": 17,
+    "sha256": "da7429776e7c9d15b9b199c88695306882b1e372bdd720e01a7523fb28b54bb4"
+  },
+  "lighting-03": {
+    "path": "src/shared/render/softSunShadow.ts",
+    "needle": "U_SUN_ANGULAR_DIAMETER_DEG",
+    "line": 38,
+    "sha256": "e4d3bfa4aac24f26e4fa702b6fc7a0b42b1e571b6024fae6d0971c55a8e15002"
+  },
+  "lighting-04": {
+    "path": "src/features/render-pipeline/sun.ts",
+    "needle": "shadowFit.enabled",
+    "line": 141,
+    "sha256": "7b18027a3dab8362e520774400017a1450c45856378bcf009793a4540a3ef8bf"
+  },
+  "lighting-05": {
+    "path": "src/widgets/world/corridorLightsScene.ts",
+    "needle": "export ",
+    "line": 6,
+    "sha256": "284ed182d6e4b3972240dd21f568f8c52fe215ba0bb96f34a319271b1b75db56"
+  },
+  "lighting-06": {
+    "path": "src/shared/gi/contact/contactOcclusionPass.ts",
+    "needle": "DEFAULT_CONTACT_SETTINGS",
+    "line": 25,
+    "sha256": "40670ce19d905a457f474ef157dd77a4c56616abb777ca9e277aa3e8233429fc"
+  },
+  "lighting-07": {
+    "path": "src/shared/gi/reflect/reflectionPass.ts",
+    "needle": "DEFAULT_REFLECTION_SETTINGS",
+    "line": 44,
+    "sha256": "6cd420701a25e473e8757c3a26ad94b9c414acae8fb77f17d155e073e995e92e"
+  },
+  "lighting-08": {
+    "path": "src/features/render-pipeline/index.ts",
+    "needle": "probeSpecular",
+    "line": 697,
+    "sha256": "c47ad62863e44cb03423aafc46b27a3c1f344cf503f4c73ab119e84a0e7ace87"
+  },
+  "lighting-09": {
+    "path": "src/shared/gi/reflect/cache/reflectionCache.ts",
+    "needle": "export ",
+    "line": 50,
+    "sha256": "e04d38e805cee6092df63c79f35fb1c761909abd0d6b568f8dda5a15540be101"
+  },
+  "water-01": {
+    "path": "src/entities/water/shallowWater.ts",
+    "needle": "export ",
+    "line": 46,
+    "sha256": "01dbedead42dff6d2dc21d7fcc64f65a67ced1bcb5fdcbb0b0ecdf0d648dfd8a"
+  },
+  "water-02": {
+    "path": "src/entities/water/bathymetry.ts",
+    "needle": "export ",
+    "line": 14,
+    "sha256": "4e4f4ed303c6e57f8faf44f86415f9076e7d1574d7deededeb8000a6f263b5fb"
+  },
+  "water-03": {
+    "path": "src/entities/water/index.ts",
+    "needle": "Snell refraction",
+    "line": 550,
+    "sha256": "9f49d252578ac1f738a595f0225b1f2c0a258c4189ba688ef6581bed8c926fd5"
+  },
+  "water-04": {
+    "path": "src/entities/water/index.ts",
+    "needle": "Beer",
+    "line": 210,
+    "sha256": "9f49d252578ac1f738a595f0225b1f2c0a258c4189ba688ef6581bed8c926fd5"
+  },
+  "water-05": {
+    "path": "src/entities/water/index.ts",
+    "needle": "fresnel",
+    "line": 704,
+    "sha256": "9f49d252578ac1f738a595f0225b1f2c0a258c4189ba688ef6581bed8c926fd5"
+  },
+  "water-06": {
+    "path": "src/entities/water/index.ts",
+    "needle": "caustic",
+    "line": 73,
+    "sha256": "9f49d252578ac1f738a595f0225b1f2c0a258c4189ba688ef6581bed8c926fd5"
+  },
+  "water-07": {
+    "path": "src/entities/water/index.ts",
+    "needle": "persistent foam field",
+    "line": 365,
+    "sha256": "9f49d252578ac1f738a595f0225b1f2c0a258c4189ba688ef6581bed8c926fd5"
+  },
+  "water-08": {
+    "path": "src/entities/water/spray.ts",
+    "needle": "export ",
+    "line": 61,
+    "sha256": "b335c2e4d823238d69e4e0ae70f8fb79179c89b2fd0c31ecc816feac3e11e6d5"
+  },
+  "water-09": {
+    "path": "src/entities/water/simHost.ts",
+    "needle": "export ",
+    "line": 22,
+    "sha256": "2771c2528b1cbe2da5dbe47fed00f438fea256e12aabbb45b1ad0a4d913f89c8"
+  },
+  "water-10": {
+    "path": "src/entities/ball/index.ts",
+    "needle": "export ",
+    "line": 9,
+    "sha256": "93eb394daf0b711c973a50c7413c09c93337c8f838794ff5d90e037459511def"
+  },
+  "water-11": {
+    "path": "src/entities/water/physicalWater.ts",
+    "needle": "new OceanDetail",
+    "line": 162,
+    "sha256": "466bcce462aa8914661853346089bd2289c3cfa8cec57b40fa114ade4f0738ef"
+  },
+  "water-12": {
+    "path": "src/entities/water/physicalWater.ts",
+    "needle": "WaveReflectionPass",
+    "line": 20,
+    "sha256": "466bcce462aa8914661853346089bd2289c3cfa8cec57b40fa114ade4f0738ef"
+  },
+  "water-13": {
+    "path": "src/entities/water/volumeLight.ts",
+    "needle": "waterSolarScatter",
+    "line": 17,
+    "sha256": "6786a49a2b825f77bf68dca2d56c6db1bc5e9f761c051ac1d41e873fff433213"
+  },
+  "nature-01": {
+    "path": "src/entities/foliage/leafOptics.ts",
+    "needle": "function leafOptics",
+    "line": 267,
+    "sha256": "4c32ff909763f8a4ed635ef1ff0002236d92a9e00bbc0d34ee5c6e67706114be"
+  },
+  "nature-02": {
+    "path": "src/shared/render/foliage/leafMaterial.ts",
+    "needle": "export ",
+    "line": 206,
+    "sha256": "6c0ac8ea0ceb2268d8d293787df81df61b72366ebd23aa0f4ab538481094f6a8"
+  },
+  "nature-03": {
+    "path": "src/entities/foliage/leafSurface.ts",
+    "needle": "export ",
+    "line": 25,
+    "sha256": "16aa2bb88fb203822203084250da86b777dd11d3b652b2d419e1bba07dbc8dbd"
+  },
+  "nature-04": {
+    "path": "src/entities/palm/trunkSurface.ts",
+    "needle": "export ",
+    "line": 32,
+    "sha256": "cfe4f3a725607068b6907fdc24b9857406168b8ecdbbd0dd034a1dee041d8c69"
+  },
+  "nature-05": {
+    "path": "src/entities/conifer/index.ts",
+    "needle": "export ",
+    "line": 11,
+    "sha256": "62ce5dd58da44ae7fd1215a5f710a03a70c56f035a883de9879cbc58f6483f7a"
+  },
+  "nature-06": {
+    "path": "src/shared/render/vertexMotion.ts",
+    "needle": "export ",
+    "line": 8,
+    "sha256": "26fb21812af5a7cbb9fd2c8656722118f296fa9c427827ffd165ffed4dafbb53"
+  },
+  "nature-07": {
+    "path": "src/entities/island/sandMaterial.ts",
+    "needle": "export ",
+    "line": 25,
+    "sha256": "d4767f5c6c2e12bde0cee0d01aeb846191c426f532b24166cb99c0fe30045a81"
+  },
+  "nature-08": {
+    "path": "src/shared/render/terrain/layerSampler.ts",
+    "needle": "export ",
+    "line": 29,
+    "sha256": "b287e9bf2123ca0ad36ad075b8a5065e9ee8bdf6cfedb1ff65e5441239ccb244"
+  },
+  "nature-09": {
+    "path": "src/entities/grove/adaptiveMesh.ts",
+    "needle": "export ",
+    "line": 3,
+    "sha256": "266fd1fd10e98ca6f8ea996cc9fcd293590c13bd03a7ce796d68148f64f430bf"
+  },
+  "nature-10": {
+    "path": "src/entities/village/VillagePrefab.tsx",
+    "needle": "export ",
+    "line": 28,
+    "sha256": "358d256d19c4b0388b47481e795414de523a18ea3959b743407e4cd8c65641a1"
+  },
+  "sky-01": {
+    "path": "src/shared/render/sky/atmosphereLuts.ts",
+    "needle": "export ",
+    "line": 51,
+    "sha256": "1ae42cc04f36a56c7f1507c18b24684e4a144c30bf042d0e565e6a5c56e820f9"
+  },
+  "sky-02": {
+    "path": "src/shared/render/sky/scatteringMarch.ts",
+    "needle": "export ",
+    "line": 11,
+    "sha256": "c20f64ae96c3877fbaccca5512bedd4b090045dba67d8bdf6df68e31543dcfbf"
+  },
+  "sky-03": {
+    "path": "src/shared/render/sky/aerialPerspective.ts",
+    "needle": "export ",
+    "line": 36,
+    "sha256": "06a878959c834ce04656b2db42facbeb16b64736d718dc79e9ec33b85ae5e5a7"
+  },
+  "sky-04": {
+    "path": "src/shared/render/sky/cloudLayer.ts",
+    "needle": "export ",
+    "line": 46,
+    "sha256": "e5317061206f1e6377c1c0969b9179f330b5e599b9344c66ca8d3d8b9af9cb5b"
+  },
+  "sky-05": {
+    "path": "src/shared/render/sky/cloudShadowMap.ts",
+    "needle": "export ",
+    "line": 24,
+    "sha256": "9ded9e638ad48705d64b760d4008b9a81bd94057699a9427b1adf78c0434ab62"
+  },
+  "sky-06": {
+    "path": "src/shared/render/sky/skyEnvironment.ts",
+    "needle": "export ",
+    "line": 27,
+    "sha256": "050919593c92bd8c6d51363d23249441799d4f6a5e586b2afccf6196397128ac"
+  },
+  "sky-07": {
+    "path": "src/shared/render/atmosphere/volumetricFog.ts",
+    "needle": "export ",
+    "line": 44,
+    "sha256": "eb719059aa3dfd151602beb1f09d1292005b1db7628d4a330f1de4c47a403b18"
+  },
+  "post-01": {
+    "path": "src/shared/render/temporalAA.ts",
+    "needle": "class TemporalAANode",
+    "line": 120,
+    "sha256": "4770accba3d3e3f7ae0badf957baa48c66e712b2ab0c566f3d3ab702a5798055"
+  },
+  "post-02": {
+    "path": "src/shared/render/frameGraph.ts",
+    "needle": "type Antialiasing",
+    "line": 28,
+    "sha256": "61a914e1829d44a98e3196e8e33e799f58a8f181cfa13ea87288e0db211951f1"
+  },
+  "post-03": {
+    "path": "src/shared/render/exposure.ts",
+    "needle": "DEFAULT_EXPOSURE",
+    "line": 24,
+    "sha256": "e39f26bb5247a2827056632105c7ccd1ca1ee9c44ee0f09eba2bd923ba32e335"
+  },
+  "post-04": {
+    "path": "src/shared/render/look.ts",
+    "needle": "class ArtisticLook",
+    "line": 74,
+    "sha256": "5a080beff9a819e272c56cd0104ab9220e78aa893d87a0c8347bc9b774d9838a"
+  },
+  "post-05": {
+    "path": "src/shared/render/look.ts",
+    "needle": "TONE_MAPPING",
+    "line": 37,
+    "sha256": "5a080beff9a819e272c56cd0104ab9220e78aa893d87a0c8347bc9b774d9838a"
+  },
+  "post-06": {
+    "path": "src/features/render-pipeline/postStages.ts",
+    "needle": "class PostStages",
+    "line": 34,
+    "sha256": "868d8f86b38a928ef94cc8d010774bd807b2758cd514ffe42bfd673c9f124e91"
+  },
+  "post-07": {
+    "path": "src/shared/render/motionBlur.ts",
+    "needle": "DEFAULT_MOTION_BLUR",
+    "line": 50,
+    "sha256": "9a7ef1a7b204d0dbc570f7f4f989a7f40379fb08a381913a8426424f8677a2a2"
+  },
+  "post-08": {
+    "path": "src/features/render-pipeline/cineCamera.ts",
+    "needle": "export ",
+    "line": 3,
+    "sha256": "97b7e037ad61cc36eef35f92afa0cfb351afcadfe49d288213ef00071269ec62"
+  },
+  "tools-01": {
+    "path": "src/shared/render/frameGraph.ts",
+    "needle": "SplitView",
+    "line": 59,
+    "sha256": "61a914e1829d44a98e3196e8e33e799f58a8f181cfa13ea87288e0db211951f1"
+  },
+  "tools-02": {
+    "path": "src/shared/gi/bake/leakStages.ts",
+    "needle": "export ",
+    "line": 4,
+    "sha256": "5c2444c189e43dee91dae95ca382c0911033e1d587f24bcfd82a49d8b6518470"
+  },
+  "tools-03": {
+    "path": "src/widgets/world/leakRoomScene.ts",
+    "needle": "export ",
+    "line": 7,
+    "sha256": "a7280a60b66fda3d782182672a3bb253581108e1065f66e0e1b5697a79cfb300"
+  },
+  "tools-04": {
+    "path": "src/widgets/lod-lab/index.ts",
+    "needle": "export ",
+    "line": 14,
+    "sha256": "042a68d5eb678cf3bf9751bd7a011c442b612dca5400533874be21d970de6fad"
+  },
+  "tools-05": {
+    "path": "src/features/render-pipeline/audit.ts",
+    "needle": "export ",
+    "line": 37,
+    "sha256": "d087ed28836220bd8479d3e4f9485bb4f8d55cb5534013ee3de0b060303a65c2"
+  },
+  "tools-06": {
+    "path": "src/shared/ui/bootProgress.ts",
+    "needle": "export ",
+    "line": 1,
+    "sha256": "bba3ab12cfa48d5c60b66a7740eb257a9c845375fb14808feaf2428e9dea4332"
+  },
+  "tools-07": {
+    "path": "src/app/home/catalog.ts",
+    "needle": "still=1",
+    "line": 194,
+    "sha256": "e815fe68202b21b2ecb87bbd34e7b80c254a785ea823e7f5128655c2297398b4"
+  },
+  "tools-08": {
+    "path": "scripts/check-water-sim.mjs",
+    "needle": "import ",
+    "line": 32,
+    "sha256": "16cf75bcd2030860372cf23c050b8e0081c254c4e5f3bfaec1d049c63cf49806"
+  },
+  "tools-09": {
+    "path": "src/app/guiSettings.ts",
+    "needle": "export ",
+    "line": 8,
+    "sha256": "a5f176946c43013430ac9cee4a874b59e2994b06b957f543014d447a58312f62"
+  },
+  "tools-10": {
+    "path": "src/widgets/pipeline/PipelinePage.tsx",
+    "needle": "export ",
+    "line": 12,
+    "sha256": "cf39603c755e6e992b03b146bbbf3043522c2d528f27468f46f30f9caf72eb3a"
+  },
+  "integration-01": {
+    "path": "src/features/render-pipeline/host.ts",
+    "needle": "SceneHost",
+    "line": 11,
+    "sha256": "1d31f520b3607cc8e3bcf78c3a9d1a7035eda4d6a7b868909d8baaaeebc02330"
+  },
+  "integration-02": {
+    "path": "src/shared/fiber/sceneRoot.tsx",
+    "needle": "export ",
+    "line": 20,
+    "sha256": "615be414f882008dc5e4fbc665725a8e01ff7a77cd94c3d5cc111bef442cadd8"
+  },
+  "integration-03": {
+    "path": "docs/lessons-three-fork.md",
+    "needle": "## What exists",
+    "line": 15,
+    "sha256": "415de98444447ba7a05c4bdb43a1df03060ea8dc5e8d70db41a579cd2b875aa8"
+  },
+  "integration-04": {
+    "path": "src/app/main.ts",
+    "needle": "params.get('scene')",
+    "line": 83,
+    "sha256": "725338a4c4701a736192a0c5ad11b229336044401c0724bf5a4e1382ed583c1c"
+  }
+}

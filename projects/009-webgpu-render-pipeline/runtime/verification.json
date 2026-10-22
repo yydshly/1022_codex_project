@@ -1,0 +1,2515 @@
+{
+  "status": "passed",
+  "completed_on": "2026-10-22",
+  "upstream_commit": "ca576b601bf84527102f1768372aa8cd96a3c55a",
+  "scenes": {
+    "cornell": {
+      "status": "passed",
+      "first_frame": "passed",
+      "controls_after_switch": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -28,
+        "cameraElevation": 11.999999999999995,
+        "cameraDistance": 12.000000000000002,
+        "camera": [
+          -5.510549793021233,
+          4.794940289813111,
+          11.363836834343784
+        ],
+        "target": [
+          0,
+          2.3,
+          1
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 15991,
+        "renderCalls": 61649,
+        "computeCalls": 32584,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "cornell",
+        "sceneLabel": "Cornell Box",
+        "cameraLimits": [
+          5,
+          24
+        ],
+        "sceneStats": {
+          "meshes": 8,
+          "instances": 8,
+          "triangles": 96,
+          "water": false,
+          "architecture": "three"
+        }
+      },
+      "restart_during_loading": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 2.5444437451708133e-15,
+        "cameraDistance": 10,
+        "camera": [
+          0,
+          2.3000000000000003,
+          11
+        ],
+        "target": [
+          0,
+          2.3,
+          1
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 8412,
+        "renderCalls": 31393,
+        "computeCalls": 17348,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "cornell",
+        "sceneLabel": "Cornell Box",
+        "cameraLimits": [
+          5,
+          24
+        ],
+        "sceneStats": {
+          "meshes": 8,
+          "instances": 8,
+          "triangles": 96,
+          "water": false,
+          "architecture": "three"
+        }
+      },
+      "rebake": "passed in previous Cornell stage; see previous_cornell_stage"
+    },
+    "midsee-village": {
+      "status": "passed",
+      "first_frame": "passed",
+      "full_original_scene": true,
+      "worker_water": true,
+      "default_state": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664,
+        "camera": [
+          24.500000000000007,
+          14.399999999999997,
+          38.8
+        ],
+        "target": [
+          0,
+          -0.9,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 3641,
+        "renderCalls": 20287,
+        "computeCalls": 4946,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      },
+      "sun_zero": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 0,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664,
+        "camera": [
+          24.500000000000007,
+          14.399999999999997,
+          38.8
+        ],
+        "target": [
+          0,
+          -0.9,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 4261,
+        "renderCalls": 26487,
+        "computeCalls": 6186,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      },
+      "low_sun": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664,
+        "camera": [
+          24.500000000000007,
+          14.399999999999997,
+          38.8
+        ],
+        "target": [
+          0,
+          -0.9,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 4318,
+        "renderCalls": 27057,
+        "computeCalls": 6300,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      },
+      "side_camera": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 88.75463573323164,
+        "cameraElevation": 16.923743164339776,
+        "cameraDistance": 48.0936586256442,
+        "camera": [
+          46.00000000000001,
+          15.999999999999998,
+          5.10702591327572e-15
+        ],
+        "target": [
+          0,
+          2,
+          -1
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 4737,
+        "renderCalls": 31247,
+        "computeCalls": 7138,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      },
+      "keyboard_sliders": {
+        "sunAzimuth": 45,
+        "sunElevation": 54,
+        "sunIntensity": 4,
+        "cameraAzimuth": 87.99999999999999,
+        "cameraElevation": 17.999999999999993,
+        "cameraDistance": 48.2,
+        "camera": [
+          45.812999033053885,
+          16.89461912887246,
+          0.5998251789589413
+        ],
+        "target": [
+          0,
+          2,
+          -1
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 10830,
+        "renderCalls": 98167,
+        "computeCalls": 20522,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      },
+      "rebake": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": 87.99999999999999,
+        "cameraElevation": 17.999999999999993,
+        "cameraDistance": 48.2,
+        "camera": [
+          45.812999033053885,
+          16.89461912887246,
+          0.5998251789589413
+        ],
+        "target": [
+          0,
+          2,
+          -1
+        ],
+        "paused": false,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": false,
+        "frame": 15274,
+        "renderCalls": 142609,
+        "computeCalls": 30377,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      },
+      "mobile_camera_slider": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 31.999999999999996,
+        "cameraElevation": 18.000000000000007,
+        "cameraDistance": 48.499999999999986,
+        "camera": [
+          24.44318371392715,
+          14.087324227184949,
+          39.11727089709149
+        ],
+        "target": [
+          0,
+          -0.9,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 7090,
+        "renderCalls": 54777,
+        "computeCalls": 11844,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "architecture": "react-three-fiber"
+        }
+      }
+    },
+    "beach": {
+      "status": "passed",
+      "first_frame": "passed",
+      "initial": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 2099,
+        "renderCalls": 6187,
+        "computeCalls": 2186,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "low": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 3984,
+        "renderCalls": 25037,
+        "computeCalls": 5956,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "zero": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 0,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 4069,
+        "renderCalls": 25887,
+        "computeCalls": 6126,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "sixSliders": {
+        "sunAzimuth": 46,
+        "sunElevation": 54,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37,
+        "cameraElevation": 29,
+        "cameraDistance": 30.200000000000003,
+        "camera": [
+          -15.49605023490026,
+          13.941250531439382,
+          21.094771148442295
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": true,
+        "frame": 16287,
+        "renderCalls": 148077,
+        "computeCalls": 31516,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "rebake": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37,
+        "cameraElevation": 29,
+        "cameraDistance": 30.200000000000003,
+        "camera": [
+          -15.49605023490026,
+          13.941250531439382,
+          21.094771148442295
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": false,
+        "frame": 12075,
+        "renderCalls": 105957,
+        "computeCalls": 23092,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "rebakePassed": {
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": false
+      },
+      "pauseBefore": {
+        "sunAzimuth": 46,
+        "sunElevation": 54,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37,
+        "cameraElevation": 29,
+        "cameraDistance": 30.200000000000003,
+        "camera": [
+          -15.49605023490026,
+          13.941250531439382,
+          21.094771148442295
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": true,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": true,
+        "frame": 16300,
+        "renderCalls": 148207,
+        "computeCalls": 31542,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "pauseAfter": {
+        "sunAzimuth": 46,
+        "sunElevation": 54,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37,
+        "cameraElevation": 29,
+        "cameraDistance": 30.200000000000003,
+        "camera": [
+          -15.49605023490026,
+          13.941250531439382,
+          21.094771148442295
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": true,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": true,
+        "frame": 18109,
+        "renderCalls": 148207,
+        "computeCalls": 31542,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "stop": null
+    },
+    "forest": {
+      "status": "passed",
+      "first_frame": "passed",
+      "initial": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 2060,
+        "renderCalls": 4516,
+        "computeCalls": 3191,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      },
+      "sixSliders": {
+        "sunAzimuth": 46,
+        "sunElevation": 54,
+        "sunIntensity": 4.1,
+        "cameraAzimuth": -38,
+        "cameraElevation": 21.999999999999996,
+        "cameraDistance": 29.600000000000005,
+        "camera": [
+          -16.89660884210128,
+          11.488355165110995,
+          21.026673099887123
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 6238,
+        "renderCalls": 21228,
+        "computeCalls": 11547,
+        "commandRevision": 9,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      },
+      "rebake": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ],
+        "paused": false,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": false,
+        "frame": 8616,
+        "renderCalls": 30746,
+        "computeCalls": 17240,
+        "commandRevision": 14,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      },
+      "pauseBefore": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ],
+        "paused": true,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": false,
+        "frame": 8830,
+        "renderCalls": 31602,
+        "computeCalls": 17668,
+        "commandRevision": 15,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      },
+      "pauseAfter": {
+        "sunAzimuth": 110,
+        "sunElevation": 18,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ],
+        "paused": true,
+        "bakedSun": [
+          110,
+          18,
+          4
+        ],
+        "stale": false,
+        "frame": 11135,
+        "renderCalls": 31602,
+        "computeCalls": 17668,
+        "commandRevision": 15,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      }
+    }
+  },
+  "scene_switching": {
+    "village_to_cornell": "passed",
+    "cornell_to_village": "passed",
+    "switch_while_loading": "passed",
+    "strategy": "unload iframe, boot selected scene with new session; no simultaneous renderers"
+  },
+  "stop_and_restart": "passed: iframe about:blank, hidden, controls disabled; subsequent restart passed",
+  "pause_evidence": {
+    "start": {
+      "sunAzimuth": 110,
+      "sunElevation": 18,
+      "sunIntensity": 4,
+      "cameraAzimuth": 87.99999999999999,
+      "cameraElevation": 17.999999999999993,
+      "cameraDistance": 48.2,
+      "camera": [
+        45.812999033053885,
+        16.89461912887246,
+        0.5998251789589413
+      ],
+      "target": [
+        0,
+        2,
+        -1
+      ],
+      "paused": true,
+      "bakedSun": [
+        110,
+        18,
+        4
+      ],
+      "stale": false,
+      "frame": 16124,
+      "renderCalls": 143209,
+      "computeCalls": 30497,
+      "device": {
+        "vendor": "nvidia",
+        "architecture": "lovelace",
+        "maxStorageBuffersPerShaderStage": 16,
+        "maxComputeInvocationsPerWorkgroup": 1024,
+        "maxComputeWorkgroupSizeX": 1024
+      },
+      "pipeline": "render-pipeline",
+      "scene": "midsee-village",
+      "sceneLabel": "海岸村庄",
+      "cameraLimits": [
+        8,
+        120
+      ],
+      "sceneStats": {
+        "meshes": 181,
+        "instances": 22169,
+        "triangles": 2894054,
+        "water": true,
+        "architecture": "react-three-fiber"
+      }
+    },
+    "end": {
+      "sunAzimuth": 110,
+      "sunElevation": 18,
+      "sunIntensity": 4,
+      "cameraAzimuth": 87.99999999999999,
+      "cameraElevation": 17.999999999999993,
+      "cameraDistance": 48.2,
+      "camera": [
+        45.812999033053885,
+        16.89461912887246,
+        0.5998251789589413
+      ],
+      "target": [
+        0,
+        2,
+        -1
+      ],
+      "paused": true,
+      "bakedSun": [
+        110,
+        18,
+        4
+      ],
+      "stale": false,
+      "frame": 18927,
+      "renderCalls": 143209,
+      "computeCalls": 30497,
+      "device": {
+        "vendor": "nvidia",
+        "architecture": "lovelace",
+        "maxStorageBuffersPerShaderStage": 16,
+        "maxComputeInvocationsPerWorkgroup": 1024,
+        "maxComputeWorkgroupSizeX": 1024
+      },
+      "pipeline": "render-pipeline",
+      "scene": "midsee-village",
+      "sceneLabel": "海岸村庄",
+      "cameraLimits": [
+        8,
+        120
+      ],
+      "sceneStats": {
+        "meshes": 181,
+        "instances": 22169,
+        "triangles": 2894054,
+        "water": true,
+        "architecture": "react-three-fiber"
+      }
+    },
+    "stable_render_and_compute_calls": true,
+    "scope": "main pipeline drawing paused; independent water Worker is not claimed paused"
+  },
+  "device": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "maxStorageBuffersPerShaderStage": 16,
+    "maxComputeInvocationsPerWorkgroup": 1024,
+    "maxComputeWorkgroupSizeX": 1024
+  },
+  "last_browser_state": {
+    "sunAzimuth": 45,
+    "sunElevation": 55,
+    "sunIntensity": 4,
+    "cameraAzimuth": -37.79750461852344,
+    "cameraElevation": 30.365646166314622,
+    "cameraDistance": 30.0682556860221,
+    "camera": [
+      -15.500000000000004,
+      14.499999999999995,
+      20.500000000000004
+    ],
+    "target": [
+      0.4,
+      -0.7,
+      0
+    ],
+    "paused": false,
+    "bakedSun": [
+      45,
+      55,
+      4
+    ],
+    "stale": false,
+    "frame": 6275,
+    "renderCalls": 43917,
+    "computeCalls": 9732,
+    "commandRevision": 0,
+    "device": {
+      "vendor": "nvidia",
+      "architecture": "lovelace",
+      "maxStorageBuffersPerShaderStage": 16,
+      "maxComputeInvocationsPerWorkgroup": 1024,
+      "maxComputeWorkgroupSizeX": 1024
+    },
+    "pipeline": "render-pipeline",
+    "scene": "beach",
+    "sceneLabel": "热带海滩",
+    "cameraLimits": [
+      0.8,
+      100
+    ],
+    "cameraElevationLimits": [
+      -60,
+      85
+    ],
+    "detailLabels": [
+      "水面近看",
+      "棕榈叶片"
+    ],
+    "sceneStats": {
+      "meshes": 63,
+      "instances": 16446,
+      "triangles": 1794644,
+      "water": true,
+      "waterKind": "worker-shallow-water",
+      "architecture": "three"
+    }
+  },
+  "final_console": {
+    "finalBeach": [
+      {
+        "level": "warn",
+        "message": "THREE.TSL: \"atan2\" is overloaded. Use \"atan\" instead.",
+        "timestamp": "2026-10-22T04:20:03.563Z",
+        "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "[lightmap] 697 island(s) cover less than one texel at 0.1200 m/texel; they read their nearest charted neighbour",
+        "timestamp": "2026-10-22T04:20:06.390Z",
+        "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "[gi] growing the surfel pool 16384 → 262144 slots (187.0 MiB GPU). The cached radiance does not survive this and the cache will re-converge from empty.",
+        "timestamp": "2026-10-22T04:20:15.001Z",
+        "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "[lightmap] 1 chart(s) of 3667 rasterised no texel and stay unlit",
+        "timestamp": "2026-10-22T04:20:44.781Z",
+        "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "[lightmap] 1 chart(s) of 1805 rasterised no texel and stay unlit",
+        "timestamp": "2026-10-22T04:20:45.901Z",
+        "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+      }
+    ],
+    "prefixForest": [
+      {
+        "level": "warn",
+        "message": "[gi] growing the surfel pool 16384 → 262144 slots (187.0 MiB GPU). The cached radiance does not survive this and the cache will re-converge from empty.",
+        "timestamp": "2026-10-22T04:19:07.168Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "[lightmap] 1 chart(s) of 2198 rasterised no texel and stay unlit",
+        "timestamp": "2026-10-22T04:19:23.904Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+        "timestamp": "2026-10-22T04:19:26.863Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+        "timestamp": "2026-10-22T04:19:26.973Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+        "timestamp": "2026-10-22T04:19:27.028Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+        "timestamp": "2026-10-22T04:19:29.249Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+        "timestamp": "2026-10-22T04:19:29.543Z",
+        "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+      }
+    ]
+  },
+  "responsive_widths": [
+    375,
+    768,
+    1280
+  ],
+  "horizontal_page_overflow": false,
+  "production_build": "passed",
+  "upstream_algorithm_source_changes": true,
+  "tested_bridge_sha256": "aa7d0cb89e03cd22592dc2316183e393bae45fde4cdd8191e212e3e5d690006b",
+  "tested_parent_js_sha256": "f0e51f9a6b26c15dcc3b58d5009bd86d8e606e766dbb53868ada0bcd7e628117",
+  "tested_build_manifest_sha256": "6c3bbbe74d474f65718ff19e22526ccd044454959359ebd2755fca3be3846c43",
+  "numbered_prefix": "passed: forest first frame and canopy camera control in a sequential single-tab test",
+  "http_checks": [
+    {
+      "base": "http://127.0.0.1:8049/",
+      "files": 116,
+      "status": 200,
+      "byte_equal": true
+    },
+    {
+      "base": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/",
+      "files": 116,
+      "status": 200,
+      "byte_equal": true
+    }
+  ],
+  "configuration_experiments": [
+    {
+      "profile": "512 page, 0.03 m/texel",
+      "result": "single chart exceeded page size"
+    },
+    {
+      "profile": "512 page, 0.12 m/texel",
+      "result": "161/276 charts on a page had no measured texels; original guard rejected bake"
+    },
+    {
+      "profile": "2048 page, 0.12 m/texel, original full village",
+      "result": "one page, first frame and rebake passed; no checks removed"
+    },
+    {
+      "scene": "beach",
+      "profile": "2048 page, sample 0.5m, density 0.12m/texel",
+      "result": "packing exhausted page ceiling; generic upstream error called it a single oversized chart"
+    },
+    {
+      "scene": "beach",
+      "profile": "1024 page, sample 0.5m, density 0.12m/texel, original sampler",
+      "result": "564 of 3667 charts on page had no measurements; guard rejected bake"
+    },
+    {
+      "scene": "beach",
+      "profile": "1024 page, sample 0.12m, density 0.12m/texel, original sampler",
+      "result": "262144 surfel capacity exhausted over 452718 covered texels"
+    },
+    {
+      "scene": "beach",
+      "profile": "1024 page, sample 0.5m, density 0.12m/texel, covered-texel fallback guard",
+      "result": "five pages; original empty-chart and convergence checks passed; first frame and rebake passed"
+    },
+    {
+      "scene": "forest",
+      "profile": "2048 page, sample 0.7m, density 0.12m/texel, covered-texel fallback guard",
+      "result": "three pages; first frame and rebake passed"
+    }
+  ],
+  "counter_note": "renderer.info.frame is an internal counter, not displayed frames or FPS",
+  "limits": [
+    "Only Cornell Box, complete village, beach (van=0), forest with documented profiles and sampler patch verified",
+    "No acceptance of all 89 features, other scenes or independent physical-water lab",
+    "No full repository typecheck, physical-mobile GPU or FPS benchmark",
+    "Water changes over time; screenshots are response evidence, not static pixel A/B",
+    "No deployment or git commit/push",
+    "Concurrent full-scene tabs failed in this environment; single-scene preview recovered successfully"
+  ],
+  "previous_cornell_stage": {
+    "status": "passed",
+    "scene": "cornell",
+    "first_frame": "passed",
+    "sun_controls": "passed",
+    "camera_controls": "passed",
+    "rebake": "passed",
+    "device": {
+      "vendor": "nvidia",
+      "architecture": "lovelace",
+      "maxStorageBuffersPerShaderStage": 16,
+      "maxComputeInvocationsPerWorkgroup": 1024
+    },
+    "last_browser_state": {
+      "sunAzimuth": 45,
+      "sunElevation": 55,
+      "sunIntensity": 4,
+      "cameraAzimuth": 0,
+      "cameraElevation": 2.5444437451708133e-15,
+      "cameraDistance": 10,
+      "camera": [
+        0,
+        2.3000000000000003,
+        11
+      ],
+      "target": [
+        0,
+        2.3,
+        1
+      ],
+      "paused": false,
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "frame": 17424,
+      "renderCalls": 67565,
+      "computeCalls": 35542,
+      "device": {
+        "vendor": "nvidia",
+        "architecture": "lovelace",
+        "maxStorageBuffersPerShaderStage": 16,
+        "maxComputeInvocationsPerWorkgroup": 1024,
+        "maxComputeWorkgroupSizeX": 1024
+      },
+      "pipeline": "render-pipeline",
+      "scene": "cornell"
+    },
+    "final_console": [],
+    "pause_evidence": {
+      "renderCalls": 74377,
+      "computeCalls": 38948,
+      "stable_while_paused": true,
+      "run": "final-bridge boot before responsive stylesheet reload"
+    },
+    "completed_on": "2026-10-22",
+    "upstream_commit": "ca576b601bf84527102f1768372aa8cd96a3c55a",
+    "npm_ci": "passed",
+    "production_build": "passed",
+    "upstream_algorithm_source_changes": false,
+    "tested_bridge_sha256": "131f23adbbe3c10d79c10b06c1400a802aaf16c8440cfb89eb180325f96f5518",
+    "tested_build_manifest_sha256": "d2a7f0bf5f9e06c5e4ee94696fbe848e5f16cc9e16dcb35ba5618897440eb0da",
+    "responsive_widths": [
+      375,
+      768,
+      1280
+    ],
+    "horizontal_page_overflow": false,
+    "numbered_prefix": "passed",
+    "controls": [
+      "sun azimuth and elevation preset 110/18",
+      "sun elevation keyboard 55 to 54",
+      "sun intensity keyboard 4 to 0",
+      "camera preset -28/12/12",
+      "camera distance keyboard 10 to 10.1",
+      "reset 45/55/4 and camera 0/0/10",
+      "rebake updates bakedSun from 45/55/4 to 110/18/4",
+      "pause holds render/compute call counts",
+      "resume",
+      "stop unloads iframe and disables controls",
+      "restart"
+    ],
+    "http_checks": [
+      {
+        "base": "http://127.0.0.1:8049/",
+        "files": 51,
+        "status": 200,
+        "byte_equal": true
+      },
+      {
+        "base": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/",
+        "files": 51,
+        "status": 200,
+        "byte_equal": true
+      }
+    ],
+    "counter_note": "renderer.info.frame is an internal renderer counter, not displayed frames or FPS",
+    "limits": [
+      "Only Cornell Box and documented profile verified",
+      "No village/water/lab or full repository typecheck acceptance",
+      "No physical mobile device GPU or FPS benchmark",
+      "No deployment or git commit/push"
+    ],
+    "last_browser_state_run": "final page reload",
+    "image_changes": [
+      {
+        "baseline": "assets/runtime/default-light.png",
+        "comparison": "assets/runtime/sun-zero.png",
+        "changed_fraction_above_8_255": 0.20782,
+        "meaning": "control response evidence, not a quality score"
+      },
+      {
+        "baseline": "assets/runtime/default-light.png",
+        "comparison": "assets/runtime/sun-low-angle.png",
+        "changed_fraction_above_8_255": 0.39936,
+        "meaning": "control response evidence, not a quality score"
+      },
+      {
+        "baseline": "assets/runtime/default-light.png",
+        "comparison": "assets/runtime/camera-side.png",
+        "changed_fraction_above_8_255": 0.82042,
+        "meaning": "control response evidence, not a quality score"
+      }
+    ]
+  },
+  "scope": "Four pinned scene profiles: Cornell Box, complete midsee-village, beach without unavailable optional van, forest with opaque stream; one documented sampler coverage guard",
+  "concurrent_tab_experiment": {
+    "status": "not_passed",
+    "observed": "Two full village tabs loaded; direct preview tab crashed and numbered-prefix bake stopped at pass 1. Subsequent browser screenshots/input unavailable.",
+    "attribution": "not isolated; no claim of specific engine/GPU/host cause",
+    "policy": "Page scene switch always unloads previous iframe; concurrent tabs not in acceptance scope"
+  },
+  "delivery_browser": {
+    "url": "http://127.0.0.1:8049/?scene=beach#live-demo",
+    "page_html": "ready",
+    "interactive_render": "passed; original beach running with default sun, one scene instance, tab retained"
+  },
+  "last_browser_state_run": "Recovered single-scene direct preview, default village, controls verified again",
+  "recovery_after_concurrent_experiment": {
+    "status": "passed",
+    "controls": {
+      "sunAzimuth": 110,
+      "sunElevation": 18,
+      "sunIntensity": 4,
+      "cameraAzimuth": 88.75463573323164,
+      "cameraElevation": 16.923743164339776,
+      "cameraDistance": 48.0936586256442,
+      "camera": [
+        46.00000000000001,
+        15.999999999999998,
+        5.10702591327572e-15
+      ],
+      "target": [
+        0,
+        2,
+        -1
+      ],
+      "paused": false,
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": true,
+      "frame": 4071,
+      "renderCalls": 29897,
+      "computeCalls": 6868,
+      "device": {
+        "vendor": "nvidia",
+        "architecture": "lovelace",
+        "maxStorageBuffersPerShaderStage": 16,
+        "maxComputeInvocationsPerWorkgroup": 1024,
+        "maxComputeWorkgroupSizeX": 1024
+      },
+      "pipeline": "render-pipeline",
+      "scene": "midsee-village",
+      "sceneLabel": "海岸村庄",
+      "cameraLimits": [
+        8,
+        120
+      ],
+      "sceneStats": {
+        "meshes": 181,
+        "instances": 22169,
+        "triangles": 2894054,
+        "water": true,
+        "architecture": "react-three-fiber"
+      }
+    },
+    "finalState": {
+      "sunAzimuth": 45,
+      "sunElevation": 55,
+      "sunIntensity": 4,
+      "cameraAzimuth": 32.27008809082537,
+      "cameraElevation": 18.439519370060506,
+      "cameraDistance": 48.37127246620664,
+      "camera": [
+        24.500000000000007,
+        14.399999999999997,
+        38.8
+      ],
+      "target": [
+        0,
+        -0.9,
+        0
+      ],
+      "paused": false,
+      "bakedSun": [
+        45,
+        55,
+        4
+      ],
+      "stale": false,
+      "frame": 4118,
+      "renderCalls": 30367,
+      "computeCalls": 6962,
+      "device": {
+        "vendor": "nvidia",
+        "architecture": "lovelace",
+        "maxStorageBuffersPerShaderStage": 16,
+        "maxComputeInvocationsPerWorkgroup": 1024,
+        "maxComputeWorkgroupSizeX": 1024
+      },
+      "pipeline": "render-pipeline",
+      "scene": "midsee-village",
+      "sceneLabel": "海岸村庄",
+      "cameraLimits": [
+        8,
+        120
+      ],
+      "sceneStats": {
+        "meshes": 181,
+        "instances": 22169,
+        "triangles": 2894054,
+        "water": true,
+        "architecture": "react-three-fiber"
+      }
+    },
+    "errors": []
+  },
+  "four_scene_update": {
+    "status": "passed",
+    "completed_on": "2026-10-22",
+    "regressions": {
+      "cornell": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 0,
+        "cameraElevation": 2.5444437451708133e-15,
+        "cameraDistance": 10,
+        "camera": [
+          0,
+          2.3000000000000003,
+          11
+        ],
+        "target": [
+          0,
+          2.3,
+          1
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 7215,
+        "renderCalls": 27365,
+        "computeCalls": 15442,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "cornell",
+        "sceneLabel": "Cornell Box",
+        "cameraLimits": [
+          5,
+          24
+        ],
+        "cameraElevationLimits": [
+          -10,
+          75
+        ],
+        "detailLabels": [],
+        "sceneStats": {
+          "meshes": 8,
+          "instances": 8,
+          "triangles": 96,
+          "water": false,
+          "waterKind": "none",
+          "architecture": "three"
+        }
+      },
+      "cornellSide": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -27.99781275559689,
+        "cameraElevation": 12.000142770219206,
+        "cameraDistance": 11.999857931223897,
+        "camera": [
+          -5.510086000000001,
+          4.79494,
+          11.363919000000001
+        ],
+        "target": [
+          0,
+          2.3,
+          1
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 7298,
+        "renderCalls": 27697,
+        "computeCalls": 15608,
+        "commandRevision": 1,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "cornell",
+        "sceneLabel": "Cornell Box",
+        "cameraLimits": [
+          5,
+          24
+        ],
+        "cameraElevationLimits": [
+          -10,
+          75
+        ],
+        "detailLabels": [],
+        "sceneStats": {
+          "meshes": 8,
+          "instances": 8,
+          "triangles": 96,
+          "water": false,
+          "waterKind": "none",
+          "architecture": "three"
+        }
+      },
+      "village": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 32.27008809082537,
+        "cameraElevation": 18.439519370060506,
+        "cameraDistance": 48.37127246620664,
+        "camera": [
+          24.500000000000007,
+          14.399999999999997,
+          38.8
+        ],
+        "target": [
+          0,
+          -0.9,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 1711,
+        "renderCalls": 5717,
+        "computeCalls": 2320,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "cameraElevationLimits": [
+          -10,
+          75
+        ],
+        "detailLabels": [
+          "码头近看",
+          "屋顶近看"
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "react-three-fiber"
+        }
+      },
+      "villageQuay": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 33.69006752597978,
+        "cameraElevation": 9.448016435202302,
+        "cameraDistance": 18.275666882497067,
+        "camera": [
+          12,
+          5.999999999999999,
+          13.000000000000004
+        ],
+        "target": [
+          2,
+          3,
+          -2
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 1810,
+        "renderCalls": 6707,
+        "computeCalls": 2518,
+        "commandRevision": 1,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "cameraElevationLimits": [
+          -10,
+          75
+        ],
+        "detailLabels": [
+          "码头近看",
+          "屋顶近看"
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "react-three-fiber"
+        }
+      },
+      "villageSun": {
+        "sunAzimuth": 46,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": 33.69006752597978,
+        "cameraElevation": 9.448016435202302,
+        "cameraDistance": 18.275666882497067,
+        "camera": [
+          12,
+          5.999999999999999,
+          13.000000000000004
+        ],
+        "target": [
+          2,
+          3,
+          -2
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 1828,
+        "renderCalls": 6887,
+        "computeCalls": 2554,
+        "commandRevision": 2,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "midsee-village",
+        "sceneLabel": "海岸村庄",
+        "cameraLimits": [
+          8,
+          120
+        ],
+        "cameraElevationLimits": [
+          -10,
+          75
+        ],
+        "detailLabels": [
+          "码头近看",
+          "屋顶近看"
+        ],
+        "sceneStats": {
+          "meshes": 181,
+          "instances": 22169,
+          "triangles": 2894054,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "react-three-fiber"
+        }
+      },
+      "beachFinalBuild": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 5080,
+        "renderCalls": 35917,
+        "computeCalls": 8132,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      },
+      "beachRapidControls": {
+        "sunAzimuth": 46,
+        "sunElevation": 54,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": true,
+        "frame": 5137,
+        "renderCalls": 36487,
+        "computeCalls": 8246,
+        "commandRevision": 2,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      }
+    },
+    "responsive": [
+      {
+        "detailsVisible": true,
+        "options": 4,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      {
+        "detailsVisible": true,
+        "options": 4,
+        "scrollWidth": 753,
+        "width": 768
+      },
+      {
+        "detailsVisible": true,
+        "options": 4,
+        "scrollWidth": 1265,
+        "width": 1280
+      }
+    ],
+    "source_patches": [
+      {
+        "path": "src/shared/gi/bake/lightmapSurfels.ts",
+        "reason": "Only covered texels may claim a chart fallback sample; preserve empty-chart validation",
+        "original_sha256": "be18de3eaa005081f2dbddd3a83de11fd81658637cd6ff8eafa1c848767cc631",
+        "patched_sha256": "8d78e94b38e2ba20822daa19f8beb02556d0fd006dd4887b2badee92456224ea",
+        "before": "If(chart.greaterThanEqual(int(0)).and(texelSurfel.element(tid).lessThan(int(0))), () => {",
+        "after": "If(posSample.w.greaterThan(0.5).and(chart.greaterThanEqual(int(0))).and(texelSurfel.element(tid).lessThan(int(0))), () => {"
+      }
+    ],
+    "scope": "Sequential single-scene WebGPU execution, controls, detail views and rebake; no multi-instance or cross-device benchmark",
+    "numbered_prefix": {
+      "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/?scene=forest#live-demo",
+      "initial": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -38.857948488476545,
+        "cameraElevation": 23.175891848940307,
+        "cameraDistance": 29.474904579998224,
+        "camera": [
+          -17.000000000000004,
+          12,
+          20.500000000000004
+        ],
+        "target": [
+          0,
+          0.4,
+          -0.6
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 4453,
+        "renderCalls": 14200,
+        "computeCalls": 8033,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      },
+      "iframe": "live/index.html?scene=forest&session=1792642729722-lvxgiuv3x6l",
+      "canopy": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -11.309932474020213,
+        "cameraElevation": -29.870479337415155,
+        "cameraDistance": 8.232253640407347,
+        "camera": [
+          1.6,
+          2.4000000000000012,
+          5
+        ],
+        "target": [
+          3,
+          6.5,
+          -2
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 4663,
+        "renderCalls": 15040,
+        "computeCalls": 8453,
+        "commandRevision": 1,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "forest",
+        "sceneLabel": "针叶林与溪流",
+        "cameraLimits": [
+          0.8,
+          160
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "溪流近看",
+          "树冠仰看"
+        ],
+        "sceneStats": {
+          "meshes": 224,
+          "instances": 224,
+          "triangles": 2370258,
+          "water": false,
+          "waterKind": "opaque-stream-material",
+          "architecture": "three"
+        }
+      }
+    },
+    "delivery": {
+      "url": "http://127.0.0.1:8049/?scene=beach#live-demo",
+      "state": {
+        "sunAzimuth": 45,
+        "sunElevation": 55,
+        "sunIntensity": 4,
+        "cameraAzimuth": -37.79750461852344,
+        "cameraElevation": 30.365646166314622,
+        "cameraDistance": 30.0682556860221,
+        "camera": [
+          -15.500000000000004,
+          14.499999999999995,
+          20.500000000000004
+        ],
+        "target": [
+          0.4,
+          -0.7,
+          0
+        ],
+        "paused": false,
+        "bakedSun": [
+          45,
+          55,
+          4
+        ],
+        "stale": false,
+        "frame": 6275,
+        "renderCalls": 43917,
+        "computeCalls": 9732,
+        "commandRevision": 0,
+        "device": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024
+        },
+        "pipeline": "render-pipeline",
+        "scene": "beach",
+        "sceneLabel": "热带海滩",
+        "cameraLimits": [
+          0.8,
+          100
+        ],
+        "cameraElevationLimits": [
+          -60,
+          85
+        ],
+        "detailLabels": [
+          "水面近看",
+          "棕榈叶片"
+        ],
+        "sceneStats": {
+          "meshes": 63,
+          "instances": 16446,
+          "triangles": 1794644,
+          "water": true,
+          "waterKind": "worker-shallow-water",
+          "architecture": "three"
+        }
+      }
+    },
+    "console": {
+      "finalBeach": [
+        {
+          "level": "warn",
+          "message": "THREE.TSL: \"atan2\" is overloaded. Use \"atan\" instead.",
+          "timestamp": "2026-10-22T04:20:03.563Z",
+          "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "[lightmap] 697 island(s) cover less than one texel at 0.1200 m/texel; they read their nearest charted neighbour",
+          "timestamp": "2026-10-22T04:20:06.390Z",
+          "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "[gi] growing the surfel pool 16384 → 262144 slots (187.0 MiB GPU). The cached radiance does not survive this and the cache will re-converge from empty.",
+          "timestamp": "2026-10-22T04:20:15.001Z",
+          "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "[lightmap] 1 chart(s) of 3667 rasterised no texel and stay unlit",
+          "timestamp": "2026-10-22T04:20:44.781Z",
+          "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "[lightmap] 1 chart(s) of 1805 rasterised no texel and stay unlit",
+          "timestamp": "2026-10-22T04:20:45.901Z",
+          "url": "http://127.0.0.1:8049/live/assets/atlas-BaY8vHVU.js"
+        }
+      ],
+      "prefixForest": [
+        {
+          "level": "warn",
+          "message": "[gi] growing the surfel pool 16384 → 262144 slots (187.0 MiB GPU). The cached radiance does not survive this and the cache will re-converge from empty.",
+          "timestamp": "2026-10-22T04:19:07.168Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "[lightmap] 1 chart(s) of 2198 rasterised no texel and stay unlit",
+          "timestamp": "2026-10-22T04:19:23.904Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+          "timestamp": "2026-10-22T04:19:26.863Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+          "timestamp": "2026-10-22T04:19:26.973Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+          "timestamp": "2026-10-22T04:19:27.028Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+          "timestamp": "2026-10-22T04:19:29.249Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        },
+        {
+          "level": "warn",
+          "message": "THREE.AttributeNode: Vertex attribute \"uv\" not found on geometry.",
+          "timestamp": "2026-10-22T04:19:29.543Z",
+          "url": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/live/assets/atlas-BaY8vHVU.js"
+        }
+      ]
+    },
+    "responsive_after_spacing_fix": [
+      {
+        "options": [
+          "cornell",
+          "midsee-village",
+          "beach",
+          "forest"
+        ],
+        "presetGap": 7.999979019165039,
+        "scrollWidth": 1265,
+        "width": 1280
+      },
+      {
+        "options": [
+          "cornell",
+          "midsee-village",
+          "beach",
+          "forest"
+        ],
+        "presetGap": 8.000038146972656,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      {
+        "options": [
+          "cornell",
+          "midsee-village",
+          "beach",
+          "forest"
+        ],
+        "presetGap": 18.00004005432129,
+        "scrollWidth": 753,
+        "width": 768
+      }
+    ]
+  },
+  "previous_village_build": {
+    "upstream_algorithm_source_changes": false,
+    "tested_bridge_sha256": "4d4e4a75d34b8fb01aa87a129fa775609d606396d338fa9b4134af43fdb0870f",
+    "tested_parent_js_sha256": "82b8943f74002040bbcfef43102ae494d95a0402a9ac9777eda76098d24de74c",
+    "tested_build_manifest_sha256": "25577f4d407c044d947323fbc892f673b416eb578b3d6ef631d854dbb9160493",
+    "numbered_prefix": "HTTP resources and initial village construction passed; full GPU run not completed after concurrent-tab browser crash",
+    "delivery_browser": {
+      "url": "http://127.0.0.1:8049/#live-demo",
+      "page_html": "ready",
+      "interactive_render": "passed; complete village running, reset to original hero view, tab retained",
+      "recovery": "Browser control session reset, local preview service restarted; single-scene controls verified again"
+    },
+    "final_console": [],
+    "http_checks": [
+      {
+        "base": "http://127.0.0.1:8049/",
+        "files": 84,
+        "status": 200,
+        "byte_equal": true
+      },
+      {
+        "base": "http://127.0.0.1:8059/1022_codex_project/009-webgpu-render-pipeline/",
+        "files": 84,
+        "status": 200,
+        "byte_equal": true
+      }
+    ]
+  }
+}

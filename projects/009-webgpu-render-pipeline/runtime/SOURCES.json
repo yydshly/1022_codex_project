@@ -1,0 +1,190 @@
+{
+  "repositories": {
+    "upstream": {
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline.git",
+      "commit": "ca576b601bf84527102f1768372aa8cd96a3c55a"
+    },
+    "three": {
+      "url": "https://github.com/vibegameengine/three.js.git",
+      "commit": "7d3343686e52f532e97c67440f55b1adb7aba28c"
+    },
+    "fiber": {
+      "url": "https://github.com/vibegameengine/react-three-fiber.git",
+      "commit": "b297b512181dfddbb287f75374223a56ccf1757b"
+    }
+  },
+  "assets": [
+    {
+      "path": "public/textures/LDR_RGBA_0.png",
+      "git_blob": "fbe0757e8d2630edf25666bb506de08df47bad44",
+      "sha256": "54ad95664c4e751aa31d449291f1e7af0731fed996b76b663e2fe0a53e118e65",
+      "bytes": 4202841
+    },
+    {
+      "path": "public/exr/pizzo_pernice_puresky_2k.hdr",
+      "git_blob": "bf737829aebd09c9ae466b98c8604a02366e0e94",
+      "sha256": "55c199a301943e3c0f8222e7be70b6356408f747ac3442206c7e6d2fe5aa02a5",
+      "bytes": 4469283
+    },
+    {
+      "path": "public/textures/rock/Rock030_2K-JPG_Color.jpg",
+      "git_blob": "45bda14261744ed5242ef2000f08508be89cc455",
+      "sha256": "c7169827afa47148833a3d778bd2827f12b124852efcabf3364910b1cb6d4beb",
+      "bytes": 5905796
+    },
+    {
+      "path": "public/textures/rock/Rock030_2K-JPG_NormalGL.jpg",
+      "git_blob": "6722aa94c36088f0e17cc02502a2d36958d11292",
+      "sha256": "bf4b029b98fc771887e80807e28f97488c3a8936369152bd1020b2535415a5af",
+      "bytes": 10244967
+    },
+    {
+      "path": "public/textures/rock/Rock030_2K-JPG_Roughness.jpg",
+      "git_blob": "9856aba56d4859930fb90449f05fb4b2f821a2f4",
+      "sha256": "a057169aa693438170a969249eb7e1113078f04c38b3fc2766fdccf21d5a918f",
+      "bytes": 2506870
+    },
+    {
+      "path": "public/textures/rock/Rock030_2K-JPG_AmbientOcclusion.jpg",
+      "git_blob": "c274c48fccf5f281fdd2363d121062c29be0b99e",
+      "sha256": "f430913d66ff94e55c384d006e0365808b304dee513db4c27eeab49385c1c265",
+      "bytes": 2102489
+    },
+    {
+      "path": "public/textures/dirt/Ground037_2K-JPG_Color.jpg",
+      "git_blob": "3aa0b16c5e25c80e0a80decf46c1bdcb3cce3832",
+      "sha256": "86af35a54593548543a291a54bddfd3568fd90268f8f65d0f8e743b37d714782",
+      "bytes": 8674228
+    },
+    {
+      "path": "public/textures/dirt/Ground037_2K-JPG_NormalGL.jpg",
+      "git_blob": "4de0e07ec301c7c0344fb8020188a5ca5ec88df0",
+      "sha256": "99743f03f5f818d4a0ee3dca289d5c6f125b1e05f1e624a541455e2f7fb29eec",
+      "bytes": 10341826
+    },
+    {
+      "path": "public/art/sand/dry-grain-surface.png",
+      "git_blob": "0fecac9b6477f0313b2733a54e6f54583f572d19",
+      "sha256": "45dba2723e8bb7741a87087d3c0d28fb1724ff22425cceef5a3ad5224eaf426b",
+      "bytes": 3421388
+    },
+    {
+      "path": "public/art/sand/dry-grain-detail.png",
+      "git_blob": "48a01f62e0867c85dd0ab1eda9e4982c8e22980c",
+      "sha256": "767af557ca301969b92c36279ce38ca970d99e387dd36f924a9ddf13e638ff15",
+      "bytes": 2911229
+    },
+    {
+      "path": "public/art/sand/wind-ripples-surface.png",
+      "git_blob": "ba6a34eca5e843316365519ef79add1121a32436",
+      "sha256": "b6417c00d468250ed0ad251bfdf674f5be34f9a4e6e2493cb5102098be4feb26",
+      "bytes": 3731860
+    },
+    {
+      "path": "public/art/sand/wind-ripples-detail.png",
+      "git_blob": "3a11ad598ab56264da944bc9c2da30a2f901cbec",
+      "sha256": "8d616887349c1672470a4221c5539010252665039e195ed08bdba20ff9e099c6",
+      "bytes": 3315339
+    },
+    {
+      "path": "public/art/sand/wet-sand-surface.png",
+      "git_blob": "e23abd6c702f5a533aca6571b08c9febe7417a24",
+      "sha256": "52758a2553b6ff65f5f7e48ab0982a3273009b880ef572329e886662d70bf60c",
+      "bytes": 3646860
+    },
+    {
+      "path": "public/art/sand/wet-sand-detail.png",
+      "git_blob": "46ad08703304153f0a600b59610dcda75d0085fe",
+      "sha256": "61ebc34e721f2a09e9973f02831701129d14c4465d2c97b70a6f31ba0e765646",
+      "bytes": 3309484
+    },
+    {
+      "path": "public/art/sand/shell-litter-surface.png",
+      "git_blob": "9cc5dc1dc0c04647dd46e3a9754a2e4abd5abe5c",
+      "sha256": "08e536b5d0205de4bd2d5e707cd332d6df34ca7aef861b5e71796d943c4bd5c6",
+      "bytes": 2913780
+    },
+    {
+      "path": "public/art/sand/shell-litter-detail.png",
+      "git_blob": "55fe59ee6fc1410256d79220d94631233ea6ddbb",
+      "sha256": "882fcdf80aee4e70bd37ad8b7ffa988424f19b90bb8fa981096d77c717a1d3e9",
+      "bytes": 1592642
+    },
+    {
+      "path": "public/textures/forest/moss_color.jpg",
+      "git_blob": "42287134e94630c4ef56467912b3156bc4e2969b",
+      "sha256": "22fade401d9e1b488b9ceb17f8ace1e75ce3543de49049dba047cb3c30865a90",
+      "bytes": 648436
+    },
+    {
+      "path": "public/textures/forest/moss_normal.jpg",
+      "git_blob": "34a75900b8ed6784c10ea40dd607459dd9f97438",
+      "sha256": "04e0bcdb5d03461fd54035060f563ad9230376023822b9db0a077eb658363e54",
+      "bytes": 560943
+    },
+    {
+      "path": "public/textures/forest/moss_roughness.jpg",
+      "git_blob": "95e407e389872f5b61a8ffe6c17899afd9218a65",
+      "sha256": "e6b1ca44236e583a10da515088ae274a4af08c5383f066dbe02c8b96ecee89e1",
+      "bytes": 195823
+    },
+    {
+      "path": "public/textures/forest/floor_color.jpg",
+      "git_blob": "e5ff69d57eca232d404a9b95dcd3769fab99f187",
+      "sha256": "c694bfab40ec3fbaa06696646cc273d741eba334285cfd38e35a379764e06f59",
+      "bytes": 525961
+    },
+    {
+      "path": "public/textures/forest/floor_normal.jpg",
+      "git_blob": "8bdae978358895e53096be64b3c2f0ad579ae62c",
+      "sha256": "2452027f770e8f685440122f84b5129b26320d847d606d99b0db95c374794f3a",
+      "bytes": 516459
+    },
+    {
+      "path": "public/textures/forest/floor_roughness.jpg",
+      "git_blob": "b5dafb2cdb58ba95d44346f78bcb11866300b8a2",
+      "sha256": "4b84ce7de08e37d049a504003da88f7dea444d00b8461a0feed10f9cdc699c1d",
+      "bytes": 251535
+    },
+    {
+      "path": "public/textures/forest/granite_color.jpg",
+      "git_blob": "4f2dd8704ca3b1e7eeaeec786fe838963eb7fbd7",
+      "sha256": "39f352df1fc0d47b6561bad704e850a2a7ea4f1ce16281f4da07cf1fc61c73df",
+      "bytes": 618063
+    },
+    {
+      "path": "public/textures/forest/granite_normal.jpg",
+      "git_blob": "9d9f7cf1bb4f6ea9281a6930701f5e34312a76c3",
+      "sha256": "40d9f24631266a2d9b05afd6752c1a73020ff625c4c541a7358eb6d3a0c715f4",
+      "bytes": 531307
+    },
+    {
+      "path": "public/textures/forest/granite_roughness.jpg",
+      "git_blob": "ad3edab8e1e2b78a13227e49118936f69ff6a4c9",
+      "sha256": "a542ab017477a266d5244a24a89bef3f61ed6bc6e13f2d60f422c4e8af8daaaa",
+      "bytes": 371259
+    }
+  ],
+  "source_patches": [
+    {
+      "path": "src/shared/gi/bake/lightmapSurfels.ts",
+      "reason": "Only covered texels may claim a chart fallback sample; preserve empty-chart validation",
+      "original_sha256": "be18de3eaa005081f2dbddd3a83de11fd81658637cd6ff8eafa1c848767cc631",
+      "patched_sha256": "8d78e94b38e2ba20822daa19f8beb02556d0fd006dd4887b2badee92456224ea",
+      "before": "If(chart.greaterThanEqual(int(0)).and(texelSurfel.element(tid).lessThan(int(0))), () => {",
+      "after": "If(posSample.w.greaterThan(0.5).and(chart.greaterThanEqual(int(0))).and(texelSurfel.element(tid).lessThan(int(0))), () => {"
+    }
+  ],
+  "npm_lock_sha256": "b7dd71d1f6116c33d4afa0b1716d23289d97bc9245b0b936a3988a9f0ba173ec",
+  "fork_selection": "latest commit not later than the pinned main repository date",
+  "prepared": true,
+  "entry": "original Cornell Box + complete midsee-village + beach + forest + render-pipeline",
+  "source_code_changes": "one coverage guard in the lightmap fallback sampler; exact original/patched hashes in source_patches; runtime overlay adds boot, scene switching and controls",
+  "profile": {
+    "common": "64 maximum lightmap bake passes (minimum 32), 16 rays, FXAA, fixed exposure 1, no grain/fog/reflection pass",
+    "cornell": "4s budget, sample 0.25m, lightmap 0.08m/texel, probe spacing 3m, 64 probe passes, camera radius 5–24",
+    "midsee-village": "2048 lightmap page side, 6s budget, sample 0.7m, lightmap 0.12m/texel, probe spacing 8m, 32 probe passes, camera radius 8–120, original worker water simulation",
+    "beach": "1024 lightmap page side, 6s budget, sample 0.5m, lightmap 0.12m/texel, probe spacing 5m, 32 probe passes, camera radius 0.8–100, original worker water and foliage updates; van=0 because the pinned tree lacks its GLB",
+    "forest": "2048 lightmap page side, 6s budget, sample 0.7m, lightmap 0.12m/texel, probe spacing 12m, 32 probe passes, camera radius 0.8–160, original near/distant vegetation and opaque animated stream material"
+  }
+}

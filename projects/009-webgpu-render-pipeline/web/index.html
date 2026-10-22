@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="理解 WebGPU 光照效果实现：通过 BVH、Surfel、Lightmap 与空间探针计算反弹光，再合成实时阳光、阴影、水面和植被。附四场景交互、一图总览，以及游戏、空间漫游和 Web3D 展厅的复用方向。">
+  <meta name="theme-color" content="#101b1c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101b1c'/%3E%3Cpath d='M16 5 27 16 16 27 5 16Z' fill='none' stroke='%239de2c5' stroke-width='2'/%3E%3C/svg%3E">
+  <title>WebGPU 光照效果实现 · 原理、效果与复用场景</title>
+  <link rel="stylesheet" href="style.css?v=20261022-value-release">
+  <script src="data.js?v=20261022-value-release" defer></script>
+  <script src="app.js?v=20261022-value-release" defer></script>
+  <script src="explain-data.js?v=20261022-value-release" defer></script>
+  <script src="explain.js?v=20261022-value-release" defer></script>
+  <script src="live-demo.js?v=20261022-value-release" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#capabilities">跳到能力清单</a>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-symbol" aria-hidden="true">◈</span><span>RENDER ATLAS<small>项目研究 / 009</small></span></a>
+    <nav aria-label="页面导航"><a href="#value">核心价值</a><a href="#overview">一图总览</a><a href="#live-demo">实时演示</a><a href="#capabilities">能力</a><a href="#principles">原理</a><a href="#ai-comparison">AI 区别</a><a href="#scenes">场景</a></nav>
+    <a class="source-link" href="https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/tree/ca576b601bf84527102f1768372aa8cd96a3c55a" target="_blank" rel="noreferrer">上游源码 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> WEBGPU / THREE.JS / TSL</p>
+        <h1 id="hero-title">让三维场景<br>拥有自然的光照。</h1>
+        <p class="lead">这套库的核心，是在浏览器里实现三维场景的光照效果：让物体有明暗、反弹光和投影，让水面与树叶对光线产生响应。</p>
+        <p class="hero-description">先计算并缓存复杂的间接光，再逐帧组合实时阳光、阴影、材质和环境。可沉淀为<strong>游戏、空间漫游和 Web3D 展厅的渲染底座</strong>；本页用一张总览图、四个真实场景和 89 项源码条目说明如何实现与复用。</p>
+        <div class="hero-actions"><a class="button primary" href="#overview">从一张总览图开始 <span>↓</span></a><a class="text-link" href="#live-demo">亲手调整真实画面 <span>↗</span></a></div>
+        <div class="version-line"><code>ca576b6</code><span>四个场景已接入 · 原库 WebGPU 管线</span></div>
+      </div>
+      <figure class="hero-figure hero-guide">
+        <button class="image-button" data-image="overview" aria-label="放大光照效果、原理与复用的一图总览"><img src="assets/project-overview.png" alt="本研究生成的一图总览：光照效果的核心价值、原理流程、10 类全部 89 项能力、四场景实测与可复用方向" width="2200" height="4400" fetchpriority="high"></button>
+        <figcaption><span class="image-tag">我们的理解总览图</span><span>能力 · 原理 · 效果 · 场景 · 复用 <span aria-hidden="true">↗</span></span></figcaption>
+      </figure>
+    </section>
+    <section class="wrap value-section" id="value" aria-labelledby="value-title">
+      <div class="section-heading"><div><p class="eyebrow">VALUE / LIGHTING THAT CAN BE REUSED</p><h2 id="value-title">把“画面为什么好看”变成可复用的方法。</h2></div><p>最值得沉淀的是光照计算与渲染管线，以及与它协同的水面、植被和材质。它负责场景如何被看见；角色操作、任务和存档等玩法由目标项目实现。</p></div>
+      <div class="value-grid">
+        <article><span>01 / 原理</span><h3>先算反弹光，再实时成像。</h3><p>BVH 帮采样射线找到表面，Surfel 估计间接光，Lightmap 与空间探针保存照明。每帧读取缓存，叠加当前太阳、阴影和环境效果。改变太阳后，静态间接光需按需重烘焙。</p><a href="#principles">用通俗例子看算法 ↓</a></article>
+        <article><span>02 / 效果</span><h3>看得见受光、阴影与自然材质。</h3><p>背光处获得补光，彩色墙面影响附近物体，投影随太阳变化；海滩呈现透水、泡沫和棕榈，森林呈现树群、地表与溪流。反射、天空、雾和后期按接入配置启用。</p><a href="#live-demo">亲手调四个真实场景 ↓</a></article>
+        <article><span>03 / 复用</span><h3>成为游戏与 Web3D 的渲染底座。</h3><p>可用于海岛游戏、建筑漫游、产品展厅和图形学教学；进一步接入自有资产、角色和交互。需要整理场景接口、固定依赖与性能预算，并对目标设备单独验收。</p><a href="downloads/VALUE.md">阅读价值、扩展与使用说明 ↗</a></article>
+      </div>
+    </section>
+    <div class="numbers wrap" aria-label="研究规模"><div><strong>10</strong><span>能力分类</span></div><div><strong>89</strong><span>源码研究条目</span></div><div><strong>14</strong><span>场景与资料入口</span></div><div><strong>163</strong><span>参数名定位</span></div><div class="numbers-note">从 <strong>334 个文本文件</strong>取证<br>计数为本研究分类，非官方功能数量</div></div>
+
+    <section class="section wrap overview-section" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="eyebrow">START HERE / THE COMPLETE MAP</p><h2 id="overview-title">先用一张图，看懂整个库。</h2></div><p>从核心价值和工作流程，读到全部 89 项能力、四个真实场景、复用方向与边界。点击图里的能力板块可进入清单，点击实测截图可选择场景。</p></div>
+      <div class="overview-actions"><button class="button primary" type="button" data-image="overview">放大阅读总览图 ↗</button><a class="text-link" href="assets/project-overview.png" download>下载高清 PNG ↓</a><a class="text-link" href="assets/project-overview.svg" download>下载矢量 SVG ↓</a></div>
+      <p class="overview-hint">按从上到下的顺序阅读：价值 → 原理 → 能力 → 效果 → 复用 → 边界。小屏可点“放大阅读”，在图中横向滚动。</p>
+      <figure class="overview-figure">
+        <div class="overview-map">
+          <img src="assets/project-overview.svg" width="2200" height="4400" loading="lazy" alt="WebGPU 渲染库完整总览：光照与自然环境渲染的核心价值；BVH、Surfel、Lightmap 和空间探针的工作流程；10 类全部 89 项能力及接入标记；Cornell Box、村庄、海滩、森林四张本机实测图；游戏、空间漫游、展厅与教学的复用方向，以及验证和工程边界。">
+          <!-- OVERVIEW_HOTSPOTS_START -->
+          <a class="overview-hotspot" href="#principles"  style="left:3.63636%;top:5.63636%;width:92.72727%;height:2.63636%" aria-label="阅读通俗原理与算法" title="阅读通俗原理与算法"><span class="sr-only">阅读通俗原理与算法</span></a>
+          <a class="overview-hotspot" href="#principles"  style="left:3.63636%;top:11.18182%;width:17.45455%;height:3.75000%" aria-label="阅读三维场景的原理" title="阅读三维场景的原理"><span class="sr-only">阅读三维场景的原理</span></a>
+          <a class="overview-hotspot" href="#principles"  style="left:22.45455%;top:11.18182%;width:17.45455%;height:3.75000%" aria-label="阅读采样与估计的原理" title="阅读采样与估计的原理"><span class="sr-only">阅读采样与估计的原理</span></a>
+          <a class="overview-hotspot" href="#principles"  style="left:41.27273%;top:11.18182%;width:17.45455%;height:3.75000%" aria-label="阅读两类光照缓存的原理" title="阅读两类光照缓存的原理"><span class="sr-only">阅读两类光照缓存的原理</span></a>
+          <a class="overview-hotspot" href="#principles"  style="left:60.09091%;top:11.18182%;width:17.45455%;height:3.75000%" aria-label="阅读光照与环境的原理" title="阅读光照与环境的原理"><span class="sr-only">阅读光照与环境的原理</span></a>
+          <a class="overview-hotspot" href="#principles"  style="left:78.90909%;top:11.18182%;width:17.45455%;height:3.75000%" aria-label="阅读合成最终画面的原理" title="阅读合成最终画面的原理"><span class="sr-only">阅读合成最终画面的原理</span></a>
+          <a class="overview-hotspot" href="#group-pipeline" data-overview-category="pipeline" style="left:3.63636%;top:20.75000%;width:45.90909%;height:8.63636%" aria-label="查看渲染管线全部 8 项能力" title="查看渲染管线全部 8 项能力"><span class="sr-only">查看渲染管线全部 8 项能力</span></a>
+          <a class="overview-hotspot" href="#group-gi" data-overview-category="gi" style="left:50.45455%;top:20.75000%;width:45.90909%;height:8.63636%" aria-label="查看全局光照全部 10 项能力" title="查看全局光照全部 10 项能力"><span class="sr-only">查看全局光照全部 10 项能力</span></a>
+          <a class="overview-hotspot" href="#group-lightmap" data-overview-category="lightmap" style="left:3.63636%;top:29.84091%;width:45.90909%;height:8.63636%" aria-label="查看光照贴图与流送全部 10 项能力" title="查看光照贴图与流送全部 10 项能力"><span class="sr-only">查看光照贴图与流送全部 10 项能力</span></a>
+          <a class="overview-hotspot" href="#group-lighting" data-overview-category="lighting" style="left:50.45455%;top:29.84091%;width:45.90909%;height:8.63636%" aria-label="查看光源、阴影与反射全部 9 项能力" title="查看光源、阴影与反射全部 9 项能力"><span class="sr-only">查看光源、阴影与反射全部 9 项能力</span></a>
+          <a class="overview-hotspot" href="#group-water" data-overview-category="water" style="left:3.63636%;top:38.93182%;width:45.90909%;height:8.63636%" aria-label="查看海水与流体全部 13 项能力" title="查看海水与流体全部 13 项能力"><span class="sr-only">查看海水与流体全部 13 项能力</span></a>
+          <a class="overview-hotspot" href="#group-nature" data-overview-category="nature" style="left:50.45455%;top:38.93182%;width:45.90909%;height:8.63636%" aria-label="查看植被、地形与材质全部 10 项能力" title="查看植被、地形与材质全部 10 项能力"><span class="sr-only">查看植被、地形与材质全部 10 项能力</span></a>
+          <a class="overview-hotspot" href="#group-sky" data-overview-category="sky" style="left:3.63636%;top:48.02273%;width:45.90909%;height:8.63636%" aria-label="查看天空与大气全部 7 项能力" title="查看天空与大气全部 7 项能力"><span class="sr-only">查看天空与大气全部 7 项能力</span></a>
+          <a class="overview-hotspot" href="#group-post" data-overview-category="post" style="left:50.45455%;top:48.02273%;width:45.90909%;height:8.63636%" aria-label="查看镜头与后期全部 8 项能力" title="查看镜头与后期全部 8 项能力"><span class="sr-only">查看镜头与后期全部 8 项能力</span></a>
+          <a class="overview-hotspot" href="#group-tools" data-overview-category="tools" style="left:3.63636%;top:57.11364%;width:45.90909%;height:8.63636%" aria-label="查看诊断与研究工具全部 10 项能力" title="查看诊断与研究工具全部 10 项能力"><span class="sr-only">查看诊断与研究工具全部 10 项能力</span></a>
+          <a class="overview-hotspot" href="#group-integration" data-overview-category="integration" style="left:50.45455%;top:57.11364%;width:45.90909%;height:8.63636%" aria-label="查看集成与使用边界全部 4 项能力" title="查看集成与使用边界全部 4 项能力"><span class="sr-only">查看集成与使用边界全部 4 项能力</span></a>
+          <a class="overview-hotspot" href="#live-demo" data-overview-scene="cornell" style="left:3.63636%;top:70.40909%;width:22.50000%;height:9.20455%" aria-label="选择Cornell Box真实演示" title="选择Cornell Box真实演示"><span class="sr-only">选择Cornell Box真实演示</span></a>
+          <a class="overview-hotspot" href="#live-demo" data-overview-scene="midsee-village" style="left:27.04545%;top:70.40909%;width:22.50000%;height:9.20455%" aria-label="选择完整海岸村庄真实演示" title="选择完整海岸村庄真实演示"><span class="sr-only">选择完整海岸村庄真实演示</span></a>
+          <a class="overview-hotspot" href="#live-demo" data-overview-scene="beach" style="left:50.45455%;top:70.40909%;width:22.50000%;height:9.20455%" aria-label="选择热带海滩真实演示" title="选择热带海滩真实演示"><span class="sr-only">选择热带海滩真实演示</span></a>
+          <a class="overview-hotspot" href="#live-demo" data-overview-scene="forest" style="left:73.86364%;top:70.40909%;width:22.50000%;height:9.20455%" aria-label="选择针叶林与溪流真实演示" title="选择针叶林与溪流真实演示"><span class="sr-only">选择针叶林与溪流真实演示</span></a>
+          <a class="overview-hotspot" href="#boundaries"  style="left:3.63636%;top:87.52273%;width:92.72727%;height:2.43182%" aria-label="阅读架构、运行与复用条件" title="阅读架构、运行与复用条件"><span class="sr-only">阅读架构、运行与复用条件</span></a>
+          <a class="overview-hotspot" href="#boundaries"  style="left:3.63636%;top:92.15909%;width:30.09091%;height:4.65909%" aria-label="阅读验证与画质的准确范围" title="阅读验证与画质的准确范围"><span class="sr-only">阅读验证与画质的准确范围</span></a>
+          <a class="overview-hotspot" href="#boundaries"  style="left:34.95455%;top:92.15909%;width:30.09091%;height:4.65909%" aria-label="阅读复用与工程条件的准确范围" title="阅读复用与工程条件的准确范围"><span class="sr-only">阅读复用与工程条件的准确范围</span></a>
+          <a class="overview-hotspot" href="#boundaries"  style="left:66.27273%;top:92.15909%;width:30.09091%;height:4.65909%" aria-label="阅读能力定位的准确范围" title="阅读能力定位的准确范围"><span class="sr-only">阅读能力定位的准确范围</span></a>
+          <!-- OVERVIEW_HOTSPOTS_END -->
+        </div>
+        <figcaption>原创研究总览 · 89 项能力已按固定源码列全；四张缩略图来自本机真实运行，仅缩放排版。可复用方向为能力推导，完整范围见 <a href="downloads/OVERVIEW.md" download>读图说明与来源</a>。</figcaption>
+      </figure>
+      <nav class="overview-reading-path" aria-label="总览后的阅读入口"><a href="#live-demo">01 亲手看效果 ↓</a><a href="#principles">02 看通俗原理 ↓</a><a href="#capabilities">03 查全部能力 ↓</a><a href="#boundaries">04 看复用边界 ↓</a></nav>
+    </section>
+
+    <section class="section wrap live-section" id="live-demo" aria-labelledby="live-title">
+      <div class="section-heading"><div><p class="eyebrow">LIVE / ORIGINAL WEBGPU PIPELINE</p><h2 id="live-title">从一间房，到海滩与森林。</h2></div><p>切换 Cornell Box、村庄、海滩和森林，移动太阳、环绕相机。近看透明海水、棕榈叶片、林下地表与溪流，观察原库真实绘制的结果。</p></div>
+      <div class="live-scene-picker"><label for="live-scene">选择真实场景</label><select id="live-scene"><option value="cornell">Cornell Box · 室内光照</option><option value="midsee-village">海岸村庄 · 建筑与水面</option><option value="beach">热带海滩 · 浅水与棕榈</option><option value="forest">针叶林与溪流 · 植被与地表</option></select><span>切换会重新准备场景与光照，也可在加载时切换。</span></div>
+      <div class="live-toolbar"><div><span class="live-indicator" id="live-indicator"></span><span id="live-status" role="status" aria-live="polite">尚未启动 · 按需加载真实渲染</span></div><div class="live-toolbar-actions"><button type="button" class="button primary" id="start-live">启动真实演示</button><button type="button" class="live-small-button" id="stop-live" disabled>停止并释放画面</button></div></div>
+      <div class="live-layout">
+        <div class="live-screen">
+          <div class="live-placeholder" id="live-placeholder"><span class="eyebrow">FOUR SCENES / INTERACTIVE</span><h3>选择场景，再把太阳移一移。</h3><p>Cornell Box 看反弹光，村庄看建筑与海岸，海滩看浅水和棕榈，森林看针叶林与溪流。四个场景共用太阳和相机控制。</p><p class="live-requirement">需要 WebGPU。首次启动会生成场景、编译着色器并烘焙光照；室外场景准备时间更长。</p></div>
+          <iframe id="live-frame" title="原库 Cornell Box 的真实 WebGPU 渲染画面" allow="fullscreen" hidden></iframe>
+          <p class="live-canvas-help">画面内拖动可旋转，滚轮 / 双指可缩放；也可使用相机滑杆。</p>
+        </div>
+        <div class="live-panel">
+          <fieldset id="live-controls" disabled><legend>调整这个场景</legend>
+            <div class="live-control-heading"><span>太阳</span><span>固定曝光 · 看得见强度变化</span></div>
+            <label class="live-range" for="live-sun-azimuth"><span>太阳方位角 <output for="live-sun-azimuth" id="out-sun-azimuth">45°</output></span><input type="range" id="live-sun-azimuth" min="-180" max="180" step="1" value="45"></label>
+            <label class="live-range" for="live-sun-elevation"><span>太阳高度角 <output for="live-sun-elevation" id="out-sun-elevation">55°</output></span><input type="range" id="live-sun-elevation" min="5" max="85" step="1" value="55"></label>
+            <label class="live-range" for="live-sun-intensity"><span>光照强度 <output for="live-sun-intensity" id="out-sun-intensity">4.0</output></span><input type="range" id="live-sun-intensity" min="0" max="12" step="0.1" value="4"></label>
+            <div class="live-presets" role="group" aria-label="太阳预设"><button type="button" data-sun-preset="high">高处阳光</button><button type="button" data-sun-preset="low">低角度光</button><button type="button" data-sun-preset="dim">弱光</button></div>
+            <div class="live-control-heading camera-heading"><span>相机</span><span>同一三维场景重新成像</span></div>
+            <label class="live-range" for="live-camera-azimuth"><span>相机环绕角 <output for="live-camera-azimuth" id="out-camera-azimuth">0°</output></span><input type="range" id="live-camera-azimuth" min="-180" max="180" step="1" value="0"></label>
+            <label class="live-range" for="live-camera-elevation"><span>相机仰角 <output for="live-camera-elevation" id="out-camera-elevation">0°</output></span><input type="range" id="live-camera-elevation" min="-10" max="75" step="1" value="0"></label>
+            <label class="live-range" for="live-camera-distance"><span>相机距离 <output for="live-camera-distance" id="out-camera-distance">10.0</output></span><input type="range" id="live-camera-distance" min="5" max="24" step="0.1" value="10"></label>
+            <div class="live-presets" role="group" aria-label="相机预设"><button type="button" data-camera-preset="front">正面</button><button type="button" data-camera-preset="side">斜侧</button><button type="button" data-camera-preset="above">俯看</button></div>
+            <div class="live-presets live-details" id="live-detail-presets" role="group" aria-label="场景细节视角" hidden><button type="button" id="live-detail-a" data-camera-preset="detailA">细节视角一</button><button type="button" id="live-detail-b" data-camera-preset="detailB">细节视角二</button></div>
+            <div class="live-extra-actions"><button type="button" id="reset-live">恢复初始参数</button><button type="button" id="pause-live" aria-pressed="false">暂停画面</button></div>
+            <button type="button" class="live-rebake" id="rebake-live">按当前太阳重烘焙间接光</button>
+          </fieldset>
+        </div>
+      </div>
+      <div class="live-feedback"><p id="live-cache-note">调整太阳后，直接光与阴影实时更新；静态反弹光需点击重烘焙。</p><span id="live-frame-count">等待渲染</span></div>
+      <p class="live-actual-state" id="live-actual-state">控制值将在引擎应用后回传到这里。</p>
+      <p class="live-scene-facts" id="live-scene-facts">四个场景共用原库渲染管线；海滩/村庄使用浅水系统，森林使用溪流材质。</p>
+      <details class="live-scope"><summary>这个演示实际运行了什么？ <span aria-hidden="true">＋</span></summary><p>固定上游 <code>ca576b6</code> 的 Cornell Box、完整海岸村庄、海滩、森林、Surfel/BVH 烘焙、Lightmap / 探针、太阳阴影与画面合成；使用作者 Three.js fork 的同期版本。页面增加启动与控制桥接；原库小块补采样另加一条有效表面判断，保留正确性检查，详见复现记录。</p><p>为了让光照变化容易辨认，固定曝光为 1，使用 FXAA，关闭颗粒、体积雾和独立反射通道。背景 HDR 保持固定，太阳滑杆调整显式方向光。村庄保留原库水面 Worker、房屋与植被，使用 2048 光照页、0.12 m/texel 和较疏采样以控制启动成本。海滩保留浅水、浮球和棕榈风动；可选房车因固定源码缺少模型而关闭。森林保留近远景植被与地表，溪流使用不透明波纹材质。四场景按需加载；它们的运行不代表全部 89 项能力、独立物理水实验室或任意设备均已验收。</p><p><a href="downloads/RUNTIME.md" download>复现步骤与实测记录 ↗</a> · <a href="live/build-info.json" target="_blank" rel="noreferrer">构建来源 ↗</a> · <a href="live/licenses/npm-NOTICES.txt" target="_blank" rel="noreferrer">依赖声明 ↗</a></p></details>
+    </section>
+
+    <section class="section wrap visuals-section" id="visuals" aria-labelledby="visuals-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / WHAT IT LOOKS LIKE</p><h2 id="visuals-title">先分清已有画面与概念目标。</h2></div><p>两张图均来自作者的光照研究文档。构图不同，不作为严格的像素前后对照。</p></div>
+      <div class="visual-grid">
+        <figure><button class="image-button" data-image="baseline" aria-label="放大历史运行画面"><img src="assets/upstream/lighting-baseline.png" alt="上游历史画面，建筑和树冠较暗，水下岩石可见" width="1529" height="1182" loading="lazy"></button><figcaption><span class="image-tag">历史运行画面</span><h3>能看见渲染结果，也能看见待改进处。</h3><p>建筑、树冠、水深、岸线与泡沫已在画面中；曝光和光照层次仍是作者研究的问题。非本次运行。</p></figcaption></figure>
+        <figure><button class="image-button" data-image="concept" aria-label="放大概念参考图，非运行效果"><img src="assets/upstream/lighting-concept.png" alt="上游概念参考图：明亮暖色建筑与更鲜明的水面光泽，非运行效果" width="1448" height="1086" loading="lazy"></button><figcaption><span class="image-tag concept-tag">概念参考 · 非运行效果</span><h3>目标是更清楚的受光关系与水岸层次。</h3><p>这张图用于解释画面目标，不能证明代码已达到相同品质，也不能证明 120 FPS 已实现。</p></figcaption></figure>
+      </div>
+      <p class="caption-source">图片原样提取，未重绘或调色。<a href="https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/public/lighting-look-development.html" target="_blank" rel="noreferrer">查看原始文档 ↗</a> · <a href="downloads/media.json" download>来源与哈希</a></p>
+    </section>
+
+    <section class="section atlas-section" id="capabilities" aria-labelledby="atlas-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">02 / CAPABILITY INDEX</p><h2 id="atlas-title">从画面效果，追到实现依据。</h2></div><p>全部条目按当前接入范围分类。点击一项，查看原理、边界、场景和固定提交的源码。</p></div>
+        <div class="filter-panel">
+          <div class="search-row"><label class="search-field"><span aria-hidden="true">⌕</span><input id="capability-search" type="search" placeholder="搜索能力、效果、原理或参数，如：泡沫、反射、probeLive" autocomplete="off" aria-label="搜索能力"></label><label class="status-label">接入范围<select id="status-filter" aria-label="筛选接入范围"><option value="all">全部接入范围</option></select></label><button class="reset-button" id="reset-filters" type="button">重置</button></div>
+          <div class="category-chips" id="category-filters" role="group" aria-label="能力分类"></div>
+          <div class="filter-footer"><p id="result-count" role="status" aria-live="polite"></p><span>源码已核实 ≠ 本机运行已验收</span></div>
+        </div>
+        <div id="capability-results"></div>
+        <noscript><p class="notice">请启用 JavaScript 使用筛选，或下载完整 Markdown 能力清单。</p></noscript>
+      </div>
+    </section>
+
+    <section class="section wrap lesson-section" id="principles" aria-labelledby="principles-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / UNDERSTAND THE LIGHT</p><h2 id="principles-title">红墙旁的白球，为什么会带一点红？</h2></div><p>用一个小场景看懂：它如何计算光、为什么要采样，以及怎样把结果留给下一帧。</p></div>
+      <p class="lesson-intro">先给定物体的形状、材质、灯光和相机，再按图形学与数值算法算出画面。<strong>打光只是其中一部分</strong>；水怎么运动、天空怎么变色、画面怎么稳定，也各有算法。</p>
+      <details class="model-disclosure"><summary>先分清：“三维模型”“数学模型”“AI 模型”分别是什么？ <span aria-hidden="true">＋</span></summary><div class="model-grid" id="model-meanings"></div></details>
+      <figure class="lesson-figure"><button class="image-button" data-image="light" aria-label="放大红墙与白球的光照原理图解"><img src="assets/light-transport-explained.svg" width="1440" height="860" loading="lazy" alt="太阳直接照亮红墙和白球，表面采样估计红色反弹光，再存入 Lightmap 与空间探针供每帧复用"></button><figcaption>原创教学示意 · 点击可放大。箭头表示光能关系；实际积分器从表面采样方向估计来光。非上游运行结果。</figcaption></figure>
+      <div class="lesson-controls" id="light-step-controls" role="group" aria-label="选择白球光照讲解步骤"></div>
+      <article class="light-explanation" id="light-explanation" aria-live="polite" aria-atomic="true"></article>
+      <div class="sampling-notes"><div><h3>采样，像量一批方向来的光。</h3><p>不能每帧穷举所有路径，就量一些方向，再按权重估计整体。采样更多通常更稳定，也更费计算；最终颜色还要结合材质。</p></div><div><h3>探针，像放在空间里的测光站。</h3><p>物体按位置从附近八个探针混合取光，还考虑朝向与遮挡。它在已有照明数据间插值，不是 AI 猜测这个球该有多亮。</p></div></div>
+      <div class="algorithm-heading" id="algorithms"><p class="eyebrow">ALGORITHMS / 09 GROUPS</p><h3>算法的名字，可以还原成具体工作。</h3><p>先读一句话和例子，再展开方法、限制与固定源码。这里整理九组主要算法，并非新增九项能力。</p></div>
+      <div class="algorithm-grid" id="algorithm-grid"></div>
+      <p class="lesson-footnote">想继续看工程如何串联？ <a href="#pipeline">六步管线 ↓</a> · <a href="downloads/PRINCIPLES-AND-AI.md" download>下载完整原理说明 ↗</a></p>
+    </section>
+
+    <section class="section wrap pipeline-section" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / THE FULL PIPELINE</p><h2 id="pipeline-title">先存下光，再让画面逐帧流动。</h2></div><p>静态表面读光照贴图；其他接收对象取空间探针。直接光、阴影和环境效果再实时组合。</p></div>
+      <div class="pipeline-layout"><div class="pipeline-steps" id="pipeline-steps" role="group" aria-label="原理步骤"></div><div class="pipeline-detail" id="pipeline-detail" aria-live="polite"></div></div>
+      <details class="map-disclosure"><summary>展开完整光照与实时画面图解 <span aria-hidden="true">＋</span></summary><button class="image-button" data-image="map" aria-label="放大渲染管线图解"><img src="assets/capability-map.svg" alt="先构建场景、烘焙 Lightmap 与探针，再逐帧组合直接光、水面、大气和后期" width="1440" height="1000" loading="lazy"></button></details>
+      <div class="principle-note"><span>关键取舍</span><p><strong>可选实时更新与默认烘焙分开。</strong> <code>probeLive</code> 和 <code>surfelGi</code> 默认关闭；即便打开实时探针，也不会自动重算整张静态 Lightmap。</p></div>
+    </section>
+
+    <section class="section compare-section" id="ai-comparison" aria-labelledby="comparison-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">04 / RENDERING & AI</p><h2 id="comparison-title">一个按场景计算，一个按条件生成。</h2></div><p>同样可以把房子改成夕阳，输入、控制方式和连续视角的依据却不同。这里比较常见的单张图片重绘。</p></div>
+      <figure class="lesson-figure"><button class="image-button" data-image="comparison" aria-label="放大三维渲染与 AI 图像处理的流程对照"><img src="assets/rendering-vs-ai.svg" width="1440" height="720" loading="lazy" alt="左侧三维几何和光照通过采样缓存着色成像；右侧照片和编辑条件由训练得到的模型生成外观，AI 也能使用结构约束"></button><figcaption>两条流程均为教学示意，没有使用 AI 生成前后对比图；本库当前没有现成 AI 接口。</figcaption></figure>
+      <div class="scenario-heading"><h3>把问题放回同一栋房子。</h3><p>选择一种任务，比较实际要准备什么、会改变什么。</p></div>
+      <div class="scenario-controls" id="scenario-controls" role="group" aria-label="选择房屋处理情境"></div>
+      <article class="scenario-content" id="scenario-content" aria-live="polite" aria-atomic="true"></article>
+      <details class="comparison-disclosure"><summary>逐项比较：输入、控制、结构、视角与成本 <span>7 个维度 ＋</span></summary><div id="comparison-table"></div></details>
+      <aside class="ai-nuance"><h3>AI 也能接受空间约束。</h3><p id="ai-nuance-text"></p><a href="https://arxiv.org/abs/2302.05543v3" target="_blank" rel="noreferrer">参考 ControlNet 原始论文 ↗</a><p class="lesson-footnote">三维渲染也有采样、缓存和离散化误差。这里比较工作方式，不把任一方式等同于绝对物理真实。</p></aside>
+      <div class="hybrid-note"><span>可以组合</span><p><strong>AI 辅助准备素材 → 检查几何与材质 → 三维渲染连续视图。</strong><br>也可另行开发深度、法线等渲染输出与 AI 的连接；这是扩展思路，不是本库已经接通的能力。</p></div>
+    </div></section>
+
+    <section class="section scene-section" id="scenes" aria-labelledby="scenes-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">05 / SCENE MAP</p><h2 id="scenes-title">每个场景，回答一个具体问题。</h2></div><p>14 个入口包含主场景、测试夹具、实验室和阅读页。复制路由供上游复现使用；上方真实演示已接入 Cornell Box、完整村庄、海滩与森林，其余入口供源码研究与后续复现。</p></div>
+      <p class="inline-note">独立实验室与 <code>/pipeline</code> 在目录中声明了路径，但固定版本缺少对应 HTML / 路由装配，需要先补接。</p>
+      <div class="scene-grid" id="scene-grid"></div>
+    </div></section>
+
+    <section class="section wrap" id="parameters" aria-labelledby="parameters-title">
+      <div class="section-heading"><div><p class="eyebrow">06 / PARAMETER REFERENCES</p><h2 id="parameters-title">参数是源码路标。</h2></div><p>从字面量访问中定位 163 个参数名。默认值、单位与入口各有不同；它不是稳定 API 或逐项运行验收。</p></div>
+      <details class="parameter-disclosure"><summary>展开参数检索 <span>163 个参数名 ＋</span></summary><label class="parameter-search-label">查找参数<input id="parameter-search" type="search" placeholder="如 sun、water、taa、bake" aria-label="搜索参数名"></label><p id="parameter-count" class="muted" role="status"></p><div class="parameter-grid" id="parameter-results"></div></details>
+    </section>
+
+    <section class="section boundary-section" id="boundaries" aria-labelledby="boundaries-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">07 / SCOPE & EVIDENCE</p><h2 id="boundaries-title">完整理解，也包括这些边界。</h2></div><p>实现存在、入口可达、画质达标和性能达标，是不同层面的结论。本页已运行 Cornell Box、完整村庄、海滩与森林的指定配置；全部条目与其他场景仍需分别验证。</p></div>
+      <div class="boundary-grid" id="boundary-grid"></div>
+      <div class="download-panel"><div><p class="eyebrow">READ / REUSE THE RESEARCH</p><h3>把清单、证据与原理带走。</h3><p>完整研究资料包含 Markdown、JSON、原始来源记录和配图。</p></div><div class="download-actions"><a class="button primary" href="downloads/research-bundle.zip" download>下载研究资料 ↓</a><a class="text-link" href="downloads/capabilities.json" download>能力 JSON ↗</a><a class="text-link" href="downloads/SOURCE.json" download>取证索引 ↗</a></div></div>
+    </div></section>
+  </main>
+  <footer class="wrap site-footer"><div><strong>009 / WEBGPU RENDER ATLAS</strong><p>研究版本 <code>ca576b6</code> · 334 个文本文件 · 中文能力整理</p><p>两张上游图权利归原作者/素材权利人；上游未提供仓库级许可证。</p></div><div><a href="downloads/NOTICE.md" download>来源与新增范围</a><a href="downloads/REPRODUCTION.md" download>运行条件</a><a href="https://github.com/vibegameengine/web-starter-kit-webgpu-pipline" target="_blank" rel="noreferrer">关注源库 ↗</a></div></footer>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span>CAPABILITY NOTE</span><button class="dialog-close" type="button" aria-label="关闭能力详情">关闭 ×</button></div><div id="detail-content"></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-dialog-title"><div class="dialog-top"><span id="image-dialog-title"></span><button class="dialog-close" type="button" aria-label="关闭图片">关闭 ×</button></div><div class="image-viewport" tabindex="0" role="region" aria-label="图片查看区域，图解可横向滚动"><img id="expanded-image" alt=""></div><p id="image-dialog-caption"></p></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

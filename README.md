@@ -15,7 +15,7 @@
 按收录顺序编号，从 **001** 开始递增。编号长期保留，不因进度、热度或归档重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **7** 个项目。
+当前收录 **8** 个项目。
 
 | 编号 | 项目 | 关注源库 | 一句话摘要 | 研究进度 | Web 演示 |
 | --- | --- | --- | --- | --- | --- |
@@ -26,6 +26,7 @@
 | 005 | [Scene Card Studio](projects/005-scene-card-studio/README.md) | [scene-card-studio](https://github.com/swping999/scene-card-studio) | 照片二次创作工作流：原图与表达目标输入，整理场景卡和提示词，交外部模型改图、对照返修，输出成片与记录；适合相册、内容创作和多图统一，可扩展风格模板、模型接入与团队流程，让要求可复用、结果可检查 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/005-scene-card-studio/) |
 | 006 | [oil-tone · 写作约束拆解](projects/006-oil-tone/README.md) | [oil-tone](https://github.com/oil-oil/oil-tone) | 将 23 条写作规则交给 AI，引导起草、润色与结构调整，保留事实、减少空话；适用于文章、产品文案与口播，可复用为我们的编辑标准和完整提示词 | 研究中 | [在线演示](https://yydshly.github.io/1022_codex_project/006-oil-tone/) |
 | 007 | [dr-aria · 角色效果与表达图鉴](projects/007-dr-aria/README.md) | [dr-aria](https://github.com/MPMyburgh/dr-aria) | 将 Agent 回复和部分运行状态转成可见角色反馈：预制字符画配合事件驱动动作、文字驱动气泡与嘴型，呈现等待、思考、工作和回复，让等待有反馈、对话有角色，并可作为自有 Agent 的表达层 | 已完成 | [在线演示](https://yydshly.github.io/1022_codex_project/007-dr-aria/) |
+| 009 | [WebGPU Render Pipeline · 光照效果实现与复用](projects/009-webgpu-render-pipeline/README.md) | [web-starter-kit-webgpu-pipline](https://github.com/vibegameengine/web-starter-kit-webgpu-pipline) | 在浏览器实现反弹光、环境补光、软阴影及水面与植被受光：先用 BVH/Surfel 估计间接光，缓存为 Lightmap/空间探针，再实时合成画面；可沉淀为游戏、空间漫游和 Web3D 展厅的渲染能力，附一图总览与四场景交互 | 研究中 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目图览
@@ -116,6 +117,18 @@
 [研究详情](projects/007-dr-aria/README.md) · [原始仓库](https://github.com/MPMyburgh/dr-aria) · [在线演示](https://yydshly.github.io/1022_codex_project/007-dr-aria/)
 
 标签：ASCII 动画 / 角色展示 / 状态表达 / 情绪表达
+
+### 009 · WebGPU Render Pipeline · 光照效果实现与复用
+
+在浏览器实现反弹光、环境补光、软阴影及水面与植被受光：先用 BVH/Surfel 估计间接光，缓存为 Lightmap/空间探针，再实时合成画面；可沉淀为游戏、空间漫游和 Web3D 展厅的渲染能力，附一图总览与四场景交互
+
+![009 · WebGPU Render Pipeline · 光照效果实现与复用 项目封面](projects/009-webgpu-render-pipeline/assets/project-overview.png)
+
+> 我们整理的一图总览：光照效果的核心价值、计算原理、10 类全部 89 项能力、四场景本机实测与复用方向；缩略图来自真实运行，应用方向需单独集成和验收。
+
+[研究详情](projects/009-webgpu-render-pipeline/README.md) · [原始仓库](https://github.com/vibegameengine/web-starter-kit-webgpu-pipline)
+
+标签：WebGPU / Three.js / 全局光照 / 水面与大气 / 能力图鉴
 <!-- PROJECT_CARDS:END -->
 
 ## 目录结构

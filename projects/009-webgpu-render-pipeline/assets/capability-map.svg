@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+<title id="title">WebGPU 渲染管线：光照缓存与实时效果组合</title><desc id="desc">场景先生成光照贴图与空间探针，再在每帧组合直接光、阴影、反射、水面、大气和后期。下方列出十类共八十九个研究条目。此图是源码研究图解，不是引擎截图。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#62c9bb"/></marker><style>text{font-family:'Microsoft YaHei','PingFang SC',sans-serif;fill:#e6f0ed}.small{font-size:17px;fill:#9bb4ae}.label{font-size:15px;letter-spacing:1.5px;fill:#62c9bb}.title{font-size:24px;font-weight:600}.body{font-size:18px;fill:#b9cbc5}.box{fill:#172b29;stroke:#35514c;stroke-width:1.5}.line{fill:none;stroke:#62c9bb;stroke-width:2;marker-end:url(#arrow)}</style></defs>
+<rect width="1440" height="1000" rx="26" fill="#101e1d"/>
+<text x="64" y="62" class="label">009 / SOURCE-BASED RESEARCH / ca576b6</text>
+<text x="64" y="124" font-size="43" font-weight="600">把昂贵光照存下来，让画面逐帧流动。</text>
+<text x="64" y="166" class="body">浏览器里的 3D 画面 = 表面与空间光照缓存 + 实时效果 + 稳定与输出</text>
+<text x="64" y="229" class="label">准备阶段</text>
+<rect x="64" y="250" width="330" height="160" rx="12" class="box"/>
+<text x="88" y="288" class="title">场景与材质</text><text x="88" y="326" class="body">建筑、植物、地形与水底</text><text x="88" y="360" class="body">相机 · 太阳 · 静动态标记</text><text x="88" y="389" class="small">SceneHost / BVH / UV charts</text>
+<path d="M400 330H452" class="line"/>
+<rect x="466" y="250" width="408" height="160" rx="12" class="box"/>
+<text x="490" y="288" class="title">Surfel 光照采样与烘焙</text><text x="490" y="326" class="body">表面 Lightmap + 三维方向探针</text><text x="490" y="360" class="body">去噪 · 填洞 · 遮挡 · 保存缓存</text><text x="490" y="389" class="small">重启可复用；变化后检查是否过期</text>
+<path d="M880 330H932" class="line"/>
+<rect x="946" y="250" width="430" height="160" rx="12" fill="#24352b" stroke="#647447"/>
+<text x="970" y="288" class="title">运行时读取</text><text x="970" y="326" class="body">静态表面：按需驻留光照 Tile</text><text x="970" y="360" class="body">其他接收物体：空间探针补光</text><text x="970" y="389" class="small">默认静态缓存；实时探针为可选项</text>
+<path d="M1160 418V465H228V500" class="line"/>
+<text x="64" y="472" class="label">逐帧阶段</text>
+<rect x="64" y="512" width="330" height="138" rx="12" class="box"/>
+<text x="88" y="550" class="title">直接光、阴影与反射</text><text x="88" y="588" class="body">太阳 / 彩灯 / 软阴影 / 射线</text><text x="88" y="621" class="small">结合光照缓存，避免重复计光</text>
+<path d="M400 580H452" class="line"/>
+<rect x="466" y="512" width="408" height="138" rx="12" class="box"/>
+<text x="490" y="550" class="title">水面与空气</text><text x="490" y="588" class="body">折射 / 吸收 / 泡沫 / 云 / 雾</text><text x="490" y="621" class="small">主场景水与物理水实验室分开</text>
+<path d="M880 580H932" class="line"/>
+<rect x="946" y="512" width="430" height="138" rx="12" fill="#254139" stroke="#62c9bb"/>
+<text x="970" y="550" class="title">稳定、曝光与输出</text><text x="970" y="588" class="body">TAA / Look / 镜头参数 / 色调转换</text><text x="970" y="621" class="small">输出最终可交互的浏览器画面</text>
+<path d="M64 692H1376" stroke="#35514c"/>
+<text x="64" y="735" class="title">十类能力 · 89 项研究条目</text>
+<g class="body"><text x="64" y="785">08 渲染管线</text><text x="326" y="785">10 全局光照</text><text x="588" y="785">10 光照贴图与流送</text><text x="910" y="785">09 光源、阴影与反射</text>
+<text x="64" y="832">13 海水与流体</text><text x="326" y="832">10 植被与地形</text><text x="588" y="832">07 天空与大气</text><text x="910" y="832">08 镜头与后期</text>
+<text x="64" y="879">10 诊断与工具</text><text x="326" y="879">04 集成与边界</text><text x="588" y="879">14 场景 / 资料入口</text><text x="910" y="879">163 参数名定位</text></g>
+<text x="64" y="947" class="small">依据固定提交的 334 个文本文件整理。条目计数为本研究分类；源码核实不等于本次运行验收。</text>
+</svg>

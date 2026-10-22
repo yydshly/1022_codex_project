@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+  <title id="title">三维渲染与常见 AI 图像处理：输入和决定画面的依据不同</title>
+  <desc id="desc">左路由明确三维几何、材质、灯光和相机，通过采样、缓存和着色生成视图；右路由图片、提示词和可选深度等结构条件，通过训练得到的图像模型生成外观。以同一栋房子改夕阳、转视角为例。AI 可有结构约束，渲染也有数值近似。所有图形是教学示意，没有调用 AI 或上游引擎。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 7 4 0 8" fill="none" stroke="#a5b8b2" stroke-width="1.8"/></marker></defs>
+  <rect width="1440" height="720" rx="16" fill="#101b1c"/>
+  <g font-family="Segoe UI,Microsoft YaHei,PingFang SC,sans-serif">
+    <text x="48" y="45" fill="#9de2c5" font-size="17" letter-spacing="2">TWO WAYS TO MAKE AN IMAGE / 教学示意</text>
+    <text x="48" y="94" fill="#edf1eb" font-size="34" font-weight="600">同一栋房子，改成夕阳，或绕到背面看。</text>
+    <text x="48" y="131" fill="#a5b8b2" font-size="21">比较常见单图重绘；AI 也能接受结构条件，三维渲染也会使用近似。</text>
+    <rect x="48" y="162" width="658" height="462" rx="12" fill="#162a27" stroke="#536e62"/>
+    <rect x="734" y="162" width="658" height="462" rx="12" fill="#292822" stroke="#74684e"/>
+    <text x="76" y="207" fill="#9de2c5" font-size="26" font-weight="600">A / 本库：显式三维渲染</text>
+    <text x="762" y="207" fill="#efca8e" font-size="26" font-weight="600">B / 常见 AI 图像编辑</text>
+    <g stroke="#9de2c5" stroke-width="2" fill="none"><path d="M91 300 151 251 205 278 205 357 91 337ZM151 251l72-29 52 53-70 3M205 278l70-3v66l-70 16M91 300l74-28 110 3M117 310l24 4v25l-24-5ZM167 319l22 4v25l-22-5Z"/></g>
+    <text x="302" y="263" fill="#edf1eb" font-size="22">输入：一套可计算的场景</text>
+    <text x="302" y="301" fill="#b8cec1" font-size="20">几何 + 材质 + 灯光 + 相机</text>
+    <text x="302" y="339" fill="#b8cec1" font-size="19">墙面和窗户有明确空间位置。</text>
+    <g stroke="#efca8e" stroke-width="2" fill="none"><rect x="779" y="245" width="172" height="116" rx="4"/><path d="M800 297 857 263 925 303v42H800ZM800 297h125M824 310h20v20h-20M883 310h20v20h-20"/><circle cx="923" cy="269" r="10"/></g>
+    <text x="990" y="263" fill="#edf1eb" font-size="22">输入：照片与编辑要求</text>
+    <text x="990" y="301" fill="#d6c9ae" font-size="20">“改成夕阳、暖光、长阴影”</text>
+    <text x="990" y="339" fill="#d6c9ae" font-size="19">也可提供蒙版、深度等条件。</text>
+    <path d="M377 369v25M1063 369v25" stroke="#a5b8b2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="76" y="411" width="602" height="69" rx="7" fill="#213f35"/>
+    <text x="99" y="441" fill="#edf1eb" font-size="21">依据：空间关系、光照与材质规则</text>
+    <text x="99" y="467" fill="#b8cec1" font-size="18">几何求交 → 采样 / 缓存 → 着色与合成</text>
+    <rect x="762" y="411" width="602" height="69" rx="7" fill="#453b29"/>
+    <text x="785" y="441" fill="#edf1eb" font-size="21">依据：训练学到的视觉规律与输入条件</text>
+    <text x="785" y="467" fill="#d6c9ae" font-size="18">图像模型在这些条件下生成或编辑外观</text>
+    <path d="M377 490v25M1063 490v25" stroke="#a5b8b2" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="76" y="550" fill="#edf1eb" font-size="21">换光：改参数；检查间接光是否过期。</text>
+    <text x="76" y="589" fill="#b8cec1" font-size="20">换视角：从同一三维场景重新投影。</text>
+    <text x="762" y="550" fill="#edf1eb" font-size="21">改外观：可快速尝试目标风格与光感。</text>
+    <text x="762" y="589" fill="#d6c9ae" font-size="20">保持结构：取决于模型、条件和处理流程。</text>
+    <text x="48" y="667" fill="#a5b8b2" font-size="19">可组合：AI 辅助素材 → 检查三维资产 → 渲染连续视图。此为建议流程，本库没有现成 AI 接口。</text>
+    <text x="48" y="699" fill="#a5b8b2" font-size="17">本研究原创图解 · 未调用 AI 生成对比图 · 未运行上游引擎 · 不以画面看起来合理作为物理正确的证明</text>
+  </g>
+</svg>

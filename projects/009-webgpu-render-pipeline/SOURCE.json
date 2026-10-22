@@ -1,0 +1,2366 @@
+{
+  "repository": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline",
+  "owner": "vibegameengine",
+  "commit": "ca576b601bf84527102f1768372aa8cd96a3c55a",
+  "commit_date": "2026-09-17T02:36:50Z",
+  "commit_message": "Merge branch 'startup'\n\n# Conflicts:\n#\tsrc/features/render-pipeline/staticLight.ts",
+  "main_at_review": "ca576b601bf84527102f1768372aa8cd96a3c55a",
+  "review_date": "2026-10-21",
+  "license_api": null,
+  "license_files": [],
+  "license_observation": "固定版本未找到仓库级许可证。本研究保留来源与署名，真实演示由固定上游与依赖构建，并附补丁、依赖许可与必要声明；不为上游补写复用许可。",
+  "upstream_execution": "cornell_complete_village_beach_without_van_forest_documented_profiles_passed",
+  "homepage": null,
+  "research_method": "固定提交源码与作者文档审阅，加上明确配置的四场景 WebGPU 运行；源码清单、教学图解、原始截图与性能边界分别记录。",
+  "tree_complete": true,
+  "tree_blob_count": 645,
+  "text_file_count": 334,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "5439cf66c897f10f443ae1f842d8a2c1b2c7b3e89a56b5ace2579a88f583765b",
+      "bytes": 627,
+      "lines": 32,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/.gitignore"
+    },
+    {
+      "path": "docs/beach-gauntlet/BAR.md",
+      "sha256": "dca4375d8153d9b03ffdc68808013bf43ab2e6c27537268c309ab9e0eebb64aa",
+      "bytes": 2085,
+      "lines": 40,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/beach-gauntlet/BAR.md"
+    },
+    {
+      "path": "docs/beach-gauntlet/critique/round-1-B-materials.md",
+      "sha256": "b3cf65874722ebf7d811e267418fe513fe8981a4ea22a7a8e1c11e78abdc44e3",
+      "bytes": 2474,
+      "lines": 12,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/beach-gauntlet/critique/round-1-B-materials.md"
+    },
+    {
+      "path": "docs/beach-gauntlet/critique/round-1.md",
+      "sha256": "f8dff5f655d3a2ef5124ef84d640ae0634aa5adaaa60d9a551d440da5a693d4b",
+      "bytes": 8689,
+      "lines": 54,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/beach-gauntlet/critique/round-1.md"
+    },
+    {
+      "path": "docs/beach-gauntlet/prompts/_common.md",
+      "sha256": "1d505c3592743f8645de19acf2173bab50ab2876647ce550e4921916e0918aa1",
+      "bytes": 3761,
+      "lines": 24,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/beach-gauntlet/prompts/_common.md"
+    },
+    {
+      "path": "docs/lessons-artistic-look.md",
+      "sha256": "b8bab3a08404deba13999f1005ec448ef074eab5821f78cdfcb68a14a22f76dd",
+      "bytes": 15034,
+      "lines": 234,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-artistic-look.md"
+    },
+    {
+      "path": "docs/lessons-bake-light-leaks.md",
+      "sha256": "ddaf61602a83642afd094ba9cbf760cf5bd6425d2f7ece58a1346aecca9511ea",
+      "bytes": 15028,
+      "lines": 214,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-bake-light-leaks.md"
+    },
+    {
+      "path": "docs/lessons-bake-windows-reverted.md",
+      "sha256": "5203ea4a852af0ad25ccf72386282408573f6f7be9ba4f0ffe57e4da187de578",
+      "bytes": 1375,
+      "lines": 22,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-bake-windows-reverted.md"
+    },
+    {
+      "path": "docs/lessons-instance-velocity.md",
+      "sha256": "bc16e9121380a9d557902be16af0bd6014558e0ccc41f14130afa8efb7f71c43",
+      "bytes": 4919,
+      "lines": 95,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-instance-velocity.md"
+    },
+    {
+      "path": "docs/lessons-lightmap-density.md",
+      "sha256": "7a6999d953518cf0499d2bf2360d316d6e8c483686e15fbb866ebbf1f58c00c7",
+      "bytes": 7321,
+      "lines": 122,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-lightmap-density.md"
+    },
+    {
+      "path": "docs/lessons-lightmap-lod.md",
+      "sha256": "8f7721d56832c2326ffe0f6fd15041207e92dd9e7eb425f784579eb69c4ec54b",
+      "bytes": 2082,
+      "lines": 31,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-lightmap-lod.md"
+    },
+    {
+      "path": "docs/lessons-sand-layers.md",
+      "sha256": "eecc7d06ba8657e22339c1af66eac38250af880e27df8f30d338b192d345a791",
+      "bytes": 4524,
+      "lines": 75,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-sand-layers.md"
+    },
+    {
+      "path": "docs/lessons-sky-atmosphere.md",
+      "sha256": "fbfd62d840dd4116d336906020cb06f693486fddf66ddc251c7b929e9fc7e10a",
+      "bytes": 13007,
+      "lines": 185,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-sky-atmosphere.md"
+    },
+    {
+      "path": "docs/lessons-three-fork.md",
+      "sha256": "415de98444447ba7a05c4bdb43a1df03060ea8dc5e8d70db41a579cd2b875aa8",
+      "bytes": 3359,
+      "lines": 60,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-three-fork.md"
+    },
+    {
+      "path": "docs/lessons-village-boot-time.md",
+      "sha256": "36b55006cc5f849baa62455905516749b86ac8d26ca47722eaf252e86f4238fe",
+      "bytes": 6049,
+      "lines": 124,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-village-boot-time.md"
+    },
+    {
+      "path": "docs/lessons-village-frame-cpu.md",
+      "sha256": "16c274b98e5be12f2f596ec33e37e13af5f38c6f780f9f8fda555610410ace0a",
+      "bytes": 2612,
+      "lines": 44,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-village-frame-cpu.md"
+    },
+    {
+      "path": "docs/lessons-virtual-textures.md",
+      "sha256": "bb783afced3814d66771f88b6b9834c1bd672a855fc492ec33b1e72d9d2f6e60",
+      "bytes": 3300,
+      "lines": 53,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-virtual-textures.md"
+    },
+    {
+      "path": "docs/lessons-worktree-instances.md",
+      "sha256": "6cb7d417e0f4cc254956beafcd6bec592e0625c82705932ae3fda1ca2e0aae39",
+      "bytes": 3771,
+      "lines": 76,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/lessons-worktree-instances.md"
+    },
+    {
+      "path": "docs/patches/three-node-type-cache.diff",
+      "sha256": "015d2359e91d6b6abc1b0d21ee0507c337aadfb6f7461c9d7b24bb3537389147",
+      "bytes": 2268,
+      "lines": 82,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/patches/three-node-type-cache.diff"
+    },
+    {
+      "path": "docs/render-iterations.md",
+      "sha256": "427c572b613065c56af2d9a44c03aae94b3f366feb2f41130c8c518472086889",
+      "bytes": 168862,
+      "lines": 434,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/render-iterations.md"
+    },
+    {
+      "path": "docs/render-research-2026-09-07.md",
+      "sha256": "ab3ae4c3a214625ee16b84bc29e107e9a0211266b16cfd332e20aff5977edd26",
+      "bytes": 56057,
+      "lines": 200,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/render-research-2026-09-07.md"
+    },
+    {
+      "path": "docs/ue-pipeline-study-and-plan.md",
+      "sha256": "7faab6d7b8d37d3d92029489d7f4163825d2d05bfc7fe3882a8b30039cc770af",
+      "bytes": 23408,
+      "lines": 383,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/ue-pipeline-study-and-plan.md"
+    },
+    {
+      "path": "docs/virtual-pages-design.md",
+      "sha256": "200c2f537fc7c2be491464988e6ada4743a1838aad58f462604ed6e2e9ac2c70",
+      "bytes": 17098,
+      "lines": 194,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/virtual-pages-design.md"
+    },
+    {
+      "path": "docs/water/grill-session.md",
+      "sha256": "86a4818ed0c2b08fa4ab2f96b5fc80d6cf6d1b71e38f0f69602ac222a47084e5",
+      "bytes": 16737,
+      "lines": 71,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/water/grill-session.md"
+    },
+    {
+      "path": "docs/water/knowledge-base.md",
+      "sha256": "82a4f33c630c2df6c3683eb742b57c9e89501455b15905a46102872f667e0208",
+      "bytes": 22184,
+      "lines": 192,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/docs/water/knowledge-base.md"
+    },
+    {
+      "path": "index.html",
+      "sha256": "9114c1dde7142557c09d71af4e6bb9f79aeee8f4f49d1a16c300745b0f8b0453",
+      "bytes": 2542,
+      "lines": 60,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/index.html"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "5fe02e378cae117da6721432dafe1f3c5b6606265145cce08e99d56f5e0f3847",
+      "bytes": 42516,
+      "lines": 1316,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d677a3cb64c3fe29ff25183c4a7e0ff32e58a7ac05eb83dc91f9236d3ea22abd",
+      "bytes": 1133,
+      "lines": 38,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/package.json"
+    },
+    {
+      "path": "scripts/check-atmosphere.mjs",
+      "sha256": "374bd5506e06b0ab8a10287ac4027890f92269862f5ca2b5b2da2ccbb53a9a44",
+      "bytes": 6554,
+      "lines": 139,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-atmosphere.mjs"
+    },
+    {
+      "path": "scripts/check-bake-leak.mjs",
+      "sha256": "979536f4021d1898f378753ca3a12959c01dfcafbc53f0d0d136c52dc61962ea",
+      "bytes": 5831,
+      "lines": 85,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-bake-leak.mjs"
+    },
+    {
+      "path": "scripts/check-bake-stale.mjs",
+      "sha256": "b9fd90543f83f8445c6eb02fa5b07ff07ab3f9df438cc62ac97ad7e122ac020f",
+      "bytes": 5589,
+      "lines": 98,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-bake-stale.mjs"
+    },
+    {
+      "path": "scripts/check-boot-stages.mjs",
+      "sha256": "a5821c68177ec5826323384b07bad51a6e43c7d032dc54e37b456bf56d46f691",
+      "bytes": 2928,
+      "lines": 50,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-boot-stages.mjs"
+    },
+    {
+      "path": "scripts/check-cine-cameras.mjs",
+      "sha256": "45fa66787e3c1d0691947532f622629bb612a25545131cb007948b02f9fbc7d7",
+      "bytes": 4816,
+      "lines": 70,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-cine-cameras.mjs"
+    },
+    {
+      "path": "scripts/check-contact.mjs",
+      "sha256": "d55a1ff335b9d37afc5b8d5b5901b3bfad4a691b09004589d64ae54a62d77e1b",
+      "bytes": 7887,
+      "lines": 152,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-contact.mjs"
+    },
+    {
+      "path": "scripts/check-instance-velocity.mjs",
+      "sha256": "de831540527ba046815954f41b312601f93ec1a2b1a58a0ecd148a8faba49069",
+      "bytes": 5176,
+      "lines": 103,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-instance-velocity.mjs"
+    },
+    {
+      "path": "scripts/check-leak-reference.mjs",
+      "sha256": "61eaa920a9ffa6bad55921af11c9b9aaca79103a85975ec14a629dc48c970832",
+      "bytes": 18730,
+      "lines": 240,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-leak-reference.mjs"
+    },
+    {
+      "path": "scripts/check-leak-room.mjs",
+      "sha256": "44b901c22de2d37570f93305b5552395dcf22afc38adb49881a18f8699be9e83",
+      "bytes": 6230,
+      "lines": 90,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-leak-room.mjs"
+    },
+    {
+      "path": "scripts/check-lighting-settings-order.mjs",
+      "sha256": "fc29db946f991081e87882fde994e3f47f58c1967c3bd42dda1a8e121e73d06f",
+      "bytes": 4224,
+      "lines": 71,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-lighting-settings-order.mjs"
+    },
+    {
+      "path": "scripts/check-look-cost.mjs",
+      "sha256": "de66efb87183a1b9a434f092b3939117824388e391a821036971c9d6cc2c3aa4",
+      "bytes": 5030,
+      "lines": 95,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-look-cost.mjs"
+    },
+    {
+      "path": "scripts/check-look-route.mjs",
+      "sha256": "9666b46c5fb7b6081bee7707a84cbe622219cd06712fd32fea2e1ba48e540e99",
+      "bytes": 6965,
+      "lines": 144,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-look-route.mjs"
+    },
+    {
+      "path": "scripts/check-look.mjs",
+      "sha256": "fbabfe0bb11f68c52f586e2892ea9969fe9bc2ff83f75fb61d36d0d1e01653b5",
+      "bytes": 5884,
+      "lines": 118,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-look.mjs"
+    },
+    {
+      "path": "scripts/check-motion-blur.mjs",
+      "sha256": "cabd81347cf713ba71174ed264412f1b4e8ed72d3f6c44c985e790efcba37fb0",
+      "bytes": 14744,
+      "lines": 244,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-motion-blur.mjs"
+    },
+    {
+      "path": "scripts/check-node-type-cache.mjs",
+      "sha256": "dde373dc61e5e2c54a4e6474686847b242ba95489ee2e6b8a88bea00c1abba68",
+      "bytes": 4360,
+      "lines": 72,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-node-type-cache.mjs"
+    },
+    {
+      "path": "scripts/check-reflections.mjs",
+      "sha256": "134ab1f212f4bebc91497c165f4dd6de5425db17da3371f6c6b2f6e8e9ee2688",
+      "bytes": 4952,
+      "lines": 93,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-reflections.mjs"
+    },
+    {
+      "path": "scripts/check-sand-maps.mjs",
+      "sha256": "23e9fbb971de0ddf068a23ce8ce88eb4f8a51c1e776eee5636f53fe56aa4d22e",
+      "bytes": 2555,
+      "lines": 47,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-sand-maps.mjs"
+    },
+    {
+      "path": "scripts/check-sky.mjs",
+      "sha256": "2d273f9972dcf548d8fa1705cbc9123b13190ccc83202fe96405484c766fcb53",
+      "bytes": 2311,
+      "lines": 44,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-sky.mjs"
+    },
+    {
+      "path": "scripts/check-soft-shadows.mjs",
+      "sha256": "26ec73b451ed59ba152dc7c775f717579291f3f1da41ab3618cbd81a412c4fb9",
+      "bytes": 6699,
+      "lines": 134,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-soft-shadows.mjs"
+    },
+    {
+      "path": "scripts/check-surfel-cache.mjs",
+      "sha256": "fa657d181049433fc93c1957cfe7fd70999d59125b6227abae50be342fb49715",
+      "bytes": 3776,
+      "lines": 58,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-surfel-cache.mjs"
+    },
+    {
+      "path": "scripts/check-taa.mjs",
+      "sha256": "a860081570f4d2db2190454b3d0ecf42e81112fae1b1f722717c5039b6960c12",
+      "bytes": 10350,
+      "lines": 193,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-taa.mjs"
+    },
+    {
+      "path": "scripts/check-water-sim.mjs",
+      "sha256": "16cf75bcd2030860372cf23c050b8e0081c254c4e5f3bfaec1d049c63cf49806",
+      "bytes": 11710,
+      "lines": 215,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/scripts/check-water-sim.mjs"
+    },
+    {
+      "path": "src/app/guiSettings.ts",
+      "sha256": "a5f176946c43013430ac9cee4a874b59e2994b06b957f543014d447a58312f62",
+      "bytes": 6291,
+      "lines": 150,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/guiSettings.ts"
+    },
+    {
+      "path": "src/app/guiSettingsPanel.ts",
+      "sha256": "a217dc7bc946adc200da5d49fa00b3e73374c317e4e0dc46f09ba3e9c3465966",
+      "bytes": 5638,
+      "lines": 154,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/guiSettingsPanel.ts"
+    },
+    {
+      "path": "src/app/home/Home.tsx",
+      "sha256": "18d593c5036da3e93ffc6f12da37e427746105022078b6b826056b240651849b",
+      "bytes": 3875,
+      "lines": 106,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/home/Home.tsx"
+    },
+    {
+      "path": "src/app/home/catalog.ts",
+      "sha256": "e815fe68202b21b2ecb87bbd34e7b80c254a785ea823e7f5128655c2297398b4",
+      "bytes": 13598,
+      "lines": 210,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/home/catalog.ts"
+    },
+    {
+      "path": "src/app/home/main.tsx",
+      "sha256": "8d3ca214edf9cecff2eda68f0f56c5ae3f927bab2a726de903da57d72d8c4ab0",
+      "bytes": 246,
+      "lines": 6,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/home/main.tsx"
+    },
+    {
+      "path": "src/app/main.ts",
+      "sha256": "725338a4c4701a736192a0c5ad11b229336044401c0724bf5a4e1382ed583c1c",
+      "bytes": 6553,
+      "lines": 121,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/main.ts"
+    },
+    {
+      "path": "src/app/pipeline.tsx",
+      "sha256": "ad6d7dd27ec4b503474b2ee1c22efc1de5fadb3629d9f9cf41c30fee1a45e324",
+      "bytes": 415,
+      "lines": 16,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/app/pipeline.tsx"
+    },
+    {
+      "path": "src/entities/backdrop/index.ts",
+      "sha256": "6517dbc27d43858e76526b925b7afb1cd0504a87a50c8db5178595c9a8217fb2",
+      "bytes": 2941,
+      "lines": 75,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/backdrop/index.ts"
+    },
+    {
+      "path": "src/entities/ball/ballWorker.ts",
+      "sha256": "4537f14c9fefb4e62b70343f92b82cab64af89e11a6c04199e0517124bbedda5",
+      "bytes": 5258,
+      "lines": 146,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/ball/ballWorker.ts"
+    },
+    {
+      "path": "src/entities/ball/index.ts",
+      "sha256": "93eb394daf0b711c973a50c7413c09c93337c8f838794ff5d90e037459511def",
+      "bytes": 4213,
+      "lines": 102,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/ball/index.ts"
+    },
+    {
+      "path": "src/entities/conifer/branchGrowth.ts",
+      "sha256": "e18d2038f73d67ea92b0234313baa95acf5938bf27390395640fe7176ed7123c",
+      "bytes": 7610,
+      "lines": 204,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/conifer/branchGrowth.ts"
+    },
+    {
+      "path": "src/entities/conifer/ezPine.ts",
+      "sha256": "130dd3a7ba8de8e08ec880c21b2a97b50ecaa7c6117f61198ae5fcd8d5b4939a",
+      "bytes": 4453,
+      "lines": 127,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/conifer/ezPine.ts"
+    },
+    {
+      "path": "src/entities/conifer/index.ts",
+      "sha256": "62ce5dd58da44ae7fd1215a5f710a03a70c56f035a883de9879cbc58f6483f7a",
+      "bytes": 7212,
+      "lines": 200,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/conifer/index.ts"
+    },
+    {
+      "path": "src/entities/conifer/needleSpray.ts",
+      "sha256": "c0bdb0a4218a1e3deadc4f48e35a5529f44c1566f5198d0f2f92695f646497d1",
+      "bytes": 3573,
+      "lines": 91,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/conifer/needleSpray.ts"
+    },
+    {
+      "path": "src/entities/corridor/concreteMaterial.ts",
+      "sha256": "c00fa3cd14c2f6c067f6127210f918522e1db57135b97cacd903fba88f28fa8e",
+      "bytes": 5138,
+      "lines": 141,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/corridor/concreteMaterial.ts"
+    },
+    {
+      "path": "src/entities/corridor/index.ts",
+      "sha256": "f5ef55ade38a0a3e4db754a56b336543e35a60aa77bab393a89fcdf55cc6d103",
+      "bytes": 2604,
+      "lines": 102,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/corridor/index.ts"
+    },
+    {
+      "path": "src/entities/foliage/leafMaterial.ts",
+      "sha256": "d71a3e6492bd7b9c6739498c5600d5293d81b36ca966db5da4699a1d1c80e1d4",
+      "bytes": 190,
+      "lines": 2,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/foliage/leafMaterial.ts"
+    },
+    {
+      "path": "src/entities/foliage/leafOptics.ts",
+      "sha256": "4c32ff909763f8a4ed635ef1ff0002236d92a9e00bbc0d34ee5c6e67706114be",
+      "bytes": 14474,
+      "lines": 374,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/foliage/leafOptics.ts"
+    },
+    {
+      "path": "src/entities/foliage/leafSurface.ts",
+      "sha256": "16aa2bb88fb203822203084250da86b777dd11d3b652b2d419e1bba07dbc8dbd",
+      "bytes": 7964,
+      "lines": 177,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/foliage/leafSurface.ts"
+    },
+    {
+      "path": "src/entities/foliage/translucency.ts",
+      "sha256": "fcd7ab7596d2ec68ed9c09b6d6a51e9efcf767541cd8c5a887db686d89d435ea",
+      "bytes": 1952,
+      "lines": 43,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/foliage/translucency.ts"
+    },
+    {
+      "path": "src/entities/grove/adaptiveMesh.ts",
+      "sha256": "266fd1fd10e98ca6f8ea996cc9fcd293590c13bd03a7ce796d68148f64f430bf",
+      "bytes": 4946,
+      "lines": 142,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/adaptiveMesh.ts"
+    },
+    {
+      "path": "src/entities/grove/blockoutMaterial.ts",
+      "sha256": "1f0824150664c2d3d1ef4e33decfcbb24722a14c39edc691e338ae0956c86061",
+      "bytes": 1419,
+      "lines": 35,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/blockoutMaterial.ts"
+    },
+    {
+      "path": "src/entities/grove/blockoutProps.ts",
+      "sha256": "41019ef77a5e34c0308efbba46e17be870839a6ccd74e32b0e379d45c10e9009",
+      "bytes": 4220,
+      "lines": 110,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/blockoutProps.ts"
+    },
+    {
+      "path": "src/entities/grove/dressedMaterials.ts",
+      "sha256": "e530e503d8922045337aba2f9c5294a5c0d90e097868df00f9cdfcd5975913b4",
+      "bytes": 6775,
+      "lines": 171,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/dressedMaterials.ts"
+    },
+    {
+      "path": "src/entities/grove/heightField.ts",
+      "sha256": "c38ca8ce992e9ced2588160cfddd9023cf60aa1e4da9f7fea2b64598e0e114b6",
+      "bytes": 6089,
+      "lines": 199,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/heightField.ts"
+    },
+    {
+      "path": "src/entities/grove/index.ts",
+      "sha256": "85b29c30f4ac08252daf3b6ead6579c7f205a12ccbe55a084d962753ead2042a",
+      "bytes": 5316,
+      "lines": 140,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/index.ts"
+    },
+    {
+      "path": "src/entities/grove/streamMaterial.ts",
+      "sha256": "d90633ff5f33c28c67947d38771c39df635207dfdbab8552a1138bca6a7ffc96",
+      "bytes": 2282,
+      "lines": 55,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/grove/streamMaterial.ts"
+    },
+    {
+      "path": "src/entities/island/IslandPrefab.tsx",
+      "sha256": "159c2662d06d6a408fa9577cae2e9897a6c9fda47c6db857e75800e9df9b23a4",
+      "bytes": 873,
+      "lines": 13,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/IslandPrefab.tsx"
+    },
+    {
+      "path": "src/entities/island/cliffMaterial.ts",
+      "sha256": "eea8362089e0c0cb17d10653d568c55c6bb8501f0da9e6f37e99733a77cc6183",
+      "bytes": 4937,
+      "lines": 123,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/cliffMaterial.ts"
+    },
+    {
+      "path": "src/entities/island/heightField.ts",
+      "sha256": "373892ba665a97b85f5519b432f1409b4cca94c4e43417d31dfbbbcf8397ab60",
+      "bytes": 4859,
+      "lines": 117,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/heightField.ts"
+    },
+    {
+      "path": "src/entities/island/index.ts",
+      "sha256": "67f74ad2fcaad344310cb4ad92adb472b8d6d19c9eab38ad794ee9f8e6f7348f",
+      "bytes": 8505,
+      "lines": 201,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/index.ts"
+    },
+    {
+      "path": "src/entities/island/sandLayerMaps.ts",
+      "sha256": "caac21cb13aa21ede5fef824f827589028f5df4de2c2dc4277b988e6c77ec478",
+      "bytes": 9073,
+      "lines": 192,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/sandLayerMaps.ts"
+    },
+    {
+      "path": "src/entities/island/sandLayerTextures.ts",
+      "sha256": "6e9cbc8d2edfb04ceb4686bc33bcdf0a3bfaea10f64c7a1bdb183d6757eaca50",
+      "bytes": 1798,
+      "lines": 49,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/sandLayerTextures.ts"
+    },
+    {
+      "path": "src/entities/island/sandMaterial.ts",
+      "sha256": "d4767f5c6c2e12bde0cee0d01aeb846191c426f532b24166cb99c0fe30045a81",
+      "bytes": 8233,
+      "lines": 182,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/island/sandMaterial.ts"
+    },
+    {
+      "path": "src/entities/palm/index.ts",
+      "sha256": "62a3f89caf44903d40bc45a3ec40481b98d8689d28f6cf69e3c1d905d3f87240",
+      "bytes": 29603,
+      "lines": 680,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/palm/index.ts"
+    },
+    {
+      "path": "src/entities/palm/trunkSurface.ts",
+      "sha256": "cfe4f3a725607068b6907fdc24b9857406168b8ecdbbd0dd034a1dee041d8c69",
+      "bytes": 15194,
+      "lines": 372,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/palm/trunkSurface.ts"
+    },
+    {
+      "path": "src/entities/rocks/RockInstances.tsx",
+      "sha256": "390157bb873a1b23904fe2906e73332c01ef57b1ff53ed84d88539165aeaf3b6",
+      "bytes": 441,
+      "lines": 7,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/rocks/RockInstances.tsx"
+    },
+    {
+      "path": "src/entities/rocks/index.ts",
+      "sha256": "32fff929e58377636645b7f14566e58b1da1f8aed1878d3695c97454432f994a",
+      "bytes": 7278,
+      "lines": 197,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/rocks/index.ts"
+    },
+    {
+      "path": "src/entities/rocks/rockGeometry.ts",
+      "sha256": "491e0d323ac1929f5b0734a165f3e2fbd997f72b038cb0f163cc982fe99daca1",
+      "bytes": 9955,
+      "lines": 259,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/rocks/rockGeometry.ts"
+    },
+    {
+      "path": "src/entities/shrub/index.ts",
+      "sha256": "3c7ff1ec164564de9ffd2da0ecb1886cdde4b8881de7988893f2f7960f34b6f2",
+      "bytes": 18422,
+      "lines": 497,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/shrub/index.ts"
+    },
+    {
+      "path": "src/entities/van/index.ts",
+      "sha256": "245348206b0fbe5dd59456d6ab119a8e64911840ec8160a1b7a3a4aeafda508c",
+      "bytes": 9507,
+      "lines": 243,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/van/index.ts"
+    },
+    {
+      "path": "src/entities/village/BellTowerPrefab.tsx",
+      "sha256": "921b4f8b7bec568cc8194a9a298f40f8e5a5b6c87f989701d07c8713f1b22d7a",
+      "bytes": 2863,
+      "lines": 32,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/BellTowerPrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/BoatPrefab.tsx",
+      "sha256": "2f57836a3db6f7448ad3fa29a03fa2706f6e63edd70e16eacac277dd41fada51",
+      "bytes": 2274,
+      "lines": 39,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/BoatPrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/CafePrefab.tsx",
+      "sha256": "587e827a19cfd62dbde352bb72bd5467496b231ac1d63e0d45ad92ef9d410b09",
+      "bytes": 8181,
+      "lines": 119,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/CafePrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/CypressPrefab.tsx",
+      "sha256": "aa5f9d9f8837f4696119cc7cf7ca4e0a861cf921bec228c2f9f831032dcc882a",
+      "bytes": 1571,
+      "lines": 29,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/CypressPrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/GardenTreesPrefab.tsx",
+      "sha256": "53088522e89ff8ac6d53c50a711c59737379d0bb88b6eed0bab750f1fda99e64",
+      "bytes": 2396,
+      "lines": 30,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/GardenTreesPrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/HarborDetails.tsx",
+      "sha256": "7a2e23a0c6bf81ae9f7deb6247361871102a902744b632e75684ecd733a911d6",
+      "bytes": 4382,
+      "lines": 50,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/HarborDetails.tsx"
+    },
+    {
+      "path": "src/entities/village/HousePrefab.tsx",
+      "sha256": "1a4d09fa342ec667f79cdb9a7d9583a6d50b9fd0acda421e3709ffb2e52c1343",
+      "bytes": 1421,
+      "lines": 22,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/HousePrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/PlantingPrefab.tsx",
+      "sha256": "001709f32ddd6e8000f178396503b4f1fb79377ddbb0c4d575db740f106a2b86",
+      "bytes": 4726,
+      "lines": 74,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/PlantingPrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/RoofAccessories.tsx",
+      "sha256": "a240b076a8d49018551e0aae844fa92a0d86e6bed2dd103b5d24b8fbe3f12bda",
+      "bytes": 2973,
+      "lines": 38,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/RoofAccessories.tsx"
+    },
+    {
+      "path": "src/entities/village/RoofPrefabs.tsx",
+      "sha256": "6a6242437bf02886ee8af9f735b181db8e1ad0f8c8c74f65c754690bb5d45809",
+      "bytes": 1875,
+      "lines": 35,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/RoofPrefabs.tsx"
+    },
+    {
+      "path": "src/entities/village/TerraceGrotto.tsx",
+      "sha256": "621fb0d3a3a4a19ec0e1c2d36dba7617317fcc0484748306483cb65879ccb0e3",
+      "bytes": 1900,
+      "lines": 25,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/TerraceGrotto.tsx"
+    },
+    {
+      "path": "src/entities/village/TerracePrefabs.tsx",
+      "sha256": "8fbd30dfd1f752bfe9411117443a4b8d980968df177f322d5ee460677bbbed04",
+      "bytes": 5572,
+      "lines": 104,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/TerracePrefabs.tsx"
+    },
+    {
+      "path": "src/entities/village/VillagePrefab.tsx",
+      "sha256": "358d256d19c4b0388b47481e795414de523a18ea3959b743407e4cd8c65641a1",
+      "bytes": 2938,
+      "lines": 54,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/VillagePrefab.tsx"
+    },
+    {
+      "path": "src/entities/village/WindowPrefabs.tsx",
+      "sha256": "f508bf666c6af4bf93cb36fe0256019b9bfa26dee92c77d73b3c61aff551a0e0",
+      "bytes": 4697,
+      "lines": 62,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/WindowPrefabs.tsx"
+    },
+    {
+      "path": "src/entities/village/cafeGeometry.ts",
+      "sha256": "8b82593544a273c4ae607996878102b258b93ee6715741765d621e856ac031d2",
+      "bytes": 2764,
+      "lines": 65,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/cafeGeometry.ts"
+    },
+    {
+      "path": "src/entities/village/coastLayout.ts",
+      "sha256": "a5fad2201ebaa76b49cef11853f33054f2852076762f18078afe34e7affa27cf",
+      "bytes": 2270,
+      "lines": 57,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/coastLayout.ts"
+    },
+    {
+      "path": "src/entities/village/doorGeometry.ts",
+      "sha256": "5cc060ccf17be3a444823907abb38bd4c3312e459fd798b991857d3003211065",
+      "bytes": 2275,
+      "lines": 49,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/doorGeometry.ts"
+    },
+    {
+      "path": "src/entities/village/foliageMaterials.ts",
+      "sha256": "2abfd90e3f0c53ee45d1a28f58cb8c2388ff5fb75904d334335cf782f7f418d7",
+      "bytes": 1610,
+      "lines": 13,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/foliageMaterials.ts"
+    },
+    {
+      "path": "src/entities/village/gardenTreeGeometry.ts",
+      "sha256": "6a6aa4cb373d68ed2fb7bc14a9a694ec710f3889a013c394f923d678a8cf0e6b",
+      "bytes": 5906,
+      "lines": 107,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/gardenTreeGeometry.ts"
+    },
+    {
+      "path": "src/entities/village/geometry.ts",
+      "sha256": "d9722c7845c33cf85b707afa950369fad2b521ebd65eed8862130ac19dc5277c",
+      "bytes": 3586,
+      "lines": 67,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/geometry.ts"
+    },
+    {
+      "path": "src/entities/village/index.ts",
+      "sha256": "435743b0dddc5c733c0067cca9c1590b323632efb8d9eb554e0f3c52c8cdc989",
+      "bytes": 167,
+      "lines": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/index.ts"
+    },
+    {
+      "path": "src/entities/village/layout.ts",
+      "sha256": "f14d96a2a013025c7228172b1ed66600e0af94ea6049ce0da48006a10fe17fe8",
+      "bytes": 2121,
+      "lines": 40,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/layout.ts"
+    },
+    {
+      "path": "src/entities/village/materials.tsx",
+      "sha256": "685f126072fbcda43ecd795ec74b0f39ab1656a34bcd1b65b79752eb4c5e5ae2",
+      "bytes": 2689,
+      "lines": 49,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/materials.tsx"
+    },
+    {
+      "path": "src/entities/village/pineGeometry.ts",
+      "sha256": "9c5d66d90a606a8f99f449c20b33f5c0505951bfd1acd11a31a40cb8e7637915",
+      "bytes": 2323,
+      "lines": 47,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/pineGeometry.ts"
+    },
+    {
+      "path": "src/entities/village/reviewMaterials.ts",
+      "sha256": "1319f6bc9aa2b077edf0683ffeaec21cbe1c3912c044b780d4cbc56e4d122161",
+      "bytes": 1471,
+      "lines": 33,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/reviewMaterials.ts"
+    },
+    {
+      "path": "src/entities/village/terrainMaterial.ts",
+      "sha256": "726b5d386b25a05f01205b7cd16a9d344b1d53c18de81e903213f35801d181be",
+      "bytes": 862,
+      "lines": 12,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/village/terrainMaterial.ts"
+    },
+    {
+      "path": "src/entities/water/WaterPrefab.tsx",
+      "sha256": "074a5a0a9598226dad571b920f58ded7c536b4d934ba3c0bbbb774752d082f09",
+      "bytes": 529,
+      "lines": 12,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/WaterPrefab.tsx"
+    },
+    {
+      "path": "src/entities/water/bathymetry.ts",
+      "sha256": "4e4f4ed303c6e57f8faf44f86415f9076e7d1574d7deededeb8000a6f263b5fb",
+      "bytes": 4897,
+      "lines": 113,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/bathymetry.ts"
+    },
+    {
+      "path": "src/entities/water/index.ts",
+      "sha256": "9f49d252578ac1f738a595f0225b1f2c0a258c4189ba688ef6581bed8c926fd5",
+      "bytes": 56197,
+      "lines": 1045,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/index.ts"
+    },
+    {
+      "path": "src/entities/water/medium.ts",
+      "sha256": "10766aef2a8aa7df9b812f77cda17a12c0cd2c562c8bc1d8ba0cb38e228fa0a5",
+      "bytes": 518,
+      "lines": 11,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/medium.ts"
+    },
+    {
+      "path": "src/entities/water/oceanDetail.ts",
+      "sha256": "3ee73ee852be54a607699b293f4c8f940ff4537235a3b11233306a42d09316ac",
+      "bytes": 15800,
+      "lines": 318,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/oceanDetail.ts"
+    },
+    {
+      "path": "src/entities/water/oceanSpectrum.ts",
+      "sha256": "4083a6e14cca4343fbdd2b5adfcd2c61c8016b8de54f845cc57041aeac2f8752",
+      "bytes": 5176,
+      "lines": 114,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/oceanSpectrum.ts"
+    },
+    {
+      "path": "src/entities/water/physicalWater.ts",
+      "sha256": "466bcce462aa8914661853346089bd2289c3cfa8cec57b40fa114ade4f0738ef",
+      "bytes": 38610,
+      "lines": 711,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/physicalWater.ts"
+    },
+    {
+      "path": "src/entities/water/physicsReference.ts",
+      "sha256": "1a57b8c1fb05be403c9576a0ad8727bb04289fdb9afc3a4d62ca66d07011670c",
+      "bytes": 3596,
+      "lines": 54,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/physicsReference.ts"
+    },
+    {
+      "path": "src/entities/water/planarReflection.ts",
+      "sha256": "ba21f8460515571531bc0bc42ec438aba99a30a3848fcffc04068743b08378d5",
+      "bytes": 5825,
+      "lines": 112,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/planarReflection.ts"
+    },
+    {
+      "path": "src/entities/water/pmremSample.ts",
+      "sha256": "0571c3d2e6c183f773d0740a173162f06eb270e650b2976b66b1041ab4c65204",
+      "bytes": 1967,
+      "lines": 43,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/pmremSample.ts"
+    },
+    {
+      "path": "src/entities/water/rayScene.ts",
+      "sha256": "eedd155ecfc0d1f2049f10511cb93d870395fc0eaabedf54a2dae9d32bdd50d7",
+      "bytes": 8227,
+      "lines": 151,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/rayScene.ts"
+    },
+    {
+      "path": "src/entities/water/refraction.ts",
+      "sha256": "e5a48d6ef13b7f9ed40f17865036b15e48a1935792ad67a1244e8f96c73f2825",
+      "bytes": 5520,
+      "lines": 88,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/refraction.ts"
+    },
+    {
+      "path": "src/entities/water/shallowWater.ts",
+      "sha256": "01dbedead42dff6d2dc21d7fcc64f65a67ced1bcb5fdcbb0b0ecdf0d648dfd8a",
+      "bytes": 28437,
+      "lines": 591,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/shallowWater.ts"
+    },
+    {
+      "path": "src/entities/water/simHost.ts",
+      "sha256": "2771c2528b1cbe2da5dbe47fed00f438fea256e12aabbb45b1ad0a4d913f89c8",
+      "bytes": 8648,
+      "lines": 183,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/simHost.ts"
+    },
+    {
+      "path": "src/entities/water/simWorker.ts",
+      "sha256": "205b9f0c73bfb9af1bce5fe507d8228e5eac8090fc7abb31b351aea7c93fce91",
+      "bytes": 12456,
+      "lines": 277,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/simWorker.ts"
+    },
+    {
+      "path": "src/entities/water/spray.ts",
+      "sha256": "b335c2e4d823238d69e4e0ae70f8fb79179c89b2fd0c31ecc816feac3e11e6d5",
+      "bytes": 18509,
+      "lines": 369,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/spray.ts"
+    },
+    {
+      "path": "src/entities/water/surfaceField.ts",
+      "sha256": "6047fe08d5fb364028092b781a75fa1edd05dbea9503f4cd94ff5a05c8b0d76f",
+      "bytes": 6778,
+      "lines": 144,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/surfaceField.ts"
+    },
+    {
+      "path": "src/entities/water/surfaceRaycaster.ts",
+      "sha256": "89e5237050e0b269dd821fe446af495c3f90a37c5591cb1411d3fd6665da6479",
+      "bytes": 7820,
+      "lines": 138,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/surfaceRaycaster.ts"
+    },
+    {
+      "path": "src/entities/water/surfaceTrace.ts",
+      "sha256": "2f01317f1cad90d3391abacbc9526e5d905d00f9c695665e7737894ad6051e7b",
+      "bytes": 3363,
+      "lines": 69,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/surfaceTrace.ts"
+    },
+    {
+      "path": "src/entities/water/transmission.ts",
+      "sha256": "764a3907c5a597541ca4600ab7d49c9c554a2d59cbc94a01ae669c06740c225b",
+      "bytes": 8844,
+      "lines": 160,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/transmission.ts"
+    },
+    {
+      "path": "src/entities/water/visibleNormal.ts",
+      "sha256": "021347f13927eebfab3719d5b6fea98c57c2f3b36dcae6dfc9460d98ad5ddea6",
+      "bytes": 709,
+      "lines": 17,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/visibleNormal.ts"
+    },
+    {
+      "path": "src/entities/water/volumeLight.ts",
+      "sha256": "6786a49a2b825f77bf68dca2d56c6db1bc5e9f761c051ac1d41e873fff433213",
+      "bytes": 3749,
+      "lines": 63,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/volumeLight.ts"
+    },
+    {
+      "path": "src/entities/water/waterInspector.ts",
+      "sha256": "d5410d007afb5cc4e442d483550a8808b6c81e3fc406d91de4653c8b808bb0da",
+      "bytes": 9500,
+      "lines": 190,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/waterInspector.ts"
+    },
+    {
+      "path": "src/entities/water/waterSim.ts",
+      "sha256": "aee771b74cbfd7327437c3855cbe2bac0296f4816b5d585cb0c971d5cae11dad",
+      "bytes": 3795,
+      "lines": 108,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/waterSim.ts"
+    },
+    {
+      "path": "src/entities/water/waveReflection.ts",
+      "sha256": "a43a5104079f63cfc0473a61d0797c3573fa9a489fe182ba29d48534d9401ac8",
+      "bytes": 3404,
+      "lines": 58,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/waveReflection.ts"
+    },
+    {
+      "path": "src/entities/water/waveReflectionPass.ts",
+      "sha256": "460c83648fbba7da5e916d4807769d27574b57f089c380bfb56a0ae8a40ae1c6",
+      "bytes": 6335,
+      "lines": 124,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/waveReflectionPass.ts"
+    },
+    {
+      "path": "src/entities/water/windWaves.ts",
+      "sha256": "8e115a6d202569518675dc237d57afe4f13d40c4f22750ff5baa9ef6ff5d9657",
+      "bytes": 8274,
+      "lines": 203,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/entities/water/windWaves.ts"
+    },
+    {
+      "path": "src/features/lighting-pipeline/index.ts",
+      "sha256": "181ffa741828e654f62dd85c1141ec796bb8a97097d16a0abaf359bc993fd93a",
+      "bytes": 66736,
+      "lines": 1279,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/lighting-pipeline/index.ts"
+    },
+    {
+      "path": "src/features/lighting-pipeline/sunFromEnvironment.ts",
+      "sha256": "da7429776e7c9d15b9b199c88695306882b1e372bdd720e01a7523fb28b54bb4",
+      "bytes": 1914,
+      "lines": 36,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/lighting-pipeline/sunFromEnvironment.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/audit.ts",
+      "sha256": "d087ed28836220bd8479d3e4f9485bb4f8d55cb5534013ee3de0b060303a65c2",
+      "bytes": 5307,
+      "lines": 105,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/audit.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/cineCamera.ts",
+      "sha256": "97b7e037ad61cc36eef35f92afa0cfb351afcadfe49d288213ef00071269ec62",
+      "bytes": 3174,
+      "lines": 72,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/cineCamera.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/host.ts",
+      "sha256": "1d31f520b3607cc8e3bcf78c3a9d1a7035eda4d6a7b868909d8baaaeebc02330",
+      "bytes": 2626,
+      "lines": 75,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/host.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/index.ts",
+      "sha256": "c47ad62863e44cb03423aafc46b27a3c1f344cf503f4c73ab119e84a0e7ace87",
+      "bytes": 41664,
+      "lines": 742,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/index.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/lightingSettings.ts",
+      "sha256": "05eaf7d7e254d4f4ee0b36ff75eb1e144da0b6eb4eb5535e73f387d749ba3f99",
+      "bytes": 1837,
+      "lines": 39,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/lightingSettings.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/postStages.ts",
+      "sha256": "868d8f86b38a928ef94cc8d010774bd807b2758cd514ffe42bfd673c9f124e91",
+      "bytes": 13850,
+      "lines": 237,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/postStages.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/reflectionFixture.ts",
+      "sha256": "15e64b13d229f6ecb22ba1c4c5c36a886fe05a600f94798d6fa87b36a7e2f7f3",
+      "bytes": 1367,
+      "lines": 31,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/reflectionFixture.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/skyStage.ts",
+      "sha256": "029d09aede36abaa9155380a0bd26ef9764a983e7b1547743e978330e4f7111f",
+      "bytes": 10724,
+      "lines": 194,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/skyStage.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/staticLight.ts",
+      "sha256": "3e6f6be627eece9b066c39988d08b7fcb4610c9fb6de5a16538c29ca35f51066",
+      "bytes": 26348,
+      "lines": 479,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/staticLight.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/sun.ts",
+      "sha256": "7b18027a3dab8362e520774400017a1450c45856378bcf009793a4540a3ef8bf",
+      "bytes": 7594,
+      "lines": 143,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/sun.ts"
+    },
+    {
+      "path": "src/features/render-pipeline/traceStages.ts",
+      "sha256": "bcb90f5f59b68a4d72fb0d48a237b8a30644c7d0944639f2b0a635319ba94b5f",
+      "bytes": 10077,
+      "lines": 197,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/render-pipeline/traceStages.ts"
+    },
+    {
+      "path": "src/features/time-of-day/index.ts",
+      "sha256": "805c1fd77c59f5894828ffa60e7201650907146c39d1f0f5cf190bc6d2bab3e6",
+      "bytes": 2442,
+      "lines": 70,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/features/time-of-day/index.ts"
+    },
+    {
+      "path": "src/labs/fiber/main.tsx",
+      "sha256": "d4c31994101017073d864bdf7f8e922b450c2cad7f9ad8abb8b80511a9029e53",
+      "bytes": 1600,
+      "lines": 48,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/fiber/main.tsx"
+    },
+    {
+      "path": "src/labs/water/diagnostics.ts",
+      "sha256": "78bbd14f6ac972338d40bf115ac1953d7c500ebbeaf7ea88a4e2d07a8d616aac",
+      "bytes": 1001,
+      "lines": 21,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/diagnostics.ts"
+    },
+    {
+      "path": "src/labs/water/fftDiagnostics.ts",
+      "sha256": "c8bfafd9605d5ab2293d09db4fcecfb93b3465bba5590f6315e3d044bc386d5e",
+      "bytes": 3952,
+      "lines": 63,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/fftDiagnostics.ts"
+    },
+    {
+      "path": "src/labs/water/main.ts",
+      "sha256": "4590822d7d60492f49c52450196b87e77526e9609e4fe9f13690aecaafe8575c",
+      "bytes": 11620,
+      "lines": 237,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/main.ts"
+    },
+    {
+      "path": "src/labs/water/rayDiagnostics.ts",
+      "sha256": "7c3e4e2874504023c46583c39cd3a5b2146a6de79938fd9c944dc75627a106b9",
+      "bytes": 4500,
+      "lines": 78,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/rayDiagnostics.ts"
+    },
+    {
+      "path": "src/labs/water/reflectionDiagnostics.ts",
+      "sha256": "3dbc5903d794ddcdb443193f3d470c314302c3d4169a7974cdd1645d10185b9a",
+      "bytes": 4226,
+      "lines": 56,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/reflectionDiagnostics.ts"
+    },
+    {
+      "path": "src/labs/water/surfaceTraceDiagnostics.ts",
+      "sha256": "f1ce0cbd08298e7d29ebcc0cfcf4d9d85a5a21b2e1dc279f8dfe962ff02b106d",
+      "bytes": 6264,
+      "lines": 95,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/surfaceTraceDiagnostics.ts"
+    },
+    {
+      "path": "src/labs/water/volumeDiagnostics.ts",
+      "sha256": "2e58ecde0be4a6da0a4049bfe6e5a9c365dbbc1fba18ffb161887db48899d598",
+      "bytes": 3195,
+      "lines": 56,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/labs/water/volumeDiagnostics.ts"
+    },
+    {
+      "path": "src/shared/fiber/MultiInstances.tsx",
+      "sha256": "196ed08e20f3550afa9bf69e38b273d3d2f5299595b03ff390dd1c7c4ed8b281",
+      "bytes": 2122,
+      "lines": 46,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/MultiInstances.tsx"
+    },
+    {
+      "path": "src/shared/fiber/StaticGroup.tsx",
+      "sha256": "46a3f926daa04024c3738d0d9f65a4ee46b20c4cad83329044848b548fcfb242",
+      "bytes": 662,
+      "lines": 12,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/StaticGroup.tsx"
+    },
+    {
+      "path": "src/shared/fiber/globals.d.ts",
+      "sha256": "d175f93c25529e1ed6dd5fd904010dd25dc211d8cb65bfbb67f0d3188ad7e1ba",
+      "bytes": 61,
+      "lines": 1,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/globals.d.ts"
+    },
+    {
+      "path": "src/shared/fiber/index.ts",
+      "sha256": "58e566de1ba551baf42fc5ae7590005b1fa000ab132a06c74fea34da8e312459",
+      "bytes": 217,
+      "lines": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/index.ts"
+    },
+    {
+      "path": "src/shared/fiber/sceneRoot.tsx",
+      "sha256": "615be414f882008dc5e4fbc665725a8e01ff7a77cd94c3d5cc111bef442cadd8",
+      "bytes": 2352,
+      "lines": 42,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/fiber/sceneRoot.tsx"
+    },
+    {
+      "path": "src/shared/gi/bake/applyLightmap.ts",
+      "sha256": "9f8a24c02176dd9f9d6da10c1a468700490c2d591e89c2feb54b0ae8d5251999",
+      "bytes": 6352,
+      "lines": 134,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/applyLightmap.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/chartPadding.ts",
+      "sha256": "94ea2b2b2d5af7214b0fc57218f7d9028daf9c047c9c6728b2ffd8c881042955",
+      "bytes": 3487,
+      "lines": 54,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/chartPadding.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/dilateLightmap.ts",
+      "sha256": "fc542ad8283ed07fed2955619bce1fcec9f6fe26125e5ea814ba2dfd435b64c4",
+      "bytes": 2771,
+      "lines": 70,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/dilateLightmap.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/filterLinks.ts",
+      "sha256": "4332b6d8770866891ab0eb427ed6d4922c22ed7b0a2e39294091b2780dfd52a7",
+      "bytes": 7783,
+      "lines": 192,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/filterLinks.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/frozenSurfels.ts",
+      "sha256": "27deabaf8cbc165707e1d949443433a1496e5612d26b3d7aff31da90a934dec6",
+      "bytes": 2963,
+      "lines": 46,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/frozenSurfels.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/geometrySurfels.ts",
+      "sha256": "e518d4b0f83eec33f9da6f913662fa89f4073e84ab63eba412ae75cf2166b6cc",
+      "bytes": 13485,
+      "lines": 357,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/geometrySurfels.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/holeFill.ts",
+      "sha256": "75001103bc0f1ce81c595498e4c22316e225c21fb59e86745541223147178dd4",
+      "bytes": 19779,
+      "lines": 459,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/holeFill.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/index.ts",
+      "sha256": "3a1bfbd40b04a54630e8f520ab2c6347f545dbe03844ad14ecc5850f297c9254",
+      "bytes": 299,
+      "lines": 8,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/index.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/leakStages.ts",
+      "sha256": "5c2444c189e43dee91dae95ca382c0911033e1d587f24bcfd82a49d8b6518470",
+      "bytes": 17076,
+      "lines": 377,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/leakStages.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/lightingProvenance.ts",
+      "sha256": "fd8853dfbf6fc063c7f32d866b2b549d630dee3a92823b04b873c5ce06c9ac9b",
+      "bytes": 4488,
+      "lines": 86,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightingProvenance.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/lightmapGBuffer.ts",
+      "sha256": "f7ab7af7bbd1d91cf48aaa9069a89dcf66d65a1a133128cd29f5a128e0e08287",
+      "bytes": 7056,
+      "lines": 180,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightmapGBuffer.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/lightmapSurfels.ts",
+      "sha256": "be18de3eaa005081f2dbddd3a83de11fd81658637cd6ff8eafa1c848767cc631",
+      "bytes": 29796,
+      "lines": 709,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightmapSurfels.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/lightmapUv.ts",
+      "sha256": "9af03205a9f7d912840ac8a4728b2b96f532e560e8d839be9ef108192e2a97e0",
+      "bytes": 32844,
+      "lines": 778,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/lightmapUv.ts"
+    },
+    {
+      "path": "src/shared/gi/bake/persistedBake.ts",
+      "sha256": "596f49c475baf4f3728b8f2796e126aa936c8de03022335bcf76493d2e638c2d",
+      "bytes": 10559,
+      "lines": 168,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/bake/persistedBake.ts"
+    },
+    {
+      "path": "src/shared/gi/cacheAtlas.ts",
+      "sha256": "f149a8a475031abd8ea91793ccc19bdaf4ace7e1e66e2204e34f041f6c1eea3f",
+      "bytes": 2297,
+      "lines": 53,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/cacheAtlas.ts"
+    },
+    {
+      "path": "src/shared/gi/contact/boundedTrace.ts",
+      "sha256": "85c3b96e5307cd154eea434380daed9a6787baf8a35bff4f6bb24ef005e7ce5a",
+      "bytes": 7817,
+      "lines": 227,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/contact/boundedTrace.ts"
+    },
+    {
+      "path": "src/shared/gi/contact/contactBvh.ts",
+      "sha256": "64ac04cfbcd48068b9d42bec27223c3219c8344e929952b60fb401fb47f1e54b",
+      "bytes": 3541,
+      "lines": 66,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/contact/contactBvh.ts"
+    },
+    {
+      "path": "src/shared/gi/contact/contactOcclusionPass.ts",
+      "sha256": "40670ce19d905a457f474ef157dd77a4c56616abb777ca9e277aa3e8233429fc",
+      "bytes": 17361,
+      "lines": 399,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/contact/contactOcclusionPass.ts"
+    },
+    {
+      "path": "src/shared/gi/immortalise.ts",
+      "sha256": "6176507f40af46ca96f3037ae50f6b9cb57bf828ec83f30c1132aaac79c9a0e6",
+      "bytes": 4459,
+      "lines": 100,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/immortalise.ts"
+    },
+    {
+      "path": "src/shared/gi/index.ts",
+      "sha256": "1e3ff68e03699b914c64abbba2871876a946eae83d6bb7e743e15ad2af784e99",
+      "bytes": 121,
+      "lines": 2,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/index.ts"
+    },
+    {
+      "path": "src/shared/gi/lod/chartPyramids.test.ts",
+      "sha256": "7d3243ac12a8924b39e82b9bcea2b583462568d4e0faa89a6130f0a29c650aab",
+      "bytes": 9013,
+      "lines": 178,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/chartPyramids.test.ts"
+    },
+    {
+      "path": "src/shared/gi/lod/chartPyramids.ts",
+      "sha256": "06523531da6e556b9b2bd06a189dfc8879c056c9f77f36d76bf314ca9b91231e",
+      "bytes": 9284,
+      "lines": 224,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/chartPyramids.ts"
+    },
+    {
+      "path": "src/shared/gi/lod/feedback.ts",
+      "sha256": "71897ee09cf3df7a8c44ea69ac47b6712ac76be2cddfbe4f4fed911489a62582",
+      "bytes": 5620,
+      "lines": 127,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/feedback.ts"
+    },
+    {
+      "path": "src/shared/gi/lod/index.ts",
+      "sha256": "16b97597b12032992f2a0a5c2baa4be8ae3aa1a1a431f7d798c4f9969e29e7c4",
+      "bytes": 2699,
+      "lines": 66,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/index.ts"
+    },
+    {
+      "path": "src/shared/gi/lod/tilePool.ts",
+      "sha256": "e7697fb1dcc7201c5cbcb930e0dbeaf6808a535d6d6f2cc133969f925c27e86c",
+      "bytes": 9169,
+      "lines": 176,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/tilePool.ts"
+    },
+    {
+      "path": "src/shared/gi/lod/tileResidency.ts",
+      "sha256": "ff85bbb73c66f6c1d886fbd6051c150a88f74479e36ce388b312465475b53746",
+      "bytes": 7302,
+      "lines": 185,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/lod/tileResidency.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/applyProbeGrid.ts",
+      "sha256": "5ac807e8c5142678e7f36cc7b1558dd7948fa8ede3494006600ac6f1bd53f174",
+      "bytes": 3581,
+      "lines": 73,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/applyProbeGrid.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/index.ts",
+      "sha256": "6e6bdc1a946666ec2606f8d05e3e1a3b6e7fc5552324db00a62a875a43dfe0f9",
+      "bytes": 651,
+      "lines": 5,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/index.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/octahedral.ts",
+      "sha256": "f6d614fef841ff02820044115f30beb9b386008304554de1f15dc01a07eb9352",
+      "bytes": 2553,
+      "lines": 62,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/octahedral.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/probeBake.ts",
+      "sha256": "b44631f5674cc7b0218cbf8df77b593a3ad2461cc06b9982f4ae9a99ff6bce84",
+      "bytes": 10751,
+      "lines": 191,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeBake.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/probeClassify.ts",
+      "sha256": "8104e12ef271c24368a39f8f4fe5f39ae9521b1de4044fdc9733574af3b5a6c1",
+      "bytes": 5824,
+      "lines": 117,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeClassify.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/probeLayers.ts",
+      "sha256": "40003a4880545ce4fe9ff2e6d634aebebc12b77943db31bc18833bcc89ed4677",
+      "bytes": 1523,
+      "lines": 42,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeLayers.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/probeLive.ts",
+      "sha256": "4baaee35e5d43ceb561b3b13d27659dceedcf63933757ad2d6fb3b2d2a24a9d6",
+      "bytes": 6891,
+      "lines": 142,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeLive.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/probeTracePass.ts",
+      "sha256": "86b59c0a06928f6f3fc3a02fea5d1a009ea5ec5d3a40308454b73ffa5987c3c4",
+      "bytes": 2945,
+      "lines": 65,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeTracePass.ts"
+    },
+    {
+      "path": "src/shared/gi/probes/probeVolume.ts",
+      "sha256": "6f654dd8df501dfe9bf98d3f5b1a5f19a8e33ed08d932aacdef2933da94e9863",
+      "bytes": 14246,
+      "lines": 299,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/probes/probeVolume.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/index.ts",
+      "sha256": "99e6029da41b52d589d4769eeb3d9043d2aa05d3174f29f2427447647af16ea2",
+      "bytes": 587,
+      "lines": 15,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/index.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionCache.ts",
+      "sha256": "e04d38e805cee6092df63c79f35fb1c761909abd0d6b568f8dda5a15540be101",
+      "bytes": 12845,
+      "lines": 354,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionCache.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionCaptureWgsl.ts",
+      "sha256": "56fbc976cffaf56ffc8d6f626b6bfececb4f387299dce13fb298b83ae2ef02be",
+      "bytes": 7619,
+      "lines": 207,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionCaptureWgsl.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionCubeTsl.ts",
+      "sha256": "be50bedbdd33fa1f8c33e06a7ec30af5504e435b1e2d0c89a7959b8f5dac95c1",
+      "bytes": 5506,
+      "lines": 137,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionCubeTsl.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionCubeWgsl.ts",
+      "sha256": "df0b4769f05b76e7b7b22c7b768209583fef45efc53240cf3e1010fe6c611c65",
+      "bytes": 4871,
+      "lines": 126,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionCubeWgsl.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionFilterWgsl.ts",
+      "sha256": "60270b05c59c9650876702a64a1d3f0430d5afba097daf38262432d5939bf57e",
+      "bytes": 4943,
+      "lines": 141,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionFilterWgsl.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionPasses.ts",
+      "sha256": "601eb1a7e8ac84811445d83c04c6aab4cde7e962e36e327ae7afacde24b4b05d",
+      "bytes": 11783,
+      "lines": 300,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionPasses.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionProbeIndirect.ts",
+      "sha256": "856e9daa882e8daf794e9eac5293346051cf24b15b2d1eeb7e89714b03f3e526",
+      "bytes": 3907,
+      "lines": 92,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionProbeIndirect.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionResources.ts",
+      "sha256": "c39eaaf76ef69ba0641ed69b63a1f5e705e906540f60fd0f3a4fcf3e8e7ff366",
+      "bytes": 6946,
+      "lines": 154,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionResources.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionSampler.ts",
+      "sha256": "997df531f2b98f9a9b0f43f2ff160b81fa05d3e38e2487738ffe0a388a49f123",
+      "bytes": 8488,
+      "lines": 194,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionSampler.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionTypes.ts",
+      "sha256": "5f8b5a412c50d7a7f7c27b13a1897625ba093e227b81594a4072d02236a58382",
+      "bytes": 4611,
+      "lines": 171,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionTypes.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/cache/reflectionVolumes.ts",
+      "sha256": "cdc17e5526715d806ef0ef7e34f42c233ea82d21cfa34f5adad5855dbdfddae7",
+      "bytes": 1801,
+      "lines": 48,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/cache/reflectionVolumes.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/reflectionDenoise.ts",
+      "sha256": "cb16fcfebe9919986ba7d948946bcad9ce6dd0616a9295c875aa7c62aecdd0b2",
+      "bytes": 5727,
+      "lines": 116,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/reflectionDenoise.ts"
+    },
+    {
+      "path": "src/shared/gi/reflect/reflectionPass.ts",
+      "sha256": "6cd420701a25e473e8757c3a26ad94b9c414acae8fb77f17d155e073e995e92e",
+      "bytes": 23716,
+      "lines": 556,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/reflect/reflectionPass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/constants.ts",
+      "sha256": "a8beef95ecfa8df690ef6adbf5aea4dcc90ab81eea236f8e6ddd45ef1277a4b1",
+      "bytes": 6280,
+      "lines": 125,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/constants.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/content.ts",
+      "sha256": "f4130021e0e3c6d809140e16b94bd5c03a814ab81d959944234451d0ffe7d61c",
+      "bytes": 30012,
+      "lines": 1074,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/content.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/debug/debugLogs.ts",
+      "sha256": "dfeef255f541e7ba81548c4968495c6ae7504257c72342514be4c95b73b90d2b",
+      "bytes": 9442,
+      "lines": 308,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/debug/debugLogs.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/debug/surfelScreenDebug.ts",
+      "sha256": "872b930ead760afd870c362a6cfd86e480fb1d1473626bc21e1d637b05542d3b",
+      "bytes": 38240,
+      "lines": 1141,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/debug/surfelScreenDebug.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/diffuseArray.ts",
+      "sha256": "a1b43c23303d9c2f99b3d6cd3850da91d2b8117b599bf1738fee33529c4dfd13",
+      "bytes": 16612,
+      "lines": 404,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/diffuseArray.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/dynamicBvh.ts",
+      "sha256": "62370e008283d5f639029f3325d324965755339217410eef8206130d0b9f9ca5",
+      "bytes": 13037,
+      "lines": 410,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/dynamicBvh.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/dynamicHierarchy.ts",
+      "sha256": "aadd2345e353540b1d1741bfbf46b59583e484b93186462d910ed85bbe6ddb3c",
+      "bytes": 8662,
+      "lines": 155,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/dynamicHierarchy.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/envSunSearch.ts",
+      "sha256": "e0a398a23f88b8db60339c6f7247603614962b8543cdcb04447bb54f34d36c80",
+      "bytes": 4937,
+      "lines": 109,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/envSunSearch.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/gbuffer.ts",
+      "sha256": "e27bab262bb1f6ebc501d000dc3b90b791857f41fbef3f514eb6aeb595c12d5d",
+      "bytes": 2484,
+      "lines": 66,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/gbuffer.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/hashUtils.ts",
+      "sha256": "1cb2cd3445125f5a196c6deb77ffad3a0d682a74567aff5141003844790c8c28",
+      "bytes": 2622,
+      "lines": 93,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/hashUtils.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/hitShading.ts",
+      "sha256": "a5b26c4658b9e006b248a6d5eb5ae82238db4896276e42e375aa57123a798416",
+      "bytes": 14107,
+      "lines": 348,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/hitShading.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/integrationSchedule.ts",
+      "sha256": "d164a4ac3a107b7824920175925b0995408af412ccfb8aace18c15fd664eddc0",
+      "bytes": 6641,
+      "lines": 114,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/integrationSchedule.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/integratorDispatchArgs.ts",
+      "sha256": "1813c8ba28fb37cdac70c44bef1a0c9c7dd8c92d63569f32bb8ed1c72deee272",
+      "bytes": 1258,
+      "lines": 38,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/integratorDispatchArgs.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/knobs.ts",
+      "sha256": "b2df09f7d856b38504687353ed18657395d37f09d9a898fe1688a70a3771b3af",
+      "bytes": 18642,
+      "lines": 321,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/knobs.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/lighting.ts",
+      "sha256": "9530dafd9b02ca4af24b92393a4a2f6393ceb1dfa5869cc0dde756d50e345e20",
+      "bytes": 2915,
+      "lines": 98,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/lighting.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/materials.ts",
+      "sha256": "62e5c54e8e7b11ce14b2b884aa62c73126dc10d2a7a1a871851d74c7deaf4a57",
+      "bytes": 538,
+      "lines": 16,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/materials.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/receiverOwnership.ts",
+      "sha256": "3506f6a6db79bac38182564df6b1b8ad208b2c28107debfd6d85e65dfbad0edf",
+      "bytes": 1969,
+      "lines": 40,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/receiverOwnership.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/scene.ts",
+      "sha256": "b8078f4c2000b28d63de92859b38a2baac4638c8f11d4e4d06a09e6e2972535c",
+      "bytes": 1244,
+      "lines": 42,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/scene.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/sceneBvh.ts",
+      "sha256": "a588650392bdfde7e15ad79bc9684685fc4fa54c74214a600f2406368713c998",
+      "bytes": 28094,
+      "lines": 693,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/sceneBvh.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/sceneLights.ts",
+      "sha256": "754c7d0a0f1cc988079383ea274a3d437a07f8c19acc0814bc0416f855de0f8d",
+      "bytes": 11075,
+      "lines": 282,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/sceneLights.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelAgePass.ts",
+      "sha256": "9345e0ce4317a324c27ed9326ff2c93bd9c4131f9b64c3a3268a71e05a7d00af",
+      "bytes": 8926,
+      "lines": 236,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelAgePass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelAllocatePass.ts",
+      "sha256": "14bae4646d44464c4b1912636b238f05de904dd5d825f14cfab8edeca7111d3a",
+      "bytes": 11178,
+      "lines": 299,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelAllocatePass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelAnchors.ts",
+      "sha256": "f6062e74930e5a242ff084a53ea2fa21d167f9d811d7db1a19a044dcb6334df2",
+      "bytes": 749,
+      "lines": 14,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelAnchors.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelDispatchArgs.ts",
+      "sha256": "8f63950cbe17a8d1bebf8079c295fa4f0fd0b1f8610f6556d8e0bacaabf5998e",
+      "bytes": 1448,
+      "lines": 45,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelDispatchArgs.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelFindMissingPass.ts",
+      "sha256": "4a1eaadc734e985458bf4f973a24acac81a77537653252a9b093a9a8c5a7a339",
+      "bytes": 28469,
+      "lines": 696,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelFindMissingPass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelGIResolvePass.ts",
+      "sha256": "0cd84658c077cd15a195a461d796632d57e1890e5b068016ac9723f176629253",
+      "bytes": 16955,
+      "lines": 468,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelGIResolvePass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelHashGrid.ts",
+      "sha256": "ffe2be2a0588e94d4ab776e08e0ac0ef78d8aa5c83a1f59d3ec557297da15789",
+      "bytes": 36031,
+      "lines": 999,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelHashGrid.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelIntegratePass.ts",
+      "sha256": "bd7aa74147a0cf5c9e5b5546a0d47b2f17fe3b821585cfeebb82b78c6604c95f",
+      "bytes": 60221,
+      "lines": 1574,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelIntegratePass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelMotion.ts",
+      "sha256": "45eb3978e57cd0f3ac8fec25460c2e547c857408fce74937394f8f302bec4765",
+      "bytes": 16051,
+      "lines": 276,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelMotion.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelPool.ts",
+      "sha256": "dc65cf95aa943b3c257f4fda367603a6f46bb7e071c153df4ddadc7748900c80",
+      "bytes": 14551,
+      "lines": 388,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelPool.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelPreparePass.ts",
+      "sha256": "8a2667d95edbdaa0a8ba3d9a4b4cfd2af78920e85b7fa9e3276cc63a439e99ec",
+      "bytes": 4166,
+      "lines": 134,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelPreparePass.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/surfelRadialDepth.ts",
+      "sha256": "9c8d48b1980b4e92a75cc2a3da04fb2b03bca8ae93eb3b391bd6c49b8c67aea4",
+      "bytes": 16398,
+      "lines": 540,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/surfelRadialDepth.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/vertexPacked.ts",
+      "sha256": "017f3f68b7bf9235c85b6d9a2793476ef24352683e48c0efbb4588b6a6e25c45",
+      "bytes": 2391,
+      "lines": 86,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/vertexPacked.ts"
+    },
+    {
+      "path": "src/shared/gi/surfel/wgslConsts.ts",
+      "sha256": "fea71059a40342b77b165054df2326b8ea44fa99f8d5465a7b5b086dc440e2f6",
+      "bytes": 3121,
+      "lines": 94,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfel/wgslConsts.ts"
+    },
+    {
+      "path": "src/shared/gi/surfelGI.ts",
+      "sha256": "bc94fb8b270a89bd2cb3893283e65a0e3d66d36f32f45cef27a8629e52c1e5a1",
+      "bytes": 76949,
+      "lines": 1640,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/gi/surfelGI.ts"
+    },
+    {
+      "path": "src/shared/lib/noise.ts",
+      "sha256": "9ce0c3b4a564cd8fbfdd08083b9761e271dd86e27213e9ba32b01b5337c79dfa",
+      "bytes": 3166,
+      "lines": 93,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/lib/noise.ts"
+    },
+    {
+      "path": "src/shared/render/atmosphere/volumetricFog.ts",
+      "sha256": "eb719059aa3dfd151602beb1f09d1292005b1db7628d4a330f1de4c47a403b18",
+      "bytes": 22131,
+      "lines": 533,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/atmosphere/volumetricFog.ts"
+    },
+    {
+      "path": "src/shared/render/exposure.ts",
+      "sha256": "e39f26bb5247a2827056632105c7ccd1ca1ee9c44ee0f09eba2bd923ba32e335",
+      "bytes": 7334,
+      "lines": 167,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/exposure.ts"
+    },
+    {
+      "path": "src/shared/render/foliage/index.ts",
+      "sha256": "d7a5f1a78bd02887bc1d0c7470c451949398276b23a3622473b8ec9594527ac0",
+      "bytes": 256,
+      "lines": 3,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/foliage/index.ts"
+    },
+    {
+      "path": "src/shared/render/foliage/leafMaterial.ts",
+      "sha256": "6c0ac8ea0ceb2268d8d293787df81df61b72366ebd23aa0f4ab538481094f6a8",
+      "bytes": 15131,
+      "lines": 313,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/foliage/leafMaterial.ts"
+    },
+    {
+      "path": "src/shared/render/foliage/types.ts",
+      "sha256": "2daf14cdbfea606cf727f842c0f87bc1a4a2169ffb4b0e93025a3eb1367d86c3",
+      "bytes": 132,
+      "lines": 6,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/foliage/types.ts"
+    },
+    {
+      "path": "src/shared/render/frameGraph.ts",
+      "sha256": "61a914e1829d44a98e3196e8e33e799f58a8f181cfa13ea87288e0db211951f1",
+      "bytes": 28180,
+      "lines": 674,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/frameGraph.ts"
+    },
+    {
+      "path": "src/shared/render/gpuReadback.ts",
+      "sha256": "8c3568d8f7f9bd2e5042cfa28e4c980aae645f1e0f80db3b01523037067dbe81",
+      "bytes": 1696,
+      "lines": 34,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/gpuReadback.ts"
+    },
+    {
+      "path": "src/shared/render/index.ts",
+      "sha256": "184d3ce935b68dd68e033d841c768d013e451d90bd690bc97133e771c31ac652",
+      "bytes": 440,
+      "lines": 17,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/index.ts"
+    },
+    {
+      "path": "src/shared/render/look.ts",
+      "sha256": "5a080beff9a819e272c56cd0104ab9220e78aa893d87a0c8347bc9b774d9838a",
+      "bytes": 4435,
+      "lines": 113,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/look.ts"
+    },
+    {
+      "path": "src/shared/render/motionBlur.ts",
+      "sha256": "9a7ef1a7b204d0dbc570f7f4f989a7f40379fb08a381913a8426424f8677a2a2",
+      "bytes": 16004,
+      "lines": 331,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/motionBlur.ts"
+    },
+    {
+      "path": "src/shared/render/outputStage.ts",
+      "sha256": "38cdd49a20253d68fb9bbbbe06fdf555a145a1a13eb3e6598446d7b7f4e543f8",
+      "bytes": 2148,
+      "lines": 40,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/outputStage.ts"
+    },
+    {
+      "path": "src/shared/render/receiverPlaneShadow.ts",
+      "sha256": "6982624dd35c4d77a2e2d70b83193e9be94fe12b3f8ebf57285385de9dd369d6",
+      "bytes": 2762,
+      "lines": 54,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/receiverPlaneShadow.ts"
+    },
+    {
+      "path": "src/shared/render/renderer.ts",
+      "sha256": "d6cc6666f213e74bbbf596973a6508bc7d8a55fd6730253def16dfcfe88fa3be",
+      "bytes": 4727,
+      "lines": 95,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/renderer.ts"
+    },
+    {
+      "path": "src/shared/render/sky/aerialPerspective.ts",
+      "sha256": "06a878959c834ce04656b2db42facbeb16b64736d718dc79e9ec33b85ae5e5a7",
+      "bytes": 6873,
+      "lines": 125,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/aerialPerspective.ts"
+    },
+    {
+      "path": "src/shared/render/sky/atmosphereLuts.ts",
+      "sha256": "1ae42cc04f36a56c7f1507c18b24684e4a144c30bf042d0e565e6a5c56e820f9",
+      "bytes": 6798,
+      "lines": 146,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/atmosphereLuts.ts"
+    },
+    {
+      "path": "src/shared/render/sky/atmosphereMedium.ts",
+      "sha256": "9133a402d8a2e3677c5f34dcc7eb3abbb10ababe3011372ef2071b8c0d324597",
+      "bytes": 2310,
+      "lines": 50,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/atmosphereMedium.ts"
+    },
+    {
+      "path": "src/shared/render/sky/atmosphereParameters.ts",
+      "sha256": "3873c81cf28d2d957b156c9baf9a9501beac9d213e8a58e4c489386501d93468",
+      "bytes": 2956,
+      "lines": 73,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/atmosphereParameters.ts"
+    },
+    {
+      "path": "src/shared/render/sky/cloudDensity.ts",
+      "sha256": "6142d30800d824075973503df32a5c01e3e65fc6127f54435faf5aedc17af0f1",
+      "bytes": 7112,
+      "lines": 152,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudDensity.ts"
+    },
+    {
+      "path": "src/shared/render/sky/cloudLayer.ts",
+      "sha256": "e5317061206f1e6377c1c0969b9179f330b5e599b9344c66ca8d3d8b9af9cb5b",
+      "bytes": 11915,
+      "lines": 219,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudLayer.ts"
+    },
+    {
+      "path": "src/shared/render/sky/cloudLighting.ts",
+      "sha256": "184edd00ee11d43940e0a711a5f80306020cf085a93c738b34de71cc87f1e601",
+      "bytes": 6420,
+      "lines": 119,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudLighting.ts"
+    },
+    {
+      "path": "src/shared/render/sky/cloudNoise.ts",
+      "sha256": "9822229a872144a7a0a7494de969eb56d1c8f438ba6fe88afd0d1179729c5ae9",
+      "bytes": 5255,
+      "lines": 125,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudNoise.ts"
+    },
+    {
+      "path": "src/shared/render/sky/cloudShadowMap.ts",
+      "sha256": "9ded9e638ad48705d64b760d4008b9a81bd94057699a9427b1adf78c0434ab62",
+      "bytes": 3791,
+      "lines": 73,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/cloudShadowMap.ts"
+    },
+    {
+      "path": "src/shared/render/sky/index.ts",
+      "sha256": "d07936336122f2103dc7c215a6e535a0185712f6480d3f2bf6443f24a89d66f8",
+      "bytes": 542,
+      "lines": 8,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/index.ts"
+    },
+    {
+      "path": "src/shared/render/sky/lutMapping.ts",
+      "sha256": "84e65006f0def40b4d5e6bbda3af4730140903af9c24b25fed23baa28c85762d",
+      "bytes": 4256,
+      "lines": 82,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/lutMapping.ts"
+    },
+    {
+      "path": "src/shared/render/sky/scatteringMarch.ts",
+      "sha256": "c20f64ae96c3877fbaccca5512bedd4b090045dba67d8bdf6df68e31543dcfbf",
+      "bytes": 4716,
+      "lines": 86,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/scatteringMarch.ts"
+    },
+    {
+      "path": "src/shared/render/sky/skyAtmosphere.ts",
+      "sha256": "0f6a60fa1227e8fd42ffc579e871d1f5c2897e294d9f54c165135ebbea10c645",
+      "bytes": 7043,
+      "lines": 146,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/skyAtmosphere.ts"
+    },
+    {
+      "path": "src/shared/render/sky/skyEnvironment.ts",
+      "sha256": "050919593c92bd8c6d51363d23249441799d4f6a5e586b2afccf6196397128ac",
+      "bytes": 5632,
+      "lines": 107,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/skyEnvironment.ts"
+    },
+    {
+      "path": "src/shared/render/sky/sunTransmittance.ts",
+      "sha256": "4eab5de20212047720b79f82a76ceed53731b6cb4fb847bc1e9ac60ba550040f",
+      "bytes": 1937,
+      "lines": 37,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sky/sunTransmittance.ts"
+    },
+    {
+      "path": "src/shared/render/softSunShadow.ts",
+      "sha256": "e4d3bfa4aac24f26e4fa702b6fc7a0b42b1e571b6024fae6d0971c55a8e15002",
+      "bytes": 10298,
+      "lines": 222,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/softSunShadow.ts"
+    },
+    {
+      "path": "src/shared/render/sunShadowFit.ts",
+      "sha256": "f85d904cb0364a9dbfd81b9f174c6d438e23ea0bf48814d49d3acbe890739279",
+      "bytes": 3919,
+      "lines": 91,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/sunShadowFit.ts"
+    },
+    {
+      "path": "src/shared/render/taaMotionStencil.ts",
+      "sha256": "3f9a7dbc8cf682c83abafd4bce916285536f6576a5b616136680ac8ff404117c",
+      "bytes": 1508,
+      "lines": 45,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/taaMotionStencil.ts"
+    },
+    {
+      "path": "src/shared/render/temporalAA.ts",
+      "sha256": "4770accba3d3e3f7ae0badf957baa48c66e712b2ab0c566f3d3ab702a5798055",
+      "bytes": 20325,
+      "lines": 454,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/temporalAA.ts"
+    },
+    {
+      "path": "src/shared/render/terrain/layerMaps.ts",
+      "sha256": "8d2099364158f4b58c3501aba688bf5486371d53fdbd3d7ba3b4338d4c7fdd93",
+      "bytes": 5660,
+      "lines": 136,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/terrain/layerMaps.ts"
+    },
+    {
+      "path": "src/shared/render/terrain/layerSampler.ts",
+      "sha256": "b287e9bf2123ca0ad36ad075b8a5065e9ee8bdf6cfedb1ff65e5441239ccb244",
+      "bytes": 8294,
+      "lines": 193,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/terrain/layerSampler.ts"
+    },
+    {
+      "path": "src/shared/render/terrain/layeredSurface.ts",
+      "sha256": "310c8dc07daad3bab6c525e14f770a0bc5a154b9d5aefb0c710d859ccc989c91",
+      "bytes": 10672,
+      "lines": 225,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/terrain/layeredSurface.ts"
+    },
+    {
+      "path": "src/shared/render/terrain/tileNoise.ts",
+      "sha256": "f28bb8e322747bd3eafa7a72731345d623d8ae713af789be9e1a1b5f58651dc2",
+      "bytes": 3695,
+      "lines": 105,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/terrain/tileNoise.ts"
+    },
+    {
+      "path": "src/shared/render/vertexMotion.ts",
+      "sha256": "26fb21812af5a7cbb9fd2c8656722118f296fa9c427827ffd165ffed4dafbb53",
+      "bytes": 2351,
+      "lines": 44,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/render/vertexMotion.ts"
+    },
+    {
+      "path": "src/shared/ui/bootProgress.ts",
+      "sha256": "bba3ab12cfa48d5c60b66a7740eb257a9c845375fb14808feaf2428e9dea4332",
+      "bytes": 886,
+      "lines": 33,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/ui/bootProgress.ts"
+    },
+    {
+      "path": "src/shared/ui/hud.ts",
+      "sha256": "a37da7b56df7a98586478eab5b06b5e461b1e6ecf18dd51e5c2e73577f2b6aa4",
+      "bytes": 2621,
+      "lines": 77,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/ui/hud.ts"
+    },
+    {
+      "path": "src/shared/world/index.ts",
+      "sha256": "3e770e98cb77f00d24657fb8c8e499126cf7b0dd846581a8673ea9081ec47066",
+      "bytes": 232,
+      "lines": 15,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/world/index.ts"
+    },
+    {
+      "path": "src/shared/world/mobility.ts",
+      "sha256": "fabb19a48de1c92d1eda8f609a623c2a13f9e83968ad3ff7ba4298a2727bdc37",
+      "bytes": 4072,
+      "lines": 110,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/world/mobility.ts"
+    },
+    {
+      "path": "src/shared/world/worldState.ts",
+      "sha256": "81d3395e2baad9006fa5f3babf7e317a2512c65a79d8128574c0f14c4c0e7a73",
+      "bytes": 4616,
+      "lines": 150,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/shared/world/worldState.ts"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38,
+      "lines": 1,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/vite-env.d.ts"
+    },
+    {
+      "path": "src/widgets/lod-lab/index.ts",
+      "sha256": "042a68d5eb678cf3bf9751bd7a011c442b612dca5400533874be21d970de6fad",
+      "bytes": 6350,
+      "lines": 130,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/lod-lab/index.ts"
+    },
+    {
+      "path": "src/widgets/pipeline-doc/model/hero.ts",
+      "sha256": "f2ea30256ca804b670ffcf7a1f31818e2a57e1c64acc9b73cc929cc52234ac2b",
+      "bytes": 730,
+      "lines": 8,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline-doc/model/hero.ts"
+    },
+    {
+      "path": "src/widgets/pipeline-doc/model/imageHosts.ts",
+      "sha256": "f221ad726607fcbd4ead07756826b275b4ccc5e47e1795a1aac86ba6a4707caa",
+      "bytes": 343,
+      "lines": 5,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline-doc/model/imageHosts.ts"
+    },
+    {
+      "path": "src/widgets/pipeline-doc/model/rdr2.ts",
+      "sha256": "ac44615449939342887b5daad13635127b9e6695ffbd7db4d93002721e74d9ce",
+      "bytes": 8522,
+      "lines": 120,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline-doc/model/rdr2.ts"
+    },
+    {
+      "path": "src/widgets/pipeline-doc/model/types.ts",
+      "sha256": "f3c0652c02b124793d1ea04b561c051380dfec1ed5c9036d2c74b41b4a9ca17a",
+      "bytes": 1259,
+      "lines": 50,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline-doc/model/types.ts"
+    },
+    {
+      "path": "src/widgets/pipeline/PipelinePage.tsx",
+      "sha256": "cf39603c755e6e992b03b146bbbf3043522c2d528f27468f46f30f9caf72eb3a",
+      "bytes": 1641,
+      "lines": 39,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/PipelinePage.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/figures/CostFigure.tsx",
+      "sha256": "cfe91fb8fa06ca30d7594e0f149575790275488f7a2613c93afec24c165c27f8",
+      "bytes": 3132,
+      "lines": 55,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/figures/CostFigure.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/figures/FinalFigure.tsx",
+      "sha256": "43cc119a56e9804932d09f1ed27fcc8e15820fc96e3fb7e3b44f98d123c599a1",
+      "bytes": 5898,
+      "lines": 112,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/figures/FinalFigure.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/figures/SplitFigure.tsx",
+      "sha256": "7c69bcaf55f75f8832168f410ace5a67385700e7817aa1a2e5aa6855288f765b",
+      "bytes": 4595,
+      "lines": 76,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/figures/SplitFigure.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/figures/svgFrame.tsx",
+      "sha256": "03ad35e8fa4f5bdd4556707fef2c2a27dcbf0ec61c3f583c1865a62f501dc84b",
+      "bytes": 1072,
+      "lines": 30,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/figures/svgFrame.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/index.ts",
+      "sha256": "4159502a0f6a4783ace812d1b4c84f5002bd0568aaf255c49edad95bb256b15b",
+      "bytes": 51,
+      "lines": 1,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/index.ts"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/AlanWakeSection.tsx",
+      "sha256": "d8ef501eb4297800e6b135a518df6503013532796906dc6b3c654804fb914199",
+      "bytes": 8359,
+      "lines": 144,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/AlanWakeSection.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/CompareSection.tsx",
+      "sha256": "a05ed566f3b6593544325dc3a9ac0d21713eb536e4c0cd067b23c783d50f151f",
+      "bytes": 9412,
+      "lines": 232,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/CompareSection.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/CyberpunkSection.tsx",
+      "sha256": "522d82d53aaec42b0fab9d69d7672d86f830c3bfae2cfd5662dceaf3f744924f",
+      "bytes": 7582,
+      "lines": 124,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/CyberpunkSection.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/DesignSection.tsx",
+      "sha256": "96d7b612a1065977e157781e4ff2ef48498087ca093e930759a61c91d498fd9c",
+      "bytes": 11033,
+      "lines": 212,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/DesignSection.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/LumenSection.tsx",
+      "sha256": "62b423743d147b7823963379e137d2cb07da0a5fc9888a6d07e974fe2fe7df31",
+      "bytes": 8018,
+      "lines": 128,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/LumenSection.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/Rdr2Section.tsx",
+      "sha256": "086de7a262740b37a809a65151a2fc467a025c9959c5f99cf8869fdb91d73aa4",
+      "bytes": 9542,
+      "lines": 169,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/Rdr2Section.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/sections/SourcesFooter.tsx",
+      "sha256": "4e5adfb23f114a2a85e833ec85699a45da664a0ea3136d72b7af0aec6e88a2c6",
+      "bytes": 1733,
+      "lines": 38,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/sections/SourcesFooter.tsx"
+    },
+    {
+      "path": "src/widgets/pipeline/ui/blocks.tsx",
+      "sha256": "0c25c7459925a9bc746d08b1fca1b0bfed1d2444d092ecab949938558b8e9159",
+      "bytes": 3278,
+      "lines": 146,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/pipeline/ui/blocks.tsx"
+    },
+    {
+      "path": "src/widgets/world/beachScene.ts",
+      "sha256": "ceb967b202dc32a969a84af1ed0d2f38f07b9990ea3aa9231e047da06750e1f1",
+      "bytes": 19855,
+      "lines": 389,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/beachScene.ts"
+    },
+    {
+      "path": "src/widgets/world/cornellScene.ts",
+      "sha256": "685c0a5475bdbca5f53d6b64146cbb45bbe53735c66f9fa82456b8854a0f2603",
+      "bytes": 6969,
+      "lines": 164,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/cornellScene.ts"
+    },
+    {
+      "path": "src/widgets/world/corridorLightsScene.ts",
+      "sha256": "284ed182d6e4b3972240dd21f568f8c52fe215ba0bb96f34a319271b1b75db56",
+      "bytes": 3792,
+      "lines": 78,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/corridorLightsScene.ts"
+    },
+    {
+      "path": "src/widgets/world/corridorScene.ts",
+      "sha256": "48e3847182bf11eccb1b368faabb1e15dc7c865d60c8ef63c5df4b3b962fea16",
+      "bytes": 3915,
+      "lines": 107,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/corridorScene.ts"
+    },
+    {
+      "path": "src/widgets/world/forestScene.ts",
+      "sha256": "e20923e327261493f85e8bc318beff856ca8a470a649546dbca53f295d09af66",
+      "bytes": 12774,
+      "lines": 319,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/forestScene.ts"
+    },
+    {
+      "path": "src/widgets/world/index.ts",
+      "sha256": "fa97e22d25044b37f535de9aa7a6b52209e73157660c52596180243a93d3c0f5",
+      "bytes": 792,
+      "lines": 15,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/index.ts"
+    },
+    {
+      "path": "src/widgets/world/leakRoomScene.ts",
+      "sha256": "a7280a60b66fda3d782182672a3bb253581108e1065f66e0e1b5697a79cfb300",
+      "bytes": 5420,
+      "lines": 119,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/leakRoomScene.ts"
+    },
+    {
+      "path": "src/widgets/world/lodScaleScene.tsx",
+      "sha256": "e108638b3c5fd4d2d4bfd84ee9720755df7af324724f1f580450a2adf9685f56",
+      "bytes": 8544,
+      "lines": 173,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/lodScaleScene.tsx"
+    },
+    {
+      "path": "src/widgets/world/midseeVillageScene.tsx",
+      "sha256": "076470ac384da6ceb8c90f2abe6b56d139e8550ec9c986d820827c29dbd1b8b0",
+      "bytes": 5410,
+      "lines": 94,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/midseeVillageScene.tsx"
+    },
+    {
+      "path": "src/widgets/world/skyLabScene.tsx",
+      "sha256": "caff169c501ba7352c91549d7067638d5747392e0cfecbf553a13c93d5420c67",
+      "bytes": 3890,
+      "lines": 89,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/skyLabScene.tsx"
+    },
+    {
+      "path": "src/widgets/world/villageCoast.ts",
+      "sha256": "b8674ef79b450284228800e0946fa3ecfe8a9a90ac22cd807b12b348d99b0b80",
+      "bytes": 3771,
+      "lines": 53,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/villageCoast.ts"
+    },
+    {
+      "path": "src/widgets/world/villageField.ts",
+      "sha256": "1e5e9176773e94ebd9da850b744df98c1783b03d5b05490a231b1bfd3148fd54",
+      "bytes": 1277,
+      "lines": 25,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/villageField.ts"
+    },
+    {
+      "path": "src/widgets/world/villageLightScene.tsx",
+      "sha256": "38bb8001f661e4ed2963351bdc47261c6c9c4b576148e3ff246d2ecb75f32f81",
+      "bytes": 3042,
+      "lines": 62,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/src/widgets/world/villageLightScene.tsx"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "82efb97aeca0cc8db76f34969c6b171226bf8ffe6e4d114374fec52688cc031b",
+      "bytes": 821,
+      "lines": 30,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/tsconfig.json"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "fe7369fa3f19f7e637568a8e3c192ed31bbccf271aad2875595ab5e99b786367",
+      "bytes": 4588,
+      "lines": 79,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/vite.config.ts"
+    },
+    {
+      "path": "vite.webgiya.config.ts",
+      "sha256": "f84a39ad9eb9a9cea0282fc629719852cbb30828399ea23cbc67f060f77ddc9a",
+      "bytes": 815,
+      "lines": 21,
+      "url": "https://github.com/vibegameengine/web-starter-kit-webgpu-pipline/blob/ca576b601bf84527102f1768372aa8cd96a3c55a/vite.webgiya.config.ts"
+    }
+  ],
+  "fetch_errors": [],
+  "historical_static_phase": {
+    "upstream_execution": "not_run",
+    "research_method": "固定提交的源码与作者文档审阅；静态研究展示另行本地验证。清单不是上游画质或性能实测。",
+    "license_observation": "固定版本未找到仓库级许可证；公开可读不等于授予复用许可。本研究链接源码，不收录完整上游代码或素材。"
+  },
+  "runtime_sources": "runtime/SOURCES.json",
+  "runtime_verification": "runtime/verification.json"
+}
