@@ -2,7 +2,7 @@
 
 [Skill入口](skills/emotion-art-direction/SKILL.md)将这套方法变成AI可以按任务读取的工作指引：先明确情绪与艺术意图，再结合风格规则和实际案例，构造图片、视频或返修提示词。由本研究原创整理；没有引入上游执行代码，也没有把海报库包装成视频模型。
 
-[计划公开Skill入口](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/#emotion-skill)：**本次发布验证中**。研究全貌见[第三版总览图](assets/research/emotion-art-research-overview-v3.png)和[研究总结](research-summary.md)；图中案例为AI概览合成，准确历史指令与媒体原件另外保存。
+[公开Skill入口](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/#emotion-skill)：**已部署并验证（2026-10-22）**。研究全貌见[第三版总览图](assets/research/emotion-art-research-overview-v3.png)和[研究总结](research-summary.md)；图中案例为AI概览合成，准确历史指令与媒体原件另外保存。
 
 它承接的是整个研究方法：情绪与艺术意图明确创作方向，风格规则规定如何表达，再选择像素、点云、数据连接、光色、构图或视频事件等手段组织prompt。源库贡献实体与计算结构融合的海报规范；本Skill、21份情绪起点、其他风格旁支与跨图片/视频模板是我们的扩展。选择写实摄影就组织摄影要求，继承原海报家族就带入实体、计算关系与模块化排版；实际生成由宿主相应模型与工具完成。
 

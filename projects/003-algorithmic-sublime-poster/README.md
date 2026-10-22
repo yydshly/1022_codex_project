@@ -18,7 +18,7 @@
 | 上游许可 | 该提交没有独立 `LICENSE`，不能假定为 MIT 等许可；示例媒体另有 [NOTICE](assets/NOTICE.upstream.md) |
 | 收录日期 | 2026-10-21 |
 | 研究进度 | 以 [项目登记表](../catalog.json) 为准 |
-| Web 展示 | [计划公开入口](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/)；**本次发布验证中**。本地构建步骤见下方[复现与运行](#复现与运行) |
+| Web 展示 | [公开展示](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/)；**已部署并验证（2026-10-22）**。本地构建步骤见下方[复现与运行](#复现与运行) |
 
 ## 研究主线与能力边界
 

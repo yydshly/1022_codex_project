@@ -1,0 +1,1384 @@
+{
+  "checked_at": "2026-10-22T06:00:25.620835+00:00",
+  "commit": "3a51bb7b042010ea8fffc23023656db26a4a8f8f",
+  "url": "https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/",
+  "count": 192,
+  "matched": 192,
+  "seconds": 40.89,
+  "root_cover_v3": true,
+  "range": [
+    {
+      "path": "assets/skill-film/original.mp4",
+      "status": 206,
+      "content_range": "bytes 0-2047/5943163",
+      "first_2048_equal": true
+    },
+    {
+      "path": "assets/ai-film/shared-space-original.mp4",
+      "status": 206,
+      "content_range": "bytes 0-2047/9590694",
+      "first_2048_equal": true
+    }
+  ],
+  "files": [
+    {
+      "path": "ai-film.css",
+      "status": 200,
+      "bytes": 5164,
+      "sha256": "0851e378264ab0ff649acc33333eb0653edd89572aa6fbc1fed998c2baddb6b1",
+      "match": true
+    },
+    {
+      "path": "ai-film.js",
+      "status": 200,
+      "bytes": 8922,
+      "sha256": "7f7482e3e418087b30354b3dba3ee2f2cd04f4a949e7ae0f7d5e44ae28925dd0",
+      "match": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 27457,
+      "sha256": "39705c0389420dc03b7f6f1db5272b36a92b2870f35d18980af2f4b07d598a89",
+      "match": true
+    },
+    {
+      "path": "art-gallery.css",
+      "status": 200,
+      "bytes": 5922,
+      "sha256": "3d2b8d08447da096b7cf6becb192e46227063c4bcacea8de25719ead202dd8d6",
+      "match": true
+    },
+    {
+      "path": "art-gallery.js",
+      "status": 200,
+      "bytes": 2904,
+      "sha256": "ed55364c393b33b284184ed461d3fb8297a1b28ffcc5952bab128a80611a1a81",
+      "match": true
+    },
+    {
+      "path": "chair-data.js",
+      "status": 200,
+      "bytes": 9000,
+      "sha256": "12c38e09dcee8efa177b95f6250bdd00e0a77aed2beba442768e55615118b40f",
+      "match": true
+    },
+    {
+      "path": "direction-studio.css",
+      "status": 200,
+      "bytes": 10796,
+      "sha256": "00030dd26679aef6f70b966eb7c0180a6d086c0d7d2843846a676651f0bb2c90",
+      "match": true
+    },
+    {
+      "path": "direction-studio.js",
+      "status": 200,
+      "bytes": 19100,
+      "sha256": "8be89d316bd43ce4af06774fcbd35921a7f96b9b3c302b764a2f6ce51153db1a",
+      "match": true
+    },
+    {
+      "path": "emotion-library.css",
+      "status": 200,
+      "bytes": 8395,
+      "sha256": "c73642d5e0cc77362f12a8a13dd0888c1774a85909631a32289b6d4141df7766",
+      "match": true
+    },
+    {
+      "path": "emotion-library.js",
+      "status": 200,
+      "bytes": 11264,
+      "sha256": "f00f449b426a394ed73e1a438c98a9f5e2ebffbaec6d149b82157d36eb8a31d8",
+      "match": true
+    },
+    {
+      "path": "emotion-validation.css",
+      "status": 200,
+      "bytes": 10408,
+      "sha256": "f1398a9f3a0ba422bc13aaaeecb5013bc641588c66d99120a6ef9105ec188d92",
+      "match": true
+    },
+    {
+      "path": "emotion-validation.js",
+      "status": 200,
+      "bytes": 14578,
+      "sha256": "a66a272b0ee6d94d22b40dabc79d64198771b1df8af449fddc1024471237b394",
+      "match": true
+    },
+    {
+      "path": "extensions.css",
+      "status": 200,
+      "bytes": 10265,
+      "sha256": "1ef9d3c6f30ff27802fbb3d04ac46a6e3380a99c96bc671fc04a26c0c5953559",
+      "match": true
+    },
+    {
+      "path": "extensions.js",
+      "status": 200,
+      "bytes": 31318,
+      "sha256": "76f00f2bd065da1230be1d52aea76d8d2c0a62919201064967eb3f12896f42c4",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 130168,
+      "sha256": "6c5e5dec19db91ac507862ae4a21decbc81ae46ec39d7cdc4cfad3bf3d3262a8",
+      "match": true
+    },
+    {
+      "path": "intent-template.css",
+      "status": 200,
+      "bytes": 6213,
+      "sha256": "ef1c3659077a6ac14d325593c49fbff6f7e9082a5977a3d99b4f977b2f6aef6c",
+      "match": true
+    },
+    {
+      "path": "intent-template.js",
+      "status": 200,
+      "bytes": 8423,
+      "sha256": "5ead2bb8bffa99af33a626b8c52b2363f81f061b2d3f362e7629230bfea7f3bf",
+      "match": true
+    },
+    {
+      "path": "motion-emotions.css",
+      "status": 200,
+      "bytes": 7232,
+      "sha256": "b514af80eb4e00913c32f9d47d22807b2e898ee1da2188b2fe02e026f9696485",
+      "match": true
+    },
+    {
+      "path": "motion-emotions.js",
+      "status": 200,
+      "bytes": 10546,
+      "sha256": "36a55f2781074bda59d87dc318e7904984647ae887dccf0c9a49cc7cfc0e9601",
+      "match": true
+    },
+    {
+      "path": "motion-review.css",
+      "status": 200,
+      "bytes": 4254,
+      "sha256": "00e4b946cf859ab33ed924ec23b05846c6cd3f40def283b482861ef9d9f56318",
+      "match": true
+    },
+    {
+      "path": "motion-review.js",
+      "status": 200,
+      "bytes": 11759,
+      "sha256": "83918637981907702315e60a182cb7d22853059f115a24e98b04ca6c3549aa21",
+      "match": true
+    },
+    {
+      "path": "motion-study.css",
+      "status": 200,
+      "bytes": 9823,
+      "sha256": "824411873ec7251301e93e64b2607fb0bc00234914d6c5ac32afab7906031de0",
+      "match": true
+    },
+    {
+      "path": "motion-study.js",
+      "status": 200,
+      "bytes": 8328,
+      "sha256": "c5f08b46c7a8640ab57b0649332a880f90bbca3d076cc6061fd0fc6e486aae64",
+      "match": true
+    },
+    {
+      "path": "publish-overview.css",
+      "status": 200,
+      "bytes": 2552,
+      "sha256": "9e5082002bc9a8e0b668de23caef9e32b6515f0760fa776ff2d421e63876f53e",
+      "match": true
+    },
+    {
+      "path": "research-summary.css",
+      "status": 200,
+      "bytes": 6345,
+      "sha256": "ec2667d1d92e0e6a03b11e4a5402be1e9650526cb72125f57fb6dfbe039db6e9",
+      "match": true
+    },
+    {
+      "path": "skill-film.css",
+      "status": 200,
+      "bytes": 2720,
+      "sha256": "7dfc1f589216a16c589586284427d26fab09c182bb63b3b55fecfe4ecae34263",
+      "match": true
+    },
+    {
+      "path": "skill-film.js",
+      "status": 200,
+      "bytes": 13817,
+      "sha256": "3af97b04323b6f0c48d3c034f75f396fcab4a8b957ebd67d9eda9a61b341f402",
+      "match": true
+    },
+    {
+      "path": "skill-trial.css",
+      "status": 200,
+      "bytes": 6620,
+      "sha256": "c37479010aa191c46c7ca4b2e7283e8f9e68a34053c1586397fc540db6be4453",
+      "match": true
+    },
+    {
+      "path": "skill-trial.js",
+      "status": 200,
+      "bytes": 6361,
+      "sha256": "004faa7785966d8c0747057647e22658b1d2378a6dd7303a82537bdf26e3b59a",
+      "match": true
+    },
+    {
+      "path": "style-profiles.css",
+      "status": 200,
+      "bytes": 13134,
+      "sha256": "a550092cfce4bef78e112ba31eae941dae61a079235b35810f61da1b2b395baa",
+      "match": true
+    },
+    {
+      "path": "style-profiles.js",
+      "status": 200,
+      "bytes": 10712,
+      "sha256": "09eb5cd4063c6ba561f5fb6d9c27ba60f041220b490d0bb5ddc3be50563e4fec",
+      "match": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 33790,
+      "sha256": "9c6b31006c9386a3142f9dfb30399fd6809a6fb6188a1a37f143bc5b95072a61",
+      "match": true
+    },
+    {
+      "path": "assets/01-beverage-before-after.png",
+      "status": 200,
+      "bytes": 5917342,
+      "sha256": "8ed9d590cd917d55f0736120d31f0cf399332788b6a9ea71cb5b7c0dcfa6f68c",
+      "match": true
+    },
+    {
+      "path": "assets/02-original-web-hero-before-after.png",
+      "status": 200,
+      "bytes": 3690093,
+      "sha256": "c699ef273f899ebb7ba01cd59d50e9043cf1ae9b3982590ce6186033e69ce71e",
+      "match": true
+    },
+    {
+      "path": "assets/03-pumpkin-before-after.png",
+      "status": 200,
+      "bytes": 6457113,
+      "sha256": "3270826d034940675400d5cd574d31627660a595f04f762a7666f43ac00013c0",
+      "match": true
+    },
+    {
+      "path": "assets/NOTICE.upstream.md",
+      "status": 200,
+      "bytes": 718,
+      "sha256": "8ea1f1b2e89b63212ddf9c13eb123999d74d6d2526c6a787fa8bdc647964e80d",
+      "match": true
+    },
+    {
+      "path": "assets/study-flower.svg",
+      "status": 200,
+      "bytes": 3264,
+      "sha256": "197fc3d79ef6c187ea925ea94d32bb4f63f634330c9ab4c5e776e37cfbbcff84",
+      "match": true
+    },
+    {
+      "path": "assets/warm-bloom-poster.png",
+      "status": 200,
+      "bytes": 2167788,
+      "sha256": "a01965517da52793321c8fa73feffb8632cf3ac425f741443925e255c5941d7d",
+      "match": true
+    },
+    {
+      "path": "assets/blue-whale-poster.png",
+      "status": 200,
+      "bytes": 2335330,
+      "sha256": "ecb78a4246477d364d731d344c11fd581e117f7b98714d5f1a9723194e8c5bab",
+      "match": true
+    },
+    {
+      "path": "assets/warm-bloom-prompt.txt",
+      "status": 200,
+      "bytes": 2735,
+      "sha256": "ed776ec1fef286ed46ebd666871e87e3a56e620eaec06f432f07d2b83aad71c6",
+      "match": true
+    },
+    {
+      "path": "assets/blue-whale-prompt.txt",
+      "status": 200,
+      "bytes": 2607,
+      "sha256": "5212dfdfa4ca9de272a49099508da26e0b29531c790b3d517376e40cd334f173",
+      "match": true
+    },
+    {
+      "path": "assets/directions/manifest.json",
+      "status": 200,
+      "bytes": 2362,
+      "sha256": "39dd43625d0036015074cdc68338b1172c21c75c443fa88a34cda44c6372d65c",
+      "match": true
+    },
+    {
+      "path": "assets/directions/solitude-petals-quiet.png",
+      "status": 200,
+      "bytes": 2341385,
+      "sha256": "c325412ed721eb85d8c0155090d4a13c91e3522943994477bda51effd74c5c4d",
+      "match": true
+    },
+    {
+      "path": "assets/directions/solitude-petals-quiet-prompt.txt",
+      "status": 200,
+      "bytes": 1764,
+      "sha256": "3b8d6b91360af990694542a5338c55a9de94b93f2b99e3c0a90dccfb8fcd3b9e",
+      "match": true
+    },
+    {
+      "path": "assets/directions/freedom-petals-quiet.png",
+      "status": 200,
+      "bytes": 1850273,
+      "sha256": "942b36bbe03d43de9e4eb883b53309f7ad1d1b22d6e784264f2f753a0e0f71a1",
+      "match": true
+    },
+    {
+      "path": "assets/directions/freedom-petals-quiet-prompt.txt",
+      "status": 200,
+      "bytes": 1672,
+      "sha256": "c9f3613e2f8451cee439d88abc4ffbf47faf8193e716112181242787377a94fa",
+      "match": true
+    },
+    {
+      "path": "assets/directions/tension-petals-quiet.png",
+      "status": 200,
+      "bytes": 1966802,
+      "sha256": "3ca26c484d4e4a74d8d2dfaf70bcd759b6f2634cf7b950b2575538212859d352",
+      "match": true
+    },
+    {
+      "path": "assets/directions/tension-petals-quiet-prompt.txt",
+      "status": 200,
+      "bytes": 1748,
+      "sha256": "c75fd4e0b0dff47f98f2adad684827a876cbff57173d99e135515226a2b1c858",
+      "match": true
+    },
+    {
+      "path": "assets/directions/warm-particles-quiet.png",
+      "status": 200,
+      "bytes": 2060535,
+      "sha256": "041f81d3d596e0d5d0d2575107a8d8ad65ca2cc72bc7867e3ed73d3fa80218ea",
+      "match": true
+    },
+    {
+      "path": "assets/directions/warm-particles-quiet-prompt.txt",
+      "status": 200,
+      "bytes": 1642,
+      "sha256": "c79230c52d40c862afb7c5fbdc673370e7a46ddc47f1742ccea94ddb449c220c",
+      "match": true
+    },
+    {
+      "path": "assets/directions/warm-glass-quiet.png",
+      "status": 200,
+      "bytes": 2066994,
+      "sha256": "f4c6858bee9b80df6d5d7e37d450ac8de57310b01ac1f84b62baa16cc8db678f",
+      "match": true
+    },
+    {
+      "path": "assets/directions/warm-glass-quiet-prompt.txt",
+      "status": 200,
+      "bytes": 1671,
+      "sha256": "e10de345247a231a46904430aec537ab298aa51c3b256aafdd3aa6e8f20c8c1f",
+      "match": true
+    },
+    {
+      "path": "assets/directions/warm-petals-bold.png",
+      "status": 200,
+      "bytes": 2323299,
+      "sha256": "b43c8d362cd6cad252d6e98d95bce6fccb901142a2ddae44e68ecf40e91c72f7",
+      "match": true
+    },
+    {
+      "path": "assets/directions/warm-petals-bold-prompt.txt",
+      "status": 200,
+      "bytes": 1739,
+      "sha256": "0a77f6ba43163bdeca14baeeab6bf8404f51a7aebf1fdd622af1871ec1238b8b",
+      "match": true
+    },
+    {
+      "path": "assets/styles/profiles.json",
+      "status": 200,
+      "bytes": 5615,
+      "sha256": "398319bbacff55bd8aabc5d89d38a42d6fd021df1f73b65da1404cae8888e087",
+      "match": true
+    },
+    {
+      "path": "assets/emotions/profiles.json",
+      "status": 200,
+      "bytes": 36380,
+      "sha256": "d860474c6d6eac324ab353792a5abd17e9e099586fb4a75056f2ac8cd54924b0",
+      "match": true
+    },
+    {
+      "path": "assets/motion/manifest.json",
+      "status": 200,
+      "bytes": 3128,
+      "sha256": "26baa8dd407f08eee91e8d3ef3cc4f944adc7db34d69b7515dd4382229a599db",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-keyframe.png",
+      "status": 200,
+      "bytes": 1774735,
+      "sha256": "07ae7e1e04cb2fa8a3d4959cd3f5cda5787a1444bc5d051245520ee118ab7fda",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-keyframe-prompt.txt",
+      "status": 200,
+      "bytes": 1986,
+      "sha256": "aff57f43de904fd846537f5f3f64742bf9ece2082e655110ce629855037810bf",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal.mp4",
+      "status": 200,
+      "bytes": 3198086,
+      "sha256": "3dbf6269aa93b961b466fcee13f46a0a21e6f9b9d5a7d6038c2a933592896548",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-02.jpg",
+      "status": 200,
+      "bytes": 88618,
+      "sha256": "14b67ae4af331e4897cb2970378e7b2c1295447f635826117ab407d770a56e20",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-07.jpg",
+      "status": 200,
+      "bytes": 88081,
+      "sha256": "a8529b5b6a3764f67df42fbf4f0228986604aa1a0c1a1d3d9c06208e8f63b3b8",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-12.jpg",
+      "status": 200,
+      "bytes": 107584,
+      "sha256": "8945a93fabea25a8b06ea9b7558f6658688aa8fa9910b5f288d0a42a5441df39",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-brief.json",
+      "status": 200,
+      "bytes": 6409,
+      "sha256": "e95a2937bdf4838c90696dcbb408aa6d62f81a8f9db687faed6b1d51151aa78c",
+      "match": true
+    },
+    {
+      "path": "assets/motion/night-signal-captions.vtt",
+      "status": 200,
+      "bytes": 286,
+      "sha256": "c3ded6238e95d5367db1a751eaac138a43e7c80d9dfbd05937d0442ac2d338c5",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/manifest.json",
+      "status": 200,
+      "bytes": 2794,
+      "sha256": "d74bdc76775013831771c3b960a05647d05e30855ea8b421fe0ba3422f67d5a6",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/study.json",
+      "status": 200,
+      "bytes": 5535,
+      "sha256": "de5c64b33d97c08bdb33bd3ca3d11d0e6fec8417347f03e8e677a5ccc064fd31",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/rain-shelter-plate.png",
+      "status": 200,
+      "bytes": 2440726,
+      "sha256": "684d0ab5d8e2a668368d213abbc3a5b8953bd0306924962096c509fc63db084f",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/rain-shelter-plate-prompt.txt",
+      "status": 200,
+      "bytes": 1869,
+      "sha256": "1f36438ffb59c7153be2243b3553f5ff6111dd7383dfcd92eff8f7137029f4c1",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/walker-sprites.png",
+      "status": 200,
+      "bytes": 1056613,
+      "sha256": "8b6d3fcf05eb6a5cb36aaadc46bd32ee968da3824fe94e3836c0f6a59c51d719",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/walker-sprites-prompt.txt",
+      "status": 200,
+      "bytes": 1571,
+      "sha256": "eda95b8eff7142a45183be4f6660fafcfb49f952e64fa7752058a6f31ac94a45",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/solitude.mp4",
+      "status": 200,
+      "bytes": 4710004,
+      "sha256": "acc52059f3cd2eccbcbf2e8db18e54d840e738f71e2380dd718623d5ad6b03ea",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/solitude-poster.jpg",
+      "status": 200,
+      "bytes": 203647,
+      "sha256": "dacbe7a970f825c2d7a49d3dcbba2c1de45de9b6eac89316940e13a79d2baa0f",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/solitude-video-direction.txt",
+      "status": 200,
+      "bytes": 1628,
+      "sha256": "4ee5952e231204b5366206c366548fededccfa832b5aa4b65827c74e13b5356c",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/unease.mp4",
+      "status": 200,
+      "bytes": 4412409,
+      "sha256": "2a2f2b3ca733b146982c827adc5856019d406ec9093353fbab3a72e4a4f49fa7",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/unease-poster.jpg",
+      "status": 200,
+      "bytes": 185805,
+      "sha256": "ed296e394f80f6fd131303e0c292f70532647980779fae5e70ef8940bc2014d7",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/unease-video-direction.txt",
+      "status": 200,
+      "bytes": 1641,
+      "sha256": "e3614bd831017cc44e42c88cbd65a4f7dd29ce7f9ac85bff82df8170188d8e4b",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/hope.mp4",
+      "status": 200,
+      "bytes": 4737863,
+      "sha256": "194eac61db74da875dcdd3e7767271e4a0188fd9df0d2ae02505a45b38dfdbb5",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/hope-poster.jpg",
+      "status": 200,
+      "bytes": 211414,
+      "sha256": "0db19a0f763ce2d06dc092727224bb80f476082069ca4e0abd539912758267be",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/hope-video-direction.txt",
+      "status": 200,
+      "bytes": 1675,
+      "sha256": "2858f95f96bb816b10969bf7b34c9939481f81ce4835ab673fc857d4b77aac0f",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/study.json",
+      "status": 200,
+      "bytes": 5974,
+      "sha256": "02c378da392bba45fc1471841f9b0becfcc309164764f89596bfd376fa3c3e77",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/manifest.json",
+      "status": 200,
+      "bytes": 1969,
+      "sha256": "df30eae0fe5a4c71cc362d10cbaaaee5794248f781f12d681f41b92dc9d179d9",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/motion-metrics.json",
+      "status": 200,
+      "bytes": 2411,
+      "sha256": "318dd64439cf8e371d894bae242fc05e7efce2ae7cecbf8e9f3d821074d157d6",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/solitude.mp4",
+      "status": 200,
+      "bytes": 4940246,
+      "sha256": "646045fc0d270dc9b4fd3613d88e00aa6882eaadc19d1f22c9b568a4757217f1",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/solitude-poster.jpg",
+      "status": 200,
+      "bytes": 199787,
+      "sha256": "66b973e37cda51d1292610adbcf75cfbb2fa96fed24d6cb7b69efde90721a30b",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/solitude-video-direction.txt",
+      "status": 200,
+      "bytes": 2269,
+      "sha256": "ef0965c811d837580fdfb56ab65556fbdc6c49b0f8fc75e8784771598e91a872",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/unease.mp4",
+      "status": 200,
+      "bytes": 4206061,
+      "sha256": "96ade7fb86c67b03095a9afd0ff6c50ba9b78ed08aabfa10a86fa84b42bd1eed",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/unease-poster.jpg",
+      "status": 200,
+      "bytes": 186342,
+      "sha256": "6e134b21c8ab12b7202ba806211256b6a9364dbaca620ded3d3dd45c444e437a",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/unease-video-direction.txt",
+      "status": 200,
+      "bytes": 2274,
+      "sha256": "f30bce3149d568f3258f676b71d0f646e279b261fca22d932dd6e78bb6b0f280",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/hope.mp4",
+      "status": 200,
+      "bytes": 3982905,
+      "sha256": "42f817377c9908cfdf038395ac150f80abcb979f9f7694be230bc1a7d0a790e1",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/hope-poster.jpg",
+      "status": 200,
+      "bytes": 209337,
+      "sha256": "2717cc372d59aa191091e7a730c3fbd4cad6ffb6319786cca99e0f7047026be7",
+      "match": true
+    },
+    {
+      "path": "assets/motion-emotions/v2/hope-video-direction.txt",
+      "status": 200,
+      "bytes": 2362,
+      "sha256": "a3873d5a6ae82c61cb3262fb4e26bf4cf9c9021a9b079708a667a1c90d99fd1e",
+      "match": true
+    },
+    {
+      "path": "assets/validation/protocol.json",
+      "status": 200,
+      "bytes": 1599,
+      "sha256": "18e0c2cb3a4c07c38b6d86b217edb293622558b13f0b41a2c63332736f3d4d5b",
+      "match": true
+    },
+    {
+      "path": "assets/validation/repair-plan.json",
+      "status": 200,
+      "bytes": 912,
+      "sha256": "7a9b93bcf447c31ee57163d6437196b223b9c7384521a30c899591000c9e4a59",
+      "match": true
+    },
+    {
+      "path": "assets/validation/study.json",
+      "status": 200,
+      "bytes": 11182,
+      "sha256": "bdc5eb37fd070c435897d67d9cf2aff0b3e5d4f28512127375cb2708722c1249",
+      "match": true
+    },
+    {
+      "path": "assets/validation/manifest.json",
+      "status": 200,
+      "bytes": 4697,
+      "sha256": "ca11c7d9506eccc8f67238e7afc49b5593dc2cca0b030996e801a4b6b5065f45",
+      "match": true
+    },
+    {
+      "path": "assets/validation/00-bottle-reference.png",
+      "status": 200,
+      "bytes": 1725729,
+      "sha256": "c7db4917efe03489f5ba741935e1284830cfd375d7553c83c660f661d7801739",
+      "match": true
+    },
+    {
+      "path": "assets/validation/00-bottle-reference-prompt.txt",
+      "status": 200,
+      "bytes": 1186,
+      "sha256": "09f4b465d699e7d22028e8565fe617a12e8653bc8b1f02682044ea780e12b0b6",
+      "match": true
+    },
+    {
+      "path": "assets/validation/01-bottle-control.png",
+      "status": 200,
+      "bytes": 1899499,
+      "sha256": "d6c5fb434c7998c4925623b6ab358f954a21b337f6d1a81407d0fbd6401e19b8",
+      "match": true
+    },
+    {
+      "path": "assets/validation/01-bottle-control-prompt.txt",
+      "status": 200,
+      "bytes": 1560,
+      "sha256": "ff458a894b2f92ecf9eaba81c61dcf6457dab3056a0837af2b0c6f56eeadd013",
+      "match": true
+    },
+    {
+      "path": "assets/validation/02-bottle-solitude.png",
+      "status": 200,
+      "bytes": 1739551,
+      "sha256": "57e57288b738ad6df5be3d9913ef1448abf98d31aa4827a12ca37da2bce69bd1",
+      "match": true
+    },
+    {
+      "path": "assets/validation/02-bottle-solitude-prompt.txt",
+      "status": 200,
+      "bytes": 2583,
+      "sha256": "d9953953abaacfbf1c8208270befd4922e285b6955a99e7f16f53b745de1f218",
+      "match": true
+    },
+    {
+      "path": "assets/validation/03-bottle-tender.png",
+      "status": 200,
+      "bytes": 1824182,
+      "sha256": "0a19ffb1effbd9d9c2e25662da2714012322413fd037b26391568908a8932dfa",
+      "match": true
+    },
+    {
+      "path": "assets/validation/03-bottle-tender-prompt.txt",
+      "status": 200,
+      "bytes": 2502,
+      "sha256": "8b8fa8dfa95b96c599902e96d42ba1701d8f72d1bdf7a5333fb925de35e09caf",
+      "match": true
+    },
+    {
+      "path": "assets/validation/04-bottle-pressure.png",
+      "status": 200,
+      "bytes": 2059627,
+      "sha256": "9c075ae111fcb13942764ccdc1463d2b071fa8fd273d4bf294454b01bf48ab88",
+      "match": true
+    },
+    {
+      "path": "assets/validation/04-bottle-pressure-prompt.txt",
+      "status": 200,
+      "bytes": 2608,
+      "sha256": "6e5ba72ad7ae9302126a7c9e008afbbffa1ecb9970a16828e2370db50cd4d8e8",
+      "match": true
+    },
+    {
+      "path": "assets/validation/05-person-solitude.png",
+      "status": 200,
+      "bytes": 2042998,
+      "sha256": "1451b60940c4e21bdc3b54d54911c460cdd245b29e6cd88b40a9cb98c285b409",
+      "match": true
+    },
+    {
+      "path": "assets/validation/05-person-solitude-prompt.txt",
+      "status": 200,
+      "bytes": 2767,
+      "sha256": "ada11b42c9df37b955500bd5d66c7bbbcb9c5dbb2269866d1986e812a447a0da",
+      "match": true
+    },
+    {
+      "path": "assets/validation/06-shelter-solitude.png",
+      "status": 200,
+      "bytes": 1777825,
+      "sha256": "f5da824bbd90abd8420f3588cb057043068980d5320e6106781476bfdda8ffd8",
+      "match": true
+    },
+    {
+      "path": "assets/validation/06-shelter-solitude-prompt.txt",
+      "status": 200,
+      "bytes": 2705,
+      "sha256": "11b2f8927ce017c6c869b6aef5d6d771bcac3ecd9b98afc57becbdad358cdd91",
+      "match": true
+    },
+    {
+      "path": "assets/validation/07-bottle-solitude-repaired.png",
+      "status": 200,
+      "bytes": 1613825,
+      "sha256": "51c62b419ebeabef8bf467d7d4dbce0ab797505f062e571ca4e6f1db0097e9aa",
+      "match": true
+    },
+    {
+      "path": "assets/validation/07-bottle-solitude-repaired-prompt.txt",
+      "status": 200,
+      "bytes": 1502,
+      "sha256": "969857f171fabcf776dd56b302cbdf3b4c8cd5eff595698868982f665ba12c6b",
+      "match": true
+    },
+    {
+      "path": "assets/styles/manifest.json",
+      "status": 200,
+      "bytes": 3267,
+      "sha256": "8f2f51ac5edca93160156decf3c1e6f54f6ed869848e608823b60588919c813c",
+      "match": true
+    },
+    {
+      "path": "assets/styles/poetic-portrait.png",
+      "status": 200,
+      "bytes": 2779448,
+      "sha256": "8edccacb3726cf4e21828fd3a9785fe2b55568669cf2e9cb5414901dfaf3171c",
+      "match": true
+    },
+    {
+      "path": "assets/styles/poetic-portrait-prompt.txt",
+      "status": 200,
+      "bytes": 1844,
+      "sha256": "64755bdc7536dfff55f6daded48d3bb6fbb7fd2b22e07bebd8212fc9d6e736ae",
+      "match": true
+    },
+    {
+      "path": "assets/styles/poetic-product.png",
+      "status": 200,
+      "bytes": 2265859,
+      "sha256": "ac2770a13a7cfee49f148112bb0566d90fcd029b9dd5433635386e761159074f",
+      "match": true
+    },
+    {
+      "path": "assets/styles/poetic-product-prompt.txt",
+      "status": 200,
+      "bytes": 1840,
+      "sha256": "4b9d72b96d4aebffd5eb98d45b22aea2092d15fc4c0172e60ea40efdea515e62",
+      "match": true
+    },
+    {
+      "path": "assets/styles/ink-portrait.png",
+      "status": 200,
+      "bytes": 2838580,
+      "sha256": "4e2ea1793c002ed2bb307b6b500f2698e4dc146d96ee3e8459ed970640234754",
+      "match": true
+    },
+    {
+      "path": "assets/styles/ink-portrait-prompt.txt",
+      "status": 200,
+      "bytes": 1661,
+      "sha256": "e2e780fecb007bedb457847781c5874a936d6067c0677d9fbf293a50581ce352",
+      "match": true
+    },
+    {
+      "path": "assets/styles/ink-product.png",
+      "status": 200,
+      "bytes": 2741298,
+      "sha256": "5c8a3caf1a24eac4975a427386b240451ebda812d2d655ce3942ea221fa60618",
+      "match": true
+    },
+    {
+      "path": "assets/styles/ink-product-prompt.txt",
+      "status": 200,
+      "bytes": 1623,
+      "sha256": "fddeb982a33adeaa378882d0270ffc719d42e8d119f7477eb4a96ef9510d7bb2",
+      "match": true
+    },
+    {
+      "path": "assets/styles/organic-portrait.png",
+      "status": 200,
+      "bytes": 3479490,
+      "sha256": "88251eb5d19915cf64487e9c08a1d5a3f42e910a839c259088a70a631c0cbbfd",
+      "match": true
+    },
+    {
+      "path": "assets/styles/organic-portrait-prompt.txt",
+      "status": 200,
+      "bytes": 1887,
+      "sha256": "49408ba9678eec61e4ed90863585194c1ff1c9aa302be47d395f2682bf02825b",
+      "match": true
+    },
+    {
+      "path": "assets/styles/organic-product.png",
+      "status": 200,
+      "bytes": 3644947,
+      "sha256": "b5d04b72757dff1d894e2b59c39a229976ee83a199058a127e4710a0c4936d16",
+      "match": true
+    },
+    {
+      "path": "assets/styles/organic-product-prompt.txt",
+      "status": 200,
+      "bytes": 1848,
+      "sha256": "85c5a559eac9fc6d137f3c02f34f4776bfbcf87feb7686dd9ed384c849235a94",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/shared-space-prompt.txt",
+      "status": 200,
+      "bytes": 3020,
+      "sha256": "5594de6bbc387c0119f431e2ca9dace81fd44e8823c304b46c104792ab77ab39",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/request.json",
+      "status": 200,
+      "bytes": 3463,
+      "sha256": "8efeaaca2cae57eab38678fa96d947eb59c3b109113e40f0a7eb1b55012ad7d8",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/plan.json",
+      "status": 200,
+      "bytes": 4194,
+      "sha256": "bbe4d1f0336f2d098cd6e52dd2b217d0067f3ca7a19124af8f8b62437defef45",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/provider-result.json",
+      "status": 200,
+      "bytes": 411,
+      "sha256": "ee1f193e131fcf9cb8ae52103936bbb82716cfb5433310f5424c32d5dd2dcd17",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/review.json",
+      "status": 200,
+      "bytes": 2458,
+      "sha256": "e1de34e3ca7bbe61e3be1159eadc1cb0b7f3f9b2c5b9ed3bd0633aaf56fdb24b",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/study.json",
+      "status": 200,
+      "bytes": 5148,
+      "sha256": "eaa97bf1d4b12eaf79f68faf8d214ac3b63a2ef1a79e13af599f9500dd9b0fb6",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/manifest.json",
+      "status": 200,
+      "bytes": 2004,
+      "sha256": "ff78d3538dfaec28867e3fc407bc5eae56db366b7ab5058868d5c008fe8781ee",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/shared-space-original.mp4",
+      "status": 200,
+      "bytes": 9590694,
+      "sha256": "da91ec9d5ed4b2cd66ea3bbeaf59ac5c5cbed4d47da9c3dd00060a9c0a08798c",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/shared-space-02.jpg",
+      "status": 200,
+      "bytes": 201330,
+      "sha256": "aa4f2c0aa3d5a90fd1291fd3f3fa047d93d984996de760fe4b287b9df711738b",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/shared-space-05.jpg",
+      "status": 200,
+      "bytes": 229121,
+      "sha256": "0d05c0de6be4bdd5e4cc594e17b2ca8ca7e409e8e8d16ed42fc684ba8b75ce98",
+      "match": true
+    },
+    {
+      "path": "assets/ai-film/shared-space-08.jpg",
+      "status": 200,
+      "bytes": 180307,
+      "sha256": "49d7f6da656679f442221415c1096411caa749aaf0d728abe32d5ecf92ce5eb3",
+      "match": true
+    },
+    {
+      "path": "assets/intent/templates.json",
+      "status": 200,
+      "bytes": 68079,
+      "sha256": "ea7f42392f64e1d622f20e84a4ae51b1534845b109cf0d0ac3a127ada282bf9c",
+      "match": true
+    },
+    {
+      "path": "assets/intent/guide.md",
+      "status": 200,
+      "bytes": 19077,
+      "sha256": "b7aec787472919e62e97fe18873e0328e6ca62d7b708de2ff49c9e92a3662910",
+      "match": true
+    },
+    {
+      "path": "assets/intent/image-template.txt",
+      "status": 200,
+      "bytes": 3298,
+      "sha256": "0f78b9e0718550d2d9a621fadc38cb4909543ae6af767a397f86dcc84741b7bc",
+      "match": true
+    },
+    {
+      "path": "assets/intent/video-template.txt",
+      "status": 200,
+      "bytes": 3918,
+      "sha256": "cf878a50e530b655fdcbfbf68bdbac2959e5bb71566b8e5ff60676f060651286",
+      "match": true
+    },
+    {
+      "path": "assets/intent/repair-template.txt",
+      "status": 200,
+      "bytes": 1514,
+      "sha256": "e61779e264b27843ee2f9dbc39dc18ad14d5bb07cfa33d52dd23d62f139fa4f8",
+      "match": true
+    },
+    {
+      "path": "assets/generated-posters.json",
+      "status": 200,
+      "bytes": 1419,
+      "sha256": "19be70196dd938d7ace608e92dc21e6d734ba3acfedd3b1819b9f62c05d729ce",
+      "match": true
+    },
+    {
+      "path": "assets/skills/emotion-art-direction.zip",
+      "status": 200,
+      "bytes": 16758957,
+      "sha256": "3922f264ea10dcf6bf25ba3bd1ed0640b612140f1add97983cfaa09da9fddcf9",
+      "match": true
+    },
+    {
+      "path": "assets/skills/emotion-art-direction.json",
+      "status": 200,
+      "bytes": 11274,
+      "sha256": "31ab17ccde1c896351fcb82052fb7d3a9604569e04701fa32643e60aad921327",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/reference.png",
+      "status": 200,
+      "bytes": 1799206,
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/safe.png",
+      "status": 200,
+      "bytes": 2299374,
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/solitude.png",
+      "status": 200,
+      "bytes": 2252087,
+      "sha256": "b32464c03977fade9d0278b3ffb819ef0c27f25aaf43f1b9c142b09db5b3bb00",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/unease.png",
+      "status": 200,
+      "bytes": 2870916,
+      "sha256": "16d7417f943947a381bf88bc50ad425f21093cc9b0a2b444e4a3a8f9f2a90391",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/reference-prompt.txt",
+      "status": 200,
+      "bytes": 1188,
+      "sha256": "27e49cece80a28ab27e23a7c513fc575da19be549d20437236361c7663881655",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/safe-prompt.txt",
+      "status": 200,
+      "bytes": 2598,
+      "sha256": "96a6c664a26ab78cd789a56a0fd7361e6442badf8ba13b380d0aebb19a532296",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/solitude-prompt.txt",
+      "status": 200,
+      "bytes": 2522,
+      "sha256": "0d87dd21578b65eb66afd4bb7f091bf61c62626feb773530a4af94fc8447696c",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/unease-prompt.txt",
+      "status": 200,
+      "bytes": 2758,
+      "sha256": "bcc7343ea5adf815720a74cc0a9159fc9bdbabbe73f31ec76f12b7271f65e885",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/protocol.json",
+      "status": 200,
+      "bytes": 7685,
+      "sha256": "3b4d4e50a52b0e66a2bee42c21c0524ea523195136cae8b49305110843d9e181",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/execution.json",
+      "status": 200,
+      "bytes": 9443,
+      "sha256": "bafd6d7d3137695312423ce7761c3716c77ee59eddbcff8f611121c2485ae456",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/review.json",
+      "status": 200,
+      "bytes": 4001,
+      "sha256": "f6971d020a8a91363b03802fda87fa1a971661cbcad45d527afe78072ec1917b",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/study.json",
+      "status": 200,
+      "bytes": 19890,
+      "sha256": "ba9c8dedeb682e1aaaf9e16d60de04ce72970162f581eb560201c3c7412d59d6",
+      "match": true
+    },
+    {
+      "path": "assets/skill-trial/manifest.json",
+      "status": 200,
+      "bytes": 6420,
+      "sha256": "2cbe2abbe545de5da69ac07a34a0a6ab5ee07bfc82ce2c43ebc7018ddf01f28d",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/safe.png",
+      "status": 200,
+      "bytes": 2690942,
+      "sha256": "6b5973bb41945b3cb7e1efb45f31a2ffc43ac35e3df26cd87aa32f5ec7c4f1f2",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/solitude.png",
+      "status": 200,
+      "bytes": 1960768,
+      "sha256": "21b5b3d67661ad23e638f86a9c66cc3f4c90fea0496a896b046b41d9041a19f7",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/unease.png",
+      "status": 200,
+      "bytes": 2484134,
+      "sha256": "73b7cb70b0ee8f098ced8e1b27fa8c1559795479edf0fb33b6cb4b9e4376d962",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/solitude-repaired.png",
+      "status": 200,
+      "bytes": 1809437,
+      "sha256": "4138d28b55a3100fd47327d2cb7759199fc5b4b82f92760d68048d34effb833f",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/safe-prompt.txt",
+      "status": 200,
+      "bytes": 4212,
+      "sha256": "12b900e7e5a5142dee97e1c2133f5d69cecff6f4508852ca712a9004bcba3a3f",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/solitude-prompt.txt",
+      "status": 200,
+      "bytes": 4322,
+      "sha256": "bee78a21dffd7895b74b0ce77008b588a8c7503232394b92f88eec983dbda83a",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/unease-prompt.txt",
+      "status": 200,
+      "bytes": 4414,
+      "sha256": "d0cea6eba889501f20b7b8cf5577399d5492f4011bba9b8c44ba6bf66a3f45a1",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/solitude-repair-prompt.txt",
+      "status": 200,
+      "bytes": 2493,
+      "sha256": "2ce98957da0ef8224b2bba57189bbeba58d5f190c9918ef15979037ed7cbc0be",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/protocol.json",
+      "status": 200,
+      "bytes": 8750,
+      "sha256": "c0369b5e8fc0ec118bf2930ff7b1b974dda638beccbb7bbcc09dc1bb96857587",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/execution.json",
+      "status": 200,
+      "bytes": 16488,
+      "sha256": "85419d5307df9e687b1eb35dc2d127fcc5df1df44412d9fb91486bf644f622ad",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/review.json",
+      "status": 200,
+      "bytes": 4401,
+      "sha256": "31e1fe5b687fc2d7874e9d96a81615de7805a4dcca5093b72bd24fb76d0326b5",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/study.json",
+      "status": 200,
+      "bytes": 32754,
+      "sha256": "2a019190b137abcaf6761e2236651c47f3be42f85ba006170b249aeb7527a842",
+      "match": true
+    },
+    {
+      "path": "assets/chair-data/manifest.json",
+      "status": 200,
+      "bytes": 4970,
+      "sha256": "826cb3e47875fc6982db0c2baa43ad88452ad68747170119225d720c2db377d8",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/brief.json",
+      "status": 200,
+      "bytes": 4934,
+      "sha256": "eedaef1b999595ada184dc2dc1f8b8ac7dec31f550e5b717890a77347bdba870",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/prompt.txt",
+      "status": 200,
+      "bytes": 4333,
+      "sha256": "ce1332216be0ca11ee6d2452b2211e9b0775781b13d958c1fe60b3a336af6895",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/request.json",
+      "status": 200,
+      "bytes": 4971,
+      "sha256": "2c7f2354e8a6a53ecc6e0a712469b1410e32f4f9569ee43d83d483f3bb57c1eb",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/provider-result.json",
+      "status": 200,
+      "bytes": 456,
+      "sha256": "80e2e122d4725951d07a19edb30d8c12709268482f19a8e89e9b3fa21742913d",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/media.json",
+      "status": 200,
+      "bytes": 505,
+      "sha256": "eff97d1c99074d8cda64434380e1ec5074d94f204d87a7318ddfe0c15afbdbcd",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/skill-use.json",
+      "status": 200,
+      "bytes": 3297,
+      "sha256": "9c3f0c73e560b409e3bb9258e1a67b80eee0b745dc94cb5101c6e715de7d3de6",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/review.json",
+      "status": 200,
+      "bytes": 3145,
+      "sha256": "84909ee7741dda6f44c00ce2033aff22850784fad65d8f0b96ec77a90b4f20b9",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/study.json",
+      "status": 200,
+      "bytes": 7798,
+      "sha256": "38067e9090546bc7591de7531b893440c71deccfd78000c3082789d95e17f44e",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/manifest.json",
+      "status": 200,
+      "bytes": 2754,
+      "sha256": "c61f5b1e6f3a385fb38621f66d55a44035b6721b3a30bf794d1b39de68935d24",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/original.mp4",
+      "status": 200,
+      "bytes": 5943163,
+      "sha256": "2915b267338007d877c3a5313ebfafdb9c5a294f39f907357aa5bbf78236d7fa",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/frame-02.jpg",
+      "status": 200,
+      "bytes": 240810,
+      "sha256": "e94087b7756a0cbb092c512aa290a06aa951fd0e3485f06f70f0902023ae4a9b",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/frame-05.jpg",
+      "status": 200,
+      "bytes": 244930,
+      "sha256": "e8197228ca4edf5ba6419e75ccca2194c8062e648ef43f6e7da3e7c99fac5b3e",
+      "match": true
+    },
+    {
+      "path": "assets/skill-film/frame-09.jpg",
+      "status": 200,
+      "bytes": 228114,
+      "sha256": "a60671d0149b051d1acbac457e2c45da7f1ab7c868f9fceee609b65c223ead77",
+      "match": true
+    },
+    {
+      "path": "assets/research/working-understanding.md",
+      "status": 200,
+      "bytes": 6203,
+      "sha256": "cc65c328b13627a580ef055312707c0a2f174428a42e3e9601897d99376959fa",
+      "match": true
+    },
+    {
+      "path": "assets/research/revisit-template.txt",
+      "status": 200,
+      "bytes": 3059,
+      "sha256": "fc9776c9c90d2897f44e7fe41963b53830ef46af246f34efba94a8e6ce5e2d04",
+      "match": true
+    },
+    {
+      "path": "assets/research/emotion-art-research-overview-v3.png",
+      "status": 200,
+      "bytes": 2350287,
+      "sha256": "5d5ede051b7cb52031af40d69979abafd3c931f478bafa0c2fa53f596910b3dd",
+      "match": true
+    },
+    {
+      "path": "assets/research/emotion-art-research-overview.png",
+      "status": 200,
+      "bytes": 2136062,
+      "sha256": "c57444f651a8d73844541bf8607259ff1be88f36d7c42aabf924d84a3bf760db",
+      "match": true
+    },
+    {
+      "path": "assets/research/emotion-art-research-overview-v2.png",
+      "status": 200,
+      "bytes": 2065466,
+      "sha256": "6f14873837fac3602f8813791189cebd40f4cc3617d79c5a3eaff809152bc488",
+      "match": true
+    },
+    {
+      "path": "assets/research/overview-prompt.txt",
+      "status": 200,
+      "bytes": 5648,
+      "sha256": "648e00b079a54b934e534aed19c2e6c4846f3704a76158c464b7d15cab88f532",
+      "match": true
+    },
+    {
+      "path": "assets/research/overview-revision-prompt.txt",
+      "status": 200,
+      "bytes": 1244,
+      "sha256": "884707ed2224e211b6ba1793db49f282f8ec5d197f5cf0729b85dd632f422112",
+      "match": true
+    },
+    {
+      "path": "assets/research/overview-source-examples-prompt.txt",
+      "status": 200,
+      "bytes": 6672,
+      "sha256": "acc952f0ac6e5ef07c0e6f11d65531b953703ed2d4d4271466b47ab94d542f05",
+      "match": true
+    },
+    {
+      "path": "assets/research/overview-manifest.json",
+      "status": 200,
+      "bytes": 5617,
+      "sha256": "edf3e11aa286e4ef72a5dc38e8d8ef1c46dfbcd21f0ca20d6a4ab596390014a3",
+      "match": true
+    }
+  ],
+  "workflow_run": "https://github.com/yydshly/1022_codex_project/actions/runs/39731082554",
+  "browser": {
+    "desktop": "1280x720; no horizontal overflow; guide 1024x1536 loaded",
+    "mobile": "390x844; clientWidth=scrollWidth=375; viewport reset",
+    "source_cases": "beaded animal and digital fiber hero switches passed",
+    "film": "original played to ended=true, currentTime=10.048; 1902x1092; no media error; audio not reviewed",
+    "prompt": "full exact historical prompt expanded",
+    "skill_download": {
+      "bytes": 16758957,
+      "sha256": "3922f264ea10dcf6bf25ba3bd1ed0640b612140f1add97983cfaa09da9fddcf9",
+      "equal_to_archive": true
+    },
+    "console_warn_error_count": 0
+  },
+  "guide_native_download_equal": true
+}

@@ -202,3 +202,7 @@ JSON整合原有21份情绪档案和3份旁支档案，并保存原主风格5条
 随后按用户要求，使用第二版为编辑目标，并实际提供全部三张源库作者对照原件，新增[第三版最终PNG](research/emotion-art-research-overview-v3.png)。1024×1536，温暖人物、彩珠动物、数字连接三组参照完整纳入；黑红英雄的横向“人物→伸手→数据线→标题”关系放大为画廊主要视觉。[本版准确指令](research/overview-source-examples-prompt.txt)与四项输入角色/哈希已记录。案例仍属依据原件的AI概览合成，不能将其称为原作逐字节裁切。
 
 本图的[初版生成指令](research/overview-prompt.txt)、[标注修订指令](research/overview-revision-prompt.txt)、[输入角色与SHA-256清单](research/overview-manifest.json)随图保存。三次总览图工具调用没有新增椅子图片或视频实验。三版PNG、三份准确指令及清单共七项研究资料，现已接入网页素材包，与此前153项合计160项；其中第三版作为研究引导图，初版与第二版继续保留。既有媒体、Skill和历史提示词保持原件；此处说明打包集成状态，不代表公开部署已验证成功。
+
+## 公开部署验证（2026-10-22）
+
+`public-home-20261022.jpg`与`public-mobile-20261022.jpg`为GitHub Pages公开页面的真实浏览器截图，无图像后期；`deployment-verification.json`保存32个页面文件与160项素材的公网大小、SHA-256、视频范围请求及交互检查结果。三者仅为研究验证记录，不计入160项网页素材。画面内的源库示例继续按上述来源声明使用。

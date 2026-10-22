@@ -126,4 +126,4 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 
 构建前运行`python projects/003-algorithmic-sublime-poster/scripts/package_web.py`，再执行同一命令加`--check`。现有Pages工作流已加入两步，之后由根汇总器发布编号路径；静态网页无需在线生成接口。原始资源在`assets/`维护，`web/assets/`副本不重复提交；项目记录固定上游提交、媒体来源及许可边界。
 
-本次发布验证中，目标入口为https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/ 。真实线上检查通过后再登记demo_url与部署记录。
+已于2026-10-22通过[公开入口](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/)验证；内容提交`3a51bb7`的[GitHub Actions构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39731082554)成功。32个页面文件与160项素材共192项HTTP200且SHA-256与提交内容一致，两条真实AI原片Range206；桌面/手机、原作切换、真实原片播放、完整指令展开及Skill ZIP下载检查通过。登记表已填写demo_url并同步索引。[完整验证记录](../projects/003-algorithmic-sublime-poster/assets/deployment-verification.json)。

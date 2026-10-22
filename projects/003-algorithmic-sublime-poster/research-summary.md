@@ -1,6 +1,6 @@
 # 研究收束与后续复用：用艺术意图组织生成要求
 
-[计划公开展示](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/#research-summary)：**本次发布验证中**。下文保留研究事实与原始资料，公开站点状态由本次部署检查确认。
+[公开展示](https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/#research-summary)：**已部署并验证（2026-10-22）**。下文保留研究事实与原始资料，公开站点检查已通过，详见[部署验证记录](assets/deployment-verification.json)。
 
 ![情绪引导AI创作总览：源库温暖人物、彩珠动物与重点放大的数字连接三组效果，以及21个情绪起点、风格配合、图片视频和Skill探索](assets/research/emotion-art-research-overview-v3.png)
 
