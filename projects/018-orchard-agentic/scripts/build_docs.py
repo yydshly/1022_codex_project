@@ -58,6 +58,7 @@ readme+=title('来源与研究记录')
 readme+='- [研究笔记](notes.md)\n- [固定文件来源与 SHA-256](research-evidence.json)\n- [上游许可与来源声明](THIRD_PARTY_NOTICES.md)\n'
 for source in data['sources']: readme+='- ['+source['label']+']('+source['url']+')\n'
 readme+='- [论文第三版](https://arxiv.org/html/2605.15040v3)\n- [Docker Engine](https://docs.docker.com/engine/)\n\n'
+readme+='公开字节核对使用 scripts/verify_deployment.py 的 --commit 和 --run-url 参数；网络传输中断时可选 --transport curl，需安装 curl。每个请求最多尝试三次，curl 连接上限 10 秒、单次总时限 45 秒；不会跳过内容哈希验证。\n\n'
 readme+='本研究未实测集群并发、隔离强度、真实浏览器任务、论文成绩、训练和成本。技术沉淀及扩展场景是后续实施建议，不宣称已交付这些服务。网页验证和公开部署以相应 JSON 记录为准。'
 write('README.md',readme)
 

@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-22",
+  "verifiedAt": "2026-10-23T00:09:47.497390+08:00",
   "status": "passed",
   "method": "CUA browser UI, plus local same-origin iframe viewports",
   "localURL": "http://127.0.0.1:8927/018-orchard-agentic/",
@@ -40,11 +40,15 @@
     "visibleBrokenImages": 0,
     "clientWidth": 690,
     "scrollWidth": 690,
-    "consoleWarningsAndErrors": []
+    "consoleWarningsAndErrors": [],
+    "contentCommit": "92f57800f08a03879427d0aca13993dc3caa4987",
+    "stylesheetVersion": "20261022-2",
+    "heroGrid": "626px",
+    "guideOpenAndCloseFocusReturn": true
   },
   "narrowPanelFix": {
     "localHeroGrid": "626px",
     "stylesheetVersion": "20261022-2",
-    "status": "passed locally; latest public deployment pending runner"
+    "status": "passed on the final public release"
   }
 }
