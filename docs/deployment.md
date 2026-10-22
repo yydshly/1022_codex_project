@@ -184,7 +184,7 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 
 本地已检查七个效果版本、八种行为、十四个原理阶段、场景切换、键盘和六种屏宽。网页使用上游真实动画帧与阶段播放器，物理完成事件由按钮发送；未运行原生 Electron，也未按上游流程创作四类新作品。正式发布状态与证据以项目 deployment-verification.json 为准。
 
-015 源码已于 2026-10-22 推送 main，[正式网页](https://yydshly.github.io/1022_codex_project/015-heytea-style/)已上线，登记表 demo_url 已登记。公网已检查七个效果版本、十四个原理阶段、桌宠交互、下载和六档屏宽，未出现页面脚本错误、图片缺失或水平溢出。文件 HTTP / SHA-256 证据见 [部署记录](../projects/015-heytea-style/deployment-verification.json)，交互证据见 [公网浏览器记录](../projects/015-heytea-style/public-browser-verification.json)。
+015 源码已于 2026-10-22 推送 main，[正式网页](https://yydshly.github.io/1022_codex_project/015-heytea-style/)已上线，登记表 demo_url 已登记。内容提交 `0aeb887` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39799286651)成功，45 个发布文件均 HTTP 200 且 SHA-256 与发布内容一致，包含生成引导图和离线单文件。公网已检查七个效果版本、十四个原理阶段、桌宠交互、下载和六档屏宽，未出现页面脚本错误、图片缺失或水平溢出；详见 [部署记录](../projects/015-heytea-style/deployment-verification.json) 与 [公网浏览器记录](../projects/015-heytea-style/public-browser-verification.json)。
 
 ## 016 · Verdant Forest
 

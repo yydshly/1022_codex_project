@@ -17,7 +17,7 @@
 | 网页技术 | 原生 HTML / CSS / JavaScript，无前端依赖、无 CDN、无在线生成接口 |
 | 网页入口 | [web/index.html](web/index.html)，通过下述本地 HTTP 服务打开 |
 | 离线入口 | [web/standalone.html](web/standalone.html)，单文件内嵌图片、动画、源码播放器及下载内容，可直接用浏览器打开 |
-| 发布状态 | 已推送远端 main，并部署到 [在线演示](https://yydshly.github.io/1022_codex_project/015-heytea-style/)；公网交互与六档屏宽验证通过，详见 [发布记录](deployment-verification.json) 和 [公网浏览器记录](public-browser-verification.json) |
+| 发布状态 | 已推送远端 main，并部署到 [在线演示](https://yydshly.github.io/1022_codex_project/015-heytea-style/)；45 个发布文件 HTTP / SHA-256、公网交互与六档屏宽验证通过，详见 [发布记录](deployment-verification.json) 和 [公网浏览器记录](public-browser-verification.json) |
 
 ![heytea-style 能力、四种效果、原理与价值总览：照片经 AI 二次创作，走向海报、怪兽、互动图与桌宠](assets/capability-overview.png)
 
@@ -28,7 +28,7 @@
 1. **真实效果图集**：四类产物与七个查看版本，包括原始照片、带字 / 无字海报、两类角色、产品互动图和桌宠动作预览，可切换、对照和放大。
 2. **可操作动画实验**：读取原始 v3 pet.json 和 20 条透明帧条，复用上游 EpisodePlayer 播放 8 个行为。观察进入、循环、退出，发送行走完成、落地、松手和唤醒事件，并暂停 / 继续。
 3. **分阶段原理**：切换带字海报、风味小怪兽和可运行桌宠三条路径，逐步查看操作、产物和固定版本源码依据。
-4. **价值与场景**：分析产品表达、反馈定位、身份延续的意义；按内容创作、系列角色、桌面陪伴、创作工作流四种需求说明可复用部分和待验证事项。
+4. **价值与场景**：分析产品表达、反馈定位、身份延续的意义；按餐饮电商、原创 IP、互动营销、轻陪伴与创作工具四种方向说明可复用部分和待验证事项。
 5. **来源与下载**：提供研究笔记、原始素材哈希、许可声明和带署名的上游示例角色包。
 
 ## 能力与实现
@@ -93,6 +93,7 @@ web/ 可独立静态托管。源码已推送远端 main，[正式网页](https:/
 
 ## 验证范围
 
+- [正式网页](https://yydshly.github.io/1022_codex_project/015-heytea-style/)的 45 个发布文件均 HTTP 200，SHA-256 与发布内容一致；[部署记录](deployment-verification.json)对应已成功的内容提交 `0aeb887`，[公网浏览器记录](public-browser-verification.json)覆盖交互与六档屏宽。
 - 固定来源的 Git blob / SHA-256，发布副本、许可证、下载角色包由脚本检查，见 [verification.json](verification.json)。
 - 浏览器验证效果切换、放大、键盘、三条原理路径、场景切换、帧播放、睡眠唤醒、行走完成、松手后恢复、暂停及窄屏布局，见 [browser-verification.json](browser-verification.json)。
 - 上游示例角色包通过上游 Python 校验器，见 [pack-validation.json](pack-validation.json)。

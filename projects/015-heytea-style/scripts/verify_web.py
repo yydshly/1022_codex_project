@@ -56,7 +56,7 @@ def main():
               "checks": ["all pinned source SHA-256", "all packaged bytes", "section anchors", "local resource links",
                          "original pack bytes and attribution", "upstream player and MIT license included", "generated overview hash and provenance"],
               "pack_sha256": sha256(files["downloads/example-pet-v3.zip"]).hexdigest(),
-              "limits": ["AI-generated overview is a research illustration; upstream creative workflows not run", "No Electron runtime installation or execution", "No public deployment"]}
+              "limits": ["AI-generated overview is a research illustration; upstream creative workflows not run", "No Electron runtime installation or execution", "Public deployment is checked separately by verify_deployment.py"]}
     (ROOT / "verification.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
 

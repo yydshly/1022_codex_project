@@ -1,39 +1,381 @@
 {
   "date": "2026-10-22",
-  "checked_at_utc": "2026-10-22T14:54:08.328322+00:00",
-  "status": "online_browser_passed_final_bytes_pending",
-  "published_and_verified": false,
+  "checked_at_utc": "2026-10-22T15:10:08.420091+00:00",
+  "status": "passed",
+  "published_and_verified": true,
   "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/",
-  "content_commit": "a3d0032b1cec09d48db8f8da4a5fb77144d621ba",
-  "workflow_url": "https://github.com/yydshly/1022_codex_project/actions/workflows/deploy-pages.yml",
-  "observed_run_id": 39797162903,
-  "observed_run_status": "queued",
-  "last_public_http_status": 200,
-  "completed": [
-    "remote main push",
-    "catalog validation",
-    "72 pinned source hashes",
-    "generated guide image hash",
-    "7 effect variants and 8 behaviors",
-    "14 principle steps and 4 expansion scenarios",
-    "6 viewport widths",
-    "offline downloads",
-    "prior release build and artifact upload"
-  ],
-  "remaining": [
-    "publish standalone ordering fix",
-    "public file SHA-256 comparison after ordering fix"
-  ],
-  "incidents": [
+  "content_commit": "0aeb8874bfc50e9f132428d16ec1fc768b883cac",
+  "workflow_run_id": 39799286651,
+  "workflow_url": "https://github.com/yydshly/1022_codex_project/actions/runs/39799286651",
+  "files_checked": 45,
+  "all_http_200": true,
+  "all_sha256_match": true,
+  "guide_image": "assets/capability-overview.png",
+  "files": [
     {
-      "name": "Incident with Actions Results",
-      "status": "investigating",
-      "url": "https://stspg.io/44w94j036yc8",
-      "updated_at": "2026-10-22T14:35:29.243Z",
-      "latest_update": "Repository update processing has recovered. We’re continuing to work on delays affecting GitHub Actions workflow and step results. We’ll share another update as we make progress."
+      "path": "app.js",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/app.js?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 24566,
+      "sha256": "244b0b00e1b965efcae4238e50a183612747994a2abc72bf97ea24bcf0ce7d23",
+      "matches_local": true
+    },
+    {
+      "path": "assets/capability-overview.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/capability-overview.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 2459614,
+      "sha256": "8921de11bccb3cd737ec4b5b3555d4b03a0d3a80495903aeb023c6d9e7888bfe",
+      "matches_local": true
+    },
+    {
+      "path": "assets/overview.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/overview.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 628488,
+      "sha256": "1ef67bfd23980b969fe7d2a0b08f99f8ef5010198d36ac17e77f91ad3c55c6e6",
+      "matches_local": true
+    },
+    {
+      "path": "assets/runtime/episode-player.js",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/runtime/episode-player.js?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 2197,
+      "sha256": "35c6e41df4401fe337331be16f85645b60adbd11fa8ea3f280642876efae86aa",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/desktop-pet/canonical-pet.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/desktop-pet/canonical-pet.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 532871,
+      "sha256": "6d1573fec36e9e59a023c7bacc922ca1fca4455313ec4a76d2364d5983c294a2",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/desktop-pet/contact-sheet.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/desktop-pet/contact-sheet.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 513500,
+      "sha256": "1d5940b2140c30138da84cabb2fdc6b1f04f5f9fac1ffc958223e4849afe9767",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/desktop-pet/motion-preview.gif",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/desktop-pet/motion-preview.gif?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 1136477,
+      "sha256": "7d67a5d167d91c29c40c9dab4a4f60046e9fd396e621d3a0c3a6f73effae1786",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/desktop-pet/runtime-screenshot.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/desktop-pet/runtime-screenshot.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 157381,
+      "sha256": "a643b48f32eca3728685c4767bf4e7193890d1fca434ab8c976c559347933c64",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/desktop-pet/source-drink.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/desktop-pet/source-drink.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 1960990,
+      "sha256": "ef3ec8d22b41a784106192bf1378c9557b888bf49bf6db6ddf95cb6a34cbcc8b",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/monster-poster/pink-green-monster-product-interaction.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/monster-poster/pink-green-monster-product-interaction.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 1506288,
+      "sha256": "c9d8f8669ab915a536a527f88c83c9ab7aa4d310dba633bc1ffbc9030a0fd7be",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/affection-click/response.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/affection-click/response.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 383608,
+      "sha256": "2f5cce7ddb876d6c420d0dd5bbd4bef12b42c488fa47c2d5edd1c95ee1fb76c3",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/awake-story/story.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/awake-story/story.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 421254,
+      "sha256": "fe73eb68d27e86a167f3314742c08e58ea679c40786f446dcff2d8a0d088a82c",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/cursor-encounter/approach.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/cursor-encounter/approach.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 94290,
+      "sha256": "fef2d96d82fb24b62c5fe088860cdc73bb347fff11825c5b6024e93b110fca42",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/cursor-encounter/notice.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/cursor-encounter/notice.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 136488,
+      "sha256": "16624bfc0557e6b3966c6ca7d57ae4da79cc54377f5aef36cb0189d9100a561f",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/cursor-encounter/retreat.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/cursor-encounter/retreat.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 44450,
+      "sha256": "cc62e71477684fb526ae4befeae69b3ffb1cb8109385f225b90ba3a0e7b80514",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/cursor-encounter/settle.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/cursor-encounter/settle.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 47760,
+      "sha256": "0778004926b92dd005b3f2420c22b809a6de561cebecc1e52e15b4cda878dc51",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/cursor-encounter/touch.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/cursor-encounter/touch.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 44314,
+      "sha256": "32984510daf2030927f351dc8429d16aa74d98bbb7ba5cdf5f9d03ce27c294dd",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/drop-recover/fall-loop.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/drop-recover/fall-loop.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 135972,
+      "sha256": "1c9fca0bc45f6d7d3370482e7ba316dd5465a48b7043b95ec62d34c66f333709",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/drop-recover/impact.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/drop-recover/impact.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 35892,
+      "sha256": "9b34746c4e5b4037377ead002547a64cb16d46cbf6ab8d8efd2de0c41d871a91",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/drop-recover/rebound.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/drop-recover/rebound.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 46572,
+      "sha256": "64a7874cf89389f25ff39f3fe90d2e7c163e08d2fe0a2ac443f697383b3c1f59",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/drop-recover/settle.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/drop-recover/settle.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 92154,
+      "sha256": "4891cd7dadd298ef51e5ed9fae14fe798507416128766459ebd3d89f23504932",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/explore-walk/start.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/explore-walk/start.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 89008,
+      "sha256": "26fcc9c061b3ea97f73a0aa6ea70b417bb9912eed6da29c2d492f91818b1173b",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/explore-walk/stop.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/explore-walk/stop.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 158838,
+      "sha256": "326d608a12404f34deb0eff39248d3afee1ebdb4a8d414ace53aa007358b1da3",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/explore-walk/walk-loop.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/explore-walk/walk-loop.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 138390,
+      "sha256": "51f088191701a258bc2526700240610a4887662a8a998de019a595877560fbd8",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/fruit-hiccup/hiccup.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/fruit-hiccup/hiccup.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 371052,
+      "sha256": "1ac0a8d940bd165eb2af335383374938950ce0012174bbe1efee898597ad2d7f",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/held/grab-enter.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/held/grab-enter.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 169134,
+      "sha256": "56548b8a788025bae7aa4dd7bb6262f7ced235dfe3438a14bcb2e3ed281299be",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/held/held-loop.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/held/held-loop.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 90522,
+      "sha256": "e798211b89ea5dfeecd3d720e9367850a3739c49fc4bd6ee5584893dc8518072",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/sleep-cycle/sleep-enter.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/sleep-cycle/sleep-enter.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 166020,
+      "sha256": "cda4580a1764c1b656962df55588fcd5bfd613d5b43ef6689155f6e2859469be",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/sleep-cycle/sleeping-loop.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/sleep-cycle/sleeping-loop.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 66050,
+      "sha256": "c650e9163246c69bc7a2630d83035a0c800d36f9d95e6fb53300407c0d51b971",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/animations/sleep-cycle/wake-exit.webp",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/animations/sleep-cycle/wake-exit.webp?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 153626,
+      "sha256": "cb54d7ce214e4286fea2052c5537325e7ca1b84b6a1c3716090a7ea48fccf9a9",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/pet.json",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/pet.json?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 6030,
+      "sha256": "aefc38268dba3cf5348c44b12a35ceb9124bcea27d29131274fd6aed04a727ee",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/pet-v3/preview.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/pet-v3/preview.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 2005652,
+      "sha256": "240daeb552fef3e25e0c5ba291edc629074c49486b13c9ae389028f3da0dc2fa",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/poster/doodle-poster.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/poster/doodle-poster.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 1910264,
+      "sha256": "b431eacdeb39b4f921572a2b0fa78a9c4c90268addee2ad9dc120d02a0e96445",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/poster/source-food.jpg",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/poster/source-food.jpg?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 303941,
+      "sha256": "1e9abfeb2314b340f05e09da41bdd89cf7c1e66dca7a953ae5b1b9f2a2d09506",
+      "matches_local": true
+    },
+    {
+      "path": "assets/upstream/poster/typography-poster.png",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/assets/upstream/poster/typography-poster.png?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 1860983,
+      "sha256": "1c643fc53939ef2d835a5c27301cb7fc6bf0c7132e2fc38b2e4e9dd5e7eef4aa",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/example-pet-v3.zip",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/example-pet-v3.zip?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 4902184,
+      "sha256": "2bf356b9190882a8c4e143a4e58e1815c36fec8c0c511f18b508936a004234c6",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/image-generation.json",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/image-generation.json?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 6688,
+      "sha256": "c5d629ad1ecc42af87daa21218b65542411c370dcd33c611fd4b8b02fbd067bb",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/LICENSE.upstream.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/LICENSE.upstream.txt?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 1082,
+      "sha256": "d83ab8f95fba890d9f50e257597155fa327197a615c6ba215821b3b089528a30",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/NOTICE.md",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/NOTICE.md?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 2214,
+      "sha256": "773c5ce53f476950eb243910a102481045fa10307270c64703cfcaf71d01868d",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/overview-guide.md",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/overview-guide.md?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 7094,
+      "sha256": "157c1645b3ae4ed515b6d65edb3ae9e1b2a0217ea85130f9ee55bbb510e84779",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/research-notes.md",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/research-notes.md?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 9219,
+      "sha256": "de0ac69fdb243445c2d831ce124456ec881d7db4169a59e62e22b0c0cb63d8fc",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/SOURCE.json",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/downloads/SOURCE.json?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 41587,
+      "sha256": "330abb7a7801bb51ba439a5c786abfbdc3c7233b56278c1b5be4a89a889d8cdd",
+      "matches_local": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/index.html?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 20588,
+      "sha256": "c4fc22aa4da9be9e209f590b450e39b4df09ff9869e55f0f9a1ddec413cc3574",
+      "matches_local": true
+    },
+    {
+      "path": "standalone.html",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/standalone.html?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 40639180,
+      "sha256": "f10f4030b44f4c50e06379d476185305c0e376331a49b238d486882cb458cdcf",
+      "matches_local": true
+    },
+    {
+      "path": "style.css",
+      "url": "https://yydshly.github.io/1022_codex_project/015-heytea-style/style.css?verify=0aeb8874bfc5&check=20261022T150918405680",
+      "http_status": 200,
+      "bytes": 29538,
+      "sha256": "811311df89fd16e570da2cbdac048081eea287834ce10f897e046ee78a7661d3",
+      "matches_local": true
     }
   ],
-  "page_available": true,
   "browser_verification": "public-browser-verification.json",
-  "browser_status": "passed"
+  "limits": [
+    "No new upstream poster/character generation",
+    "No native Electron runtime execution"
+  ]
 }
