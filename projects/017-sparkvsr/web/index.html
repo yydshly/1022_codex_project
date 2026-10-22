@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SparkVSR：以原视频约束运动结构，用少量高清关键帧引导视频超分，改善纹理与跨帧一致性；整理关键帧审核、时序传播、强度控制和质量评估，以及老片、AIGC、人工精修与风格化扩展。">
+<meta name="theme-color" content="#f3f6fa"><title>SparkVSR · 关键帧引导的视频高清重建</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar"><a class="brand" href="#overview"><span class="brand-icon" aria-hidden="true">S<span>↗</span></span><span>SparkVSR<small>开源项目理解 / 017</small></span></a><nav aria-label="章节导航"><a href="#research-summary">能力与价值</a><a href="#principle">原理</a><a href="#effects">效果</a><a href="#reuse">技术沉淀</a><a href="#scenarios">场景</a></nav><a class="back" href="../">总导航 ↗</a></header>
+<main id="main">
+<section class="hero section" id="overview">
+<div class="hero-copy"><p class="eyebrow">017 / GENERATIVE VIDEO SUPER-RESOLUTION</p><span class="status">理解归档 · 未运行模型</span><h1>把低清视频，<br>重建得<span>更清楚。</span></h1><p class="lead">以原视频约束运动和结构，用少量高清关键帧提供细节，再由视频模型生成式重建整段画面。</p><p class="hero-note">清晰度提升，包含模型对缺失细节的推测。输出更大、更锐利，不代表恢复了全部真实信息。</p><div class="actions"><a class="button primary" href="#research-summary">先看我们的理解 ↓</a><a class="button secondary" href="https://sparkvsr.github.io/comparison.html" target="_blank" rel="noopener">看作者真实对比 ↗</a></div><p class="decision-mini">当前决策：了解并留档，暂不深入研究或部署推理服务。</p></div>
+<figure class="hero-guide"><div class="figure-top"><span>本次讨论的同一张引导图</span><span>2400 × 3970</span></div><button class="poster-trigger" id="openPoster" aria-haspopup="dialog" aria-controls="posterDialog"><img src="assets/sparkvsr-overview.png" width="2400" height="3970" alt="SparkVSR 八方面总览：能力、价值、推理、训练、控制、效果、边界、成本及当前决策"><span class="zoom-label">点击放大阅读 ↗</span></button><figcaption>Pillow 精确排版图 · 流程示意 · 评测数据来自作者</figcaption><div class="figure-actions"><a href="assets/sparkvsr-overview.png" download="SparkVSR-理解总览.png">下载原图 ↓</a><a href="downloads/UNDERSTANDING.md" download>下载完整理解 ↓</a></div></figure>
+</section>
+<section class="section summary-section" id="research-summary"><div class="section-head"><p class="eyebrow">01 / UNDERSTANDING</p><h2>先说清楚：能做什么，值得留下什么。</h2><p>我们的判断是“有原视频约束的生成式重建”。这个项目的专项贡献，是让可编辑关键帧成为细节控制入口，并学习跨帧传播。</p></div><div class="summary-grid">
+<article><span class="card-no">能力与效果</span><h3>低清 → 高清重建</h3><p>提高输出分辨率，补充边缘与纹理，并尽量保持帧间连续。可先修好关键帧，再让其他帧跟随。</p><small>默认宽、高各放大 4 倍；真实细节不能保证完全还原。</small></article>
+<article><span class="card-no">可沉淀的技术</span><h3>控制与验收工作流</h3><p>关键帧审核、单图修复与时序传播分工、参考强度调节、参数记录，以及保真 / 观感双轨评估。</p><small>目前沉淀为方案与理解，尚未形成自有 SDK 或模型服务。</small></article>
+<article><span class="card-no">后期扩展场景</span><h3>修复与创作后处理</h3><p>老片和家庭录像、AIGC 增强、人工精修接入视频、系列风格化，以及剪辑 / ComfyUI 工具链。</p><small>具体场景需要样片、成本和质量验证，产品集成尚未实现。</small></article>
+</div><div class="scope-line"><strong>本次完成</strong><span>已有资料与讨论整理 · 引导图归档 · 静态网页发布</span><strong>未执行</strong><span>模型下载、推理、训练与性能实测</span></div></section>
+<section class="section" id="principle"><div class="section-head"><p class="eyebrow">02 / HOW IT WORKS</p><h2>原视频保结构，参考帧补细节。</h2><p>把“单张图修得好”和“整段视频保持一致”分工处理。图像模型先给出参考，视频模型再结合原始运动重建。</p></div>
+<div class="pipeline" aria-label="两路输入联合重建流程"><div class="input-streams"><div class="stream video"><span>01 / 连续输入</span><h3>低清原视频</h3><p>提供位置、运动、构图与时间变化</p><b>放大并编码 → 原视频特征</b></div><div class="stream reference"><span>02 / 稀疏输入</span><h3>少量高清关键帧</h3><p>PiSA-SR、图像 API 或外部编辑</p><b>审核后编码 → 参考细节特征</b></div></div><span class="flow-arrow" aria-hidden="true">→</span><div class="fusion"><span>03 / 模型联合处理</span><h3>视频 Transformer</h3><p>融合原视频与稀疏参考特征</p><p>单步去噪 → 解码</p><small>CogVideoX1.5-5B-I2V 底座</small></div><span class="flow-arrow" aria-hidden="true">→</span><div class="output"><span>04 / 输出</span><h3>高清重建视频</h3><p>原始动作约束<br>＋补充外观细节</p></div></div>
+<p class="caption">流程示意，非推理结果。缺失的高频细节来自参考图与模型学到的先验。</p>
+<div class="principle-notes"><article><h3>关键帧可以编辑</h3><p>手动、随机或按 I 帧选取。先审核生成的参考图，避免将错误细节传播到其他帧。短片通常可先用首帧。</p></article><article><h3>参考强度可以调</h3><p><code>ref_guidance_scale</code> 为 0 时不使用参考，1 为标准引导，大于 1 更依赖参考。更强不表示更真实。</p></article><article><h3>训练兼顾细节与时间</h3><p>先在压缩特征空间学习传播，再在像素空间优化重建、感知纹理和帧一致性。随机移除参考也训练无参考能力。</p></article></div>
+<details class="technical"><summary>看一层内部机制：稀疏编码、两阶段训练</summary><div><p>原视频与关键帧分别编码。参考仅放入对应时间位置，其他参考位置填零；两路特征融合后，视频模型从原视频特征出发重建。</p><p>第一阶段学习压缩特征的重建；第二阶段解码回像素，加入 MSE、DISTS 与帧一致性约束。单步去噪描述模型步骤，不构成端到端实时保证。</p><a href="https://arxiv.org/html/2603.16864v1#S3" target="_blank" rel="noopener">查看论文方法 ↗</a></div></details>
+</section>
+<section class="section effects-section" id="effects"><div class="section-head"><p class="eyebrow">03 / REPORTED RESULTS</p><h2>更好看，与更接近原始真值，<br>是两件需要分别衡量的事。</h2><p>下面切换的是论文中已有的三组作者数据，不会在网页内调用模型或生成效果。数据集为 UDM10，三项指标均越高越好。</p></div>
+<div class="mode-buttons" role="group" aria-label="作者评测模式"><button data-mode="none" aria-pressed="false">无参考</button><button class="active" data-mode="nbp" aria-pressed="true">Nano-Banana-Pro 参考</button><button data-mode="pisa" aria-pressed="false">PiSA-SR 参考</button></div>
+<div class="metric-grid" id="metricGrid"><article><span>PSNR / dB</span><strong id="psnrValue">23.70</strong><p>像素保真 · 更接近真值</p><small>DOVE 对照：26.52</small></article><article><span>CLIP-IQA</span><strong id="clipValue">0.5501</strong><p>图像观感 · 自动质量评分</p><small>DOVE 对照：0.5011</small></article><article><span>DOVER</span><strong id="doverValue">0.6902</strong><p>视频质量 · 自动质量评分</p><small>DOVE 对照：0.5664</small></article></div>
+<p class="metric-note" id="modeExplanation" role="status" aria-live="polite">NBP 参考：观感与视频质量评分提高，但像素保真 PSNR 下降。精细纹理包含生成重建。</p>
+<div class="effects-bottom"><p><strong>看真实动态效果：</strong>作者展示边缘、文字、脸部和自然纹理改善，并尽量保持播放时的细节稳定。不同素材仍需验证；作者样例不等于我们已复现。</p><a class="button secondary" href="https://sparkvsr.github.io/comparison.html" target="_blank" rel="noopener">打开官方视频对比 ↗</a></div>
+<p class="source-caption">来源：<a href="https://arxiv.org/html/2603.16864v1#S4.T1" target="_blank" rel="noopener">论文 v1 · 表 1</a>。不把质量评分当作事实准确率，也不据单一数据集声称全面领先。<a href="downloads/author-metrics.csv" download>下载这组数据 ↓</a></p>
+<noscript><p>JavaScript 关闭时显示 NBP 参考数据；完整三组数据可通过上方 CSV 下载查看。</p></noscript>
+</section>
+<section class="section" id="reuse"><div class="section-head"><p class="eyebrow">04 / WHAT WE CAN REUSE</p><h2>可沉淀的是机制和流程，<br>关键能力仍依赖模型。</h2><p>下面是候选工程产物，当前只完成理解整理。没有把这些机制包装成已经实现的 SDK、自动化平台或可脱离权重的算法。</p></div><div class="reuse-list">
+<article><span>01</span><div><h3>关键帧审核协议</h3><p>记录镜头、帧位置、参考版本、审核与返修；少量关键帧先过人，再进入批量处理。</p></div><small>可形成：选帧清单 / 审核记录</small></article>
+<article><span>02</span><div><h3>图像模型与视频模型适配</h3><p>统一尺寸、参考缓存、来源和错误处理，将“修一张图”与“稳定传播”分开。</p></div><small>可形成：参考生成器接口</small></article>
+<article><span>03</span><div><h3>可追溯的控制参数</h3><p>保存参考图、位置、引导强度、分块、输出尺寸与种子；更换版本后重新验收。</p></div><small>可形成：任务配置 / 版本记录</small></article>
+<article><span>04</span><div><h3>保真与观感双轨验收</h3><p>结合像素、感知、视频指标与人工对照；重点查脸、文字、遮挡、细线和镜头切换。</p></div><small>可形成：样片集 / 验收报告</small></article>
+<article><span>05</span><div><h3>分块与资源调度</h3><p>评估时间 / 空间分块、VAE 切片和 CPU 卸载；产品层再补取消、缓存与失败恢复。</p></div><small>可形成：处理队列 / 资源预算</small></article>
+</div></section>
+<section class="section" id="scenarios"><div class="section-head"><p class="eyebrow">05 / WHERE IT COULD GO</p><h2>有具体素材和需求时，<br>再把理解变成一条可验收流程。</h2><p>老片修复、上色与风格迁移有作者示例；批量产品、人工精修工具链和剪辑集成属于我们的扩展设想。</p></div><div class="scenario-grid">
+<article><span class="scenario-tag">作者已有相关示例</span><h3>老片与家庭录像</h3><p>修复 / 上色少量关键帧，再传播纹理与外观。</p><details><summary>先验证什么？</summary><p>保留原件；核对身份、字幕、真实颜色、长镜头漂移和闪烁。</p></details></article>
+<article><span class="scenario-tag">后续场景评估</span><h3>AIGC 视频增强</h3><p>已有生成视频再做分辨率提升与纹理一致性处理。</p><details><summary>先验证什么？</summary><p>角色是否漂移、是否放大原有缺陷，尺寸和时长成本是否符合交付预算。</p></details></article>
+<article><span class="scenario-tag">我们的扩展设想</span><h3>人工精修接入视频</h3><p>修图师审核少量帧，让模型传播到相关镜头。</p><details><summary>先验证什么？</summary><p>遮挡、新出现区域与镜头切换；不能保证任意编辑都能可靠传播。</p></details></article>
+<article><span class="scenario-tag">作者有风格化示例</span><h3>系列风格化内容</h3><p>用统一风格关键帧指导多段视频的外观重建。</p><details><summary>先验证什么？</summary><p>角色身份、配色、纹理与多镜头稳定性；单一短片的成功不能直接外推。</p></details></article>
+<article class="wide-scenario"><span class="scenario-tag">我们的产品集成设想</span><h3>剪辑软件 / ComfyUI 工具链</h3><p>选帧 → 修参考 → 人工审核 → 模型推理 → 前后对照 → 导出。上游已有 ComfyUI 工作流；产品级队列、取消恢复、资源预算与验收能力仍需补齐。</p></article>
+</div></section>
+<section class="section" id="limits"><div class="limits-grid"><div><p class="eyebrow">06 / BOUNDARIES</p><h2>边界与成本，<br>在使用前说清楚。</h2><ul><li>细节可能由模型推测，文字、脸部和纹理可能改变。</li><li>参考图的错误可能被传播，参考更强不等于更真实。</li><li>输出 4K 表示像素尺寸，不代表恢复全部原生 4K 信息。</li><li>真实性要求高的用途需要逐项验证。</li></ul></div><div class="cost-card"><h3>模型运行是另一项工程</h3><p>上游依赖 Python 3.10+、PyTorch 2.5+、Diffusers、GPU 环境与模型权重。PiSA-SR 可本地运行，商业图像 API 可能收费。</p><p>支持分块、VAE 切片与 CPU 卸载，但速度、显存与拼接质量未在本机验证。作者训练用 4 张 A100，不等于推理的最低要求。</p><small>当前网页是静态理解页，不接收视频、不调用模型、不持有 API 凭据。</small></div></div>
+<div class="decision"><span>当前决策</span><h3>了解并留档，暂不深入研究。</h3><p>核心仍是模型的视频生成与重建能力；专项价值在于关键帧控制和时序传播。后续有明确需求时，先用短片验证质量与成本，再决定是否部署服务。</p></div></section>
+<section class="section sources" id="sources"><div class="section-head"><p class="eyebrow">07 / SOURCES & SCOPE</p><h2>来源、固定版本与验证范围。</h2></div><div class="source-grid"><article><h3>上游与作者材料</h3><a href="https://github.com/taco-group/SparkVSR/tree/a082284b80005bb5615c0f5f5f5ed66650b1b1e7" target="_blank" rel="noopener">固定版本 a082284 ↗</a><a href="https://arxiv.org/html/2603.16864v1" target="_blank" rel="noopener">论文：方法与评测 ↗</a><a href="https://sparkvsr.github.io/" target="_blank" rel="noopener">项目与官方示例 ↗</a><a href="assets/LICENSE.upstream.txt">上游 Apache-2.0 许可</a></article><article><h3>本次理解与素材</h3><a href="downloads/UNDERSTANDING.md" download>完整理解与扩展条件 ↓</a><a href="assets/manifest.json" download>引导图身份与哈希 ↓</a><a href="assets/source-manifest.json" download>固定来源与证据清单 ↓</a><a href="https://github.com/yydshly/1022_codex_project/tree/main/projects/017-sparkvsr" target="_blank" rel="noopener">项目研究目录 ↗</a></article><article><h3>本轮实际做了什么</h3><p>整理已有问答、论文与仓库描述；核对 SHA 和代码许可；原样保留引导图；完成静态网页、交互与公开发布验证。</p><p>模型训练、推理、画质、显存与处理时间均未实测。图内流程为示意，数字属于作者报告。</p></article></div></section>
+</main><footer><a class="brand" href="#overview"><span class="brand-icon" aria-hidden="true">S<span>↗</span></span><span>SparkVSR<small>生成式重建，需要控制，也需要验收。</small></span></a><p>017 / 理解归档 · 2026.10.22<br>静态网页 · 无模型调用</p><a href="#overview">回到顶部 ↑</a></footer>
+<dialog id="posterDialog" aria-labelledby="posterTitle"><div class="dialog-bar"><h2 id="posterTitle">SparkVSR · 完整理解总览</h2><div><a href="assets/sparkvsr-overview.png" download="SparkVSR-理解总览.png">下载原图 ↓</a><form method="dialog"><button class="button secondary" autofocus>关闭 ×</button></form></div></div><p class="dialog-tip">上下滚动阅读，按 Esc 关闭。<a href="assets/sparkvsr-overview.png" target="_blank" rel="noopener">打开原尺寸图片 ↗</a></p><img src="assets/sparkvsr-overview.png" width="2400" height="3970" alt="完整引导图：八方面说明及暂不深入研究的决策"></dialog>
+</body></html>

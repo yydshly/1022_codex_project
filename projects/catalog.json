@@ -246,6 +246,24 @@
       "cover": "assets/understanding-overview.png",
       "cover_caption": "使用我们已生成的理解总览图作引导：参考原版林下与树冠画面，说明森林生成、组织、渲染与交互输出能力，归纳可沉淀技术及自然展厅、庭院旅宿、交互叙事和短片的扩展价值。效果区为ImageGen参考排版，原始运行截图独立保留。",
       "demo_url": "https://yydshly.github.io/1022_codex_project/016-verdant-forest/"
+    },
+    {
+      "id": "017",
+      "slug": "sparkvsr",
+      "name": "SparkVSR · 关键帧引导的视频高清重建",
+      "repo": "https://github.com/taco-group/SparkVSR",
+      "summary": "以原视频约束运动与结构，用少量高清关键帧引导生成式视频超分，改善清晰度、纹理与跨帧一致性；可沉淀关键帧审核、单图修复与时序传播、参考强度调节和保真评测流程，扩展到老片修复、AIGC增强、系列风格化与人工修图接入。当前仅理解归档，未部署模型。",
+      "status": "archived",
+      "tags": [
+        "视频超分",
+        "关键帧引导",
+        "生成式修复",
+        "时序传播",
+        "理解归档"
+      ],
+      "cover": "assets/sparkvsr-overview.png",
+      "cover_caption": "沿用本次对话已生成的理解总览图，说明原视频约束下的高清重建、关键帧控制、作者效果、技术沉淀与扩展场景，并保留暂不深入研究的判断；图为精确排版示意，非推理截图。",
+      "demo_url": ""
     }
   ]
 }

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "repo": "https://github.com/taco-group/SparkVSR",
+  "commit": "a082284b80005bb5615c0f5f5f5ed66650b1b1e7",
+  "commit_date": "2026-08-03",
+  "captured_date": "2026-10-22",
+  "license": "Apache-2.0",
+  "source_files": [
+    {
+      "upstream_file": "README.md",
+      "local_file": "source-snapshot/README.upstream.md",
+      "url": "https://raw.githubusercontent.com/taco-group/SparkVSR/a082284b80005bb5615c0f5f5f5ed66650b1b1e7/README.md",
+      "sha256": "5600fc308df4d3bce406d1817b2a6b8f0ffc2064bba1df316543de956bc9d781"
+    },
+    {
+      "upstream_file": "LICENSE",
+      "local_file": "source-snapshot/LICENSE.upstream.txt",
+      "url": "https://raw.githubusercontent.com/taco-group/SparkVSR/a082284b80005bb5615c0f5f5f5ed66650b1b1e7/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "paper": "https://arxiv.org/html/2603.16864v1",
+  "official_results": "https://sparkvsr.github.io/comparison.html",
+  "scope": {
+    "performed": [
+      "Existing discussion and primary source synthesis",
+      "Upstream commit and license identity",
+      "Static website and publication checks"
+    ],
+    "not_performed": [
+      "Model download",
+      "SparkVSR inference",
+      "PiSA-SR inference",
+      "Commercial image API call",
+      "Training",
+      "GPU memory or throughput benchmark"
+    ]
+  },
+  "metrics": {
+    "dataset": "UDM10",
+    "source": "Paper v1 Table 1",
+    "direction": "All three shown metrics: higher is better",
+    "DOVE": {
+      "PSNR": 26.52,
+      "CLIP-IQA": 0.5011,
+      "DOVER": 0.5664
+    },
+    "SparkVSR-no-ref": {
+      "PSNR": 26.62,
+      "CLIP-IQA": 0.4303,
+      "DOVER": 0.5494
+    },
+    "SparkVSR-NBP": {
+      "PSNR": 23.7,
+      "CLIP-IQA": 0.5501,
+      "DOVER": 0.6902
+    },
+    "SparkVSR-PiSA": {
+      "PSNR": 23.43,
+      "CLIP-IQA": 0.6252,
+      "DOVER": 0.6411
+    }
+  }
+}

@@ -1,5 +1,13 @@
 # 多项目 Web 部署
 
+## 017 · SparkVSR 理解归档
+
+017 以我们已生成的同一张信息图引导，说明关键帧引导的生成式视频超分能力、观感与保真的取舍、可沉淀的控制和验收机制，以及老片、AIGC、人工精修和风格化场景。当前理解归档，暂不运行模型。网页为原生 HTML / CSS / JavaScript，不接收视频或调用 GPU / API。
+
+Actions 汇总前运行 `python projects/017-sparkvsr/scripts/package_web.py`、同一命令加 `--check` 及 `node --check projects/017-sparkvsr/web/app.js`。打包器核对指定引导图的 SHA-256 和尺寸、上游 README / LICENSE 身份、发布副本和内部资源，再交由根汇总器发布到 `/017-sparkvsr/`。原始图在本项目 `assets/`，生成的 `web/assets/`、`web/downloads/` 不重复提交。日常构建只需标准库，不依赖 Pillow 或中文字体。
+
+部署是否完成以本项目 `deployment-verification.json` 与实际公开网址为准；登记表 `demo_url` 在公开验证通过后填写。模型效果、显存、速度和训练均未实测。
+
 本仓库使用 **GitHub Actions → GitHub Pages**。一个站点承载多个编号项目，静态资源使用相对路径，不要求各项目采用相同前端框架。
 
 ## 线上入口

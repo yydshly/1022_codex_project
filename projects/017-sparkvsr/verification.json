@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "stage": "local-before-publication",
+  "status": "passed",
+  "story": "Root catalog entry → SparkVSR understanding page → exact original infographic and author metric modes → downloads and source links.",
+  "checks": {
+    "catalog": "python scripts/project_catalog.py check passed",
+    "package": "6 publication copies, PNG dimensions and SHA-256, upstream snapshot hashes and 33 references checked",
+    "script": "node --check web/app.js passed",
+    "root_entry": "Summary contains capability/effect, reusable technology and future scenarios; guide loads and project link returns to the page.",
+    "guide_modal": "Opened and closed through visible controls; original 2400×3970 image loaded.",
+    "author_metric_modes": [
+      {
+        "mode": "none",
+        "PSNR": "26.62",
+        "CLIP_IQA": "0.4303",
+        "DOVER": "0.5494"
+      },
+      {
+        "mode": "pisa",
+        "PSNR": "23.43",
+        "CLIP_IQA": "0.6252",
+        "DOVER": "0.6411"
+      },
+      {
+        "mode": "nbp",
+        "PSNR": "23.70",
+        "CLIP_IQA": "0.5501",
+        "DOVER": "0.6902"
+      }
+    ],
+    "technical_details": "Opened through summary control.",
+    "downloads": [
+      "Original PNG downloaded through browser link",
+      "UNDERSTANDING.md downloaded through browser link"
+    ],
+    "responsive": [
+      {
+        "width": 375,
+        "overflow": false,
+        "broken_images": 0
+      },
+      {
+        "width": 768,
+        "overflow": false,
+        "broken_images": 0
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "broken_images": 0
+      }
+    ],
+    "console_warnings_and_errors": [],
+    "screenshots": [
+      "assets/web-preview-desktop.png",
+      "assets/web-preview-mobile.png"
+    ],
+    "guide_sha256": "56005f1845bcd728c58d15014ba1465459432569b18019801c59544288f3727d"
+  },
+  "not_performed": [
+    "SparkVSR inference",
+    "PiSA-SR inference",
+    "Commercial API generation",
+    "Training",
+    "GPU memory/throughput/quality benchmarks"
+  ]
+}
