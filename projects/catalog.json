@@ -281,7 +281,7 @@
       ],
       "cover": "assets/orchard-agentic-overview.png",
       "cover_caption": "沿用本次讨论生成并确认的中文理解长图：区分模型、Agent 框架与沙箱，解释执行架构、十二项环境能力、Docker 对比、技术价值及效果口径。图为文字与矢量排版，指标为作者报告，未本地复现；快照分叉标为后续计划。",
-      "demo_url": ""
+      "demo_url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/"
     }
   ]
 }

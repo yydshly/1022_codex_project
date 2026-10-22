@@ -1,4 +1,104 @@
 {
-  "status": "pending",
-  "scope": "Static research page publication only; upstream cluster, inference and training not run."
+  "verifiedAt": "2026-10-22T23:49:54.314348+08:00",
+  "status": "passed",
+  "publicURL": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/",
+  "contentCommit": "4d3b3b1f9bd0e8cada9b72c3b49a865b25c729c3",
+  "actionsRun": "https://github.com/yydshly/1022_codex_project/actions/runs/39808106303",
+  "files": [
+    {
+      "path": "LICENSE.upstream.txt",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/LICENSE.upstream.txt?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 1074,
+      "sha256": "7df20dcdf9197e9945c14858d41c60f11b52b93e5b69e2b63416b874d598d322",
+      "expectedSHA256": "7df20dcdf9197e9945c14858d41c60f11b52b93e5b69e2b63416b874d598d322",
+      "identical": true
+    },
+    {
+      "path": "app.js",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/app.js?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 7081,
+      "sha256": "dd66219dd7a08481da397371c154a7e6d5c7ee46768a46dbd78e366416f52220",
+      "expectedSHA256": "dd66219dd7a08481da397371c154a7e6d5c7ee46768a46dbd78e366416f52220",
+      "identical": true
+    },
+    {
+      "path": "assets/orchard-agentic-overview.png",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/assets/orchard-agentic-overview.png?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 2547153,
+      "sha256": "22f4f96ac276acc89fbd1d046b8210e9e15fffa0102f3665c4035a7e3e111866",
+      "expectedSHA256": "22f4f96ac276acc89fbd1d046b8210e9e15fffa0102f3665c4035a7e3e111866",
+      "identical": true
+    },
+    {
+      "path": "assets/orchard-agentic-overview.svg",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/assets/orchard-agentic-overview.svg?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 36547,
+      "sha256": "1908d54ddf4a19b18a8e104178d8b985b21c598572bfa3653d6df4539b955a49",
+      "expectedSHA256": "1908d54ddf4a19b18a8e104178d8b985b21c598572bfa3653d6df4539b955a49",
+      "identical": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/index.html?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 10552,
+      "sha256": "17cdb7e298c1b5c08e670baf789e1e256cff08b891df167569516e337b83978a",
+      "expectedSHA256": "17cdb7e298c1b5c08e670baf789e1e256cff08b891df167569516e337b83978a",
+      "identical": true
+    },
+    {
+      "path": "research-evidence.json",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/research-evidence.json?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 10343,
+      "sha256": "3b16275c381b9c6f686b14034b60de9a4a3c4294af2fa64d14d36d2480bfc9bd",
+      "expectedSHA256": "3b16275c381b9c6f686b14034b60de9a4a3c4294af2fa64d14d36d2480bfc9bd",
+      "identical": true
+    },
+    {
+      "path": "research.json",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/research.json?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 14804,
+      "sha256": "2a06728ef74a4184aa85bb74dd8460d190170f5eaaea5e803be6fd4a5e845f5b",
+      "expectedSHA256": "2a06728ef74a4184aa85bb74dd8460d190170f5eaaea5e803be6fd4a5e845f5b",
+      "identical": true
+    },
+    {
+      "path": "reuse-plan.md",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/reuse-plan.md?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 5862,
+      "sha256": "84749f0526731f2697cb4390c19015f84dc405b288e04fd213c49abeafb51ed5",
+      "expectedSHA256": "84749f0526731f2697cb4390c19015f84dc405b288e04fd213c49abeafb51ed5",
+      "identical": true
+    },
+    {
+      "path": "style.css",
+      "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/style.css?v=4d3b3b1f9bd0",
+      "http": 200,
+      "bytes": 16342,
+      "sha256": "14fafcae021365a23236b6bba2afcc919dcf52fc4746d39edd14bde7cfeaa307",
+      "expectedSHA256": "14fafcae021365a23236b6bba2afcc919dcf52fc4746d39edd14bde7cfeaa307",
+      "identical": true
+    }
+  ],
+  "homepage": {
+    "http": 200,
+    "url": "https://yydshly.github.io/1022_codex_project/?v=4d3b3b1f9bd0",
+    "oneProjectCard": true,
+    "completeSummary": true,
+    "approvedGuide": true
+  },
+  "scope": "Public HTTP file identity, full index summary and approved guide. Browser interactions are recorded separately. Upstream cluster, inference and training were not run.",
+  "latestStyleCacheUpdate": {
+    "commit": "92f57800f08a03879427d0aca13993dc3caa4987",
+    "actionsRun": "https://github.com/yydshly/1022_codex_project/actions/runs/39808801931",
+    "status": "waiting_for_GitHub_runner",
+    "change": "Versioned stylesheet URL; the research content and approved guide are already published."
+  }
 }

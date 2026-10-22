@@ -16,3 +16,7 @@
 ## 发布副本
 
 web/assets/ 下同名文件与原件保持字节一致，verify_web.py 核对原件、发布副本与 guide-manifest.json。只使用相对路径，不依赖对话本地文件系统。
+
+## 网页验收截图
+
+web-preview-mobile.png 为本地同源 iframe 的 375/768 宽度验收，截图中显示实际测量。publication-preview.png 为正式发布页面的浏览器截图；它们不是上游运行效果或训练证据。

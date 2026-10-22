@@ -23,7 +23,7 @@ readme+=table(['信息','内容'],[
  ['论文','[arXiv:2605.15040v3](https://arxiv.org/html/2605.15040v3)，2026-07-30'],
  ['许可','上游 MIT，见 [LICENSE.upstream.txt](LICENSE.upstream.txt)；模型、数据及后续项目分别核对'],
  ['收录日期','2026-10-22（Asia/Shanghai）'],
- ['网页','[静态研究入口](web/index.html)；发布证据见 [deployment-verification.json](deployment-verification.json)'],
+ ['网页','[公开研究页](https://yydshly.github.io/1022_codex_project/018-orchard-agentic/) · [本地静态入口](web/index.html)；[部署证据](deployment-verification.json)'],
  ['验证范围','固定版本代码与文档、引导图、静态网页和公开发布；未运行上游集群、模型或训练']])
 readme+='\n\n![Orchard-Agentic 理解引导图：角色分工、执行架构、沙箱功能、Docker 对比、价值与效果](assets/orchard-agentic-overview.png)\n\n'
 readme+='沿用本次讨论最终确认的 2400 × 5480 中文长图，PNG 与 SVG 保持原始字节。最终是文字与矢量排版绘图；ImageGen 初次调用因网络错误失败，没有使用模型生成结果。见 [图片来源与哈希](assets/README.md)。\n'
@@ -121,6 +121,7 @@ assets+=table(['文件','说明','SHA-256'],[[x['path'].removeprefix('assets/'),
 assets+='## 制作与事实来源\n\n最终采用 Python/Pillow 文字排版与同步 SVG 绘制，无第三方产品标识或官方界面截图。初次 ImageGen 请求网络失败，未使用其结果。source/ 保留实际脚本、来源说明和初次尝试指令。\n\n'
 assets+='事实来自固定版本上游文档和论文第三版，见 ../research-evidence.json。图中实验是作者报告，非本次实测；使用建议为研究判断，快照分叉已标为后续计划。\n\n'
 assets+='## 发布副本\n\nweb/assets/ 下同名文件与原件保持字节一致，verify_web.py 核对原件、发布副本与 guide-manifest.json。只使用相对路径，不依赖对话本地文件系统。'
+assets+='\n\n## 网页验收截图\n\nweb-preview-mobile.png 为本地同源 iframe 的 375/768 宽度验收，截图中显示实际测量。publication-preview.png 为正式发布页面的浏览器截图；它们不是上游运行效果或训练证据。'
 write('assets/README.md',assets)
 write('THIRD_PARTY_NOTICES.md','''# 来源与许可
 

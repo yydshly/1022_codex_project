@@ -215,3 +215,5 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 指定引导图采用对话确认的 orchard-agentic-overview.png，保留原始字节和可编辑 SVG；首页封面、研究首页、网页首屏统一引用。web/ 已跟踪完整相对路径资源，现有 build_site.py 直接汇总到 /018-orchard-agentic/，无需新增构建依赖或修改部署工作流。
 
 本地执行 python projects/018-orchard-agentic/scripts/verify_web.py 后，用根构建器输出到新的空目录并预览。公开发布需确认 Actions 成功，再以 scripts/verify_deployment.py 核对页面、资源字节与总导航摘要；结果见 [部署记录](../projects/018-orchard-agentic/deployment-verification.json)，交互范围见 [浏览器验收](../projects/018-orchard-agentic/browser-verification.json)。本研究仅发布静态说明，不部署 Orchard 的 Kubernetes 服务，不创建云资源或执行模型训练。
+
+2026-10-22 已发布到 [018 公开研究页](https://yydshly.github.io/1022_codex_project/018-orchard-agentic/)。内容提交 4d3b3b1 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39808106303)成功；9 个发布文件均 HTTP 200 且与提交逐字节一致，总导航完整摘要与指定引导图已核对。图解放大、原始尺寸、关闭恢复焦点、原理页签、使用建议、技术条件展开与场景筛选通过；375/768 宽度无横向溢出和可见坏图。后续样式缓存版本提交 92f5780 的构建已通过，部署仍等待 GitHub 运行器；最新情况以部署 JSON 为准。

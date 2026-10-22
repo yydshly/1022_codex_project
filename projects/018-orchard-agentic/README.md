@@ -10,7 +10,7 @@
 | 论文 | [arXiv:2605.15040v3](https://arxiv.org/html/2605.15040v3)，2026-07-30 |
 | 许可 | 上游 MIT，见 [LICENSE.upstream.txt](LICENSE.upstream.txt)；模型、数据及后续项目分别核对 |
 | 收录日期 | 2026-10-22（Asia/Shanghai） |
-| 网页 | [静态研究入口](web/index.html)；发布证据见 [deployment-verification.json](deployment-verification.json) |
+| 网页 | [公开研究页](https://yydshly.github.io/1022_codex_project/018-orchard-agentic/) · [本地静态入口](web/index.html)；[部署证据](deployment-verification.json) |
 | 验证范围 | 固定版本代码与文档、引导图、静态网页和公开发布；未运行上游集群、模型或训练 |
 
 ![Orchard-Agentic 理解引导图：角色分工、执行架构、沙箱功能、Docker 对比、价值与效果](assets/orchard-agentic-overview.png)

@@ -30,7 +30,21 @@
   ],
   "consoleWarningsAndErrors": [],
   "screenshots": [
-    "assets/web-preview-mobile.png"
+    "assets/web-preview-mobile.png",
+    "assets/publication-preview.png"
   ],
-  "scope": "Research page rendering and interactions. Original-size image and download target verified; actual public file identities are recorded separately. No upstream cluster, model inference or training."
+  "scope": "Research page rendering and interactions. Original-size image and download target verified; actual public file identities are recorded separately. No upstream cluster, model inference or training.",
+  "publicPage": {
+    "url": "https://yydshly.github.io/1022_codex_project/018-orchard-agentic/",
+    "ready": true,
+    "visibleBrokenImages": 0,
+    "clientWidth": 690,
+    "scrollWidth": 690,
+    "consoleWarningsAndErrors": []
+  },
+  "narrowPanelFix": {
+    "localHeroGrid": "626px",
+    "stylesheetVersion": "20261022-2",
+    "status": "passed locally; latest public deployment pending runner"
+  }
 }
