@@ -164,3 +164,13 @@ GitHub Actions 使用 Node.js 22，先运行本项目 setup_runtime.py / build_r
 官方图像通过固定提交在线引用，体验区按需加载作者 GitHub Pages，每次仅运行一个 iframe；不打包未获再分发授权的原库代码和素材。分析固定版本，在线演示可能随作者更新。研究页和对比内容不要求本地 WebGL，官方实时体验需要网络与相应图形支持。
 
 2026-10-22 内容提交 `f92e770` 的 [Pages 构建与部署](https://github.com/yydshly/1022_codex_project/actions/runs/39787944045)成功，[014 公开网页](https://yydshly.github.io/1022_codex_project/014-seijaku/)的 8 个发布文件均 HTTP 200 且与提交字节一致；总导航完整摘要和生成引导图已核对。桌面／窄屏、能力切换、对比筛选、研究方向和实际清单下载检查通过；已登记 `demo_url`，详见 [部署验证记录](../projects/014-seijaku/deployment-verification.json)。
+
+## 013 · Old Coder 验收与证据研究
+
+[研究网页](../projects/013-old-coder/web/index.html)使用无依赖 HTML/CSS/JavaScript，解释两套 Skill、六阶段原理、直接聊天与 CI 的差别，并提供库存幂等、限流、权限和 API 兼容的可执行教学模型。源库 Python 示例的本机部分复现、作者历史报告与教学结果分别标注。
+
+`web/` 已含全部相对路径资源、31 份上游原文阅读副本、MIT 许可与结果 JSON，由现有 `scripts/build_site.py` 直接汇总到 `/013-old-coder/`，无需增加根构建步骤。源码哈希相关文件关闭换行归一化。检查命令：`node projects/013-old-coder/scripts/verify_labs.cjs --check`、`python projects/013-old-coder/scripts/verify_web.py` 和登记表检查。
+
+发布目标为 `https://yydshly.github.io/1022_codex_project/013-old-coder/`；完成公开部署与验收后登记 `demo_url` 和部署记录。原版完整 POSIX gauntlet 和独立复核未执行，具体边界见子项目 `verification.md`。
+
+013 的首页封面与网页“一图读懂”使用同一份 `old-coder-overview.png`（1800 × 2600），附可编辑 SVG、放大阅读和下载。图解为本研究代码原生绘制，ImageGen 两次网络失败记录另存；库存业务是教学模型。图像及发布副本已经保存到源文件目录，CI 不需要安装绘图依赖；可运行 `python projects/013-old-coder/scripts/build_overview.py --check` 仅校验产物身份。

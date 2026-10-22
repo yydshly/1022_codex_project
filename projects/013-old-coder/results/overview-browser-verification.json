@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22",
+  "image": {
+    "width": 1800,
+    "height": 2600,
+    "loaded": true,
+    "downloadSHA256": "5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60"
+  },
+  "checks": {
+    "dialogOpens": true,
+    "escapeCloses": true,
+    "pngDownloadMatchesOriginal": true,
+    "responsive": [
+      {
+        "overflow": false,
+        "page": 360,
+        "viewport": 375
+      },
+      {
+        "overflow": false,
+        "page": 1425,
+        "viewport": 1440
+      }
+    ]
+  },
+  "warningsOrErrors": [],
+  "scope": "New overview image and interactions only; previous full-page behavior checks retained as historical evidence."
+}

@@ -1,0 +1,95 @@
+{
+  "kind": "本地教学实验运行结果",
+  "runAt": "2026-10-22T12:24:41.165Z",
+  "engineVersion": "1.0.0",
+  "engineSHA256": "88e5acc03f749836166ee0e2dad41beb87044f8536d6345e85c3a7e3108decee",
+  "upstreamReference": "a0eb529d393a1cb3ccc564e32b2104e7e75c7a29",
+  "scenario": "inventory",
+  "implementation": "atomic",
+  "strength": "full",
+  "seed": 42,
+  "suite": {
+    "scenario": "inventory",
+    "variant": "atomic",
+    "strength": "full",
+    "seed": 42,
+    "rows": [
+      {
+        "id": "I1",
+        "title": "单条通知正常扣库存",
+        "expected": 9,
+        "actual": 9,
+        "pass": true
+      },
+      {
+        "id": "I2",
+        "title": "10 次重复通知只扣一次",
+        "expected": {
+          "stock": 9,
+          "effects": 1
+        },
+        "actual": {
+          "stock": 9,
+          "effects": 1
+        },
+        "pass": true
+      },
+      {
+        "id": "I3",
+        "title": "先读后写交错也只扣一次",
+        "expected": {
+          "stock": 9,
+          "effects": 1
+        },
+        "actual": {
+          "stock": 9,
+          "effects": 1
+        },
+        "pass": true
+      },
+      {
+        "id": "I4",
+        "title": "重启后重复通知不再扣库存",
+        "expected": {
+          "stock": 9,
+          "effects": 1
+        },
+        "actual": {
+          "stock": 9,
+          "effects": 1
+        },
+        "pass": true
+      },
+      {
+        "id": "I5",
+        "title": "写入中断后重试能完成且只扣一次",
+        "expected": {
+          "stock": 9,
+          "effects": 1
+        },
+        "actual": {
+          "stock": 9,
+          "effects": 1
+        },
+        "pass": true
+      },
+      {
+        "id": "I6",
+        "title": "不同订单分别处理",
+        "expected": 8,
+        "actual": 8,
+        "pass": true
+      }
+    ],
+    "passed": 6,
+    "failed": 0,
+    "total": 6
+  },
+  "mutation": null,
+  "notRun": [
+    "真实业务服务、数据库与跨进程并发",
+    "真实 AI 对照实验",
+    "上游完整 gauntlet 与独立验证协议"
+  ],
+  "scope": "本页用内存事务模型与固定交错顺序执行真实 JS；重启通过状态序列化重建。它验证教学模型，不代表数据库持久性、分布式锁或真实支付服务已经验证。"
+}

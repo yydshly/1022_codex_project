@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-22",
+  "base": "http://127.0.0.1:8013/_site/old-coder-preview-20261022/013-old-coder/",
+  "files": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "sha256": "e779664c30639cb3ae6ec17f8933b54af9d14af3bb2f18186ae469c0877be8c6",
+      "matches": true
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "sha256": "4932c7649ed039ba2c5372730a59538e7a7e212eb3a1ef956cdec212a914a0cd",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "36a3fe87a16e23b17f83d8b586f418ee740e828da1127051deb245409eca938c",
+      "matches": true
+    },
+    {
+      "path": "lab-engine.js",
+      "status": 200,
+      "sha256": "88e5acc03f749836166ee0e2dad41beb87044f8536d6345e85c3a7e3108decee",
+      "matches": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "sha256": "2134b64c255bb5166fa8c1139ce9876f372334f64e062184f3729cda883678f2",
+      "matches": true
+    },
+    {
+      "path": "assets/cover.jpg",
+      "status": 200,
+      "sha256": "64dfdf5baeb2e6f05e9832fec285b4bf40bb67c20b3a742dd4f3e0710b0647b0",
+      "matches": true
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200,
+      "sha256": "2ce8c9bf0dcb0b03d78e553ab82c5d008c6aa64ec0a531c8d67682b59408b8f7",
+      "matches": true
+    },
+    {
+      "path": "assets/lab-verification.json",
+      "status": 200,
+      "sha256": "37f75a5a652d22bb720bf27ea8c5def6e3bfe34b9667dc530ae65f95b1dabf5c",
+      "matches": true
+    },
+    {
+      "path": "assets/LICENSE.upstream.txt",
+      "status": 200,
+      "sha256": "24231bd5b6c208e7a82b2b1fabb68f661d7cffa335b8df714666dfbd98b0937b",
+      "matches": true
+    },
+    {
+      "path": "assets/source-manifest.json",
+      "status": 200,
+      "sha256": "2af57c548f79fd1a79144e59e650c10d682ad577751042e2dd735c231cace745",
+      "matches": true
+    },
+    {
+      "path": "assets/sources.json",
+      "status": 200,
+      "sha256": "3e3d5840ca44823298803a66907d6b91b8931d6e2f6f198540d7a8540ee206ba",
+      "matches": true
+    },
+    {
+      "path": "assets/upstream-reproduction.json",
+      "status": 200,
+      "sha256": "9fc867049dd1e2e9834c31e66e2fe4c9b838d935031f3f59b2798ae2ddb9e39a",
+      "matches": true
+    }
+  ]
+}

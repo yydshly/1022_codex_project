@@ -1,0 +1,9 @@
+.venv/
+upstream/**/*.egg-info/
+upstream/**/.coverage
+upstream/**/.hypothesis/
+upstream/**/.mypy_cache/
+upstream/**/.ruff_cache/
+upstream/**/coverage.xml
+upstream/**/htmlcov/
+results/*.png

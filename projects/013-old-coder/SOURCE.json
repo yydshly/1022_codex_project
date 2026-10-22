@@ -1,0 +1,164 @@
+{
+  "repository": "https://github.com/AmazingAng/old-coder",
+  "commit": "a0eb529d393a1cb3ccc564e32b2104e7e75c7a29",
+  "research_date": "2026-10-22",
+  "license": "MIT",
+  "files": [
+    {
+      "path": ".github/workflows/gauntlet.yml",
+      "sha256": "a6f14a7cae69ae2a32af5dba9f9112fb0ef34e046621443704c96fea2a6dd770",
+      "bytes": 759
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "24231bd5b6c208e7a82b2b1fabb68f661d7cffa335b8df714666dfbd98b0937b",
+      "bytes": 1088
+    },
+    {
+      "path": "README-zh.md",
+      "sha256": "3f16fbbc8ddc3ef7e8cd9aa0bee9546fc9eb3408951b37feb6a80d6b5d5a901d",
+      "bytes": 6177
+    },
+    {
+      "path": "README.md",
+      "sha256": "e58ec94afff73e784c5bf236953d3d70cc7762f41c2a5efe12a136afffb30f5f",
+      "bytes": 6023
+    },
+    {
+      "path": "demo-rate-limiter/evidence.md",
+      "sha256": "502cbe7b94f492f0fecfc07ab3c23c8b9a5fe7edf9755329857812888a271b1b",
+      "bytes": 25013
+    },
+    {
+      "path": "demo-rate-limiter/examples/demo.py",
+      "sha256": "b77147648fc5f4733715cf65e87b77d3b04cd62a627f4339005b4605270c2a64",
+      "bytes": 457
+    },
+    {
+      "path": "demo-rate-limiter/pyproject.toml",
+      "sha256": "2f383c297a789deee7366848e067436d2f519eecbd18525443e168a3aba75008",
+      "bytes": 578
+    },
+    {
+      "path": "demo-rate-limiter/requirements-dev.txt",
+      "sha256": "f6015c83912db886593ab0446ba1b7d3f5aaa201db4849440a489eeb1a4801f0",
+      "bytes": 143
+    },
+    {
+      "path": "demo-rate-limiter/spec.md",
+      "sha256": "9dce8d806fa59d6b0819b4605b13d39f2228041cf3bb689fe0089da0b7c34d1b",
+      "bytes": 21445
+    },
+    {
+      "path": "demo-rate-limiter/src/ratelimiter/__init__.py",
+      "sha256": "4adbd87f49157e3ea80763ad3f40a648d07b5843ee8fc6b2fcfc0c1625250568",
+      "bytes": 4558
+    },
+    {
+      "path": "demo-rate-limiter/tests/conftest.py",
+      "sha256": "8b8efb3b7a70f1e5e676b0857ae995a47750ab8fcb8ef033018bc590a2fc398c",
+      "bytes": 365
+    },
+    {
+      "path": "demo-rate-limiter/tests/test_properties.py",
+      "sha256": "b5bb7ec6fcb5e2f68a024095eda8e5c8e5c7ce31e6e58dff7c1f8b209794833c",
+      "bytes": 3762
+    },
+    {
+      "path": "demo-rate-limiter/tests/test_ratelimiter.py",
+      "sha256": "bc1b8b054ac894bf52e78d8c52a951850e4d3a93d5aa26a7c1a952c79c9ec905",
+      "bytes": 15939
+    },
+    {
+      "path": "demo-rate-limiter/tests/test_source_state.py",
+      "sha256": "6c1205c0485f5426105f954b38c42a9b58abf67e44a3293952a8e5dd16c1d9de",
+      "bytes": 8581
+    },
+    {
+      "path": "demo-rate-limiter/tools/gauntlet.sh",
+      "sha256": "00f725efff9fe8afe08eb63d61c3eb7450eec46ccfb5d8d272db78acd05d23ab",
+      "bytes": 3131
+    },
+    {
+      "path": "demo-rate-limiter/tools/gauntlet_layers.sh",
+      "sha256": "c3e5084fe3a6549468a90651d59996b86c445f9f333201e4512f8798ee7ef9a7",
+      "bytes": 1391
+    },
+    {
+      "path": "demo-rate-limiter/tools/must_not_match.sh",
+      "sha256": "e2d9e41e51c8a3f5c153d04e0da60062fb5b1c3a111655a5ab9fd03e3b7b69c3",
+      "bytes": 630
+    },
+    {
+      "path": "demo-rate-limiter/tools/mutants.py",
+      "sha256": "b021208f58839672a9ef51ed5b58333d09a6d27f64c62436a34988f30623aafe",
+      "bytes": 11662
+    },
+    {
+      "path": "demo-rate-limiter/tools/source_state.py",
+      "sha256": "9d04076ef6f7e797b4c11fbff3125aea2afe1e97351a793e8d88d0b8903f537d",
+      "bytes": 6638
+    },
+    {
+      "path": "demo-rate-limiter/tools/source_state.sh",
+      "sha256": "c654d374fc596be0c97e4a2134f1c41ae55b0cb55c3dc6d2eda1d098fa2bf9a9",
+      "bytes": 256
+    },
+    {
+      "path": "demo-rate-limiter/tools/test_gauntlet_checks.sh",
+      "sha256": "842476d59056ab4a19a3a825a511a84d674f96d5a2ef82b5b9603d8f63c0cb0e",
+      "bytes": 1852
+    },
+    {
+      "path": "demo-rate-limiter/tools/test_gauntlet_orchestration.sh",
+      "sha256": "a739708244c9b29fce43e0f27aeab7ace1afa56058be45a8db280f88f5be0d25",
+      "bytes": 3133
+    },
+    {
+      "path": "skills/old-coder-api/SKILL.md",
+      "sha256": "eac1ea983ceca819ced791aa76eb89b3cd8b86d2f5369abe167d6579cb5e629e",
+      "bytes": 13735
+    },
+    {
+      "path": "skills/old-coder-api/references/breaking-changes.md",
+      "sha256": "6a20cc0153184aaea4b927a48950f88f50b13623f86a7052be78531ad3b04fa8",
+      "bytes": 6419
+    },
+    {
+      "path": "skills/old-coder-api/references/examples.md",
+      "sha256": "6da721cdf9b2b5a4545050468d40e882ac1a410ba3b4faf45a7fa2b713501cc6",
+      "bytes": 5523
+    },
+    {
+      "path": "skills/old-coder-api/references/patterns.md",
+      "sha256": "6631d0fe1a46bcfb72f46017300a963e2ddae5fb0f963517ce20b17c0d109494",
+      "bytes": 6030
+    },
+    {
+      "path": "skills/old-coder/SKILL.md",
+      "sha256": "ae159c0d47e1b017075520b8344e5e136d10711029b8e74bbf212f8e2c94fc21",
+      "bytes": 22214
+    },
+    {
+      "path": "skills/old-coder/references/gauntlet.md",
+      "sha256": "f4c4e70ce4a444b2804718c740e15c34933751e16ee6bf95eaf3eea7ea243f2b",
+      "bytes": 12911
+    },
+    {
+      "path": "skills/old-coder/references/templates.md",
+      "sha256": "2da2c9ebb50a9380248c9d746f09531f37dda898fa0420d2c1ce0c6e8e616a2b",
+      "bytes": 7187
+    },
+    {
+      "path": "skills/old-coder/references/verifier-case-study.md",
+      "sha256": "f65d796314fe93b6e955a8e58b4125baa631bdb28631406acf661e2af4dd76ed",
+      "bytes": 2366
+    },
+    {
+      "path": "skills/old-coder/references/verifier.md",
+      "sha256": "b2aee760ea6418703fc8e10974f52e254064a183fbae72da16366b87f45c1d91",
+      "bytes": 9454
+    }
+  ],
+  "selection": "Both skills and all references; full demo; README files; CI workflow; license. No Git metadata or dependencies."
+}

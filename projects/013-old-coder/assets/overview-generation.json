@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-22",
+  "kind": "original code-native infographic",
+  "method": "Editable SVG and matching PNG drawn from the same text/shape operations; Pillow raster output.",
+  "dimensions": [
+    1800,
+    2600
+  ],
+  "upstreamCommit": "a0eb529d393a1cb3ccc564e32b2104e7e75c7a29",
+  "files": [
+    {
+      "name": "old-coder-overview.svg",
+      "sha256": "a51adae4551503b2518480c7878f0fbb648f84ab99f7d8618dff70c2832b6fce",
+      "bytes": 21603
+    },
+    {
+      "name": "old-coder-overview.png",
+      "sha256": "5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60",
+      "bytes": 403328
+    }
+  ],
+  "renderer": {
+    "pillow": "11.3.0",
+    "font": "C:\\Windows\\Fonts\\msyh.ttc",
+    "boldFont": "C:\\Windows\\Fonts\\msyhbd.ttc"
+  },
+  "imagegenAttempts": [
+    {
+      "attempt": 1,
+      "status": "failed",
+      "reason": "network error: error sending request"
+    },
+    {
+      "attempt": 2,
+      "status": "failed",
+      "reason": "network error: error sending request"
+    }
+  ],
+  "apiFallbackUsed": false,
+  "failedImagegenPrompt": "overview-imagegen-prompt.txt",
+  "contentSource": "Fixed upstream skill sources and this project's analysis; the stock example is a teaching model, not a live business-system test."
+}

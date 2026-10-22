@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "files": [
+    {
+      "file": "old-coder-overview.png",
+      "http": 200,
+      "sha256": "5361ec4a2d8d03873c7cbf2dacf29a3c3f953cb26d01f3903c4ce5291f4d9f60",
+      "identical": true
+    },
+    {
+      "file": "old-coder-overview.svg",
+      "http": 200,
+      "sha256": "a51adae4551503b2518480c7878f0fbb648f84ab99f7d8618dff70c2832b6fce",
+      "identical": true
+    },
+    {
+      "file": "overview-generation.json",
+      "http": 200,
+      "sha256": "b786a19791135fe256b38ff9939fb3943727898080096bea87e503a8ce946a18",
+      "identical": true
+    }
+  ]
+}

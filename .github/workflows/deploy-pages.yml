@@ -28,6 +28,11 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Validate Old Coder acceptance labs and evidence identities
+        run: |
+          node projects/013-old-coder/scripts/verify_labs.cjs --check
+          python projects/013-old-coder/scripts/build_overview.py --check
+          python projects/013-old-coder/scripts/verify_web.py
       - name: Build four pinned WebGPU scene demos
         run: |
           python projects/009-webgpu-render-pipeline/scripts/setup_runtime.py

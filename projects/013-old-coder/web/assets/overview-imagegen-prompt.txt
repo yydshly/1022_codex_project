@@ -1,0 +1,57 @@
+Use case: infographic-diagram.
+Create ONE finished, sophisticated, information-dense but highly legible Chinese editorial infographic poster for a GitHub repository research page. Portrait 3:4 format, preferably 1536x2048 or higher. It must explain AmazingAng/old-coder with five clear dimensions: capability, mechanism, practical example, scenarios, value. All Chinese must be accurate, large enough to read, with generous spacing. Flat vector-like infographic illustration, sharp elegant typography, restrained warm ivory background #f4f1e9, deep forest green #202a24, burnt orange #bc4b2d for emphasis, muted sage green for passed checks; no neon, no 3D, no dashboard screenshot, no photorealism. Use a refined grid, numbered chapter labels, thin rule dividers, simple bespoke line icons, arrows and meaningful illustrated objects. This is a polished self-contained explainer that can be shared and understood without reading a webpage. Let the middle business example be the biggest visual element. Do not overfill with microtext.
+
+EXACT TEXT and content, arranged in this top-to-bottom hierarchy. You may break lines intelligently but do not invent claims or metrics:
+
+HEADER:
+"Old Coder"
+"让 AI 写的代码，有据可验"
+A small descriptive line:
+"把验收经验写成可复用 Skill，交付可复跑证据。"
+
+SECTION 01, title "能力是什么？"
+Show four compact, concrete capabilities with clear icons:
+"写清验收标准" / "测试先行" / "多层质量检查" / "交付证据报告"
+A discreet paired label:
+"old-coder：开发流程与证据"
+"old-coder-api：HTTP/JSON 接口规则"
+Then a small mechanism ribbon:
+"Markdown 规则 + 参考文档 + 模板 → 编程 Agent + 测试工具"
+
+SECTION 02, title "原理：先定义怎么算对，再验证"
+A numbered six-stage left-to-right flow with the English technical names as secondary text, using exactly this ordering:
+"规格确认" SPEC → "先看到失败" RED → "实现通过" GREEN → "整理代码" REFACTOR → "多层检查" GAUNTLET → "证据报告" EVIDENCE
+Connect RED, GREEN, REFACTOR with a subtle repeat-loop arrow labeled "逐项行为循环".
+Under the flow, one concise line:
+"测试 · 类型 · 覆盖率 · 变异测试 · 随机输入 · 真实执行"
+
+SECTION 03, the largest and most visually engaging part, title:
+"实际场景：支付通知重复，库存只能扣一次"
+Small upper caption "一笔订单 · 初始库存 10 · 同一通知重复 10 次"
+Draw repeated notification envelopes/messages flowing into one order, a warehouse/inventory box, and a branched defect-vs-fix comparison. Clearly show:
+Left orange/red panel: "缺陷实现" / "每次通知都扣库存" / "库存 0" / "FAIL"
+Right green panel: "修复实现" / "原子提交模型" / "库存 9" / "PASS"
+Below or around the comparison, three exact concise explanations in a readable visual sequence:
+"开发前 · SPEC" / "通知 10 次只扣 1 次；并发、重启、中断重试也要检查。"
+"开发中 · 测试" / "旧实现先失败 → 修复后通过 → 故意改坏，测试应报警。"
+"开发后 · EVIDENCE" / "需求 ↔ 测试 ↔ 命令 ↔ 结果 ↔ 源码版本"
+Add clearly visible small qualification:
+"业务案例为教学模型，未接入真实支付系统或数据库。"
+
+SECTION 04, title "适合哪些任务？"
+Four compact scenario labels with small concrete icons:
+"修复 Bug 与防回归" / "订单、库存等关键逻辑" / "权限与多租户" / "并发与公共 API"
+One small criterion:
+"预期行为能写清楚，且出错代价较高。"
+
+SECTION 05, title "核心价值"
+Highlight strongly in a forest-green band with ivory typography:
+"减少反复提醒，让验收可审查、可复跑。"
+Then a readable two-line clarification:
+"完整对话也能提出同样要求；Skill 的增量在复用与减少遗漏。"
+"测试通过不等于绝对正确；强制门槛仍需测试脚本与 CI。"
+
+FOOTER unobtrusive:
+"013 · 开源项目研究  |  AmazingAng/old-coder  |  a0eb529 · MIT"
+
+Important fidelity constraints: the numbers 10 initial stock, 10 duplicate notifications, buggy stock 0 and repaired stock 9 must be correct. The corrected result requires a model transaction, not only an in-memory deduplication cache. The poster must not imply Skill is an autonomous testing platform, or that the business example is a measured benchmark of AI improvement. Every chapter must be complete. No invented statistics, no extra decorative English filler. Prioritize readable Chinese and a balanced, beautiful diagram.

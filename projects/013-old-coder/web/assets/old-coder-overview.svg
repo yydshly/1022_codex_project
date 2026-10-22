@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2600" viewBox="0 0 1800 2600"><title>Old Coder：能力、原理、场景与价值总览</title><desc>以重复通知只能扣一次库存的教学案例解释证据优先的 AI 编码。</desc><rect width="1800" height="2600" fill="#f4f1e9"/>
+<text x="112" y="59" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#697361">013 / OPEN SOURCE RESEARCH</text>
+<text x="111" y="112" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="99" font-weight="700" fill="#202a24">Old Coder</text>
+<rect x="1490" y="115" width="198" height="88" rx="6" fill="#202a24"/>
+<text x="1518" y="137" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="46" font-weight="700" fill="#f4f1e9">oc_</text>
+<text x="113" y="249" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="55" font-weight="700" fill="#bc4b2d">让 AI 写的代码，有据可验</text>
+<text x="113" y="333" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" fill="#697361">把验收经验写成可复用 Skill，交付可复跑证据。</text>
+<path d="M110 399 L1690 399" fill="none" stroke="#cdd3c2" stroke-width="2"/>
+<text x="110" y="440" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="700" fill="#bc4b2d">01</text>
+<text x="175" y="433" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="40" font-weight="700" fill="#202a24">能力是什么？</text>
+<rect x="110" y="506" width="380" height="122" rx="5" fill="#ebeede"/>
+<rect x="132" y="542" width="40" height="47" rx="3" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<path d="M142 555 L162 555" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M142 565 L162 565" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M142 575 L162 575" fill="none" stroke="#226b4a" stroke-width="2"/>
+<text x="201" y="550" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#202a24">写清验收标准</text>
+<rect x="510" y="506" width="380" height="122" rx="5" fill="#ebeede"/>
+<rect x="532" y="542" width="46" height="46" rx="7" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<path d="M542 566 L552 575" fill="none" stroke="#226b4a" stroke-width="4"/>
+<path d="M552 575 L569 554" fill="none" stroke="#226b4a" stroke-width="4"/>
+<text x="601" y="550" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#202a24">测试先行</text>
+<rect x="910" y="506" width="380" height="122" rx="5" fill="#ebeede"/>
+<rect x="932" y="558" width="40" height="30" rx="3" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<rect x="937" y="550" width="40" height="30" rx="3" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<rect x="942" y="542" width="40" height="30" rx="3" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<text x="1001" y="550" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#202a24">多层质量检查</text>
+<rect x="1310" y="506" width="380" height="122" rx="5" fill="#ebeede"/>
+<rect x="1332" y="542" width="40" height="47" rx="3" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<path d="M1342 555 L1362 555" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M1342 565 L1362 565" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M1342 575 L1362 575" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M1341 574 L1349 581" fill="none" stroke="#226b4a" stroke-width="3"/>
+<path d="M1349 581 L1362 566" fill="none" stroke="#226b4a" stroke-width="3"/>
+<text x="1401" y="550" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#202a24">交付证据报告</text>
+<text x="112" y="653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" fill="#202a24">old-coder：开发流程与证据</text>
+<text x="890" y="653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" fill="#202a24">old-coder-api：HTTP/JSON 接口规则</text>
+<rect x="110" y="707" width="1580" height="63" rx="3" fill="#e7e5d9"/>
+<text x="135" y="724" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" fill="#697361">Markdown 规则 + 参考文档 + 模板  →  编程 Agent + 测试工具</text>
+<text x="110" y="820" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="700" fill="#bc4b2d">02</text>
+<text x="175" y="813" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="40" font-weight="700" fill="#202a24">原理：先定义怎么算对，再验证</text>
+<rect x="110" y="886" width="240" height="112" rx="5" fill="#202a24"/>
+<text x="133" y="908" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#f4f1e9">规格确认</text>
+<text x="133" y="958" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#cedbbf">SPEC</text>
+<path d="M355 941 L372 941" fill="none" stroke="#697361" stroke-width="3"/>
+<polyline points="361,934 372,941 361,948" fill="none" stroke="#697361" stroke-width="3"/>
+<rect x="378" y="886" width="240" height="112" rx="5" fill="#e6eadc"/>
+<text x="401" y="908" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">先看到失败</text>
+<text x="401" y="958" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#697361">RED</text>
+<path d="M623 941 L640 941" fill="none" stroke="#697361" stroke-width="3"/>
+<polyline points="629,934 640,941 629,948" fill="none" stroke="#697361" stroke-width="3"/>
+<rect x="646" y="886" width="240" height="112" rx="5" fill="#e6eadc"/>
+<text x="669" y="908" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">实现通过</text>
+<text x="669" y="958" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#697361">GREEN</text>
+<path d="M891 941 L908 941" fill="none" stroke="#697361" stroke-width="3"/>
+<polyline points="897,934 908,941 897,948" fill="none" stroke="#697361" stroke-width="3"/>
+<rect x="914" y="886" width="240" height="112" rx="5" fill="#e6eadc"/>
+<text x="937" y="908" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">整理代码</text>
+<text x="937" y="958" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#697361">REFACTOR</text>
+<path d="M1159 941 L1176 941" fill="none" stroke="#697361" stroke-width="3"/>
+<polyline points="1165,934 1176,941 1165,948" fill="none" stroke="#697361" stroke-width="3"/>
+<rect x="1182" y="886" width="240" height="112" rx="5" fill="#e6eadc"/>
+<text x="1205" y="908" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">多层检查</text>
+<text x="1205" y="958" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#697361">GAUNTLET</text>
+<path d="M1427 941 L1444 941" fill="none" stroke="#697361" stroke-width="3"/>
+<polyline points="1433,934 1444,941 1433,948" fill="none" stroke="#697361" stroke-width="3"/>
+<rect x="1450" y="886" width="240" height="112" rx="5" fill="#202a24"/>
+<text x="1473" y="908" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#f4f1e9">证据报告</text>
+<text x="1473" y="958" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#cedbbf">EVIDENCE</text>
+<path d="M1030 1006 L1030 1030" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M1030 1030 L507 1030" fill="none" stroke="#226b4a" stroke-width="2"/>
+<path d="M507 1030 L507 1006" fill="none" stroke="#226b4a" stroke-width="3"/>
+<polyline points="500,1017 507,1006 514,1017" fill="none" stroke="#226b4a" stroke-width="3"/>
+<text x="663" y="1044" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#226b4a">逐项行为循环</text>
+<text x="112" y="1095" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" fill="#697361">测试 · 类型 · 覆盖率 · 变异测试 · 随机输入 · 真实执行</text>
+<text x="110" y="1180" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="700" fill="#bc4b2d">03</text>
+<text x="175" y="1173" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="40" font-weight="700" fill="#202a24">实际场景：支付通知重复，库存只能扣一次</text>
+<text x="113" y="1242" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="400" fill="#697361">一笔订单  ·  初始库存 10  ·  同一通知重复 10 次</text>
+<rect x="115" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M115 1300 L135 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M135 1315 L156 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="171" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M171 1300 L191 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M191 1315 L212 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="227" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M227 1300 L247 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M247 1315 L268 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="283" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M283 1300 L303 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M303 1315 L324 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="339" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M339 1300 L359 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M359 1315 L380 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="395" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M395 1300 L415 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M415 1315 L436 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="451" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M451 1300 L471 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M471 1315 L492 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="507" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M507 1300 L527 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M527 1315 L548 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="563" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M563 1300 L583 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M583 1315 L604 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<rect x="619" y="1300" width="41" height="29" rx="2" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M619 1300 L639 1315" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M639 1315 L660 1300" fill="none" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M718 1314 L813 1314" fill="none" stroke="#bc4b2d" stroke-width="3"/>
+<polyline points="802,1307 813,1314 802,1321" fill="none" stroke="#bc4b2d" stroke-width="3"/>
+<text x="845" y="1295" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">同一验收标准，检查不同实现</text>
+<rect x="110" y="1360" width="770" height="252" rx="6" fill="#f2e3db"/>
+<text x="140" y="1387" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="33" font-weight="700" fill="#bc4b2d">缺陷实现</text>
+<rect x="735" y="1383" width="113" height="42" rx="3" fill="#bc4b2d"/>
+<text x="754" y="1393" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="700" fill="#f4f1e9">FAIL</text>
+<text x="141" y="1452" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#202a24">每次通知都扣库存</text>
+<text x="141" y="1507" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="67" font-weight="700" fill="#bc4b2d">库存 0</text>
+<rect x="750" y="1500" width="80" height="70" rx="3" fill="#f4f1e9" stroke="#bc4b2d" stroke-width="2"/>
+<path d="M790 1500 L790 1532" fill="none" stroke="#bc4b2d" stroke-width="3"/>
+<path d="M767 1534 L812 1534" fill="none" stroke="#bc4b2d" stroke-width="3"/>
+<rect x="920" y="1360" width="770" height="252" rx="6" fill="#e3ecda"/>
+<text x="950" y="1387" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="33" font-weight="700" fill="#226b4a">修复实现 · 原子提交模型</text>
+<rect x="1545" y="1383" width="113" height="42" rx="3" fill="#226b4a"/>
+<text x="1564" y="1393" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="700" fill="#f4f1e9">PASS</text>
+<text x="951" y="1452" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#202a24">防重复记录与扣库存原子提交</text>
+<text x="951" y="1507" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="67" font-weight="700" fill="#226b4a">库存 9</text>
+<rect x="1560" y="1500" width="80" height="70" rx="3" fill="#f4f1e9" stroke="#226b4a" stroke-width="2"/>
+<path d="M1600 1500 L1600 1532" fill="none" stroke="#226b4a" stroke-width="3"/>
+<path d="M1577 1534 L1622 1534" fill="none" stroke="#226b4a" stroke-width="3"/>
+<rect x="110" y="1641" width="504" height="225" rx="4" fill="#faf8f2" stroke="#cdd3c2" stroke-width="2"/>
+<text x="134" y="1665" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">开发前 · SPEC</text>
+<text x="134" y="1721" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">通知 10 次只扣 1 次；并发、重启、</text>
+<text x="134" y="1764.2" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">中断重试也要检查。</text>
+<rect x="648" y="1641" width="504" height="225" rx="4" fill="#faf8f2" stroke="#cdd3c2" stroke-width="2"/>
+<text x="672" y="1665" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">开发中 · 测试</text>
+<text x="672" y="1721" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">旧实现先失败</text>
+<text x="672" y="1764.2" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">修复后通过</text>
+<text x="672" y="1807.4" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">故意改坏，测试应报警</text>
+<rect x="1186" y="1641" width="504" height="225" rx="4" fill="#faf8f2" stroke="#cdd3c2" stroke-width="2"/>
+<text x="1210" y="1665" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#202a24">开发后 · EVIDENCE</text>
+<text x="1210" y="1721" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">需求 → 测试 → 命令</text>
+<text x="1210" y="1764.2" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">结果 → 源码版本</text>
+<text x="1210" y="1807.4" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">保留可复跑入口</text>
+<text x="113" y="1888" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" font-weight="400" fill="#697361">业务案例为教学模型，未接入真实支付系统或数据库。</text>
+<text x="110" y="1957" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="700" fill="#bc4b2d">04</text>
+<text x="175" y="1950" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="40" font-weight="700" fill="#202a24">适合哪些任务？</text>
+<rect x="110" y="2025" width="380" height="89" rx="4" fill="#e8ebdf"/>
+<text x="130" y="2055" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" fill="#202a24">修复 Bug 与防回归</text>
+<rect x="510" y="2025" width="380" height="89" rx="4" fill="#e8ebdf"/>
+<text x="530" y="2055" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" fill="#202a24">订单、库存等关键逻辑</text>
+<rect x="910" y="2025" width="380" height="89" rx="4" fill="#e8ebdf"/>
+<text x="930" y="2055" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" fill="#202a24">权限与多租户</text>
+<rect x="1310" y="2025" width="380" height="89" rx="4" fill="#e8ebdf"/>
+<text x="1330" y="2055" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" fill="#202a24">并发与公共 API</text>
+<text x="113" y="2141" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#697361">选择标准：预期行为能写清楚，且出错代价较高。</text>
+<text x="110" y="2217" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="700" fill="#bc4b2d">05</text>
+<text x="175" y="2210" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="40" font-weight="700" fill="#202a24">核心价值</text>
+<rect x="110" y="2280" width="1580" height="214" rx="6" fill="#202a24"/>
+<text x="146" y="2313" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="42" font-weight="700" fill="#f4f1e9">减少反复提醒，让验收可审查、可复跑。</text>
+<text x="146" y="2390" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="400" fill="#d8e2cf">完整对话也能提出同样要求；Skill 的增量在复用与减少遗漏。</text>
+<text x="146" y="2435" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="400" fill="#d8e2cf">测试通过不等于绝对正确；强制门槛仍需测试脚本与 CI。</text>
+<text x="112" y="2533" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="400" fill="#697361">013 · 开源项目研究  |  AmazingAng/old-coder  |  a0eb529 · MIT</text>
+</svg>

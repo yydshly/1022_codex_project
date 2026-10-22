@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-22",
+  "browser": "Codex in-app browser",
+  "sourceSHA256": {
+    "index.html": "36a3fe87a16e23b17f83d8b586f418ee740e828da1127051deb245409eca938c",
+    "style.css": "2134b64c255bb5166fa8c1139ce9876f372334f64e062184f3729cda883678f2",
+    "data.js": "4932c7649ed039ba2c5372730a59538e7a7e212eb3a1ef956cdec212a914a0cd",
+    "app.js": "e779664c30639cb3ae6ec17f8933b54af9d14af3bb2f18186ae469c0877be8c6",
+    "lab-engine.js": "88e5acc03f749836166ee0e2dad41beb87044f8536d6345e85c3a7e3108decee"
+  },
+  "scenarioChecks": [
+    {
+      "scenario": "inventory",
+      "initial": "3/6 通过 · 3 项失败",
+      "weak": "1/1 通过 · 当前检查全绿",
+      "fixed": "6/6 通过 · 当前检查全绿",
+      "mutations": "故意改坏，测试发现了 3/3 个"
+    },
+    {
+      "scenario": "limiter",
+      "initial": "3/6 通过 · 3 项失败",
+      "weak": "0/1 通过 · 1 项失败",
+      "fixed": "6/6 通过 · 当前检查全绿",
+      "mutations": "故意改坏，测试发现了 3/3 个"
+    },
+    {
+      "scenario": "permission",
+      "initial": "2/6 通过 · 4 项失败",
+      "weak": "1/1 通过 · 当前检查全绿",
+      "fixed": "6/6 通过 · 当前检查全绿",
+      "mutations": "故意改坏，测试发现了 2/2 个"
+    },
+    {
+      "scenario": "api",
+      "initial": "3/6 通过 · 3 项失败",
+      "weak": "1/1 通过 · 当前检查全绿",
+      "fixed": "6/6 通过 · 当前检查全绿",
+      "mutations": "故意改坏，测试发现了 3/3 个"
+    }
+  ],
+  "responsive": [
+    {
+      "overflow": false,
+      "page": 360,
+      "viewport": 375
+    },
+    {
+      "overflow": false,
+      "page": 753,
+      "viewport": 768
+    },
+    {
+      "overflow": false,
+      "page": 1425,
+      "viewport": 1440
+    }
+  ],
+  "additionalChecks": {
+    "oneSidedLimiter": "deny + weak = 1/1 pass; deny + full = 1/6 pass",
+    "deterministicInventoryRace": "输出：库存 0，成功扣减 10 次",
+    "repairedInventory": "输出：库存 9，成功扣减 1 次",
+    "sourceSearchMatches": [
+      "skills/old-coder/references/verifier-case-study.md",
+      "skills/old-coder/references/verifier.md"
+    ],
+    "selectedSource": "skills/old-coder/references/verifier-case-study.md",
+    "sourceCopy": true,
+    "sourceDownload": true,
+    "templateSwitch": true,
+    "templateDownload": true,
+    "templateCopy": true,
+    "riskSelector": true,
+    "checkerFilterCount": 1,
+    "keyboardNextStage": "让错误先被抓住",
+    "evidenceDownload": {
+      "total": 6,
+      "failed": 0,
+      "unverified": [
+        "真实业务服务、数据库与跨进程并发",
+        "真实 AI 对照实验",
+        "上游完整 gauntlet 与独立验证协议"
+      ]
+    },
+    "builtNumberedPath": "/_site/old-coder-preview-20261022/013-old-coder/",
+    "builtSourceReaderFiles": 31,
+    "builtPermissionFixed": "6/6 pass"
+  },
+  "consoleWarningsOrErrors": [],
+  "limits": [
+    "One browser engine, not cross-browser certification.",
+    "No real AI or business-service integration.",
+    "No production deployment."
+  ]
+}

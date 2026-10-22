@@ -1,0 +1,62 @@
+{
+  "kind": "partial upstream reproduction",
+  "date": "2026-10-22T20:08:58.372409+08:00",
+  "upstreamCommit": "a0eb529d393a1cb3ccc564e32b2104e7e75c7a29",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "Python 3.12.13",
+  "results": [
+    {
+      "name": "tests-and-coverage",
+      "command": "<project>\\.venv\\Scripts\\python.exe -m pytest tests/test_ratelimiter.py tests/test_properties.py -q --cov=ratelimiter --cov-branch --cov-report=term-missing --cov-fail-under=100 --randomly-seed=42",
+      "returncode": 0,
+      "status": "pass",
+      "stdout": ".........................................                                [100%]\n=============================== tests coverage ================================\n______________ coverage: platform win32, python 3.12.13-final-0 _______________\n\nName                          Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------------------\nsrc\\ratelimiter\\__init__.py      49      0     20      0   100%\n-------------------------------------------------------------------------\nTOTAL                            49      0     20      0   100%\nRequired test coverage of 100% reached. Total coverage: 100.00%\n41 passed in 4.97s\n",
+      "stderr": ""
+    },
+    {
+      "name": "types",
+      "command": "<project>\\.venv\\Scripts\\python.exe -m mypy src tests examples tools",
+      "returncode": 0,
+      "status": "pass",
+      "stdout": "Success: no issues found in 8 source files\n",
+      "stderr": ""
+    },
+    {
+      "name": "lint",
+      "command": "<project>\\.venv\\Scripts\\python.exe -m ruff check .",
+      "returncode": 0,
+      "status": "pass",
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "name": "format",
+      "command": "<project>\\.venv\\Scripts\\python.exe -m ruff format --check .",
+      "returncode": 0,
+      "status": "pass",
+      "stdout": "10 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "name": "real-execution",
+      "command": "<project>\\.venv\\Scripts\\python.exe examples/demo.py",
+      "returncode": 0,
+      "status": "pass",
+      "stdout": "burst of 5 requests from 'alice' (limit 3/sec):\n[True, True, True, False, False]\n'bob' is unaffected: True\nafter the window passes, 'alice' again: True\n",
+      "stderr": ""
+    },
+    {
+      "name": "dependency-audit",
+      "status": "unverified",
+      "reason": "command exceeded 120 seconds"
+    }
+  ],
+  "notRun": [
+    "Original POSIX gauntlet.sh and its orchestration/source-binding/shell checker self-tests",
+    "Original POSIX-dependent mutation runner (hardcodes .venv/bin/pytest)",
+    "Nine source-state tests requiring POSIX script execution and source checkout semantics",
+    "Ten repeated randomized suite runs",
+    "Independent fresh-context verifier protocol"
+  ],
+  "scope": "Unmodified upstream application and property tests; no claims about the original complete gauntlet."
+}

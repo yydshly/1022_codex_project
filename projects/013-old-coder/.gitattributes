@@ -1,0 +1,8 @@
+# Source and generated evidence hashes must survive Windows/Linux checkouts.
+upstream/** -text
+web/** -text
+results/** -text
+SOURCE.json -text
+assets/old-coder-overview.svg -text
+assets/overview-generation.json -text
+assets/overview-imagegen-prompt.txt -text

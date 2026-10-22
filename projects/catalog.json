@@ -177,6 +177,24 @@
       "demo_url": "https://yydshly.github.io/1022_codex_project/012-super-hermes/"
     },
     {
+      "id": "013",
+      "slug": "old-coder",
+      "name": "Old Coder · AI 编码的验收与证据",
+      "repo": "https://github.com/AmazingAng/old-coder",
+      "summary": "把需求写成SPEC，以测试驱动、多层检查和可复跑报告核对AI代码，让已定义的错误可暴露、交付有据可验；可沉淀验收模板、故障模型、变异与属性测试、检查器和CI门槛，扩展到订单库存、权限与API、重构迁移及团队发布验收",
+      "status": "completed",
+      "tags": [
+        "Agent Skill",
+        "测试驱动",
+        "质量验收",
+        "可执行实验",
+        "证据报告"
+      ],
+      "cover": "assets/old-coder-overview.png",
+      "cover_caption": "本研究原创能力总览图：四项能力、六阶段原理、库存重复通知案例、适用任务与价值边界。案例为本地教学模型，图解用矢量排版绘制并导出PNG，非真实支付系统实测。",
+      "demo_url": ""
+    },
+    {
       "id": "014",
       "slug": "seijaku",
       "name": "Seijaku · 住宅导览与三项目对比",

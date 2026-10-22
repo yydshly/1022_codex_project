@@ -1,0 +1,1570 @@
+{
+  "kind": "local teaching engine verification",
+  "date": "2026-10-22",
+  "node": "v22.15.0",
+  "engineVersion": "1.0.0",
+  "engineSHA256": "88e5acc03f749836166ee0e2dad41beb87044f8536d6345e85c3a7e3108decee",
+  "command": "node projects/013-old-coder/scripts/verify_labs.cjs",
+  "checks": [
+    {
+      "name": "inventory: repaired implementation satisfies the complete contract",
+      "status": "pass"
+    },
+    {
+      "name": "inventory: all hand-selected behavioral mutants are detected",
+      "status": "pass"
+    },
+    {
+      "name": "inventory: weak suite misses at least one real defect",
+      "status": "pass"
+    },
+    {
+      "name": "limiter: repaired implementation satisfies the complete contract",
+      "status": "pass"
+    },
+    {
+      "name": "limiter: all hand-selected behavioral mutants are detected",
+      "status": "pass"
+    },
+    {
+      "name": "limiter: weak suite misses at least one real defect",
+      "status": "pass"
+    },
+    {
+      "name": "permission: repaired implementation satisfies the complete contract",
+      "status": "pass"
+    },
+    {
+      "name": "permission: all hand-selected behavioral mutants are detected",
+      "status": "pass"
+    },
+    {
+      "name": "permission: weak suite misses at least one real defect",
+      "status": "pass"
+    },
+    {
+      "name": "api: repaired implementation satisfies the complete contract",
+      "status": "pass"
+    },
+    {
+      "name": "api: all hand-selected behavioral mutants are detected",
+      "status": "pass"
+    },
+    {
+      "name": "api: weak suite misses at least one real defect",
+      "status": "pass"
+    },
+    {
+      "name": "inventory: arbitrary replay counts never multiply a successful effect",
+      "status": "pass"
+    },
+    {
+      "name": "limiter: 10 distinct seeds match the independent oracle",
+      "status": "pass"
+    },
+    {
+      "name": "limiter: denying everything passes the upper bound but violates availability",
+      "status": "pass"
+    },
+    {
+      "name": "permission: forged identity fields never cross the secure boundary",
+      "status": "pass"
+    }
+  ],
+  "matrices": [
+    {
+      "scenario": "inventory",
+      "variants": [
+        {
+          "scenario": "inventory",
+          "variant": "naive",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "I1",
+              "title": "单条通知正常扣库存",
+              "expected": 9,
+              "actual": 9,
+              "pass": true
+            },
+            {
+              "id": "I2",
+              "title": "10 次重复通知只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 0,
+                "effects": 10
+              },
+              "pass": false
+            },
+            {
+              "id": "I3",
+              "title": "先读后写交错也只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 0,
+                "effects": 10
+              },
+              "pass": false
+            },
+            {
+              "id": "I4",
+              "title": "重启后重复通知不再扣库存",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 0,
+                "effects": 10
+              },
+              "pass": false
+            },
+            {
+              "id": "I5",
+              "title": "写入中断后重试能完成且只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I6",
+              "title": "不同订单分别处理",
+              "expected": 8,
+              "actual": 8,
+              "pass": true
+            }
+          ],
+          "passed": 3,
+          "failed": 3,
+          "total": 6
+        },
+        {
+          "scenario": "inventory",
+          "variant": "memory",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "I1",
+              "title": "单条通知正常扣库存",
+              "expected": 9,
+              "actual": 9,
+              "pass": true
+            },
+            {
+              "id": "I2",
+              "title": "10 次重复通知只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I3",
+              "title": "先读后写交错也只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I4",
+              "title": "重启后重复通知不再扣库存",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 8,
+                "effects": 2
+              },
+              "pass": false
+            },
+            {
+              "id": "I5",
+              "title": "写入中断后重试能完成且只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 10,
+                "effects": 0
+              },
+              "pass": false
+            },
+            {
+              "id": "I6",
+              "title": "不同订单分别处理",
+              "expected": 8,
+              "actual": 8,
+              "pass": true
+            }
+          ],
+          "passed": 4,
+          "failed": 2,
+          "total": 6
+        },
+        {
+          "scenario": "inventory",
+          "variant": "race",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "I1",
+              "title": "单条通知正常扣库存",
+              "expected": 9,
+              "actual": 9,
+              "pass": true
+            },
+            {
+              "id": "I2",
+              "title": "10 次重复通知只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I3",
+              "title": "先读后写交错也只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 0,
+                "effects": 10
+              },
+              "pass": false
+            },
+            {
+              "id": "I4",
+              "title": "重启后重复通知不再扣库存",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I5",
+              "title": "写入中断后重试能完成且只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 10,
+                "effects": 0
+              },
+              "pass": false
+            },
+            {
+              "id": "I6",
+              "title": "不同订单分别处理",
+              "expected": 8,
+              "actual": 8,
+              "pass": true
+            }
+          ],
+          "passed": 4,
+          "failed": 2,
+          "total": 6
+        },
+        {
+          "scenario": "inventory",
+          "variant": "atomic",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "I1",
+              "title": "单条通知正常扣库存",
+              "expected": 9,
+              "actual": 9,
+              "pass": true
+            },
+            {
+              "id": "I2",
+              "title": "10 次重复通知只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I3",
+              "title": "先读后写交错也只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I4",
+              "title": "重启后重复通知不再扣库存",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I5",
+              "title": "写入中断后重试能完成且只扣一次",
+              "expected": {
+                "stock": 9,
+                "effects": 1
+              },
+              "actual": {
+                "stock": 9,
+                "effects": 1
+              },
+              "pass": true
+            },
+            {
+              "id": "I6",
+              "title": "不同订单分别处理",
+              "expected": 8,
+              "actual": 8,
+              "pass": true
+            }
+          ],
+          "passed": 6,
+          "failed": 0,
+          "total": 6
+        }
+      ],
+      "mutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "naive",
+            "title": "每次通知都扣库存",
+            "killed": true,
+            "failures": [
+              "I2",
+              "I3",
+              "I4"
+            ]
+          },
+          {
+            "id": "memory",
+            "title": "只用内存防重复",
+            "killed": true,
+            "failures": [
+              "I4",
+              "I5"
+            ]
+          },
+          {
+            "id": "race",
+            "title": "先查询、后写入",
+            "killed": true,
+            "failures": [
+              "I3",
+              "I5"
+            ]
+          }
+        ],
+        "killed": 3,
+        "total": 3
+      },
+      "weakMutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "naive",
+            "title": "每次通知都扣库存",
+            "killed": false,
+            "failures": []
+          },
+          {
+            "id": "memory",
+            "title": "只用内存防重复",
+            "killed": false,
+            "failures": []
+          },
+          {
+            "id": "race",
+            "title": "先查询、后写入",
+            "killed": false,
+            "failures": []
+          }
+        ],
+        "killed": 0,
+        "total": 3
+      }
+    },
+    {
+      "scenario": "limiter",
+      "variants": [
+        {
+          "scenario": "limiter",
+          "variant": "fixed",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "L1",
+              "title": "连续 5 次：放行 3 次、拒绝 2 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "pass": true
+            },
+            {
+              "id": "L2",
+              "title": "窗口闭边界 1000ms 仍拒绝，1001ms 恢复",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                true
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "pass": false
+            },
+            {
+              "id": "L3",
+              "title": "跨整秒边界不能在一个窗口内放行 6 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "pass": false
+            },
+            {
+              "id": "L4",
+              "title": "不同用户额度相互独立",
+              "expected": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "pass": true
+            },
+            {
+              "id": "L5",
+              "title": "4000 次随机输入与独立参考模型一致",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            },
+            {
+              "id": "L6",
+              "title": "非法配置被拒绝",
+              "expected": 5,
+              "actual": 5,
+              "pass": true
+            }
+          ],
+          "passed": 3,
+          "failed": 3,
+          "total": 6
+        },
+        {
+          "scenario": "limiter",
+          "variant": "boundary",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "L1",
+              "title": "连续 5 次：放行 3 次、拒绝 2 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "pass": true
+            },
+            {
+              "id": "L2",
+              "title": "窗口闭边界 1000ms 仍拒绝，1001ms 恢复",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                true
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "pass": false
+            },
+            {
+              "id": "L3",
+              "title": "跨整秒边界不能在一个窗口内放行 6 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+              ],
+              "pass": true
+            },
+            {
+              "id": "L4",
+              "title": "不同用户额度相互独立",
+              "expected": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "pass": true
+            },
+            {
+              "id": "L5",
+              "title": "4000 次随机输入与独立参考模型一致",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            },
+            {
+              "id": "L6",
+              "title": "非法配置被拒绝",
+              "expected": 5,
+              "actual": 5,
+              "pass": true
+            }
+          ],
+          "passed": 4,
+          "failed": 2,
+          "total": 6
+        },
+        {
+          "scenario": "limiter",
+          "variant": "deny",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "L1",
+              "title": "连续 5 次：放行 3 次、拒绝 2 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "actual": [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "pass": false
+            },
+            {
+              "id": "L2",
+              "title": "窗口闭边界 1000ms 仍拒绝，1001ms 恢复",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                true
+              ],
+              "actual": [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "pass": false
+            },
+            {
+              "id": "L3",
+              "title": "跨整秒边界不能在一个窗口内放行 6 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+              ],
+              "actual": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "pass": false
+            },
+            {
+              "id": "L4",
+              "title": "不同用户额度相互独立",
+              "expected": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "actual": [
+                false,
+                false,
+                false,
+                false
+              ],
+              "pass": false
+            },
+            {
+              "id": "L5",
+              "title": "4000 次随机输入与独立参考模型一致",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            },
+            {
+              "id": "L6",
+              "title": "非法配置被拒绝",
+              "expected": 5,
+              "actual": 5,
+              "pass": true
+            }
+          ],
+          "passed": 1,
+          "failed": 5,
+          "total": 6
+        },
+        {
+          "scenario": "limiter",
+          "variant": "sliding",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "L1",
+              "title": "连续 5 次：放行 3 次、拒绝 2 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                false,
+                false
+              ],
+              "pass": true
+            },
+            {
+              "id": "L2",
+              "title": "窗口闭边界 1000ms 仍拒绝，1001ms 恢复",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                true
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                false,
+                true
+              ],
+              "pass": true
+            },
+            {
+              "id": "L3",
+              "title": "跨整秒边界不能在一个窗口内放行 6 次",
+              "expected": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+              ],
+              "pass": true
+            },
+            {
+              "id": "L4",
+              "title": "不同用户额度相互独立",
+              "expected": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "actual": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "pass": true
+            },
+            {
+              "id": "L5",
+              "title": "4000 次随机输入与独立参考模型一致",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "L6",
+              "title": "非法配置被拒绝",
+              "expected": 5,
+              "actual": 5,
+              "pass": true
+            }
+          ],
+          "passed": 6,
+          "failed": 0,
+          "total": 6
+        }
+      ],
+      "mutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "fixed",
+            "title": "固定时间桶",
+            "killed": true,
+            "failures": [
+              "L2",
+              "L3",
+              "L5"
+            ]
+          },
+          {
+            "id": "boundary",
+            "title": "提前释放窗口边界",
+            "killed": true,
+            "failures": [
+              "L2",
+              "L5"
+            ]
+          },
+          {
+            "id": "deny",
+            "title": "一律拒绝",
+            "killed": true,
+            "failures": [
+              "L1",
+              "L2",
+              "L3",
+              "L4",
+              "L5"
+            ]
+          }
+        ],
+        "killed": 3,
+        "total": 3
+      },
+      "weakMutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "fixed",
+            "title": "固定时间桶",
+            "killed": true,
+            "failures": [
+              "L0"
+            ]
+          },
+          {
+            "id": "boundary",
+            "title": "提前释放窗口边界",
+            "killed": true,
+            "failures": [
+              "L0"
+            ]
+          },
+          {
+            "id": "deny",
+            "title": "一律拒绝",
+            "killed": false,
+            "failures": []
+          }
+        ],
+        "killed": 2,
+        "total": 3
+      }
+    },
+    {
+      "scenario": "permission",
+      "variants": [
+        {
+          "scenario": "permission",
+          "variant": "id-only",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "P1",
+              "title": "本租户读取自己的订单",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "pass": true
+            },
+            {
+              "id": "P2",
+              "title": "猜中其他租户订单 ID 仍不可读取",
+              "expected": {
+                "status": 403,
+                "ids": []
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "B-01"
+                ]
+              },
+              "pass": false
+            },
+            {
+              "id": "P3",
+              "title": "伪造 bodyTenant 不能越权",
+              "expected": {
+                "status": 403,
+                "ids": []
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "B-01"
+                ]
+              },
+              "pass": false
+            },
+            {
+              "id": "P4",
+              "title": "列表只返回本租户订单",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01",
+                  "B-01"
+                ]
+              },
+              "pass": false
+            },
+            {
+              "id": "P5",
+              "title": "导出不能绕过租户边界",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01",
+                  "B-01"
+                ]
+              },
+              "pass": false
+            },
+            {
+              "id": "P6",
+              "title": "未认证的请求返回 401",
+              "expected": {
+                "status": 401,
+                "ids": []
+              },
+              "actual": {
+                "status": 401,
+                "ids": []
+              },
+              "pass": true
+            }
+          ],
+          "passed": 2,
+          "failed": 4,
+          "total": 6
+        },
+        {
+          "scenario": "permission",
+          "variant": "body",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "P1",
+              "title": "本租户读取自己的订单",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "pass": true
+            },
+            {
+              "id": "P2",
+              "title": "猜中其他租户订单 ID 仍不可读取",
+              "expected": {
+                "status": 403,
+                "ids": []
+              },
+              "actual": {
+                "status": 403,
+                "ids": []
+              },
+              "pass": true
+            },
+            {
+              "id": "P3",
+              "title": "伪造 bodyTenant 不能越权",
+              "expected": {
+                "status": 403,
+                "ids": []
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "B-01"
+                ]
+              },
+              "pass": false
+            },
+            {
+              "id": "P4",
+              "title": "列表只返回本租户订单",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "pass": true
+            },
+            {
+              "id": "P5",
+              "title": "导出不能绕过租户边界",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "B-01"
+                ]
+              },
+              "pass": false
+            },
+            {
+              "id": "P6",
+              "title": "未认证的请求返回 401",
+              "expected": {
+                "status": 401,
+                "ids": []
+              },
+              "actual": {
+                "status": 401,
+                "ids": []
+              },
+              "pass": true
+            }
+          ],
+          "passed": 4,
+          "failed": 2,
+          "total": 6
+        },
+        {
+          "scenario": "permission",
+          "variant": "secure",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "P1",
+              "title": "本租户读取自己的订单",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "pass": true
+            },
+            {
+              "id": "P2",
+              "title": "猜中其他租户订单 ID 仍不可读取",
+              "expected": {
+                "status": 403,
+                "ids": []
+              },
+              "actual": {
+                "status": 403,
+                "ids": []
+              },
+              "pass": true
+            },
+            {
+              "id": "P3",
+              "title": "伪造 bodyTenant 不能越权",
+              "expected": {
+                "status": 403,
+                "ids": []
+              },
+              "actual": {
+                "status": 403,
+                "ids": []
+              },
+              "pass": true
+            },
+            {
+              "id": "P4",
+              "title": "列表只返回本租户订单",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "pass": true
+            },
+            {
+              "id": "P5",
+              "title": "导出不能绕过租户边界",
+              "expected": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "actual": {
+                "status": 200,
+                "ids": [
+                  "A-01"
+                ]
+              },
+              "pass": true
+            },
+            {
+              "id": "P6",
+              "title": "未认证的请求返回 401",
+              "expected": {
+                "status": 401,
+                "ids": []
+              },
+              "actual": {
+                "status": 401,
+                "ids": []
+              },
+              "pass": true
+            }
+          ],
+          "passed": 6,
+          "failed": 0,
+          "total": 6
+        }
+      ],
+      "mutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "id-only",
+            "title": "只按订单 ID 查询",
+            "killed": true,
+            "failures": [
+              "P2",
+              "P3",
+              "P4",
+              "P5"
+            ]
+          },
+          {
+            "id": "body",
+            "title": "信任请求中的租户",
+            "killed": true,
+            "failures": [
+              "P3",
+              "P5"
+            ]
+          }
+        ],
+        "killed": 2,
+        "total": 2
+      },
+      "weakMutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "id-only",
+            "title": "只按订单 ID 查询",
+            "killed": false,
+            "failures": []
+          },
+          {
+            "id": "body",
+            "title": "信任请求中的租户",
+            "killed": false,
+            "failures": []
+          }
+        ],
+        "killed": 0,
+        "total": 2
+      }
+    },
+    {
+      "scenario": "api",
+      "variants": [
+        {
+          "scenario": "api",
+          "variant": "rename",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "A1",
+              "title": "新客户端仍能收到成功响应",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A2",
+              "title": "旧客户端仍能读取 id 字段",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            },
+            {
+              "id": "A3",
+              "title": "ID 继续保持字符串类型",
+              "expected": "string",
+              "actual": "undefined",
+              "pass": false
+            },
+            {
+              "id": "A4",
+              "title": "旧请求不传 country 仍然成功",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A5",
+              "title": "原有 email 和 created_at 字段保留",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A6",
+              "title": "旧客户端按原请求与原字段工作",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            }
+          ],
+          "passed": 3,
+          "failed": 3,
+          "total": 6
+        },
+        {
+          "scenario": "api",
+          "variant": "type",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "A1",
+              "title": "新客户端仍能收到成功响应",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A2",
+              "title": "旧客户端仍能读取 id 字段",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A3",
+              "title": "ID 继续保持字符串类型",
+              "expected": "string",
+              "actual": "number",
+              "pass": false
+            },
+            {
+              "id": "A4",
+              "title": "旧请求不传 country 仍然成功",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A5",
+              "title": "原有 email 和 created_at 字段保留",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A6",
+              "title": "旧客户端按原请求与原字段工作",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            }
+          ],
+          "passed": 4,
+          "failed": 2,
+          "total": 6
+        },
+        {
+          "scenario": "api",
+          "variant": "validation",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "A1",
+              "title": "新客户端仍能收到成功响应",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A2",
+              "title": "旧客户端仍能读取 id 字段",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A3",
+              "title": "ID 继续保持字符串类型",
+              "expected": "string",
+              "actual": "string",
+              "pass": true
+            },
+            {
+              "id": "A4",
+              "title": "旧请求不传 country 仍然成功",
+              "expected": 200,
+              "actual": 400,
+              "pass": false
+            },
+            {
+              "id": "A5",
+              "title": "原有 email 和 created_at 字段保留",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A6",
+              "title": "旧客户端按原请求与原字段工作",
+              "expected": true,
+              "actual": false,
+              "pass": false
+            }
+          ],
+          "passed": 4,
+          "failed": 2,
+          "total": 6
+        },
+        {
+          "scenario": "api",
+          "variant": "additive",
+          "strength": "full",
+          "seed": 42,
+          "rows": [
+            {
+              "id": "A1",
+              "title": "新客户端仍能收到成功响应",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A2",
+              "title": "旧客户端仍能读取 id 字段",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A3",
+              "title": "ID 继续保持字符串类型",
+              "expected": "string",
+              "actual": "string",
+              "pass": true
+            },
+            {
+              "id": "A4",
+              "title": "旧请求不传 country 仍然成功",
+              "expected": 200,
+              "actual": 200,
+              "pass": true
+            },
+            {
+              "id": "A5",
+              "title": "原有 email 和 created_at 字段保留",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            },
+            {
+              "id": "A6",
+              "title": "旧客户端按原请求与原字段工作",
+              "expected": true,
+              "actual": true,
+              "pass": true
+            }
+          ],
+          "passed": 6,
+          "failed": 0,
+          "total": 6
+        }
+      ],
+      "mutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "rename",
+            "title": "改名 id → user_id",
+            "killed": true,
+            "failures": [
+              "A2",
+              "A3",
+              "A6"
+            ]
+          },
+          {
+            "id": "type",
+            "title": "把字符串 ID 改成数字",
+            "killed": true,
+            "failures": [
+              "A3",
+              "A6"
+            ]
+          },
+          {
+            "id": "validation",
+            "title": "新增必填 country",
+            "killed": true,
+            "failures": [
+              "A4",
+              "A6"
+            ]
+          }
+        ],
+        "killed": 3,
+        "total": 3
+      },
+      "weakMutation": {
+        "baselinePassed": true,
+        "mutants": [
+          {
+            "id": "rename",
+            "title": "改名 id → user_id",
+            "killed": false,
+            "failures": []
+          },
+          {
+            "id": "type",
+            "title": "把字符串 ID 改成数字",
+            "killed": false,
+            "failures": []
+          },
+          {
+            "id": "validation",
+            "title": "新增必填 country",
+            "killed": false,
+            "failures": []
+          }
+        ],
+        "killed": 0,
+        "total": 3
+      }
+    }
+  ],
+  "limits": [
+    "Original browser teaching models; no database or live payment/auth service.",
+    "Deterministic interleavings model concurrency; no multi-process stress test.",
+    "Hand-selected mutants, not AST-generated mutation coverage.",
+    "No live AI comparison or causal benchmark of Skill effectiveness."
+  ]
+}
