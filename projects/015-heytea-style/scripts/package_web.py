@@ -28,6 +28,7 @@ def example_zip():
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_STORED) as archive:
         for name, data in sorted(files.items()):
             info = zipfile.ZipInfo("pink-green-flavor-monster-v3/" + name, (2026, 9, 4, 0, 0, 0))
+            info.create_system = 3  # Stable Unix ZIP metadata on every build host.
             info.compress_type = zipfile.ZIP_STORED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data)

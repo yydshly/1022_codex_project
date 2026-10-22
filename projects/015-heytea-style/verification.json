@@ -14,7 +14,7 @@
     "upstream player and MIT license included",
     "generated overview hash and provenance"
   ],
-  "pack_sha256": "dc0eae42e7f4ff8a6d07e8715d03edc14d02e21af47a5afb2b6c0987d0659959",
+  "pack_sha256": "2bf356b9190882a8c4e143a4e58e1815c36fec8c0c511f18b508936a004234c6",
   "limits": [
     "AI-generated overview is a research illustration; upstream creative workflows not run",
     "No Electron runtime installation or execution",
