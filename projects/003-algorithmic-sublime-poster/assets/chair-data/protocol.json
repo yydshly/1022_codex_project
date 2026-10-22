@@ -1,0 +1,209 @@
+{
+  "id": "red-chair-fixed-family",
+  "date": "2026-10-22",
+  "status": "completed",
+  "generated": true,
+  "skill": "emotion-art-direction",
+  "skill_snapshot": [
+    {
+      "file": "SKILL.md",
+      "sha256": "02168453a6e982c55f3bb443139ae5effacce327cef2df484460a26dff6373bf"
+    },
+    {
+      "file": "references/styles.md",
+      "sha256": "88194ae1d0cd821a03090ed7ccb7aaf93a480c189af2d0e8c6f0065e46716eed"
+    },
+    {
+      "file": "references/image-template.md",
+      "sha256": "d281b0fccfd7409fdb6dbcf50f0291df12590102773c36258540f1ae65b2d497"
+    },
+    {
+      "file": "references/cases/product.md",
+      "sha256": "2ad832884773416056af07f83785ca8fb7cc72b0ff7a644e7de2230aa0883c10"
+    },
+    {
+      "file": "references/emotions/safe.md",
+      "sha256": "225ef216f5fe70a6f9793582acb9f68ecbe100115b9ed2b6634c44b192fbefff"
+    },
+    {
+      "file": "references/emotions/solitude.md",
+      "sha256": "182c24d2444fe44ab7acdb835b9eab5d947c98f56d3603b66fb0ada0b7b5b1ec"
+    },
+    {
+      "file": "references/emotions/unease.md",
+      "sha256": "7792d14fe5c2a77c936d2db48aff1d03e9e73c47b8dafbb5d7fb5ee668618d58"
+    },
+    {
+      "file": "references/repair-template.md",
+      "sha256": "7dc57b123a96c1ed662846cc9eee924ab2dcf6aa1752dbf26a97bebc31615945"
+    }
+  ],
+  "reason": "前轮摄影旁支未延续用户原有风格；本轮明确锁定实体与数据融合家族，再定制情绪。",
+  "reference": {
+    "file": "../skill-trial/reference.png",
+    "role": "subject identity reference only",
+    "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+  },
+  "style_reference": {
+    "file": "../03-pumpkin-before-after.png",
+    "role": "right-hand finished poster visual grammar only",
+    "sha256": "3270826d034940675400d5cd574d31627660a595f04f762a7666f43ac00013c0",
+    "notice": "../NOTICE.upstream.md"
+  },
+  "fixed_rules": [
+    "同一红木椅与4:5竖幅目标",
+    "真实材质与可见计算结构共存",
+    "数据沿轮廓、透视、光线或空间边界组织",
+    "识别中心与承重结构保留",
+    "同一模块化大标题：在场",
+    "光色、疏密与留白服从情绪"
+  ],
+  "varied": [
+    "目标情绪与艺术命题",
+    "光色、尺度、留白与观看距离",
+    "计算隐喻、局部转化区域与信息密度"
+  ],
+  "method": "三次独立生成，共用同一主体身份参考和同一作者风格语法参考；每方向一次，保留全部结果与准确指令，不进行代码后期。",
+  "cases": [
+    {
+      "id": "safe",
+      "code": "A",
+      "title": "安心 / 被系统温柔承托",
+      "emotion": "安心",
+      "intent": "让空座位显得可靠、可进入，计算结构与实体共处而不威胁它。",
+      "translation": "暖纸、柔侧光与可信落点；红色像素沿椅背边缘有序重排，轮廓完整，疏密渐变。",
+      "data_relation": "局部像素重排 / 变化有边界、结构仍可靠",
+      "planned_scale": "整椅约45–52%画高",
+      "profile": "safe"
+    },
+    {
+      "id": "solitude",
+      "code": "B",
+      "title": "孤独 / 尚未被回应的在场",
+      "emotion": "孤独",
+      "intent": "主体仍然存在，但与观看者及周围系统保持距离；空白承接没有回应的感觉。",
+      "translation": "低饱和灰青大留白、小红椅与远侧柔光；稀疏采样从轮廓延向未占满的空间。",
+      "data_relation": "稀疏轮廓采样 / 信息留下存在的痕迹",
+      "planned_scale": "整椅约24–30%画高",
+      "profile": "solitude"
+    },
+    {
+      "id": "unease",
+      "code": "C",
+      "title": "不安 / 在场也被系统逼近",
+      "emotion": "不安",
+      "intent": "让人看见计算系统正在逼近座位，压力来自明确的空间关系，椅子仍可辨认。",
+      "translation": "深色纵深、硬侧光与红椅；透视网格逐层收窄，在轮廓边界形成局部体素化。",
+      "data_relation": "进入信息系统 / 计算边界逐层逼近",
+      "planned_scale": "整椅约42–48%画高",
+      "profile": "unease"
+    }
+  ],
+  "limits": [
+    "这是固定风格家族内的完整配方比较，多个视觉条件一起改变。",
+    "每方向一张，无重复采样、独立观众或固定种子，不能计算情绪命中率。",
+    "与前轮摄影图比较仍是独立重生成，不是只改数据这一变量。"
+  ],
+  "actual_calls": 4,
+  "actual_results": [
+    {
+      "id": "safe",
+      "file": "safe.png",
+      "prompt_file": "safe-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2690942,
+      "sha256": "6b5973bb41945b3cb7e1efb45f31a2ffc43ac35e3df26cd87aa32f5ec7c4f1f2",
+      "prompt_sha256": "12b900e7e5a5142dee97e1c2133f5d69cecff6f4508852ca712a9004bcba3a3f",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-813c244f-edbc-4dfb-bcbf-a95f34aec5e6.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    },
+    {
+      "id": "solitude",
+      "file": "solitude-repaired.png",
+      "prompt_file": "solitude-repair-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1809437,
+      "sha256": "4138d28b55a3100fd47327d2cb7759199fc5b4b82f92760d68048d34effb833f",
+      "prompt_sha256": "2ce98957da0ef8224b2bba57189bbeba58d5f190c9918ef15979037ed7cbc0be",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-9bf4619a-2f97-470c-809d-c9d05a251621.png",
+      "calls": 1,
+      "revisions": 1,
+      "input_file": "solitude.png",
+      "input_role": "complete edit target",
+      "postprocessing": "none"
+    },
+    {
+      "id": "unease",
+      "file": "unease.png",
+      "prompt_file": "unease-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2484134,
+      "sha256": "73b7cb70b0ee8f098ced8e1b27fa8c1559795479edf0fb33b6cb4b9e4376d962",
+      "prompt_sha256": "d0cea6eba889501f20b7b8cf5577399d5492f4011bba9b8c44ba6bf66a3f45a1",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-6b100ea5-26ca-4fdb-b6e5-9ff0fa6f02ab.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    }
+  ],
+  "repair_plan": {
+    "target": "solitude.png",
+    "sha256": "21b5b3d67661ad23e638f86a9c66cc3f4c90fea0496a896b046b41d9041a19f7",
+    "problem": "整椅约47%画高，超出24–30%目标，距离偏近",
+    "change": "只修整椅尺度及必要联动",
+    "keep": "字体、标题、背景、光色与实体数据关系",
+    "prompt_file": "solitude-repair-prompt.txt",
+    "executed": true
+  },
+  "initial_results": [
+    {
+      "id": "safe",
+      "file": "safe.png",
+      "prompt_file": "safe-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2690942,
+      "sha256": "6b5973bb41945b3cb7e1efb45f31a2ffc43ac35e3df26cd87aa32f5ec7c4f1f2",
+      "prompt_sha256": "12b900e7e5a5142dee97e1c2133f5d69cecff6f4508852ca712a9004bcba3a3f",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-813c244f-edbc-4dfb-bcbf-a95f34aec5e6.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    },
+    {
+      "id": "solitude",
+      "file": "solitude.png",
+      "prompt_file": "solitude-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1960768,
+      "sha256": "21b5b3d67661ad23e638f86a9c66cc3f4c90fea0496a896b046b41d9041a19f7",
+      "prompt_sha256": "bee78a21dffd7895b74b0ce77008b588a8c7503232394b92f88eec983dbda83a",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-2f03983d-9ef3-480f-8bbe-88cf5afa3824.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    },
+    {
+      "id": "unease",
+      "file": "unease.png",
+      "prompt_file": "unease-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2484134,
+      "sha256": "73b7cb70b0ee8f098ced8e1b27fa8c1559795479edf0fb33b6cb4b9e4376d962",
+      "prompt_sha256": "d0cea6eba889501f20b7b8cf5577399d5492f4011bba9b8c44ba6bf66a3f45a1",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-6b100ea5-26ca-4fdb-b6e5-9ff0fa6f02ab.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    }
+  ],
+  "repair_executed": true,
+  "actual_method": "三方向首轮各一次，孤独方向追加一次定向尺度返修，全部原件与准确指令保留。"
+}

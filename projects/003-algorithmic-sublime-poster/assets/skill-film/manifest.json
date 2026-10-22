@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-22",
+  "provider": "ChatArt",
+  "requested_model": "Seedance 2.0",
+  "task_id": "1035011",
+  "generation_calls": 1,
+  "actual_cost_credits": 300.0,
+  "source_url": "https://files.chatartpro.com/web-video/20261022/6ad98f464e239.mp4",
+  "original_video_sha256": "2915b267338007d877c3a5313ebfafdb9c5a294f39f907357aa5bbf78236d7fa",
+  "input_roles": [
+    {
+      "file": "../skill-trial/reference.png",
+      "role": "chair subject identity reference only",
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+    },
+    {
+      "file": "../skill-trial/safe.png",
+      "role": "window light and material atmosphere reference only; not first frame",
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+    }
+  ],
+  "model_weights_version": null,
+  "seed": null,
+  "original_video_modified": false,
+  "files": [
+    {
+      "file": "brief.json",
+      "bytes": 4934,
+      "sha256": "eedaef1b999595ada184dc2dc1f8b8ac7dec31f550e5b717890a77347bdba870"
+    },
+    {
+      "file": "prompt.txt",
+      "bytes": 4333,
+      "sha256": "ce1332216be0ca11ee6d2452b2211e9b0775781b13d958c1fe60b3a336af6895"
+    },
+    {
+      "file": "request.json",
+      "bytes": 4971,
+      "sha256": "2c7f2354e8a6a53ecc6e0a712469b1410e32f4f9569ee43d83d483f3bb57c1eb"
+    },
+    {
+      "file": "provider-result.json",
+      "bytes": 456,
+      "sha256": "80e2e122d4725951d07a19edb30d8c12709268482f19a8e89e9b3fa21742913d"
+    },
+    {
+      "file": "media.json",
+      "bytes": 505,
+      "sha256": "eff97d1c99074d8cda64434380e1ec5074d94f204d87a7318ddfe0c15afbdbcd"
+    },
+    {
+      "file": "skill-use.json",
+      "bytes": 3297,
+      "sha256": "9c3f0c73e560b409e3bb9258e1a67b80eee0b745dc94cb5101c6e715de7d3de6"
+    },
+    {
+      "file": "review.json",
+      "bytes": 3145,
+      "sha256": "84909ee7741dda6f44c00ce2033aff22850784fad65d8f0b96ec77a90b4f20b9"
+    },
+    {
+      "file": "study.json",
+      "bytes": 7798,
+      "sha256": "38067e9090546bc7591de7531b893440c71deccfd78000c3082789d95e17f44e"
+    },
+    {
+      "file": "original.mp4",
+      "bytes": 5943163,
+      "sha256": "2915b267338007d877c3a5313ebfafdb9c5a294f39f907357aa5bbf78236d7fa"
+    },
+    {
+      "file": "frame-02.jpg",
+      "bytes": 240810,
+      "sha256": "e94087b7756a0cbb092c512aa290a06aa951fd0e3485f06f70f0902023ae4a9b"
+    },
+    {
+      "file": "frame-05.jpg",
+      "bytes": 244930,
+      "sha256": "e8197228ca4edf5ba6419e75ccca2194c8062e648ef43f6e7da3e7c99fac5b3e"
+    },
+    {
+      "file": "frame-09.jpg",
+      "bytes": 228114,
+      "sha256": "a60671d0149b051d1acbac457e2c45da7f1ab7c868f9fceee609b65c223ead77"
+    }
+  ]
+}

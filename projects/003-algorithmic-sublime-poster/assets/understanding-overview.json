@@ -1,0 +1,28 @@
+{
+  "created_on": "2026-10-21",
+  "tool": "Built-in ImageGen",
+  "model_version": null,
+  "file": "understanding-overview.png",
+  "prompt": "understanding-overview-prompt.txt",
+  "width": 1448,
+  "height": 1086,
+  "sha256": "533b10a7a4a6c6f8130e877916bafe170e6f75f1ba61ecb58fa889c297592754",
+  "calls": 1,
+  "revisions": 0,
+  "postprocessing": "none",
+  "references": [
+    "warm-bloom-poster.png",
+    "directions/solitude-petals-quiet.png",
+    "directions/freedom-petals-quiet.png",
+    "directions/tension-petals-quiet.png"
+  ],
+  "reference_role": "Supporting artwork inserts for a generated explanatory infographic. Thumbnail imagery may be resynthesized; canonical original PNGs remain separate.",
+  "contents": [
+    "Artistic intent governs the image; concrete visual requirements guide model realization",
+    "Intent -> visual recipe -> model generation -> review and iteration",
+    "Four emotion-direction examples",
+    "Use cases",
+    "Potential future value"
+  ],
+  "verification": "Manually inspected main Chinese thesis, process order and feedback arrow, four example labels, use cases, future-value text and physical-algorithm distinction."
+}

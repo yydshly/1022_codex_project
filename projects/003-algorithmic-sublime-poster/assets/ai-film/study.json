@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "id": "shared-space",
+  "title": "留一点位置",
+  "status": "completed",
+  "generated": true,
+  "date": "2026-10-22",
+  "request": {
+    "provider": "ChatArt",
+    "type": "t2v",
+    "model": "Seedance 2.0",
+    "resolution": 1080,
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "sound": true,
+    "count": 1,
+    "estimated_credits": 240,
+    "image_inputs": [],
+    "video_model_calls": 1
+  },
+  "task_id": "1034571",
+  "actual": {
+    "file": "shared-space-original.mp4",
+    "provider_filename": "video_20261022022453.mp4",
+    "width": 1902,
+    "height": 1092,
+    "duration_seconds": 10.048,
+    "video_codec": "h264",
+    "fps": "24/1",
+    "has_audio": true,
+    "sha256": "da91ec9d5ed4b2cd66ea3bbeaf59ac5c5cbed4d47da9c3dd00060a9c0a08798c",
+    "bytes": 9590694,
+    "unmodified_provider_output": true,
+    "audio": [
+      {
+        "codec_name": "aac",
+        "sample_rate": "32000",
+        "channels": 2,
+        "duration": "10.048000"
+      }
+    ]
+  },
+  "actual_cost_credits": 300.0,
+  "intent": {
+    "primary": "从疏离到被接纳",
+    "aftertaste": "克制的温暖与一点希望",
+    "story": "一位撑伞者主动留出一半遮雨的位置；另一人看见邀请，进入伞下，两人共同前行。",
+    "avoid": "煽情、浪漫广告、依靠字幕命名情绪、仅改变光色。"
+  },
+  "visual_language": [
+    "胶片写实，深青蓝旧街与小面积琥珀门灯",
+    "湿路、衣料、皮肤和布伞有真实材质",
+    "同一连续镜头中的人物关系与空间变化",
+    "正常速度的自然动作、重心和目光回应",
+    "雨声随遮雨空间改变，配乐保持克制"
+  ],
+  "planned_stages": [
+    {
+      "start": 0,
+      "end": 3,
+      "name": "疏离",
+      "observable": "一人在雨中的街角短暂停留，留白与身体姿态建立距离。"
+    },
+    {
+      "start": 3,
+      "end": 7,
+      "name": "邀请",
+      "observable": "撑伞者放慢脚步、倾斜伞面、留出位置，双方发生短暂目光回应。"
+    },
+    {
+      "start": 7,
+      "end": 10,
+      "name": "接纳",
+      "observable": "另一人进入伞下，两人调整站位后共同前行；雨声变化支持空间改变。"
+    }
+  ],
+  "frames": [
+    {
+      "file": "shared-space-02.jpg",
+      "seconds": 2,
+      "caption": "一个人停留，另一个人靠近",
+      "alt": "实际影片2秒，年轻女子在右侧墙边握包，浅灰衣撑伞者从左侧走近"
+    },
+    {
+      "file": "shared-space-05.jpg",
+      "seconds": 5,
+      "caption": "伞移过来，目光有了回应",
+      "alt": "实际影片5秒，两人面对面站在同一把伞下，年轻女子松开一只握包的手"
+    },
+    {
+      "file": "shared-space-08.jpg",
+      "seconds": 8,
+      "caption": "共用一把伞，开始同行",
+      "alt": "实际影片8秒，两人共撑一把伞背向相机走向雨巷"
+    }
+  ],
+  "observations": [
+    "0.5秒时年轻女子独自站在右侧湿砖墙边，双手握着布包；左侧空巷与偏冷的光色建立人物间距。",
+    "2至5秒，浅灰衣撑伞者从左侧靠近，把伞移至两人之间；两人的目光相接，年轻女子松开一只握包的手。邀请通过人物与伞的位置表现出来。",
+    "6.5秒两人转向巷子，8至9.5秒呈现同伞并肩前行的背影。画面从单人靠墙变为两人共用遮雨空间，完成了可见的关系变化。",
+    "深青蓝砖墙、潮湿衣料、雨滴、路面反光与少量暖色灯点贯穿抽检画面。温暖主要来自靠近与同行，整体没有突然切换为明亮暖色。"
+  ],
+  "deviations": [
+    "动作比原计划提前：2秒撑伞者已入画，约3至5秒已形成共伞与回应，6.5秒开始转身。原计划的0–3 / 3–7 / 7–10秒划分没有严格落实。",
+    "主体多为上半身及背影，双脚不在画面中，无法据此检查完整步态与脚底接地。后段表情不可见；接受邀请的心理转变仍可能被理解为普通共伞，不能直接认定观众感到了被接纳。",
+    "原片含双声道音轨，但本次未完成听觉审片。雨声遮挡、脚步同步和结尾钢琴是否遵循要求，留待实际听片判断，不以存在音轨代表声音要求全部达成。",
+    "本次只有一条输出，没有无情绪要求的对照、重复采样或独立观众评分。它展示了意图被转成可见行动的一个样本，不能证明情绪引导的因果效果或稳定成功率。"
+  ],
+  "review_method": "作者目视检查原片0.5、2、3.5、5、6.5、8、9.5秒抽帧，结合浏览器原片播放和完整音视频解码检查；未进行听觉审片或独立观众评测。",
+  "independent_audience_evaluation": false,
+  "production": {
+    "video_model_calls": 1,
+    "image_inputs": [],
+    "code_animation_used": false,
+    "extra_music_or_voice_added": false,
+    "original_video_modified": false,
+    "prompt_file": "shared-space-prompt.txt",
+    "exact_request_file": "request.json"
+  }
+}

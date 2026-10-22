@@ -1,0 +1,12 @@
+{
+  "provider": "ChatArt",
+  "task_id": "1034571",
+  "status": "completed",
+  "source_url": "https://files.chatartpro.com/web-video/20261021/6ad9035fbacd5.mp4",
+  "estimated_cost_credits": 240,
+  "actual_cost_credits": 300.0,
+  "cost_difference_credits": 60.0,
+  "date": "2026-10-22",
+  "video_model_calls": 1,
+  "note": "Recorded from the skill CLI's completed result; credentials are excluded."
+}

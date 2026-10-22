@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/xianxie6/algorithmic-sublime-poster",
+  "commit": "846fac0a9fc247b480f71c9846c83815d2edfe41",
+  "checked_on": "2026-10-21",
+  "publisher": "xianxie6",
+  "license": "No standalone LICENSE in the researched commit. See NOTICE.upstream.md for example media; no license to underlying third-party material is implied.",
+  "media": [
+    {"file": "01-beverage-before-after.png", "upstream_path": "examples/01-beverage-before-after.png", "width": 2390, "height": 1810, "sha256": "8ed9d590cd917d55f0736120d31f0cf399332788b6a9ea71cb5b7c0dcfa6f68c", "modifications": "none; display cropping uses CSS only"},
+    {"file": "02-original-web-hero-before-after.png", "upstream_path": "examples/02-original-web-hero-before-after.png", "width": 2988, "height": 1026, "sha256": "c699ef273f899ebb7ba01cd59d50e9043cf1ae9b3982590ce6186033e69ce71e", "modifications": "none; display cropping uses CSS only"},
+    {"file": "03-pumpkin-before-after.png", "upstream_path": "examples/03-pumpkin-before-after.png", "width": 2784, "height": 1728, "sha256": "3270826d034940675400d5cd574d31627660a595f04f762a7666f43ac00013c0", "modifications": "none; display cropping uses CSS only"}
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-22",
+  "provider": "ChatArt",
+  "requested_model": "Seedance 2.0",
+  "task_id": "1034571",
+  "generation_calls": 1,
+  "source_url": "https://files.chatartpro.com/web-video/20261021/6ad9035fbacd5.mp4",
+  "actual_cost_credits": 300.0,
+  "original_file_sha256": "da91ec9d5ed4b2cd66ea3bbeaf59ac5c5cbed4d47da9c3dd00060a9c0a08798c",
+  "files": [
+    {
+      "file": "shared-space-prompt.txt",
+      "bytes": 3020,
+      "sha256": "5594de6bbc387c0119f431e2ca9dace81fd44e8823c304b46c104792ab77ab39"
+    },
+    {
+      "file": "request.json",
+      "bytes": 3463,
+      "sha256": "8efeaaca2cae57eab38678fa96d947eb59c3b109113e40f0a7eb1b55012ad7d8"
+    },
+    {
+      "file": "plan.json",
+      "bytes": 4194,
+      "sha256": "bbe4d1f0336f2d098cd6e52dd2b217d0067f3ca7a19124af8f8b62437defef45"
+    },
+    {
+      "file": "provider-result.json",
+      "bytes": 411,
+      "sha256": "ee1f193e131fcf9cb8ae52103936bbb82716cfb5433310f5424c32d5dd2dcd17"
+    },
+    {
+      "file": "review.json",
+      "bytes": 2458,
+      "sha256": "e1de34e3ca7bbe61e3be1159eadc1cb0b7f3f9b2c5b9ed3bd0633aaf56fdb24b"
+    },
+    {
+      "file": "study.json",
+      "bytes": 5148,
+      "sha256": "eaa97bf1d4b12eaf79f68faf8d214ac3b63a2ef1a79e13af599f9500dd9b0fb6"
+    },
+    {
+      "file": "shared-space-original.mp4",
+      "bytes": 9590694,
+      "sha256": "da91ec9d5ed4b2cd66ea3bbeaf59ac5c5cbed4d47da9c3dd00060a9c0a08798c"
+    },
+    {
+      "file": "shared-space-02.jpg",
+      "bytes": 201330,
+      "sha256": "aa4f2c0aa3d5a90fd1291fd3f3fa047d93d984996de760fe4b287b9df711738b"
+    },
+    {
+      "file": "shared-space-05.jpg",
+      "bytes": 229121,
+      "sha256": "0d05c0de6be4bdd5e4cc594e17b2ca8ca7e409e8e8d16ed42fc684ba8b75ce98"
+    },
+    {
+      "file": "shared-space-08.jpg",
+      "bytes": 180307,
+      "sha256": "49d7f6da656679f442221415c1096411caa749aaf0d728abe32d5ecf92ce5eb3"
+    }
+  ],
+  "model_weights_version": null,
+  "seed": null
+}

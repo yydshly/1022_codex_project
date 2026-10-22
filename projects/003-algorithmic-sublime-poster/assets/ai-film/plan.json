@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "id": "shared-space",
+  "title": "留一点位置",
+  "status": "completed",
+  "generated": true,
+  "created_date": "2026-10-22",
+  "intent": {
+    "primary": "从疏离到被接纳",
+    "aftertaste": "克制的温暖与一点希望",
+    "story": "一位撑伞者主动留出一半遮雨的位置；另一人看见邀请，进入伞下，两人共同前行。",
+    "avoid": "煽情、浪漫广告、依靠字幕命名情绪、仅改变光色。"
+  },
+  "visual_language": [
+    "胶片写实，深青蓝旧街与小面积琥珀门灯",
+    "湿路、衣料、皮肤和布伞有真实材质",
+    "同一连续镜头中的人物关系与空间变化",
+    "正常速度的自然动作、重心和目光回应",
+    "雨声随遮雨空间改变，配乐保持克制"
+  ],
+  "parameters": {
+    "provider": "ChatArt",
+    "type": "t2v",
+    "model": "Seedance 2.0",
+    "resolution": 1080,
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "sound": true,
+    "count": 1,
+    "estimated_credits": 240,
+    "image_inputs": [],
+    "video_model_calls": 1
+  },
+  "prompt_file": "shared-space-prompt.txt",
+  "planned_stages": [
+    {
+      "start": 0,
+      "end": 3,
+      "name": "疏离",
+      "observable": "一人在雨中的街角短暂停留，留白与身体姿态建立距离。"
+    },
+    {
+      "start": 3,
+      "end": 7,
+      "name": "邀请",
+      "observable": "撑伞者放慢脚步、倾斜伞面、留出位置，双方发生短暂目光回应。"
+    },
+    {
+      "start": 7,
+      "end": 10,
+      "name": "接纳",
+      "observable": "另一人进入伞下，两人调整站位后共同前行；雨声变化支持空间改变。"
+    }
+  ],
+  "review_questions": [
+    "不读意图说明，是否能看懂主动留出位置和接受邀请？",
+    "人物动作、目光、身体重心、伞面和遮挡是否可信？",
+    "材质、光色、相机与声音是否共同支持同一感受？",
+    "实际成片在哪一刻偏离要求？有哪些不同情绪解读？"
+  ],
+  "production_policy": {
+    "use_real_video_model": true,
+    "use_code_animation_as_result": false,
+    "preserve_original_model_output": true,
+    "record_exact_submitted_prompt": true,
+    "no_automatic_resubmission_on_failure": true,
+    "generation_requires_confirmation": true
+  },
+  "actual_result": {
+    "file": "shared-space-original.mp4",
+    "provider_filename": "video_20261022022453.mp4",
+    "width": 1902,
+    "height": 1092,
+    "duration_seconds": 10.048,
+    "video_codec": "h264",
+    "fps": "24/1",
+    "has_audio": true,
+    "sha256": "da91ec9d5ed4b2cd66ea3bbeaf59ac5c5cbed4d47da9c3dd00060a9c0a08798c",
+    "bytes": 9590694,
+    "unmodified_provider_output": true,
+    "audio": [
+      {
+        "codec_name": "aac",
+        "sample_rate": "32000",
+        "channels": 2,
+        "duration": "10.048000"
+      }
+    ]
+  },
+  "observations": [
+    "0.5秒时年轻女子独自站在右侧湿砖墙边，双手握着布包；左侧空巷与偏冷的光色建立人物间距。",
+    "2至5秒，浅灰衣撑伞者从左侧靠近，把伞移至两人之间；两人的目光相接，年轻女子松开一只握包的手。邀请通过人物与伞的位置表现出来。",
+    "6.5秒两人转向巷子，8至9.5秒呈现同伞并肩前行的背影。画面从单人靠墙变为两人共用遮雨空间，完成了可见的关系变化。",
+    "深青蓝砖墙、潮湿衣料、雨滴、路面反光与少量暖色灯点贯穿抽检画面。温暖主要来自靠近与同行，整体没有突然切换为明亮暖色。"
+  ],
+  "authorization": {
+    "confirmed": true,
+    "confirmed_date": "2026-10-22",
+    "reply": "确认，按此方案生成",
+    "approved_model": "Seedance 2.0",
+    "approved_estimated_credits": 240,
+    "approved_count": 1,
+    "approved_duration_seconds": 10,
+    "approved_resolution": 1080,
+    "approved_sound": true,
+    "approved_aspect_ratio": "16:9"
+  },
+  "generation_attempts": 1,
+  "prompt_sha256": "5594de6bbc387c0119f431e2ca9dace81fd44e8823c304b46c104792ab77ab39",
+  "task_id": "1034571"
+}

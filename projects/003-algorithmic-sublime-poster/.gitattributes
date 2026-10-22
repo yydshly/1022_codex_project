@@ -1,0 +1,4 @@
+# Preserve archived model inputs, provenance hashes and the reusable Skill byte for byte.
+# Frozen evidence may contain original CRLF or whitespace; do not normalize it.
+assets/** -text -whitespace
+skills/** -text -whitespace

@@ -1,0 +1,21 @@
+<!-- Integration template. Insert only after a completed model task and verified original MP4 exist. -->
+<section id="ai-film" class="ai-film" aria-labelledby="ai-film-title">
+  <div class="ai-film-heading"><div><p class="tiny-label">AI VIDEO / 艺术意图到实际成片</p><h3 id="ai-film-title">留一点位置。</h3></div><p>用一次微小的邀请，表达从疏离到被接纳。<br>先看原片，再看导演要求与实际偏差。</p></div>
+  <p class="ai-film-intent">雨仍在下。一个人主动为另一个人留出遮雨的位置，目光、伞面和两人的距离随之改变。</p>
+  <span class="ai-film-tag">视频模型实际生成 / 原始输出</span>
+  <p id="ai-film-error" class="ai-film-error" hidden role="status">影片暂时未能载入，请刷新或下载原片；生成记录与实际指令仍可阅读。</p>
+  <video id="ai-film-video" src="./assets/ai-film/shared-space-original.mp4" poster="./assets/ai-film/shared-space-05.jpg" controls muted playsinline preload="metadata" aria-label="留一点位置，AI视频模型实际生成的短片"></video>
+  <div class="ai-film-controls"><button type="button" id="ai-film-play">播放AI原片</button><button type="button" id="ai-film-sound" aria-pressed="false">声音：关闭</button><button type="button" id="ai-film-restart">回到开头</button><span id="ai-film-clock">00:00 / 00:10</span></div>
+  <label for="ai-film-scrub" class="ai-film-seek">查看实际时刻<input id="ai-film-scrub" type="range" min="0" max="9.99" step="0.05" value="0" aria-valuetext="0秒，共10秒"></label>
+  <div id="ai-film-stats" class="ai-film-stats" aria-label="模型与实际媒体参数"></div>
+  <p id="ai-film-production" class="ai-film-provenance"></p>
+  <p class="ai-film-provenance">这里直接播放视频模型返回的原片。人物、环境和相机运动来自本次视频生成；网页只提供播放、定位和记录。</p>
+  <div class="ai-film-actions"><button type="button" id="ai-film-download" disabled>下载AI原片 MP4 ↓</button><button type="button" id="ai-film-json" disabled>下载生成与审片记录 ↓</button><a href="./assets/ai-film/manifest.json" target="_blank" rel="noopener">原片来源与文件哈希 ↗</a></div>
+  <div id="ai-film-frames" class="ai-film-frames" aria-label="从实际成片提取的审片画面"></div>
+  <p class="ai-film-provenance">以上画面从实际MP4提取，点选可定位原片；原计划的时间分配与实际执行分别记录。</p>
+  <details class="ai-film-details"><summary>艺术意图如何变成可执行的视听要求？</summary><div class="ai-film-direction"><div><h5>感受与故事</h5><p>从疏离到被接纳。让主动留出位置与接受邀请成为转机，结尾共同前行，保留克制的温暖。</p></div><div><h5>风格与材质</h5><p>胶片写实、深青蓝旧街、小面积琥珀门灯。湿路、布伞、皮肤与衣料保持真实质感，延续同一光色和天气。</p></div><div><h5>行动、空间与摄影</h5><p>一个连续镜头。原计划0–3秒建立距离，3–7秒倾斜伞面并发生目光回应，7–10秒接受邀请。相机缓慢横移与靠近，留白随关系改变。</p></div><div><h5>声音与审片依据</h5><p>原计划以雨声、脚步和布料声为主，进入伞下后雨声随空间变化。看实际成片是否完成这些要求，记录偏差；单条成片不能证明稳定情绪命中。</p></div></div></details>
+  <details class="ai-film-details"><summary>本片实际提交给视频模型的完整指令</summary><pre id="ai-film-prompt" tabindex="0" aria-label="本片实际提交的视频生成指令">正在载入实际生成指令……</pre><div class="ai-film-actions"><button type="button" id="ai-film-copy" disabled>复制实际生成指令</button><button type="button" id="ai-film-txt" disabled>下载实际指令 TXT ↓</button></div></details>
+  <details class="ai-film-details"><summary>实际效果与偏差 / 作者审片观察</summary><div class="ai-film-findings"><div><h5>实际看到了什么</h5><ul id="ai-film-observed"></ul></div><div><h5>偏差与下一轮依据</h5><ul id="ai-film-deviations"></ul></div></div><p>这是针对该次输出的人工观察。作者意图、模型执行和观众感受需要分别判断；没有独立观众评测或成功率统计。</p></details>
+  <p class="ai-film-history">历史预演：<a href="#motion-emotions">《候光》代码动画与V1/V2对照</a>、<a href="#motion-demo">《夜香》光氛围概念片</a>。它们保留为制作过程记录。</p>
+  <p id="ai-film-status" class="ai-film-status" role="status" aria-live="polite"></p>
+</section>

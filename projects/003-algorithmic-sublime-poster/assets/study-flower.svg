@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="620" viewBox="0 0 480 620" role="img" aria-label="本研究原创的橙金花朵，带弯曲花茎与绿色叶片">
+  <defs>
+    <linearGradient id="stem"><stop stop-color="#405b39"/><stop offset=".5" stop-color="#a5bb65"/><stop offset="1" stop-color="#304c37"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#284f40"/><stop offset=".6" stop-color="#7a9d53"/><stop offset="1" stop-color="#b8c96b"/></linearGradient>
+    <linearGradient id="petal" x1="0" y1="1" x2=".5" y2="0"><stop stop-color="#ad4b23"/><stop offset=".45" stop-color="#ed8e32"/><stop offset=".85" stop-color="#ffc96c"/><stop offset="1" stop-color="#f7df9a"/></linearGradient>
+    <radialGradient id="heart"><stop stop-color="#d9aa55"/><stop offset=".55" stop-color="#986332"/><stop offset="1" stop-color="#472e24"/></radialGradient>
+    <g id="petal-shape"><path d="M250 218C213 195 202 102 249 44C292 77 295 164 250 218Z" fill="url(#petal)"/><path d="M250 204Q239 125 249 61" fill="none" stroke="#fff0b7" stroke-opacity=".3" stroke-width="1.5"/><path d="M245 201Q224 137 237 90" fill="none" stroke="#a95c27" stroke-opacity=".3"/></g>
+  </defs>
+  <path d="M253 239C234 330 276 431 215 598" fill="none" stroke="#182e28" stroke-width="18"/>
+  <path d="M253 239C234 330 276 431 215 598" fill="none" stroke="url(#stem)" stroke-width="13"/>
+  <path d="M248 437C215 343 117 333 74 358C105 421 165 458 248 437Z" fill="url(#leaf)"/>
+  <path d="M241 491C288 413 361 419 395 440C363 501 302 522 241 491Z" fill="url(#leaf)"/>
+  <path d="M88 362Q176 402 248 437M249 488Q319 458 382 444" fill="none" stroke="#c5d381" stroke-opacity=".65" stroke-width="2"/>
+  <path d="M150 393L129 369M179 407L163 374M204 421L201 391M289 473L309 443M320 461L344 449" fill="none" stroke="#cfdf9a" stroke-opacity=".3" stroke-width="1.4"/>
+  <g><use href="#petal-shape"/><use href="#petal-shape" transform="rotate(22.5 250 205)"/><use href="#petal-shape" transform="rotate(45 250 205)"/><use href="#petal-shape" transform="rotate(67.5 250 205)"/><use href="#petal-shape" transform="rotate(90 250 205)"/><use href="#petal-shape" transform="rotate(112.5 250 205)"/><use href="#petal-shape" transform="rotate(135 250 205)"/><use href="#petal-shape" transform="rotate(157.5 250 205)"/><use href="#petal-shape" transform="rotate(180 250 205)"/><use href="#petal-shape" transform="rotate(202.5 250 205)"/><use href="#petal-shape" transform="rotate(225 250 205)"/><use href="#petal-shape" transform="rotate(247.5 250 205)"/><use href="#petal-shape" transform="rotate(270 250 205)"/><use href="#petal-shape" transform="rotate(292.5 250 205)"/><use href="#petal-shape" transform="rotate(315 250 205)"/><use href="#petal-shape" transform="rotate(337.5 250 205)"/></g>
+  <circle cx="250" cy="205" r="45" fill="url(#heart)"/>
+  <g fill="#edc479" opacity=".75"><circle cx="231" cy="186" r="3"/><circle cx="248" cy="180" r="3"/><circle cx="266" cy="189" r="3"/><circle cx="277" cy="203" r="3"/><circle cx="261" cy="203" r="3"/><circle cx="245" cy="199" r="3"/><circle cx="226" cy="205" r="3"/><circle cx="238" cy="219" r="3"/><circle cx="254" cy="225" r="3"/><circle cx="269" cy="220" r="3"/><circle cx="247" cy="212" r="2"/></g>
+</svg>

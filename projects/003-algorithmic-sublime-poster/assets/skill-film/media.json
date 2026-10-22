@@ -1,0 +1,21 @@
+{
+  "file": "original.mp4",
+  "provider_filename": "video_20261022122139.mp4",
+  "width": 1902,
+  "height": 1092,
+  "duration_seconds": 10.048,
+  "video_codec": "h264",
+  "fps": "24/1",
+  "has_audio": true,
+  "bytes": 5943163,
+  "sha256": "2915b267338007d877c3a5313ebfafdb9c5a294f39f907357aa5bbf78236d7fa",
+  "unmodified_provider_output": true,
+  "audio": [
+    {
+      "codec_name": "aac",
+      "sample_rate": "32000",
+      "channels": 2,
+      "duration": "10.048000"
+    }
+  ]
+}

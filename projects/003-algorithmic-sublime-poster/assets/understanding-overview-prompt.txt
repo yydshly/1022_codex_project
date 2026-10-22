@@ -1,0 +1,59 @@
+Use case: infographic-diagram / educational summary. Create ONE polished, highly readable CHINESE explanatory infographic, landscape 4:3, ideally 2400 × 1800 pixels or maximum available quality. This is a single standalone image for sharing and for embedding in an existing research website. The image must summarize a conceptual understanding, show actual example artworks, explain use cases, and explain future value.
+Input images: four original finished AI poster artworks, in this order: 1 warm orange cosmos on ivory paper, 2 solitary smaller cosmos on blue-grey paper, 3 cosmos in open blue sky, 4 orange cosmos against charcoal with dramatic side light. These are SUPPORTING INSERTS from our actual project. Preserve each complete original poster as a faithful rectangular thumbnail, including its headline “风有形”. Do not replace them with generic flowers, invent new examples, crop off the headlines, restyle the original posters, or insert browser chrome. Keep their 4:5 portrait proportions.
+Art direction of the infographic: sophisticated editorial information design, warm ivory background, very dark forest-green/charcoal text, muted sage thin rules, restrained burnt-orange highlights. Strong Chinese typographic hierarchy. Plenty of breathing room, perfect alignment and generous margins. All Chinese text must be accurately typeset, clean, high contrast and legible; use a contemporary Chinese sans-serif. No handwritten typography, busy HUD graphics, decorative clipart, giant icons, shadows or rounded dashboard cards. Use thin arrows and simple typographic numbered steps. Treat this as a well-designed professional explanatory poster, not a screenshot of a web app.
+
+STRUCTURE AND EXACT CHINESE COPY:
+TOP / about 12% height:
+Large main heading: “情绪驱动的 AI 海报创作”
+Prominent thesis directly beneath it: “用艺术意图统领画面，用具体视觉要求指导模型实现。”
+Keep this sentence visually central and authoritative.
+
+PROCESS / about 20% height:
+Four clear stages from LEFT to RIGHT, linked with slim arrows:
+“01 艺术意图”
+“用途与观众”
+“希望感受什么？避免什么？”
+—
+“02 视觉配方”
+“主体 · 光色 · 构图 · 材质 · 字体”
+“转化手法 · 区域 · 强度”
+—
+“03 模型实现”
+“助手组织生成指令”
+“图像模型统一绘制画面”
+—
+“04 检查修正”
+“情绪 · 主体 · 文字 · 秩序”
+“根据偏差调整配方”
+Add one restrained feedback arrow from stage 04 back toward stage 02, labeled “检查后迭代”.
+The process must clearly say that humans/art direction set the intent and the image model produces the unified visual output; it is not a physical simulation pipeline.
+
+EXAMPLES / about 40% height:
+Section heading: “我们的实际成图｜同一主体，不同艺术方向”
+Place the FOUR attached original poster images side by side in a balanced, visually prominent strip. All four entire posters fully visible. This is the primary visual evidence, not tiny decorative thumbnails. Under them, exactly these four labels in order:
+“温柔生长”
+“安静孤独”
+“轻盈自由”
+“锐利张力”
+A small explanatory caption below the strip: “同一花朵主题与标题；模型会重绘部分细节，这里比较的是设计方向。”
+
+BOTTOM / about 23% height:
+Two editorial columns with a thin vertical divider. Left column heading “适用场景”, then four concise equal-weight lines:
+“品牌与活动主视觉”
+“展览与文化传播”
+“内容封面与社交传播”
+“风格提案与设计教学”
+Right column heading “后续价值”, then four concise lines:
+“复用：沉淀风格配方与案例”
+“一致：建立品牌视觉系列”
+“协作：让沟通与评审更具体”
+“扩展：连接批量探索与人工校准”
+Clearly present these as accumulated or potential future value, not claims that an automated production backend already exists.
+
+FOOTNOTE / about 5% height, readable but subordinate:
+“粒子、晶体等是视觉要求，不等于运行对应的物理算法。”
+“研究总结与实际生成案例 · Algorithmic Sublime Poster”
+Do not add extra unsupported statistics, citations, dates, logos or commercial claims.
+
+Quality priorities: exact thesis sentence, correct arrow order and feedback loop, faithful four original artwork inserts, clear Chinese copy, compelling visual hierarchy, readable bottom use-case/value columns. Fit all content cleanly without crowding or tiny unreadable text. Output only the finished explanatory infographic.
+

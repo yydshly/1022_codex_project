@@ -1,0 +1,150 @@
+{
+  "id": "red-chair-invitation",
+  "title": "给你留个座",
+  "date": "2026-10-22",
+  "status": "completed",
+  "generated": true,
+  "skill": "emotion-art-direction",
+  "skill_snapshot": [
+    {
+      "file": "SKILL.md",
+      "sha256": "02168453a6e982c55f3bb443139ae5effacce327cef2df484460a26dff6373bf"
+    },
+    {
+      "file": "references/video-template.md",
+      "sha256": "d3e986b8e90eb485842e2c28a89c6c7de1e437fdebd39b5e81bd808fb5ffdc5c"
+    },
+    {
+      "file": "references/emotions/safe.md",
+      "sha256": "225ef216f5fe70a6f9793582acb9f68ecbe100115b9ed2b6634c44b192fbefff"
+    },
+    {
+      "file": "references/cases/video.md",
+      "sha256": "bbc512d6f4e8b58c1a3fbf14ad500ba2c7b74e719319298e67fa3b01a0fe5dd6"
+    }
+  ],
+  "intent": {
+    "start": "局促的旁观",
+    "event": "主人拉出空红椅，留出可以入座的位置",
+    "response": "来者看见邀请，走近并真正坐下",
+    "aftertaste": "被接纳、可以停留的克制放松",
+    "avoid": "煽情、广告表演、只改变光色或添加特效"
+  },
+  "style": {
+    "family": "写实剧情影像",
+    "fixed_rules": [
+      "自然窗光、真实木纹和衣料",
+      "同一室内空间、人物身份与道具连续",
+      "正常速度的动作和真实接触",
+      "无画内文字、数据特效或配乐"
+    ],
+    "reason": "本次优先验证人物事件与空间关系能否承载情绪；延续用户更认可的摄影氛围。"
+  },
+  "parameters": {
+    "provider": "ChatArt",
+    "type": "i2v",
+    "input_mode": "omni_reference",
+    "model": "Seedance 2.0",
+    "resolution": 1080,
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "sound": true,
+    "count": 1,
+    "estimated_credits": 240,
+    "previous_same_spec_actual_credits": 300
+  },
+  "inputs": [
+    {
+      "file": "../skill-trial/reference.png",
+      "role": "chair subject identity reference only",
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+    },
+    {
+      "file": "../skill-trial/safe.png",
+      "role": "window light and material atmosphere reference only; not first frame",
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "ce1332216be0ca11ee6d2452b2211e9b0775781b13d958c1fe60b3a336af6895",
+  "planned_stages": [
+    {
+      "start": 0,
+      "end": 2,
+      "name": "保持距离",
+      "observable": "来者在门内稍停；主人注意到她；空椅与双方位置清楚。"
+    },
+    {
+      "start": 2,
+      "end": 5,
+      "name": "发出邀请",
+      "observable": "主人握椅背、拉出空椅、松手示意；来者看椅后看向主人。"
+    },
+    {
+      "start": 5,
+      "end": 8,
+      "name": "看见与回应",
+      "observable": "来者松开紧握的袋带，走近并转身准备入座。"
+    },
+    {
+      "start": 8,
+      "end": 10,
+      "name": "可以停留",
+      "observable": "来者真正坐下、双脚着地、肩膀放松，双方共处。"
+    }
+  ],
+  "review_questions": [
+    "不读标题，能否看懂邀请与接受的先后关系？",
+    "来者是否真正坐下，主客与红椅身份是否连续？",
+    "拉椅、走近、入座有无滑行、穿模或接触错误？",
+    "实际停留时间是否可读，摄影是否抢走动作注意力？",
+    "声音是否与椅脚、脚步和落座对应？未听片时不判断。",
+    "不看情绪标签，观看者还能读到哪些相邻感受？"
+  ],
+  "production_policy": {
+    "real_video_model_required": true,
+    "preserve_original_output": true,
+    "no_code_animation_substitute": true,
+    "no_automatic_resubmission": true,
+    "confirmation_required_for_this_new_generation": true
+  },
+  "authorization": {
+    "confirmed": true,
+    "date": "2026-10-22",
+    "reply": "确认，按此方案生成",
+    "model": "Seedance 2.0",
+    "type": "i2v",
+    "input_mode": "omni_reference",
+    "resolution": 1080,
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "sound": true,
+    "count": 1,
+    "estimated_credits": 240,
+    "prior_same_spec_actual_credits_disclosed": 300,
+    "reference_image_count": 2
+  },
+  "actual_result": {
+    "file": "original.mp4",
+    "provider_filename": "video_20261022122139.mp4",
+    "width": 1902,
+    "height": 1092,
+    "duration_seconds": 10.048,
+    "video_codec": "h264",
+    "fps": "24/1",
+    "has_audio": true,
+    "bytes": 5943163,
+    "sha256": "2915b267338007d877c3a5313ebfafdb9c5a294f39f907357aa5bbf78236d7fa",
+    "unmodified_provider_output": true,
+    "audio": [
+      {
+        "codec_name": "aac",
+        "sample_rate": "32000",
+        "channels": 2,
+        "duration": "10.048000"
+      }
+    ]
+  },
+  "task_id": "1035011",
+  "generation_attempts": 1
+}

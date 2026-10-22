@@ -37,6 +37,23 @@
       "demo_url": "https://yydshly.github.io/1022_codex_project/002-todofy/"
     },
     {
+      "id": "003",
+      "slug": "algorithmic-sublime-poster",
+      "name": "Algorithmic Sublime Poster",
+      "repo": "https://github.com/xianxie6/algorithmic-sublime-poster",
+      "summary": "以情绪与艺术意图组织创作，匹配像素、点云、字符与数据连接等视觉语言形成提示词；展示源库海报、图片返修和真实AI短片，沉淀可复用Skill",
+      "status": "completed",
+      "tags": [
+        "情绪创作",
+        "像素与点云",
+        "图片与视频",
+        "提示词与Skill"
+      ],
+      "cover": "assets/research/emotion-art-research-overview-v3.png",
+      "cover_caption": "ImageGen研究总览：突出源库三组效果与数字连接，串联情绪、风格、提示词、图片视频探索和Skill沉淀。案例为依据原件的AI概览合成；21份情绪档案和跨媒介方法为本研究扩展。",
+      "demo_url": ""
+    },
+    {
       "id": "004",
       "slug": "xxd-panel-106",
       "name": "XXD Panel 106 · 柔彩像素记",

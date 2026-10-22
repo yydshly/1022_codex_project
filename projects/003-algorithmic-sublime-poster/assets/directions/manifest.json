@@ -1,0 +1,72 @@
+{
+  "created_on": "2026-10-21",
+  "tool": "Built-in ImageGen",
+  "model_version": null,
+  "input_reference": "../warm-bloom-poster.png",
+  "input_role": "Common edit target and subject reference",
+  "postprocessing": "none",
+  "transparent_background": false,
+  "outputs": [
+    {
+      "id": "freedom-petals-quiet",
+      "file": "freedom-petals-quiet.png",
+      "prompt": "freedom-petals-quiet-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "942b36bbe03d43de9e4eb883b53309f7ad1d1b22d6e784264f2f753a0e0f71a1",
+      "calls": 1,
+      "revisions": 0
+    },
+    {
+      "id": "solitude-petals-quiet",
+      "file": "solitude-petals-quiet.png",
+      "prompt": "solitude-petals-quiet-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "c325412ed721eb85d8c0155090d4a13c91e3522943994477bda51effd74c5c4d",
+      "calls": 1,
+      "revisions": 0
+    },
+    {
+      "id": "tension-petals-quiet",
+      "file": "tension-petals-quiet.png",
+      "prompt": "tension-petals-quiet-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "3ca26c484d4e4a74d8d2dfaf70bcd759b6f2634cf7b950b2575538212859d352",
+      "calls": 1,
+      "revisions": 0
+    },
+    {
+      "id": "warm-glass-quiet",
+      "file": "warm-glass-quiet.png",
+      "prompt": "warm-glass-quiet-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "f4c6858bee9b80df6d5d7e37d450ac8de57310b01ac1f84b62baa16cc8db678f",
+      "calls": 1,
+      "revisions": 0
+    },
+    {
+      "id": "warm-particles-quiet",
+      "file": "warm-particles-quiet.png",
+      "prompt": "warm-particles-quiet-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "041f81d3d596e0d5d0d2575107a8d8ad65ca2cc72bc7867e3ed73d3fa80218ea",
+      "calls": 1,
+      "revisions": 0
+    },
+    {
+      "id": "warm-petals-bold",
+      "file": "warm-petals-bold.png",
+      "prompt": "warm-petals-bold-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "b43c8d362cd6cad252d6e98d95bce6fccb901142a2ddae44e68ecf40e91c72f7",
+      "calls": 1,
+      "revisions": 0
+    }
+  ],
+  "comparison_limit": "Qualitative art-direction comparisons; model resynthesis changes details and does not guarantee pixel-identical subjects or exact transformation percentages."
+}

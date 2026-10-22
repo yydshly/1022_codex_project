@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-22",
+  "tool": "Built-in image_gen",
+  "skill": {
+    "name": "emotion-art-direction",
+    "invocation": "Read and applied the installed Skill and selected references in this conversation",
+    "snapshot": [
+      {
+        "file": "SKILL.md",
+        "sha256": "02168453a6e982c55f3bb443139ae5effacce327cef2df484460a26dff6373bf"
+      },
+      {
+        "file": "references/emotion-map.md",
+        "sha256": "244130d74c3001862a5c7794228ab8374721d51f1a6d84e2459b11ff5da9040f"
+      },
+      {
+        "file": "references/image-template.md",
+        "sha256": "d281b0fccfd7409fdb6dbcf50f0291df12590102773c36258540f1ae65b2d497"
+      },
+      {
+        "file": "references/emotions/safe.md",
+        "sha256": "225ef216f5fe70a6f9793582acb9f68ecbe100115b9ed2b6634c44b192fbefff"
+      },
+      {
+        "file": "references/emotions/solitude.md",
+        "sha256": "182c24d2444fe44ab7acdb835b9eab5d947c98f56d3603b66fb0ada0b7b5b1ec"
+      },
+      {
+        "file": "references/emotions/unease.md",
+        "sha256": "7792d14fe5c2a77c936d2db48aff1d03e9e73c47b8dafbb5d7fb5ee668618d58"
+      },
+      {
+        "file": "references/styles.md",
+        "sha256": "88194ae1d0cd821a03090ed7ccb7aaf93a480c189af2d0e8c6f0065e46716eed"
+      },
+      {
+        "file": "references/cases/product.md",
+        "sha256": "2ad832884773416056af07f83785ca8fb7cc72b0ff7a644e7de2230aa0883c10"
+      }
+    ]
+  },
+  "calls": 4,
+  "model_version": null,
+  "seed": null,
+  "outputs": [
+    {
+      "id": "reference",
+      "file": "reference.png",
+      "prompt": "reference-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1799206,
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248",
+      "prompt_sha256": "27e49cece80a28ab27e23a7c513fc575da19be549d20437236361c7663881655",
+      "input": null,
+      "input_role": null,
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-9fef4968-63bc-444e-9b85-02183f9199cf.png",
+      "postprocessing": "none"
+    },
+    {
+      "id": "safe",
+      "file": "safe.png",
+      "prompt": "safe-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2299374,
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8",
+      "prompt_sha256": "96a6c664a26ab78cd789a56a0fd7361e6442badf8ba13b380d0aebb19a532296",
+      "input": "reference.png",
+      "input_role": "subject identity reference only",
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-d8623e4e-83c6-4521-a57b-fb81ebb0270a.png",
+      "postprocessing": "none"
+    },
+    {
+      "id": "solitude",
+      "file": "solitude.png",
+      "prompt": "solitude-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2252087,
+      "sha256": "b32464c03977fade9d0278b3ffb819ef0c27f25aaf43f1b9c142b09db5b3bb00",
+      "prompt_sha256": "0d87dd21578b65eb66afd4bb7f091bf61c62626feb773530a4af94fc8447696c",
+      "input": "reference.png",
+      "input_role": "subject identity reference only",
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-c4c84786-7559-4b81-9603-351293091fcd.png",
+      "postprocessing": "none"
+    },
+    {
+      "id": "unease",
+      "file": "unease.png",
+      "prompt": "unease-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2870916,
+      "sha256": "16d7417f943947a381bf88bc50ad425f21093cc9b0a2b444e4a3a8f9f2a90391",
+      "prompt_sha256": "bcc7343ea5adf815720a74cc0a9159fc9bdbabbe73f31ec76f12b7271f65e885",
+      "input": "reference.png",
+      "input_role": "subject identity reference only",
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-5c7541f8-7392-4d26-9e73-9a755a27093c.png",
+      "postprocessing": "none"
+    }
+  ],
+  "files": [
+    {
+      "file": "protocol.json",
+      "bytes": 7685,
+      "sha256": "3b4d4e50a52b0e66a2bee42c21c0524ea523195136cae8b49305110843d9e181"
+    },
+    {
+      "file": "execution.json",
+      "bytes": 9443,
+      "sha256": "bafd6d7d3137695312423ce7761c3716c77ee59eddbcff8f611121c2485ae456"
+    },
+    {
+      "file": "review.json",
+      "bytes": 4001,
+      "sha256": "f6971d020a8a91363b03802fda87fa1a971661cbcad45d527afe78072ec1917b"
+    },
+    {
+      "file": "study.json",
+      "bytes": 19890,
+      "sha256": "ba9c8dedeb682e1aaaf9e16d60de04ce72970162f581eb560201c3c7412d59d6"
+    },
+    {
+      "file": "reference.png",
+      "bytes": 1799206,
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+    },
+    {
+      "file": "reference-prompt.txt",
+      "bytes": 1188,
+      "sha256": "27e49cece80a28ab27e23a7c513fc575da19be549d20437236361c7663881655"
+    },
+    {
+      "file": "safe.png",
+      "bytes": 2299374,
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+    },
+    {
+      "file": "safe-prompt.txt",
+      "bytes": 2598,
+      "sha256": "96a6c664a26ab78cd789a56a0fd7361e6442badf8ba13b380d0aebb19a532296"
+    },
+    {
+      "file": "solitude.png",
+      "bytes": 2252087,
+      "sha256": "b32464c03977fade9d0278b3ffb819ef0c27f25aaf43f1b9c142b09db5b3bb00"
+    },
+    {
+      "file": "solitude-prompt.txt",
+      "bytes": 2522,
+      "sha256": "0d87dd21578b65eb66afd4bb7f091bf61c62626feb773530a4af94fc8447696c"
+    },
+    {
+      "file": "unease.png",
+      "bytes": 2870916,
+      "sha256": "16d7417f943947a381bf88bc50ad425f21093cc9b0a2b444e4a3a8f9f2a90391"
+    },
+    {
+      "file": "unease-prompt.txt",
+      "bytes": 2758,
+      "sha256": "bcc7343ea5adf815720a74cc0a9159fc9bdbabbe73f31ec76f12b7271f65e885"
+    }
+  ],
+  "postprocessing": "none"
+}

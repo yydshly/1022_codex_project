@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "id": "red-chair-invitation",
+  "title": "给你留个座",
+  "date": "2026-10-22",
+  "status": "completed",
+  "generated": true,
+  "actual": {
+    "file": "original.mp4",
+    "provider_filename": "video_20261022122139.mp4",
+    "width": 1902,
+    "height": 1092,
+    "duration_seconds": 10.048,
+    "video_codec": "h264",
+    "fps": "24/1",
+    "has_audio": true,
+    "bytes": 5943163,
+    "sha256": "2915b267338007d877c3a5313ebfafdb9c5a294f39f907357aa5bbf78236d7fa",
+    "unmodified_provider_output": true,
+    "audio": [
+      {
+        "codec_name": "aac",
+        "sample_rate": "32000",
+        "channels": 2,
+        "duration": "10.048000"
+      }
+    ]
+  },
+  "request": {
+    "provider": "ChatArt",
+    "type": "i2v",
+    "input_mode": "omni_reference",
+    "model": "Seedance 2.0",
+    "resolution": 1080,
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "sound": true,
+    "count": 1,
+    "estimated_credits": 240,
+    "previous_same_spec_actual_credits": 300
+  },
+  "task_id": "1035011",
+  "actual_cost_credits": 300.0,
+  "inputs": [
+    {
+      "file": "../skill-trial/reference.png",
+      "role": "chair subject identity reference only",
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+    },
+    {
+      "file": "../skill-trial/safe.png",
+      "role": "window light and material atmosphere reference only; not first frame",
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+    }
+  ],
+  "skill": "emotion-art-direction",
+  "skill_snapshot": [
+    {
+      "file": "SKILL.md",
+      "sha256": "02168453a6e982c55f3bb443139ae5effacce327cef2df484460a26dff6373bf"
+    },
+    {
+      "file": "references/video-template.md",
+      "sha256": "d3e986b8e90eb485842e2c28a89c6c7de1e437fdebd39b5e81bd808fb5ffdc5c"
+    },
+    {
+      "file": "references/emotions/safe.md",
+      "sha256": "225ef216f5fe70a6f9793582acb9f68ecbe100115b9ed2b6634c44b192fbefff"
+    },
+    {
+      "file": "references/cases/video.md",
+      "sha256": "bbc512d6f4e8b58c1a3fbf14ad500ba2c7b74e719319298e67fa3b01a0fe5dd6"
+    }
+  ],
+  "intent": {
+    "start": "局促的旁观",
+    "event": "主人拉出空红椅，留出可以入座的位置",
+    "response": "来者看见邀请，走近并真正坐下",
+    "aftertaste": "被接纳、可以停留的克制放松",
+    "avoid": "煽情、广告表演、只改变光色或添加特效"
+  },
+  "style": {
+    "family": "写实剧情影像",
+    "fixed_rules": [
+      "自然窗光、真实木纹和衣料",
+      "同一室内空间、人物身份与道具连续",
+      "正常速度的动作和真实接触",
+      "无画内文字、数据特效或配乐"
+    ],
+    "reason": "本次优先验证人物事件与空间关系能否承载情绪；延续用户更认可的摄影氛围。"
+  },
+  "planned_stages": [
+    {
+      "start": 0,
+      "end": 2,
+      "name": "保持距离",
+      "observable": "来者在门内稍停；主人注意到她；空椅与双方位置清楚。"
+    },
+    {
+      "start": 2,
+      "end": 5,
+      "name": "发出邀请",
+      "observable": "主人握椅背、拉出空椅、松手示意；来者看椅后看向主人。"
+    },
+    {
+      "start": 5,
+      "end": 8,
+      "name": "看见与回应",
+      "observable": "来者松开紧握的袋带，走近并转身准备入座。"
+    },
+    {
+      "start": 8,
+      "end": 10,
+      "name": "可以停留",
+      "observable": "来者真正坐下、双脚着地、肩膀放松，双方共处。"
+    }
+  ],
+  "frames": [
+    {
+      "file": "frame-02.jpg",
+      "seconds": 2,
+      "caption": "主人握住椅背，来者仍停在门口",
+      "alt": "实际原片2秒：左侧主人伸手握住红椅椅背，深青外套的来者站在右侧门口"
+    },
+    {
+      "file": "frame-05.jpg",
+      "seconds": 5,
+      "caption": "空椅已转向，摊掌邀请仍在持续",
+      "alt": "实际原片5秒：主人摊掌指向已经转到侧面的红椅，来者仍握着帆布袋站立"
+    },
+    {
+      "file": "frame-09.jpg",
+      "seconds": 9,
+      "caption": "来者靠近并开始坐下，尚未坐稳",
+      "alt": "实际原片9秒：来者已经走到红椅前，身体俯身下沉开始落座，主人坐在桌对面的木凳上"
+    }
+  ],
+  "observations": [
+    "主要行为链已出现：开头来者停在右侧门口；主人约1.5—3秒伸手拉动红椅，随后摊掌示意；来者约7秒开始走近，约9—10秒在红椅上落座。邀请与接受有可见的因果线索。",
+    "两位女性的米灰衬衫、深青外套与帆布袋，以及一把红椅、工作桌、左窗和右门，在抽样画面中保持可识别的连续关系。整段以同一机位、同一室内空间展开，没有靠换场景解释情绪。",
+    "自然窗光、旧木、红漆、衣料和暖灰墙构成了克制的写实氛围；抽样画面中没有突然变暖的调色转折、粒子、模块化字形或画内字幕。情绪目标具体落实到人与空座位的关系。",
+    "9.75秒可见来者已坐在红椅上，主人仍坐在木凳上，两人共同处于桌旁。影片实现了预先写下的主要叙事目标；观众是否感到被接纳，仍需独立观看反馈。"
+  ],
+  "deviations": [
+    "约3—3.5秒主人松手后，椅子仍继续明显转向和位移。邀请动作能读懂，但手—椅受力与停止关系不够可信，不能称为物理动作完全通过。",
+    "计划5—8秒完成回应与走近，实际来者在门口停留到约7秒才明显起步；主人的摊掌邀请持续较久，结尾真正坐稳后只剩很短时间。目光回应、肩膀放松和自然呼吸没有形成足够清晰的证据。",
+    "构图使部分靠近镜头的椅腿、脚部接近或超出下边界，未完整满足始终清楚展示所有椅脚和双脚着地的要求。画面有明显窗影，也比阴天傍晚的文字设定更明亮。",
+    "请求1080p、16:9、10秒；实际交付1902×1092、10.048秒，画幅并非精确16:9。原片按返回尺寸保留，没有裁切或补帧。原片含AAC双声道音轨，但声音内容和动作同步尚未听审。",
+    "这是一条采用Skill组织指令后的实际样本，没有同模型、同素材的无Skill对照，不能据此证明Skill提高了情绪命中率。若下一轮返修，优先只修拉椅接触与松手后停止，并为坐稳结尾腾出时间；该建议尚未提交生成。"
+  ],
+  "review_method": "作者对实际原片按0.5秒间隔查看20个画面；另加密查看约2.4—4.4秒的拉椅过程，并查看2、5、9、9.75秒原始抽帧。时间为抽样观察的近似范围，不是动作检测结果。尚未完成听觉审片，也未进行独立观众测试。",
+  "audio_reviewed": false,
+  "independent_audience_evaluation": false,
+  "production": {
+    "video_model_calls": 1,
+    "type": "i2v",
+    "input_mode": "omni_reference",
+    "image_inputs": [
+      {
+        "file": "../skill-trial/reference.png",
+        "role": "chair subject identity reference only",
+        "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+      },
+      {
+        "file": "../skill-trial/safe.png",
+        "role": "window light and material atmosphere reference only; not first frame",
+        "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+      }
+    ],
+    "code_animation_used": false,
+    "original_video_modified": false,
+    "extra_music_or_voice_added": false,
+    "prompt_file": "prompt.txt",
+    "exact_request_file": "request.json",
+    "skill_evidence_file": "skill-use.json"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "created_on": "2026-10-21",
+  "source": "../study-flower.svg",
+  "renderer": "../../web/extensions.js",
+  "method": "Downloaded via the running page PNG export button; no AI image generation or postprocessing.",
+  "settings": {
+    "density": 68,
+    "amount": 100,
+    "motion": "static",
+    "layout": "specimen",
+    "playing": false
+  },
+  "images": [
+    {
+      "id": "ascii",
+      "name": "ASCII 字符",
+      "file": "ascii.png",
+      "sha256": "51f1dbdb4fffad8d70af524505b2cc5365b1351e7ed7a1161260abd6956f23dd"
+    },
+    {
+      "id": "pixels",
+      "name": "像素马赛克",
+      "file": "pixels.png",
+      "sha256": "bbc96a89eac7df262a34d818b2ad4116d7b2fa6ea6bb7a91b7f1ecda5628ba1b"
+    },
+    {
+      "id": "voxels",
+      "name": "体素方块",
+      "file": "voxels.png",
+      "sha256": "a4ffae3b8865ac9e9d9f103f231feaff83a88c87d833758287bfa91ab50e7d60"
+    },
+    {
+      "id": "particles",
+      "name": "粒子点云",
+      "file": "particles.png",
+      "sha256": "4600f1cc0a15fbcc8e33e43c596b6a2138fb6a52462732d771031766aaf9505c"
+    },
+    {
+      "id": "wireframe",
+      "name": "线框拓扑",
+      "file": "wireframe.png",
+      "sha256": "0abdbb8bf83c80c87c577152332f0aff5423b8e48e01aaefd33af4c3f53f9409"
+    },
+    {
+      "id": "scan",
+      "name": "扫描光谱",
+      "file": "scan.png",
+      "sha256": "4be8af04321ebe9369e5d73ccf8a465ae82f455b38fc4ea2da543024a9e8b18b"
+    },
+    {
+      "id": "glitch",
+      "name": "信号故障",
+      "file": "glitch.png",
+      "sha256": "3ffc10f00e2192035a3435375b687100a053568617d5317921fb85c49d2af613"
+    },
+    {
+      "id": "petals",
+      "name": "花瓣重组",
+      "file": "petals.png",
+      "sha256": "3855d31b4518a33685fc77d587c4a61b96e4fef7f6af2f759bfb5f095d6baa74"
+    },
+    {
+      "id": "smoke",
+      "name": "烟雾消散",
+      "file": "smoke.png",
+      "sha256": "f1f1aeacace62b1f235111d8f83ac2b8814453a1d9e25a0c0e8c4e9e878e1cf3"
+    },
+    {
+      "id": "ink",
+      "name": "水墨晕染",
+      "file": "ink.png",
+      "sha256": "0546fef878da3fd996dc2f0726202a8174ade4fca31edfa210dbda05f1ff4984"
+    },
+    {
+      "id": "liquid",
+      "name": "液态流动",
+      "file": "liquid.png",
+      "sha256": "5bc60647bf3da623f73ed6176182af9177f6758a2d32033d38d2e955bfdcc82b"
+    },
+    {
+      "id": "glass",
+      "name": "玻璃晶体",
+      "file": "glass.png",
+      "sha256": "660a901b9dc9377bd50f93e93bb295ad1501cb2e6ebb73874cfbbfdf9bc59ed3"
+    },
+    {
+      "id": "weave",
+      "name": "织物编织",
+      "file": "weave.png",
+      "sha256": "1a1ad11c0af95e32e2d451172f018b2de0843d030a2dc093e091f244a83e6c08"
+    }
+  ]
+}

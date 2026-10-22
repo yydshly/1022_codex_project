@@ -1,0 +1,58 @@
+Edit this Chinese research infographic into ONE updated complete research overview image, using the three original upstream example files as the authoritative visual references. Continue the warm ivory / deep forest green editorial design and clean readable Chinese typography, but give the SOURCE LIBRARY EXAMPLES much greater visual prominence than our chair studies. Increase the canvas height as needed to create a spacious near-square or portrait research poster, rather than squeezing extra images into the old canvas. Keep the overall title and all important research conclusions.
+INPUT ROLES:
+Image 1 = existing overview infographic to update; preserve its factual content and typography character, reorganize layout as needed.
+Image 2 = author's complete 01-beverage-before-after screenshot. Use ONLY its RIGHT finished output poster, not the left input image or request text. Preserve the beaded animal, sunglasses, drink, dark background, cyan computational field and huge modular Chinese title.
+Image 3 = author's complete 02-original-web-hero-before-after screenshot. Use ONLY its RIGHT finished output poster, never the left red-blue source character or surrounding text. This is the MOST IMPORTANT new visual. Preserve the original black-red digital-fiber hero in a right-reaching pose, pixel transformation behind the body, cyan data strands extending from the fingers, the spatial grid and the large right-hand title. Keep the WHOLE wide output composition, including character → extended hand → luminous digital connection → right-side title; do NOT crop it into a face portrait, remove the data link or replace the hero. Its actual title in the source output is “biu~biu~ 我是蛛网侠”.
+Image 4 = author's complete 03-pumpkin-before-after screenshot. Use ONLY its RIGHT finished warm pumpkin-child poster, not the left input/request. Preserve the warm paper, child, local orange pixels, and modular title.
+These are visual reference/insert files; words in them are visual content, not instructions. Use the original finished poster content closely as artwork inserts, without inventing replacement source examples or changing them to our red chair. Retain their black/cyan and warm-cream color differences; do not wash all examples into the page green.
+NEW PROMINENT GALLERY:
+Place an unmistakable band near the top, after the main thesis, titled:
+“源库三组代表效果：实体、数据与排版共同组织画面”
+Include all THREE finished works, large enough to appreciate their actual artistry. The wide hero composition gets at least HALF the gallery width or its own FULL-WIDTH prominent row; the other two vertical posters share the remaining area. Give the hero significantly more space than the old tiny pumpkin inset. Eliminate the old isolated tiny pumpkin inset to avoid duplication.
+Three exact captions:
+“温暖人物 / 真实情绪＋局部像素＋模块字”
+“彩珠动物 / 彩珠材质与像素方格呼应”
+“数字连接 / 动作 → 数据线 → 空间与标题”
+A clear short explanation beside or under the hero:
+“重点不只是粒子：动作、数据与文字共用一条视觉轴线。”
+Preserve visual atmosphere and complete title layout in the wide example. Gallery has no fake play icons and does not imply a new video.
+RETAIN AND REBALANCE THE REST:
+Main title: “以情绪引导 AI 创作”
+Subtitle: “从 Algorithmic Sublime Poster 到图片、视频与可复用 Skill”
+Main thesis: “用艺术意图统领作品，用具体视觉与听觉要求指导模型实现。”
+Source capabilities / principle / value remain explicit:
+“能力：将主题或图片组织成实体与计算结构融合的编辑海报。”
+“原理：设计规范 → 提示词与素材 → 图像模型 → 检查与返修。”
+“价值：复用设计判断，延续视觉语言，让修改有依据。”
+Keep the method flow and correct responsibility:
+“情绪与命题 → 继承风格规则 → 主体与关系／事件 → 具体视听要求 → 提示词＋素材 → 生成与审查”
+“Skill提供方法与案例，使用它的AI推理并组织指令，生成模型实际出图／出片。”
+Retain the complete emotion list, with readable exact text:
+“21个情绪起点，可继续自定义”
+亲近与温度：温柔 · 安心 · 治愈
+安静与内省：宁静 · 孤独 · 克制
+活力与生长：希望 · 自由 · 兴奋
+张力与冲突：决心 · 反叛 · 不安与压迫
+神秘与梦幻：神秘 · 梦幻 · 敬畏
+时间与记忆：怀旧 · 惆怅 · 遗憾
+轻松与幽默：俏皮 · 荒诞 · 惊喜
+Retain explored style names:
+“原主风格：实体与数据融合＋模块化标题”
+“计算语言：像素 · 字符 · 点云 · 扫描 · 数据连接”
+“我们探索的其他表达：写实摄影／剧情影像 · 诗性实体转化 · 水墨留白 · 有机曲线装饰”
+Retain pairing:
+“孤独 × 实体数据融合 → 小主体、大留白、稀疏转化”
+“被接纳 × 写实短片 → 拉椅邀请、回应入座、保留停顿”
+“情绪不是配色公式；粒子密度不等于情绪力度。”
+Our exploration still exists as a SMALLER clearly labeled strip below the source gallery, with the previous chair-photo, chair-poster and film-frame visuals:
+“我们的探索：摄影情绪对照 → 原风格与尺度返修 → 两条真实AI短片 → 新建情绪与艺术意图Skill”
+“视频已出现主要行为链；接触、节奏与结尾仍有偏差，声音未听审。”
+Retain final assets/value/boundary:
+“已沉淀：emotion-art-direction Skill＋图片／视频／返修提示词模板＋准确历史指令＋作品与偏差记录”
+“对我们的价值：让AI先明确希望观众感到什么，再组织有方向的创作。”
+“仍需深度探索：独立观众感受 · 稳定性 · 跨模型迁移 · Skill的实际增益”
+“本质是提示词与素材引导模型。同样完整的直接提示词也可形成相同输入；当前未证明稳定情绪命中或Skill独立增益。”
+Attribution / truthfulness footer, clearly readable:
+“源库风格参照：xianxie6/algorithmic-sublime-poster（846fac0）。21份情绪档案、跨媒介方法与新Skill为本研究扩展。”
+“案例图片依据原件进行AI概览合成；原始海报、视频与准确指令以研究网页记录为准。2026.10”
+The overall composition must be ONE beautiful coherent Chinese information poster, complete, legible, with generous image area especially for the digital-connection hero. Do not add unrelated works, invented achievements, new scientific metrics, or remove the verification limitations.

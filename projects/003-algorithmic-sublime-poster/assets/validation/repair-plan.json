@@ -1,0 +1,13 @@
+{
+  "registered_before_repair": true,
+  "created_on": "2026-10-22",
+  "edit_target": "02-bottle-solitude.png",
+  "observed_issue": "目标主体高度22–28%；首轮整瓶含瓶盖人工粗框约39%，观看距离仍偏近。",
+  "before_bbox_xyxy": [668, 620, 925, 1169],
+  "bbox_method": "作者观察原图后的近似人工外接框，含整瓶与瓶盖，不含投影和数据；不是自动分割或情绪测量。",
+  "target_height_fraction": [0.22, 0.28],
+  "primary_change": "整瓶相对画幅缩小，底部接触点尽量保持原位置；阴影与局部数据作为依附元素同步适配。",
+  "preserve": ["原瓶身识别特征与比例", "冷灰蓝配色", "光线和地面", "标题字形、位置与颜色", "数据稀疏程度"],
+  "not_addressed": "现有字体偏衬线，未完整实现原母风格的模块化像素大字；本轮不同时修这个问题。",
+  "calls_allowed": 1
+}

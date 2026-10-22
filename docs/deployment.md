@@ -117,3 +117,13 @@ Pages 提供静态托管。SwiftUIShaders 的浏览器演示在客户端执行 W
 引导图和首页封面均采用本次生成的 understanding-summary.png。效果区由 ImageGen 参考四张本地实际截图绘制，原始截图与完整提示词保留。图可放大和下载。构建前运行 python projects/007-dr-aria/scripts/package_web.py；--check 核对图像副本，随后根汇总器发布至 /1022_codex_project/007-dr-aria/。工作流已加入此步骤。
 
 2026-10-22 已发布至 [007 · dr-aria](https://yydshly.github.io/1022_codex_project/007-dr-aria/)。内容提交 `2643cd8`，[Actions 构建与部署均成功](https://github.com/yydshly/1022_codex_project/actions/runs/39631036413)；9 个发布文件 HTTP 200，内容与提交字节一致，指定 ImageGen 引导图哈希一致。线上摘要、图像放大下载、状态与一键演示、中文流式回复、模拟 Agent 样例和三种宽度已验证。记录见 [文件验证](../projects/007-dr-aria/deployment-verification.json) 与 [网页交互验证](../projects/007-dr-aria/deployment-ui-verification.json)。未连接真实模型。
+
+## 003 · Algorithmic Sublime Poster
+
+[情绪引导的图片与视频创作研究](../projects/003-algorithmic-sublime-poster/README.md)将源库海报设计规范与本研究的情绪、艺术意图方法分开说明。以目标感受组织提示词，匹配像素、点云、字符、扫描和数据连接等视觉语言，展示源库三组原始效果、图片对照与返修、两条实际AI短片，并提供emotion-art-direction Skill与图片/视频/返修模板。
+
+引导图和总导航封面采用已生成的第三版总览图`emotion-art-research-overview-v3.png`；源库数字连接横图为主要视觉。图内案例是依据原件的AI概览合成，原始海报、原片、准确历史指令和偏差独立保留。适用场景包括科技传播、文化展览、产品概念、人物叙事和系列/短片导演方案。实际价值、情绪稳定性和Skill独立增益尚待进一步验证。
+
+构建前运行`python projects/003-algorithmic-sublime-poster/scripts/package_web.py`，再执行同一命令加`--check`。现有Pages工作流已加入两步，之后由根汇总器发布编号路径；静态网页无需在线生成接口。原始资源在`assets/`维护，`web/assets/`副本不重复提交；项目记录固定上游提交、媒体来源及许可边界。
+
+本次发布验证中，目标入口为https://yydshly.github.io/1022_codex_project/003-algorithmic-sublime-poster/ 。真实线上检查通过后再登记demo_url与部署记录。

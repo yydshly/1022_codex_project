@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-22",
+  "purpose": "One-image research synthesis requested by the user",
+  "tool": "built-in image_gen",
+  "mode": "compositing infographic with four project image references",
+  "generation_calls": 3,
+  "model_weights_version": null,
+  "seed": null,
+  "output": {
+    "file": "emotion-art-research-overview.png",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 2136062,
+    "sha256": "c57444f651a8d73844541bf8607259ff1be88f36d7c42aabf924d84a3bf760db",
+    "tool_original_byte_identical": true,
+    "postprocessing": false
+  },
+  "prompt_file": "overview-prompt.txt",
+  "prompt_sha256": "648e00b079a54b934e534aed19c2e6c4846f3704a76158c464b7d15cab88f532",
+  "inputs": [
+    {
+      "file": "../03-pumpkin-before-after.png",
+      "role": "Upstream author before/after example; right-hand finished artwork as visual insert",
+      "sha256": "3270826d034940675400d5cd574d31627660a595f04f762a7666f43ac00013c0"
+    },
+    {
+      "file": "../skill-trial/safe.png",
+      "role": "Our photographic red-chair branch, supporting visual insert",
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+    },
+    {
+      "file": "../chair-data/solitude-repaired.png",
+      "role": "Our actual repaired original-style chair poster, supporting visual insert",
+      "sha256": "4138d28b55a3100fd47327d2cb7759199fc5b4b82f92760d68048d34effb833f"
+    },
+    {
+      "file": "../skill-film/frame-05.jpg",
+      "role": "Actual 5-second frame from our AI video, supporting visual insert",
+      "sha256": "e8197228ca4edf5ba6419e75ccca2194c8062e648ef43f6e7da3e7c99fac5b3e"
+    }
+  ],
+  "notice": "Reference insets are part of an AI-composited visual overview, not guaranteed byte-identical source crops. Original media and accurate historical prompts remain authoritative; no new chair/video experiment was performed.",
+  "upstream": {
+    "repo": "https://github.com/xianxie6/algorithmic-sublime-poster",
+    "commit": "846fac0a9fc247b480f71c9846c83815d2edfe41",
+    "notice_file": "../NOTICE.upstream.md"
+  },
+  "content_review": [
+    "Source library provides poster design rules; emotion taxonomy and cross-media Skill are research extensions.",
+    "7 families / 21 emotion starting points; 不安与压迫 is one profile.",
+    "Photography, original-style images/repair, and actual AI video are separately labeled.",
+    "The poster states that stable emotion success and independent Skill gain are not proven."
+  ],
+  "final_file": "emotion-art-research-overview-v3.png",
+  "final_output": {
+    "file": "emotion-art-research-overview-v3.png",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2350287,
+    "sha256": "5d5ede051b7cb52031af40d69979abafd3c931f478bafa0c2fa53f596910b3dd",
+    "tool_original_byte_identical": true,
+    "postprocessing": false
+  },
+  "revision": {
+    "tool": "built-in image_gen",
+    "input_file": "emotion-art-research-overview.png",
+    "input_sha256": "c57444f651a8d73844541bf8607259ff1be88f36d7c42aabf924d84a3bf760db",
+    "prompt_file": "overview-revision-prompt.txt",
+    "prompt_sha256": "884707ed2224e211b6ba1793db49f282f8ec5d197f5cf0729b85dd632f422112",
+    "requested_changes": [
+      "Explicit AI-composited overview caption by source-style insert",
+      "Explicit AI-composited thumbnail footer",
+      "Ensure full 创作 word in emotion heading"
+    ],
+    "result": "Visual review confirms source-style caption and explicit overview footer; emotion heading includes 创作."
+  },
+  "new_chair_or_video_experiments": 0,
+  "previous_final_outputs": [
+    {
+      "file": "emotion-art-research-overview-v2.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2065466,
+      "sha256": "6f14873837fac3602f8813791189cebd40f4cc3617d79c5a3eaff809152bc488",
+      "tool_original_byte_identical": true,
+      "postprocessing": false
+    }
+  ],
+  "source_gallery_revision": {
+    "tool": "built-in image_gen",
+    "prompt_file": "overview-source-examples-prompt.txt",
+    "prompt_sha256": "acc952f0ac6e5ef07c0e6f11d65531b953703ed2d4d4271466b47ab94d542f05",
+    "inputs": [
+      {
+        "file": "../research/emotion-art-research-overview-v2.png",
+        "role": "Complete previous infographic edit target",
+        "sha256": "6f14873837fac3602f8813791189cebd40f4cc3617d79c5a3eaff809152bc488"
+      },
+      {
+        "file": "../01-beverage-before-after.png",
+        "role": "Author reference: only right finished beaded-animal poster",
+        "sha256": "8ed9d590cd917d55f0736120d31f0cf399332788b6a9ea71cb5b7c0dcfa6f68c"
+      },
+      {
+        "file": "../02-original-web-hero-before-after.png",
+        "role": "Author reference: only complete right finished wide digital-connection hero, main gallery visual",
+        "sha256": "c699ef273f899ebb7ba01cd59d50e9043cf1ae9b3982590ce6186033e69ce71e"
+      },
+      {
+        "file": "../03-pumpkin-before-after.png",
+        "role": "Author reference: only right finished warm-child poster",
+        "sha256": "3270826d034940675400d5cd574d31627660a595f04f762a7666f43ac00013c0"
+      }
+    ],
+    "user_request": "Include the other two upstream source effects, especially digital connection; prioritize source works.",
+    "review": "Three upstream effect references are visible. The wide black-red hero is the dominant source gallery image and retains hand-to-data-line-to-title relationship. Emotion/style/method/exploration/Skill/value limitations remain. The footer identifies AI overview compositing rather than byte-identical original crops."
+  }
+}

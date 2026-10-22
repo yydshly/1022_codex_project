@@ -1,0 +1,87 @@
+{
+  "skill": "emotion-art-direction",
+  "read_files": [
+    {
+      "file": "SKILL.md",
+      "sha256": "02168453a6e982c55f3bb443139ae5effacce327cef2df484460a26dff6373bf"
+    },
+    {
+      "file": "references/video-template.md",
+      "sha256": "d3e986b8e90eb485842e2c28a89c6c7de1e437fdebd39b5e81bd808fb5ffdc5c"
+    },
+    {
+      "file": "references/emotions/safe.md",
+      "sha256": "225ef216f5fe70a6f9793582acb9f68ecbe100115b9ed2b6634c44b192fbefff"
+    },
+    {
+      "file": "references/cases/video.md",
+      "sha256": "bbc512d6f4e8b58c1a3fbf14ad500ba2c7b74e719319298e67fa3b01a0fe5dd6"
+    }
+  ],
+  "intent": {
+    "start": "局促的旁观",
+    "event": "主人拉出空红椅，留出可以入座的位置",
+    "response": "来者看见邀请，走近并真正坐下",
+    "aftertaste": "被接纳、可以停留的克制放松",
+    "avoid": "煽情、广告表演、只改变光色或添加特效"
+  },
+  "fixed_style": {
+    "family": "写实剧情影像",
+    "fixed_rules": [
+      "自然窗光、真实木纹和衣料",
+      "同一室内空间、人物身份与道具连续",
+      "正常速度的动作和真实接触",
+      "无画内文字、数据特效或配乐"
+    ],
+    "reason": "本次优先验证人物事件与空间关系能否承载情绪；延续用户更认可的摄影氛围。"
+  },
+  "planned_stages": [
+    {
+      "start": 0,
+      "end": 2,
+      "name": "保持距离",
+      "observable": "来者在门内稍停；主人注意到她；空椅与双方位置清楚。"
+    },
+    {
+      "start": 2,
+      "end": 5,
+      "name": "发出邀请",
+      "observable": "主人握椅背、拉出空椅、松手示意；来者看椅后看向主人。"
+    },
+    {
+      "start": 5,
+      "end": 8,
+      "name": "看见与回应",
+      "observable": "来者松开紧握的袋带，走近并转身准备入座。"
+    },
+    {
+      "start": 8,
+      "end": 10,
+      "name": "可以停留",
+      "observable": "来者真正坐下、双脚着地、肩膀放松，双方共处。"
+    }
+  ],
+  "roles": [
+    {
+      "file": "../skill-trial/reference.png",
+      "role": "chair subject identity reference only",
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+    },
+    {
+      "file": "../skill-trial/safe.png",
+      "role": "window light and material atmosphere reference only; not first frame",
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8"
+    }
+  ],
+  "interpretation": [
+    "从安心档案提取可靠支撑与可停留的目标，转译为主动拉出座位、来者回应并实际入座。",
+    "视频模板要求情绪起点、转机、结尾余味、动作、摄影连续性和声音；相应写入四段时间计划。",
+    "旧视频案例只迁移邀请与回应的关系组织，未复用共伞情节；主机位改为可看清椅脚接触的固定中远景。",
+    "本次选择写实影像规则，主体身份参考与光色材料参考分开，不将中性椅子图当首帧。"
+  ],
+  "generation_tool": "ChatArt Skill / Seedance 2.0",
+  "prompt_file": "prompt.txt",
+  "request_file": "request.json",
+  "skill_files_modified": false,
+  "independent_evaluation": false
+}

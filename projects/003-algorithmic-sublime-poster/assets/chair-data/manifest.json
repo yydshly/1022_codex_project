@@ -1,0 +1,143 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-10-22",
+  "actual_calls": 4,
+  "model_version": null,
+  "seed": null,
+  "inputs": [
+    {
+      "file": "../skill-trial/reference.png",
+      "role": "subject identity reference only",
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248"
+    },
+    {
+      "file": "../03-pumpkin-before-after.png",
+      "role": "right-hand finished poster visual grammar only",
+      "sha256": "3270826d034940675400d5cd574d31627660a595f04f762a7666f43ac00013c0",
+      "notice": "../NOTICE.upstream.md"
+    }
+  ],
+  "postprocessing": "none",
+  "outputs": [
+    {
+      "id": "safe",
+      "file": "safe.png",
+      "prompt_file": "safe-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2690942,
+      "sha256": "6b5973bb41945b3cb7e1efb45f31a2ffc43ac35e3df26cd87aa32f5ec7c4f1f2",
+      "prompt_sha256": "12b900e7e5a5142dee97e1c2133f5d69cecff6f4508852ca712a9004bcba3a3f",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-813c244f-edbc-4dfb-bcbf-a95f34aec5e6.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    },
+    {
+      "id": "solitude",
+      "file": "solitude.png",
+      "prompt_file": "solitude-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1960768,
+      "sha256": "21b5b3d67661ad23e638f86a9c66cc3f4c90fea0496a896b046b41d9041a19f7",
+      "prompt_sha256": "bee78a21dffd7895b74b0ce77008b588a8c7503232394b92f88eec983dbda83a",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-2f03983d-9ef3-480f-8bbe-88cf5afa3824.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    },
+    {
+      "id": "unease",
+      "file": "unease.png",
+      "prompt_file": "unease-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2484134,
+      "sha256": "73b7cb70b0ee8f098ced8e1b27fa8c1559795479edf0fb33b6cb4b9e4376d962",
+      "prompt_sha256": "d0cea6eba889501f20b7b8cf5577399d5492f4011bba9b8c44ba6bf66a3f45a1",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-6b100ea5-26ca-4fdb-b6e5-9ff0fa6f02ab.png",
+      "calls": 1,
+      "revisions": 0,
+      "postprocessing": "none"
+    },
+    {
+      "id": "solitude",
+      "file": "solitude-repaired.png",
+      "prompt_file": "solitude-repair-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1809437,
+      "sha256": "4138d28b55a3100fd47327d2cb7759199fc5b4b82f92760d68048d34effb833f",
+      "prompt_sha256": "2ce98957da0ef8224b2bba57189bbeba58d5f190c9918ef15979037ed7cbc0be",
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-9bf4619a-2f97-470c-809d-c9d05a251621.png",
+      "calls": 1,
+      "revisions": 1,
+      "input_file": "solitude.png",
+      "input_role": "complete edit target",
+      "postprocessing": "none"
+    }
+  ],
+  "files": [
+    {
+      "file": "protocol.json",
+      "bytes": 8750,
+      "sha256": "c0369b5e8fc0ec118bf2930ff7b1b974dda638beccbb7bbcc09dc1bb96857587"
+    },
+    {
+      "file": "execution.json",
+      "bytes": 16488,
+      "sha256": "85419d5307df9e687b1eb35dc2d127fcc5df1df44412d9fb91486bf644f622ad"
+    },
+    {
+      "file": "review.json",
+      "bytes": 4401,
+      "sha256": "31e1fe5b687fc2d7874e9d96a81615de7805a4dcca5093b72bd24fb76d0326b5"
+    },
+    {
+      "file": "study.json",
+      "bytes": 32754,
+      "sha256": "2a019190b137abcaf6761e2236651c47f3be42f85ba006170b249aeb7527a842"
+    },
+    {
+      "file": "safe.png",
+      "bytes": 2690942,
+      "sha256": "6b5973bb41945b3cb7e1efb45f31a2ffc43ac35e3df26cd87aa32f5ec7c4f1f2"
+    },
+    {
+      "file": "safe-prompt.txt",
+      "bytes": 4212,
+      "sha256": "12b900e7e5a5142dee97e1c2133f5d69cecff6f4508852ca712a9004bcba3a3f"
+    },
+    {
+      "file": "solitude.png",
+      "bytes": 1960768,
+      "sha256": "21b5b3d67661ad23e638f86a9c66cc3f4c90fea0496a896b046b41d9041a19f7"
+    },
+    {
+      "file": "solitude-prompt.txt",
+      "bytes": 4322,
+      "sha256": "bee78a21dffd7895b74b0ce77008b588a8c7503232394b92f88eec983dbda83a"
+    },
+    {
+      "file": "unease.png",
+      "bytes": 2484134,
+      "sha256": "73b7cb70b0ee8f098ced8e1b27fa8c1559795479edf0fb33b6cb4b9e4376d962"
+    },
+    {
+      "file": "unease-prompt.txt",
+      "bytes": 4414,
+      "sha256": "d0cea6eba889501f20b7b8cf5577399d5492f4011bba9b8c44ba6bf66a3f45a1"
+    },
+    {
+      "file": "solitude-repaired.png",
+      "bytes": 1809437,
+      "sha256": "4138d28b55a3100fd47327d2cb7759199fc5b4b82f92760d68048d34effb833f"
+    },
+    {
+      "file": "solitude-repair-prompt.txt",
+      "bytes": 2493,
+      "sha256": "2ce98957da0ef8224b2bba57189bbeba58d5f190c9918ef15979037ed7cbc0be"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-22",
+  "image_tool": "built-in ImageGen",
+  "image_calls": 2,
+  "original_tool_files": [
+    "exec-fe8a49f8-8de7-44e0-8efd-401a300c16af.png",
+    "exec-c9e14961-3fb8-439b-a557-db9821fe0ed1.png"
+  ],
+  "original_size": [
+    1672,
+    941
+  ],
+  "model_version": null,
+  "seed": null,
+  "video_model_calls": 0,
+  "video_method": "两张内置ImageGen素材（场景与透明四姿态人物）+ 人物逐帧动画、雨、水波、光、镜头、信号 + 原创合成声音 + FFmpeg编码。",
+  "files": [
+    {
+      "file": "hope-poster.jpg",
+      "bytes": 211414,
+      "sha256": "0db19a0f763ce2d06dc092727224bb80f476082069ca4e0abd539912758267be"
+    },
+    {
+      "file": "hope-video-direction.txt",
+      "bytes": 1675,
+      "sha256": "2858f95f96bb816b10969bf7b34c9939481f81ce4835ab673fc857d4b77aac0f"
+    },
+    {
+      "file": "hope.mp4",
+      "bytes": 4737863,
+      "sha256": "194eac61db74da875dcdd3e7767271e4a0188fd9df0d2ae02505a45b38dfdbb5"
+    },
+    {
+      "file": "rain-shelter-plate-prompt.txt",
+      "bytes": 1869,
+      "sha256": "1f36438ffb59c7153be2243b3553f5ff6111dd7383dfcd92eff8f7137029f4c1"
+    },
+    {
+      "file": "rain-shelter-plate.png",
+      "bytes": 2440726,
+      "sha256": "684d0ab5d8e2a668368d213abbc3a5b8953bd0306924962096c509fc63db084f"
+    },
+    {
+      "file": "solitude-poster.jpg",
+      "bytes": 203647,
+      "sha256": "dacbe7a970f825c2d7a49d3dcbba2c1de45de9b6eac89316940e13a79d2baa0f"
+    },
+    {
+      "file": "solitude-video-direction.txt",
+      "bytes": 1628,
+      "sha256": "4ee5952e231204b5366206c366548fededccfa832b5aa4b65827c74e13b5356c"
+    },
+    {
+      "file": "solitude.mp4",
+      "bytes": 4710004,
+      "sha256": "acc52059f3cd2eccbcbf2e8db18e54d840e738f71e2380dd718623d5ad6b03ea"
+    },
+    {
+      "file": "study.json",
+      "bytes": 5535,
+      "sha256": "de5c64b33d97c08bdb33bd3ca3d11d0e6fec8417347f03e8e677a5ccc064fd31"
+    },
+    {
+      "file": "unease-poster.jpg",
+      "bytes": 185805,
+      "sha256": "ed296e394f80f6fd131303e0c292f70532647980779fae5e70ef8940bc2014d7"
+    },
+    {
+      "file": "unease-video-direction.txt",
+      "bytes": 1641,
+      "sha256": "e3614bd831017cc44e42c88cbd65a4f7dd29ce7f9ac85bff82df8170188d8e4b"
+    },
+    {
+      "file": "unease.mp4",
+      "bytes": 4412409,
+      "sha256": "2a2f2b3ca733b146982c827adc5856019d406ec9093353fbab3a72e4a4f49fa7"
+    },
+    {
+      "file": "walker-sprites-prompt.txt",
+      "bytes": 1571,
+      "sha256": "eda95b8eff7142a45183be4f6660fafcfb49f952e64fa7752058a6f31ac94a45"
+    },
+    {
+      "file": "walker-sprites.png",
+      "bytes": 1056613,
+      "sha256": "8b6d3fcf05eb6a5cb36aaadc46bd32ee968da3824fe94e3836c0f6a59c51d719"
+    }
+  ]
+}

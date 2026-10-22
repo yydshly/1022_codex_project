@@ -1,0 +1,34 @@
+{
+  "created_on": "2026-10-21",
+  "origin": "Original research artwork generated in this conversation; not upstream example media.",
+  "tool": "Built-in image_gen.imagegen (ImageGen)",
+  "model_version": null,
+  "workflow": "Prompts manually organized from upstream visual rules; no automatic upstream Skill execution; text-to-image, no reference/input image supplied.",
+  "transparent_background": false,
+  "postprocessing": "none",
+  "outputs": [
+    {
+      "id": "warm-bloom",
+      "file": "warm-bloom-poster.png",
+      "prompt": "warm-bloom-prompt.txt",
+      "title": "风有形",
+      "width": 1122,
+      "height": 1402,
+      "generation_calls": 1,
+      "revisions": 0,
+      "sha256": "a01965517da52793321c8fa73feffb8632cf3ac425f741443925e255c5941d7d"
+    },
+    {
+      "id": "blue-whale",
+      "file": "blue-whale-poster.png",
+      "prompt": "blue-whale-prompt.txt",
+      "title": "向蓝而生",
+      "width": 1122,
+      "height": 1402,
+      "generation_calls": 1,
+      "revisions": 0,
+      "sha256": "ecb78a4246477d364d731d344c11fd581e117f7b98714d5f1a9723194e8c5bab"
+    }
+  ],
+  "observations": "Headlines manually inspected as 风有形 and 向蓝而生. Flower has warm paper and local petal transformation; whale has blue atmospheric composition and local glass transformation. Not a controlled input-preservation or success-rate benchmark. Decorative coordinates are not measurements."
+}

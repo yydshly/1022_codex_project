@@ -1,0 +1,4 @@
+interface:
+  display_name: "情绪与艺术意图"
+  short_description: "先明确目标感受与艺术方向，再结合风格和案例构造图片或视频提示词"
+  default_prompt: "请使用 $emotion-art-direction，先明确这次创作的情绪与艺术意图，再结合风格规则和案例构造图片或视频生成提示词。"

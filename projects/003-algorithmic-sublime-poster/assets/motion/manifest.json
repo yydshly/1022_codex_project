@@ -1,0 +1,83 @@
+{
+  "created_on": "2026-10-21",
+  "title": "夜香 · 给孤独一个回应",
+  "origin": "本研究原创情绪影像演示",
+  "keyframe_generation": {
+    "tool": "Built-in ImageGen",
+    "model_version": null,
+    "calls": 1,
+    "revisions": 0,
+    "prompt": "night-signal-keyframe-prompt.txt",
+    "file": "night-signal-keyframe.png",
+    "postprocessing": "原始PNG保留不变；仅在视频合成时适配画幅与调色。",
+    "observed_deviation": "关键画面额外出现右侧建筑开口、山景与较明显的暖色反射；视频保留此空间，并通过调色控制暖色进入的时间。"
+  },
+  "video": {
+    "file": "night-signal.mp4",
+    "duration_seconds": 15,
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "frames": 360,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "ai_video_generated": false,
+    "production": "原创AI静态关键画面 + 慢推镜头、冷暖调色、轮廓信号、排版与原创程序合成声音；FFmpeg导出。",
+    "render_script": "scripts/render_motion_study.py",
+    "random_seed": 20261021,
+    "fonts": "系统自带 Microsoft YaHei 与 Consolas，仅用于渲染，不分发字体文件。",
+    "limitations": "无真实三维绕拍、主体连续动作、视频模型时序生成测试或情绪识别评分。",
+    "render_script_sha256": "abfc863926cdf0f73262b315155111cf79885daec327e97caac24f47d6fc77bb",
+    "sound_gain": 4
+  },
+  "stills": {
+    "night-signal-02.jpg": 2,
+    "night-signal-07.jpg": 7.5,
+    "night-signal-12.jpg": 12.5
+  },
+  "files": {
+    "night-signal-keyframe.png": {
+      "bytes": 1774735,
+      "sha256": "07ae7e1e04cb2fa8a3d4959cd3f5cda5787a1444bc5d051245520ee118ab7fda",
+      "width": 1672,
+      "height": 941
+    },
+    "night-signal-keyframe-prompt.txt": {
+      "bytes": 1986,
+      "sha256": "aff57f43de904fd846537f5f3f64742bf9ece2082e655110ce629855037810bf"
+    },
+    "night-signal.mp4": {
+      "bytes": 3198086,
+      "sha256": "3dbf6269aa93b961b466fcee13f46a0a21e6f9b9d5a7d6038c2a933592896548"
+    },
+    "night-signal-02.jpg": {
+      "bytes": 88618,
+      "sha256": "14b67ae4af331e4897cb2970378e7b2c1295447f635826117ab407d770a56e20",
+      "width": 1280,
+      "height": 720
+    },
+    "night-signal-07.jpg": {
+      "bytes": 88081,
+      "sha256": "a8529b5b6a3764f67df42fbf4f0228986604aa1a0c1a1d3d9c06208e8f63b3b8",
+      "width": 1280,
+      "height": 720
+    },
+    "night-signal-12.jpg": {
+      "bytes": 107584,
+      "sha256": "8945a93fabea25a8b06ea9b7558f6658688aa8fa9910b5f288d0a42a5441df39",
+      "width": 1280,
+      "height": 720
+    },
+    "night-signal-brief.json": {
+      "bytes": 6409,
+      "sha256": "e95a2937bdf4838c90696dcbb408aa6d62f81a8f9db687faed6b1d51151aa78c"
+    },
+    "night-signal-captions.vtt": {
+      "bytes": 286,
+      "sha256": "c3ded6238e95d5367db1a751eaac138a43e7c80d9dfbd05937d0442ac2d338c5"
+    }
+  },
+  "stills_method": "FFmpeg direct extraction from final MP4 at 2, 7.5 and 12.5 seconds; JPEG quality 2."
+}

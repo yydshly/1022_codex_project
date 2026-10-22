@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-22",
+  "edition": "v2",
+  "image_calls_this_revision": 0,
+  "video_model_calls": 0,
+  "source_manifest": "../manifest.json",
+  "renderer": "scripts/render_emotion_films_v2.py",
+  "files": [
+    {
+      "file": "hope-poster.jpg",
+      "bytes": 209337,
+      "sha256": "2717cc372d59aa191091e7a730c3fbd4cad6ffb6319786cca99e0f7047026be7"
+    },
+    {
+      "file": "hope-video-direction.txt",
+      "bytes": 2362,
+      "sha256": "a3873d5a6ae82c61cb3262fb4e26bf4cf9c9021a9b079708a667a1c90d99fd1e"
+    },
+    {
+      "file": "hope.mp4",
+      "bytes": 3982905,
+      "sha256": "42f817377c9908cfdf038395ac150f80abcb979f9f7694be230bc1a7d0a790e1"
+    },
+    {
+      "file": "motion-metrics.json",
+      "bytes": 2411,
+      "sha256": "318dd64439cf8e371d894bae242fc05e7efce2ae7cecbf8e9f3d821074d157d6"
+    },
+    {
+      "file": "solitude-poster.jpg",
+      "bytes": 199787,
+      "sha256": "66b973e37cda51d1292610adbcf75cfbb2fa96fed24d6cb7b69efde90721a30b"
+    },
+    {
+      "file": "solitude-video-direction.txt",
+      "bytes": 2269,
+      "sha256": "ef0965c811d837580fdfb56ab65556fbdc6c49b0f8fc75e8784771598e91a872"
+    },
+    {
+      "file": "solitude.mp4",
+      "bytes": 4940246,
+      "sha256": "646045fc0d270dc9b4fd3613d88e00aa6882eaadc19d1f22c9b568a4757217f1"
+    },
+    {
+      "file": "study.json",
+      "bytes": 5974,
+      "sha256": "02c378da392bba45fc1471841f9b0becfcc309164764f89596bfd376fa3c3e77"
+    },
+    {
+      "file": "unease-poster.jpg",
+      "bytes": 186342,
+      "sha256": "6e134b21c8ab12b7202ba806211256b6a9364dbaca620ded3d3dd45c444e437a"
+    },
+    {
+      "file": "unease-video-direction.txt",
+      "bytes": 2274,
+      "sha256": "f30bce3149d568f3258f676b71d0f646e279b261fca22d932dd6e78bb6b0f280"
+    },
+    {
+      "file": "unease.mp4",
+      "bytes": 4206061,
+      "sha256": "96ade7fb86c67b03095a9afd0ff6c50ba9b78ed08aabfa10a86fa84b42bd1eed"
+    }
+  ]
+}

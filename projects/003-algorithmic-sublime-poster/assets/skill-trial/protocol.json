@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "id": "red-chair-skill-trial",
+  "date": "2026-10-22",
+  "status": "completed",
+  "generated": true,
+  "skill": {
+    "name": "emotion-art-direction",
+    "invocation": "Read and applied the installed Skill and selected references in this conversation",
+    "snapshot": [
+      {
+        "file": "SKILL.md",
+        "sha256": "02168453a6e982c55f3bb443139ae5effacce327cef2df484460a26dff6373bf"
+      },
+      {
+        "file": "references/emotion-map.md",
+        "sha256": "244130d74c3001862a5c7794228ab8374721d51f1a6d84e2459b11ff5da9040f"
+      },
+      {
+        "file": "references/image-template.md",
+        "sha256": "d281b0fccfd7409fdb6dbcf50f0291df12590102773c36258540f1ae65b2d497"
+      },
+      {
+        "file": "references/emotions/safe.md",
+        "sha256": "225ef216f5fe70a6f9793582acb9f68ecbe100115b9ed2b6634c44b192fbefff"
+      },
+      {
+        "file": "references/emotions/solitude.md",
+        "sha256": "182c24d2444fe44ab7acdb835b9eab5d947c98f56d3603b66fb0ada0b7b5b1ec"
+      },
+      {
+        "file": "references/emotions/unease.md",
+        "sha256": "7792d14fe5c2a77c936d2db48aff1d03e9e73c47b8dafbb5d7fb5ee668618d58"
+      },
+      {
+        "file": "references/styles.md",
+        "sha256": "88194ae1d0cd821a03090ed7ccb7aaf93a480c189af2d0e8c6f0065e46716eed"
+      },
+      {
+        "file": "references/cases/product.md",
+        "sha256": "2ad832884773416056af07f83785ca8fb7cc72b0ff7a644e7de2230aa0883c10"
+      }
+    ]
+  },
+  "subject": "一把无品牌朱红色木椅，弧形顶梁、竖向椅背条、方形坐面、四条直腿和低横撑，无扶手",
+  "method": "先生成中性身份参考，再以同一参考分别生成三种完整艺术方向；每方向一次调用、保存全部结果、原图不加工。",
+  "common_rules": [
+    "同一身份参考、同一4:5目标画幅、完整可用红椅",
+    "摄影写实材料与可辨认的空间层级",
+    "没有画内文字、人物、数据粒子或HUD"
+  ],
+  "varied": [
+    "目标感受与避免感受",
+    "艺术方向",
+    "主体尺度、观看距离、空间关系、光色与构图"
+  ],
+  "cases": [
+    {
+      "id": "safe",
+      "code": "A",
+      "title": "安心 / 可以停留的角落",
+      "emotion_profile": "safe",
+      "intent": "让人感到稳定、被容纳，空座位仍可进入与停留。",
+      "avoid": "封闭、沉闷、过度甜美或奢华广告感",
+      "art_direction": "有触感的生活编辑摄影",
+      "translation": "中景与可进入的座面、稳定支撑关系、均衡留白、柔窗光和真实材料。",
+      "planned_scale": "椅子约占画幅高度一半",
+      "checks": [
+        "空座位是否显得可进入、可停留？",
+        "安心是否有空间与落点支持，而非只因为暖色？",
+        "有没有变成普通家具目录或过度甜美？"
+      ]
+    },
+    {
+      "id": "solitude",
+      "code": "B",
+      "title": "孤独 / 没有等到的入座者",
+      "emotion_profile": "solitude",
+      "intent": "在大空间里保留一处尚未得到回应的存在，安静且有距离。",
+      "avoid": "悲惨、恐怖、破败或惩罚感",
+      "art_direction": "极简建筑摄影诗",
+      "translation": "远距离、小主体、大留白、灰青漫射光与少量主体暖色。",
+      "planned_scale": "椅子约占画幅高度15–18%",
+      "checks": [
+        "观看距离与无回应的空白是否清楚？",
+        "孤独是否仍可能被读成宁静或等待？",
+        "小主体还保留可辨认的结构吗？"
+      ]
+    },
+    {
+      "id": "unease",
+      "code": "C",
+      "title": "不安 / 被挤压的位置",
+      "emotion_profile": "unease",
+      "intent": "让人感到空间正在逼近，座位仍完整而可用。",
+      "avoid": "廉价恐怖、破坏主体、满屏噪声",
+      "art_direction": "超现实粗野建筑装置摄影",
+      "translation": "巨大近墙、低顶板、收窄的进入路径和硬斜影，形成可辨认的压力来源。",
+      "planned_scale": "椅子约占画幅高度40–45%",
+      "checks": [
+        "压力具体来自哪一处空间关系？",
+        "椅子有没有被变形或真的压坏？",
+        "画面是否也可能被读成庄严或力量？"
+      ]
+    }
+  ],
+  "planned_calls": 4,
+  "generation_tool": "Built-in image_gen",
+  "model_version": null,
+  "seed": null,
+  "limitation": "中性图仅作主体身份参考；本轮不是有无Skill、仅情绪词或单变量因果实验。每方向一张，观众情绪仍需反馈。",
+  "actual_results": [
+    {
+      "id": "reference",
+      "file": "reference.png",
+      "prompt": "reference-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1799206,
+      "sha256": "de5ec7674dddec30aeeff2cd1aa27767b3673c9598165fb0e7824922dad5e248",
+      "prompt_sha256": "27e49cece80a28ab27e23a7c513fc575da19be549d20437236361c7663881655",
+      "input": null,
+      "input_role": null,
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-9fef4968-63bc-444e-9b85-02183f9199cf.png",
+      "postprocessing": "none"
+    },
+    {
+      "id": "safe",
+      "file": "safe.png",
+      "prompt": "safe-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2299374,
+      "sha256": "5bd76fa40f1d58e186c1ce4028bf069a896f69f73a7afa6db063d51a4cae8de8",
+      "prompt_sha256": "96a6c664a26ab78cd789a56a0fd7361e6442badf8ba13b380d0aebb19a532296",
+      "input": "reference.png",
+      "input_role": "subject identity reference only",
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-d8623e4e-83c6-4521-a57b-fb81ebb0270a.png",
+      "postprocessing": "none"
+    },
+    {
+      "id": "solitude",
+      "file": "solitude.png",
+      "prompt": "solitude-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2252087,
+      "sha256": "b32464c03977fade9d0278b3ffb819ef0c27f25aaf43f1b9c142b09db5b3bb00",
+      "prompt_sha256": "0d87dd21578b65eb66afd4bb7f091bf61c62626feb773530a4af94fc8447696c",
+      "input": "reference.png",
+      "input_role": "subject identity reference only",
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-c4c84786-7559-4b81-9603-351293091fcd.png",
+      "postprocessing": "none"
+    },
+    {
+      "id": "unease",
+      "file": "unease.png",
+      "prompt": "unease-prompt.txt",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2870916,
+      "sha256": "16d7417f943947a381bf88bc50ad425f21093cc9b0a2b444e4a3a8f9f2a90391",
+      "prompt_sha256": "bcc7343ea5adf815720a74cc0a9159fc9bdbabbe73f31ec76f12b7271f65e885",
+      "input": "reference.png",
+      "input_role": "subject identity reference only",
+      "tool": "Built-in image_gen",
+      "model_version": null,
+      "seed": null,
+      "calls": 1,
+      "revisions": 0,
+      "original_tool_path": "D:\\codex\\home\\generated_images\\01a15a31-09c2-79a1-a68c-3b78c343cf34\\exec-5c7541f8-7392-4d26-9e73-9a755a27093c.png",
+      "postprocessing": "none"
+    }
+  ]
+}

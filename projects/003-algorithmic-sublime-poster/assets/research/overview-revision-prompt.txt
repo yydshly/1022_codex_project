@@ -1,0 +1,6 @@
+Make a narrowly targeted text-label correction to this existing Chinese research infographic. Preserve the overall 1536×1024 landscape composition, all sample images, color palette, typography, layout, main title, all 7 emotion groups and 21 emotion names, all style categories, all facts, and all other explanatory text. Do not redesign the image or add any new visuals.
+Only these exact text corrections:
+1. Under the upper-right pumpkin inset, replace the caption “源库作者示例 / 实体与数据融合” with the clearly readable caption “源库风格参照 / AI合成概览”. This is essential: the inset in this composed infographic must not be mistaken for the original author's actual unmodified image.
+2. At the very bottom, replace the final small footnote line with “所有案例缩略图为AI合成概览，实际原件与准确指令见研究网页。2026.10”. Make this legible and retain the separate source attribution immediately above it.
+3. Ensure the section 02 heading reads exactly “情绪：21个创作起点，可继续自定义”, including the full word “创作”.
+No other content changes. Crisp Simplified Chinese text with no missing or duplicated characters. One final corrected infographic.
