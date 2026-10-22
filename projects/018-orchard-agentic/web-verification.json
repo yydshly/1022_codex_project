@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-22T23:47:18.023343+08:00",
+  "verifiedAt": "2026-10-22T23:51:48.853221+08:00",
   "status": "passed",
   "checks": [
     {
@@ -35,15 +35,15 @@
       "passed": true
     },
     {
-      "name": "Relative publishing path: ./style.css",
+      "name": "Relative publishing path: ./style.css?v=20261022-2",
       "passed": true
     },
     {
-      "name": "Resource stays inside web: ./style.css",
+      "name": "Resource stays inside web: ./style.css?v=20261022-2",
       "passed": true
     },
     {
-      "name": "Resource exists: ./style.css",
+      "name": "Resource exists: ./style.css?v=20261022-2",
       "passed": true
     },
     {
